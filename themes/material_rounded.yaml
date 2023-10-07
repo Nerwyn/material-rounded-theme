@@ -1,0 +1,413 @@
+# https://github.com/Nerwyn/material-rounded-theme
+# A theme made to emulate Google's Material You design for Android and Chrome OS
+# Modified from the Graphite theme
+# Uses card-mod to change the header to the footer, disable the selection bar, and enable header icon coloring
+Material Rounded:
+    modes:
+        dark:
+            # Token colors
+            token-rgb-primary: rgb(0, 74, 118)
+            token-rgb-secondary: rgb(194, 231, 254)
+            token-color-primary: var(--token-rgb-primary)
+            token-color-accent: var(--token-rgb-secondary)
+            token-color-feedback-info: rgb(138, 208, 248)
+            token-color-feedback-warning: rgb(244,180,0)
+            token-color-feedback-error: rgb(229, 97, 128)
+            token-color-feedback-success: rgb(93, 193, 145)
+            token-color-icon-primary: rgb(196, 199, 197)
+            token-color-icon-secondary: rgb(138, 140, 153)
+            token-color-icon-sidebar: rgb(147, 149, 159)
+            token-color-icon-sidebar-selected: rgb(174, 176, 183)
+            token-color-text-primary: rgb(228, 228, 231)
+            token-color-text-secondary: rgb(138 140 153)
+            token-color-text-disabled: rgba(255, 255, 255, 0.5)
+            token-color-text-sidebar-selected: rgb(214, 215, 219)
+            token-color-text-sidebar: var(--token-color-text-secondary)
+            token-color-text-label-badge: rgb(198, 203, 210)
+            token-color-background-base: rgb(31, 31, 31)
+            token-color-background-secondary: rgb(40, 42, 46)
+            token-color-background-tertiary: rgb(0, 0, 0)
+            token-color-background-sidebar: var(--token-color-background-base)
+            token-color-background-input-base: rgb(46, 48, 56)
+            token-color-background-input-disabled: rgba(37, 37, 40, 0.5)
+            token-color-background-label-badge: rgb(54, 55, 67)
+            token-color-background-card: rgb(50, 52, 58)
+            token-color-background-skrim: rgba(0, 0, 3, 0.9)
+            token-color-background-divider: var(--token-color-background-sidebar)
+            token-color-background-scrollbar-thumb: rgb(46, 48, 56)
+            token-color-background-label-badge-red: var(--token-color-feedback-error)
+            token-color-background-label-badge-green: rgb(78, 183, 128)
+            token-color-background-label-badge-blue: var(--token-color-feedback-info)
+            token-color-background-label-badge-yellow: var(--token-color-feedback-warning)
+            token-color-background-label-badge-grey: rgb(83, 90, 103)
+            token-color-background-popup-scrim: rgba(4, 5, 7, 0.9)
+            token-color-border-card: rgba(0, 0, 0, 0)
+
+            # Feedback colors
+            error-color: rgb(234 114 135)
+            warning-color: rgb(255 219 117)
+            success-color: rgb(118 214 152)
+            info-color: rgb(39, 209, 246)
+
+            # Inconsistent tile card CSS
+            state-alarm_control_panel-disarmed-color: rgb(72, 74, 78)
+            state-fan-off-color: rgb(40, 42, 46)
+
+            # Chip
+            ha-chip-text-color: rgb(255 255 255)
+
+            # Editor
+            codemirror-string: rgb(119 196 229)
+            codemirror-keyword: rgb(140 169 255)
+            codemirror-number: rgb(255 91 29)
+
+            # Switch
+            switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
+            switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
+
+            # HACS
+            hacs-new-color: rgb(27 153 123)
+            hacs-error-color: rgb(182 46 95)
+
+            # RGB Colors
+            rgb-primary-text-color: 0, 0, 0
+
+        light:
+            # Token colors
+            token-rgb-primary: rgb(194, 231, 254)
+            token-rgb-secondary: rgb(0, 29, 53)
+            token-color-primary: var(--token-rgb-primary)
+            token-color-accent: var(--token-rgb-secondary)
+            token-color-feedback-info: rgb(138, 208, 248)
+            token-color-feedback-warning: rgb(244,180,0)
+            token-color-feedback-error: rgb(229, 97, 128)
+            token-color-feedback-success: rgb(93, 193, 145)
+            token-color-icon-primary: rgb(69, 71, 70)
+            token-color-icon-secondary: rgb(42, 43, 51)
+            token-color-icon-sidebar: rgb(88, 89, 95)
+            token-color-icon-sidebar-selected: rgb(29, 30, 32)
+            token-color-text-primary: rgb(31, 31, 31)
+            token-color-text-secondary: rgb(68, 71, 70)
+            token-color-text-disabled: rgb(128, 128, 128)
+            token-color-text-sidebar-selected: rgb(41, 40, 36)
+            token-color-text-sidebar: var(--token-color-text-secondary)
+            token-color-text-label-badge: rgb(198, 203, 210)
+            token-color-background-base: rgb(255, 255, 255)
+            token-color-background-secondary: rgb(215, 213, 209)
+            token-color-background-tertiary: rgb(173, 176, 174)
+            token-color-background-sidebar: var(--token-color-background-base)
+            token-color-background-input-base: rgb(234, 234, 235)
+            token-color-background-input-disabled: rgba(218, 218, 215, 0.5)
+            token-color-background-label-badge: rgb(201, 200, 188)
+            token-color-background-card: rgb(238, 243, 252)
+            token-color-background-skrim: rgba(205, 203, 197, 0.9)
+            token-color-background-divider: var(--token-color-background-sidebar)
+            token-color-background-scrollbar-thumb: rgb(46, 48, 56)
+            token-color-background-label-badge-red: var(--token-color-feedback-error)
+            token-color-background-label-badge-green: rgb(78, 183, 128)
+            token-color-background-label-badge-blue: var(--token-color-feedback-info)
+            token-color-background-label-badge-yellow: var(--token-color-feedback-warning)
+            token-color-background-label-badge-grey: rgb(83, 90, 103)
+            token-color-background-popup-scrim: rgba(4, 5, 7, 0.9)
+            token-color-border-card: rgba(0, 0, 0, 0)
+
+            # Feedback colors
+            error-color: rgb(234 114 135)
+            warning-color: rgb(255 219 117)
+            success-color: rgb(118 214 152)
+            info-color: rgb(39, 209, 246)
+
+            # Inconsistent tile card CSS
+            state-alarm_control_panel-disarmed-color: rgb(158, 158, 158)
+            state-fan-off-color: rgb(158, 158, 158)
+
+            # Chip
+            ha-chip-text-color: rgb(255 255 255)
+
+            # Editor
+            codemirror-string: rgb(119 196 229)
+            codemirror-keyword: rgb(140 169 255)
+            codemirror-number: rgb(255 91 29)
+
+            # Switch
+            switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
+            switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
+
+            # HACS
+            hacs-new-color: rgb(27 153 123)
+            hacs-error-color: rgb(182 46 95)
+
+            # RGB Colors
+            rgb-primary-text-color: 0, 0, 0
+
+    # Opacity token
+    token-opacity-ripple-hover: 0.14
+
+    # Font token
+    token-font-family-primary: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+
+    # Size tokens
+    token-size-radius-small: 16px
+    token-size-radius-medium: 24px
+    token-size-radius-large: 28px
+    token-size-radius-card: var(--token-size-radius-large)
+    token-size-width-border-card: 0
+    token-size-height-slider: 4px
+    token-size-height-navbar: 48px
+    token-size-font-title: 28px
+
+    # Weight token
+    token-weight-font-title: 600
+
+    # Spacings
+    horizontal-stack-card-margin: 0px 4px
+    vertical-stack-card-margin: 4px 0px
+
+    # Shapes
+    mdc-shape-small: var(--token-size-radius-small)
+    mdc-shape-medium: var(--token-size-radius-medium)
+    mdc-shape-large: var(--token-size-radius-large)
+
+    # Sizes
+    header-height: var(--token-size-height-navbar)
+    paper-slider-height: var(--token-size-height-slider)
+
+    # Typography
+    primary-font-family: var(--token-font-family-primary)
+    paper-font-common-base_-_font-family: var(--token-font-family-primary)
+    paper-font-common-code_-_font-family: var(--token-font-family-primary)
+    paper-font-body1_-_font-family: var(--token-font-family-primary)
+    paper-font-subhead_-_font-family: var(--token-font-family-primary)
+    paper-font-headline_-_font-family: var(--token-font-family-primary)
+    paper-font-caption_-_font-family: var(--token-font-family-primary)
+    paper-font-title_-_font-family: var(--token-font-family-primary)
+    ha-card-header-font-family: var(--token-font-family-primary)
+    mdc-typography-font-family: var(--token-font-family-primary)
+    mdc-typography-button-font-family: var(--token-font-family-primary)
+    mdc-typography-body1-font-family: var(--token-font-family-primary)
+    mdc-typography-button-font-weight: var(--token-weight-font-title)
+
+    title-font-weight: var(--token-weight-font-title)
+    title-font-size: var(--token-size-font-title)
+
+    # Text
+    primary-text-color: var(--token-color-text-primary)
+    secondary-text-color: var(--token-color-text-secondary)
+    text-primary-color: var(--token-color-text-primary)
+    text-light-primary-color: var(--token-color-text-primary)
+    disabled-text-color: var(--token-color-text-disabled)
+
+    # Main interface colors
+    primary-color: var(--token-color-primary)
+    dark-primary-color: var(--primary-color)
+    light-primary-color: var(--primary-color)
+    accent-color: var(--token-color-accent)
+    divider-color: var(--token-color-background-divider)
+    scrollbar-thumb-color: var(--token-color-background-scrollbar-thumb)
+    mdc-theme-primary: var(--accent-color)
+    mdc-theme-on-primary: var(--primary-color)
+
+    # Background
+    lovelace-background: var(--token-color-background-base)
+    background-color: var(--token-color-background-base)
+    primary-background-color: var(--token-color-background-base)
+    secondary-background-color: var(--token-color-background-secondary)
+
+    # Navbar
+    app-header-background-color: var(--primary-background-color)
+    app-header-text-color: var(--token-color-icon-primary)
+    app-header-edit-background-color: var(--token-color-background-card)
+
+    # Sidebar
+    sidebar-icon-color: var(--token-color-icon-sidebar)
+    sidebar-text-color: var(--sidebar-icon-color)
+    sidebar-background-color: var(--token-color-background-sidebar)
+    sidebar-selected-icon-color: var(--token-color-icon-sidebar-selected)
+    sidebar-selected-text-color: var(--token-color-text-sidebar-selected)
+
+    # Cards
+    border-radius: var(--token-size-radius-card)
+    card-background-color: var(--token-color-background-card)
+    ha-card-background: var(--token-color-background-card)
+    ha-card-border-radius: var(--token-size-radius-card)
+    ha-card-border-color: var(--token-color-border-card)
+    ha-card-border-width: var(--token-size-width-border-card)
+    ha-card-border-style: none
+    ha-card-border: none
+    ha-card-box-shadow: none
+    ha-config-card-border-radius: var(--token-size-radius-small)
+
+    # States
+    state-icon-color: var(--token-color-icon-primary)
+    state-on-color: var(--token-color-feedback-success)
+    state-off-color: var(--token-color-feedback-error)
+    disabled-color: var(--token-color-background-tertiary)
+
+    # Label-badge
+    label-badge-text-color: var(--token-color-text-primary)
+    label-badge-red: var(--token-color-background-label-badge-red)
+    label-badge-blue: var(--token-color-background-label-badge-blue)
+    label-badge-green: var(--token-color-background-label-badge-green)
+    label-badge-yellow: var(--token-color-background-label-badge-yellow)
+    label-badge-grey: var(--token-color-background-label-badge-grey)
+
+    # Dialog
+    mdc-dialog-scrim-color: var(--token-color-background-popup-scrim)
+
+    # Slider
+    paper-slider-knob-color: var(--token-color-primary)
+    paper-slider-knob-start-color: var(--paper-slider-knob-color)
+    paper-slider-pin-color: var(--paper-slider-knob-color)
+    paper-slider-active-color: var(--paper-slider-knob-color)
+    paper-slider-secondary-color: var(--light-primary-color)
+
+    # Switch
+    switch-checked-button-color: var(--primary-color)
+    switch-checked-track-color: var(--switch-checked-button-color)
+
+    # Toggles
+    paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
+    paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
+    paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
+    paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
+    mdc-checkbox-unchecked-color: var(--token-color-icon-secondary)
+    mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
+
+    # List items
+    mdc-ripple-hover-opacity: var(--token-opacity-ripple-hover)
+
+    # Text Fields an Dropdown
+    input-background-color: var(--token-color-background-input-base)
+    input-background-token-color-disabled: rgba(var(--input-background-color), 0.5)
+    input-fill-color: var(--input-background-color)
+    input-ink-color: var(--token-color-text-primary)
+    input-label-ink-color: var(--token-color-text-primary)
+    input-disabled-fill-color: var(--input-background-token-color-disabled)
+    input-disabled-ink-color: var(--disabled-text-color)
+    input-disabled-label-ink-color: var(--disabled-text-color)
+    input-idle-line-color: var(--background-color)
+    input-dropdown-icon-color: var(--secondary-text-color)
+    input-hover-line-color: var(--primary-color)
+    mdc-select-idle-line-color: var(--color-background-base)
+    mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
+
+    # Editor
+    code-editor-background-color: var(--token-color-background-base)
+    codemirror-meta: var(--token-color-text-primary)
+    codemirror-property: var(--accent-color)
+    codemirror-atom: var(--codemirror-property)
+
+    # RGB colors
+    rgb-primary-color: var(--token-rgb-primary)
+    rgb-accent-color: var(--token-rgb-secondary)
+    rgb-white-color: 240, 243, 255
+    rgb-purple-color: 189, 157, 255
+    rgb-pink-color: 255, 98, 192
+    rgb-red-color: 255, 97, 116
+    rgb-deep-purple-color: 166, 77, 255
+    rgb-indigo-color: 84, 132, 255
+    rgb-blue-color: 33, 150, 243
+    rgb-light-blue-color: 3, 169, 244
+    rgb-cyan-color: 0, 188, 212
+    rgb-teal-color: 107, 255, 237
+    rgb-green-color: 141, 253, 166
+    rgb-light-green-color: 156, 255, 166
+    rgb-lime-color: 205, 220, 57
+    rgb-yellow-color: 255, 235, 59
+    rgb-amber-color: 255, 211, 99
+    rgb-orange-color: 229, 145, 9
+    rgb-deep-orange-color: 255, 87, 34
+    rgb-brown-color: 121, 85, 72
+    rgb-grey-color: 158, 158, 158
+    rgb-blue-grey-color: 96, 125, 139
+    rgb-black-color: 0, 0, 0
+    rgb-disabled-color: 61, 65, 85
+    rgb-state-inactive-color: 123, 126, 139
+
+    ### Card Mod theming ###
+    # Turns header into a footer
+    # Colors current view icon and background instead of underline
+    # Spaces view icons evenly along footer
+    #   - Breaks if you go to a subpage or edit mode
+    #   - Fixes if you change dashboards or refreshes
+
+    card-mod-theme: 'Material Rounded'
+    card-mod-root-yaml: |
+        .: |
+          ha-tabs, paper-tabs {
+            --paper-tabs-selection-bar-color: none !important;
+          }
+
+          paper-tab.iron-selected > ha-icon[title="Locks"] {
+            color: var(--green-color);
+          }
+          paper-tab.iron-selected > ha-icon[title="Lights"] {
+            color: var(--yellow-color);
+          }
+          paper-tab.iron-selected > ha-icon[title="Home Theater"] {
+            color: var(--blue-color);
+          }
+          paper-tab.iron-selected > ha-icon[title="Climate"] {
+            color: var(--red-color);
+          }
+          paper-tab.iron-selected > ha-icon[title="Bedroom"] {
+            color: var(--purple-color);
+          }
+          paper-tab > ha-icon {
+            width: 5vw;
+            height: 65%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+          }
+          paper-tab.iron-selected > ha-icon {
+            color: var(--accent-color);
+            background-color: var(--primary-color);
+            border-radius: var(--mdc-shape-small);
+          }
+
+          #view {
+            padding-top: 0 !important;
+            padding-bottom: var(--header-height) !important;
+          }
+
+          .edit-mode > #view {
+            padding-top: 100px !important;
+            padding-bottom: 0 !important;
+            bottom: 100px !important;
+          }
+          
+          .header {
+            top: unset !important;
+            bottom: 0 !important;
+          }
+
+        ha-tabs:
+          $: |
+            #tabsContent.scrollable {
+              width: 100% !important;
+              display: flex !important;
+              justify-content: space-between !important;
+              flex-shrink: 0;
+            }
+            paper-icon-button {
+              display: none !important;
+            }
+
+        hui-masonry-view:
+          $: |
+            ha-fab {
+              bottom: 8em !important;
+            }
+
+        hui-sidebar-view:
+          $: |
+            ha-fab {
+              bottom: 8em !important;
+            }
+
+        hui-panel-view:
+          $: |
+            ha-fab {
+              bottom: 8em !important;
+            }
