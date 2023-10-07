@@ -354,7 +354,7 @@ Material Rounded:
             color: var(--purple-color);
           }
           paper-tab > ha-icon {
-            width: 5vw;
+            width: 100%;
             height: 65%;
             display: inline-flex;
             justify-content: center;
@@ -364,6 +364,16 @@ Material Rounded:
             color: var(--accent-color);
             background-color: var(--primary-color);
             border-radius: var(--mdc-shape-small);
+          }
+          paper-tab.iron-selected > .edit-icon {
+            width: 100%;
+            padding-left: 0;
+          }
+          paper-tab.iron-selected > ha-svg-icon[title="Edit view"] {
+            padding-left: 8px;
+          }
+          paper-tab {
+            padding: 0;
           }
 
           #view {
