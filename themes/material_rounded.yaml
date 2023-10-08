@@ -6,10 +6,8 @@ Material Rounded:
     modes:
         dark:
             # Token colors
-            token-rgb-primary: rgb(0, 74, 118)
-            token-rgb-secondary: rgb(194, 231, 254)
-            token-color-primary: var(--token-rgb-primary)
-            token-color-accent: var(--token-rgb-secondary)
+            token-color-primary: rgb(0, 74, 118)
+            token-color-accent: rgb(194, 231, 254)
             token-color-feedback-info: rgb(138, 208, 248)
             token-color-feedback-warning: rgb(244,180,0)
             token-color-feedback-error: rgb(229, 97, 128)
@@ -74,10 +72,8 @@ Material Rounded:
 
         light:
             # Token colors
-            token-rgb-primary: rgb(194, 231, 254)
-            token-rgb-secondary: rgb(0, 29, 53)
-            token-color-primary: var(--token-rgb-primary)
-            token-color-accent: var(--token-rgb-secondary)
+            token-color-primary: rgb(194, 231, 254)
+            token-color-accent: rgb(0, 29, 53)
             token-color-feedback-info: rgb(138, 208, 248)
             token-color-feedback-warning: rgb(244,180,0)
             token-color-feedback-error: rgb(229, 97, 128)
@@ -298,8 +294,6 @@ Material Rounded:
     codemirror-atom: var(--codemirror-property)
 
     # RGB colors
-    rgb-primary-color: var(--token-rgb-primary)
-    rgb-accent-color: var(--token-rgb-secondary)
     rgb-white-color: 240, 243, 255
     rgb-purple-color: 189, 157, 255
     rgb-pink-color: 255, 98, 192

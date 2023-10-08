@@ -69,7 +69,7 @@ This theme was initially modified from the [Graphite theme](https://github.com/T
 [last-commit-shield]: https://img.shields.io/github/last-commit/Nerwyn/material-rounded-theme?style=for-the-badge
 [commits]: https://github.com/Nerwyn/material-rounded-theme/commits/main
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg?style=for-the-badge
-[forum]: https://community.home-assistant.io/t/material-rounded-theme/
+[forum]: https://community.home-assistant.io/t/material-rounded-a-google-material-you-inspired-theme/623242
 [license-shield]: https://img.shields.io/github/license/Nerwyn/material-rounded-theme.svg?style=for-the-badge
 [maintenance-shield]: https://img.shields.io/badge/maintainer-Nerwyn-blue.svg?style=for-the-badge
 [releases-shield]: https://img.shields.io/github/release/Nerwyn/material-rounded-theme.svg?style=for-the-badge
