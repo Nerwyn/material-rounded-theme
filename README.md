@@ -19,11 +19,13 @@ Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for heade
 
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/tiles-light.png" alt="tile-light" width="600"/>
 
-## [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card)
+## Compared to Google Home
 
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/big-slider-card.png" alt="big-slider-card-dark" width="600"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/comparison-dark.png" alt="google-home-comparison-dark" width="600"/>
 
-Use the following settings in big-slider-card to match:
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/comparison-light.png" alt="google-home-comparison-light" width="600"/>
+
+Light entities made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card). Use the following settings to match:
 
 ```yaml
 colorize: true
@@ -31,12 +33,6 @@ show_percentage: true
 bold_text: true
 height: 88
 ```
-
-## Compared to Google Home
-
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/google-home-comparison-dark.png" alt="google-home-comparison-dark" width="600"/>
-
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/google-home-comparison-light.png" alt="google-home-comparison-light" width="600"/>
 
 # Installation
 
