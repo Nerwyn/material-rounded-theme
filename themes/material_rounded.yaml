@@ -149,7 +149,7 @@ Material Rounded:
     token-size-radius-card: var(--token-size-radius-large)
     token-size-width-border-card: 0
     token-size-height-slider: 4px
-    token-size-height-navbar: 48px
+    token-size-height-navbar: 80px
     token-size-font-title: 28px
 
     # Weight token
@@ -165,7 +165,7 @@ Material Rounded:
     mdc-shape-large: var(--token-size-radius-large)
 
     # Sizes
-    header-height: var(--token-size-height-navbar)
+    # header-height: var(--token-size-height-navbar) # Do this with card-mod so it's easier to disable and when header mods are disabled it doesn't stay super thick
     paper-slider-height: var(--token-size-height-slider)
 
     # Typography
@@ -328,6 +328,10 @@ Material Rounded:
     card-mod-theme: 'Material Rounded'
     card-mod-root-yaml: |
         .: |
+          div:not(.edit-mode) > .header > .toolbar {
+            height: var(--token-size-height-navbar) !important;
+          }
+
           ha-tabs, paper-tabs {
             --paper-tabs-selection-bar-color: none !important;
           }
@@ -349,7 +353,8 @@ Material Rounded:
           }
           paper-tab > ha-icon {
             width: 100%;
-            height: 65%;
+            max-width: 72px;
+            height: 36px;
             display: inline-flex;
             justify-content: center;
             align-items: center;
@@ -372,7 +377,7 @@ Material Rounded:
 
           #view {
             padding-top: 0 !important;
-            padding-bottom: var(--header-height) !important;
+            padding-bottom: var(--token-size-height-navbar) !important;
           }
 
           .edit-mode > #view {
@@ -401,17 +406,17 @@ Material Rounded:
         hui-masonry-view:
           $: |
             ha-fab {
-              bottom: 8em !important;
+              bottom: calc(var(--token-size-height-navbar) + 32px) !important;
             }
 
         hui-sidebar-view:
           $: |
             ha-fab {
-              bottom: 8em !important;
+              bottom: calc(var(--token-size-height-navbar) + 32px) !important;
             }
 
         hui-panel-view:
           $: |
             ha-fab {
-              bottom: 8em !important;
+              bottom: calc(var(--token-size-height-navbar) + 32px) !important;
             }
