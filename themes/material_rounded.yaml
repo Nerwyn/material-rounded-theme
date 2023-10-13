@@ -412,17 +412,17 @@ Material Rounded:
         hui-masonry-view:
           $: |
             ha-fab {
-              bottom: calc(var(--token-size-height-navbar) + 32px) !important;
+              bottom: calc(2*var(--header-height)) !important;
             }
 
         hui-sidebar-view:
           $: |
             ha-fab {
-              bottom: calc(var(--token-size-height-navbar) + 32px) !important;
+              bottom: calc(2*var(--header-height)) !important;
             }
 
         hui-panel-view:
           $: |
             ha-fab {
-              bottom: calc(var(--token-size-height-navbar) + 32px) !important;
+              bottom: calc(2*var(--header-height)) !important;
             }
