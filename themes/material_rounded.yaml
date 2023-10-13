@@ -149,7 +149,7 @@ Material Rounded:
     token-size-radius-card: var(--token-size-radius-large)
     token-size-width-border-card: 0
     token-size-height-slider: 4px
-    token-size-height-navbar: 80px
+    # token-size-height-navbar: 80px
     token-size-font-title: 28px
 
     # Weight token
@@ -165,7 +165,7 @@ Material Rounded:
     mdc-shape-large: var(--token-size-radius-large)
 
     # Sizes
-    # header-height: var(--token-size-height-navbar) # Do this with card-mod so it's easier to disable and when header mods are disabled it doesn't stay super thick
+    # header-height: var(--token-size-height-navbar)
     paper-slider-height: var(--token-size-height-slider)
 
     # Typography
@@ -328,10 +328,6 @@ Material Rounded:
     card-mod-theme: 'Material Rounded'
     card-mod-root-yaml: |
         .: |
-          div:not(.edit-mode) > .header > .toolbar {
-            height: var(--token-size-height-navbar) !important;
-          }
-
           ha-tabs, paper-tabs {
             --paper-tabs-selection-bar-color: none !important;
           }
@@ -358,6 +354,7 @@ Material Rounded:
             display: inline-flex;
             justify-content: center;
             align-items: center;
+            align-self: start;
           }
           paper-tab.iron-selected > ha-icon {
             color: var(--accent-color);
@@ -389,6 +386,15 @@ Material Rounded:
           .header {
             top: unset !important;
             bottom: 0 !important;
+          }
+
+          ha-menu-button {
+            top: -10px;
+          }
+
+          .action-items {
+            top: -10px;
+            position: relative;
           }
 
         ha-tabs:
