@@ -376,7 +376,7 @@ Material Rounded:
 
           #view {
             padding-top: 0 !important;
-            padding-bottom: var(--token-size-height-navbar) !important;
+            padding-bottom: var(--header-height) !important;
           }
 
           .edit-mode > #view {
