@@ -355,6 +355,8 @@ Material Rounded:
             justify-content: center;
             align-items: center;
             align-self: start;
+            position: relative;
+            top: 4px;
           }
           paper-tab.iron-selected > ha-icon {
             color: var(--accent-color);
@@ -397,6 +399,11 @@ Material Rounded:
             position: relative;
           }
 
+          #add-view {
+            position: relative !important;
+            vertical-align: top;
+          }
+
         ha-tabs:
           $: |
             #tabsContent.scrollable {
@@ -407,6 +414,15 @@ Material Rounded:
             }
             paper-icon-button {
               display: none !important;
+            }
+
+        paper-tabs:
+          $: |
+            #tabsContent.scrollable {
+              width: 100% !important;
+              display: flex !important;
+              justify-content: space-between !important;
+              flex-shrink: 0;
             }
 
         hui-masonry-view:
