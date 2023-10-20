@@ -340,18 +340,30 @@ Material Rounded:
           paper-tab.iron-selected > ha-icon[title="Lights"] {
             color: var(--yellow-color);
           }
-          paper-tab.iron-selected > ha-icon[title="Home Theater"] {
-            color: var(--blue-color);
-          }
           paper-tab.iron-selected > ha-icon[title="Climate"] {
             color: var(--red-color);
           }
           paper-tab.iron-selected > ha-icon[title="Bedroom"] {
             color: var(--purple-color);
           }
-          paper-tab > ha-icon {
+          paper-tab.iron-selected > ha-icon {
             width: 100%;
             max-width: 72px;
+            color: var(--accent-color);
+            background-color: var(--primary-color);
+            border-radius: var(--mdc-shape-small);
+          }
+          paper-tab.iron-selected > .edit-icon {
+            width: 100%;
+            max-width: 72px;
+            width: 100%;
+            padding-left: 0;
+          }
+          paper-tab.iron-selected > ha-svg-icon[title="Edit view"] {
+            padding-left: 8px;
+          }
+          paper-tab > ha-icon {
+            width: 24px;
             height: 36px;
             display: inline-flex;
             justify-content: center;
@@ -359,18 +371,7 @@ Material Rounded:
             align-self: start;
             position: relative;
             top: 4px;
-          }
-          paper-tab.iron-selected > ha-icon {
-            color: var(--accent-color);
-            background-color: var(--primary-color);
-            border-radius: var(--mdc-shape-small);
-          }
-          paper-tab.iron-selected > .edit-icon {
-            width: 100%;
-            padding-left: 0;
-          }
-          paper-tab.iron-selected > ha-svg-icon[title="Edit view"] {
-            padding-left: 8px;
+            transition: width 0.2s cubic-bezier(.2,0,0,1);
           }
           paper-tab {
             padding: 0;
@@ -393,11 +394,11 @@ Material Rounded:
           }
 
           ha-menu-button {
-            top: -10px;
+            top: -5px;
           }
 
           .action-items {
-            top: -10px;
+            top: -5px;
             position: relative;
           }
 
@@ -425,6 +426,12 @@ Material Rounded:
               display: flex !important;
               justify-content: space-between !important;
               flex-shrink: 0;
+            }
+
+        paper-tab:
+          $: |
+            paper-ripple {
+              display: none;
             }
 
         hui-masonry-view:
