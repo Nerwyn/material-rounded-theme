@@ -387,6 +387,10 @@ Material Rounded:
             padding-bottom: 0 !important;
             bottom: 100px !important;
           }
+
+          .edit-mode {
+            --app-header-edit-text-color: var(--app-header-text-color);
+          }
           
           .header {
             top: unset !important;
