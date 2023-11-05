@@ -5,6 +5,10 @@
 [![GitHub Activity][last-commit-shield]][commits]
 [![Community Forum][forum-shield]][forum]
 
+<a href="https://www.buymeacoffee.com/nerwyn" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+[![My Home Assistant](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=material-rounded-theme&owner=Nerwyn&category=Plugin)
+
 # Material Rounded Theme
 
 Material Rounded theme for Home Assistant influenced by Material You on Android.
