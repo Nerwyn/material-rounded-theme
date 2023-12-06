@@ -149,7 +149,7 @@ Material Rounded:
     token-size-radius-medium: 24px
     token-size-radius-large: 28px
     token-size-radius-card: var(--token-size-radius-large)
-    token-size-width-border-card: 0
+    token-size-width-border-card: 1px
     token-size-height-slider: 4px
     # token-size-height-navbar: 80px
     token-size-font-title: 28px
