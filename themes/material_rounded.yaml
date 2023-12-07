@@ -149,7 +149,7 @@ Material Rounded:
     token-size-radius-medium: 24px
     token-size-radius-large: 28px
     token-size-radius-card: var(--token-size-radius-large)
-    token-size-width-border-card: 1px
+    token-size-width-border-card: 0px
     token-size-height-slider: 4px
     # token-size-height-navbar: 80px
     token-size-font-title: 28px
@@ -295,31 +295,6 @@ Material Rounded:
     codemirror-meta: var(--token-color-text-primary)
     codemirror-property: var(--accent-color)
     codemirror-atom: var(--codemirror-property)
-
-    # RGB colors
-    rgb-white-color: 240, 243, 255
-    rgb-purple-color: 189, 157, 255
-    rgb-pink-color: 255, 98, 192
-    rgb-red-color: 255, 97, 116
-    rgb-deep-purple-color: 166, 77, 255
-    rgb-indigo-color: 84, 132, 255
-    rgb-blue-color: 33, 150, 243
-    rgb-light-blue-color: 3, 169, 244
-    rgb-cyan-color: 0, 188, 212
-    rgb-teal-color: 107, 255, 237
-    rgb-green-color: 141, 253, 166
-    rgb-light-green-color: 156, 255, 166
-    rgb-lime-color: 205, 220, 57
-    rgb-yellow-color: 255, 235, 59
-    rgb-amber-color: 255, 211, 99
-    rgb-orange-color: 229, 145, 9
-    rgb-deep-orange-color: 255, 87, 34
-    rgb-brown-color: 121, 85, 72
-    rgb-grey-color: 158, 158, 158
-    rgb-blue-grey-color: 96, 125, 139
-    rgb-black-color: 0, 0, 0
-    rgb-disabled-color: 61, 65, 85
-    rgb-state-inactive-color: 123, 126, 139
 
     ### Card Mod theming ###
     # Turns header into a footer
