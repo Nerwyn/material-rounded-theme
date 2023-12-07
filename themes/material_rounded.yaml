@@ -423,21 +423,6 @@ Material Rounded:
             height: var(--footer-height) !important;
           }
 
-          xha-menu-button {
-            top: -5px;
-            max-width: 36px;
-          }
-
-          x.action-items {
-            top: -5px;
-            right: 5px;
-            position: relative;
-          }
-
-          xha-icon-button {
-            max-width: 36px;
-          }
-
           #add-view {
             position: relative !important;
             vertical-align: top;
