@@ -169,6 +169,7 @@ Material Rounded:
     # Sizes
     # header-height: var(--token-size-height-navbar)
     paper-slider-height: var(--token-size-height-slider)
+    footer-height: 80px
 
     # Typography
     primary-font-family: var(--token-font-family-primary)
@@ -212,8 +213,8 @@ Material Rounded:
     secondary-background-color: var(--token-color-background-secondary)
 
     # Navbar
-    app-header-background-color: var(--primary-background-color)
-    app-header-text-color: var(--token-color-icon-primary)
+    app-header-background-color: var(--token-color-background-card)
+    app-header-text-color: var(--primary-text-color)
     app-header-edit-background-color: var(--token-color-background-card)
 
     # Sidebar
@@ -332,9 +333,10 @@ Material Rounded:
         .: |
           ha-tabs, paper-tabs {
             --paper-tabs-selection-bar-color: none !important;
+            margin: 0 !important;
           }
 
-          paper-tab.iron-selected > ha-icon[title="Locks"] {
+          paper-tab.iron-selected > ha-icon[title="Locks"], paper-tab.iron-selected > ha-icon[title="Security"] {
             color: var(--green-color);
           }
           paper-tab.iron-selected > ha-icon[title="Lights"] {
@@ -356,59 +358,94 @@ Material Rounded:
           paper-tab.iron-selected > .edit-icon {
             width: 100%;
             max-width: 72px;
-            width: 100%;
             padding-left: 0;
           }
           paper-tab.iron-selected > ha-svg-icon[title="Edit view"] {
             padding-left: 8px;
           }
           paper-tab > ha-icon {
+            top: -3px;
             width: 24px;
-            height: 36px;
+            height: 32px;
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            align-self: start;
+            align-self: center;
             position: relative;
-            top: 4px;
             transition: width 0.2s cubic-bezier(.2,0,0,1);
           }
           paper-tab {
             padding: 0;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+            align-content: space-between;
+            justify-content: space-around;
+            justify-items: stretch;
+          }
+
+          paper-tab::after {
+            content: attr(aria-label);
+            text-transform: none;
+            text-align: center;
+            position: relative;
+            top: -12px;
           }
 
           #view {
             padding-top: 0 !important;
-            padding-bottom: var(--header-height) !important;
+            padding-bottom: var(--footer-height) !important;
           }
 
           .edit-mode > #view {
-            padding-top: 100px !important;
+            padding-top: calc(2*var(--footer-height)) !important;
             padding-bottom: 0 !important;
-            bottom: 100px !important;
+            bottom: calc(2*var(--footer-height)) !important;
           }
 
           .edit-mode {
             --app-header-edit-text-color: var(--app-header-text-color);
           }
+
+          .edit-mode > .header > paper-tabs > paper-tab.iron-selected::after {
+            position: relative;
+            bottom: 12px;
+          }
+
+          .edit-mode > .header {
+            height: calc(2*var(--footer-height)) !important;
+          }
           
           .header {
             top: unset !important;
             bottom: 0 !important;
+            height: var(--footer-height) !important;
           }
 
-          ha-menu-button {
+          xha-menu-button {
             top: -5px;
+            max-width: 36px;
           }
 
-          .action-items {
+          x.action-items {
             top: -5px;
+            right: 5px;
             position: relative;
+          }
+
+          xha-icon-button {
+            max-width: 36px;
           }
 
           #add-view {
             position: relative !important;
             vertical-align: top;
+          }
+
+          .toolbar {
+            height: var(--footer-height) !important;
+            padding: 0 !important;
           }
 
         ha-tabs:
@@ -437,21 +474,24 @@ Material Rounded:
             paper-ripple {
               display: none;
             }
+            .tab-content {
+              width: 100%
+            }
 
         hui-masonry-view:
           $: |
             ha-fab {
-              bottom: calc(2*var(--header-height)) !important;
+              bottom: calc(2*var(--footer-height)) !important;
             }
 
         hui-sidebar-view:
           $: |
             ha-fab {
-              bottom: calc(2*var(--header-height)) !important;
+              bottom: calc(2*var(--footer-height)) !important;
             }
 
         hui-panel-view:
           $: |
             ha-fab {
-              bottom: calc(2*var(--header-height)) !important;
+              bottom: calc(2*var(--footer-height)) !important;
             }
