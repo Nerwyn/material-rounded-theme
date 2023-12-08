@@ -13,6 +13,8 @@
 
 Material Rounded theme for Home Assistant influenced by Material You on Android.
 
+This theme aims to match the styling of the Google Home app as closely as possible, so it may change over time as the style of the Google Home app changes.
+
 Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for header/footer modifications.
 
 # Screenshots

@@ -22,10 +22,10 @@ Material Rounded:
             token-color-text-sidebar-selected: rgb(214, 215, 219)
             token-color-text-sidebar: var(--token-color-text-secondary)
             token-color-text-label-badge: rgb(198, 203, 210)
-            token-color-background-base: rgb(31, 31, 31)
+            token-color-background-base: rgb(19, 19, 20)
             token-color-background-secondary: rgb(40, 42, 46)
             token-color-background-tertiary: rgb(0, 0, 0)
-            token-color-background-sidebar: var(--token-color-background-base)
+            token-color-background-sidebar: var(--token-color-background-toolbar)
             token-color-background-input-base: rgb(46, 48, 56)
             token-color-background-input-disabled: rgba(37, 37, 40, 0.5)
             token-color-background-label-badge: rgb(54, 55, 67)
@@ -153,7 +153,6 @@ Material Rounded:
     token-size-radius-card: var(--token-size-radius-large)
     token-size-width-border-card: 0px
     token-size-height-slider: 4px
-    # token-size-height-navbar: 80px
     token-size-font-title: 28px
 
     # Weight token
@@ -163,13 +162,7 @@ Material Rounded:
     horizontal-stack-card-margin: 0px 4px
     vertical-stack-card-margin: 4px 0px
 
-    # Shapes
-    mdc-shape-small: var(--token-size-radius-small)
-    mdc-shape-medium: var(--token-size-radius-medium)
-    mdc-shape-large: var(--token-size-radius-large)
-
     # Sizes
-    # header-height: var(--token-size-height-navbar)
     paper-slider-height: var(--token-size-height-slider)
     footer-height: 80px
 
@@ -312,6 +305,9 @@ Material Rounded:
             --paper-tabs-selection-bar-color: none !important;
             margin: 0 !important;
           }
+          paper-tabs {
+            height: 50%;
+          }
 
           paper-tab.iron-selected > ha-icon[title="Locks"], paper-tab.iron-selected > ha-icon[title="Security"] {
             color: var(--green-color);
@@ -330,7 +326,7 @@ Material Rounded:
             max-width: 72px;
             color: var(--accent-color);
             background-color: var(--primary-color);
-            border-radius: var(--mdc-shape-small);
+            border-radius: 16px;
           }
           paper-tab.iron-selected > .edit-icon {
             width: 100%;
