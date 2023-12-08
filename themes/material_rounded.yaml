@@ -371,12 +371,14 @@ Material Rounded:
           #view {
             padding-top: 0 !important;
             padding-bottom: var(--footer-height) !important;
+            margin: 0px 12px !important;
           }
 
           .edit-mode > #view {
             padding-top: calc(2*var(--footer-height)) !important;
             padding-bottom: 0 !important;
             bottom: calc(2*var(--footer-height)) !important;
+            margin: 0px 12px !important;
           }
 
           .edit-mode {
