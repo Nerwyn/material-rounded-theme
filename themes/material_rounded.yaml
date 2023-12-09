@@ -210,7 +210,7 @@ Material Rounded:
     # Navbar
     app-header-background-color: var(--token-color-background-toolbar)
     app-header-text-color: var(--primary-text-color)
-    app-header-edit-background-color: var(--token-color-background-card)
+    app-header-edit-background-color: var(--token-color-background-toolbar)
 
     # Sidebar
     sidebar-icon-color: var(--token-color-icon-sidebar)
@@ -318,8 +318,17 @@ Material Rounded:
           paper-tab.iron-selected > ha-icon[title="Climate"] {
             color: var(--red-color);
           }
+          paper-tab.iron-selected > ha-icon[title="Allergens"] {
+            color: var(--red-color);
+          }
           paper-tab.iron-selected > ha-icon[title="Bedroom"] {
             color: var(--purple-color);
+          }
+          paper-tab.iron-selected > ha-icon[title="Spotify"] {
+            color: rgb(29, 185, 84);
+          }
+          paper-tab.iron-selected > ha-icon[title="Weather"] {
+            color: var(--state-sun-above_horizon-color);
           }
           paper-tab.iron-selected > ha-icon {
             width: 100%;
