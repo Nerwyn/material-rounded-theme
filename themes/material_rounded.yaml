@@ -267,9 +267,6 @@ Material Rounded:
     mdc-checkbox-unchecked-color: var(--token-color-icon-secondary)
     mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
 
-    # List items
-    mdc-ripple-hover-opacity: var(--token-opacity-ripple-hover)
-
     # Text Fields an Dropdown
     input-background-color: var(--token-color-background-input-base)
     input-background-token-color-disabled: rgba(var(--input-background-color), 0.5)
@@ -309,18 +306,19 @@ Material Rounded:
             height: 50%;
           }
 
-          paper-tab.iron-selected > ha-icon[title="Locks"], paper-tab.iron-selected > ha-icon[title="Security"] {
+          paper-tab.iron-selected > ha-icon[title="Locks"],
+          paper-tab.iron-selected > ha-icon[title="Security"] {
             color: var(--green-color);
           }
           paper-tab.iron-selected > ha-icon[title="Lights"] {
             color: var(--yellow-color);
           }
-          paper-tab.iron-selected > ha-icon[title="Climate"] {
+          paper-tab.iron-selected > ha-icon[title="Climate"],
+          paper-tab.iron-selected > ha-icon[title="Allergens"],
+          paper-tab.iron-selected > ha-icon[title="AQI"] {
             color: var(--red-color);
           }
-          paper-tab.iron-selected > ha-icon[title="Allergens"] {
-            color: var(--red-color);
-          }
+
           paper-tab.iron-selected > ha-icon[title="Bedroom"] {
             color: var(--purple-color);
           }
@@ -373,6 +371,7 @@ Material Rounded:
             text-align: center;
             position: relative;
             top: -12px;
+            font-weight: normal;
           }
 
           #view {
@@ -416,14 +415,12 @@ Material Rounded:
             height: var(--footer-height) !important;
             padding: 0 !important;
           }
-
         ha-tabs:
           $: |
             #tabsContent.scrollable {
               width: 100% !important;
               display: flex !important;
               justify-content: space-between !important;
-              flex-shrink: 0;
             }
             paper-icon-button {
               display: none !important;
@@ -435,7 +432,9 @@ Material Rounded:
               width: 100% !important;
               display: flex !important;
               justify-content: space-between !important;
-              flex-shrink: 0;
+            }
+            paper-icon-button {
+              display: none !important;
             }
 
         paper-tab:
@@ -450,17 +449,41 @@ Material Rounded:
         hui-masonry-view:
           $: |
             ha-fab {
-              bottom: calc(2*var(--footer-height)) !important;
+              bottom: calc(2*var(--footer-height) + 4px) !important;
             }
 
         hui-sidebar-view:
           $: |
             ha-fab {
-              bottom: calc(2*var(--footer-height)) !important;
+              bottom: calc(2*var(--footer-height) + 4px) !important;
             }
 
         hui-panel-view:
           $: |
             ha-fab {
-              bottom: calc(2*var(--footer-height)) !important;
+              bottom: calc(2*var(--footer-height) + 4px) !important;
+            }
+
+        masonry-layout:
+          $: |
+            ha-fab {
+              bottom: calc(2*var(--footer-height) + 4px) !important;
+            }
+
+        horizontal-layout:
+          $: |
+            ha-fab {
+              bottom: calc(2*var(--footer-height) + 4px) !important;
+            }
+
+        vertical-layout:
+          $: |
+            ha-fab {
+              bottom: calc(2*var(--footer-height) + 4px) !important;
+            }
+
+        grid-layout:
+          $: |
+            ha-fab {
+              bottom: calc(2*var(--footer-height) + 4px) !important;
             }

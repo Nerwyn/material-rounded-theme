@@ -59,15 +59,13 @@ height: 88
 
 This theme uses [card-mod](https://github.com/thomasloven/lovelace-card-mod) to:
 
--   Turn the header into a footer.
+-   Turn the toolbar header into a footer.
 -   Remove the selection bar.
--   Space the view icons evenly along the entire footer.
+-   Space the view icons evenly along the entire toolbar.
 -   Add the view name below the icon.
 -   Highlight the current view with a colored icon and background behind the icon.
 
 You can disable this by commenting out or deleting everything below `### Card Mod theming ###` after installing. After installing from HACS this theme can be found in the folder `/config/themes/material_rounded/`.
-
-When using the card-mod footer, you may find that it "breaks" if you enter edit mode or go to a subview and back. This is due to the effected elements unloading when either of these actions are done, which causes the card-mod css to unload. This can be fixed by navigating to a different dashboard and back, refreshing the page, or reloading the theme via a service call.
 
 This card also includes some examples of how to use special colors on a per view basis, like so:
 
