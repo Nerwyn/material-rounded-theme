@@ -1,6 +1,6 @@
 [![GitHub Release][releases-shield]][releases]
 [![License][license-shield]](LICENSE.md)
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-blue.svg?style=for-the-badge)](https://github.com/hacs/integration)
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][last-commit-shield]][commits]
 [![Community Forum][forum-shield]][forum]
@@ -48,12 +48,10 @@ height: 88
 
 1. Navigate to HACS (install from [here](https://hacs.xyz/) if you do not have it yet).
 2. Navigate to `Frontend`.
-3. Click on the three dot menu and then `Custom repositories`.
-4. Paste this repository (https://github.com/Nerwyn/material-rounded-theme) in the text box, set the category to `Theme`, and click `ADD`.
-5. This theme should appear as a new repository on the screen. If not search for it by clicking `+ EXPLORE & DOWNLOAD REPOSITORIES`.
-6. Open this repository in HACS and click `DOWNLOAD`.
-7. Refresh Home Assistant.
-8. Navigate to your Profile, and select `Material Rounded` under Theme along with your preference for light or dark mode.
+3. Click `+ EXPLORE & DOWNLOAD REPOSITORIES` and search for `Material Rounded Theme`.
+4. Open this repository in HACS and click `DOWNLOAD`.
+5. Refresh Home Assistant.
+6. Navigate to your Profile, and select `Material Rounded` under Theme along with your preference for light or dark mode.
 
 # Card Mod Powered Footer
 
@@ -77,7 +75,7 @@ paper-tab.iron-selected > ha-icon[title='Lights'] {
 
 Also check out [Material Symbols](https://github.com/beecho01/material-symbols) to use updated material icons, as shown in the screenshots!
 
-This theme was initially modified from the [Graphite theme](https://github.com/TilmanGriesel/graphite), as I found that it was my favorite of the available Home Assistant themes on HACS when I started creating this theme. Therefore, it contains similar logic for reusing variables and possibly some unusued variables.
+This theme was initially modified from the [Graphite theme](https://github.com/TilmanGriesel/graphite), as I found that it was my favorite of the available Home Assistant themes on HACS when I started creating this theme. Therefore, it contains similar logic for reusing variables and possibly some unused variables.
 
 [last-commit-shield]: https://img.shields.io/github/last-commit/Nerwyn/material-rounded-theme?style=for-the-badge
 [commits]: https://github.com/Nerwyn/material-rounded-theme/commits/main
