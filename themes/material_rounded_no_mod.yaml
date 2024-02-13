@@ -7,6 +7,8 @@ Material Rounded No Mods:
             # Token colors
             token-color-primary: rgb(0, 74, 118)
             token-color-accent: rgb(194, 231, 254)
+            token-color-selected-view-background: rgb(0, 74, 118)
+            token-color-selected-view-icon: rgb(194, 231, 254)
             token-color-icon-primary: rgb(196, 199, 197)
             token-color-icon-secondary: rgb(138, 140, 153)
             token-color-icon-sidebar: rgb(147, 149, 159)
@@ -52,6 +54,8 @@ Material Rounded No Mods:
             # Token colors
             token-color-primary: rgb(194, 231, 254)
             token-color-accent: rgb(0, 29, 53)
+            token-color-selected-view-background: rgb(194, 231, 254)
+            token-color-selected-view-icon: rgb(0, 29, 53)
             token-color-feedback-info: rgb(138, 208, 248)
             token-color-feedback-warning: rgb(244,180,0)
             token-color-feedback-error: rgb(229, 97, 128)

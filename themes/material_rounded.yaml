@@ -8,6 +8,8 @@ Material Rounded:
             # Token colors
             token-color-primary: rgb(0, 74, 118)
             token-color-accent: rgb(194, 231, 254)
+            token-color-selected-view-background: rgb(0, 74, 118)
+            token-color-selected-view-icon: rgb(194, 231, 254)
             token-color-icon-primary: rgb(196, 199, 197)
             token-color-icon-secondary: rgb(138, 140, 153)
             token-color-icon-sidebar: rgb(147, 149, 159)
@@ -53,6 +55,8 @@ Material Rounded:
             # Token colors
             token-color-primary: rgb(194, 231, 254)
             token-color-accent: rgb(0, 29, 53)
+            token-color-selected-view-background: rgb(194, 231, 254)
+            token-color-selected-view-icon: rgb(0, 29, 53)
             token-color-feedback-info: rgb(138, 208, 248)
             token-color-feedback-warning: rgb(244,180,0)
             token-color-feedback-error: rgb(229, 97, 128)
@@ -260,8 +264,8 @@ Material Rounded:
           paper-tab.iron-selected > ha-icon {
             width: 100%;
             max-width: 72px;
-            color: var(--accent-color);
-            background-color: var(--primary-color);
+            color: var(--token-color-selected-view-icon);
+            background-color: var(--token-color-selected-view-background);
             border-radius: 16px;
           }
           paper-tab.iron-selected > .edit-icon {
