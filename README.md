@@ -15,7 +15,7 @@ Material Rounded theme for Home Assistant influenced by Material You on Android.
 
 This theme aims to match the styling of the Google Home app as closely as possible, so it may change over time as the style of the Google Home app changes.
 
-Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for header/footer modifications.
+Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for header/footer modifications. If you have card-mod installed and do not want these changes to apply, use the "No Mod" version of this theme.
 
 # Screenshots
 
@@ -62,16 +62,7 @@ This theme uses [card-mod](https://github.com/thomasloven/lovelace-card-mod) to:
 -   Space the view icons evenly along the entire toolbar.
 -   Add the view name below the icon.
 -   Highlight the current view with a colored icon and background behind the icon.
-
-You can disable this by commenting out or deleting everything below `### Card Mod theming ###` after installing. After installing from HACS this theme can be found in the folder `/config/themes/material_rounded/`.
-
-This card also includes some examples of how to use special colors on a per view basis, like so:
-
-```css
-paper-tab.iron-selected > ha-icon[title='Lights'] {
-	color: var(--yellow-color);
-}
-```
+-   Add a 12px margin to each side of the view.
 
 Also check out [Material Symbols](https://github.com/beecho01/material-symbols) to use updated material icons, as shown in the screenshots!
 

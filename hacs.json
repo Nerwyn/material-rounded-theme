@@ -1,4 +1,5 @@
 {
 	"name": "Material Rounded Theme - Based on Material You by Google on Android",
-	"render_readme": true
+	"render_readme": true,
+	"hide_default_branch": true
 }
