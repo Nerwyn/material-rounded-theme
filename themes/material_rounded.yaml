@@ -36,9 +36,6 @@ Material Rounded:
             state-fan-off-color: rgb(40, 42, 46)
             state-climate-off-color: rgb(72, 74, 78)
 
-            # Chip
-            ha-chip-text-color: rgb(255 255 255)
-
             # Editor
             codemirror-string: rgb(119 196 229)
             codemirror-keyword: rgb(140 169 255)
@@ -87,9 +84,6 @@ Material Rounded:
             state-alarm_control_panel-disarmed-color: rgb(158, 158, 158)
             state-fan-off-color: rgb(158, 158, 158)
             state-climate-off-color: rgb(158, 158, 158)
-
-            # Chip
-            ha-chip-text-color: rgb(255 255 255)
 
             # Editor
             codemirror-string: rgb(119 196 229)
@@ -262,7 +256,7 @@ Material Rounded:
           paper-tabs {
             height: 50%;
           }
-          
+
           paper-tab.iron-selected > ha-icon {
             width: 100%;
             max-width: 72px;
