@@ -5,10 +5,8 @@ Material Rounded No Mods:
     modes:
         dark:
             # Token colors
-            token-color-primary: rgb(0, 74, 118)
-            token-color-accent: rgb(194, 231, 254)
-            token-color-selected-view-background: rgb(0, 74, 118)
-            token-color-selected-view-icon: rgb(194, 231, 254)
+            token-color-accent: rgb(0, 74, 118)
+            token-color-primary: rgb(194, 231, 254)
             token-color-icon-primary: rgb(196, 199, 197)
             token-color-icon-secondary: rgb(138, 140, 153)
             token-color-icon-sidebar: rgb(147, 149, 159)
@@ -52,14 +50,8 @@ Material Rounded No Mods:
 
         light:
             # Token colors
-            token-color-primary: rgb(194, 231, 254)
-            token-color-accent: rgb(0, 29, 53)
-            token-color-selected-view-background: rgb(194, 231, 254)
-            token-color-selected-view-icon: rgb(0, 29, 53)
-            token-color-feedback-info: rgb(138, 208, 248)
-            token-color-feedback-warning: rgb(244,180,0)
-            token-color-feedback-error: rgb(229, 97, 128)
-            token-color-feedback-success: rgb(93, 193, 145)
+            token-color-accent: rgb(194, 231, 254)
+            token-color-primary: rgb(0, 29, 53)
             token-color-icon-primary: rgb(69, 71, 70)
             token-color-icon-secondary: rgb(42, 43, 51)
             token-color-icon-sidebar: rgb(88, 89, 95)
@@ -148,7 +140,7 @@ Material Rounded No Mods:
     # Text
     primary-text-color: var(--token-color-text-primary)
     secondary-text-color: var(--token-color-text-secondary)
-    text-primary-color: var(--token-color-text-primary)
+    text-primary-color: var(--token-color-accent)
     text-light-primary-color: var(--token-color-text-primary)
     disabled-text-color: var(--token-color-text-disabled)
     rgb-primary-text-color: var(--token-color-text-primary)
@@ -160,8 +152,8 @@ Material Rounded No Mods:
     accent-color: var(--token-color-accent)
     divider-color: var(--token-color-background-divider)
     scrollbar-thumb-color: var(--token-color-background-scrollbar-thumb)
-    mdc-theme-primary: var(--accent-color)
-    mdc-theme-on-primary: var(--primary-color)
+    mdc-theme-primary: var(--primary-color)
+    mdc-theme-on-primary: var(--accent-color)
 
     # Background
     lovelace-background: var(--token-color-background-base)
@@ -240,5 +232,5 @@ Material Rounded No Mods:
     # Editor
     code-editor-background-color: var(--token-color-background-base)
     codemirror-meta: var(--token-color-text-primary)
-    codemirror-property: var(--accent-color)
+    codemirror-property: var(--primary-color)
     codemirror-atom: var(--codemirror-property)
