@@ -1,7 +1,7 @@
 import copy
 import ruamel.yaml
 
-theme_file_path = '../../themes/material_rounded.yaml'
+theme_file_path = '../themes/material_rounded.yaml'
 
 ruamel.yaml.representer.RoundTripRepresenter.ignore_aliases = lambda x, y: True
 yaml = ruamel.yaml.YAML()
