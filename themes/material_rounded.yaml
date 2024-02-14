@@ -232,10 +232,10 @@ Material Rounded:
             color: var(--token-color-primary);
             background-color: var(--token-color-accent);
             border-radius: 16px;
-          }
-          paper-tab.iron-selected > .edit-icon {
             width: 100%;
             max-width: 72px;
+          }
+          paper-tab.iron-selected > .edit-icon {
             padding-left: 0;
           }
           paper-tab.iron-selected > ha-svg-icon[title="Edit view"] {
@@ -243,8 +243,7 @@ Material Rounded:
           }
           paper-tab > ha-icon {
             top: -3px;
-            width: 100%;
-            max-width: 72px;
+            width: 32px;
             height: 32px;
             display: inline-flex;
             justify-content: center;
