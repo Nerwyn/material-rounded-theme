@@ -16,7 +16,6 @@ Material Rounded:
             token-color-text-secondary: rgb(138 140 153)
             token-color-text-disabled: rgba(255, 255, 255, 0.5)
             token-color-text-sidebar-selected: rgb(214, 215, 219)
-            token-color-text-sidebar: var(--token-color-text-secondary)
             token-color-background-base: rgb(19, 19, 20)
             token-color-background-secondary: rgb(40, 42, 46)
             token-color-background-tertiary: rgb(0, 0, 0)
@@ -27,27 +26,11 @@ Material Rounded:
             token-color-background-toolbar: rgb(45, 47, 51)
             token-color-background-skrim: rgba(0, 0, 3, 0.9)
             token-color-background-divider: var(--token-color-background-sidebar)
-            token-color-background-scrollbar-thumb: rgb(46, 48, 56)
-            token-color-background-popup-scrim: rgba(4, 5, 7, 0.9)
-            token-color-border-card: rgba(0, 0, 0, 0)
 
             # Inconsistent tile card CSS
             state-alarm_control_panel-disarmed-color: rgb(72, 74, 78)
             state-fan-off-color: rgb(40, 42, 46)
             state-climate-off-color: rgb(72, 74, 78)
-
-            # Editor
-            codemirror-string: rgb(119 196 229)
-            codemirror-keyword: rgb(140 169 255)
-            codemirror-number: rgb(255 91 29)
-
-            # Switch
-            switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
-            switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
-
-            # HACS
-            hacs-new-color: rgb(27 153 123)
-            hacs-error-color: rgb(182 46 95)
 
         light:
             # Token colors
@@ -61,7 +44,6 @@ Material Rounded:
             token-color-text-secondary: rgb(68, 71, 70)
             token-color-text-disabled: rgb(128, 128, 128)
             token-color-text-sidebar-selected: rgb(41, 40, 36)
-            token-color-text-sidebar: var(--token-color-text-secondary)
             token-color-background-base: rgb(255, 255, 255)
             token-color-background-secondary: rgb(215, 213, 209)
             token-color-background-tertiary: rgb(173, 176, 174)
@@ -72,30 +54,16 @@ Material Rounded:
             token-color-background-toolbar: rgb(242, 246, 252)
             token-color-background-skrim: rgba(205, 203, 197, 0.9)
             token-color-background-divider: var(--token-color-background-sidebar)
-            token-color-background-scrollbar-thumb: rgb(46, 48, 56)
-            token-color-background-popup-scrim: rgba(4, 5, 7, 0.9)
-            token-color-border-card: rgba(0, 0, 0, 0)
 
             # Inconsistent tile card CSS
             state-alarm_control_panel-disarmed-color: rgb(158, 158, 158)
             state-fan-off-color: rgb(158, 158, 158)
             state-climate-off-color: rgb(158, 158, 158)
 
-            # Editor
-            codemirror-string: rgb(119 196 229)
-            codemirror-keyword: rgb(140 169 255)
-            codemirror-number: rgb(255 91 29)
-
-            # Switch
-            switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
-            switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
-
-            # HACS
-            hacs-new-color: rgb(27 153 123)
-            hacs-error-color: rgb(182 46 95)
-
-    # Opacity token
-    token-opacity-ripple-hover: 0.14
+    # Color tokens
+    token-color-background-scrollbar-thumb: rgb(46, 48, 56)
+    token-color-background-popup-scrim: rgba(4, 5, 7, 0.9)
+    token-color-border-card: rgba(0, 0, 0, 0)
 
     # Font token
     token-font-family-primary: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -104,7 +72,6 @@ Material Rounded:
 
     # Size tokens
     token-size-radius-small: 16px
-    token-size-radius-medium: 24px
     token-size-radius-large: 28px
     token-size-radius-card: var(--token-size-radius-large)
     token-size-width-border-card: 0px
@@ -237,6 +204,18 @@ Material Rounded:
     codemirror-meta: var(--token-color-text-primary)
     codemirror-property: var(--primary-color)
     codemirror-atom: var(--codemirror-property)
+    codemirror-string: rgb(119 196 229)
+    codemirror-keyword: rgb(140 169 255)
+    codemirror-number: rgb(255 91 29)
+
+    # Switch
+    switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
+    switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
+
+    # HACS
+    hacs-new-color: rgb(27 153 123)
+    hacs-error-color: rgb(182 46 95)
+    link-text-color: rgb(0, 86, 207)
 
     card-mod-theme: Material Rounded
     card-mod-root-yaml: |
@@ -427,7 +406,6 @@ Material Rounded No Mod:
             token-color-text-secondary: rgb(138 140 153)
             token-color-text-disabled: rgba(255, 255, 255, 0.5)
             token-color-text-sidebar-selected: rgb(214, 215, 219)
-            token-color-text-sidebar: var(--token-color-text-secondary)
             token-color-background-base: rgb(19, 19, 20)
             token-color-background-secondary: rgb(40, 42, 46)
             token-color-background-tertiary: rgb(0, 0, 0)
@@ -438,27 +416,11 @@ Material Rounded No Mod:
             token-color-background-toolbar: rgb(45, 47, 51)
             token-color-background-skrim: rgba(0, 0, 3, 0.9)
             token-color-background-divider: var(--token-color-background-sidebar)
-            token-color-background-scrollbar-thumb: rgb(46, 48, 56)
-            token-color-background-popup-scrim: rgba(4, 5, 7, 0.9)
-            token-color-border-card: rgba(0, 0, 0, 0)
 
             # Inconsistent tile card CSS
             state-alarm_control_panel-disarmed-color: rgb(72, 74, 78)
             state-fan-off-color: rgb(40, 42, 46)
             state-climate-off-color: rgb(72, 74, 78)
-
-            # Editor
-            codemirror-string: rgb(119 196 229)
-            codemirror-keyword: rgb(140 169 255)
-            codemirror-number: rgb(255 91 29)
-
-            # Switch
-            switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
-            switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
-
-            # HACS
-            hacs-new-color: rgb(27 153 123)
-            hacs-error-color: rgb(182 46 95)
 
         light:
             # Token colors
@@ -472,7 +434,6 @@ Material Rounded No Mod:
             token-color-text-secondary: rgb(68, 71, 70)
             token-color-text-disabled: rgb(128, 128, 128)
             token-color-text-sidebar-selected: rgb(41, 40, 36)
-            token-color-text-sidebar: var(--token-color-text-secondary)
             token-color-background-base: rgb(255, 255, 255)
             token-color-background-secondary: rgb(215, 213, 209)
             token-color-background-tertiary: rgb(173, 176, 174)
@@ -483,30 +444,16 @@ Material Rounded No Mod:
             token-color-background-toolbar: rgb(242, 246, 252)
             token-color-background-skrim: rgba(205, 203, 197, 0.9)
             token-color-background-divider: var(--token-color-background-sidebar)
-            token-color-background-scrollbar-thumb: rgb(46, 48, 56)
-            token-color-background-popup-scrim: rgba(4, 5, 7, 0.9)
-            token-color-border-card: rgba(0, 0, 0, 0)
 
             # Inconsistent tile card CSS
             state-alarm_control_panel-disarmed-color: rgb(158, 158, 158)
             state-fan-off-color: rgb(158, 158, 158)
             state-climate-off-color: rgb(158, 158, 158)
 
-            # Editor
-            codemirror-string: rgb(119 196 229)
-            codemirror-keyword: rgb(140 169 255)
-            codemirror-number: rgb(255 91 29)
-
-            # Switch
-            switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
-            switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
-
-            # HACS
-            hacs-new-color: rgb(27 153 123)
-            hacs-error-color: rgb(182 46 95)
-
-    # Opacity token
-    token-opacity-ripple-hover: 0.14
+    # Color tokens
+    token-color-background-scrollbar-thumb: rgb(46, 48, 56)
+    token-color-background-popup-scrim: rgba(4, 5, 7, 0.9)
+    token-color-border-card: rgba(0, 0, 0, 0)
 
     # Font token
     token-font-family-primary: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -515,7 +462,6 @@ Material Rounded No Mod:
 
     # Size tokens
     token-size-radius-small: 16px
-    token-size-radius-medium: 24px
     token-size-radius-large: 28px
     token-size-radius-card: var(--token-size-radius-large)
     token-size-width-border-card: 0px
@@ -648,4 +594,16 @@ Material Rounded No Mod:
     codemirror-meta: var(--token-color-text-primary)
     codemirror-property: var(--primary-color)
     codemirror-atom: var(--codemirror-property)
+    codemirror-string: rgb(119 196 229)
+    codemirror-keyword: rgb(140 169 255)
+    codemirror-number: rgb(255 91 29)
+
+    # Switch
+    switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
+    switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
+
+    # HACS
+    hacs-new-color: rgb(27 153 123)
+    hacs-error-color: rgb(182 46 95)
+    link-text-color: rgb(0, 86, 207)
 
