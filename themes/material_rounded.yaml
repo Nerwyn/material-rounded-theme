@@ -292,7 +292,12 @@ Material Rounded:
             text-align: center;
             position: relative;
             top: -12px;
-            font-weight: normal;
+            font-weight: 500;
+            font-size: small;
+          }
+
+          paper-tab.iron-selected::after {
+            font-weight: 600;
           }
 
           #view {
