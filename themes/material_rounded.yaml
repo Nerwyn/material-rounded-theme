@@ -98,7 +98,10 @@ Material Rounded:
     token-opacity-ripple-hover: 0.14
 
     # Font token
-    token-font-family-primary: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    token-font-family-primary:
+        Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe
+        UI Symbol"
 
     # Size tokens
     token-size-radius-small: 16px
@@ -236,7 +239,7 @@ Material Rounded:
     codemirror-property: var(--primary-color)
     codemirror-atom: var(--codemirror-property)
 
-    card-mod-theme: 'Material Rounded'
+    card-mod-theme: Material Rounded
     card-mod-root-yaml: |
         .: |
           ha-tabs, paper-tabs {
@@ -503,7 +506,10 @@ Material Rounded No Mod:
     token-opacity-ripple-hover: 0.14
 
     # Font token
-    token-font-family-primary: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    token-font-family-primary:
+        Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe
+        UI Symbol"
 
     # Size tokens
     token-size-radius-small: 16px
