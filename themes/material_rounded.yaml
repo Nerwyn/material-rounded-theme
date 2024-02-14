@@ -250,8 +250,6 @@ Material Rounded:
           }
 
           paper-tab.iron-selected > ha-icon {
-            width: 100%;
-            max-width: 72px;
             color: var(--token-color-primary);
             background-color: var(--token-color-accent);
             border-radius: 16px;
@@ -266,7 +264,8 @@ Material Rounded:
           }
           paper-tab > ha-icon {
             top: -3px;
-            width: 24px;
+            width: 100%;
+            max-width: 72px;
             height: 32px;
             display: inline-flex;
             justify-content: center;
