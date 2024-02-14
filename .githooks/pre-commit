@@ -8,7 +8,7 @@
 # To enable this hook, rename this file to "pre-commit".
 
 # Create the no mod version of the theme
-python ./pre-commit.py
+python ./.githooks/pre-commit.py
 
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then
