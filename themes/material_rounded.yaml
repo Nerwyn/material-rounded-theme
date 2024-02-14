@@ -148,9 +148,6 @@ Material Rounded:
     disabled-text-color: var(--token-color-text-disabled)
     rgb-primary-text-color: var(--token-color-text-primary)
 
-    # HACS
-    hcv-text-color-on-background: var(--token-color-primary)
-
     # Main interface colors
     primary-color: var(--token-color-primary)
     dark-primary-color: var(--primary-color)
@@ -561,9 +558,6 @@ Material Rounded No Mod:
     text-light-primary-color: var(--token-color-accent)
     disabled-text-color: var(--token-color-text-disabled)
     rgb-primary-text-color: var(--token-color-text-primary)
-
-    # HACS
-    hcv-text-color-on-background: var(--token-color-primary)
 
     # Main interface colors
     primary-color: var(--token-color-primary)
