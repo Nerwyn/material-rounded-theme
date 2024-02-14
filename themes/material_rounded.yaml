@@ -144,7 +144,7 @@ Material Rounded:
     primary-text-color: var(--token-color-text-primary)
     secondary-text-color: var(--token-color-text-secondary)
     text-primary-color: var(--token-color-accent)
-    text-light-primary-color: var(--token-color-text-primary)
+    text-light-primary-color: var(--token-color-accent)
     disabled-text-color: var(--token-color-text-disabled)
     rgb-primary-text-color: var(--token-color-text-primary)
 
@@ -551,7 +551,7 @@ Material Rounded No Mod:
     primary-text-color: var(--token-color-text-primary)
     secondary-text-color: var(--token-color-text-secondary)
     text-primary-color: var(--token-color-accent)
-    text-light-primary-color: var(--token-color-text-primary)
+    text-light-primary-color: var(--token-color-accent)
     disabled-text-color: var(--token-color-text-disabled)
     rgb-primary-text-color: var(--token-color-text-primary)
 
