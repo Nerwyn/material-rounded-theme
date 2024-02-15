@@ -230,11 +230,11 @@ Material Rounded:
           }
 
           paper-tab.iron-selected > ha-icon {
+            width: 100%;
+            max-width: 72px;
             color: var(--token-color-primary);
             background-color: var(--token-color-accent);
             border-radius: 16px;
-            width: 100%;
-            max-width: 72px;
           }
           paper-tab.iron-selected > .edit-icon {
             padding-left: 0;
@@ -244,14 +244,14 @@ Material Rounded:
           }
           paper-tab > ha-icon {
             top: -3px;
-            width: 32px;
+            width: 24px;
             height: 32px;
             display: inline-flex;
             justify-content: center;
             align-items: center;
             align-self: center;
             position: relative;
-            transition: width 0.2s cubic-bezier(.2,0,0,1);
+            transition: width 0.5s linear;
           }
           paper-tab {
             padding: 0;
