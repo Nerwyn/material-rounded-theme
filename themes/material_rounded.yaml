@@ -251,7 +251,7 @@ Material Rounded:
             align-items: center;
             align-self: center;
             position: relative;
-            transition: width 0.5s linear;
+            transition: width 0.2s linear;
           }
           paper-tab {
             padding: 0;
