@@ -236,11 +236,8 @@ Material Rounded:
             background-color: var(--token-color-accent);
             border-radius: 16px;
           }
-          paper-tab.iron-selected > .edit-icon {
-            padding-left: 0;
-          }
           paper-tab.iron-selected > ha-svg-icon[title="Edit view"] {
-            padding-left: 8px;
+            min-width: 24px;
           }
           paper-tab > ha-icon {
             top: -3px;
@@ -257,10 +254,7 @@ Material Rounded:
             padding: 0;
             display: inline-flex;
             flex-direction: column;
-            justify-content: space-between;
             flex: 1;
-            align-content: space-between;
-            justify-content: space-around;
             justify-items: stretch;
           }
 
@@ -342,9 +336,17 @@ Material Rounded:
             }
             .tab-content {
               width: 100%;
+              display: inline-flex;
+              justify-content: space-evenly;
             }
             :host {
-              min-width: 48px;
+              min-width: fit-content;
+              width: 48px;
+            }
+        ha-icon-button-arrow-next:
+          $: |
+            :host {
+              padding-left: 0 !important;
             }
         hui-masonry-view:
           $: |
