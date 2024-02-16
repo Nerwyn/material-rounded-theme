@@ -326,9 +326,6 @@ Material Rounded:
               display: flex !important;
               justify-content: space-between !important;
             }
-            paper-icon-button {
-              display: none !important;
-            }
 
         paper-tabs:
           $: |
@@ -337,9 +334,6 @@ Material Rounded:
               display: flex !important;
               justify-content: space-between !important;
             }
-            paper-icon-button {
-              display: none !important;
-            }
 
         paper-tab:
           $: |
@@ -347,9 +341,11 @@ Material Rounded:
               display: none;
             }
             .tab-content {
-              width: 100%
+              width: 100%;
             }
-
+            :host {
+              min-width: 48px;
+            }
         hui-masonry-view:
           $: |
             ha-fab {
