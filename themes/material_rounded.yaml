@@ -266,10 +266,11 @@ Material Rounded:
             top: -12px;
             font-weight: 500;
             font-size: small;
+            opacity: 0.8;
           }
 
           paper-tab.iron-selected::after {
-            font-weight: 600;
+            opacity: 1.0;
           }
 
           #view {
@@ -283,10 +284,6 @@ Material Rounded:
             padding-bottom: 0 !important;
             bottom: calc(2*var(--footer-height)) !important;
             margin: 0px 12px !important;
-          }
-
-          .edit-mode {
-            --app-header-edit-text-color: var(--app-header-text-color);
           }
 
           .edit-mode > .header > paper-tabs > paper-tab.iron-selected::after {
