@@ -236,6 +236,10 @@ Material Rounded:
             background-color: var(--token-color-accent);
             border-radius: 16px;
           }
+          paper-tab.iron-selected > ha-svg-icon[title="Edit view"] {
+            position: relative;
+            top: 8px;
+          }
           paper-tab > ha-svg-icon {
             min-width: 24px;
           }
@@ -282,10 +286,6 @@ Material Rounded:
             opacity: 1.0;
           }
 
-          ha-icon-button-arrow-next {
-            padding-left: 0 !important;
-          }
-
           #view {
             padding-top: 0 !important;
             padding-bottom: var(--footer-height) !important;
@@ -299,9 +299,27 @@ Material Rounded:
             margin: 0px 12px !important;
           }
 
+          .edit-mode > .header > paper-tabs > paper-tab {
+            min-width: fit-content;
+          }
+          .edit-mode > .header > paper-tabs > paper-tab.iron-selected > ha-icon {
+            position: relative;
+            width: fit-content;
+            top: 8px;
+          }
           .edit-mode > .header > paper-tabs > paper-tab.iron-selected::after {
             position: relative;
-            bottom: 12px;
+            top: -18px;
+          }
+          ha-icon-button-arrow-prev {
+            position: relative;
+            top: 8px;
+            padding-left: 0 !important;
+          }
+          ha-icon-button-arrow-next {
+            position: relative;
+            top: 8px;
+            padding-left: 0 !important;
           }
 
           .edit-mode > .header {
@@ -345,6 +363,8 @@ Material Rounded:
               display: none;
             }
             .tab-content {
+              display: inline-flex;
+              justify-content: space-evenly;
               width: 100%;
             }
         hui-masonry-view:
