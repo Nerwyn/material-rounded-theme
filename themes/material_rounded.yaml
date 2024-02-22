@@ -22,8 +22,8 @@ Material Rounded:
             token-color-background-sidebar: var(--token-color-background-toolbar)
             token-color-background-input-base: rgb(46, 48, 56)
             token-color-background-input-disabled: rgba(37, 37, 40, 0.5)
-            token-color-background-card: rgb(50, 52, 58)
-            token-color-background-toolbar: rgb(45, 47, 51)
+            token-color-background-card: rgb(39, 42, 44)
+            token-color-background-toolbar: rgb(30, 31, 32)
             token-color-background-skrim: rgba(0, 0, 3, 0.9)
             token-color-background-divider: var(--token-color-background-sidebar)
 
@@ -428,8 +428,8 @@ Material Rounded No Mod:
             token-color-background-sidebar: var(--token-color-background-toolbar)
             token-color-background-input-base: rgb(46, 48, 56)
             token-color-background-input-disabled: rgba(37, 37, 40, 0.5)
-            token-color-background-card: rgb(50, 52, 58)
-            token-color-background-toolbar: rgb(45, 47, 51)
+            token-color-background-card: rgb(39, 42, 44)
+            token-color-background-toolbar: rgb(30, 31, 32)
             token-color-background-skrim: rgba(0, 0, 3, 0.9)
             token-color-background-divider: var(--token-color-background-sidebar)
 
