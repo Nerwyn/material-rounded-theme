@@ -29,7 +29,7 @@ Material Rounded:
 
             # Inconsistent tile card CSS
             state-alarm_control_panel-disarmed-color: rgb(72, 74, 78)
-            state-fan-off-color: rgb(40, 42, 46)
+            state-fan-off-color: var(--disabled-color)
             state-climate-off-color: rgb(72, 74, 78)
 
         light:
@@ -435,7 +435,7 @@ Material Rounded No Mod:
 
             # Inconsistent tile card CSS
             state-alarm_control_panel-disarmed-color: rgb(72, 74, 78)
-            state-fan-off-color: rgb(40, 42, 46)
+            state-fan-off-color: var(--disabled-color)
             state-climate-off-color: rgb(72, 74, 78)
 
         light:
