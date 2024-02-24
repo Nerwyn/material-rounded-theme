@@ -260,7 +260,7 @@ Material Rounded:
             flex-direction: column;
             flex: 1;
             justify-items: stretch;
-            min-width: 54px;
+            min-width: min(calc((100vw - 96px) / 5), 72px);
           }
 
           paper-tab::after {
@@ -269,13 +269,12 @@ Material Rounded:
             text-align: center;
             position: relative;
             font-weight: 500;
-            font-size: small;
+            font-size: min(3vw, 13px);
             opacity: 0.8;
-            padding: 0px 2px;
+            padding: 0px 1px;
             max-width: -webkit-fill-available;
             max-width: -moz-available;
             text-wrap: wrap;
-            text-overflow: ellipsis;
             overflow: hidden;
             line-height: 14px;
             height: 100%;
@@ -340,6 +339,7 @@ Material Rounded:
             height: var(--footer-height) !important;
             padding: 0 !important;
           }
+
         ha-tabs:
           $: |
             #tabsContent.scrollable {
@@ -347,7 +347,6 @@ Material Rounded:
               display: flex !important;
               justify-content: space-between !important;
             }
-
         paper-tabs:
           $: |
             #tabsContent.scrollable {
@@ -366,6 +365,7 @@ Material Rounded:
               justify-content: space-evenly;
               width: 100%;
             }
+
         hui-masonry-view:
           $: |
             ha-fab {
