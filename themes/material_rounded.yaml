@@ -260,7 +260,7 @@ Material Rounded:
             flex-direction: column;
             flex: 1;
             justify-items: stretch;
-            min-width: min(calc((100vw - 96px) / 5), 72px);
+            min-width: min(calc((100vw - 2 * var(--mdc-icon-button-size)) / 5), 72px);
           }
 
           paper-tab::after {
@@ -328,6 +328,7 @@ Material Rounded:
             top: unset !important;
             bottom: 0 !important;
             height: var(--footer-height) !important;
+            --mdc-icon-button-size: 32px;
           }
 
           #add-view {
