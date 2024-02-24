@@ -221,14 +221,37 @@ Material Rounded:
     card-mod-theme: Material Rounded
     card-mod-root-yaml: |
         .: |
+          /* Turn header toolbar into a footer */
+          .header {
+            top: unset !important;
+            bottom: 0 !important;
+            height: var(--footer-height) !important;
+            --mdc-icon-button-size: 32px;
+          }
+
+          /* Modify toolbar height but only for card-mod version of theme */
+          .toolbar {
+            height: var(--footer-height) !important;
+            padding: 0 !important;
+          }
+
+          /* Fix edit mode header height */
+          .edit-mode > .header {
+            height: calc(2*var(--footer-height)) !important;
+          }
+
+          /* Fix edit mode toolbar height */
+          paper-tabs {
+            height: 50%;
+          }
+          
+          /* Remove default current view ripple */
           ha-tabs, paper-tabs {
             --paper-tabs-selection-bar-color: none !important;
             margin: 0 !important;
           }
-          paper-tabs {
-            height: 50%;
-          }
 
+          /* Add background and color current view icon */
           paper-tab.iron-selected > ha-icon {
             width: 100%;
             max-width: 72px;
@@ -236,24 +259,24 @@ Material Rounded:
             background-color: var(--token-color-accent);
             border-radius: 16px;
           }
-          paper-tab.iron-selected > ha-svg-icon[title="Edit view"] {
-            position: relative;
-            top: 8px;
-          }
+
+          /* Prevent icon from shrinking on small width displays */
           paper-tab > ha-svg-icon {
             min-width: 24px;
           }
+
+          /* View icon transition and display centering */
           paper-tab > ha-icon {
-            top: 11px;
             width: 24px;
             height: 32px;
             display: inline-flex;
             justify-content: center;
             align-items: center;
             align-self: center;
-            position: relative;
             transition: width 0.2s cubic-bezier(.2,0,0,1);
           }
+          
+          /* Display view tab contents vertically and set minimum size */
           paper-tab {
             padding: 0;
             display: inline-flex;
@@ -263,6 +286,23 @@ Material Rounded:
             min-width: min(calc((100vw - 2 * var(--mdc-icon-button-size)) / 5), 72px);
           }
 
+          /* Make edit mode current view tab fit all buttons */
+          .edit-mode > .header > paper-tabs > paper-tab {
+            min-width: fit-content;
+          }
+
+          /* Remove extra left padding from edit view buttons */
+          .edit-icon {
+            padding-left: 0 !important;
+          }
+
+          /* Align edit mode add view button */
+          #add-view {
+            position: relative !important;
+            top: 11px;
+          }
+
+          /* View label */
           paper-tab::after {
             content: attr(aria-label);
             text-transform: none;
@@ -281,16 +321,19 @@ Material Rounded:
             margin-top: 20px;
           }
 
+          /* Make current view label opaque */
           paper-tab.iron-selected::after {
             opacity: 1.0;
           }
 
+          /* Fix view box to work with footer and add margins to sides */
           #view {
             padding-top: 0 !important;
             padding-bottom: var(--footer-height) !important;
             margin: 0px 12px !important;
           }
 
+          /* Fix view box when in edit mode */
           .edit-mode > #view {
             padding-top: calc(2*var(--footer-height)) !important;
             padding-bottom: 0 !important;
@@ -298,49 +341,7 @@ Material Rounded:
             margin: 0px 12px !important;
           }
 
-          .edit-mode > .header > paper-tabs > paper-tab {
-            min-width: fit-content;
-          }
-          .edit-mode > .header > paper-tabs > paper-tab.iron-selected > ha-icon {
-            width: fit-content;
-            top: 8px;
-          }
-          .edit-mode > .header > paper-tabs > paper-tab.iron-selected::after {
-            position: relative;
-            top: -18px;
-          }
-          ha-icon-button-arrow-prev {
-            position: relative;
-            top: 8px;
-            padding-left: 0 !important;
-          }
-          ha-icon-button-arrow-next {
-            position: relative;
-            top: 8px;
-            padding-left: 0 !important;
-          }
-
-          .edit-mode > .header {
-            height: calc(2*var(--footer-height)) !important;
-          }
-          
-          .header {
-            top: unset !important;
-            bottom: 0 !important;
-            height: var(--footer-height) !important;
-            --mdc-icon-button-size: 32px;
-          }
-
-          #add-view {
-            position: relative !important;
-            vertical-align: top;
-          }
-
-          .toolbar {
-            height: var(--footer-height) !important;
-            padding: 0 !important;
-          }
-
+        # Evenly space icons along entire length of toolbar
         ha-tabs:
           $: |
             #tabsContent.scrollable {
@@ -358,51 +359,50 @@ Material Rounded:
 
         paper-tab:
           $: |
+            /* Disable default ripple effect */
             paper-ripple {
               display: none;
             }
+            /* Align view icon */
             .tab-content {
               display: inline-flex;
               justify-content: space-evenly;
               width: 100%;
+              position: relative;
+              top: 11px;
             }
 
+        # Edit mode Add Card position fixes
         hui-masonry-view:
           $: |
             ha-fab {
               bottom: calc(2*var(--footer-height) + 4px) !important;
             }
-
         hui-sidebar-view:
           $: |
             ha-fab {
               bottom: calc(2*var(--footer-height) + 4px) !important;
             }
-
         hui-panel-view:
           $: |
             ha-fab {
               bottom: calc(2*var(--footer-height) + 4px) !important;
             }
-
         masonry-layout:
           $: |
             ha-fab {
               bottom: calc(2*var(--footer-height) + 4px) !important;
             }
-
         horizontal-layout:
           $: |
             ha-fab {
               bottom: calc(2*var(--footer-height) + 4px) !important;
             }
-
         vertical-layout:
           $: |
             ha-fab {
               bottom: calc(2*var(--footer-height) + 4px) !important;
             }
-
         grid-layout:
           $: |
             ha-fab {
