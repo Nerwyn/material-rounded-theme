@@ -326,6 +326,11 @@ Material Rounded:
             opacity: 1.0;
           }
 
+          /* Move subview back button to the right */
+          ha-icon-button-arrow-prev[slot="navigationIcon"] {
+            --mdc-icon-button-size: 48px;
+          }
+
           /* Fix view box to work with footer and add margins to sides */
           #view {
             padding-top: 0 !important;
