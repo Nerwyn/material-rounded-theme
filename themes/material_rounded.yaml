@@ -31,6 +31,7 @@ Material Rounded:
             state-alarm_control_panel-disarmed-color: rgb(72, 74, 78)
             state-fan-off-color: var(--disabled-color)
             state-climate-off-color: rgb(72, 74, 78)
+            foo: bar
 
         light:
             # Token colors
@@ -443,6 +444,7 @@ Material Rounded No Mod:
             state-alarm_control_panel-disarmed-color: rgb(72, 74, 78)
             state-fan-off-color: var(--disabled-color)
             state-climate-off-color: rgb(72, 74, 78)
+            foo: bar
 
         light:
             # Token colors
@@ -659,6 +661,7 @@ Material Rounded Transparent Card:
             state-alarm_control_panel-disarmed-color: rgb(72, 74, 78)
             state-fan-off-color: var(--disabled-color)
             state-climate-off-color: rgb(72, 74, 78)
+            foo: bar
 
         light:
             # Token colors
