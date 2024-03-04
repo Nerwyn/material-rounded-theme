@@ -3,7 +3,7 @@ import ruamel.yaml
 
 theme_file_path = './themes/material_rounded.yaml'
 
-# ruamel.yaml.representer.RoundTripRepresenter.ignore_aliases = lambda x, y: True
+ruamel.yaml.representer.RoundTripRepresenter.ignore_aliases = lambda x, y: True
 yaml = ruamel.yaml.YAML()
 yaml.indent(mapping=4, sequence=4, offset=4)
 
