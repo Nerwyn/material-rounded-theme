@@ -33,7 +33,7 @@ Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for heade
 
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/comparison-light.png" alt="buttons-comparison-light" width="600"/>
 
-Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card). Use the following settings to match:
+Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card). Use the following style settings to match:
 
 ```yaml
 colorize: true
