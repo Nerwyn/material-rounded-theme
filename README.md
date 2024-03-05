@@ -5,8 +5,6 @@
 [![GitHub Activity][last-commit-shield]][commits]
 [![Community Forum][forum-shield]][forum]
 
-<a href="https://www.buymeacoffee.com/nerwyn" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
 [![My Home Assistant](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=material-rounded-theme&owner=Nerwyn&category=Plugin)
 
 # Material Rounded Theme
@@ -15,7 +13,7 @@ Material Rounded theme for Home Assistant influenced by Material You on Android.
 
 This theme aims to match the styling of the Google Home app as closely as possible, so it may change over time as the style of the Google Home app changes.
 
-Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for header/footer modifications. If you have card-mod installed and do not want these changes to apply, use the "No Mod" version of this theme.
+Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for header/footer modifications. If you have card-mod installed and do not want these changes to apply, use the "No Mod" version of this theme. This theme also includes a "Transparent Card" version with transparent card backgrounds to be used at the individual card level if you want a card to be transparent for convenience.
 
 # Screenshots
 
@@ -35,7 +33,7 @@ Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for heade
 
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/comparison-light.png" alt="buttons-comparison-light" width="600"/>
 
-Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card). Use the following settings to match:
+Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card). Use the following style settings to match:
 
 ```yaml
 colorize: true
