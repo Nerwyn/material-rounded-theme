@@ -27,7 +27,7 @@ Material Rounded:
             token-color-background-skrim: rgba(0, 0, 3, 0.9)
             token-color-background-divider: var(--token-color-background-sidebar)
 
-            # Inconsistent tile card CSS
+            # Tile card inactive icon and feature background
             state-inactive-color: rgb(72, 74, 78)
 
         light:
@@ -52,9 +52,6 @@ Material Rounded:
             token-color-background-toolbar: rgb(240, 244, 250)
             token-color-background-skrim: rgba(205, 203, 197, 0.9)
             token-color-background-divider: var(--token-color-background-sidebar)
-
-            # Inconsistent tile card CSS
-            state-inactive-color: rgb(158, 158, 158)
 
     # Color tokens
     token-color-background-scrollbar-thumb: rgb(46, 48, 56)
@@ -435,7 +432,7 @@ Material Rounded No Mod:
             token-color-background-skrim: rgba(0, 0, 3, 0.9)
             token-color-background-divider: var(--token-color-background-sidebar)
 
-            # Inconsistent tile card CSS
+            # Tile card inactive icon and feature background
             state-inactive-color: rgb(72, 74, 78)
 
         light:
@@ -460,9 +457,6 @@ Material Rounded No Mod:
             token-color-background-toolbar: rgb(240, 244, 250)
             token-color-background-skrim: rgba(205, 203, 197, 0.9)
             token-color-background-divider: var(--token-color-background-sidebar)
-
-            # Inconsistent tile card CSS
-            state-inactive-color: rgb(158, 158, 158)
 
     # Color tokens
     token-color-background-scrollbar-thumb: rgb(46, 48, 56)
@@ -647,7 +641,7 @@ Material Rounded Transparent Card:
             token-color-background-skrim: rgba(0, 0, 3, 0.9)
             token-color-background-divider: var(--token-color-background-sidebar)
 
-            # Inconsistent tile card CSS
+            # Tile card inactive icon and feature background
             state-inactive-color: rgb(72, 74, 78)
 
         light:
@@ -672,9 +666,6 @@ Material Rounded Transparent Card:
             token-color-background-toolbar: rgb(240, 244, 250)
             token-color-background-skrim: rgba(205, 203, 197, 0.9)
             token-color-background-divider: var(--token-color-background-sidebar)
-
-            # Inconsistent tile card CSS
-            state-inactive-color: rgb(158, 158, 158)
 
     # Color tokens
     token-color-background-scrollbar-thumb: rgb(46, 48, 56)
