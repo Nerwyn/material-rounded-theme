@@ -754,10 +754,10 @@ Material Rounded Transparent Card:
 
     # Cards
     border-radius: var(--token-size-radius-card)
-    card-background-color: rgb(0, 0, 0, 0)
-    ha-card-background: rgb(0, 0, 0, 0)
+    card-background-color: var(--token-color-background-base)
+    ha-card-background: var(--token-color-background-base)
     ha-card-border-radius: var(--token-size-radius-card)
-    ha-card-border-color: rgb(0, 0, 0, 0)
+    ha-card-border-color: var(--token-color-background-base)
     ha-card-border-width: var(--token-size-width-border-card)
     ha-card-border-style: none
     ha-card-border: none
