@@ -220,7 +220,7 @@ Material Rounded:
               {{ states("sensor.material_rounded_accent_color") }}
               {% else %}
               "initial"
-              {% endif%};
+              {% endif %};
             --token-color-accent-hsl: {% if has_value("sensor.material_rounded_accent_color") %}
               {# https://gist.github.com/mjackson/5311256 #}
               {% set hex = states("sensor.material_rounded_accent_color")[1:] %}
