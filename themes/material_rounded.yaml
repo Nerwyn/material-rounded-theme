@@ -214,6 +214,45 @@ Material Rounded:
     card-mod-theme: Material Rounded
     card-mod-root-yaml: |
         .: |
+          /* Material You */
+          * {
+            --token-color-accent: {% if has_value("sensor.material_rounded_accent_color") %}
+              {{ states("sensor.material_rounded_accent_color") }}
+              {% else %}
+              "initial"
+              {% endif%};
+            --token-color-accent-hsl: {% if has_value("sensor.material_rounded_accent_color") %}
+              {# https://gist.github.com/mjackson/5311256 #}
+              {% set hex = states("sensor.material_rounded_accent_color")[1:] %}
+              {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
+              {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
+              {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
+              {% set rgb_max = [r, g, b] | max %}
+              {% set rgb_min = [r, g, b] | min %}
+              {% set h = 0 %}
+              {% set s = 0 %}
+              {% set l = (rgb_max + rgb_min) / 2 %}
+              {% if rgb_max != rgb_min %}
+                {% set d = rgb_max - rgb_min %}
+                {% set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) %}
+                {% if r == rgb_max %}
+                  {% set h = (g - b) / d + (6 if g < b else 0) %}
+                {% elif g == rgb_max %}
+                  {% set h = (b - r) / d + 2 %}
+                {% elif b == rgb_max %}
+                  {% set h = (r - g) / d + 4 %}
+                {% endif %}
+                {% set h = h / 6 %}
+              {% endif %}
+              {% set h = (h * 360) | int %}
+              {% set s = (s * 100) | int %}
+              {% set l = (l * 100) | int %}
+              hsl({{ h }},{{ s }}%,{{ l }}%);
+              {% else %}
+              "none"
+              {% endif %}
+          }
+
           /* Turn header toolbar into a footer */
           .header {
             top: unset !important;
