@@ -59,7 +59,8 @@ Material Rounded:
     token-color-border-card: rgba(0, 0, 0, 0)
 
     # Font token
-    token-font-family-primary: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    token-font-family-primary:
+        Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe
         UI Symbol"
 
@@ -464,7 +465,8 @@ Material Rounded No Mod:
     token-color-border-card: rgba(0, 0, 0, 0)
 
     # Font token
-    token-font-family-primary: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    token-font-family-primary:
+        Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe
         UI Symbol"
 
@@ -673,7 +675,8 @@ Material Rounded Transparent Card:
     token-color-border-card: rgba(0, 0, 0, 0)
 
     # Font token
-    token-font-family-primary: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    token-font-family-primary:
+        Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe
         UI Symbol"
 
