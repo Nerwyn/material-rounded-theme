@@ -121,7 +121,6 @@ Material Rounded:
 
     # Background
     lovelace-background: var(--token-color-background-base)
-    background-color: var(--token-color-background-base)
     primary-background-color: var(--token-color-background-base)
     secondary-background-color: var(--token-color-background-secondary)
 
@@ -526,7 +525,6 @@ Material Rounded No Mod:
 
     # Background
     lovelace-background: var(--token-color-background-base)
-    background-color: var(--token-color-background-base)
     primary-background-color: var(--token-color-background-base)
     secondary-background-color: var(--token-color-background-secondary)
 
@@ -735,7 +733,6 @@ Material Rounded Transparent Card:
 
     # Background
     lovelace-background: var(--token-color-background-base)
-    background-color: var(--token-color-background-base)
     primary-background-color: var(--token-color-background-base)
     secondary-background-color: var(--token-color-background-secondary)
 
@@ -1140,7 +1137,6 @@ Material Rounded Transparent Card No Mod:
 
     # Background
     lovelace-background: var(--token-color-background-base)
-    background-color: var(--token-color-background-base)
     primary-background-color: var(--token-color-background-base)
     secondary-background-color: var(--token-color-background-secondary)
 
