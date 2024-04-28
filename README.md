@@ -13,7 +13,7 @@ Material Rounded theme for Home Assistant influenced by Material You on Android.
 
 This theme aims to match the styling of the Google Home app as closely as possible, so it may change over time as the style of the Google Home app changes.
 
-Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for header/footer modifications. If you have card-mod installed and do not want these changes to apply, use the "No Mod" version of this theme. This theme also includes a "Transparent Card" version with transparent card backgrounds to be used at the individual card level if you want a card to be transparent for convenience.
+Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for header/footer modifications. If you have card-mod installed and do not want these changes to apply, use the "No Mod" versions of this theme. This theme also includes "Transparent Card" versions with card backgrounds that match the view background.
 
 # Screenshots
 
