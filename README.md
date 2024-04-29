@@ -15,15 +15,15 @@ This theme aims to match the styling of the Google Home app as closely as possib
 
 Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for header/footer modifications. If you have card-mod installed and do not want these changes to apply, use the "No Mod" versions of this theme. This theme also includes "Transparent Card" versions with card backgrounds that match the view background.
 
-# Screenshots
+## Screenshots
 
-## Tiles
+### Tiles
 
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/tiles-dark.png" alt="tiles-dark" width="600"/>
 
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/tiles-light.png" alt="tiles-light" width="600"/>
 
-## Compared to Google Home
+### Compared to Google Home
 
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/tiles-comparison-dark.png" alt="tiles-comparison-dark" width="600"/>
 
@@ -42,7 +42,7 @@ bold_text: true
 height: 88
 ```
 
-# Installation
+## Installation
 
 1. Navigate to HACS (install from [here](https://hacs.xyz/) if you do not have it yet).
 2. Navigate to `Frontend`.
@@ -51,7 +51,7 @@ height: 88
 5. Refresh Home Assistant.
 6. Navigate to your Profile, and select `Material Rounded` under Theme along with your preference for light or dark mode.
 
-# Card Mod Powered Footer
+## Card Mod Powered Footer and Material You Colors
 
 This theme uses [card-mod](https://github.com/thomasloven/lovelace-card-mod) to:
 
@@ -61,6 +61,8 @@ This theme uses [card-mod](https://github.com/thomasloven/lovelace-card-mod) to:
 -   Add the view name below the icon.
 -   Highlight the current view with a colored icon and background behind the icon.
 -   Add a 12px margin to each side of the view.
+
+This theme supports user definable accent colors! Create a helper template sensor named `Material Rounded Accent Color` that returns the hex code of your accent color. The primary color will be calculated using it. If you are using the Home Assistant Android companion app, you can enable the accent color sensor in the companion app settings and use it by setting the material rounded accent color state template to `{{ states("sensor.pixel_fold_accent_color") }}`
 
 Also check out [Material Symbols](https://github.com/beecho01/material-symbols) to use updated material icons, as shown in the screenshots!
 
