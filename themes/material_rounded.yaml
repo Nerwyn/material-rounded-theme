@@ -41,9 +41,6 @@ Material Rounded:
             card-background-color: rgb(233, 238, 246)
             app-header-background-color: rgb(240, 244, 250)
 
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
-
     # Spacings
     horizontal-stack-card-margin: 0px 4px
     vertical-stack-card-margin: 4px 0px
@@ -53,6 +50,8 @@ Material Rounded:
     footer-height: 80px
 
     # Typography
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
     primary-font-family: var(--font-family)
     paper-font-common-base_-_font-family: var(--font-family)
     paper-font-common-code_-_font-family: var(--font-family)
@@ -66,7 +65,6 @@ Material Rounded:
     mdc-typography-button-font-family: var(--font-family)
     mdc-typography-body1-font-family: var(--font-family)
     mdc-typography-button-font-weight: var(--title-font-weight)
-
     title-font-weight: 600
     title-font-size: 28px
 
@@ -167,7 +165,6 @@ Material Rounded:
             --accent-color: {% if has_value("sensor.material_rounded_accent_color") %}
               {# https://gist.github.com/mjackson/5311256 #}
               {% set hex = states("sensor.material_rounded_accent_color")[1:] %}
-              {% set hex = "a2184e" %}
               {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
               {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
               {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
@@ -199,7 +196,6 @@ Material Rounded:
             --primary-color: {% if has_value("sensor.material_rounded_accent_color") %}
               {# https://gist.github.com/mjackson/5311256 #}
               {% set hex = states("sensor.material_rounded_accent_color")[1:] %}
-              {% set hex = "a2184e" %}
               {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
               {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
               {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
@@ -480,9 +476,6 @@ Material Rounded No Mod:
             card-background-color: rgb(233, 238, 246)
             app-header-background-color: rgb(240, 244, 250)
 
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
-
     # Spacings
     horizontal-stack-card-margin: 0px 4px
     vertical-stack-card-margin: 4px 0px
@@ -492,6 +485,8 @@ Material Rounded No Mod:
     footer-height: 80px
 
     # Typography
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
     primary-font-family: var(--font-family)
     paper-font-common-base_-_font-family: var(--font-family)
     paper-font-common-code_-_font-family: var(--font-family)
@@ -505,7 +500,6 @@ Material Rounded No Mod:
     mdc-typography-button-font-family: var(--font-family)
     mdc-typography-body1-font-family: var(--font-family)
     mdc-typography-button-font-weight: var(--title-font-weight)
-
     title-font-weight: 600
     title-font-size: 28px
 
@@ -637,9 +631,6 @@ Material Rounded Transparent Card:
             card-background-color: rgb(233, 238, 246)
             app-header-background-color: rgb(240, 244, 250)
 
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
-
     # Spacings
     horizontal-stack-card-margin: 0px 4px
     vertical-stack-card-margin: 4px 0px
@@ -649,6 +640,8 @@ Material Rounded Transparent Card:
     footer-height: 80px
 
     # Typography
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
     primary-font-family: var(--font-family)
     paper-font-common-base_-_font-family: var(--font-family)
     paper-font-common-code_-_font-family: var(--font-family)
@@ -662,7 +655,6 @@ Material Rounded Transparent Card:
     mdc-typography-button-font-family: var(--font-family)
     mdc-typography-body1-font-family: var(--font-family)
     mdc-typography-button-font-weight: var(--title-font-weight)
-
     title-font-weight: 600
     title-font-size: 28px
 
@@ -763,7 +755,6 @@ Material Rounded Transparent Card:
             --accent-color: {% if has_value("sensor.material_rounded_accent_color") %}
               {# https://gist.github.com/mjackson/5311256 #}
               {% set hex = states("sensor.material_rounded_accent_color")[1:] %}
-              {% set hex = "a2184e" %}
               {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
               {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
               {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
@@ -795,7 +786,6 @@ Material Rounded Transparent Card:
             --primary-color: {% if has_value("sensor.material_rounded_accent_color") %}
               {# https://gist.github.com/mjackson/5311256 #}
               {% set hex = states("sensor.material_rounded_accent_color")[1:] %}
-              {% set hex = "a2184e" %}
               {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
               {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
               {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
@@ -1077,9 +1067,6 @@ Material Rounded Transparent Card No Mod:
             card-background-color: rgb(233, 238, 246)
             app-header-background-color: rgb(240, 244, 250)
 
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
-
     # Spacings
     horizontal-stack-card-margin: 0px 4px
     vertical-stack-card-margin: 4px 0px
@@ -1089,6 +1076,8 @@ Material Rounded Transparent Card No Mod:
     footer-height: 80px
 
     # Typography
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
     primary-font-family: var(--font-family)
     paper-font-common-base_-_font-family: var(--font-family)
     paper-font-common-code_-_font-family: var(--font-family)
@@ -1102,7 +1091,6 @@ Material Rounded Transparent Card No Mod:
     mdc-typography-button-font-family: var(--font-family)
     mdc-typography-body1-font-family: var(--font-family)
     mdc-typography-button-font-weight: var(--title-font-weight)
-
     title-font-weight: 600
     title-font-size: 28px
 
