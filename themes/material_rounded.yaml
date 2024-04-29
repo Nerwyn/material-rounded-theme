@@ -228,6 +228,24 @@ Material Rounded:
               {% else %}
               "none"
               {% endif %} !important;
+            --text-primary-color: var(--accent-color);
+            --text-accent-color: var(--primary-color);
+            --text-light-primary-color: var(--accent-color);
+            --rgb-primary-text-color: var(--primary-text-color);
+            --dark-primary-color: var(--primary-color);
+            --light-primary-color: var(--primary-color);
+            --mdc-theme-primary: var(--primary-color);
+            --mdc-theme-on-primary: var(--accent-color);
+            --paper-slider-knob-color: var(--primary-color);
+            --paper-slider-knob-start-color: var(--paper-slider-knob-color);
+            --paper-slider-pin-color: var(--paper-slider-knob-color);
+            --paper-slider-active-color: var(--paper-slider-knob-color);
+            --paper-slider-secondary-color: var(--light-primary-color);
+            --switch-checked-button-color: var(--primary-color);
+            --switch-checked-track-color: var(--switch-checked-button-color);
+            --input-hover-line-color: var(--primary-color);
+            --codemirror-property: var(--primary-color);
+            --codemirror-atom: var(--codemirror-property);
           }
 
           /* Turn header toolbar into a footer */
@@ -580,7 +598,6 @@ Material Rounded No Mod:
     hacs-error-color: rgb(182 46 95)
     link-text-color: rgb(0, 86, 207)
 
-
 Material Rounded Transparent Card:
     modes:
         dark:
@@ -807,6 +824,24 @@ Material Rounded Transparent Card:
               {% else %}
               "none"
               {% endif %} !important;
+            --text-primary-color: var(--accent-color);
+            --text-accent-color: var(--primary-color);
+            --text-light-primary-color: var(--accent-color);
+            --rgb-primary-text-color: var(--primary-text-color);
+            --dark-primary-color: var(--primary-color);
+            --light-primary-color: var(--primary-color);
+            --mdc-theme-primary: var(--primary-color);
+            --mdc-theme-on-primary: var(--accent-color);
+            --paper-slider-knob-color: var(--primary-color);
+            --paper-slider-knob-start-color: var(--paper-slider-knob-color);
+            --paper-slider-pin-color: var(--paper-slider-knob-color);
+            --paper-slider-active-color: var(--paper-slider-knob-color);
+            --paper-slider-secondary-color: var(--light-primary-color);
+            --switch-checked-button-color: var(--primary-color);
+            --switch-checked-track-color: var(--switch-checked-button-color);
+            --input-hover-line-color: var(--primary-color);
+            --codemirror-property: var(--primary-color);
+            --codemirror-atom: var(--codemirror-property);
           }
 
           /* Turn header toolbar into a footer */
@@ -1003,7 +1038,6 @@ Material Rounded Transparent Card:
             }
 
     card-background-color: var(--token-color-background-base)
-
 Material Rounded Transparent Card No Mod:
     modes:
         dark:
