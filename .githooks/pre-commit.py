@@ -8,6 +8,7 @@ yaml = ruamel.yaml.YAML()
 yaml.indent(mapping=4, sequence=4, offset=4)
 
 with open(theme_file_path, 'r') as f:
+	# Copy base theme and remove redundant card-mod fields
 	theme_file = yaml.load(f)
 	original_theme = copy.deepcopy(theme_file['Material Rounded'])
 	del original_theme['card-mod-root-yaml']
