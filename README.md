@@ -63,7 +63,7 @@ If you do not want these changes, use the "No Mod" versions of the theme.
 
 ## Material You Colors
 
-This theme supports Material You color theming! Create a helper template sensor named `Material Rounded Base Color` that returns the hex code of your preferred base color. The accent and primary color will be calculated using it (they will be lighter and darker versions of your chosen color). The entity ID should be `sensor.material_rounded_base_color`.
+This theme supports Material You color theming! Create a helper template sensor named `Material Rounded Base Color` that returns the hex code of your preferred base color. The accent and primary color will be calculated using it, retaining your color's hue and saturation but altering it's luminance. The entity ID should be `sensor.material_rounded_base_color`.
 
 To create a template sensor helper:
 
