@@ -69,7 +69,7 @@ You can also choose user specific colors by creating a sensor named `Material Ro
 
 If you are using the Home Assistant Android companion app, you can enable the accent color sensor in the companion app settings and use it by setting the material rounded accent color state template to `{{ states("sensor.pixel_fold_base_color") }}`.
 
-NOTE: Card mod does not support all Home Assistant pages. Namely the services and settings pages, and view configuration, add card, and edit card configuration popups. These pages will still use the theme default colors.
+NOTE: Card mod does not support all Home Assistant pages. Namely the developer tools and settings pages, and view configuration, add card, and edit card configuration popups. These pages will still use the theme default colors.
 
 ## Similar Projects and Credits
 
