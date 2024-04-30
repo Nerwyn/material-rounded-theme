@@ -165,7 +165,9 @@ Material Rounded:
           /* Material You */
           {%- macro hex2hsl(hex) -%}
               {# https://gist.github.com/mjackson/5311256 #}
+              {%- if hex[0] == "#" -%}
               {%- set hex = hex[1:] -%}
+              {%- endif -%}
               {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}
               {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}
               {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}
@@ -192,14 +194,15 @@ Material Rounded:
               {{ h }},{{ s }},{{ l }}
           {%- endmacro -%}
           {%- set id = "_" + user | lower | replace(" ","_") -%}
+          {%- set base_color = "" -%}
           * {
             {%- if has_value("sensor.material_rounded_base_color" + id) -%}
-            {%- set sensor = "sensor.material_rounded_base_color" + id -%}
+            {%- set base_color = states("sensor.material_rounded_base_color" + id) -%}
             {%- elif has_value("sensor.material_rounded_base_color") -%}
-            {%- set sensor = "sensor.material_rounded_base_color" -%}
+            {%- set base_color = states("sensor.material_rounded_base_color") -%}
             {%- endif -%}
-            {%- if sensor -%}
-            {%- set hsl = hex2hsl(states(sensor)).split(',') -%}
+            {%- if (base_color | length) -%}
+            {%- set hsl = hex2hsl(base_color).split(',') -%}
             --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 27 }}%);
             --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 85 }}%);
             --text-primary-color: var(--accent-color);
@@ -229,7 +232,9 @@ Material Rounded:
           /* Material You */
           {%- macro hex2hsl(hex) -%}
               {# https://gist.github.com/mjackson/5311256 #}
+              {%- if hex[0] == "#" -%}
               {%- set hex = hex[1:] -%}
+              {%- endif -%}
               {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}
               {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}
               {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}
@@ -256,14 +261,15 @@ Material Rounded:
               {{ h }},{{ s }},{{ l }}
           {%- endmacro -%}
           {%- set id = "_" + user | lower | replace(" ","_") -%}
+          {%- set base_color = "" -%}
           * {
             {%- if has_value("sensor.material_rounded_base_color" + id) -%}
-            {%- set sensor = "sensor.material_rounded_base_color" + id -%}
+            {%- set base_color = states("sensor.material_rounded_base_color" + id) -%}
             {%- elif has_value("sensor.material_rounded_base_color") -%}
-            {%- set sensor = "sensor.material_rounded_base_color" -%}
+            {%- set base_color = states("sensor.material_rounded_base_color") -%}
             {%- endif -%}
-            {%- if sensor -%}
-            {%- set hsl = hex2hsl(states(sensor)).split(',') -%}
+            {%- if (base_color | length) -%}
+            {%- set hsl = hex2hsl(base_color).split(',') -%}
             --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 27 }}%);
             --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 85 }}%);
             --text-primary-color: var(--accent-color);
