@@ -63,13 +63,28 @@ If you do not want these changes, use the "No Mod" versions of the theme.
 
 ## Material You Colors
 
-This theme supports Material You color theming! Create a helper template sensor named `Material Rounded Base Color` that returns the hex code of your preferred base color. The accent and primary color will be calculated using it (they will be lighter and darker versions of your chosen color). The sensor entity ID should be `sensor.material_rounded_base_color`.
+This theme supports Material You color theming! Create a helper template sensor named `Material Rounded Base Color` that returns the hex code of your preferred base color. The accent and primary color will be calculated using it (they will be lighter and darker versions of your chosen color). The entity ID should be `sensor.material_rounded_base_color`.
+
+To create a template sensor helper:
+
+1. Navigate to `Settings` > `Devices & services` > ` Helpers`.
+2. Click `+ CREATE HELPER`.
+3. Click `Template`.
+4. Click `Template a sensor`.
+5. Name the sensor `Material Rounded Theme Color`. If you want this color to only apply to your profile, add your name as it appears in the [Home Assistant people page](http://homeassistant.local:8123/config/person) to the end.
+6. Enter your Material You base color as a hex code, like `238636` or `#db4437`. You can also use a template to read a hex code from the state or attribute of a different entity, like `{{ states("sensor.pixel_fold_accent_color") }}`.
+7. Click `SUBMIT`.
 
 You can also choose user specific colors by creating a sensor named `Material Rounded Base Color Your Name`, with your name being your person name as it appears on the [Home Assistant people page](http://homeassistant.local:8123/config/person). The sensory entity Id should be something like `sensor.material_rounded_base_color_john_doe`.
 
-If you are using the Home Assistant Android companion app, you can enable the accent color sensor in the companion app settings and use it by setting the material rounded accent color state template to `{{ states("sensor.pixel_fold_base_color") }}`.
+If you are using the Home Assistant Android companion app, you can enable the accent color sensor in the companion app settings to use your phone's Material You accent color as the theme base color:
 
-NOTE: Card mod does not support all Home Assistant pages. Namely the developer tools and settings pages, and view configuration, add card, and edit card configuration popups. These pages will still use the theme default colors.
+1. Navigate to `Settings` > `Companion app`.
+2. Click `Manage sensors.`
+3. Scroll down to the section titled `Dynamic color` and click `Accent color`.
+4. Toggle `Enable sensor` on. It should now return your phone's Material You base color as a hex code.
+
+**NOTE**: Card mod does not support all Home Assistant pages. Namely the developer tools and settings pages, and view configuration, add card, and edit card configuration popups. These pages will still use the theme default colors.
 
 ## Similar Projects and Credits
 
@@ -100,7 +115,7 @@ Check out [Material Symbols](https://github.com/beecho01/material-symbols) to us
 
 ### Graphite Theme
 
-This theme was initially modified from the [Graphite theme](https://github.com/TilmanGriesel/graphite), as I found that it was my favorite of the available Home Assistant themes on HACS when I started creating this theme. Therefore, it contains similar logic for reusing variables and possibly some unused variables.
+This theme was initially modified from the [Graphite theme](https://github.com/TilmanGriesel/graphite), as it was my favorite Home Assistant theme on HACS before I created this one. Therefore, it contains similar logic and variables.
 
 [last-commit-shield]: https://img.shields.io/github/last-commit/Nerwyn/material-rounded-theme?style=for-the-badge
 [commits]: https://github.com/Nerwyn/material-rounded-theme/commits/main
