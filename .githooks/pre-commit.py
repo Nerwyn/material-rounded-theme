@@ -33,9 +33,9 @@ with open(theme_file_path, 'r') as f:
 	del theme_file[theme_title]
 	theme_file[theme_title] = copy.deepcopy(original_theme)
 	del theme_file[theme_title]['card-mod-theme']
-	del theme_file[theme_title]['card-mod-root-yaml']
-	del theme_file[theme_title]['card-mod-more-info-yaml']
 	theme_file[theme_title]['card-background-color'] = transparent
+	theme_file[theme_title]['ha-card-background'] = transparent
+	theme_file[theme_title]['ha-card-border-color'] = transparent
 
 
 with open(theme_file_path, 'w') as f:
