@@ -158,90 +158,119 @@ Material Rounded:
     link-text-color: rgb(0, 86, 207)
 
     card-mod-theme: Material Rounded
+    card-mod-view-yaml: |
+        .: |
+          /* Material You */
+          {% macro hex2hsl(hex) %}
+              {# https://gist.github.com/mjackson/5311256 #}
+              {% set hex = hex[1:] %}
+              {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
+              {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
+              {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
+              {% set rgb_max = [r, g, b] | max %}
+              {% set rgb_min = [r, g, b] | min %}
+              {% set h = 0 %}
+              {% set s = 0 %}
+              {% set l = (rgb_max + rgb_min) / 2 %}
+              {% if rgb_max != rgb_min %}
+                {% set d = rgb_max - rgb_min %}
+                {% set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) %}
+                {% if r == rgb_max %}
+                  {% set h = (g - b) / d + (6 if g < b else 0) %}
+                {% elif g == rgb_max %}
+                  {% set h = (b - r) / d + 2 %}
+                {% elif b == rgb_max %}
+                  {% set h = (r - g) / d + 4 %}
+                {% endif %}
+                {% set h = h / 6 %}
+              {% endif %}
+              {% set h = (h * 360) | int %}
+              {% set s = (s * 100) | int %}
+              {% set l = (l * 100) | int %}
+              {{ h }},{{ s }},{{ l }}
+          {% endmacro %}
+          * {
+            {% if has_value("sensor.material_rounded_accent_color") %}
+            {% set hsl = hex2hsl(states("sensor.material_rounded_accent_color")).split(',') %}
+            --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 27 }}%);
+            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 85 }}%);
+            {% endif %}
+          }
+    card-mod-more-info-yaml: |
+        .: |
+          /* Material You */
+          {% macro hex2hsl(hex) %}
+              {# https://gist.github.com/mjackson/5311256 #}
+              {% set hex = hex[1:] %}
+              {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
+              {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
+              {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
+              {% set rgb_max = [r, g, b] | max %}
+              {% set rgb_min = [r, g, b] | min %}
+              {% set h = 0 %}
+              {% set s = 0 %}
+              {% set l = (rgb_max + rgb_min) / 2 %}
+              {% if rgb_max != rgb_min %}
+                {% set d = rgb_max - rgb_min %}
+                {% set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) %}
+                {% if r == rgb_max %}
+                  {% set h = (g - b) / d + (6 if g < b else 0) %}
+                {% elif g == rgb_max %}
+                  {% set h = (b - r) / d + 2 %}
+                {% elif b == rgb_max %}
+                  {% set h = (r - g) / d + 4 %}
+                {% endif %}
+                {% set h = h / 6 %}
+              {% endif %}
+              {% set h = (h * 360) | int %}
+              {% set s = (s * 100) | int %}
+              {% set l = (l * 100) | int %}
+              {{ h }},{{ s }},{{ l }}
+          {% endmacro %}
+          * {
+            {% if has_value("sensor.material_rounded_accent_color") %}
+            {% set hsl = hex2hsl(states("sensor.material_rounded_accent_color")).split(',') %}
+            --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 27 }}%);
+            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 85 }}%);
+            {% endif %}
+          }
     card-mod-root-yaml: |
         .: |
           /* Material You */
+          {% macro hex2hsl(hex) %}
+              {# https://gist.github.com/mjackson/5311256 #}
+              {% set hex = hex[1:] %}
+              {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
+              {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
+              {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
+              {% set rgb_max = [r, g, b] | max %}
+              {% set rgb_min = [r, g, b] | min %}
+              {% set h = 0 %}
+              {% set s = 0 %}
+              {% set l = (rgb_max + rgb_min) / 2 %}
+              {% if rgb_max != rgb_min %}
+                {% set d = rgb_max - rgb_min %}
+                {% set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) %}
+                {% if r == rgb_max %}
+                  {% set h = (g - b) / d + (6 if g < b else 0) %}
+                {% elif g == rgb_max %}
+                  {% set h = (b - r) / d + 2 %}
+                {% elif b == rgb_max %}
+                  {% set h = (r - g) / d + 4 %}
+                {% endif %}
+                {% set h = h / 6 %}
+              {% endif %}
+              {% set h = (h * 360) | int %}
+              {% set s = (s * 100) | int %}
+              {% set l = (l * 100) | int %}
+              {{ h }},{{ s }},{{ l }}
+          {% endmacro %}
           * {
-            --accent-color: {% if has_value("sensor.material_rounded_accent_color") %}
-              {# https://gist.github.com/mjackson/5311256 #}
-              {% set hex = states("sensor.material_rounded_accent_color")[1:] %}
-              {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
-              {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
-              {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
-              {% set rgb_max = [r, g, b] | max %}
-              {% set rgb_min = [r, g, b] | min %}
-              {% set h = 0 %}
-              {% set s = 0 %}
-              {% set l = (rgb_max + rgb_min) / 2 %}
-              {% if rgb_max != rgb_min %}
-                {% set d = rgb_max - rgb_min %}
-                {% set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) %}
-                {% if r == rgb_max %}
-                  {% set h = (g - b) / d + (6 if g < b else 0) %}
-                {% elif g == rgb_max %}
-                  {% set h = (b - r) / d + 2 %}
-                {% elif b == rgb_max %}
-                  {% set h = (r - g) / d + 4 %}
-                {% endif %}
-                {% set h = h / 6 %}
-              {% endif %}
-              {% set h = (h * 360) | int %}
-              {% set s = (s * 100) | int %}
-              {# {% set l = (l * 100) | int %} #}
-              {% set l = 27 %}
-              hsl({{ h }},{{ s }}%,{{ l }}%)
-              {% else %}
-              "none"
-              {% endif %} !important;
-            --primary-color: {% if has_value("sensor.material_rounded_accent_color") %}
-              {# https://gist.github.com/mjackson/5311256 #}
-              {% set hex = states("sensor.material_rounded_accent_color")[1:] %}
-              {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
-              {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
-              {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
-              {% set rgb_max = [r, g, b] | max %}
-              {% set rgb_min = [r, g, b] | min %}
-              {% set h = 0 %}
-              {% set s = 0 %}
-              {% set l = (rgb_max + rgb_min) / 2 %}
-              {% if rgb_max != rgb_min %}
-                {% set d = rgb_max - rgb_min %}
-                {% set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) %}
-                {% if r == rgb_max %}
-                  {% set h = (g - b) / d + (6 if g < b else 0) %}
-                {% elif g == rgb_max %}
-                  {% set h = (b - r) / d + 2 %}
-                {% elif b == rgb_max %}
-                  {% set h = (r - g) / d + 4 %}
-                {% endif %}
-                {% set h = h / 6 %}
-              {% endif %}
-              {% set h = (h * 360) | int %}
-              {% set s = (s * 100) | int %}
-              {# {% set l = (l * 100) | int %} #}
-              {% set l = 85 %}
-              hsl({{ h }},{{ s }}%,{{ l }}%)
-              {% else %}
-              "none"
-              {% endif %} !important;
-            --text-primary-color: var(--accent-color);
-            --text-accent-color: var(--primary-color);
-            --text-light-primary-color: var(--accent-color);
-            --rgb-primary-text-color: var(--primary-text-color);
-            --dark-primary-color: var(--primary-color);
-            --light-primary-color: var(--primary-color);
-            --mdc-theme-primary: var(--primary-color);
-            --mdc-theme-on-primary: var(--accent-color);
-            --paper-slider-knob-color: var(--primary-color);
-            --paper-slider-knob-start-color: var(--paper-slider-knob-color);
-            --paper-slider-pin-color: var(--paper-slider-knob-color);
-            --paper-slider-active-color: var(--paper-slider-knob-color);
-            --paper-slider-secondary-color: var(--light-primary-color);
-            --switch-checked-button-color: var(--primary-color);
-            --switch-checked-track-color: var(--switch-checked-button-color);
-            --input-hover-line-color: var(--primary-color);
-            --codemirror-property: var(--primary-color);
-            --codemirror-atom: var(--codemirror-property);
+            {% if has_value("sensor.material_rounded_accent_color") %}
+            {% set hsl = hex2hsl(states("sensor.material_rounded_accent_color")).split(',') %}
+            --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 27 }}%);
+            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 85 }}%);
+            {% endif %}
           }
 
           /* Turn header toolbar into a footer */
@@ -592,6 +621,82 @@ Material Rounded No Mod:
     hacs-error-color: rgb(182 46 95)
     link-text-color: rgb(0, 86, 207)
 
+    card-mod-view-yaml: |
+        .: |
+          /* Material You */
+          {% macro hex2hsl(hex) %}
+              {# https://gist.github.com/mjackson/5311256 #}
+              {% set hex = hex[1:] %}
+              {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
+              {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
+              {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
+              {% set rgb_max = [r, g, b] | max %}
+              {% set rgb_min = [r, g, b] | min %}
+              {% set h = 0 %}
+              {% set s = 0 %}
+              {% set l = (rgb_max + rgb_min) / 2 %}
+              {% if rgb_max != rgb_min %}
+                {% set d = rgb_max - rgb_min %}
+                {% set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) %}
+                {% if r == rgb_max %}
+                  {% set h = (g - b) / d + (6 if g < b else 0) %}
+                {% elif g == rgb_max %}
+                  {% set h = (b - r) / d + 2 %}
+                {% elif b == rgb_max %}
+                  {% set h = (r - g) / d + 4 %}
+                {% endif %}
+                {% set h = h / 6 %}
+              {% endif %}
+              {% set h = (h * 360) | int %}
+              {% set s = (s * 100) | int %}
+              {% set l = (l * 100) | int %}
+              {{ h }},{{ s }},{{ l }}
+          {% endmacro %}
+          * {
+            {% if has_value("sensor.material_rounded_accent_color") %}
+            {% set hsl = hex2hsl(states("sensor.material_rounded_accent_color")).split(',') %}
+            --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 27 }}%);
+            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 85 }}%);
+            {% endif %}
+          }
+    card-mod-more-info-yaml: |
+        .: |
+          /* Material You */
+          {% macro hex2hsl(hex) %}
+              {# https://gist.github.com/mjackson/5311256 #}
+              {% set hex = hex[1:] %}
+              {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
+              {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
+              {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
+              {% set rgb_max = [r, g, b] | max %}
+              {% set rgb_min = [r, g, b] | min %}
+              {% set h = 0 %}
+              {% set s = 0 %}
+              {% set l = (rgb_max + rgb_min) / 2 %}
+              {% if rgb_max != rgb_min %}
+                {% set d = rgb_max - rgb_min %}
+                {% set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) %}
+                {% if r == rgb_max %}
+                  {% set h = (g - b) / d + (6 if g < b else 0) %}
+                {% elif g == rgb_max %}
+                  {% set h = (b - r) / d + 2 %}
+                {% elif b == rgb_max %}
+                  {% set h = (r - g) / d + 4 %}
+                {% endif %}
+                {% set h = h / 6 %}
+              {% endif %}
+              {% set h = (h * 360) | int %}
+              {% set s = (s * 100) | int %}
+              {% set l = (l * 100) | int %}
+              {{ h }},{{ s }},{{ l }}
+          {% endmacro %}
+          * {
+            {% if has_value("sensor.material_rounded_accent_color") %}
+            {% set hsl = hex2hsl(states("sensor.material_rounded_accent_color")).split(',') %}
+            --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 27 }}%);
+            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 85 }}%);
+            {% endif %}
+          }
 Material Rounded Transparent Card:
     modes:
         dark:
@@ -748,90 +853,119 @@ Material Rounded Transparent Card:
     link-text-color: rgb(0, 86, 207)
 
     card-mod-theme: Material Rounded
+    card-mod-view-yaml: |
+        .: |
+          /* Material You */
+          {% macro hex2hsl(hex) %}
+              {# https://gist.github.com/mjackson/5311256 #}
+              {% set hex = hex[1:] %}
+              {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
+              {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
+              {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
+              {% set rgb_max = [r, g, b] | max %}
+              {% set rgb_min = [r, g, b] | min %}
+              {% set h = 0 %}
+              {% set s = 0 %}
+              {% set l = (rgb_max + rgb_min) / 2 %}
+              {% if rgb_max != rgb_min %}
+                {% set d = rgb_max - rgb_min %}
+                {% set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) %}
+                {% if r == rgb_max %}
+                  {% set h = (g - b) / d + (6 if g < b else 0) %}
+                {% elif g == rgb_max %}
+                  {% set h = (b - r) / d + 2 %}
+                {% elif b == rgb_max %}
+                  {% set h = (r - g) / d + 4 %}
+                {% endif %}
+                {% set h = h / 6 %}
+              {% endif %}
+              {% set h = (h * 360) | int %}
+              {% set s = (s * 100) | int %}
+              {% set l = (l * 100) | int %}
+              {{ h }},{{ s }},{{ l }}
+          {% endmacro %}
+          * {
+            {% if has_value("sensor.material_rounded_accent_color") %}
+            {% set hsl = hex2hsl(states("sensor.material_rounded_accent_color")).split(',') %}
+            --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 27 }}%);
+            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 85 }}%);
+            {% endif %}
+          }
+    card-mod-more-info-yaml: |
+        .: |
+          /* Material You */
+          {% macro hex2hsl(hex) %}
+              {# https://gist.github.com/mjackson/5311256 #}
+              {% set hex = hex[1:] %}
+              {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
+              {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
+              {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
+              {% set rgb_max = [r, g, b] | max %}
+              {% set rgb_min = [r, g, b] | min %}
+              {% set h = 0 %}
+              {% set s = 0 %}
+              {% set l = (rgb_max + rgb_min) / 2 %}
+              {% if rgb_max != rgb_min %}
+                {% set d = rgb_max - rgb_min %}
+                {% set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) %}
+                {% if r == rgb_max %}
+                  {% set h = (g - b) / d + (6 if g < b else 0) %}
+                {% elif g == rgb_max %}
+                  {% set h = (b - r) / d + 2 %}
+                {% elif b == rgb_max %}
+                  {% set h = (r - g) / d + 4 %}
+                {% endif %}
+                {% set h = h / 6 %}
+              {% endif %}
+              {% set h = (h * 360) | int %}
+              {% set s = (s * 100) | int %}
+              {% set l = (l * 100) | int %}
+              {{ h }},{{ s }},{{ l }}
+          {% endmacro %}
+          * {
+            {% if has_value("sensor.material_rounded_accent_color") %}
+            {% set hsl = hex2hsl(states("sensor.material_rounded_accent_color")).split(',') %}
+            --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 27 }}%);
+            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 85 }}%);
+            {% endif %}
+          }
     card-mod-root-yaml: |
         .: |
           /* Material You */
+          {% macro hex2hsl(hex) %}
+              {# https://gist.github.com/mjackson/5311256 #}
+              {% set hex = hex[1:] %}
+              {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
+              {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
+              {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
+              {% set rgb_max = [r, g, b] | max %}
+              {% set rgb_min = [r, g, b] | min %}
+              {% set h = 0 %}
+              {% set s = 0 %}
+              {% set l = (rgb_max + rgb_min) / 2 %}
+              {% if rgb_max != rgb_min %}
+                {% set d = rgb_max - rgb_min %}
+                {% set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) %}
+                {% if r == rgb_max %}
+                  {% set h = (g - b) / d + (6 if g < b else 0) %}
+                {% elif g == rgb_max %}
+                  {% set h = (b - r) / d + 2 %}
+                {% elif b == rgb_max %}
+                  {% set h = (r - g) / d + 4 %}
+                {% endif %}
+                {% set h = h / 6 %}
+              {% endif %}
+              {% set h = (h * 360) | int %}
+              {% set s = (s * 100) | int %}
+              {% set l = (l * 100) | int %}
+              {{ h }},{{ s }},{{ l }}
+          {% endmacro %}
           * {
-            --accent-color: {% if has_value("sensor.material_rounded_accent_color") %}
-              {# https://gist.github.com/mjackson/5311256 #}
-              {% set hex = states("sensor.material_rounded_accent_color")[1:] %}
-              {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
-              {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
-              {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
-              {% set rgb_max = [r, g, b] | max %}
-              {% set rgb_min = [r, g, b] | min %}
-              {% set h = 0 %}
-              {% set s = 0 %}
-              {% set l = (rgb_max + rgb_min) / 2 %}
-              {% if rgb_max != rgb_min %}
-                {% set d = rgb_max - rgb_min %}
-                {% set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) %}
-                {% if r == rgb_max %}
-                  {% set h = (g - b) / d + (6 if g < b else 0) %}
-                {% elif g == rgb_max %}
-                  {% set h = (b - r) / d + 2 %}
-                {% elif b == rgb_max %}
-                  {% set h = (r - g) / d + 4 %}
-                {% endif %}
-                {% set h = h / 6 %}
-              {% endif %}
-              {% set h = (h * 360) | int %}
-              {% set s = (s * 100) | int %}
-              {# {% set l = (l * 100) | int %} #}
-              {% set l = 27 %}
-              hsl({{ h }},{{ s }}%,{{ l }}%)
-              {% else %}
-              "none"
-              {% endif %} !important;
-            --primary-color: {% if has_value("sensor.material_rounded_accent_color") %}
-              {# https://gist.github.com/mjackson/5311256 #}
-              {% set hex = states("sensor.material_rounded_accent_color")[1:] %}
-              {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
-              {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
-              {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
-              {% set rgb_max = [r, g, b] | max %}
-              {% set rgb_min = [r, g, b] | min %}
-              {% set h = 0 %}
-              {% set s = 0 %}
-              {% set l = (rgb_max + rgb_min) / 2 %}
-              {% if rgb_max != rgb_min %}
-                {% set d = rgb_max - rgb_min %}
-                {% set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) %}
-                {% if r == rgb_max %}
-                  {% set h = (g - b) / d + (6 if g < b else 0) %}
-                {% elif g == rgb_max %}
-                  {% set h = (b - r) / d + 2 %}
-                {% elif b == rgb_max %}
-                  {% set h = (r - g) / d + 4 %}
-                {% endif %}
-                {% set h = h / 6 %}
-              {% endif %}
-              {% set h = (h * 360) | int %}
-              {% set s = (s * 100) | int %}
-              {# {% set l = (l * 100) | int %} #}
-              {% set l = 85 %}
-              hsl({{ h }},{{ s }}%,{{ l }}%)
-              {% else %}
-              "none"
-              {% endif %} !important;
-            --text-primary-color: var(--accent-color);
-            --text-accent-color: var(--primary-color);
-            --text-light-primary-color: var(--accent-color);
-            --rgb-primary-text-color: var(--primary-text-color);
-            --dark-primary-color: var(--primary-color);
-            --light-primary-color: var(--primary-color);
-            --mdc-theme-primary: var(--primary-color);
-            --mdc-theme-on-primary: var(--accent-color);
-            --paper-slider-knob-color: var(--primary-color);
-            --paper-slider-knob-start-color: var(--paper-slider-knob-color);
-            --paper-slider-pin-color: var(--paper-slider-knob-color);
-            --paper-slider-active-color: var(--paper-slider-knob-color);
-            --paper-slider-secondary-color: var(--light-primary-color);
-            --switch-checked-button-color: var(--primary-color);
-            --switch-checked-track-color: var(--switch-checked-button-color);
-            --input-hover-line-color: var(--primary-color);
-            --codemirror-property: var(--primary-color);
-            --codemirror-atom: var(--codemirror-property);
+            {% if has_value("sensor.material_rounded_accent_color") %}
+            {% set hsl = hex2hsl(states("sensor.material_rounded_accent_color")).split(',') %}
+            --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 27 }}%);
+            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 85 }}%);
+            {% endif %}
           }
 
           /* Turn header toolbar into a footer */
@@ -1183,4 +1317,80 @@ Material Rounded Transparent Card No Mod:
     hacs-error-color: rgb(182 46 95)
     link-text-color: rgb(0, 86, 207)
 
+    card-mod-view-yaml: |
+        .: |
+          /* Material You */
+          {% macro hex2hsl(hex) %}
+              {# https://gist.github.com/mjackson/5311256 #}
+              {% set hex = hex[1:] %}
+              {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
+              {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
+              {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
+              {% set rgb_max = [r, g, b] | max %}
+              {% set rgb_min = [r, g, b] | min %}
+              {% set h = 0 %}
+              {% set s = 0 %}
+              {% set l = (rgb_max + rgb_min) / 2 %}
+              {% if rgb_max != rgb_min %}
+                {% set d = rgb_max - rgb_min %}
+                {% set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) %}
+                {% if r == rgb_max %}
+                  {% set h = (g - b) / d + (6 if g < b else 0) %}
+                {% elif g == rgb_max %}
+                  {% set h = (b - r) / d + 2 %}
+                {% elif b == rgb_max %}
+                  {% set h = (r - g) / d + 4 %}
+                {% endif %}
+                {% set h = h / 6 %}
+              {% endif %}
+              {% set h = (h * 360) | int %}
+              {% set s = (s * 100) | int %}
+              {% set l = (l * 100) | int %}
+              {{ h }},{{ s }},{{ l }}
+          {% endmacro %}
+          * {
+            {% if has_value("sensor.material_rounded_accent_color") %}
+            {% set hsl = hex2hsl(states("sensor.material_rounded_accent_color")).split(',') %}
+            --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 27 }}%);
+            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 85 }}%);
+            {% endif %}
+          }
+    card-mod-more-info-yaml: |
+        .: |
+          /* Material You */
+          {% macro hex2hsl(hex) %}
+              {# https://gist.github.com/mjackson/5311256 #}
+              {% set hex = hex[1:] %}
+              {% set r = (hex[0:2] | int(hex[0:2],16))/255 %}
+              {% set g = (hex[2:4] | int(hex[2:4],16))/255 %}
+              {% set b = (hex[4:6] | int(hex[4:6],16))/255 %}
+              {% set rgb_max = [r, g, b] | max %}
+              {% set rgb_min = [r, g, b] | min %}
+              {% set h = 0 %}
+              {% set s = 0 %}
+              {% set l = (rgb_max + rgb_min) / 2 %}
+              {% if rgb_max != rgb_min %}
+                {% set d = rgb_max - rgb_min %}
+                {% set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) %}
+                {% if r == rgb_max %}
+                  {% set h = (g - b) / d + (6 if g < b else 0) %}
+                {% elif g == rgb_max %}
+                  {% set h = (b - r) / d + 2 %}
+                {% elif b == rgb_max %}
+                  {% set h = (r - g) / d + 4 %}
+                {% endif %}
+                {% set h = h / 6 %}
+              {% endif %}
+              {% set h = (h * 360) | int %}
+              {% set s = (s * 100) | int %}
+              {% set l = (l * 100) | int %}
+              {{ h }},{{ s }},{{ l }}
+          {% endmacro %}
+          * {
+            {% if has_value("sensor.material_rounded_accent_color") %}
+            {% set hsl = hex2hsl(states("sensor.material_rounded_accent_color")).split(',') %}
+            --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 27 }}%);
+            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,{{ 85 }}%);
+            {% endif %}
+          }
     card-background-color: var(--token-color-background-base)
