@@ -67,7 +67,7 @@ This theme supports Material You color theming! Create a helper template sensor 
 
 You can also choose user specific colors by creating a sensor named `Material Rounded Base Color Your Name`, with your name being your person name as it appears on the [Home Assistant people page](http://homeassistant.local:8123/config/person). The sensory entity Id should be something like `sensor.material_rounded_base_color_john_doe`.
 
-If you are using the Home Assistant Android companion app, you can enable the accent color sensor in the companion app settings and use it by setting the material rounded accent color state template to `{{ states("sensor.pixel_fold_base_color") }}`
+If you are using the Home Assistant Android companion app, you can enable the accent color sensor in the companion app settings and use it by setting the material rounded accent color state template to `{{ states("sensor.pixel_fold_base_color") }}`.
 
 NOTE: Card mod does not support all Home Assistant pages. Namely the services and settings pages, and view configuration, add card, and edit card configuration popups. These pages will still use the theme default colors.
 
@@ -97,6 +97,8 @@ max: 0
 ### Material Symbols
 
 Check out [Material Symbols](https://github.com/beecho01/material-symbols) to use updated material icons, as shown in the screenshots!
+
+### Graphite Theme
 
 This theme was initially modified from the [Graphite theme](https://github.com/TilmanGriesel/graphite), as I found that it was my favorite of the available Home Assistant themes on HACS when I started creating this theme. Therefore, it contains similar logic for reusing variables and possibly some unused variables.
 
