@@ -13,7 +13,11 @@ Material Rounded theme for Home Assistant influenced by Material You on Android.
 
 This theme aims to match the styling of the Google Home app as closely as possible, so it may change over time as the style of the Google Home app changes.
 
-Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for header/footer modifications. If you have card-mod installed and do not want these changes to apply, use the "No Mod" versions of this theme. This theme also includes "Transparent Card" versions with card backgrounds that match the view background.
+Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for header/footer modifications and Material You coloring. If you have card-mod installed and do not want these changes to apply, use the "No Mod" versions of this theme.
+
+Don't like blue? You can choose a different Material You base color! See below for more. Also requires card-mod.
+
+This theme also includes "Transparent Card" versions with card backgrounds that match the view background.
 
 ## Screenshots
 
@@ -33,14 +37,7 @@ Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for heade
 
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/comparison-light.png" alt="buttons-comparison-light" width="600"/>
 
-Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card). Use the following style settings to match:
-
-```yaml
-colorize: true
-show_percentage: true
-bold_text: true
-height: 88
-```
+Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card).
 
 ## Installation
 
@@ -51,7 +48,7 @@ height: 88
 5. Refresh Home Assistant.
 6. Navigate to your Profile, and select `Material Rounded` under Theme along with your preference for light or dark mode.
 
-## Card Mod Powered Footer and Material You Colors
+## Card Mod Powered Footer
 
 This theme uses [card-mod](https://github.com/thomasloven/lovelace-card-mod) to:
 
@@ -62,9 +59,44 @@ This theme uses [card-mod](https://github.com/thomasloven/lovelace-card-mod) to:
 -   Highlight the current view with a colored icon and background behind the icon.
 -   Add a 12px margin to each side of the view.
 
-This theme supports user definable accent colors! Create a helper template sensor named `Material Rounded Accent Color` that returns the hex code of your accent color. The primary color will be calculated using it. If you are using the Home Assistant Android companion app, you can enable the accent color sensor in the companion app settings and use it by setting the material rounded accent color state template to `{{ states("sensor.pixel_fold_accent_color") }}`
+If you do not want these changes, use the "No Mod" versions of the theme.
 
-Also check out [Material Symbols](https://github.com/beecho01/material-symbols) to use updated material icons, as shown in the screenshots!
+## Material You Colors
+
+This theme supports Material You color theming! Create a helper template sensor named `Material Rounded Base Color` that returns the hex code of your preferred base color. The accent and primary color will be calculated using it (they will be lighter and darker versions of your chosen color). The sensor entity ID should be `sensor.material_rounded_base_color`.
+
+You can also choose user specific colors by creating a sensor named `Material Rounded Base Color Your Name`, with your name being your person name as it appears on the [Home Assistant people page](http://homeassistant.local:8123/config/person). The sensory entity Id should be something like `sensor.material_rounded_base_color_john_doe`.
+
+If you are using the Home Assistant Android companion app, you can enable the accent color sensor in the companion app settings and use it by setting the material rounded accent color state template to `{{ states("sensor.pixel_fold_base_color") }}`
+
+NOTE: Card mod does not support all Home Assistant pages. Namely the services and settings pages, and view configuration, add card, and edit card configuration popups. These pages will still use the theme default colors.
+
+## Similar Projects and Credits
+
+### Big Slider Card
+
+Use [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card) to create Google Home style button/slider cards for light entities. Use the following style settings to match the screenshots:
+
+```yaml
+colorize: true
+show_percentage: true
+bold_text: true
+height: 88
+```
+
+And for lights that do not have brightness control:
+
+```yaml
+color: sandybrown
+show_percentage: false
+bold_text: true
+height: 88
+max: 0
+```
+
+### Material Symbols
+
+Check out [Material Symbols](https://github.com/beecho01/material-symbols) to use updated material icons, as shown in the screenshots!
 
 This theme was initially modified from the [Graphite theme](https://github.com/TilmanGriesel/graphite), as I found that it was my favorite of the available Home Assistant themes on HACS when I started creating this theme. Therefore, it contains similar logic for reusing variables and possibly some unused variables.
 

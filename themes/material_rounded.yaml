@@ -193,10 +193,10 @@ Material Rounded:
           {%- endmacro -%}
           {%- set id = "_" + user | lower | replace(" ","_") -%}
           * {
-            {%- if has_value("sensor.material_rounded_accent_color" + id) -%}
-            {%- set sensor = "sensor.material_rounded_accent_color" + id -%}
-            {%- elif has_value("sensor.material_rounded_accent_color") -%}
-            {%- set sensor = "sensor.material_rounded_accent_color" -%}
+            {%- if has_value("sensor.material_rounded_base_color" + id) -%}
+            {%- set sensor = "sensor.material_rounded_base_color" + id -%}
+            {%- elif has_value("sensor.material_rounded_base_color") -%}
+            {%- set sensor = "sensor.material_rounded_base_color" -%}
             {%- endif -%}
             {%- if sensor -%}
             {%- set hsl = hex2hsl(states(sensor)).split(',') -%}
@@ -257,10 +257,10 @@ Material Rounded:
           {%- endmacro -%}
           {%- set id = "_" + user | lower | replace(" ","_") -%}
           * {
-            {%- if has_value("sensor.material_rounded_accent_color" + id) -%}
-            {%- set sensor = "sensor.material_rounded_accent_color" + id -%}
-            {%- elif has_value("sensor.material_rounded_accent_color") -%}
-            {%- set sensor = "sensor.material_rounded_accent_color" -%}
+            {%- if has_value("sensor.material_rounded_base_color" + id) -%}
+            {%- set sensor = "sensor.material_rounded_base_color" + id -%}
+            {%- elif has_value("sensor.material_rounded_base_color") -%}
+            {%- set sensor = "sensor.material_rounded_base_color" -%}
             {%- endif -%}
             {%- if sensor -%}
             {%- set hsl = hex2hsl(states(sensor)).split(',') -%}
