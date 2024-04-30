@@ -81,6 +81,8 @@ Material Rounded:
     scrollbar-thumb-color: rgb(46, 48, 56)
     mdc-theme-primary: var(--primary-color)
     mdc-theme-on-primary: var(--accent-color)
+    mdc-theme-secondary: var(--primary-color)
+    mdc-theme-on-secondary: var(--accent-color)
 
     # Background
     lovelace-background: var(--primary-background-color)
@@ -208,6 +210,8 @@ Material Rounded:
             --light-primary-color: var(--primary-color);
             --mdc-theme-primary: var(--primary-color);
             --mdc-theme-on-primary: var(--accent-color);
+            --mdc-theme-secondary: var(--primary-color);
+            --mdc-theme-on-secondary: var(--accent-color);
             --paper-slider-knob-color: var(--primary-color);
             --paper-slider-knob-start-color: var(--paper-slider-knob-color);
             --paper-slider-pin-color: var(--paper-slider-knob-color);
@@ -555,6 +559,8 @@ Material Rounded No Mod:
     scrollbar-thumb-color: rgb(46, 48, 56)
     mdc-theme-primary: var(--primary-color)
     mdc-theme-on-primary: var(--accent-color)
+    mdc-theme-secondary: var(--primary-color)
+    mdc-theme-on-secondary: var(--accent-color)
 
     # Background
     lovelace-background: var(--primary-background-color)
@@ -681,6 +687,8 @@ Material Rounded No Mod:
             --light-primary-color: var(--primary-color);
             --mdc-theme-primary: var(--primary-color);
             --mdc-theme-on-primary: var(--accent-color);
+            --mdc-theme-secondary: var(--primary-color);
+            --mdc-theme-on-secondary: var(--accent-color);
             --paper-slider-knob-color: var(--primary-color);
             --paper-slider-knob-start-color: var(--paper-slider-knob-color);
             --paper-slider-pin-color: var(--paper-slider-knob-color);
@@ -772,6 +780,8 @@ Material Rounded Transparent Card:
     scrollbar-thumb-color: rgb(46, 48, 56)
     mdc-theme-primary: var(--primary-color)
     mdc-theme-on-primary: var(--accent-color)
+    mdc-theme-secondary: var(--primary-color)
+    mdc-theme-on-secondary: var(--accent-color)
 
     # Background
     lovelace-background: var(--primary-background-color)
@@ -899,6 +909,8 @@ Material Rounded Transparent Card:
             --light-primary-color: var(--primary-color);
             --mdc-theme-primary: var(--primary-color);
             --mdc-theme-on-primary: var(--accent-color);
+            --mdc-theme-secondary: var(--primary-color);
+            --mdc-theme-on-secondary: var(--accent-color);
             --paper-slider-knob-color: var(--primary-color);
             --paper-slider-knob-start-color: var(--paper-slider-knob-color);
             --paper-slider-pin-color: var(--paper-slider-knob-color);
@@ -1247,6 +1259,8 @@ Material Rounded Transparent Card No Mod:
     scrollbar-thumb-color: rgb(46, 48, 56)
     mdc-theme-primary: var(--primary-color)
     mdc-theme-on-primary: var(--accent-color)
+    mdc-theme-secondary: var(--primary-color)
+    mdc-theme-on-secondary: var(--accent-color)
 
     # Background
     lovelace-background: var(--primary-background-color)
@@ -1373,6 +1387,8 @@ Material Rounded Transparent Card No Mod:
             --light-primary-color: var(--primary-color);
             --mdc-theme-primary: var(--primary-color);
             --mdc-theme-on-primary: var(--accent-color);
+            --mdc-theme-secondary: var(--primary-color);
+            --mdc-theme-on-secondary: var(--accent-color);
             --paper-slider-knob-color: var(--primary-color);
             --paper-slider-knob-start-color: var(--paper-slider-knob-color);
             --paper-slider-pin-color: var(--paper-slider-knob-color);
