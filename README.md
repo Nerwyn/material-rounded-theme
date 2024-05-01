@@ -71,7 +71,7 @@ To create a template sensor helper:
 2. Click `+ CREATE HELPER`.
 3. Click `Template`.
 4. Click `Template a sensor`.
-5. Name the sensor `Material Rounded Theme Color`. If you want this color to only apply to your profile, add your name as it appears in the [Home Assistant people page](http://homeassistant.local:8123/config/person) to the end.
+5. Name the sensor `Material Rounded Base Color`. If you want this color to only apply to your profile, add your name as it appears in the [Home Assistant people page](http://homeassistant.local:8123/config/person) to the end.
 6. Enter your Material You base color as a six digit hex code, like `238636` or `#db4437`. You can also use a template to read a hex code from the state or attribute of a different entity, like `{{ states("sensor.pixel_fold_accent_color") }}`.
 7. Click `SUBMIT`.
 
