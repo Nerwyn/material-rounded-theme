@@ -110,6 +110,7 @@ Material Rounded:
     ha-card-border: none
     ha-card-box-shadow: none
     ha-config-card-border-radius: 16px
+    paper-item-icon-color: var(--state-icon-color)
 
     # Dialog
     mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
@@ -142,6 +143,7 @@ Material Rounded:
     input-idle-line-color: var(--background-color)
     input-dropdown-icon-color: var(--secondary-text-color)
     input-hover-line-color: var(--primary-color)
+    mdc-text-field-fill-color: var(--input-fill-color)
     mdc-select-idle-line-color: var(--color-background-base)
     mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
 
@@ -598,6 +600,7 @@ Material Rounded No Mod:
     ha-card-border: none
     ha-card-box-shadow: none
     ha-config-card-border-radius: 16px
+    paper-item-icon-color: var(--state-icon-color)
 
     # Dialog
     mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
@@ -630,6 +633,7 @@ Material Rounded No Mod:
     input-idle-line-color: var(--background-color)
     input-dropdown-icon-color: var(--secondary-text-color)
     input-hover-line-color: var(--primary-color)
+    mdc-text-field-fill-color: var(--input-fill-color)
     mdc-select-idle-line-color: var(--color-background-base)
     mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
 
@@ -759,6 +763,7 @@ Material Rounded Transparent Card:
     ha-card-border: none
     ha-card-box-shadow: none
     ha-config-card-border-radius: 16px
+    paper-item-icon-color: var(--state-icon-color)
 
     # Dialog
     mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
@@ -791,6 +796,7 @@ Material Rounded Transparent Card:
     input-idle-line-color: var(--background-color)
     input-dropdown-icon-color: var(--secondary-text-color)
     input-hover-line-color: var(--primary-color)
+    mdc-text-field-fill-color: var(--input-fill-color)
     mdc-select-idle-line-color: var(--color-background-base)
     mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
 
@@ -922,6 +928,7 @@ Material Rounded Transparent Card No Mod:
     ha-card-border: none
     ha-card-box-shadow: none
     ha-config-card-border-radius: 16px
+    paper-item-icon-color: var(--state-icon-color)
 
     # Dialog
     mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
@@ -954,6 +961,7 @@ Material Rounded Transparent Card No Mod:
     input-idle-line-color: var(--background-color)
     input-dropdown-icon-color: var(--secondary-text-color)
     input-hover-line-color: var(--primary-color)
+    mdc-text-field-fill-color: var(--input-fill-color)
     mdc-select-idle-line-color: var(--color-background-base)
     mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
 
