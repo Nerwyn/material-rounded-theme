@@ -46,8 +46,7 @@ Material Rounded:
     footer-height: 80px
 
     # Typography
-    font-family:
-        Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
         Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
     primary-font-family: var(--font-family)
     paper-font-common-base_-_font-family: var(--font-family)
@@ -359,8 +358,6 @@ Material Rounded No Mod:
         dark:
             accent-color: rgb(0, 74, 118)
             primary-color: rgb(194, 231, 254)
-            accent-luminance: 27%
-            primary-luminance: 85%
             state-icon-color: rgb(196, 199, 197)
             mdc-checkbox-unchecked-color: rgb(138, 140, 153)
             sidebar-icon-color: rgb(147, 149, 159)
@@ -380,8 +377,6 @@ Material Rounded No Mod:
         light:
             accent-color: rgb(194, 231, 254)
             primary-color: rgb(0, 29, 53)
-            accent-luminance: 88%
-            primary-luminance: 10%
             state-icon-color: rgb(69, 71, 70)
             mdc-checkbox-unchecked-color: rgb(42, 43, 51)
             sidebar-icon-color: rgb(88, 89, 95)
@@ -406,8 +401,7 @@ Material Rounded No Mod:
     footer-height: 80px
 
     # Typography
-    font-family:
-        Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
         Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
     primary-font-family: var(--font-family)
     paper-font-common-base_-_font-family: var(--font-family)
@@ -521,8 +515,6 @@ Material Rounded Transparent Card:
         dark:
             accent-color: rgb(0, 74, 118)
             primary-color: rgb(194, 231, 254)
-            accent-luminance: 27%
-            primary-luminance: 85%
             state-icon-color: rgb(196, 199, 197)
             mdc-checkbox-unchecked-color: rgb(138, 140, 153)
             sidebar-icon-color: rgb(147, 149, 159)
@@ -542,8 +534,6 @@ Material Rounded Transparent Card:
         light:
             accent-color: rgb(194, 231, 254)
             primary-color: rgb(0, 29, 53)
-            accent-luminance: 88%
-            primary-luminance: 10%
             state-icon-color: rgb(69, 71, 70)
             mdc-checkbox-unchecked-color: rgb(42, 43, 51)
             sidebar-icon-color: rgb(88, 89, 95)
@@ -568,8 +558,7 @@ Material Rounded Transparent Card:
     footer-height: 80px
 
     # Typography
-    font-family:
-        Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
         Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
     primary-font-family: var(--font-family)
     paper-font-common-base_-_font-family: var(--font-family)
@@ -685,8 +674,6 @@ Material Rounded Transparent Card No Mod:
         dark:
             accent-color: rgb(0, 74, 118)
             primary-color: rgb(194, 231, 254)
-            accent-luminance: 27%
-            primary-luminance: 85%
             state-icon-color: rgb(196, 199, 197)
             mdc-checkbox-unchecked-color: rgb(138, 140, 153)
             sidebar-icon-color: rgb(147, 149, 159)
@@ -706,8 +693,6 @@ Material Rounded Transparent Card No Mod:
         light:
             accent-color: rgb(194, 231, 254)
             primary-color: rgb(0, 29, 53)
-            accent-luminance: 88%
-            primary-luminance: 10%
             state-icon-color: rgb(69, 71, 70)
             mdc-checkbox-unchecked-color: rgb(42, 43, 51)
             sidebar-icon-color: rgb(88, 89, 95)
@@ -732,8 +717,7 @@ Material Rounded Transparent Card No Mod:
     footer-height: 80px
 
     # Typography
-    font-family:
-        Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
         Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
     primary-font-family: var(--font-family)
     paper-font-common-base_-_font-family: var(--font-family)
