@@ -23,7 +23,7 @@ with open(theme_file_path, 'r') as f:
 
 	# Create a transparent card background version of theme
 	theme_title = 'Material Rounded Transparent Card'
-	transparent = 'var(--primary-background-color)'
+	transparent = 'var(--lovelace-background)'
 	theme_file.pop(theme_title, None)
 	theme_file[theme_title] = copy.deepcopy(original_theme)
 	theme_file[theme_title]['card-background-color'] = transparent
