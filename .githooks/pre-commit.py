@@ -19,6 +19,7 @@ with open(theme_file_path, 'r') as f:
 	del theme_file[theme_title]
 	theme_file[theme_title] = copy.deepcopy(original_theme)
 	del theme_file[theme_title]['card-mod-theme']
+	theme_file[theme_title]['app-header-background-color'] = 'var(--primary-background-color)'
 
 	# Create a transparent card background version of theme
 	theme_title = 'Material Rounded Transparent Card'
@@ -34,6 +35,7 @@ with open(theme_file_path, 'r') as f:
 	del theme_file[theme_title]
 	theme_file[theme_title] = copy.deepcopy(original_theme)
 	del theme_file[theme_title]['card-mod-theme']
+	theme_file[theme_title]['app-header-background-color'] = 'var(--primary-background-color)'
 	theme_file[theme_title]['card-background-color'] = transparent
 	theme_file[theme_title]['ha-card-background'] = transparent
 	theme_file[theme_title]['ha-card-border-color'] = transparent
