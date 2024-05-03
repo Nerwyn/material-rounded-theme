@@ -13,17 +13,19 @@ Material Rounded theme for Home Assistant influenced by Material You on Android.
 
 This theme aims to match the styling of the Google Home app as closely as possible, so it may change over time as the style of the Google Home app changes.
 
-Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for header/footer modifications. If you have card-mod installed and do not want these changes to apply, use the "No Mod" versions of this theme. This theme also includes "Transparent Card" versions with card backgrounds that match the view background.
+Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for header/footer modifications. If you have card-mod installed and do not want these changes to apply, use the "No Mod" versions of this theme.
 
-# Screenshots
+This theme also includes "Transparent Card" versions with card backgrounds that match the view background.
 
-## Tiles
+## Screenshots
+
+### Tiles
 
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/tiles-dark.png" alt="tiles-dark" width="600"/>
 
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/tiles-light.png" alt="tiles-light" width="600"/>
 
-## Compared to Google Home
+### Compared to Google Home
 
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/tiles-comparison-dark.png" alt="tiles-comparison-dark" width="600"/>
 
@@ -33,16 +35,9 @@ Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for heade
 
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/comparison-light.png" alt="buttons-comparison-light" width="600"/>
 
-Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card). Use the following style settings to match:
+Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card).
 
-```yaml
-colorize: true
-show_percentage: true
-bold_text: true
-height: 88
-```
-
-# Installation
+## Installation
 
 1. Navigate to HACS (install from [here](https://hacs.xyz/) if you do not have it yet).
 2. Navigate to `Frontend`.
@@ -51,7 +46,7 @@ height: 88
 5. Refresh Home Assistant.
 6. Navigate to your Profile, and select `Material Rounded` under Theme along with your preference for light or dark mode.
 
-# Card Mod Powered Footer
+## Card Mod Powered Footer
 
 This theme uses [card-mod](https://github.com/thomasloven/lovelace-card-mod) to:
 
@@ -62,9 +57,38 @@ This theme uses [card-mod](https://github.com/thomasloven/lovelace-card-mod) to:
 -   Highlight the current view with a colored icon and background behind the icon.
 -   Add a 12px margin to each side of the view.
 
-Also check out [Material Symbols](https://github.com/beecho01/material-symbols) to use updated material icons, as shown in the screenshots!
+If you do not want these changes, use the "No Mod" versions of the theme.
 
-This theme was initially modified from the [Graphite theme](https://github.com/TilmanGriesel/graphite), as I found that it was my favorite of the available Home Assistant themes on HACS when I started creating this theme. Therefore, it contains similar logic for reusing variables and possibly some unused variables.
+## Similar Projects and Credits
+
+### Big Slider Card
+
+Use [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card) to create Google Home style button/slider cards for light entities. Use the following style settings to match the screenshots:
+
+```yaml
+colorize: true
+show_percentage: true
+bold_text: true
+height: 88
+```
+
+And for lights that do not have brightness control:
+
+```yaml
+color: sandybrown
+show_percentage: false
+bold_text: true
+height: 88
+max: 0
+```
+
+### Material Symbols
+
+Check out [Material Symbols](https://github.com/beecho01/material-symbols) to use updated material icons, as shown in the screenshots!
+
+### Graphite Theme
+
+This theme was initially modified from the [Graphite theme](https://github.com/TilmanGriesel/graphite), as it was my favorite Home Assistant theme on HACS before I created this one. Therefore, it contains similar logic and variables.
 
 [last-commit-shield]: https://img.shields.io/github/last-commit/Nerwyn/material-rounded-theme?style=for-the-badge
 [commits]: https://github.com/Nerwyn/material-rounded-theme/commits/main
