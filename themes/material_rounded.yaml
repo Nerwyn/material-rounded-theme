@@ -1,7 +1,3 @@
-# https://github.com/Nerwyn/material-rounded-theme
-# A theme made to emulate Google's Material You design for Android and Chrome OS
-# Modified from the Graphite theme
-# Uses card-mod for toolbar modifications
 Material Rounded:
     modes:
         dark:
@@ -755,9 +751,9 @@ Material Rounded Transparent Card:
 
     # Cards
     border-radius: 28px
-    ha-card-background: var(--token-color-background-base)
+    ha-card-background: var(--primary-background-color)
     ha-card-border-radius: var(--border-radius)
-    ha-card-border-color: var(--token-color-background-base)
+    ha-card-border-color: var(--primary-background-color)
     ha-card-border-width: 0px
     ha-card-border-style: none
     ha-card-border: none
@@ -819,7 +815,7 @@ Material Rounded Transparent Card:
     link-text-color: rgb(0, 86, 207)
 
     card-mod-theme: Material Rounded
-    card-background-color: var(--token-color-background-base)
+    card-background-color: var(--primary-background-color)
 Material Rounded Transparent Card No Mod:
     modes:
         dark:
@@ -920,9 +916,9 @@ Material Rounded Transparent Card No Mod:
 
     # Cards
     border-radius: 28px
-    ha-card-background: var(--token-color-background-base)
+    ha-card-background: var(--primary-background-color)
     ha-card-border-radius: var(--border-radius)
-    ha-card-border-color: var(--token-color-background-base)
+    ha-card-border-color: var(--primary-background-color)
     ha-card-border-width: 0px
     ha-card-border-style: none
     ha-card-border: none
@@ -983,4 +979,4 @@ Material Rounded Transparent Card No Mod:
     hacs-error-color: rgb(182 46 95)
     link-text-color: rgb(0, 86, 207)
 
-    card-background-color: var(--token-color-background-base)
+    card-background-color: var(--primary-background-color)
