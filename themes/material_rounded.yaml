@@ -3,6 +3,8 @@ Material Rounded:
         dark:
             accent-color: rgb(0, 74, 118)
             primary-color: rgb(194, 231, 254)
+            accent-luminance: 27%
+            primary-luminance: 85%
             state-icon-color: rgb(196, 199, 197)
             mdc-checkbox-unchecked-color: rgb(138, 140, 153)
             sidebar-icon-color: rgb(147, 149, 159)
@@ -22,6 +24,8 @@ Material Rounded:
         light:
             accent-color: rgb(194, 231, 254)
             primary-color: rgb(0, 29, 53)
+            accent-luminance: 88%
+            primary-luminance: 10%
             state-icon-color: rgb(69, 71, 70)
             mdc-checkbox-unchecked-color: rgb(42, 43, 51)
             sidebar-icon-color: rgb(88, 89, 95)
@@ -190,28 +194,32 @@ Material Rounded:
               {%- set l = (l * 100) | int -%}
               {{ h }},{{ s }},{{ l }}
           {%- endmacro -%}
+
           {%- set id = "_" + user | lower | replace(" ","_") -%}
           {%- set base_color = "" -%}
+
           * {
             {%- if has_value("sensor.material_rounded_base_color" + id) -%}
             {%- set base_color = states("sensor.material_rounded_base_color" + id) -%}
             {%- elif has_value("sensor.material_rounded_base_color") -%}
             {%- set base_color = states("sensor.material_rounded_base_color") -%}
             {%- endif -%}
+            
             {%- if (base_color | length) -%}
             {%- set hsl = hex2hsl(base_color).split(',') -%}
+
             --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--accent-luminance));
-            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--primary-luminance));
             --text-primary-color: var(--accent-color);
-            --text-accent-color: var(--primary-color);
             --text-light-primary-color: var(--accent-color);
-            --rgb-primary-text-color: var(--primary-text-color);
+            --mdc-theme-on-primary: var(--accent-color);
+            --mdc-theme-on-secondary: var(--accent-color);
+
+            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--primary-luminance));
+            --text-accent-color: var(--primary-color);
             --dark-primary-color: var(--primary-color);
             --light-primary-color: var(--primary-color);
             --mdc-theme-primary: var(--primary-color);
-            --mdc-theme-on-primary: var(--accent-color);
             --mdc-theme-secondary: var(--primary-color);
-            --mdc-theme-on-secondary: var(--accent-color);
             --paper-slider-knob-color: var(--primary-color);
             --paper-slider-knob-start-color: var(--paper-slider-knob-color);
             --paper-slider-pin-color: var(--paper-slider-knob-color);
@@ -257,26 +265,32 @@ Material Rounded:
               {%- set l = (l * 100) | int -%}
               {{ h }},{{ s }},{{ l }}
           {%- endmacro -%}
+
           {%- set id = "_" + user | lower | replace(" ","_") -%}
           {%- set base_color = "" -%}
+
           * {
             {%- if has_value("sensor.material_rounded_base_color" + id) -%}
             {%- set base_color = states("sensor.material_rounded_base_color" + id) -%}
             {%- elif has_value("sensor.material_rounded_base_color") -%}
             {%- set base_color = states("sensor.material_rounded_base_color") -%}
             {%- endif -%}
+
             {%- if (base_color | length) -%}
             {%- set hsl = hex2hsl(base_color).split(',') -%}
+            
             --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--accent-luminance));
-            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--primary-luminance));
             --text-primary-color: var(--accent-color);
-            --text-accent-color: var(--primary-color);
             --text-light-primary-color: var(--accent-color);
-            --rgb-primary-text-color: var(--primary-text-color);
+            --mdc-theme-on-primary: var(--accent-color);
+            --mdc-theme-on-secondary: var(--accent-color);
+
+            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--primary-luminance));
+            --text-accent-color: var(--primary-color);
             --dark-primary-color: var(--primary-color);
             --light-primary-color: var(--primary-color);
             --mdc-theme-primary: var(--primary-color);
-            --mdc-theme-on-primary: var(--accent-color);
+            --mdc-theme-secondary: var(--primary-color);
             --paper-slider-knob-color: var(--primary-color);
             --paper-slider-knob-start-color: var(--paper-slider-knob-color);
             --paper-slider-pin-color: var(--paper-slider-knob-color);
@@ -490,6 +504,8 @@ Material Rounded No Mod:
         dark:
             accent-color: rgb(0, 74, 118)
             primary-color: rgb(194, 231, 254)
+            accent-luminance: 27%
+            primary-luminance: 85%
             state-icon-color: rgb(196, 199, 197)
             mdc-checkbox-unchecked-color: rgb(138, 140, 153)
             sidebar-icon-color: rgb(147, 149, 159)
@@ -509,6 +525,8 @@ Material Rounded No Mod:
         light:
             accent-color: rgb(194, 231, 254)
             primary-color: rgb(0, 29, 53)
+            accent-luminance: 88%
+            primary-luminance: 10%
             state-icon-color: rgb(69, 71, 70)
             mdc-checkbox-unchecked-color: rgb(42, 43, 51)
             sidebar-icon-color: rgb(88, 89, 95)
@@ -648,6 +666,8 @@ Material Rounded Transparent Card:
         dark:
             accent-color: rgb(0, 74, 118)
             primary-color: rgb(194, 231, 254)
+            accent-luminance: 27%
+            primary-luminance: 85%
             state-icon-color: rgb(196, 199, 197)
             mdc-checkbox-unchecked-color: rgb(138, 140, 153)
             sidebar-icon-color: rgb(147, 149, 159)
@@ -667,6 +687,8 @@ Material Rounded Transparent Card:
         light:
             accent-color: rgb(194, 231, 254)
             primary-color: rgb(0, 29, 53)
+            accent-luminance: 88%
+            primary-luminance: 10%
             state-icon-color: rgb(69, 71, 70)
             mdc-checkbox-unchecked-color: rgb(42, 43, 51)
             sidebar-icon-color: rgb(88, 89, 95)
@@ -807,6 +829,8 @@ Material Rounded Transparent Card No Mod:
         dark:
             accent-color: rgb(0, 74, 118)
             primary-color: rgb(194, 231, 254)
+            accent-luminance: 27%
+            primary-luminance: 85%
             state-icon-color: rgb(196, 199, 197)
             mdc-checkbox-unchecked-color: rgb(138, 140, 153)
             sidebar-icon-color: rgb(147, 149, 159)
@@ -826,6 +850,8 @@ Material Rounded Transparent Card No Mod:
         light:
             accent-color: rgb(194, 231, 254)
             primary-color: rgb(0, 29, 53)
+            accent-luminance: 88%
+            primary-luminance: 10%
             state-icon-color: rgb(69, 71, 70)
             mdc-checkbox-unchecked-color: rgb(42, 43, 51)
             sidebar-icon-color: rgb(88, 89, 95)
