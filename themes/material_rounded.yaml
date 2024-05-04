@@ -14,7 +14,7 @@ Material Rounded:
             disabled-text-color: rgba(255, 255, 255, 0.5)
             sidebar-selected-text-color: rgb(214, 215, 219)
             lovelace-background: rgb(19, 19, 20)
-            primary-background-color: rgb(30, 31, 32)
+            navbar-background: rgb(30, 31, 32)
             secondary-background-color: rgb(40, 42, 46)
             disabled-color: rgb(0, 0, 0)
             input-background-color: rgb(46, 48, 56)
@@ -35,7 +35,7 @@ Material Rounded:
             disabled-text-color: rgb(128, 128, 128)
             sidebar-selected-text-color: rgb(41, 40, 36)
             lovelace-background: rgb(255, 255, 255)
-            primary-background-color: rgb(240, 244, 250)
+            navbar-background: rgb(240, 244, 250)
             secondary-background-color: rgb(215, 213, 209)
             disabled-color: rgb(173, 176, 174)
             input-background-color: rgb(234, 234, 235)
@@ -75,9 +75,10 @@ Material Rounded:
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
+    primary-background-color: var(--navbar-background)
     dark-primary-color: var(--primary-color)
     light-primary-color: var(--primary-color)
-    divider-color: var(--primary-background-color)
+    divider-color: var(--navbar-background)
     scrollbar-thumb-color: rgb(46, 48, 56)
     mdc-theme-primary: var(--primary-color)
     mdc-theme-on-primary: var(--accent-color)
@@ -92,7 +93,7 @@ Material Rounded:
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
-    sidebar-background-color: var(--primary-background-color)
+    sidebar-background-color: var(--navbar-background)
 
     # Cards
     border-radius: 28px
@@ -142,7 +143,7 @@ Material Rounded:
     mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
 
     # Editor
-    code-editor-background-color: var(--primary-background-color)
+    code-editor-background-color: var(--navbar-background)
     codemirror-meta: var(--primary-text-color)
     codemirror-property: var(--primary-color)
     codemirror-atom: var(--codemirror-property)
@@ -298,7 +299,7 @@ Material Rounded:
             top: unset !important;
             bottom: 0 !important;
             height: var(--footer-height) !important;
-            background-color: var(--primary-background-color) !important;
+            background-color: var(--navbar-background) !important;
             --mdc-icon-button-size: 32px;
           }
 
@@ -504,7 +505,7 @@ Material Rounded No Mod:
             disabled-text-color: rgba(255, 255, 255, 0.5)
             sidebar-selected-text-color: rgb(214, 215, 219)
             lovelace-background: rgb(19, 19, 20)
-            primary-background-color: rgb(30, 31, 32)
+            navbar-background: rgb(30, 31, 32)
             secondary-background-color: rgb(40, 42, 46)
             disabled-color: rgb(0, 0, 0)
             input-background-color: rgb(46, 48, 56)
@@ -525,7 +526,7 @@ Material Rounded No Mod:
             disabled-text-color: rgb(128, 128, 128)
             sidebar-selected-text-color: rgb(41, 40, 36)
             lovelace-background: rgb(255, 255, 255)
-            primary-background-color: rgb(240, 244, 250)
+            navbar-background: rgb(240, 244, 250)
             secondary-background-color: rgb(215, 213, 209)
             disabled-color: rgb(173, 176, 174)
             input-background-color: rgb(234, 234, 235)
@@ -565,9 +566,10 @@ Material Rounded No Mod:
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
+    primary-background-color: var(--lovelace-background)
     dark-primary-color: var(--primary-color)
     light-primary-color: var(--primary-color)
-    divider-color: var(--primary-background-color)
+    divider-color: var(--navbar-background)
     scrollbar-thumb-color: rgb(46, 48, 56)
     mdc-theme-primary: var(--primary-color)
     mdc-theme-on-primary: var(--accent-color)
@@ -575,14 +577,14 @@ Material Rounded No Mod:
     mdc-theme-on-secondary: var(--accent-color)
 
     # Navbar
-    app-header-background-color: var(--primary-background-color)
+    app-header-background-color: var(--navbar-background)
     app-header-text-color: var(--primary-text-color)
     app-header-edit-text-color: var(--app-header-text-color)
     app-header-edit-background-color: var(--app-header-background-color)
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
-    sidebar-background-color: var(--primary-background-color)
+    sidebar-background-color: var(--navbar-background)
 
     # Cards
     border-radius: 28px
@@ -632,7 +634,7 @@ Material Rounded No Mod:
     mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
 
     # Editor
-    code-editor-background-color: var(--primary-background-color)
+    code-editor-background-color: var(--navbar-background)
     codemirror-meta: var(--primary-text-color)
     codemirror-property: var(--primary-color)
     codemirror-atom: var(--codemirror-property)
@@ -649,6 +651,73 @@ Material Rounded No Mod:
     hacs-error-color: rgb(182 46 95)
     link-text-color: rgb(0, 86, 207)
 
+    card-mod-more-info-yaml: |
+        .: |
+          /* Material You */
+          {%- macro hex2hsl(hex) -%}
+              {# https://gist.github.com/mjackson/5311256 #}
+              {%- if hex[0] == "#" -%}
+              {%- set hex = hex[1:] -%}
+              {%- endif -%}
+              {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}
+              {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}
+              {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}
+              {%- set rgb_max = [r, g, b] | max -%}
+              {%- set rgb_min = [r, g, b] | min -%}
+              {%- set h = 0 -%}
+              {%- set s = 0 -%}
+              {%- set l = (rgb_max + rgb_min) / 2 -%}
+              {%- if rgb_max != rgb_min -%}
+                {%- set d = rgb_max - rgb_min -%}
+                {%- set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) -%}
+                {%- if r == rgb_max -%}
+                  {%- set h = (g - b) / d + (6 if g < b else 0) -%}
+                {%- elif g == rgb_max -%}
+                  {%- set h = (b - r) / d + 2 -%}
+                {%- elif b == rgb_max -%}
+                  {%- set h = (r - g) / d + 4 -%}
+                {%- endif -%}
+                {%- set h = h / 6 -%}
+              {%- endif -%}
+              {%- set h = (h * 360) | int -%}
+              {%- set s = (s * 100) | int -%}
+              {%- set l = (l * 100) | int -%}
+              {{ h }},{{ s }},{{ l }}
+          {%- endmacro -%}
+          {%- set id = "_" + user | lower | replace(" ","_") -%}
+          {%- set base_color = "" -%}
+          * {
+            {%- if has_value("sensor.material_rounded_base_color" + id) -%}
+            {%- set base_color = states("sensor.material_rounded_base_color" + id) -%}
+            {%- elif has_value("sensor.material_rounded_base_color") -%}
+            {%- set base_color = states("sensor.material_rounded_base_color") -%}
+            {%- endif -%}
+            {%- if (base_color | length) -%}
+            {%- set hsl = hex2hsl(base_color).split(',') -%}
+            --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--accent-luminance));
+            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--primary-luminance));
+            --text-primary-color: var(--accent-color);
+            --text-accent-color: var(--primary-color);
+            --text-light-primary-color: var(--accent-color);
+            --rgb-primary-text-color: var(--primary-text-color);
+            --dark-primary-color: var(--primary-color);
+            --light-primary-color: var(--primary-color);
+            --mdc-theme-primary: var(--primary-color);
+            --mdc-theme-on-primary: var(--accent-color);
+            --mdc-theme-secondary: var(--primary-color);
+            --mdc-theme-on-secondary: var(--accent-color);
+            --paper-slider-knob-color: var(--primary-color);
+            --paper-slider-knob-start-color: var(--paper-slider-knob-color);
+            --paper-slider-pin-color: var(--paper-slider-knob-color);
+            --paper-slider-active-color: var(--paper-slider-knob-color);
+            --paper-slider-secondary-color: var(--light-primary-color);
+            --switch-checked-button-color: var(--primary-color);
+            --switch-checked-track-color: var(--switch-checked-button-color);
+            --input-hover-line-color: var(--primary-color);
+            --codemirror-property: var(--primary-color);
+            --codemirror-atom: var(--codemirror-property);
+            {%- endif -%}
+          }
 Material Rounded Transparent Card:
     modes:
         dark:
@@ -665,7 +734,7 @@ Material Rounded Transparent Card:
             disabled-text-color: rgba(255, 255, 255, 0.5)
             sidebar-selected-text-color: rgb(214, 215, 219)
             lovelace-background: rgb(19, 19, 20)
-            primary-background-color: rgb(30, 31, 32)
+            navbar-background: rgb(30, 31, 32)
             secondary-background-color: rgb(40, 42, 46)
             disabled-color: rgb(0, 0, 0)
             input-background-color: rgb(46, 48, 56)
@@ -686,7 +755,7 @@ Material Rounded Transparent Card:
             disabled-text-color: rgb(128, 128, 128)
             sidebar-selected-text-color: rgb(41, 40, 36)
             lovelace-background: rgb(255, 255, 255)
-            primary-background-color: rgb(240, 244, 250)
+            navbar-background: rgb(240, 244, 250)
             secondary-background-color: rgb(215, 213, 209)
             disabled-color: rgb(173, 176, 174)
             input-background-color: rgb(234, 234, 235)
@@ -726,9 +795,10 @@ Material Rounded Transparent Card:
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
+    primary-background-color: var(--navbar-background)
     dark-primary-color: var(--primary-color)
     light-primary-color: var(--primary-color)
-    divider-color: var(--primary-background-color)
+    divider-color: var(--navbar-background)
     scrollbar-thumb-color: rgb(46, 48, 56)
     mdc-theme-primary: var(--primary-color)
     mdc-theme-on-primary: var(--accent-color)
@@ -743,7 +813,7 @@ Material Rounded Transparent Card:
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
-    sidebar-background-color: var(--primary-background-color)
+    sidebar-background-color: var(--navbar-background)
 
     # Cards
     border-radius: 28px
@@ -793,7 +863,7 @@ Material Rounded Transparent Card:
     mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
 
     # Editor
-    code-editor-background-color: var(--primary-background-color)
+    code-editor-background-color: var(--navbar-background)
     codemirror-meta: var(--primary-text-color)
     codemirror-property: var(--primary-color)
     codemirror-atom: var(--codemirror-property)
@@ -811,6 +881,73 @@ Material Rounded Transparent Card:
     link-text-color: rgb(0, 86, 207)
 
     card-mod-theme: Material Rounded
+    card-mod-more-info-yaml: |
+        .: |
+          /* Material You */
+          {%- macro hex2hsl(hex) -%}
+              {# https://gist.github.com/mjackson/5311256 #}
+              {%- if hex[0] == "#" -%}
+              {%- set hex = hex[1:] -%}
+              {%- endif -%}
+              {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}
+              {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}
+              {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}
+              {%- set rgb_max = [r, g, b] | max -%}
+              {%- set rgb_min = [r, g, b] | min -%}
+              {%- set h = 0 -%}
+              {%- set s = 0 -%}
+              {%- set l = (rgb_max + rgb_min) / 2 -%}
+              {%- if rgb_max != rgb_min -%}
+                {%- set d = rgb_max - rgb_min -%}
+                {%- set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) -%}
+                {%- if r == rgb_max -%}
+                  {%- set h = (g - b) / d + (6 if g < b else 0) -%}
+                {%- elif g == rgb_max -%}
+                  {%- set h = (b - r) / d + 2 -%}
+                {%- elif b == rgb_max -%}
+                  {%- set h = (r - g) / d + 4 -%}
+                {%- endif -%}
+                {%- set h = h / 6 -%}
+              {%- endif -%}
+              {%- set h = (h * 360) | int -%}
+              {%- set s = (s * 100) | int -%}
+              {%- set l = (l * 100) | int -%}
+              {{ h }},{{ s }},{{ l }}
+          {%- endmacro -%}
+          {%- set id = "_" + user | lower | replace(" ","_") -%}
+          {%- set base_color = "" -%}
+          * {
+            {%- if has_value("sensor.material_rounded_base_color" + id) -%}
+            {%- set base_color = states("sensor.material_rounded_base_color" + id) -%}
+            {%- elif has_value("sensor.material_rounded_base_color") -%}
+            {%- set base_color = states("sensor.material_rounded_base_color") -%}
+            {%- endif -%}
+            {%- if (base_color | length) -%}
+            {%- set hsl = hex2hsl(base_color).split(',') -%}
+            --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--accent-luminance));
+            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--primary-luminance));
+            --text-primary-color: var(--accent-color);
+            --text-accent-color: var(--primary-color);
+            --text-light-primary-color: var(--accent-color);
+            --rgb-primary-text-color: var(--primary-text-color);
+            --dark-primary-color: var(--primary-color);
+            --light-primary-color: var(--primary-color);
+            --mdc-theme-primary: var(--primary-color);
+            --mdc-theme-on-primary: var(--accent-color);
+            --mdc-theme-secondary: var(--primary-color);
+            --mdc-theme-on-secondary: var(--accent-color);
+            --paper-slider-knob-color: var(--primary-color);
+            --paper-slider-knob-start-color: var(--paper-slider-knob-color);
+            --paper-slider-pin-color: var(--paper-slider-knob-color);
+            --paper-slider-active-color: var(--paper-slider-knob-color);
+            --paper-slider-secondary-color: var(--light-primary-color);
+            --switch-checked-button-color: var(--primary-color);
+            --switch-checked-track-color: var(--switch-checked-button-color);
+            --input-hover-line-color: var(--primary-color);
+            --codemirror-property: var(--primary-color);
+            --codemirror-atom: var(--codemirror-property);
+            {%- endif -%}
+          }
     card-background-color: var(--lovelace-background)
 Material Rounded Transparent Card No Mod:
     modes:
@@ -828,7 +965,7 @@ Material Rounded Transparent Card No Mod:
             disabled-text-color: rgba(255, 255, 255, 0.5)
             sidebar-selected-text-color: rgb(214, 215, 219)
             lovelace-background: rgb(19, 19, 20)
-            primary-background-color: rgb(30, 31, 32)
+            navbar-background: rgb(30, 31, 32)
             secondary-background-color: rgb(40, 42, 46)
             disabled-color: rgb(0, 0, 0)
             input-background-color: rgb(46, 48, 56)
@@ -849,7 +986,7 @@ Material Rounded Transparent Card No Mod:
             disabled-text-color: rgb(128, 128, 128)
             sidebar-selected-text-color: rgb(41, 40, 36)
             lovelace-background: rgb(255, 255, 255)
-            primary-background-color: rgb(240, 244, 250)
+            navbar-background: rgb(240, 244, 250)
             secondary-background-color: rgb(215, 213, 209)
             disabled-color: rgb(173, 176, 174)
             input-background-color: rgb(234, 234, 235)
@@ -889,9 +1026,10 @@ Material Rounded Transparent Card No Mod:
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
+    primary-background-color: var(--lovelace-background)
     dark-primary-color: var(--primary-color)
     light-primary-color: var(--primary-color)
-    divider-color: var(--primary-background-color)
+    divider-color: var(--navbar-background)
     scrollbar-thumb-color: rgb(46, 48, 56)
     mdc-theme-primary: var(--primary-color)
     mdc-theme-on-primary: var(--accent-color)
@@ -899,14 +1037,14 @@ Material Rounded Transparent Card No Mod:
     mdc-theme-on-secondary: var(--accent-color)
 
     # Navbar
-    app-header-background-color: var(--primary-background-color)
+    app-header-background-color: var(--navbar-background)
     app-header-text-color: var(--primary-text-color)
     app-header-edit-text-color: var(--app-header-text-color)
     app-header-edit-background-color: var(--app-header-background-color)
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
-    sidebar-background-color: var(--primary-background-color)
+    sidebar-background-color: var(--navbar-background)
 
     # Cards
     border-radius: 28px
@@ -956,7 +1094,7 @@ Material Rounded Transparent Card No Mod:
     mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
 
     # Editor
-    code-editor-background-color: var(--primary-background-color)
+    code-editor-background-color: var(--navbar-background)
     codemirror-meta: var(--primary-text-color)
     codemirror-property: var(--primary-color)
     codemirror-atom: var(--codemirror-property)
@@ -973,4 +1111,71 @@ Material Rounded Transparent Card No Mod:
     hacs-error-color: rgb(182 46 95)
     link-text-color: rgb(0, 86, 207)
 
+    card-mod-more-info-yaml: |
+        .: |
+          /* Material You */
+          {%- macro hex2hsl(hex) -%}
+              {# https://gist.github.com/mjackson/5311256 #}
+              {%- if hex[0] == "#" -%}
+              {%- set hex = hex[1:] -%}
+              {%- endif -%}
+              {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}
+              {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}
+              {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}
+              {%- set rgb_max = [r, g, b] | max -%}
+              {%- set rgb_min = [r, g, b] | min -%}
+              {%- set h = 0 -%}
+              {%- set s = 0 -%}
+              {%- set l = (rgb_max + rgb_min) / 2 -%}
+              {%- if rgb_max != rgb_min -%}
+                {%- set d = rgb_max - rgb_min -%}
+                {%- set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) -%}
+                {%- if r == rgb_max -%}
+                  {%- set h = (g - b) / d + (6 if g < b else 0) -%}
+                {%- elif g == rgb_max -%}
+                  {%- set h = (b - r) / d + 2 -%}
+                {%- elif b == rgb_max -%}
+                  {%- set h = (r - g) / d + 4 -%}
+                {%- endif -%}
+                {%- set h = h / 6 -%}
+              {%- endif -%}
+              {%- set h = (h * 360) | int -%}
+              {%- set s = (s * 100) | int -%}
+              {%- set l = (l * 100) | int -%}
+              {{ h }},{{ s }},{{ l }}
+          {%- endmacro -%}
+          {%- set id = "_" + user | lower | replace(" ","_") -%}
+          {%- set base_color = "" -%}
+          * {
+            {%- if has_value("sensor.material_rounded_base_color" + id) -%}
+            {%- set base_color = states("sensor.material_rounded_base_color" + id) -%}
+            {%- elif has_value("sensor.material_rounded_base_color") -%}
+            {%- set base_color = states("sensor.material_rounded_base_color") -%}
+            {%- endif -%}
+            {%- if (base_color | length) -%}
+            {%- set hsl = hex2hsl(base_color).split(',') -%}
+            --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--accent-luminance));
+            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--primary-luminance));
+            --text-primary-color: var(--accent-color);
+            --text-accent-color: var(--primary-color);
+            --text-light-primary-color: var(--accent-color);
+            --rgb-primary-text-color: var(--primary-text-color);
+            --dark-primary-color: var(--primary-color);
+            --light-primary-color: var(--primary-color);
+            --mdc-theme-primary: var(--primary-color);
+            --mdc-theme-on-primary: var(--accent-color);
+            --mdc-theme-secondary: var(--primary-color);
+            --mdc-theme-on-secondary: var(--accent-color);
+            --paper-slider-knob-color: var(--primary-color);
+            --paper-slider-knob-start-color: var(--paper-slider-knob-color);
+            --paper-slider-pin-color: var(--paper-slider-knob-color);
+            --paper-slider-active-color: var(--paper-slider-knob-color);
+            --paper-slider-secondary-color: var(--light-primary-color);
+            --switch-checked-button-color: var(--primary-color);
+            --switch-checked-track-color: var(--switch-checked-button-color);
+            --input-hover-line-color: var(--primary-color);
+            --codemirror-property: var(--primary-color);
+            --codemirror-atom: var(--codemirror-property);
+            {%- endif -%}
+          }
     card-background-color: var(--lovelace-background)
