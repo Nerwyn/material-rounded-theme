@@ -517,7 +517,7 @@ Material You:
             disabled-text-color: rgba(255, 255, 255, 0.5)
             sidebar-selected-text-color: rgb(214, 215, 219)
             lovelace-background: hsl(calc(var(--hue) + 11), 30%, 8%)
-            navbar-background: hsl(calc(var(--hue) + 10), 26%, 14%)
+            navbar-background: hsl(calc(var(--hue) + 11), 19%, 14%)
             secondary-background-color: hsl(calc(var(--hue) + 7), 26%, 14%)
             disabled-color: rgb(0, 0, 0)
             input-background-color: hsl(calc(var(--hue) + 11), 30%, 8%)
@@ -721,7 +721,7 @@ Material You:
             --secondary-text-color: hsl(calc(var(--hue) + 18), 33%, 91%);
             --sidebar-selected-text-color: rgb(214, 215, 219);
             --lovelace-background: hsl(calc(var(--hue) + 11), 30%, 8%);
-            --navbar-background: hsl(calc(var(--hue) + 10), 26%, 14%);
+            --navbar-background: hsl(calc(var(--hue) + 11), 19%, 14%);
             --secondary-background-color: hsl(calc(var(--hue) + 7), 26%, 14%);
             --input-background-color: hsl(calc(var(--hue) + 11), 30%, 8%);
             --card-background-color: hsl(calc(var(--hue) + 10), 26%, 14%);
@@ -853,7 +853,7 @@ Material You:
             --secondary-text-color: hsl(calc(var(--hue) + 18), 33%, 91%);
             --sidebar-selected-text-color: rgb(214, 215, 219);
             --lovelace-background: hsl(calc(var(--hue) + 11), 30%, 8%);
-            --navbar-background: hsl(calc(var(--hue) + 10), 26%, 14%);
+            --navbar-background: hsl(calc(var(--hue) + 11), 19%, 14%);
             --secondary-background-color: hsl(calc(var(--hue) + 7), 26%, 14%);
             --input-background-color: hsl(calc(var(--hue) + 11), 30%, 8%);
             --card-background-color: hsl(calc(var(--hue) + 10), 26%, 14%);
