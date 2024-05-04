@@ -12,7 +12,7 @@ Material Rounded:
             disabled-text-color: rgba(255, 255, 255, 0.5)
             sidebar-selected-text-color: rgb(214, 215, 219)
             lovelace-background: rgb(19, 19, 20)
-            primary-background-color: rgb(30, 31, 32)
+            navbar-background: rgb(30, 31, 32)
             secondary-background-color: rgb(40, 42, 46)
             disabled-color: rgb(0, 0, 0)
             input-background-color: rgb(46, 48, 56)
@@ -31,7 +31,7 @@ Material Rounded:
             disabled-text-color: rgb(128, 128, 128)
             sidebar-selected-text-color: rgb(41, 40, 36)
             lovelace-background: rgb(255, 255, 255)
-            primary-background-color: rgb(240, 244, 250)
+            navbar-background: rgb(240, 244, 250)
             secondary-background-color: rgb(215, 213, 209)
             disabled-color: rgb(173, 176, 174)
             input-background-color: rgb(234, 234, 235)
@@ -71,9 +71,10 @@ Material Rounded:
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
+    primary-background-color: var(--navbar-background)
     dark-primary-color: var(--primary-color)
     light-primary-color: var(--primary-color)
-    divider-color: var(--primary-background-color)
+    divider-color: var(--navbar-background)
     scrollbar-thumb-color: rgb(46, 48, 56)
     mdc-theme-primary: var(--primary-color)
     mdc-theme-on-primary: var(--accent-color)
@@ -88,7 +89,7 @@ Material Rounded:
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
-    sidebar-background-color: var(--primary-background-color)
+    sidebar-background-color: var(--navbar-background)
 
     # Cards
     border-radius: 28px
@@ -138,7 +139,7 @@ Material Rounded:
     mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
 
     # Editor
-    code-editor-background-color: var(--primary-background-color)
+    code-editor-background-color: var(--navbar-background)
     codemirror-meta: var(--primary-text-color)
     codemirror-property: var(--primary-color)
     codemirror-atom: var(--codemirror-property)
@@ -163,7 +164,7 @@ Material Rounded:
             top: unset !important;
             bottom: 0 !important;
             height: var(--footer-height) !important;
-            background-color: var(--primary-background-color) !important;
+            background-color: var(--navbar-background) !important;
             --mdc-icon-button-size: 32px;
           }
 
@@ -367,7 +368,7 @@ Material Rounded No Mod:
             disabled-text-color: rgba(255, 255, 255, 0.5)
             sidebar-selected-text-color: rgb(214, 215, 219)
             lovelace-background: rgb(19, 19, 20)
-            primary-background-color: rgb(30, 31, 32)
+            navbar-background: rgb(30, 31, 32)
             secondary-background-color: rgb(40, 42, 46)
             disabled-color: rgb(0, 0, 0)
             input-background-color: rgb(46, 48, 56)
@@ -386,7 +387,7 @@ Material Rounded No Mod:
             disabled-text-color: rgb(128, 128, 128)
             sidebar-selected-text-color: rgb(41, 40, 36)
             lovelace-background: rgb(255, 255, 255)
-            primary-background-color: rgb(240, 244, 250)
+            navbar-background: rgb(240, 244, 250)
             secondary-background-color: rgb(215, 213, 209)
             disabled-color: rgb(173, 176, 174)
             input-background-color: rgb(234, 234, 235)
@@ -426,9 +427,10 @@ Material Rounded No Mod:
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
+    primary-background-color: var(--lovelace-background)
     dark-primary-color: var(--primary-color)
     light-primary-color: var(--primary-color)
-    divider-color: var(--primary-background-color)
+    divider-color: var(--navbar-background)
     scrollbar-thumb-color: rgb(46, 48, 56)
     mdc-theme-primary: var(--primary-color)
     mdc-theme-on-primary: var(--accent-color)
@@ -436,14 +438,14 @@ Material Rounded No Mod:
     mdc-theme-on-secondary: var(--accent-color)
 
     # Navbar
-    app-header-background-color: var(--primary-background-color)
+    app-header-background-color: var(--navbar-background)
     app-header-text-color: var(--primary-text-color)
     app-header-edit-text-color: var(--app-header-text-color)
     app-header-edit-background-color: var(--app-header-background-color)
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
-    sidebar-background-color: var(--primary-background-color)
+    sidebar-background-color: var(--navbar-background)
 
     # Cards
     border-radius: 28px
@@ -493,7 +495,7 @@ Material Rounded No Mod:
     mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
 
     # Editor
-    code-editor-background-color: var(--primary-background-color)
+    code-editor-background-color: var(--navbar-background)
     codemirror-meta: var(--primary-text-color)
     codemirror-property: var(--primary-color)
     codemirror-atom: var(--codemirror-property)
@@ -524,7 +526,7 @@ Material Rounded Transparent Card:
             disabled-text-color: rgba(255, 255, 255, 0.5)
             sidebar-selected-text-color: rgb(214, 215, 219)
             lovelace-background: rgb(19, 19, 20)
-            primary-background-color: rgb(30, 31, 32)
+            navbar-background: rgb(30, 31, 32)
             secondary-background-color: rgb(40, 42, 46)
             disabled-color: rgb(0, 0, 0)
             input-background-color: rgb(46, 48, 56)
@@ -543,7 +545,7 @@ Material Rounded Transparent Card:
             disabled-text-color: rgb(128, 128, 128)
             sidebar-selected-text-color: rgb(41, 40, 36)
             lovelace-background: rgb(255, 255, 255)
-            primary-background-color: rgb(240, 244, 250)
+            navbar-background: rgb(240, 244, 250)
             secondary-background-color: rgb(215, 213, 209)
             disabled-color: rgb(173, 176, 174)
             input-background-color: rgb(234, 234, 235)
@@ -583,9 +585,10 @@ Material Rounded Transparent Card:
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
+    primary-background-color: var(--navbar-background)
     dark-primary-color: var(--primary-color)
     light-primary-color: var(--primary-color)
-    divider-color: var(--primary-background-color)
+    divider-color: var(--navbar-background)
     scrollbar-thumb-color: rgb(46, 48, 56)
     mdc-theme-primary: var(--primary-color)
     mdc-theme-on-primary: var(--accent-color)
@@ -600,7 +603,7 @@ Material Rounded Transparent Card:
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
-    sidebar-background-color: var(--primary-background-color)
+    sidebar-background-color: var(--navbar-background)
 
     # Cards
     border-radius: 28px
@@ -650,7 +653,7 @@ Material Rounded Transparent Card:
     mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
 
     # Editor
-    code-editor-background-color: var(--primary-background-color)
+    code-editor-background-color: var(--navbar-background)
     codemirror-meta: var(--primary-text-color)
     codemirror-property: var(--primary-color)
     codemirror-atom: var(--codemirror-property)
@@ -683,7 +686,7 @@ Material Rounded Transparent Card No Mod:
             disabled-text-color: rgba(255, 255, 255, 0.5)
             sidebar-selected-text-color: rgb(214, 215, 219)
             lovelace-background: rgb(19, 19, 20)
-            primary-background-color: rgb(30, 31, 32)
+            navbar-background: rgb(30, 31, 32)
             secondary-background-color: rgb(40, 42, 46)
             disabled-color: rgb(0, 0, 0)
             input-background-color: rgb(46, 48, 56)
@@ -702,7 +705,7 @@ Material Rounded Transparent Card No Mod:
             disabled-text-color: rgb(128, 128, 128)
             sidebar-selected-text-color: rgb(41, 40, 36)
             lovelace-background: rgb(255, 255, 255)
-            primary-background-color: rgb(240, 244, 250)
+            navbar-background: rgb(240, 244, 250)
             secondary-background-color: rgb(215, 213, 209)
             disabled-color: rgb(173, 176, 174)
             input-background-color: rgb(234, 234, 235)
@@ -742,9 +745,10 @@ Material Rounded Transparent Card No Mod:
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
+    primary-background-color: var(--lovelace-background)
     dark-primary-color: var(--primary-color)
     light-primary-color: var(--primary-color)
-    divider-color: var(--primary-background-color)
+    divider-color: var(--navbar-background)
     scrollbar-thumb-color: rgb(46, 48, 56)
     mdc-theme-primary: var(--primary-color)
     mdc-theme-on-primary: var(--accent-color)
@@ -752,14 +756,14 @@ Material Rounded Transparent Card No Mod:
     mdc-theme-on-secondary: var(--accent-color)
 
     # Navbar
-    app-header-background-color: var(--primary-background-color)
+    app-header-background-color: var(--navbar-background)
     app-header-text-color: var(--primary-text-color)
     app-header-edit-text-color: var(--app-header-text-color)
     app-header-edit-background-color: var(--app-header-background-color)
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
-    sidebar-background-color: var(--primary-background-color)
+    sidebar-background-color: var(--navbar-background)
 
     # Cards
     border-radius: 28px
@@ -809,7 +813,7 @@ Material Rounded Transparent Card No Mod:
     mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
 
     # Editor
-    code-editor-background-color: var(--primary-background-color)
+    code-editor-background-color: var(--navbar-background)
     codemirror-meta: var(--primary-text-color)
     codemirror-property: var(--primary-color)
     codemirror-atom: var(--codemirror-property)
