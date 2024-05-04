@@ -50,7 +50,8 @@ Material Rounded:
     footer-height: 80px
 
     # Typography
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    font-family:
+        Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
         Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
     primary-font-family: var(--font-family)
     paper-font-common-base_-_font-family: var(--font-family)
@@ -89,7 +90,7 @@ Material Rounded:
     app-header-background-color: var(--lovelace-background)
     app-header-text-color: var(--primary-text-color)
     app-header-edit-text-color: var(--app-header-text-color)
-    app-header-edit-background-color: var(--app-header-background-color)
+    app-header-edit-background-color: var(--navbar-background)
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
@@ -405,12 +406,10 @@ Material Rounded:
             --mdc-icon-button-size: 48px;
           }
 
-          /* Fix view box to work with footer and add margins to sides */
+          /* Fix view box to work with footer*/
           #view {
             padding-top: 0 !important;
             padding-bottom: var(--footer-height) !important;
-            padding-left: 12px !important;
-            padding-right: 12px !important;
           }
 
           /* Fix view box when in edit mode */
@@ -420,6 +419,24 @@ Material Rounded:
             padding-left: 12px !important;
             padding-right: 12px !important;
             bottom: calc(2*var(--footer-height)) !important;
+          }
+
+          /* Add padding to sides */
+          hui-view {
+            padding-left: 12px !important;
+            padding-right: 12px !important;
+
+          }
+
+          /* Add curve to bottom left only on desktop layout */
+          @media (min-width: 871px) {
+            #view {
+              background: var(--navbar-background) !important;
+            }
+            hui-view {
+              background: var(--lovelace-background) !important;
+              border-radius: 0px 0px 0px 16px !important;
+            }
           }
 
         # Evenly space icons along entire length of toolbar
@@ -541,7 +558,8 @@ Material Rounded No Mod:
     footer-height: 80px
 
     # Typography
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    font-family:
+        Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
         Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
     primary-font-family: var(--font-family)
     paper-font-common-base_-_font-family: var(--font-family)
@@ -580,7 +598,7 @@ Material Rounded No Mod:
     app-header-background-color: var(--navbar-background)
     app-header-text-color: var(--primary-text-color)
     app-header-edit-text-color: var(--app-header-text-color)
-    app-header-edit-background-color: var(--app-header-background-color)
+    app-header-edit-background-color: var(--navbar-background)
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
@@ -770,7 +788,8 @@ Material Rounded Transparent Card:
     footer-height: 80px
 
     # Typography
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    font-family:
+        Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
         Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
     primary-font-family: var(--font-family)
     paper-font-common-base_-_font-family: var(--font-family)
@@ -809,7 +828,7 @@ Material Rounded Transparent Card:
     app-header-background-color: var(--lovelace-background)
     app-header-text-color: var(--primary-text-color)
     app-header-edit-text-color: var(--app-header-text-color)
-    app-header-edit-background-color: var(--app-header-background-color)
+    app-header-edit-background-color: var(--navbar-background)
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
@@ -1001,7 +1020,8 @@ Material Rounded Transparent Card No Mod:
     footer-height: 80px
 
     # Typography
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    font-family:
+        Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
         Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
     primary-font-family: var(--font-family)
     paper-font-common-base_-_font-family: var(--font-family)
@@ -1040,7 +1060,7 @@ Material Rounded Transparent Card No Mod:
     app-header-background-color: var(--navbar-background)
     app-header-text-color: var(--primary-text-color)
     app-header-edit-text-color: var(--app-header-text-color)
-    app-header-edit-background-color: var(--app-header-background-color)
+    app-header-edit-background-color: var(--navbar-background)
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
@@ -1110,72 +1130,3 @@ Material Rounded Transparent Card No Mod:
     hacs-new-color: rgb(27 153 123)
     hacs-error-color: rgb(182 46 95)
     link-text-color: rgb(0, 86, 207)
-
-    card-mod-more-info-yaml: |
-        .: |
-          /* Material You */
-          {%- macro hex2hsl(hex) -%}
-              {# https://gist.github.com/mjackson/5311256 #}
-              {%- if hex[0] == "#" -%}
-              {%- set hex = hex[1:] -%}
-              {%- endif -%}
-              {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}
-              {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}
-              {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}
-              {%- set rgb_max = [r, g, b] | max -%}
-              {%- set rgb_min = [r, g, b] | min -%}
-              {%- set h = 0 -%}
-              {%- set s = 0 -%}
-              {%- set l = (rgb_max + rgb_min) / 2 -%}
-              {%- if rgb_max != rgb_min -%}
-                {%- set d = rgb_max - rgb_min -%}
-                {%- set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) -%}
-                {%- if r == rgb_max -%}
-                  {%- set h = (g - b) / d + (6 if g < b else 0) -%}
-                {%- elif g == rgb_max -%}
-                  {%- set h = (b - r) / d + 2 -%}
-                {%- elif b == rgb_max -%}
-                  {%- set h = (r - g) / d + 4 -%}
-                {%- endif -%}
-                {%- set h = h / 6 -%}
-              {%- endif -%}
-              {%- set h = (h * 360) | int -%}
-              {%- set s = (s * 100) | int -%}
-              {%- set l = (l * 100) | int -%}
-              {{ h }},{{ s }},{{ l }}
-          {%- endmacro -%}
-          {%- set id = "_" + user | lower | replace(" ","_") -%}
-          {%- set base_color = "" -%}
-          * {
-            {%- if has_value("sensor.material_rounded_base_color" + id) -%}
-            {%- set base_color = states("sensor.material_rounded_base_color" + id) -%}
-            {%- elif has_value("sensor.material_rounded_base_color") -%}
-            {%- set base_color = states("sensor.material_rounded_base_color") -%}
-            {%- endif -%}
-            {%- if (base_color | length) -%}
-            {%- set hsl = hex2hsl(base_color).split(',') -%}
-            --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--accent-luminance));
-            --primary-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--primary-luminance));
-            --text-primary-color: var(--accent-color);
-            --text-accent-color: var(--primary-color);
-            --text-light-primary-color: var(--accent-color);
-            --rgb-primary-text-color: var(--primary-text-color);
-            --dark-primary-color: var(--primary-color);
-            --light-primary-color: var(--primary-color);
-            --mdc-theme-primary: var(--primary-color);
-            --mdc-theme-on-primary: var(--accent-color);
-            --mdc-theme-secondary: var(--primary-color);
-            --mdc-theme-on-secondary: var(--accent-color);
-            --paper-slider-knob-color: var(--primary-color);
-            --paper-slider-knob-start-color: var(--paper-slider-knob-color);
-            --paper-slider-pin-color: var(--paper-slider-knob-color);
-            --paper-slider-active-color: var(--paper-slider-knob-color);
-            --paper-slider-secondary-color: var(--light-primary-color);
-            --switch-checked-button-color: var(--primary-color);
-            --switch-checked-track-color: var(--switch-checked-button-color);
-            --input-hover-line-color: var(--primary-color);
-            --codemirror-property: var(--primary-color);
-            --codemirror-atom: var(--codemirror-property);
-            {%- endif -%}
-          }
-    card-background-color: var(--lovelace-background)
