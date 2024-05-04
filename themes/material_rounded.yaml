@@ -490,11 +490,6 @@ Material Rounded No Mod:
         dark:
             accent-color: rgb(0, 74, 118)
             primary-color: rgb(194, 231, 254)
-<<<<<<< HEAD
-            accent-luminance: 27%
-            primary-luminance: 85%
-=======
->>>>>>> main
             state-icon-color: rgb(196, 199, 197)
             mdc-checkbox-unchecked-color: rgb(138, 140, 153)
             sidebar-icon-color: rgb(147, 149, 159)
@@ -529,124 +524,124 @@ Material Rounded No Mod:
             input-background-color: rgb(234, 234, 235)
             card-background-color: rgb(233, 238, 246)
 
-      # Spacings
-      horizontal-stack-card-margin: 0px 4px
-      vertical-stack-card-margin: 4px 0px
+    # Spacings
+    horizontal-stack-card-margin: 0px 4px
+    vertical-stack-card-margin: 4px 0px
 
-      # Sizes
-      paper-slider-height: 4px
-      footer-height: 80px
+    # Sizes
+    paper-slider-height: 4px
+    footer-height: 80px
 
-      # Typography
-      font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-          Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
-      primary-font-family: var(--font-family)
-      paper-font-common-base_-_font-family: var(--font-family)
-      paper-font-common-code_-_font-family: var(--font-family)
-      paper-font-body1_-_font-family: var(--font-family)
-      paper-font-subhead_-_font-family: var(--font-family)
-      paper-font-headline_-_font-family: var(--font-family)
-      paper-font-caption_-_font-family: var(--font-family)
-      paper-font-title_-_font-family: var(--font-family)
-      ha-card-header-font-family: var(--font-family)
-      mdc-typography-font-family: var(--font-family)
-      mdc-typography-button-font-family: var(--font-family)
-      mdc-typography-body1-font-family: var(--font-family)
-      mdc-typography-button-font-weight: var(--title-font-weight)
-      title-font-weight: 600
-      title-font-size: 28px
+    # Typography
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    primary-font-family: var(--font-family)
+    paper-font-common-base_-_font-family: var(--font-family)
+    paper-font-common-code_-_font-family: var(--font-family)
+    paper-font-body1_-_font-family: var(--font-family)
+    paper-font-subhead_-_font-family: var(--font-family)
+    paper-font-headline_-_font-family: var(--font-family)
+    paper-font-caption_-_font-family: var(--font-family)
+    paper-font-title_-_font-family: var(--font-family)
+    ha-card-header-font-family: var(--font-family)
+    mdc-typography-font-family: var(--font-family)
+    mdc-typography-button-font-family: var(--font-family)
+    mdc-typography-body1-font-family: var(--font-family)
+    mdc-typography-button-font-weight: var(--title-font-weight)
+    title-font-weight: 600
+    title-font-size: 28px
 
-      # Text
-      text-primary-color: var(--accent-color)
-      text-accent-color: var(--primary-color)
-      text-light-primary-color: var(--accent-color)
-      rgb-primary-text-color: var(--primary-text-color)
+    # Text
+    text-primary-color: var(--accent-color)
+    text-accent-color: var(--primary-color)
+    text-light-primary-color: var(--accent-color)
+    rgb-primary-text-color: var(--primary-text-color)
 
-      # Main interface colors
-      primary-background-color: var(--lovelace-background)
-      dark-primary-color: var(--primary-color)
-      light-primary-color: var(--primary-color)
-      divider-color: var(--navbar-background)
-      scrollbar-thumb-color: rgb(46, 48, 56)
-      mdc-theme-primary: var(--primary-color)
-      mdc-theme-on-primary: var(--accent-color)
-      mdc-theme-secondary: var(--primary-color)
-      mdc-theme-on-secondary: var(--accent-color)
+    # Main interface colors
+    primary-background-color: var(--lovelace-background)
+    dark-primary-color: var(--primary-color)
+    light-primary-color: var(--primary-color)
+    divider-color: var(--navbar-background)
+    scrollbar-thumb-color: rgb(46, 48, 56)
+    mdc-theme-primary: var(--primary-color)
+    mdc-theme-on-primary: var(--accent-color)
+    mdc-theme-secondary: var(--primary-color)
+    mdc-theme-on-secondary: var(--accent-color)
 
-      # Navbar
-      app-header-background-color: var(--navbar-background)
-      app-header-text-color: var(--primary-text-color)
-      app-header-edit-text-color: var(--app-header-text-color)
-      app-header-edit-background-color: var(--navbar-background)
+    # Navbar
+    app-header-background-color: var(--navbar-background)
+    app-header-text-color: var(--primary-text-color)
+    app-header-edit-text-color: var(--app-header-text-color)
+    app-header-edit-background-color: var(--navbar-background)
 
-      # Sidebar
-      sidebar-text-color: var(--sidebar-icon-color)
-      sidebar-background-color: var(--navbar-background)
+    # Sidebar
+    sidebar-text-color: var(--sidebar-icon-color)
+    sidebar-background-color: var(--navbar-background)
 
-      # Cards
-      border-radius: 28px
-      ha-card-background: var(--card-background-color)
-      ha-card-border-radius: var(--border-radius)
-      ha-card-border-color: rgba(0, 0, 0, 0)
-      ha-card-border-width: 0px
-      ha-card-border-style: none
-      ha-card-border: none
-      ha-card-box-shadow: none
-      ha-config-card-border-radius: 16px
-      paper-item-icon-color: var(--state-icon-color)
+    # Cards
+    border-radius: 28px
+    ha-card-background: var(--card-background-color)
+    ha-card-border-radius: var(--border-radius)
+    ha-card-border-color: rgba(0, 0, 0, 0)
+    ha-card-border-width: 0px
+    ha-card-border-style: none
+    ha-card-border: none
+    ha-card-box-shadow: none
+    ha-config-card-border-radius: 16px
+    paper-item-icon-color: var(--state-icon-color)
 
-      # Dialog
-      mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
+    # Dialog
+    mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
 
-      # Slider
-      paper-slider-knob-color: var(--primary-color)
-      paper-slider-knob-start-color: var(--paper-slider-knob-color)
-      paper-slider-pin-color: var(--paper-slider-knob-color)
-      paper-slider-active-color: var(--paper-slider-knob-color)
-      paper-slider-secondary-color: var(--light-primary-color)
+    # Slider
+    paper-slider-knob-color: var(--primary-color)
+    paper-slider-knob-start-color: var(--paper-slider-knob-color)
+    paper-slider-pin-color: var(--paper-slider-knob-color)
+    paper-slider-active-color: var(--paper-slider-knob-color)
+    paper-slider-secondary-color: var(--light-primary-color)
 
-      # Switch
-      switch-checked-button-color: var(--primary-color)
-      switch-checked-track-color: var(--switch-checked-button-color)
+    # Switch
+    switch-checked-button-color: var(--primary-color)
+    switch-checked-track-color: var(--switch-checked-button-color)
 
-      # Toggles
-      paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
-      paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
-      paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-      paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
-      mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
+    # Toggles
+    paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
+    paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
+    paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
+    paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
+    mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
 
-      # Text Fields an Dropdown
-      input-fill-color: var(--input-background-color)
-      input-ink-color: var(--primary-text-color)
-      input-label-ink-color: var(--primary-text-color)
-      input-disabled-fill-color: rgba(var(--input-background-color), 0.5)
-      input-disabled-ink-color: var(--disabled-text-color)
-      input-disabled-label-ink-color: var(--disabled-text-color)
-      input-idle-line-color: var(--background-color)
-      input-dropdown-icon-color: var(--secondary-text-color)
-      input-hover-line-color: var(--primary-color)
-      mdc-text-field-fill-color: var(--input-fill-color)
-      mdc-select-idle-line-color: var(--color-background-base)
-      mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
+    # Text Fields an Dropdown
+    input-fill-color: var(--input-background-color)
+    input-ink-color: var(--primary-text-color)
+    input-label-ink-color: var(--primary-text-color)
+    input-disabled-fill-color: rgba(var(--input-background-color), 0.5)
+    input-disabled-ink-color: var(--disabled-text-color)
+    input-disabled-label-ink-color: var(--disabled-text-color)
+    input-idle-line-color: var(--background-color)
+    input-dropdown-icon-color: var(--secondary-text-color)
+    input-hover-line-color: var(--primary-color)
+    mdc-text-field-fill-color: var(--input-fill-color)
+    mdc-select-idle-line-color: var(--color-background-base)
+    mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
 
-      # Editor
-      code-editor-background-color: var(--navbar-background)
-      codemirror-meta: var(--primary-text-color)
-      codemirror-property: var(--primary-color)
-      codemirror-atom: var(--codemirror-property)
-      codemirror-string: rgb(119 196 229)
-      codemirror-keyword: rgb(140 169 255)
-      codemirror-number: rgb(255 91 29)
+    # Editor
+    code-editor-background-color: var(--navbar-background)
+    codemirror-meta: var(--primary-text-color)
+    codemirror-property: var(--primary-color)
+    codemirror-atom: var(--codemirror-property)
+    codemirror-string: rgb(119 196 229)
+    codemirror-keyword: rgb(140 169 255)
+    codemirror-number: rgb(255 91 29)
 
-      # Switch
-      switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
-      switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
+    # Switch
+    switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
+    switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
 
-      # HACS
-      hacs-new-color: rgb(27 153 123)
-      hacs-error-color: rgb(182 46 95)
-      link-text-color: rgb(0, 86, 207)
+    # HACS
+    hacs-new-color: rgb(27 153 123)
+    hacs-error-color: rgb(182 46 95)
+    link-text-color: rgb(0, 86, 207)
 
 Material Rounded Transparent Card:
     modes:
