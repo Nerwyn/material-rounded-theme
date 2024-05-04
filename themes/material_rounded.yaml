@@ -787,6 +787,15 @@ Material You:
 
             {%- endif -%}
           }
+
+          /* Fix more-info background */
+          ha-dialog-header {
+            background: var(--navbar-background);
+          }
+          .content {
+            background: var(--navbar-background);
+          }
+
     card-mod-root-yaml: |
         .: |
           /* Material You */
