@@ -122,8 +122,8 @@ Material Rounded:
     paper-slider-secondary-color: var(--light-primary-color)
 
     # Switch
-    switch-checked-button-color: var(--accent-color)
-    switch-checked-track-color: var(--track-color)
+    switch-checked-button-color: var(--mdc-switch-checked-thumb-color)
+    switch-checked-track-color: var(--mdc-switch-checked-track-color)
     switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
     switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
 
@@ -557,8 +557,8 @@ Material Rounded No Mod:
     paper-slider-secondary-color: var(--light-primary-color)
 
     # Switch
-    switch-checked-button-color: var(--accent-color)
-    switch-checked-track-color: var(--track-color)
+    switch-checked-button-color: var(--mdc-switch-checked-thumb-color)
+    switch-checked-track-color: var(--mdc-switch-checked-track-color)
     switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
     switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
 
@@ -794,8 +794,8 @@ Material Rounded Transparent Card:
     paper-slider-secondary-color: var(--light-primary-color)
 
     # Switch
-    switch-checked-button-color: var(--accent-color)
-    switch-checked-track-color: var(--track-color)
+    switch-checked-button-color: var(--mdc-switch-checked-thumb-color)
+    switch-checked-track-color: var(--mdc-switch-checked-track-color)
     switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
     switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
 
@@ -1032,8 +1032,8 @@ Material Rounded Transparent Card No Mod:
     paper-slider-secondary-color: var(--light-primary-color)
 
     # Switch
-    switch-checked-button-color: var(--accent-color)
-    switch-checked-track-color: var(--track-color)
+    switch-checked-button-color: var(--mdc-switch-checked-thumb-color)
+    switch-checked-track-color: var(--mdc-switch-checked-track-color)
     switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
     switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
 
