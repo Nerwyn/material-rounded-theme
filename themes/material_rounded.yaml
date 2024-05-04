@@ -270,7 +270,7 @@ Material Rounded:
             --mdc-icon-button-size: 48px;
           }
 
-          /* Fix view box to work with footer and add margins to sides */
+          /* Fix view box to work with footer and add padding to sides */
           #view {
             padding-top: 0 !important;
             padding-bottom: var(--footer-height) !important;
