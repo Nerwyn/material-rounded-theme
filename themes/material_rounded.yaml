@@ -85,7 +85,7 @@ Material Rounded:
     app-header-background-color: var(--lovelace-background)
     app-header-text-color: var(--primary-text-color)
     app-header-edit-text-color: var(--app-header-text-color)
-    app-header-edit-background-color: var(--app-header-background-color)
+    app-header-edit-background-color: var(--navbar-background)
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
@@ -282,8 +282,6 @@ Material Rounded:
           .edit-mode > #view {
             padding-top: calc(2*var(--footer-height)) !important;
             padding-bottom: 0 !important;
-            padding-left: 12px !important;
-            padding-right: 12px !important;
             bottom: calc(2*var(--footer-height)) !important;
           }
 
@@ -441,7 +439,7 @@ Material Rounded No Mod:
     app-header-background-color: var(--navbar-background)
     app-header-text-color: var(--primary-text-color)
     app-header-edit-text-color: var(--app-header-text-color)
-    app-header-edit-background-color: var(--app-header-background-color)
+    app-header-edit-background-color: var(--navbar-background)
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
@@ -530,7 +528,7 @@ Material Rounded Transparent Card:
             secondary-background-color: rgb(40, 42, 46)
             disabled-color: rgb(0, 0, 0)
             input-background-color: rgb(46, 48, 56)
-            card-background-color: rgb(39, 42, 44)
+            card-background-color: var(--lovelace-background)
             state-inactive-color: rgb(72, 74, 78)
 
         light:
@@ -549,7 +547,7 @@ Material Rounded Transparent Card:
             secondary-background-color: rgb(215, 213, 209)
             disabled-color: rgb(173, 176, 174)
             input-background-color: rgb(234, 234, 235)
-            card-background-color: rgb(233, 238, 246)
+            card-background-color: var(--lovelace-background)
 
     # Spacings
     horizontal-stack-card-margin: 0px 4px
@@ -599,7 +597,7 @@ Material Rounded Transparent Card:
     app-header-background-color: var(--lovelace-background)
     app-header-text-color: var(--primary-text-color)
     app-header-edit-text-color: var(--app-header-text-color)
-    app-header-edit-background-color: var(--app-header-background-color)
+    app-header-edit-background-color: var(--navbar-background)
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
@@ -671,7 +669,6 @@ Material Rounded Transparent Card:
     link-text-color: rgb(0, 86, 207)
 
     card-mod-theme: Material Rounded
-    card-background-color: var(--lovelace-background)
 Material Rounded Transparent Card No Mod:
     modes:
         dark:
@@ -690,7 +687,7 @@ Material Rounded Transparent Card No Mod:
             secondary-background-color: rgb(40, 42, 46)
             disabled-color: rgb(0, 0, 0)
             input-background-color: rgb(46, 48, 56)
-            card-background-color: rgb(39, 42, 44)
+            card-background-color: var(--lovelace-background)
             state-inactive-color: rgb(72, 74, 78)
 
         light:
@@ -709,7 +706,7 @@ Material Rounded Transparent Card No Mod:
             secondary-background-color: rgb(215, 213, 209)
             disabled-color: rgb(173, 176, 174)
             input-background-color: rgb(234, 234, 235)
-            card-background-color: rgb(233, 238, 246)
+            card-background-color: var(--lovelace-background)
 
     # Spacings
     horizontal-stack-card-margin: 0px 4px
@@ -759,7 +756,7 @@ Material Rounded Transparent Card No Mod:
     app-header-background-color: var(--navbar-background)
     app-header-text-color: var(--primary-text-color)
     app-header-edit-text-color: var(--app-header-text-color)
-    app-header-edit-background-color: var(--app-header-background-color)
+    app-header-edit-background-color: var(--navbar-background)
 
     # Sidebar
     sidebar-text-color: var(--sidebar-icon-color)
@@ -830,4 +827,3 @@ Material Rounded Transparent Card No Mod:
     hacs-error-color: rgb(182 46 95)
     link-text-color: rgb(0, 86, 207)
 
-    card-background-color: var(--lovelace-background)

@@ -27,7 +27,8 @@ with open(theme_file_path, 'r') as f:
 	transparent = 'var(--lovelace-background)'
 	theme_file.pop(theme_title, None)
 	theme_file[theme_title] = copy.deepcopy(original_theme)
-	theme_file[theme_title]['card-background-color'] = transparent
+	theme_file[theme_title]['modes']['dark']['card-background-color'] = transparent
+	theme_file[theme_title]['modes']['light']['card-background-color'] = transparent
 	theme_file[theme_title]['ha-card-background'] = transparent
 	theme_file[theme_title]['ha-card-border-color'] = transparent
 	
@@ -38,7 +39,8 @@ with open(theme_file_path, 'r') as f:
 	del theme_file[theme_title]['card-mod-theme']
 	theme_file[theme_title]['app-header-background-color'] = 'var(--navbar-background)'
 	theme_file[theme_title]['primary-background-color'] = 'var(--lovelace-background)'
-	theme_file[theme_title]['card-background-color'] = transparent
+	theme_file[theme_title]['modes']['dark']['card-background-color'] = transparent
+	theme_file[theme_title]['modes']['light']['card-background-color'] = transparent
 	theme_file[theme_title]['ha-card-background'] = transparent
 	theme_file[theme_title]['ha-card-border-color'] = transparent
 
