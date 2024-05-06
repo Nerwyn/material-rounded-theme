@@ -20,6 +20,10 @@ Material Rounded:
             input-background-color: rgb(46, 48, 56)
             card-background-color: rgb(39, 42, 44)
             state-inactive-color: rgb(72, 74, 78)
+            mdc-switch-checked-thumb-color: var(--accent-color)
+            mdc-switch-checked-track-color: var(--primary-color)
+            mdc-switch-unchecked-button-color: rgb(140, 144, 159)
+            mdc-switch-unchecked-track-color: rgb(65, 71, 83)
 
         light:
             accent-color: rgb(194, 231, 254)
@@ -40,6 +44,10 @@ Material Rounded:
             disabled-color: rgb(173, 176, 174)
             input-background-color: rgb(234, 234, 235)
             card-background-color: rgb(233, 238, 246)
+            mdc-switch-checked-thumb-color: var(--lovelace-background)
+            mdc-switch-checked-track-color: rgb(0, 91, 191)
+            mdc-switch-unchecked-button-color: rgb(114, 119, 133)
+            mdc-switch-unchecked-track-color: rgb(222, 226, 242)
 
     # Spacings
     horizontal-stack-card-margin: 0px 4px
@@ -69,9 +77,9 @@ Material Rounded:
     title-font-size: 28px
 
     # Text
-    text-primary-color: var(--accent-color)
-    text-accent-color: var(--primary-color)
-    text-light-primary-color: var(--accent-color)
+    text-primary-color: var(--primary-text-color)
+    text-accent-color: var(--secondary-text-color)
+    text-light-primary-color: var(--primary-text-color)
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
@@ -118,8 +126,10 @@ Material Rounded:
     paper-slider-secondary-color: var(--light-primary-color)
 
     # Switch
-    switch-checked-button-color: var(--primary-color)
-    switch-checked-track-color: var(--switch-checked-button-color)
+    switch-checked-button-color: var(--mdc-switch-checked-thumb-color)
+    switch-checked-track-color: var(--mdc-switch-checked-track-color)
+    switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
+    switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
 
     # Toggles
     paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
@@ -150,10 +160,6 @@ Material Rounded:
     codemirror-string: rgb(119 196 229)
     codemirror-keyword: rgb(140 169 255)
     codemirror-number: rgb(255 91 29)
-
-    # Switch
-    switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
-    switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
 
     # HACS
     hacs-new-color: rgb(27 153 123)
@@ -498,6 +504,80 @@ Material Rounded:
           $: |
             ha-fab {
               bottom: calc(2*var(--footer-height) + 4px) !important;
+            }
+
+    # Material 3 toggles
+    card-mod-card-yaml: |
+        .: |
+          :host {
+            --switch-checked-button-color: var(--mdc-switch-checked-thumb-color);
+            --switch-checked-track-color: var(--mdc-switch-checked-track-color);
+            --switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color);
+            --switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color);
+          }
+        hui-entities-toggle$:
+          .: |
+            :host {
+              position: relative !important;
+              width: 40px !important;
+              left: -2px !important;
+              top: 5px !important;
+            }
+          ha-switch$: |
+            :host {
+              padding: 3px 5px !important;
+            }
+            .mdc-switch__track {
+              height: 24px !important;
+              width: 40px !important;
+              border-radius: 32px !important;
+              opacity: 1 !important;
+            }
+            .mdc-switch--checked > .mdc-switch__track {
+              opacity: 1 !important;
+            }
+            .mdc-switch__thumb-underlay {
+              top: -12px !important;
+              left: -12px !important;
+            }
+            .mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {
+              background-color: var(--mdc-switch-unchecked-button-color) !important;
+              height: 14px !important;
+              width: 14px !important;
+              border: none !important;
+            }
+            .mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {
+                --border-color: var(--mdc-switch-unchecked-button-color);
+                border: 2px solid gray !important;
+            }
+    card-mod-row-yaml: |
+        ha-entity-toggle$:
+          ha-switch$: |
+            :host {
+              padding: 3px 5px !important;
+            }
+            .mdc-switch__track {
+              height: 24px !important;
+              width: 40px !important;
+              border-radius: 32px !important;
+              opacity: 1 !important;
+            }
+            .mdc-switch--checked > .mdc-switch__track {
+              opacity: 1 !important;
+            }
+            .mdc-switch__thumb-underlay {
+              top: -12px !important;
+              left: -12px !important;
+            }
+            .mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {
+              background-color: var(--mdc-switch-unchecked-button-color) !important;
+              height: 14px !important;
+              width: 14px !important;
+              border: none !important;
+            }
+            .mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {
+                --border-color: var(--mdc-switch-unchecked-button-color);
+                border: 2px solid gray !important;
             }
 
 Material You:
@@ -1115,6 +1195,81 @@ Material You:
             ha-fab {
               bottom: calc(2*var(--footer-height) + 4px) !important;
             }
+
+    # Material 3 toggles
+    card-mod-card-yaml: |
+        .: |
+          :host {
+            --switch-checked-button-color: var(--mdc-switch-checked-thumb-color);
+            --switch-checked-track-color: var(--mdc-switch-checked-track-color);
+            --switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color);
+            --switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color);
+          }
+        hui-entities-toggle$:
+          .: |
+            :host {
+              position: relative !important;
+              width: 40px !important;
+              left: -2px !important;
+              top: 5px !important;
+            }
+          ha-switch$: |
+            :host {
+              padding: 3px 5px !important;
+            }
+            .mdc-switch__track {
+              height: 24px !important;
+              width: 40px !important;
+              border-radius: 32px !important;
+              opacity: 1 !important;
+            }
+            .mdc-switch--checked > .mdc-switch__track {
+              opacity: 1 !important;
+            }
+            .mdc-switch__thumb-underlay {
+              top: -12px !important;
+              left: -12px !important;
+            }
+            .mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {
+              background-color: var(--mdc-switch-unchecked-button-color) !important;
+              height: 14px !important;
+              width: 14px !important;
+              border: none !important;
+            }
+            .mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {
+                --border-color: var(--mdc-switch-unchecked-button-color);
+                border: 2px solid gray !important;
+            }
+    card-mod-row-yaml: |
+        ha-entity-toggle$:
+          ha-switch$: |
+            :host {
+              padding: 3px 5px !important;
+            }
+            .mdc-switch__track {
+              height: 24px !important;
+              width: 40px !important;
+              border-radius: 32px !important;
+              opacity: 1 !important;
+            }
+            .mdc-switch--checked > .mdc-switch__track {
+              opacity: 1 !important;
+            }
+            .mdc-switch__thumb-underlay {
+              top: -12px !important;
+              left: -12px !important;
+            }
+            .mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {
+              background-color: var(--mdc-switch-unchecked-button-color) !important;
+              height: 14px !important;
+              width: 14px !important;
+              border: none !important;
+            }
+            .mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {
+                --border-color: var(--mdc-switch-unchecked-button-color);
+                border: 2px solid gray !important;
+            }
+
 Material Rounded No Mod:
     modes:
         dark:
@@ -1137,6 +1292,10 @@ Material Rounded No Mod:
             input-background-color: rgb(46, 48, 56)
             card-background-color: rgb(39, 42, 44)
             state-inactive-color: rgb(72, 74, 78)
+            mdc-switch-checked-thumb-color: var(--accent-color)
+            mdc-switch-checked-track-color: var(--primary-color)
+            mdc-switch-unchecked-button-color: rgb(140, 144, 159)
+            mdc-switch-unchecked-track-color: rgb(65, 71, 83)
 
         light:
             accent-color: rgb(194, 231, 254)
@@ -1157,6 +1316,10 @@ Material Rounded No Mod:
             disabled-color: rgb(173, 176, 174)
             input-background-color: rgb(234, 234, 235)
             card-background-color: rgb(233, 238, 246)
+            mdc-switch-checked-thumb-color: var(--lovelace-background)
+            mdc-switch-checked-track-color: rgb(0, 91, 191)
+            mdc-switch-unchecked-button-color: rgb(114, 119, 133)
+            mdc-switch-unchecked-track-color: rgb(222, 226, 242)
 
     # Spacings
     horizontal-stack-card-margin: 0px 4px
@@ -1186,9 +1349,9 @@ Material Rounded No Mod:
     title-font-size: 28px
 
     # Text
-    text-primary-color: var(--accent-color)
-    text-accent-color: var(--primary-color)
-    text-light-primary-color: var(--accent-color)
+    text-primary-color: var(--primary-text-color)
+    text-accent-color: var(--secondary-text-color)
+    text-light-primary-color: var(--primary-text-color)
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
@@ -1235,8 +1398,10 @@ Material Rounded No Mod:
     paper-slider-secondary-color: var(--light-primary-color)
 
     # Switch
-    switch-checked-button-color: var(--primary-color)
-    switch-checked-track-color: var(--switch-checked-button-color)
+    switch-checked-button-color: var(--mdc-switch-checked-thumb-color)
+    switch-checked-track-color: var(--mdc-switch-checked-track-color)
+    switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
+    switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
 
     # Toggles
     paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
@@ -1268,10 +1433,6 @@ Material Rounded No Mod:
     codemirror-keyword: rgb(140 169 255)
     codemirror-number: rgb(255 91 29)
 
-    # Switch
-    switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
-    switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
-
     # HACS
     hacs-new-color: rgb(27 153 123)
     hacs-error-color: rgb(182 46 95)
@@ -1299,6 +1460,10 @@ Material Rounded Transparent Card:
             input-background-color: rgb(46, 48, 56)
             card-background-color: var(--lovelace-background)
             state-inactive-color: rgb(72, 74, 78)
+            mdc-switch-checked-thumb-color: var(--accent-color)
+            mdc-switch-checked-track-color: var(--primary-color)
+            mdc-switch-unchecked-button-color: rgb(140, 144, 159)
+            mdc-switch-unchecked-track-color: rgb(65, 71, 83)
 
         light:
             accent-color: rgb(194, 231, 254)
@@ -1319,6 +1484,10 @@ Material Rounded Transparent Card:
             disabled-color: rgb(173, 176, 174)
             input-background-color: rgb(234, 234, 235)
             card-background-color: var(--lovelace-background)
+            mdc-switch-checked-thumb-color: var(--lovelace-background)
+            mdc-switch-checked-track-color: rgb(0, 91, 191)
+            mdc-switch-unchecked-button-color: rgb(114, 119, 133)
+            mdc-switch-unchecked-track-color: rgb(222, 226, 242)
 
     # Spacings
     horizontal-stack-card-margin: 0px 4px
@@ -1348,9 +1517,9 @@ Material Rounded Transparent Card:
     title-font-size: 28px
 
     # Text
-    text-primary-color: var(--accent-color)
-    text-accent-color: var(--primary-color)
-    text-light-primary-color: var(--accent-color)
+    text-primary-color: var(--primary-text-color)
+    text-accent-color: var(--secondary-text-color)
+    text-light-primary-color: var(--primary-text-color)
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
@@ -1397,8 +1566,10 @@ Material Rounded Transparent Card:
     paper-slider-secondary-color: var(--light-primary-color)
 
     # Switch
-    switch-checked-button-color: var(--primary-color)
-    switch-checked-track-color: var(--switch-checked-button-color)
+    switch-checked-button-color: var(--mdc-switch-checked-thumb-color)
+    switch-checked-track-color: var(--mdc-switch-checked-track-color)
+    switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
+    switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
 
     # Toggles
     paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
@@ -1430,10 +1601,6 @@ Material Rounded Transparent Card:
     codemirror-keyword: rgb(140 169 255)
     codemirror-number: rgb(255 91 29)
 
-    # Switch
-    switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
-    switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
-
     # HACS
     hacs-new-color: rgb(27 153 123)
     hacs-error-color: rgb(182 46 95)
@@ -1462,6 +1629,10 @@ Material Rounded Transparent Card No Mod:
             input-background-color: rgb(46, 48, 56)
             card-background-color: var(--lovelace-background)
             state-inactive-color: rgb(72, 74, 78)
+            mdc-switch-checked-thumb-color: var(--accent-color)
+            mdc-switch-checked-track-color: var(--primary-color)
+            mdc-switch-unchecked-button-color: rgb(140, 144, 159)
+            mdc-switch-unchecked-track-color: rgb(65, 71, 83)
 
         light:
             accent-color: rgb(194, 231, 254)
@@ -1482,6 +1653,10 @@ Material Rounded Transparent Card No Mod:
             disabled-color: rgb(173, 176, 174)
             input-background-color: rgb(234, 234, 235)
             card-background-color: var(--lovelace-background)
+            mdc-switch-checked-thumb-color: var(--lovelace-background)
+            mdc-switch-checked-track-color: rgb(0, 91, 191)
+            mdc-switch-unchecked-button-color: rgb(114, 119, 133)
+            mdc-switch-unchecked-track-color: rgb(222, 226, 242)
 
     # Spacings
     horizontal-stack-card-margin: 0px 4px
@@ -1511,9 +1686,9 @@ Material Rounded Transparent Card No Mod:
     title-font-size: 28px
 
     # Text
-    text-primary-color: var(--accent-color)
-    text-accent-color: var(--primary-color)
-    text-light-primary-color: var(--accent-color)
+    text-primary-color: var(--primary-text-color)
+    text-accent-color: var(--secondary-text-color)
+    text-light-primary-color: var(--primary-text-color)
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
@@ -1560,8 +1735,10 @@ Material Rounded Transparent Card No Mod:
     paper-slider-secondary-color: var(--light-primary-color)
 
     # Switch
-    switch-checked-button-color: var(--primary-color)
-    switch-checked-track-color: var(--switch-checked-button-color)
+    switch-checked-button-color: var(--mdc-switch-checked-thumb-color)
+    switch-checked-track-color: var(--mdc-switch-checked-track-color)
+    switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
+    switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
 
     # Toggles
     paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
@@ -1592,10 +1769,6 @@ Material Rounded Transparent Card No Mod:
     codemirror-string: rgb(119 196 229)
     codemirror-keyword: rgb(140 169 255)
     codemirror-number: rgb(255 91 29)
-
-    # Switch
-    switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
-    switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
 
     # HACS
     hacs-new-color: rgb(27 153 123)
