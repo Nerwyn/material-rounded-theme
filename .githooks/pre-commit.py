@@ -12,6 +12,8 @@ with open(theme_file_path, 'r') as f:
 	theme_file = yaml.load(f)
 	original_theme = copy.deepcopy(theme_file['Material Rounded'])
 	del original_theme['card-mod-root-yaml']
+	del original_theme['card-mod-card-yaml']
+	del original_theme['card-mod-row-yaml']
 
 	# Create a no mod version of theme with no card-mod
 	theme_title = 'Material Rounded No Mod'
