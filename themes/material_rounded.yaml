@@ -74,7 +74,7 @@ Material Rounded:
 
     # Text
     text-primary-color: var(--primary-text-color)
-    text-accent-color: var(--primary-color)
+    text-accent-color: var(--secondary-text-color)
     text-light-primary-color: var(--primary-text-color)
     rgb-primary-text-color: var(--primary-text-color)
 
@@ -509,7 +509,7 @@ Material Rounded No Mod:
 
     # Text
     text-primary-color: var(--primary-text-color)
-    text-accent-color: var(--primary-color)
+    text-accent-color: var(--secondary-text-color)
     text-light-primary-color: var(--primary-text-color)
     rgb-primary-text-color: var(--primary-text-color)
 
@@ -746,7 +746,7 @@ Material Rounded Transparent Card:
 
     # Text
     text-primary-color: var(--primary-text-color)
-    text-accent-color: var(--primary-color)
+    text-accent-color: var(--secondary-text-color)
     text-light-primary-color: var(--primary-text-color)
     rgb-primary-text-color: var(--primary-text-color)
 
@@ -984,7 +984,7 @@ Material Rounded Transparent Card No Mod:
 
     # Text
     text-primary-color: var(--primary-text-color)
-    text-accent-color: var(--primary-color)
+    text-accent-color: var(--secondary-text-color)
     text-light-primary-color: var(--primary-text-color)
     rgb-primary-text-color: var(--primary-text-color)
 
