@@ -73,9 +73,9 @@ Material Rounded:
     title-font-size: 28px
 
     # Text
-    text-primary-color: var(--accent-color)
+    text-primary-color: var(--primary-text-color)
     text-accent-color: var(--primary-color)
-    text-light-primary-color: var(--accent-color)
+    text-light-primary-color: var(--primary-text-color)
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
@@ -508,9 +508,9 @@ Material Rounded No Mod:
     title-font-size: 28px
 
     # Text
-    text-primary-color: var(--accent-color)
+    text-primary-color: var(--primary-text-color)
     text-accent-color: var(--primary-color)
-    text-light-primary-color: var(--accent-color)
+    text-light-primary-color: var(--primary-text-color)
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
@@ -745,9 +745,9 @@ Material Rounded Transparent Card:
     title-font-size: 28px
 
     # Text
-    text-primary-color: var(--accent-color)
+    text-primary-color: var(--primary-text-color)
     text-accent-color: var(--primary-color)
-    text-light-primary-color: var(--accent-color)
+    text-light-primary-color: var(--primary-text-color)
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
@@ -983,9 +983,9 @@ Material Rounded Transparent Card No Mod:
     title-font-size: 28px
 
     # Text
-    text-primary-color: var(--accent-color)
+    text-primary-color: var(--primary-text-color)
     text-accent-color: var(--primary-color)
-    text-light-primary-color: var(--accent-color)
+    text-light-primary-color: var(--primary-text-color)
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
