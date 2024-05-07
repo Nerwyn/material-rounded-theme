@@ -216,8 +216,7 @@ Material Rounded:
             {%- set hsl = hex2hsl(base_color).split(',') -%}
 
             --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--accent-luminance));
-            --text-primary-color: var(--accent-color);
-            --text-light-primary-color: var(--accent-color);
+            --text-light-primary-color: var(--text-primary-color);
             --mdc-theme-on-primary: var(--accent-color);
             --mdc-theme-on-secondary: var(--accent-color);
             --mdc-switch-checked-thumb-color: var(--accent-color);
@@ -296,8 +295,7 @@ Material Rounded:
             {%- set hsl = hex2hsl(base_color).split(',') -%}
             
             --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--accent-luminance));
-            --text-primary-color: var(--accent-color);
-            --text-light-primary-color: var(--accent-color);
+            --text-light-primary-color: var(--text-primary-color);
             --mdc-theme-on-primary: var(--accent-color);
             --mdc-theme-on-secondary: var(--accent-color);
             --mdc-switch-checked-thumb-color: var(--accent-color);
@@ -574,8 +572,7 @@ Material Rounded:
             {%- set hsl = hex2hsl(base_color).split(',') -%}
             
             --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--accent-luminance));
-            --text-primary-color: var(--accent-color);
-            --text-light-primary-color: var(--accent-color);
+            --text-light-primary-color: var(--text-primary-color);
             --mdc-theme-on-primary: var(--accent-color);
             --mdc-theme-on-secondary: var(--accent-color);
             --mdc-switch-checked-thumb-color: var(--accent-color);
@@ -690,8 +687,7 @@ Material Rounded:
             {%- set hsl = hex2hsl(base_color).split(',') -%}
             
             --accent-color: hsl({{ hsl[0] }},{{ hsl[1] }}%,var(--accent-luminance));
-            --text-primary-color: var(--accent-color);
-            --text-light-primary-color: var(--accent-color);
+            --text-light-primary-color: var(--text-primary-color);
             --mdc-theme-on-primary: var(--accent-color);
             --mdc-theme-on-secondary: var(--accent-color);
             --mdc-switch-checked-thumb-color: var(--accent-color);
@@ -832,9 +828,9 @@ Material You:
     title-font-size: 28px
 
     # Text
-    text-primary-color: var(--primary-text-color)
-    text-accent-color: var(--secondary-text-color)
-    text-light-primary-color: var(--primary-text-color)
+    text-primary-color: var(--lovelace-background)
+    text-accent-color: var(--primary-color)
+    text-light-primary-color: var(--text-primary-color)
     rgb-primary-text-color: var(--primary-text-color)
 
     # Main interface colors
@@ -990,9 +986,9 @@ Material You:
             --mdc-switch-unchecked-button-color: hsl(calc(var(--hue) + 16), 9%, 59%);
             --mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);
 
-            --text-primary-color: var(--accent-color);
+            --text-primary-color: var(--lovelace-background);
             --text-accent-color: var(--primary-color);
-            --text-light-primary-color: var(--accent-color);
+            --text-light-primary-color: var(--text-primary-color);
             --rgb-primary-text-color: var(--primary-text-color);
 
             --primary-background-color: var(--navbar-background);
@@ -1129,9 +1125,9 @@ Material You:
             --mdc-switch-unchecked-button-color: hsl(calc(var(--hue) + 16), 9%, 59%);
             --mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);
 
-            --text-primary-color: var(--accent-color);
+            --text-primary-color: var(--lovelace-background);
             --text-accent-color: var(--primary-color);
-            --text-light-primary-color: var(--accent-color);
+            --text-light-primary-color: var(--text-primary-color);
             --rgb-primary-text-color: var(--primary-text-color);
 
             --primary-background-color: var(--navbar-background);
@@ -1458,9 +1454,9 @@ Material You:
             --mdc-switch-unchecked-button-color: hsl(calc(var(--hue) + 16), 9%, 59%);
             --mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);
 
-            --text-primary-color: var(--accent-color);
+            --text-primary-color: var(--lovelace-background);
             --text-accent-color: var(--primary-color);
-            --text-light-primary-color: var(--accent-color);
+            --text-light-primary-color: var(--text-primary-color);
             --rgb-primary-text-color: var(--primary-text-color);
 
             --primary-background-color: var(--navbar-background);
@@ -1624,9 +1620,9 @@ Material You:
             --mdc-switch-unchecked-button-color: hsl(calc(var(--hue) + 16), 9%, 59%);
             --mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);
 
-            --text-primary-color: var(--accent-color);
+            --text-primary-color: var(--lovelace-background);
             --text-accent-color: var(--primary-color);
-            --text-light-primary-color: var(--accent-color);
+            --text-light-primary-color: var(--text-primary-color);
             --rgb-primary-text-color: var(--primary-text-color);
 
             --primary-background-color: var(--navbar-background);
