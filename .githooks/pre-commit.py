@@ -11,7 +11,7 @@ yaml.default_flow_style = False
 with open('./themes/material_rounded.yaml', 'w') as dist:
 	output = {}
 
-	# Load and build common card-mod resources
+	# Load common card-mod resources
 	context = {
 		'user_colors': {
 			'jinja': '{{ user_colors }}'
@@ -29,6 +29,7 @@ with open('./themes/material_rounded.yaml', 'w') as dist:
 			else:
 				context[name][file_type] = f.read()
 	
+	# Build Material You switches
 	context['row']['yaml']['ha-entity-toggle$']['ha-switch$'] = Template(context['row']
 		['yaml']['ha-entity-toggle$']['ha-switch$']).render(context)
 	context['card']['yaml']['hui-entities-toggle$']['.'] = Template(context['card']
@@ -36,7 +37,7 @@ with open('./themes/material_rounded.yaml', 'w') as dist:
 	context['card']['yaml']['hui-entities-toggle$']['ha-switch$'] = Template(context['card']
 		['yaml']['hui-entities-toggle$']['ha-switch$']).render(context)
 	
-
+	# Build common root templates
 	for common_template in [
 		'ha-tabs$',
 		'paper-tabs$',
@@ -52,12 +53,10 @@ with open('./themes/material_rounded.yaml', 'w') as dist:
 		context['root']['yaml'][common_template] = Template(
 			context['root']['yaml'][common_template]).render(context)
 	
-	# Material Rounded themes
 	with open('./src/material_rounded/material_rounded.yaml', 'r') as src:
 		# Create Material Rounded theme
 		theme_title = 'Material Rounded'
 		base_theme = yaml.load(src)[theme_title]
-		
 		output[theme_title] = copy.deepcopy(base_theme)
 
 		# Create a transparent card background version of theme
@@ -84,7 +83,7 @@ with open('./themes/material_rounded.yaml', 'w') as dist:
 		output['Material Rounded']['card-mod-theme'] = 'Material Rounded'
 		output['Material Rounded Transparent Card']['card-mod-theme'] = 'Material Rounded'
 
-		# Load Material Rounded user colors
+		# Load Material Rounded user colors code
 		with open('./src/material_rounded/user_colors.jinja') as f:
 			user_colors = {
 				**context,
@@ -93,12 +92,14 @@ with open('./themes/material_rounded.yaml', 'w') as dist:
 				},
 			}
 		
-		# Render templates that use user colors and set in themes
 		for element in ['row', 'card', 'root']:
+			# Render templates with Material You color information
 			element_yaml = {
 				**{ key: context[element]['yaml'][key] for key in context[element]['yaml'] },
 				'.': Template(context[element]['yaml']['.']).render(user_colors)
 			}
+
+			# Save template to buffer and then read to get yaml as string
 			buffer = StringIO()
 			yaml.dump(element_yaml, buffer)
 			output['Material Rounded'][f'card-mod-{element}-yaml'] = buffer.getvalue()
