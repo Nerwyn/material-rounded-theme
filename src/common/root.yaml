@@ -14,16 +14,16 @@ paper-tab$: |-
 
 # Edit mode Add Card position fixes
 hui-masonry-view$: |-
-  {{ add_card.css }}
+  {{ ha_fab.css }}
 hui-sidebar-view$: |-
-  {{ add_card.css }}
+  {{ ha_fab.css }}
 hui-panel-view$: |-
-  {{ add_card.css }}
+  {{ ha_fab.css }}
 masonry-layout$: |-
-  {{ add_card.css }}
+  {{ ha_fab.css }}
 horizontal-layout$: |-
-  {{ add_card.css }}
+  {{ ha_fab.css }}
 vertical-layout$: |-
-  {{ add_card.css }}
+  {{ ha_fab.css }}
 grid-layout$: |-
-  {{ add_card.css }}
+  {{ ha_fab.css }}

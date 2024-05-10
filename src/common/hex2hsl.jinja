@@ -26,12 +26,3 @@
   {%- set l = (l * 100) | int if l else 0 -%}
   {{ h }},{{ s }},{{ l }}
 {%- endmacro -%}
-
-{%- set id = "_" + user | lower | replace(" ","_") -%}
-{%- set base_color = "" -%}
-
-{%- if has_value("sensor.material_rounded_base_color" + id) -%}
-{%- set base_color = states("sensor.material_rounded_base_color" + id) -%}
-{%- elif has_value("sensor.material_rounded_base_color") -%}
-{%- set base_color = states("sensor.material_rounded_base_color") -%}
-{%- endif -%}
