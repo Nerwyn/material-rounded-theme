@@ -5,7 +5,7 @@ from jinja2 import Template
 from io import StringIO
 
 yaml = ruamel.yaml.YAML(typ='safe')
-yaml.width = 2048
+yaml.width = 4096
 yaml.default_flow_style = False
 
 with open('./themes/material_rounded.yaml', 'w') as dist:
