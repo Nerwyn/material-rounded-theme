@@ -26,4 +26,4 @@ horizontal-layout$: |-
 vertical-layout$: |-
   {{ add_card.css }}
 grid-layout$: |-
-  { add_card.css }}
+  {{ add_card.css }}
