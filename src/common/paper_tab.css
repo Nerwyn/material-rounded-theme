@@ -1,0 +1,13 @@
+/* Disable default ripple effect */
+paper-ripple {
+	display: none;
+}
+
+/* Align view icon */
+.tab-content {
+	display: inline-flex;
+	justify-content: space-evenly;
+	width: 100%;
+	position: relative;
+	top: 11px;
+}

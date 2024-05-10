@@ -4,95 +4,16 @@ Material Rounded:
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
-  card-mod-card-yaml: "# Material 3 toggles in header\n.: |\n    :host {\n      --switch-checked-button-color:
-    var(--mdc-switch-checked-thumb-color);\n      --switch-checked-track-color: var(--mdc-switch-checked-track-color);\n
-    \     --switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color);\n
-    \     --switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color);\n
-    \   }\nhui-entities-toggle$:\n    .: |\n        :host {\n          position: relative
-    !important;\n          width: 40px !important;\n          left: -2px !important;\n
-    \         top: 5px !important;\n        }\n    ha-switch$: |\n        :host {\n
-    \         padding: 3px 5px !important;\n        }\n        .mdc-switch__track
-    {\n          height: 24px !important;\n          width: 40px !important;\n          border-radius:
-    32px !important;\n          opacity: 1 !important;\n        }\n        .mdc-switch--checked
-    > .mdc-switch__track {\n          opacity: 1 !important;\n        }\n        .mdc-switch__thumb-underlay
-    {\n          top: -12px !important;\n          left: -12px !important;\n        }\n
-    \       .mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {\n          background-color:
-    var(--mdc-switch-unchecked-button-color) !important;\n          height: 14px !important;\n
-    \         width: 14px !important;\n          border: none !important;\n        }\n
-    \       .mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {\n            --border-color:
-    var(--mdc-switch-unchecked-button-color);\n            border: 2px solid gray
-    !important;\n        }\n"
-  card-mod-root-yaml: ".: |\n    /* Turn header toolbar into a footer */\n    .header
-    {\n      top: unset !important;\n      bottom: 0 !important;\n      height: var(--footer-height)
-    !important;\n      background-color: var(--navbar-background) !important;\n      --mdc-icon-button-size:
-    32px;\n    }\n\n    /* Modify toolbar height but only for card-mod version of
-    theme */\n    .toolbar {\n      height: var(--footer-height) !important;\n      padding:
-    0 !important;\n    }\n\n    /* Fix edit mode header height */\n    .edit-mode
-    > .header {\n      height: calc(2 * var(--footer-height)) !important;\n    }\n\n
-    \   /* Fix edit mode toolbar height */\n    paper-tabs {\n      height: 50%;\n
-    \   }\n\n    /* Remove default current view ripple */\n    ha-tabs,\n    paper-tabs
-    {\n      --paper-tabs-selection-bar-color: none !important;\n      margin: 0 !important;\n
-    \   }\n\n    /* Add background and color current view icon */\n    paper-tab.iron-selected
-    > ha-icon {\n      width: 100%;\n      max-width: 72px;\n      color: var(--primary-color);\n
-    \     background-color: var(--accent-color);\n      border-radius: 16px;\n    }\n\n
-    \   /* Prevent icon from shrinking on small width displays */\n    paper-tab >
-    ha-svg-icon {\n      min-width: 24px;\n    }\n\n    /* View icon transition and
-    display centering */\n    paper-tab > ha-icon {\n      width: 24px;\n      height:
-    32px;\n      display: inline-flex;\n      justify-content: center;\n      align-items:
-    center;\n      align-self: center;\n      transition: width 0.2s cubic-bezier(0.2,
-    0, 0, 1);\n    }\n\n    /* Display view tab contents vertically and set minimum
-    size */\n    paper-tab {\n      padding: 0;\n      display: inline-flex;\n      flex-direction:
-    column;\n      flex: 1;\n      justify-items: stretch;\n      min-width: min(calc((100vw
-    - 2 * var(--mdc-icon-button-size)) / 5), 72px);\n    }\n\n    /* Make edit mode
-    current view tab fit all buttons */\n    .edit-mode > .header > paper-tabs > paper-tab
-    {\n      min-width: fit-content;\n    }\n\n    /* Remove extra left padding from
-    edit view buttons */\n    .edit-icon {\n      padding-left: 0 !important;\n    }\n\n
-    \   /* Align edit mode add view button */\n    #add-view {\n      position: relative
-    !important;\n      top: 11px;\n    }\n\n    /* View label */\n    paper-tab::after
-    {\n      content: attr(aria-label);\n      text-transform: none;\n      text-align:
-    center;\n      position: relative;\n      font-weight: 500;\n      font-size:
-    min(3vw, 13px);\n      opacity: 0.8;\n      padding: 0px 1px;\n      max-width:
-    -webkit-fill-available;\n      max-width: -moz-available;\n      text-wrap: wrap;\n
-    \     overflow: hidden;\n      line-height: 14px;\n      height: 100%;\n      margin-top:
-    20px;\n    }\n\n    /* Make current view label opaque */\n    paper-tab.iron-selected::after
-    {\n      opacity: 1;\n    }\n\n    /* Restore icon size for subview back button
-    */\n    ha-icon-button-arrow-prev[slot='navigationIcon'] {\n      --mdc-icon-button-size:
-    48px;\n    }\n\n    /* Fix view box to work with footer and add padding to sides
-    */\n    #view {\n      padding-top: 0 !important;\n      padding-bottom: var(--footer-height)
-    !important;\n      padding-left: 12px !important;\n      padding-right: 12px !important;\n
-    \   }\n\n    /* Fix view box when in edit mode */\n    .edit-mode > #view {\n
-    \     padding-top: calc(2 * var(--footer-height)) !important;\n      padding-bottom:
-    0 !important;\n      bottom: calc(2 * var(--footer-height)) !important;\n    }\n\n#
-    Evenly space icons along entire length of toolbar\nha-tabs$: |\n    #tabsContent.scrollable
-    {\n      width: 100% !important;\n      display: flex !important;\n      justify-content:
-    space-between !important;\n    }\npaper-tabs$: |\n    #tabsContent.scrollable
-    {\n      width: 100% !important;\n      display: flex !important;\n      justify-content:
-    space-between !important;\n    }\n\npaper-tab$: |\n    /* Disable default ripple
-    effect */\n    paper-ripple {\n      display: none;\n    }\n\n    /* Align view
-    icon */\n    .tab-content {\n      display: inline-flex;\n      justify-content:
-    space-evenly;\n      width: 100%;\n      position: relative;\n      top: 11px;\n
-    \   }\n\n# Edit mode Add Card position fixes\nhui-masonry-view$: |\n    ha-fab
-    {\n      bottom: calc(2 * var(--footer-height) + 4px) !important;\n    }\nhui-sidebar-view$:
-    |\n    ha-fab {\n      bottom: calc(2 * var(--footer-height) + 4px) !important;\n
-    \   }\nhui-panel-view$: |\n    ha-fab {\n      bottom: calc(2 * var(--footer-height)
-    + 4px) !important;\n    }\nmasonry-layout$: |\n    ha-fab {\n      bottom: calc(2
-    * var(--footer-height) + 4px) !important;\n    }\nhorizontal-layout$: |\n    ha-fab
-    {\n      bottom: calc(2 * var(--footer-height) + 4px) !important;\n    }\nvertical-layout$:
-    |\n    ha-fab {\n      bottom: calc(2 * var(--footer-height) + 4px) !important;\n
-    \   }\ngrid-layout$: |\n    ha-fab {\n      bottom: calc(2 * var(--footer-height)
-    + 4px) !important;\n    }\n"
-  card-mod-row-yaml: "# Material 3 toggles in row\nha-entity-toggle$:\n    ha-switch$:
-    |\n        :host {\n          padding: 3px 5px !important;\n        }\n        .mdc-switch__track
-    {\n          height: 24px !important;\n          width: 40px !important;\n          border-radius:
-    32px !important;\n          opacity: 1 !important;\n        }\n        .mdc-switch--checked
-    > .mdc-switch__track {\n          opacity: 1 !important;\n        }\n        .mdc-switch__thumb-underlay
-    {\n          top: -12px !important;\n          left: -12px !important;\n        }\n
-    \       .mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {\n          background-color:
-    var(--mdc-switch-unchecked-button-color) !important;\n          height: 14px !important;\n
-    \         width: 14px !important;\n          border: none !important;\n        }\n
-    \       .mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {\n            --border-color:
-    var(--mdc-switch-unchecked-button-color);\n            border: 2px solid gray
-    !important;\n        }\n"
+  card-mod-card-yaml: ".: \"{# https://gist.github.com/mjackson/5311256 #}\\n{%- macro hex2hsl(hex) -%}\\n  {%- if hex[0] == \\\"#\\\" -%}\\n  {%- set hex = hex[1:] -%}\\n  {%- endif -%}\\n  {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}\\n  {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}\\n  {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}\\n  {%- set rgb_max = [r, g, b] | max -%}\\n  {%- set rgb_min = [r, g, b] | min -%}\\n  {%- set l = (rgb_max + rgb_min) / 2 -%}\\n  {%- if rgb_max != rgb_min -%}\\n    {%- set d = rgb_max - rgb_min -%}\\n    {%- set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) -%}\\n    {%- if r == rgb_max -%}\\n      {%- set h = (g - b) / d + (6 if g < b else 0) -%}\\n    {%- elif g == rgb_max -%}\\n      {%- set h = (b - r) / d + 2 -%}\\n    {%- elif b == rgb_max -%}\\n      {%- set h = (r - g) / d + 4 -%}\\n    {%- endif -%}\\n    {%- set h = h / 6 -%}\\n  {%- endif -%}\\n  {%- set h = (h * 360) | int if h else 0 -%}\\n  {%- set s = (s * 100) | int if s else 0 -%}\\n  {%- set l = (l * 100) | int if l else 0 -%}\\n  {{ h }},{{ s }},{{ l }}\\n{%- endmacro -%}\\n\\n{%- set id = \\\"_\\\" + user | lower | replace(\\\" \\\",\\\"_\\\") -%}\\n{%- set base_color = \\\"\\\" -%}\\n\\n{%- if has_value(\\\"sensor.material_rounded_base_color\\\" + id) -%}\\n{%- set base_color = states(\\\"sensor.material_rounded_base_color\\\" + id) -%}\\n{%- elif has_value(\\\"sensor.material_rounded_base_color\\\") -%}\\n{%- set base_color = states(\\\"sensor.material_rounded_base_color\\\") -%}\\n{%- endif -%}\\n* {\\n\\t{%- if (base_color | length) -%}\\n\\t{%- set hsl = hex2hsl(base_color).split(',') -%}\\n\\t\\n\\t--hue: {{ hsl[0] }};\\n\\t--saturation: {{ hsl[1] }}%;\\n\\t--luminance: {{ hsl[2] }}%;\\n\\n\\t--accent-color: hsl(var(--hue), var(--saturation), var(--accent-luminance));\\n\\t--text-light-primary-color: var(--text-primary-color);\\n\\t--mdc-theme-on-primary: var(--accent-color);\\n\\t--mdc-theme-on-secondary: var(--accent-color);\\n\\t--mdc-switch-checked-thumb-color: var(--accent-color);\\n\\t--mdc-switch-checked-track-color:
+    var(--primary-color);\\n\\t--mdc-switch-unchecked-button-color: hsl(calc(var(--hue)\n  + 16), 9%, 59%);\\n\\t--mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);\\n\\n\\t--primary-color: hsl(var(--hue), var(--saturation), var(--primary-luminance));\\n\\t--text-accent-color: var(--primary-color);\\n\\t--dark-primary-color: var(--primary-color);\\n\\t--light-primary-color: var(--primary-color);\\n\\t--mdc-theme-primary: var(--primary-color);\\n\\t--mdc-theme-secondary: var(--primary-color);\\n\\t--paper-slider-knob-color: var(--primary-color);\\n\\t--paper-slider-knob-start-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-pin-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-active-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-secondary-color: var(--light-primary-color);\\n\\t--switch-checked-button-color: var(--primary-color);\\n\\t--switch-checked-track-color: var(--switch-checked-button-color);\\n\\t--input-hover-line-color: var(--primary-color);\\n\\t--codemirror-property: var(--primary-color);\\n\\t--codemirror-atom: var(--codemirror-property);\\n\\t{%- endif -%}\\n\\n\\t--switch-checked-button-color: var(--mdc-switch-checked-thumb-color) !important;\\n\\t--switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;\\n\\t--switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color) !important;\\n\\t--switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;\\n}\"\nhui-entities-toggle$:\n  .: \"/* Correct Material 3 header toggle position */\\n:host {\\n\\tposition: relative !important;\\n\\twidth: 40px !important;\\n\\tleft: -2px !important;\\n\\ttop: 5px !important;\\n}\\n\"\n  ha-switch$: \"/* Material 3 Toggles */\\n:host {\\n\\tpadding: 3px 5px !important;\\n\\t--switch-checked-button-color: var(--mdc-switch-checked-thumb-color);\\n\\t--switch-checked-track-color: var(--mdc-switch-checked-track-color);\\n\\t--switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color);\\n\\t--switch-unchecked-track-color:
+    var(--mdc-switch-unchecked-track-color);\\n}\\n.mdc-switch__track {\\n\\theight: 24px !important;\\n\\twidth: 40px !important;\\n\\tborder-radius: 32px !important;\\n\\topacity: 1 !important;\\n}\\n.mdc-switch--checked > .mdc-switch__track {\\n\\topacity: 1 !important;\\n}\\n.mdc-switch__thumb-underlay {\\n\\ttop: -12px !important;\\n\\tleft: -12px !important;\\n}\\n.mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {\\n\\tbackground-color: var(--mdc-switch-unchecked-button-color) !important;\\n\\theight: 14px !important;\\n\\twidth: 14px !important;\\n\\tborder: none !important;\\n}\\n.mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {\\n\\tborder: 2px solid gray !important;\\n\\t--border-color: var(--mdc-switch-unchecked-button-color);\\n}\\n\"\n"
+  card-mod-root-yaml: ".: \"{# https://gist.github.com/mjackson/5311256 #}\\n{%- macro hex2hsl(hex) -%}\\n  {%- if hex[0] == \\\"#\\\" -%}\\n  {%- set hex = hex[1:] -%}\\n  {%- endif -%}\\n  {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}\\n  {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}\\n  {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}\\n  {%- set rgb_max = [r, g, b] | max -%}\\n  {%- set rgb_min = [r, g, b] | min -%}\\n  {%- set l = (rgb_max + rgb_min) / 2 -%}\\n  {%- if rgb_max != rgb_min -%}\\n    {%- set d = rgb_max - rgb_min -%}\\n    {%- set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) -%}\\n    {%- if r == rgb_max -%}\\n      {%- set h = (g - b) / d + (6 if g < b else 0) -%}\\n    {%- elif g == rgb_max -%}\\n      {%- set h = (b - r) / d + 2 -%}\\n    {%- elif b == rgb_max -%}\\n      {%- set h = (r - g) / d + 4 -%}\\n    {%- endif -%}\\n    {%- set h = h / 6 -%}\\n  {%- endif -%}\\n  {%- set h = (h * 360) | int if h else 0 -%}\\n  {%- set s = (s * 100) | int if s else 0 -%}\\n  {%- set l = (l * 100) | int if l else 0 -%}\\n  {{ h }},{{ s }},{{ l }}\\n{%- endmacro -%}\\n\\n{%- set id = \\\"_\\\" + user | lower | replace(\\\" \\\",\\\"_\\\") -%}\\n{%- set base_color = \\\"\\\" -%}\\n\\n{%- if has_value(\\\"sensor.material_rounded_base_color\\\" + id) -%}\\n{%- set base_color = states(\\\"sensor.material_rounded_base_color\\\" + id) -%}\\n{%- elif has_value(\\\"sensor.material_rounded_base_color\\\") -%}\\n{%- set base_color = states(\\\"sensor.material_rounded_base_color\\\") -%}\\n{%- endif -%}\\n* {\\n\\t{%- if (base_color | length) -%}\\n\\t{%- set hsl = hex2hsl(base_color).split(',') -%}\\n\\t\\n\\t--hue: {{ hsl[0] }};\\n\\t--saturation: {{ hsl[1] }}%;\\n\\t--luminance: {{ hsl[2] }}%;\\n\\n\\t--accent-color: hsl(var(--hue), var(--saturation), var(--accent-luminance));\\n\\t--text-light-primary-color: var(--text-primary-color);\\n\\t--mdc-theme-on-primary: var(--accent-color);\\n\\t--mdc-theme-on-secondary: var(--accent-color);\\n\\t--mdc-switch-checked-thumb-color: var(--accent-color);\\n\\t--mdc-switch-checked-track-color:
+    var(--primary-color);\\n\\t--mdc-switch-unchecked-button-color: hsl(calc(var(--hue)\n  + 16), 9%, 59%);\\n\\t--mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);\\n\\n\\t--primary-color: hsl(var(--hue), var(--saturation), var(--primary-luminance));\\n\\t--text-accent-color: var(--primary-color);\\n\\t--dark-primary-color: var(--primary-color);\\n\\t--light-primary-color: var(--primary-color);\\n\\t--mdc-theme-primary: var(--primary-color);\\n\\t--mdc-theme-secondary: var(--primary-color);\\n\\t--paper-slider-knob-color: var(--primary-color);\\n\\t--paper-slider-knob-start-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-pin-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-active-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-secondary-color: var(--light-primary-color);\\n\\t--switch-checked-button-color: var(--primary-color);\\n\\t--switch-checked-track-color: var(--switch-checked-button-color);\\n\\t--input-hover-line-color: var(--primary-color);\\n\\t--codemirror-property: var(--primary-color);\\n\\t--codemirror-atom: var(--codemirror-property);\\n\\t{%- endif -%}\\n\\n\\t--switch-checked-button-color: var(--mdc-switch-checked-thumb-color) !important;\\n\\t--switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;\\n\\t--switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color) !important;\\n\\t--switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;\\n}\\n/* Turn header toolbar into a footer */\\n.header {\\n\\ttop: unset !important;\\n\\tbottom: 0 !important;\\n\\theight: var(--footer-height) !important;\\n\\tbackground-color: var(--navbar-background) !important;\\n\\t--mdc-icon-button-size: 32px;\\n}\\n\\n/* Modify toolbar height but only for card-mod version of theme */\\n.toolbar {\\n\\theight: var(--footer-height) !important;\\n\\tpadding: 0 !important;\\n}\\n\\n/* Fix edit mode header height */\\n.edit-mode > .header {\\n\\theight: calc(2 * var(--footer-height)) !important;\\n}\\n\\n/* Fix edit
+    mode toolbar height */\\npaper-tabs {\\n\\theight: 50%;\\n}\\n\\n/* Remove default current view ripple */\\nha-tabs,\\npaper-tabs {\\n\\t--paper-tabs-selection-bar-color:\n  none !important;\\n\\tmargin: 0 !important;\\n}\\n\\n/* Add background and color current view icon */\\npaper-tab.iron-selected > ha-icon {\\n\\twidth: 100%;\\n\\tmax-width: 72px;\\n\\tcolor: var(--primary-color);\\n\\tbackground-color: var(--accent-color);\\n\\tborder-radius: 16px;\\n}\\n\\n/* Prevent icon from shrinking on small width displays */\\npaper-tab > ha-svg-icon {\\n\\tmin-width: 24px;\\n}\\n\\n/* View icon transition and display centering */\\npaper-tab > ha-icon {\\n\\twidth: 24px;\\n\\theight: 32px;\\n\\tdisplay: inline-flex;\\n\\tjustify-content: center;\\n\\talign-items: center;\\n\\talign-self: center;\\n\\ttransition: width 0.2s cubic-bezier(0.2, 0, 0, 1);\\n}\\n\\n/* Display view tab contents vertically and set minimum size */\\npaper-tab {\\n\\tpadding: 0;\\n\\tdisplay: inline-flex;\\n\\tflex-direction: column;\\n\\tflex: 1;\\n\\tjustify-items: stretch;\\n\\tmin-width: min(calc((100vw - 2 * var(--mdc-icon-button-size)) / 5), 72px);\\n}\\n\\n/* Make edit mode current view tab fit all buttons */\\n.edit-mode > .header > paper-tabs > paper-tab {\\n\\tmin-width: fit-content;\\n}\\n\\n/* Remove extra left padding from edit view buttons */\\n.edit-icon {\\n\\tpadding-left: 0 !important;\\n}\\n\\n/* Align edit mode add view button */\\n#add-view {\\n\\tposition: relative !important;\\n\\ttop: 11px;\\n}\\n\\n/* View label */\\npaper-tab::after {\\n\\tcontent: attr(aria-label);\\n\\ttext-transform: none;\\n\\ttext-align: center;\\n\\tposition: relative;\\n\\tfont-weight: 500;\\n\\tfont-size: min(3vw, 13px);\\n\\topacity: 0.8;\\n\\tpadding: 0px 1px;\\n\\tmax-width: -webkit-fill-available;\\n\\tmax-width: -moz-available;\\n\\ttext-wrap: wrap;\\n\\toverflow: hidden;\\n\\tline-height: 14px;\\n\\theight: 100%;\\n\\tmargin-top: 20px;\\n}\\n\\n/* Make current view label opaque */\\npaper-tab.iron-selected::after {\\n\\topacity: 1;\\n}\\n\\n/*
+    Restore icon size for subview back button */\\nha-icon-button-arrow-prev[slot='navigationIcon'] {\\n\\t--mdc-icon-button-size: 48px;\\n}\\n\\n/* Fix view box to work with footer and add padding to sides */\\n#view {\\n\\tpadding-top: 0 !important;\\n\\tpadding-bottom: var(--footer-height) !important;\\n\\tpadding-left:\n  12px !important;\\n\\tpadding-right: 12px !important;\\n}\\n\\n/* Fix view box when in edit mode */\\n.edit-mode > #view {\\n\\tpadding-top: calc(2 * var(--footer-height)) !important;\\n\\tpadding-bottom: 0 !important;\\n\\tbottom: calc(2 * var(--footer-height)) !important;\\n}\\n\"\ngrid-layout$: '{ add_card.css }}'\nha-tabs$: \"#tabsContent.scrollable {\\n\\twidth: 100% !important;\\n\\tdisplay: flex !important;\\n\\tjustify-content: space-between !important;\\n}\\n\"\nhorizontal-layout$: \"ha-fab {\\n\\tbottom: calc(2 * var(--footer-height) + 4px) !important;\\n}\\n\"\nhui-masonry-view$: \"ha-fab {\\n\\tbottom: calc(2 * var(--footer-height) + 4px) !important;\\n}\\n\"\nhui-panel-view$: \"ha-fab {\\n\\tbottom: calc(2 * var(--footer-height) + 4px) !important;\\n}\\n\"\nhui-sidebar-view$: \"ha-fab {\\n\\tbottom: calc(2 * var(--footer-height) + 4px) !important;\\n}\\n\"\nmasonry-layout$: \"ha-fab {\\n\\tbottom: calc(2 * var(--footer-height) + 4px) !important;\\n}\\n\"\npaper-tab$: \"/* Disable default ripple effect */\\npaper-ripple {\\n\\tdisplay: none;\\n}\\n\\n/* Align view icon */\\n.tab-content {\\n\\tdisplay: inline-flex;\\n\\tjustify-content: space-evenly;\\n\\twidth: 100%;\\n\\tposition: relative;\\n\\ttop: 11px;\\n}\\n\"\npaper-tabs$: \"#tabsContent.scrollable {\\n\\twidth: 100% !important;\\n\\tdisplay: flex !important;\\n\\tjustify-content: space-between !important;\\n}\\n\"\nvertical-layout$: \"ha-fab {\\n\\tbottom: calc(2 * var(--footer-height) + 4px) !important;\\n}\\n\"\n"
+  card-mod-row-yaml: ".: \"{# https://gist.github.com/mjackson/5311256 #}\\n{%- macro hex2hsl(hex) -%}\\n  {%- if hex[0] == \\\"#\\\" -%}\\n  {%- set hex = hex[1:] -%}\\n  {%- endif -%}\\n  {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}\\n  {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}\\n  {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}\\n  {%- set rgb_max = [r, g, b] | max -%}\\n  {%- set rgb_min = [r, g, b] | min -%}\\n  {%- set l = (rgb_max + rgb_min) / 2 -%}\\n  {%- if rgb_max != rgb_min -%}\\n    {%- set d = rgb_max - rgb_min -%}\\n    {%- set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) -%}\\n    {%- if r == rgb_max -%}\\n      {%- set h = (g - b) / d + (6 if g < b else 0) -%}\\n    {%- elif g == rgb_max -%}\\n      {%- set h = (b - r) / d + 2 -%}\\n    {%- elif b == rgb_max -%}\\n      {%- set h = (r - g) / d + 4 -%}\\n    {%- endif -%}\\n    {%- set h = h / 6 -%}\\n  {%- endif -%}\\n  {%- set h = (h * 360) | int if h else 0 -%}\\n  {%- set s = (s * 100) | int if s else 0 -%}\\n  {%- set l = (l * 100) | int if l else 0 -%}\\n  {{ h }},{{ s }},{{ l }}\\n{%- endmacro -%}\\n\\n{%- set id = \\\"_\\\" + user | lower | replace(\\\" \\\",\\\"_\\\") -%}\\n{%- set base_color = \\\"\\\" -%}\\n\\n{%- if has_value(\\\"sensor.material_rounded_base_color\\\" + id) -%}\\n{%- set base_color = states(\\\"sensor.material_rounded_base_color\\\" + id) -%}\\n{%- elif has_value(\\\"sensor.material_rounded_base_color\\\") -%}\\n{%- set base_color = states(\\\"sensor.material_rounded_base_color\\\") -%}\\n{%- endif -%}\\n* {\\n\\t{%- if (base_color | length) -%}\\n\\t{%- set hsl = hex2hsl(base_color).split(',') -%}\\n\\t\\n\\t--hue: {{ hsl[0] }};\\n\\t--saturation: {{ hsl[1] }}%;\\n\\t--luminance: {{ hsl[2] }}%;\\n\\n\\t--accent-color: hsl(var(--hue), var(--saturation), var(--accent-luminance));\\n\\t--text-light-primary-color: var(--text-primary-color);\\n\\t--mdc-theme-on-primary: var(--accent-color);\\n\\t--mdc-theme-on-secondary: var(--accent-color);\\n\\t--mdc-switch-checked-thumb-color: var(--accent-color);\\n\\t--mdc-switch-checked-track-color:
+    var(--primary-color);\\n\\t--mdc-switch-unchecked-button-color: hsl(calc(var(--hue)\n  + 16), 9%, 59%);\\n\\t--mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);\\n\\n\\t--primary-color: hsl(var(--hue), var(--saturation), var(--primary-luminance));\\n\\t--text-accent-color: var(--primary-color);\\n\\t--dark-primary-color: var(--primary-color);\\n\\t--light-primary-color: var(--primary-color);\\n\\t--mdc-theme-primary: var(--primary-color);\\n\\t--mdc-theme-secondary: var(--primary-color);\\n\\t--paper-slider-knob-color: var(--primary-color);\\n\\t--paper-slider-knob-start-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-pin-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-active-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-secondary-color: var(--light-primary-color);\\n\\t--switch-checked-button-color: var(--primary-color);\\n\\t--switch-checked-track-color: var(--switch-checked-button-color);\\n\\t--input-hover-line-color: var(--primary-color);\\n\\t--codemirror-property: var(--primary-color);\\n\\t--codemirror-atom: var(--codemirror-property);\\n\\t{%- endif -%}\\n\\n\\t--switch-checked-button-color: var(--mdc-switch-checked-thumb-color) !important;\\n\\t--switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;\\n\\t--switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color) !important;\\n\\t--switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;\\n}\"\nha-entity-toggle$:\n  ha-switch$: \"/* Material 3 Toggles */\\n:host {\\n\\tpadding: 3px 5px !important;\\n\\t--switch-checked-button-color: var(--mdc-switch-checked-thumb-color);\\n\\t--switch-checked-track-color: var(--mdc-switch-checked-track-color);\\n\\t--switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color);\\n\\t--switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color);\\n}\\n.mdc-switch__track {\\n\\theight: 24px !important;\\n\\twidth: 40px !important;\\n\\tborder-radius: 32px !important;\\n\\topacity: 1 !important;\\n}\\n.mdc-switch--checked
+    > .mdc-switch__track {\\n\\topacity: 1 !important;\\n}\\n.mdc-switch__thumb-underlay {\\n\\ttop: -12px !important;\\n\\tleft: -12px !important;\\n}\\n.mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {\\n\\tbackground-color: var(--mdc-switch-unchecked-button-color) !important;\\n\\theight: 14px !important;\\n\\twidth: 14px !important;\\n\\tborder: none !important;\\n}\\n.mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {\\n\\tborder: 2px solid gray !important;\\n\\t--border-color: var(--mdc-switch-unchecked-button-color);\\n}\\n\"\n"
   card-mod-theme: Material Rounded
   code-editor-background-color: var(--navbar-background)
   codemirror-atom: var(--codemirror-property)
@@ -103,8 +24,7 @@ Material Rounded:
   codemirror-string: rgb(119 196 229)
   dark-primary-color: var(--primary-color)
   divider-color: var(--navbar-background)
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: var(--card-background-color)
   ha-card-border: none
@@ -131,6 +51,7 @@ Material Rounded:
   link-text-color: rgb(0, 86, 207)
   mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
   mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
+  mdc-select-fill-color: var(--input-fill-color)
   mdc-select-idle-line-color: var(--color-background-base)
   mdc-text-field-fill-color: var(--input-fill-color)
   mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
@@ -143,28 +64,53 @@ Material Rounded:
   mdc-typography-button-font-weight: var(--title-font-weight)
   mdc-typography-font-family: var(--font-family)
   modes:
-    dark: {accent-color: 'rgb(0, 74, 118)', card-background-color: 'rgb(39, 42, 44)',
-      disabled-color: 'rgb(0, 0, 0)', disabled-text-color: 'rgba(255, 255, 255, 0.5)',
-      input-background-color: 'rgb(46, 48, 56)', lovelace-background: 'rgb(19, 19,
-        20)', mdc-checkbox-unchecked-color: 'rgb(138, 140, 153)', mdc-switch-checked-thumb-color: var(--accent-color),
-      mdc-switch-checked-track-color: var(--primary-color), mdc-switch-unchecked-button-color: 'rgb(140,
-        144, 159)', mdc-switch-unchecked-track-color: 'rgb(65, 71, 83)', navbar-background: 'rgb(30,
-        31, 32)', primary-color: 'rgb(194, 231, 254)', primary-text-color: 'rgb(228,
-        228, 231)', secondary-background-color: 'rgb(40, 42, 46)', secondary-text-color: rgb(138
-        140 153), sidebar-icon-color: 'rgb(147, 149, 159)', sidebar-selected-icon-color: 'rgb(174,
-        176, 183)', sidebar-selected-text-color: 'rgb(214, 215, 219)', state-icon-color: 'rgb(196,
-        199, 197)', state-inactive-color: 'rgb(72, 74, 78)'}
-    light: {accent-color: 'rgb(194, 231, 254)', card-background-color: 'rgb(233, 238,
-        246)', disabled-color: 'rgb(173, 176, 174)', disabled-text-color: 'rgb(128,
-        128, 128)', input-background-color: 'rgb(234, 234, 235)', lovelace-background: 'rgb(255,
-        255, 255)', mdc-checkbox-unchecked-color: 'rgb(42, 43, 51)', mdc-switch-checked-thumb-color: var(--lovelace-background),
-      mdc-switch-checked-track-color: 'rgb(0, 91, 191)', mdc-switch-unchecked-button-color: 'rgb(114,
-        119, 133)', mdc-switch-unchecked-track-color: 'rgb(222, 226, 242)', navbar-background: 'rgb(240,
-        244, 250)', primary-color: 'rgb(0, 29, 53)', primary-text-color: 'rgb(31,
-        31, 31)', secondary-background-color: 'rgb(215, 213, 209)', secondary-text-color: 'rgb(68,
-        71, 70)', sidebar-icon-color: 'rgb(88, 89, 95)', sidebar-selected-icon-color: 'rgb(29,
-        30, 32)', sidebar-selected-text-color: 'rgb(41, 40, 36)', state-icon-color: 'rgb(69,
-        71, 70)'}
+    dark:
+      accent-color: rgb(0, 74, 118)
+      accent-luminance: 27%
+      card-background-color: rgb(39, 42, 44)
+      disabled-color: rgb(0, 0, 0)
+      disabled-text-color: rgba(255, 255, 255, 0.5)
+      input-background-color: rgb(46, 48, 56)
+      lovelace-background: rgb(19, 19, 20)
+      mdc-checkbox-unchecked-color: rgb(138, 140, 153)
+      mdc-switch-checked-thumb-color: var(--accent-color)
+      mdc-switch-checked-track-color: var(--primary-color)
+      mdc-switch-unchecked-button-color: rgb(140, 144, 159)
+      mdc-switch-unchecked-track-color: rgb(65, 71, 83)
+      navbar-background: rgb(30, 31, 32)
+      primary-color: rgb(194, 231, 254)
+      primary-luminance: 85%
+      primary-text-color: rgb(228, 228, 231)
+      secondary-background-color: rgb(40, 42, 46)
+      secondary-text-color: rgb(138 140 153)
+      sidebar-icon-color: rgb(147, 149, 159)
+      sidebar-selected-icon-color: rgb(174, 176, 183)
+      sidebar-selected-text-color: rgb(214, 215, 219)
+      state-icon-color: rgb(196, 199, 197)
+      state-inactive-color: rgb(72, 74, 78)
+    light:
+      accent-color: rgb(194, 231, 254)
+      accent-luminance: 88%
+      card-background-color: rgb(233, 238, 246)
+      disabled-color: rgb(173, 176, 174)
+      disabled-text-color: rgb(128, 128, 128)
+      input-background-color: rgb(234, 234, 235)
+      lovelace-background: rgb(255, 255, 255)
+      mdc-checkbox-unchecked-color: rgb(42, 43, 51)
+      mdc-switch-checked-thumb-color: var(--lovelace-background)
+      mdc-switch-checked-track-color: rgb(0, 91, 191)
+      mdc-switch-unchecked-button-color: rgb(114, 119, 133)
+      mdc-switch-unchecked-track-color: rgb(222, 226, 242)
+      navbar-background: rgb(240, 244, 250)
+      primary-color: rgb(0, 29, 53)
+      primary-luminance: 10%
+      primary-text-color: rgb(31, 31, 31)
+      secondary-background-color: rgb(215, 213, 209)
+      secondary-text-color: rgb(68, 71, 70)
+      sidebar-icon-color: rgb(88, 89, 95)
+      sidebar-selected-icon-color: rgb(29, 30, 32)
+      sidebar-selected-text-color: rgb(41, 40, 36)
+      state-icon-color: rgb(69, 71, 70)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
@@ -214,8 +160,7 @@ Material Rounded No Mod:
   codemirror-string: rgb(119 196 229)
   dark-primary-color: var(--primary-color)
   divider-color: var(--navbar-background)
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: var(--card-background-color)
   ha-card-border: none
@@ -242,6 +187,7 @@ Material Rounded No Mod:
   link-text-color: rgb(0, 86, 207)
   mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
   mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
+  mdc-select-fill-color: var(--input-fill-color)
   mdc-select-idle-line-color: var(--color-background-base)
   mdc-text-field-fill-color: var(--input-fill-color)
   mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
@@ -254,28 +200,53 @@ Material Rounded No Mod:
   mdc-typography-button-font-weight: var(--title-font-weight)
   mdc-typography-font-family: var(--font-family)
   modes:
-    dark: {accent-color: 'rgb(0, 74, 118)', card-background-color: 'rgb(39, 42, 44)',
-      disabled-color: 'rgb(0, 0, 0)', disabled-text-color: 'rgba(255, 255, 255, 0.5)',
-      input-background-color: 'rgb(46, 48, 56)', lovelace-background: 'rgb(19, 19,
-        20)', mdc-checkbox-unchecked-color: 'rgb(138, 140, 153)', mdc-switch-checked-thumb-color: var(--accent-color),
-      mdc-switch-checked-track-color: var(--primary-color), mdc-switch-unchecked-button-color: 'rgb(140,
-        144, 159)', mdc-switch-unchecked-track-color: 'rgb(65, 71, 83)', navbar-background: 'rgb(30,
-        31, 32)', primary-color: 'rgb(194, 231, 254)', primary-text-color: 'rgb(228,
-        228, 231)', secondary-background-color: 'rgb(40, 42, 46)', secondary-text-color: rgb(138
-        140 153), sidebar-icon-color: 'rgb(147, 149, 159)', sidebar-selected-icon-color: 'rgb(174,
-        176, 183)', sidebar-selected-text-color: 'rgb(214, 215, 219)', state-icon-color: 'rgb(196,
-        199, 197)', state-inactive-color: 'rgb(72, 74, 78)'}
-    light: {accent-color: 'rgb(194, 231, 254)', card-background-color: 'rgb(233, 238,
-        246)', disabled-color: 'rgb(173, 176, 174)', disabled-text-color: 'rgb(128,
-        128, 128)', input-background-color: 'rgb(234, 234, 235)', lovelace-background: 'rgb(255,
-        255, 255)', mdc-checkbox-unchecked-color: 'rgb(42, 43, 51)', mdc-switch-checked-thumb-color: var(--lovelace-background),
-      mdc-switch-checked-track-color: 'rgb(0, 91, 191)', mdc-switch-unchecked-button-color: 'rgb(114,
-        119, 133)', mdc-switch-unchecked-track-color: 'rgb(222, 226, 242)', navbar-background: 'rgb(240,
-        244, 250)', primary-color: 'rgb(0, 29, 53)', primary-text-color: 'rgb(31,
-        31, 31)', secondary-background-color: 'rgb(215, 213, 209)', secondary-text-color: 'rgb(68,
-        71, 70)', sidebar-icon-color: 'rgb(88, 89, 95)', sidebar-selected-icon-color: 'rgb(29,
-        30, 32)', sidebar-selected-text-color: 'rgb(41, 40, 36)', state-icon-color: 'rgb(69,
-        71, 70)'}
+    dark:
+      accent-color: rgb(0, 74, 118)
+      accent-luminance: 27%
+      card-background-color: rgb(39, 42, 44)
+      disabled-color: rgb(0, 0, 0)
+      disabled-text-color: rgba(255, 255, 255, 0.5)
+      input-background-color: rgb(46, 48, 56)
+      lovelace-background: rgb(19, 19, 20)
+      mdc-checkbox-unchecked-color: rgb(138, 140, 153)
+      mdc-switch-checked-thumb-color: var(--accent-color)
+      mdc-switch-checked-track-color: var(--primary-color)
+      mdc-switch-unchecked-button-color: rgb(140, 144, 159)
+      mdc-switch-unchecked-track-color: rgb(65, 71, 83)
+      navbar-background: rgb(30, 31, 32)
+      primary-color: rgb(194, 231, 254)
+      primary-luminance: 85%
+      primary-text-color: rgb(228, 228, 231)
+      secondary-background-color: rgb(40, 42, 46)
+      secondary-text-color: rgb(138 140 153)
+      sidebar-icon-color: rgb(147, 149, 159)
+      sidebar-selected-icon-color: rgb(174, 176, 183)
+      sidebar-selected-text-color: rgb(214, 215, 219)
+      state-icon-color: rgb(196, 199, 197)
+      state-inactive-color: rgb(72, 74, 78)
+    light:
+      accent-color: rgb(194, 231, 254)
+      accent-luminance: 88%
+      card-background-color: rgb(233, 238, 246)
+      disabled-color: rgb(173, 176, 174)
+      disabled-text-color: rgb(128, 128, 128)
+      input-background-color: rgb(234, 234, 235)
+      lovelace-background: rgb(255, 255, 255)
+      mdc-checkbox-unchecked-color: rgb(42, 43, 51)
+      mdc-switch-checked-thumb-color: var(--lovelace-background)
+      mdc-switch-checked-track-color: rgb(0, 91, 191)
+      mdc-switch-unchecked-button-color: rgb(114, 119, 133)
+      mdc-switch-unchecked-track-color: rgb(222, 226, 242)
+      navbar-background: rgb(240, 244, 250)
+      primary-color: rgb(0, 29, 53)
+      primary-luminance: 10%
+      primary-text-color: rgb(31, 31, 31)
+      secondary-background-color: rgb(215, 213, 209)
+      secondary-text-color: rgb(68, 71, 70)
+      sidebar-icon-color: rgb(88, 89, 95)
+      sidebar-selected-icon-color: rgb(29, 30, 32)
+      sidebar-selected-text-color: rgb(41, 40, 36)
+      state-icon-color: rgb(69, 71, 70)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
@@ -316,95 +287,16 @@ Material Rounded Transparent Card:
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
-  card-mod-card-yaml: "# Material 3 toggles in header\n.: |\n    :host {\n      --switch-checked-button-color:
-    var(--mdc-switch-checked-thumb-color);\n      --switch-checked-track-color: var(--mdc-switch-checked-track-color);\n
-    \     --switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color);\n
-    \     --switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color);\n
-    \   }\nhui-entities-toggle$:\n    .: |\n        :host {\n          position: relative
-    !important;\n          width: 40px !important;\n          left: -2px !important;\n
-    \         top: 5px !important;\n        }\n    ha-switch$: |\n        :host {\n
-    \         padding: 3px 5px !important;\n        }\n        .mdc-switch__track
-    {\n          height: 24px !important;\n          width: 40px !important;\n          border-radius:
-    32px !important;\n          opacity: 1 !important;\n        }\n        .mdc-switch--checked
-    > .mdc-switch__track {\n          opacity: 1 !important;\n        }\n        .mdc-switch__thumb-underlay
-    {\n          top: -12px !important;\n          left: -12px !important;\n        }\n
-    \       .mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {\n          background-color:
-    var(--mdc-switch-unchecked-button-color) !important;\n          height: 14px !important;\n
-    \         width: 14px !important;\n          border: none !important;\n        }\n
-    \       .mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {\n            --border-color:
-    var(--mdc-switch-unchecked-button-color);\n            border: 2px solid gray
-    !important;\n        }\n"
-  card-mod-root-yaml: ".: |\n    /* Turn header toolbar into a footer */\n    .header
-    {\n      top: unset !important;\n      bottom: 0 !important;\n      height: var(--footer-height)
-    !important;\n      background-color: var(--navbar-background) !important;\n      --mdc-icon-button-size:
-    32px;\n    }\n\n    /* Modify toolbar height but only for card-mod version of
-    theme */\n    .toolbar {\n      height: var(--footer-height) !important;\n      padding:
-    0 !important;\n    }\n\n    /* Fix edit mode header height */\n    .edit-mode
-    > .header {\n      height: calc(2 * var(--footer-height)) !important;\n    }\n\n
-    \   /* Fix edit mode toolbar height */\n    paper-tabs {\n      height: 50%;\n
-    \   }\n\n    /* Remove default current view ripple */\n    ha-tabs,\n    paper-tabs
-    {\n      --paper-tabs-selection-bar-color: none !important;\n      margin: 0 !important;\n
-    \   }\n\n    /* Add background and color current view icon */\n    paper-tab.iron-selected
-    > ha-icon {\n      width: 100%;\n      max-width: 72px;\n      color: var(--primary-color);\n
-    \     background-color: var(--accent-color);\n      border-radius: 16px;\n    }\n\n
-    \   /* Prevent icon from shrinking on small width displays */\n    paper-tab >
-    ha-svg-icon {\n      min-width: 24px;\n    }\n\n    /* View icon transition and
-    display centering */\n    paper-tab > ha-icon {\n      width: 24px;\n      height:
-    32px;\n      display: inline-flex;\n      justify-content: center;\n      align-items:
-    center;\n      align-self: center;\n      transition: width 0.2s cubic-bezier(0.2,
-    0, 0, 1);\n    }\n\n    /* Display view tab contents vertically and set minimum
-    size */\n    paper-tab {\n      padding: 0;\n      display: inline-flex;\n      flex-direction:
-    column;\n      flex: 1;\n      justify-items: stretch;\n      min-width: min(calc((100vw
-    - 2 * var(--mdc-icon-button-size)) / 5), 72px);\n    }\n\n    /* Make edit mode
-    current view tab fit all buttons */\n    .edit-mode > .header > paper-tabs > paper-tab
-    {\n      min-width: fit-content;\n    }\n\n    /* Remove extra left padding from
-    edit view buttons */\n    .edit-icon {\n      padding-left: 0 !important;\n    }\n\n
-    \   /* Align edit mode add view button */\n    #add-view {\n      position: relative
-    !important;\n      top: 11px;\n    }\n\n    /* View label */\n    paper-tab::after
-    {\n      content: attr(aria-label);\n      text-transform: none;\n      text-align:
-    center;\n      position: relative;\n      font-weight: 500;\n      font-size:
-    min(3vw, 13px);\n      opacity: 0.8;\n      padding: 0px 1px;\n      max-width:
-    -webkit-fill-available;\n      max-width: -moz-available;\n      text-wrap: wrap;\n
-    \     overflow: hidden;\n      line-height: 14px;\n      height: 100%;\n      margin-top:
-    20px;\n    }\n\n    /* Make current view label opaque */\n    paper-tab.iron-selected::after
-    {\n      opacity: 1;\n    }\n\n    /* Restore icon size for subview back button
-    */\n    ha-icon-button-arrow-prev[slot='navigationIcon'] {\n      --mdc-icon-button-size:
-    48px;\n    }\n\n    /* Fix view box to work with footer and add padding to sides
-    */\n    #view {\n      padding-top: 0 !important;\n      padding-bottom: var(--footer-height)
-    !important;\n      padding-left: 12px !important;\n      padding-right: 12px !important;\n
-    \   }\n\n    /* Fix view box when in edit mode */\n    .edit-mode > #view {\n
-    \     padding-top: calc(2 * var(--footer-height)) !important;\n      padding-bottom:
-    0 !important;\n      bottom: calc(2 * var(--footer-height)) !important;\n    }\n\n#
-    Evenly space icons along entire length of toolbar\nha-tabs$: |\n    #tabsContent.scrollable
-    {\n      width: 100% !important;\n      display: flex !important;\n      justify-content:
-    space-between !important;\n    }\npaper-tabs$: |\n    #tabsContent.scrollable
-    {\n      width: 100% !important;\n      display: flex !important;\n      justify-content:
-    space-between !important;\n    }\n\npaper-tab$: |\n    /* Disable default ripple
-    effect */\n    paper-ripple {\n      display: none;\n    }\n\n    /* Align view
-    icon */\n    .tab-content {\n      display: inline-flex;\n      justify-content:
-    space-evenly;\n      width: 100%;\n      position: relative;\n      top: 11px;\n
-    \   }\n\n# Edit mode Add Card position fixes\nhui-masonry-view$: |\n    ha-fab
-    {\n      bottom: calc(2 * var(--footer-height) + 4px) !important;\n    }\nhui-sidebar-view$:
-    |\n    ha-fab {\n      bottom: calc(2 * var(--footer-height) + 4px) !important;\n
-    \   }\nhui-panel-view$: |\n    ha-fab {\n      bottom: calc(2 * var(--footer-height)
-    + 4px) !important;\n    }\nmasonry-layout$: |\n    ha-fab {\n      bottom: calc(2
-    * var(--footer-height) + 4px) !important;\n    }\nhorizontal-layout$: |\n    ha-fab
-    {\n      bottom: calc(2 * var(--footer-height) + 4px) !important;\n    }\nvertical-layout$:
-    |\n    ha-fab {\n      bottom: calc(2 * var(--footer-height) + 4px) !important;\n
-    \   }\ngrid-layout$: |\n    ha-fab {\n      bottom: calc(2 * var(--footer-height)
-    + 4px) !important;\n    }\n"
-  card-mod-row-yaml: "# Material 3 toggles in row\nha-entity-toggle$:\n    ha-switch$:
-    |\n        :host {\n          padding: 3px 5px !important;\n        }\n        .mdc-switch__track
-    {\n          height: 24px !important;\n          width: 40px !important;\n          border-radius:
-    32px !important;\n          opacity: 1 !important;\n        }\n        .mdc-switch--checked
-    > .mdc-switch__track {\n          opacity: 1 !important;\n        }\n        .mdc-switch__thumb-underlay
-    {\n          top: -12px !important;\n          left: -12px !important;\n        }\n
-    \       .mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {\n          background-color:
-    var(--mdc-switch-unchecked-button-color) !important;\n          height: 14px !important;\n
-    \         width: 14px !important;\n          border: none !important;\n        }\n
-    \       .mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {\n            --border-color:
-    var(--mdc-switch-unchecked-button-color);\n            border: 2px solid gray
-    !important;\n        }\n"
+  card-mod-card-yaml: ".: \"{# https://gist.github.com/mjackson/5311256 #}\\n{%- macro hex2hsl(hex) -%}\\n  {%- if hex[0] == \\\"#\\\" -%}\\n  {%- set hex = hex[1:] -%}\\n  {%- endif -%}\\n  {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}\\n  {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}\\n  {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}\\n  {%- set rgb_max = [r, g, b] | max -%}\\n  {%- set rgb_min = [r, g, b] | min -%}\\n  {%- set l = (rgb_max + rgb_min) / 2 -%}\\n  {%- if rgb_max != rgb_min -%}\\n    {%- set d = rgb_max - rgb_min -%}\\n    {%- set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) -%}\\n    {%- if r == rgb_max -%}\\n      {%- set h = (g - b) / d + (6 if g < b else 0) -%}\\n    {%- elif g == rgb_max -%}\\n      {%- set h = (b - r) / d + 2 -%}\\n    {%- elif b == rgb_max -%}\\n      {%- set h = (r - g) / d + 4 -%}\\n    {%- endif -%}\\n    {%- set h = h / 6 -%}\\n  {%- endif -%}\\n  {%- set h = (h * 360) | int if h else 0 -%}\\n  {%- set s = (s * 100) | int if s else 0 -%}\\n  {%- set l = (l * 100) | int if l else 0 -%}\\n  {{ h }},{{ s }},{{ l }}\\n{%- endmacro -%}\\n\\n{%- set id = \\\"_\\\" + user | lower | replace(\\\" \\\",\\\"_\\\") -%}\\n{%- set base_color = \\\"\\\" -%}\\n\\n{%- if has_value(\\\"sensor.material_rounded_base_color\\\" + id) -%}\\n{%- set base_color = states(\\\"sensor.material_rounded_base_color\\\" + id) -%}\\n{%- elif has_value(\\\"sensor.material_rounded_base_color\\\") -%}\\n{%- set base_color = states(\\\"sensor.material_rounded_base_color\\\") -%}\\n{%- endif -%}\\n* {\\n\\t{%- if (base_color | length) -%}\\n\\t{%- set hsl = hex2hsl(base_color).split(',') -%}\\n\\t\\n\\t--hue: {{ hsl[0] }};\\n\\t--saturation: {{ hsl[1] }}%;\\n\\t--luminance: {{ hsl[2] }}%;\\n\\n\\t--accent-color: hsl(var(--hue), var(--saturation), var(--accent-luminance));\\n\\t--text-light-primary-color: var(--text-primary-color);\\n\\t--mdc-theme-on-primary: var(--accent-color);\\n\\t--mdc-theme-on-secondary: var(--accent-color);\\n\\t--mdc-switch-checked-thumb-color: var(--accent-color);\\n\\t--mdc-switch-checked-track-color:
+    var(--primary-color);\\n\\t--mdc-switch-unchecked-button-color: hsl(calc(var(--hue)\n  + 16), 9%, 59%);\\n\\t--mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);\\n\\n\\t--primary-color: hsl(var(--hue), var(--saturation), var(--primary-luminance));\\n\\t--text-accent-color: var(--primary-color);\\n\\t--dark-primary-color: var(--primary-color);\\n\\t--light-primary-color: var(--primary-color);\\n\\t--mdc-theme-primary: var(--primary-color);\\n\\t--mdc-theme-secondary: var(--primary-color);\\n\\t--paper-slider-knob-color: var(--primary-color);\\n\\t--paper-slider-knob-start-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-pin-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-active-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-secondary-color: var(--light-primary-color);\\n\\t--switch-checked-button-color: var(--primary-color);\\n\\t--switch-checked-track-color: var(--switch-checked-button-color);\\n\\t--input-hover-line-color: var(--primary-color);\\n\\t--codemirror-property: var(--primary-color);\\n\\t--codemirror-atom: var(--codemirror-property);\\n\\t{%- endif -%}\\n\\n\\t--switch-checked-button-color: var(--mdc-switch-checked-thumb-color) !important;\\n\\t--switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;\\n\\t--switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color) !important;\\n\\t--switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;\\n}\"\nhui-entities-toggle$:\n  .: \"/* Correct Material 3 header toggle position */\\n:host {\\n\\tposition: relative !important;\\n\\twidth: 40px !important;\\n\\tleft: -2px !important;\\n\\ttop: 5px !important;\\n}\\n\"\n  ha-switch$: \"/* Material 3 Toggles */\\n:host {\\n\\tpadding: 3px 5px !important;\\n\\t--switch-checked-button-color: var(--mdc-switch-checked-thumb-color);\\n\\t--switch-checked-track-color: var(--mdc-switch-checked-track-color);\\n\\t--switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color);\\n\\t--switch-unchecked-track-color:
+    var(--mdc-switch-unchecked-track-color);\\n}\\n.mdc-switch__track {\\n\\theight: 24px !important;\\n\\twidth: 40px !important;\\n\\tborder-radius: 32px !important;\\n\\topacity: 1 !important;\\n}\\n.mdc-switch--checked > .mdc-switch__track {\\n\\topacity: 1 !important;\\n}\\n.mdc-switch__thumb-underlay {\\n\\ttop: -12px !important;\\n\\tleft: -12px !important;\\n}\\n.mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {\\n\\tbackground-color: var(--mdc-switch-unchecked-button-color) !important;\\n\\theight: 14px !important;\\n\\twidth: 14px !important;\\n\\tborder: none !important;\\n}\\n.mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {\\n\\tborder: 2px solid gray !important;\\n\\t--border-color: var(--mdc-switch-unchecked-button-color);\\n}\\n\"\n"
+  card-mod-root-yaml: ".: \"{# https://gist.github.com/mjackson/5311256 #}\\n{%- macro hex2hsl(hex) -%}\\n  {%- if hex[0] == \\\"#\\\" -%}\\n  {%- set hex = hex[1:] -%}\\n  {%- endif -%}\\n  {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}\\n  {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}\\n  {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}\\n  {%- set rgb_max = [r, g, b] | max -%}\\n  {%- set rgb_min = [r, g, b] | min -%}\\n  {%- set l = (rgb_max + rgb_min) / 2 -%}\\n  {%- if rgb_max != rgb_min -%}\\n    {%- set d = rgb_max - rgb_min -%}\\n    {%- set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) -%}\\n    {%- if r == rgb_max -%}\\n      {%- set h = (g - b) / d + (6 if g < b else 0) -%}\\n    {%- elif g == rgb_max -%}\\n      {%- set h = (b - r) / d + 2 -%}\\n    {%- elif b == rgb_max -%}\\n      {%- set h = (r - g) / d + 4 -%}\\n    {%- endif -%}\\n    {%- set h = h / 6 -%}\\n  {%- endif -%}\\n  {%- set h = (h * 360) | int if h else 0 -%}\\n  {%- set s = (s * 100) | int if s else 0 -%}\\n  {%- set l = (l * 100) | int if l else 0 -%}\\n  {{ h }},{{ s }},{{ l }}\\n{%- endmacro -%}\\n\\n{%- set id = \\\"_\\\" + user | lower | replace(\\\" \\\",\\\"_\\\") -%}\\n{%- set base_color = \\\"\\\" -%}\\n\\n{%- if has_value(\\\"sensor.material_rounded_base_color\\\" + id) -%}\\n{%- set base_color = states(\\\"sensor.material_rounded_base_color\\\" + id) -%}\\n{%- elif has_value(\\\"sensor.material_rounded_base_color\\\") -%}\\n{%- set base_color = states(\\\"sensor.material_rounded_base_color\\\") -%}\\n{%- endif -%}\\n* {\\n\\t{%- if (base_color | length) -%}\\n\\t{%- set hsl = hex2hsl(base_color).split(',') -%}\\n\\t\\n\\t--hue: {{ hsl[0] }};\\n\\t--saturation: {{ hsl[1] }}%;\\n\\t--luminance: {{ hsl[2] }}%;\\n\\n\\t--accent-color: hsl(var(--hue), var(--saturation), var(--accent-luminance));\\n\\t--text-light-primary-color: var(--text-primary-color);\\n\\t--mdc-theme-on-primary: var(--accent-color);\\n\\t--mdc-theme-on-secondary: var(--accent-color);\\n\\t--mdc-switch-checked-thumb-color: var(--accent-color);\\n\\t--mdc-switch-checked-track-color:
+    var(--primary-color);\\n\\t--mdc-switch-unchecked-button-color: hsl(calc(var(--hue)\n  + 16), 9%, 59%);\\n\\t--mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);\\n\\n\\t--primary-color: hsl(var(--hue), var(--saturation), var(--primary-luminance));\\n\\t--text-accent-color: var(--primary-color);\\n\\t--dark-primary-color: var(--primary-color);\\n\\t--light-primary-color: var(--primary-color);\\n\\t--mdc-theme-primary: var(--primary-color);\\n\\t--mdc-theme-secondary: var(--primary-color);\\n\\t--paper-slider-knob-color: var(--primary-color);\\n\\t--paper-slider-knob-start-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-pin-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-active-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-secondary-color: var(--light-primary-color);\\n\\t--switch-checked-button-color: var(--primary-color);\\n\\t--switch-checked-track-color: var(--switch-checked-button-color);\\n\\t--input-hover-line-color: var(--primary-color);\\n\\t--codemirror-property: var(--primary-color);\\n\\t--codemirror-atom: var(--codemirror-property);\\n\\t{%- endif -%}\\n\\n\\t--switch-checked-button-color: var(--mdc-switch-checked-thumb-color) !important;\\n\\t--switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;\\n\\t--switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color) !important;\\n\\t--switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;\\n}\\n/* Turn header toolbar into a footer */\\n.header {\\n\\ttop: unset !important;\\n\\tbottom: 0 !important;\\n\\theight: var(--footer-height) !important;\\n\\tbackground-color: var(--navbar-background) !important;\\n\\t--mdc-icon-button-size: 32px;\\n}\\n\\n/* Modify toolbar height but only for card-mod version of theme */\\n.toolbar {\\n\\theight: var(--footer-height) !important;\\n\\tpadding: 0 !important;\\n}\\n\\n/* Fix edit mode header height */\\n.edit-mode > .header {\\n\\theight: calc(2 * var(--footer-height)) !important;\\n}\\n\\n/* Fix edit
+    mode toolbar height */\\npaper-tabs {\\n\\theight: 50%;\\n}\\n\\n/* Remove default current view ripple */\\nha-tabs,\\npaper-tabs {\\n\\t--paper-tabs-selection-bar-color:\n  none !important;\\n\\tmargin: 0 !important;\\n}\\n\\n/* Add background and color current view icon */\\npaper-tab.iron-selected > ha-icon {\\n\\twidth: 100%;\\n\\tmax-width: 72px;\\n\\tcolor: var(--primary-color);\\n\\tbackground-color: var(--accent-color);\\n\\tborder-radius: 16px;\\n}\\n\\n/* Prevent icon from shrinking on small width displays */\\npaper-tab > ha-svg-icon {\\n\\tmin-width: 24px;\\n}\\n\\n/* View icon transition and display centering */\\npaper-tab > ha-icon {\\n\\twidth: 24px;\\n\\theight: 32px;\\n\\tdisplay: inline-flex;\\n\\tjustify-content: center;\\n\\talign-items: center;\\n\\talign-self: center;\\n\\ttransition: width 0.2s cubic-bezier(0.2, 0, 0, 1);\\n}\\n\\n/* Display view tab contents vertically and set minimum size */\\npaper-tab {\\n\\tpadding: 0;\\n\\tdisplay: inline-flex;\\n\\tflex-direction: column;\\n\\tflex: 1;\\n\\tjustify-items: stretch;\\n\\tmin-width: min(calc((100vw - 2 * var(--mdc-icon-button-size)) / 5), 72px);\\n}\\n\\n/* Make edit mode current view tab fit all buttons */\\n.edit-mode > .header > paper-tabs > paper-tab {\\n\\tmin-width: fit-content;\\n}\\n\\n/* Remove extra left padding from edit view buttons */\\n.edit-icon {\\n\\tpadding-left: 0 !important;\\n}\\n\\n/* Align edit mode add view button */\\n#add-view {\\n\\tposition: relative !important;\\n\\ttop: 11px;\\n}\\n\\n/* View label */\\npaper-tab::after {\\n\\tcontent: attr(aria-label);\\n\\ttext-transform: none;\\n\\ttext-align: center;\\n\\tposition: relative;\\n\\tfont-weight: 500;\\n\\tfont-size: min(3vw, 13px);\\n\\topacity: 0.8;\\n\\tpadding: 0px 1px;\\n\\tmax-width: -webkit-fill-available;\\n\\tmax-width: -moz-available;\\n\\ttext-wrap: wrap;\\n\\toverflow: hidden;\\n\\tline-height: 14px;\\n\\theight: 100%;\\n\\tmargin-top: 20px;\\n}\\n\\n/* Make current view label opaque */\\npaper-tab.iron-selected::after {\\n\\topacity: 1;\\n}\\n\\n/*
+    Restore icon size for subview back button */\\nha-icon-button-arrow-prev[slot='navigationIcon'] {\\n\\t--mdc-icon-button-size: 48px;\\n}\\n\\n/* Fix view box to work with footer and add padding to sides */\\n#view {\\n\\tpadding-top: 0 !important;\\n\\tpadding-bottom: var(--footer-height) !important;\\n\\tpadding-left:\n  12px !important;\\n\\tpadding-right: 12px !important;\\n}\\n\\n/* Fix view box when in edit mode */\\n.edit-mode > #view {\\n\\tpadding-top: calc(2 * var(--footer-height)) !important;\\n\\tpadding-bottom: 0 !important;\\n\\tbottom: calc(2 * var(--footer-height)) !important;\\n}\\n\"\ngrid-layout$: '{ add_card.css }}'\nha-tabs$: \"#tabsContent.scrollable {\\n\\twidth: 100% !important;\\n\\tdisplay: flex !important;\\n\\tjustify-content: space-between !important;\\n}\\n\"\nhorizontal-layout$: \"ha-fab {\\n\\tbottom: calc(2 * var(--footer-height) + 4px) !important;\\n}\\n\"\nhui-masonry-view$: \"ha-fab {\\n\\tbottom: calc(2 * var(--footer-height) + 4px) !important;\\n}\\n\"\nhui-panel-view$: \"ha-fab {\\n\\tbottom: calc(2 * var(--footer-height) + 4px) !important;\\n}\\n\"\nhui-sidebar-view$: \"ha-fab {\\n\\tbottom: calc(2 * var(--footer-height) + 4px) !important;\\n}\\n\"\nmasonry-layout$: \"ha-fab {\\n\\tbottom: calc(2 * var(--footer-height) + 4px) !important;\\n}\\n\"\npaper-tab$: \"/* Disable default ripple effect */\\npaper-ripple {\\n\\tdisplay: none;\\n}\\n\\n/* Align view icon */\\n.tab-content {\\n\\tdisplay: inline-flex;\\n\\tjustify-content: space-evenly;\\n\\twidth: 100%;\\n\\tposition: relative;\\n\\ttop: 11px;\\n}\\n\"\npaper-tabs$: \"#tabsContent.scrollable {\\n\\twidth: 100% !important;\\n\\tdisplay: flex !important;\\n\\tjustify-content: space-between !important;\\n}\\n\"\nvertical-layout$: \"ha-fab {\\n\\tbottom: calc(2 * var(--footer-height) + 4px) !important;\\n}\\n\"\n"
+  card-mod-row-yaml: ".: \"{# https://gist.github.com/mjackson/5311256 #}\\n{%- macro hex2hsl(hex) -%}\\n  {%- if hex[0] == \\\"#\\\" -%}\\n  {%- set hex = hex[1:] -%}\\n  {%- endif -%}\\n  {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}\\n  {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}\\n  {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}\\n  {%- set rgb_max = [r, g, b] | max -%}\\n  {%- set rgb_min = [r, g, b] | min -%}\\n  {%- set l = (rgb_max + rgb_min) / 2 -%}\\n  {%- if rgb_max != rgb_min -%}\\n    {%- set d = rgb_max - rgb_min -%}\\n    {%- set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) -%}\\n    {%- if r == rgb_max -%}\\n      {%- set h = (g - b) / d + (6 if g < b else 0) -%}\\n    {%- elif g == rgb_max -%}\\n      {%- set h = (b - r) / d + 2 -%}\\n    {%- elif b == rgb_max -%}\\n      {%- set h = (r - g) / d + 4 -%}\\n    {%- endif -%}\\n    {%- set h = h / 6 -%}\\n  {%- endif -%}\\n  {%- set h = (h * 360) | int if h else 0 -%}\\n  {%- set s = (s * 100) | int if s else 0 -%}\\n  {%- set l = (l * 100) | int if l else 0 -%}\\n  {{ h }},{{ s }},{{ l }}\\n{%- endmacro -%}\\n\\n{%- set id = \\\"_\\\" + user | lower | replace(\\\" \\\",\\\"_\\\") -%}\\n{%- set base_color = \\\"\\\" -%}\\n\\n{%- if has_value(\\\"sensor.material_rounded_base_color\\\" + id) -%}\\n{%- set base_color = states(\\\"sensor.material_rounded_base_color\\\" + id) -%}\\n{%- elif has_value(\\\"sensor.material_rounded_base_color\\\") -%}\\n{%- set base_color = states(\\\"sensor.material_rounded_base_color\\\") -%}\\n{%- endif -%}\\n* {\\n\\t{%- if (base_color | length) -%}\\n\\t{%- set hsl = hex2hsl(base_color).split(',') -%}\\n\\t\\n\\t--hue: {{ hsl[0] }};\\n\\t--saturation: {{ hsl[1] }}%;\\n\\t--luminance: {{ hsl[2] }}%;\\n\\n\\t--accent-color: hsl(var(--hue), var(--saturation), var(--accent-luminance));\\n\\t--text-light-primary-color: var(--text-primary-color);\\n\\t--mdc-theme-on-primary: var(--accent-color);\\n\\t--mdc-theme-on-secondary: var(--accent-color);\\n\\t--mdc-switch-checked-thumb-color: var(--accent-color);\\n\\t--mdc-switch-checked-track-color:
+    var(--primary-color);\\n\\t--mdc-switch-unchecked-button-color: hsl(calc(var(--hue)\n  + 16), 9%, 59%);\\n\\t--mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);\\n\\n\\t--primary-color: hsl(var(--hue), var(--saturation), var(--primary-luminance));\\n\\t--text-accent-color: var(--primary-color);\\n\\t--dark-primary-color: var(--primary-color);\\n\\t--light-primary-color: var(--primary-color);\\n\\t--mdc-theme-primary: var(--primary-color);\\n\\t--mdc-theme-secondary: var(--primary-color);\\n\\t--paper-slider-knob-color: var(--primary-color);\\n\\t--paper-slider-knob-start-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-pin-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-active-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-secondary-color: var(--light-primary-color);\\n\\t--switch-checked-button-color: var(--primary-color);\\n\\t--switch-checked-track-color: var(--switch-checked-button-color);\\n\\t--input-hover-line-color: var(--primary-color);\\n\\t--codemirror-property: var(--primary-color);\\n\\t--codemirror-atom: var(--codemirror-property);\\n\\t{%- endif -%}\\n\\n\\t--switch-checked-button-color: var(--mdc-switch-checked-thumb-color) !important;\\n\\t--switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;\\n\\t--switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color) !important;\\n\\t--switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;\\n}\"\nha-entity-toggle$:\n  ha-switch$: \"/* Material 3 Toggles */\\n:host {\\n\\tpadding: 3px 5px !important;\\n\\t--switch-checked-button-color: var(--mdc-switch-checked-thumb-color);\\n\\t--switch-checked-track-color: var(--mdc-switch-checked-track-color);\\n\\t--switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color);\\n\\t--switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color);\\n}\\n.mdc-switch__track {\\n\\theight: 24px !important;\\n\\twidth: 40px !important;\\n\\tborder-radius: 32px !important;\\n\\topacity: 1 !important;\\n}\\n.mdc-switch--checked
+    > .mdc-switch__track {\\n\\topacity: 1 !important;\\n}\\n.mdc-switch__thumb-underlay {\\n\\ttop: -12px !important;\\n\\tleft: -12px !important;\\n}\\n.mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {\\n\\tbackground-color: var(--mdc-switch-unchecked-button-color) !important;\\n\\theight: 14px !important;\\n\\twidth: 14px !important;\\n\\tborder: none !important;\\n}\\n.mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {\\n\\tborder: 2px solid gray !important;\\n\\t--border-color: var(--mdc-switch-unchecked-button-color);\\n}\\n\"\n"
   card-mod-theme: Material Rounded
   code-editor-background-color: var(--navbar-background)
   codemirror-atom: var(--codemirror-property)
@@ -415,8 +307,7 @@ Material Rounded Transparent Card:
   codemirror-string: rgb(119 196 229)
   dark-primary-color: var(--primary-color)
   divider-color: var(--navbar-background)
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: var(--lovelace-background)
   ha-card-border: none
@@ -443,6 +334,7 @@ Material Rounded Transparent Card:
   link-text-color: rgb(0, 86, 207)
   mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
   mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
+  mdc-select-fill-color: var(--input-fill-color)
   mdc-select-idle-line-color: var(--color-background-base)
   mdc-text-field-fill-color: var(--input-fill-color)
   mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
@@ -455,28 +347,53 @@ Material Rounded Transparent Card:
   mdc-typography-button-font-weight: var(--title-font-weight)
   mdc-typography-font-family: var(--font-family)
   modes:
-    dark: {accent-color: 'rgb(0, 74, 118)', card-background-color: var(--lovelace-background),
-      disabled-color: 'rgb(0, 0, 0)', disabled-text-color: 'rgba(255, 255, 255, 0.5)',
-      input-background-color: 'rgb(46, 48, 56)', lovelace-background: 'rgb(19, 19,
-        20)', mdc-checkbox-unchecked-color: 'rgb(138, 140, 153)', mdc-switch-checked-thumb-color: var(--accent-color),
-      mdc-switch-checked-track-color: var(--primary-color), mdc-switch-unchecked-button-color: 'rgb(140,
-        144, 159)', mdc-switch-unchecked-track-color: 'rgb(65, 71, 83)', navbar-background: 'rgb(30,
-        31, 32)', primary-color: 'rgb(194, 231, 254)', primary-text-color: 'rgb(228,
-        228, 231)', secondary-background-color: 'rgb(40, 42, 46)', secondary-text-color: rgb(138
-        140 153), sidebar-icon-color: 'rgb(147, 149, 159)', sidebar-selected-icon-color: 'rgb(174,
-        176, 183)', sidebar-selected-text-color: 'rgb(214, 215, 219)', state-icon-color: 'rgb(196,
-        199, 197)', state-inactive-color: 'rgb(72, 74, 78)'}
-    light: {accent-color: 'rgb(194, 231, 254)', card-background-color: var(--lovelace-background),
-      disabled-color: 'rgb(173, 176, 174)', disabled-text-color: 'rgb(128, 128, 128)',
-      input-background-color: 'rgb(234, 234, 235)', lovelace-background: 'rgb(255,
-        255, 255)', mdc-checkbox-unchecked-color: 'rgb(42, 43, 51)', mdc-switch-checked-thumb-color: var(--lovelace-background),
-      mdc-switch-checked-track-color: 'rgb(0, 91, 191)', mdc-switch-unchecked-button-color: 'rgb(114,
-        119, 133)', mdc-switch-unchecked-track-color: 'rgb(222, 226, 242)', navbar-background: 'rgb(240,
-        244, 250)', primary-color: 'rgb(0, 29, 53)', primary-text-color: 'rgb(31,
-        31, 31)', secondary-background-color: 'rgb(215, 213, 209)', secondary-text-color: 'rgb(68,
-        71, 70)', sidebar-icon-color: 'rgb(88, 89, 95)', sidebar-selected-icon-color: 'rgb(29,
-        30, 32)', sidebar-selected-text-color: 'rgb(41, 40, 36)', state-icon-color: 'rgb(69,
-        71, 70)'}
+    dark:
+      accent-color: rgb(0, 74, 118)
+      accent-luminance: 27%
+      card-background-color: var(--lovelace-background)
+      disabled-color: rgb(0, 0, 0)
+      disabled-text-color: rgba(255, 255, 255, 0.5)
+      input-background-color: rgb(46, 48, 56)
+      lovelace-background: rgb(19, 19, 20)
+      mdc-checkbox-unchecked-color: rgb(138, 140, 153)
+      mdc-switch-checked-thumb-color: var(--accent-color)
+      mdc-switch-checked-track-color: var(--primary-color)
+      mdc-switch-unchecked-button-color: rgb(140, 144, 159)
+      mdc-switch-unchecked-track-color: rgb(65, 71, 83)
+      navbar-background: rgb(30, 31, 32)
+      primary-color: rgb(194, 231, 254)
+      primary-luminance: 85%
+      primary-text-color: rgb(228, 228, 231)
+      secondary-background-color: rgb(40, 42, 46)
+      secondary-text-color: rgb(138 140 153)
+      sidebar-icon-color: rgb(147, 149, 159)
+      sidebar-selected-icon-color: rgb(174, 176, 183)
+      sidebar-selected-text-color: rgb(214, 215, 219)
+      state-icon-color: rgb(196, 199, 197)
+      state-inactive-color: rgb(72, 74, 78)
+    light:
+      accent-color: rgb(194, 231, 254)
+      accent-luminance: 88%
+      card-background-color: var(--lovelace-background)
+      disabled-color: rgb(173, 176, 174)
+      disabled-text-color: rgb(128, 128, 128)
+      input-background-color: rgb(234, 234, 235)
+      lovelace-background: rgb(255, 255, 255)
+      mdc-checkbox-unchecked-color: rgb(42, 43, 51)
+      mdc-switch-checked-thumb-color: var(--lovelace-background)
+      mdc-switch-checked-track-color: rgb(0, 91, 191)
+      mdc-switch-unchecked-button-color: rgb(114, 119, 133)
+      mdc-switch-unchecked-track-color: rgb(222, 226, 242)
+      navbar-background: rgb(240, 244, 250)
+      primary-color: rgb(0, 29, 53)
+      primary-luminance: 10%
+      primary-text-color: rgb(31, 31, 31)
+      secondary-background-color: rgb(215, 213, 209)
+      secondary-text-color: rgb(68, 71, 70)
+      sidebar-icon-color: rgb(88, 89, 95)
+      sidebar-selected-icon-color: rgb(29, 30, 32)
+      sidebar-selected-text-color: rgb(41, 40, 36)
+      state-icon-color: rgb(69, 71, 70)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
@@ -526,8 +443,7 @@ Material Rounded Transparent Card No Mod:
   codemirror-string: rgb(119 196 229)
   dark-primary-color: var(--primary-color)
   divider-color: var(--navbar-background)
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: var(--lovelace-background)
   ha-card-border: none
@@ -554,6 +470,7 @@ Material Rounded Transparent Card No Mod:
   link-text-color: rgb(0, 86, 207)
   mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
   mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
+  mdc-select-fill-color: var(--input-fill-color)
   mdc-select-idle-line-color: var(--color-background-base)
   mdc-text-field-fill-color: var(--input-fill-color)
   mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
@@ -566,28 +483,53 @@ Material Rounded Transparent Card No Mod:
   mdc-typography-button-font-weight: var(--title-font-weight)
   mdc-typography-font-family: var(--font-family)
   modes:
-    dark: {accent-color: 'rgb(0, 74, 118)', card-background-color: var(--lovelace-background),
-      disabled-color: 'rgb(0, 0, 0)', disabled-text-color: 'rgba(255, 255, 255, 0.5)',
-      input-background-color: 'rgb(46, 48, 56)', lovelace-background: 'rgb(19, 19,
-        20)', mdc-checkbox-unchecked-color: 'rgb(138, 140, 153)', mdc-switch-checked-thumb-color: var(--accent-color),
-      mdc-switch-checked-track-color: var(--primary-color), mdc-switch-unchecked-button-color: 'rgb(140,
-        144, 159)', mdc-switch-unchecked-track-color: 'rgb(65, 71, 83)', navbar-background: 'rgb(30,
-        31, 32)', primary-color: 'rgb(194, 231, 254)', primary-text-color: 'rgb(228,
-        228, 231)', secondary-background-color: 'rgb(40, 42, 46)', secondary-text-color: rgb(138
-        140 153), sidebar-icon-color: 'rgb(147, 149, 159)', sidebar-selected-icon-color: 'rgb(174,
-        176, 183)', sidebar-selected-text-color: 'rgb(214, 215, 219)', state-icon-color: 'rgb(196,
-        199, 197)', state-inactive-color: 'rgb(72, 74, 78)'}
-    light: {accent-color: 'rgb(194, 231, 254)', card-background-color: var(--lovelace-background),
-      disabled-color: 'rgb(173, 176, 174)', disabled-text-color: 'rgb(128, 128, 128)',
-      input-background-color: 'rgb(234, 234, 235)', lovelace-background: 'rgb(255,
-        255, 255)', mdc-checkbox-unchecked-color: 'rgb(42, 43, 51)', mdc-switch-checked-thumb-color: var(--lovelace-background),
-      mdc-switch-checked-track-color: 'rgb(0, 91, 191)', mdc-switch-unchecked-button-color: 'rgb(114,
-        119, 133)', mdc-switch-unchecked-track-color: 'rgb(222, 226, 242)', navbar-background: 'rgb(240,
-        244, 250)', primary-color: 'rgb(0, 29, 53)', primary-text-color: 'rgb(31,
-        31, 31)', secondary-background-color: 'rgb(215, 213, 209)', secondary-text-color: 'rgb(68,
-        71, 70)', sidebar-icon-color: 'rgb(88, 89, 95)', sidebar-selected-icon-color: 'rgb(29,
-        30, 32)', sidebar-selected-text-color: 'rgb(41, 40, 36)', state-icon-color: 'rgb(69,
-        71, 70)'}
+    dark:
+      accent-color: rgb(0, 74, 118)
+      accent-luminance: 27%
+      card-background-color: var(--lovelace-background)
+      disabled-color: rgb(0, 0, 0)
+      disabled-text-color: rgba(255, 255, 255, 0.5)
+      input-background-color: rgb(46, 48, 56)
+      lovelace-background: rgb(19, 19, 20)
+      mdc-checkbox-unchecked-color: rgb(138, 140, 153)
+      mdc-switch-checked-thumb-color: var(--accent-color)
+      mdc-switch-checked-track-color: var(--primary-color)
+      mdc-switch-unchecked-button-color: rgb(140, 144, 159)
+      mdc-switch-unchecked-track-color: rgb(65, 71, 83)
+      navbar-background: rgb(30, 31, 32)
+      primary-color: rgb(194, 231, 254)
+      primary-luminance: 85%
+      primary-text-color: rgb(228, 228, 231)
+      secondary-background-color: rgb(40, 42, 46)
+      secondary-text-color: rgb(138 140 153)
+      sidebar-icon-color: rgb(147, 149, 159)
+      sidebar-selected-icon-color: rgb(174, 176, 183)
+      sidebar-selected-text-color: rgb(214, 215, 219)
+      state-icon-color: rgb(196, 199, 197)
+      state-inactive-color: rgb(72, 74, 78)
+    light:
+      accent-color: rgb(194, 231, 254)
+      accent-luminance: 88%
+      card-background-color: var(--lovelace-background)
+      disabled-color: rgb(173, 176, 174)
+      disabled-text-color: rgb(128, 128, 128)
+      input-background-color: rgb(234, 234, 235)
+      lovelace-background: rgb(255, 255, 255)
+      mdc-checkbox-unchecked-color: rgb(42, 43, 51)
+      mdc-switch-checked-thumb-color: var(--lovelace-background)
+      mdc-switch-checked-track-color: rgb(0, 91, 191)
+      mdc-switch-unchecked-button-color: rgb(114, 119, 133)
+      mdc-switch-unchecked-track-color: rgb(222, 226, 242)
+      navbar-background: rgb(240, 244, 250)
+      primary-color: rgb(0, 29, 53)
+      primary-luminance: 10%
+      primary-text-color: rgb(31, 31, 31)
+      secondary-background-color: rgb(215, 213, 209)
+      secondary-text-color: rgb(68, 71, 70)
+      sidebar-icon-color: rgb(88, 89, 95)
+      sidebar-selected-icon-color: rgb(29, 30, 32)
+      sidebar-selected-text-color: rgb(41, 40, 36)
+      state-icon-color: rgb(69, 71, 70)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)

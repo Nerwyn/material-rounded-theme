@@ -1,13 +1,59 @@
+import os
 import copy
 import ruamel.yaml
+from jinja2 import Template
+from io import StringIO
 
 yaml = ruamel.yaml.YAML(typ='safe')
+yaml.width = 2048
+yaml.default_flow_style = False
 
 with open('./themes/material_rounded.yaml', 'w') as dist:
 	output = {}
 
+	# Load and build common card-mod resources
+	context = {
+		'user_colors': {
+			'jinja': '{{ user_colors }}'
+		}
+	}
+	resources = os.listdir('./src/common/')
+	for resource in resources:
+		with open(f'./src/common/{resource}', 'r') as f:
+			name, file_type = resource.split('.')
+			if name not in context:
+				context[name] = {}
+			if file_type == 'yaml':
+				with open(f'./src/common/{name}.yaml', 'r') as y:
+					context[name][file_type] = yaml.load(y)
+			else:
+				context[name][file_type] = f.read()
+	
+	context['row']['yaml']['ha-entity-toggle$']['ha-switch$'] = Template(context['row']
+		['yaml']['ha-entity-toggle$']['ha-switch$']).render(context)
+	context['card']['yaml']['hui-entities-toggle$']['.'] = Template(context['card']
+		['yaml']['hui-entities-toggle$']['.']).render(context)
+	context['card']['yaml']['hui-entities-toggle$']['ha-switch$'] = Template(context['card']
+		['yaml']['hui-entities-toggle$']['ha-switch$']).render(context)
+	
+
+	for common_template in [
+		'ha-tabs$',
+		'paper-tabs$',
+		'paper-tab$',
+		'hui-masonry-view$',
+		'hui-sidebar-view$',
+		'hui-panel-view$',
+		'masonry-layout$',
+		'horizontal-layout$',
+		'vertical-layout$',
+		'grid-layout$'
+	]:
+		context['root']['yaml'][common_template] = Template(
+			context['root']['yaml'][common_template]).render(context)
+	
 	# Material Rounded themes
-	with open('./src/Material Rounded/material_rounded.yaml', 'r') as src:
+	with open('./src/material_rounded/material_rounded.yaml', 'r') as src:
 		# Create Material Rounded theme
 		theme_title = 'Material Rounded'
 		base_theme = yaml.load(src)[theme_title]
@@ -37,9 +83,28 @@ with open('./themes/material_rounded.yaml', 'w') as dist:
 		# Add card mod fields to main versions of theme
 		output['Material Rounded']['card-mod-theme'] = 'Material Rounded'
 		output['Material Rounded Transparent Card']['card-mod-theme'] = 'Material Rounded'
-		for element in ['root', 'card', 'row']:
-			with open(f'./src/Material Rounded/{element}.yaml', 'r') as css:
-				output['Material Rounded'][f'card-mod-{element}-yaml'] = css.read()
-				output['Material Rounded Transparent Card'][f'card-mod-{element}-yaml'] = output['Material Rounded'][f'card-mod-{element}-yaml']
+
+		# Load Material Rounded user colors
+		with open('./src/material_rounded/user_colors.jinja') as f:
+			user_colors = {
+				**context,
+				'user_colors': {
+					'jinja': f.read()
+				},
+			}
+		
+		# Render templates that use user colors and set in themes
+		for element in ['row', 'card', 'root']:
+			element_yaml = {
+				**{ key: context[element]['yaml'][key] for key in context[element]['yaml'] },
+				'.': Template(context[element]['yaml']['.']).render(user_colors)
+			}
+			buffer = StringIO()
+			yaml.dump(element_yaml, buffer)
+			output['Material Rounded'][f'card-mod-{element}-yaml'] = buffer.getvalue()
+
+			# Copy card mod fields to transparent card version of theme
+			output['Material Rounded Transparent Card'][f'card-mod-{element}-yaml'] = output[
+				'Material Rounded'][f'card-mod-{element}-yaml']
 
 	yaml.dump(output, dist)

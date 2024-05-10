@@ -1,0 +1,7 @@
+/* Correct Material 3 header toggle position */
+:host {
+	position: relative !important;
+	width: 40px !important;
+	left: -2px !important;
+	top: 5px !important;
+}

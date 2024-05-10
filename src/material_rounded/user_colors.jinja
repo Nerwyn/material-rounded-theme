@@ -1,0 +1,40 @@
+* {
+	{%- if (base_color | length) -%}
+	{%- set hsl = hex2hsl(base_color).split(',') -%}
+	
+	--hue: {{ hsl[0] }};
+	--saturation: {{ hsl[1] }}%;
+	--luminance: {{ hsl[2] }}%;
+
+	--accent-color: hsl(var(--hue), var(--saturation), var(--accent-luminance));
+	--text-light-primary-color: var(--text-primary-color);
+	--mdc-theme-on-primary: var(--accent-color);
+	--mdc-theme-on-secondary: var(--accent-color);
+	--mdc-switch-checked-thumb-color: var(--accent-color);
+	--mdc-switch-checked-track-color: var(--primary-color);
+	--mdc-switch-unchecked-button-color: hsl(calc(var(--hue) + 16), 9%, 59%);
+	--mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);
+
+	--primary-color: hsl(var(--hue), var(--saturation), var(--primary-luminance));
+	--text-accent-color: var(--primary-color);
+	--dark-primary-color: var(--primary-color);
+	--light-primary-color: var(--primary-color);
+	--mdc-theme-primary: var(--primary-color);
+	--mdc-theme-secondary: var(--primary-color);
+	--paper-slider-knob-color: var(--primary-color);
+	--paper-slider-knob-start-color: var(--paper-slider-knob-color);
+	--paper-slider-pin-color: var(--paper-slider-knob-color);
+	--paper-slider-active-color: var(--paper-slider-knob-color);
+	--paper-slider-secondary-color: var(--light-primary-color);
+	--switch-checked-button-color: var(--primary-color);
+	--switch-checked-track-color: var(--switch-checked-button-color);
+	--input-hover-line-color: var(--primary-color);
+	--codemirror-property: var(--primary-color);
+	--codemirror-atom: var(--codemirror-property);
+	{%- endif -%}
+
+	--switch-checked-button-color: var(--mdc-switch-checked-thumb-color) !important;
+	--switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;
+	--switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color) !important;
+	--switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;
+}

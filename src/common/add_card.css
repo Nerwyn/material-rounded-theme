@@ -1,0 +1,3 @@
+ha-fab {
+	bottom: calc(2 * var(--footer-height) + 4px) !important;
+}

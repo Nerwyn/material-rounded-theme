@@ -1,0 +1,29 @@
+.: |-
+  {{ hex2hsl.jinja }}
+  {{ user_colors.jinja }}
+  {{ root.css }}
+
+# Evenly space icons along entire length of toolbar
+ha-tabs$: |-
+  {{ ha_tab.css }}
+paper-tabs$: |-
+  {{ ha_tab.css }}
+
+paper-tab$: |-
+  {{ paper_tab.css }}
+
+# Edit mode Add Card position fixes
+hui-masonry-view$: |-
+  {{ add_card.css }}
+hui-sidebar-view$: |-
+  {{ add_card.css }}
+hui-panel-view$: |-
+  {{ add_card.css }}
+masonry-layout$: |-
+  {{ add_card.css }}
+horizontal-layout$: |-
+  {{ add_card.css }}
+vertical-layout$: |-
+  {{ add_card.css }}
+grid-layout$: |-
+  { add_card.css }}

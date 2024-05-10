@@ -1,0 +1,31 @@
+/* Material 3 Toggles */
+:host {
+	padding: 3px 5px !important;
+	--switch-checked-button-color: var(--mdc-switch-checked-thumb-color);
+	--switch-checked-track-color: var(--mdc-switch-checked-track-color);
+	--switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color);
+	--switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color);
+}
+.mdc-switch__track {
+	height: 24px !important;
+	width: 40px !important;
+	border-radius: 32px !important;
+	opacity: 1 !important;
+}
+.mdc-switch--checked > .mdc-switch__track {
+	opacity: 1 !important;
+}
+.mdc-switch__thumb-underlay {
+	top: -12px !important;
+	left: -12px !important;
+}
+.mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {
+	background-color: var(--mdc-switch-unchecked-button-color) !important;
+	height: 14px !important;
+	width: 14px !important;
+	border: none !important;
+}
+.mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {
+	border: 2px solid gray !important;
+	--border-color: var(--mdc-switch-unchecked-button-color);
+}
