@@ -4,3 +4,5 @@
 ha-entity-toggle$:
   ha-switch$: |-
     {{ ha_switch.css }}
+ha-textfield$: |-
+  {{ ha_textfield.css }}

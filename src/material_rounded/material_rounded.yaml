@@ -145,13 +145,14 @@ Material Rounded:
   input-disabled-fill-color: rgba(var(--input-background-color), 0.5)
   input-disabled-ink-color: var(--disabled-text-color)
   input-disabled-label-ink-color: var(--disabled-text-color)
-  input-idle-line-color: var(--background-color)
-  input-dropdown-icon-color: var(--secondary-text-color)
+  input-idle-line-color: rgba(0, 0, 0, 0)
   input-hover-line-color: var(--primary-color)
+  input-dropdown-icon-color: var(--secondary-text-color)
   mdc-select-fill-color: var(--input-fill-color)
   mdc-text-field-fill-color: var(--input-fill-color)
   mdc-select-idle-line-color: var(--color-background-base)
-  mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
+  mdc-text-field-idle-line-color: var(--input-idle-line-color)
+  mdc-text-field-hover-line-color: var(--input-hover-line-color)
 
   # Editor
   code-editor-background-color: var(--navbar-background)

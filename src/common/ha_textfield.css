@@ -1,0 +1,4 @@
+label {
+	border-radius: var(--border-radius) !important;
+	overflow: hidden !important;
+}
