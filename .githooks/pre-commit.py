@@ -9,7 +9,7 @@ def main():
 	yaml.width = 4096
 	yaml.default_flow_style = False
 
-	with open('./themes/material_rounded.yaml', 'w') as dist:
+	with open('./themes/dist.yaml', 'w') as dist:
 		output = {}
 
 		# Load common card-mod resources

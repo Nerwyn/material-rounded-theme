@@ -1,8 +1,3 @@
 .: |-
   {{ hex2hsl.jinja }}
   {{ user_colors.jinja }}
-ha-more-info-info$:
-  state-card-content$:
-    state-card-input_text$:
-      ha-textfield$: |-
-        {{ ha_textfield.css }}
