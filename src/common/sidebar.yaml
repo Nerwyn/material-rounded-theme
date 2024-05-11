@@ -1,3 +1,5 @@
 .: |-
   {{ hex2hsl.jinja }}
   {{ user_colors.jinja }}
+paper-icon-item$: |-
+  {{ paper_icon_item.css }}

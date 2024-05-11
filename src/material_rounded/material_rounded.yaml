@@ -8,11 +8,9 @@ Material Rounded:
       state-icon-color: rgb(196, 199, 197)
       mdc-checkbox-unchecked-color: rgb(138, 140, 153)
       sidebar-icon-color: rgb(147, 149, 159)
-      sidebar-selected-icon-color: rgb(174, 176, 183)
       primary-text-color: rgb(228, 228, 231)
       secondary-text-color: rgb(138 140 153)
       disabled-text-color: rgba(255, 255, 255, 0.5)
-      sidebar-selected-text-color: rgb(214, 215, 219)
       lovelace-background: rgb(19, 19, 20)
       navbar-background: rgb(30, 31, 32)
       secondary-background-color: rgb(40, 42, 46)
@@ -33,11 +31,9 @@ Material Rounded:
       state-icon-color: rgb(69, 71, 70)
       mdc-checkbox-unchecked-color: rgb(42, 43, 51)
       sidebar-icon-color: rgb(88, 89, 95)
-      sidebar-selected-icon-color: rgb(29, 30, 32)
       primary-text-color: rgb(31, 31, 31)
       secondary-text-color: rgb(68, 71, 70)
       disabled-text-color: rgb(128, 128, 128)
-      sidebar-selected-text-color: rgb(41, 40, 36)
       lovelace-background: rgb(255, 255, 255)
       navbar-background: rgb(240, 244, 250)
       secondary-background-color: rgb(215, 213, 209)
@@ -101,6 +97,8 @@ Material Rounded:
   app-header-edit-background-color: var(--navbar-background)
 
   # Sidebar
+  sidebar-selected-text-color: var(--primary-text-color)
+  sidebar-selected-icon-color: var(--primary-color)
   sidebar-text-color: var(--sidebar-icon-color)
   sidebar-background-color: var(--navbar-background)
 
