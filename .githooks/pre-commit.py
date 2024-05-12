@@ -9,7 +9,7 @@ def main():
 	yaml.width = 4096
 	yaml.default_flow_style = False
 
-	with open('./themes/dist.yaml', 'w') as dist:
+	with open('./themes/material_rounded.yaml', 'w') as dist:
 		output = {}
 
 		# Load common card-mod resources
@@ -35,7 +35,7 @@ def main():
 			if 'yaml' in common_context[element]:
 				common_context[element]['yaml'] = recursiveRender(common_context[element]['yaml'], common_context)
 
-		with open('./src/material_rounded/material_rounded.yaml', 'r') as src:
+		with open('./src/material_rounded/theme.yaml', 'r') as src:
 			# Create Material Rounded theme
 			theme_title = 'Material Rounded'
 			base_theme = yaml.load(src)[theme_title]

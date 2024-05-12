@@ -1,0 +1,35 @@
+/* Disable dashboard pre-select background */
+:not(.iron-selected) > paper-icon-item:focus::before {
+	display: none !important;
+}
+
+/* Animate background when expanding/retracting sidebar */
+paper-icon-item {
+	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* Change background of current dashboard icon */
+.iron-selected paper-icon-item::before {
+	content: '';
+	background-color: var(--accent-color) !important;
+	opacity: 1 !important;
+	position: absolute !important;
+	top: 5% !important;
+	height: 90% !important;
+	width: 100% !important;
+	border-radius: var(--border-radius) !important;
+	will-change: unset !important;
+}
+paper-icon-item::before {
+	content: '';
+	width: 0px;
+	position: absolute;
+	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
+	left: 50% !important;
+	transform: translateX(-50%);
+}
+
+/* Display current dashboard text above background */
+.item-text {
+	z-index: 2;
+}

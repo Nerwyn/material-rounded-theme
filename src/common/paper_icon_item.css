@@ -1,7 +1,0 @@
-:host::before {
-	background-color: var(--accent-color) !important;
-	opacity: 1 !important;
-	height: 70% !important;
-	top: 15% !important;
-	border-radius: var(--border-radius) !important;
-}
