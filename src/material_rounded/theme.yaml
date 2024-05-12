@@ -127,8 +127,8 @@ Material Rounded:
   # Switch
   switch-checked-button-color: var(--mdc-switch-checked-thumb-color)
   switch-checked-track-color: var(--mdc-switch-checked-track-color)
-  switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
-  switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
+  switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color)
+  switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color)
 
   # Toggles
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
