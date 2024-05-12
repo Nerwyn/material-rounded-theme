@@ -1,3 +1,4 @@
+/* Move user picture above navigation background */
 .picture {
 	z-index: 2;
 }

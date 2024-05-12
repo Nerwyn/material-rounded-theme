@@ -1,3 +1,4 @@
+/* Evenly space icons along entire length of toolbar */
 #tabsContent.scrollable {
 	width: 100% !important;
 	display: flex !important;

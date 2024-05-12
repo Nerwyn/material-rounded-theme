@@ -6,10 +6,16 @@
 	border-radius: 16px !important;
 }
 
-/* Decrease border radius */
+/* Decrease border radius and increase height */
 button {
 	border-radius: 16px !important;
+	height: 56px !important;
 }
 mwc-ripple {
 	border-radius: 16px !important;
+}
+
+/* Remove all caps */
+.mdc-fab__label {
+	text-transform: none !important;
 }

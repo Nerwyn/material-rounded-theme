@@ -11,9 +11,9 @@
 
 Material Rounded theme for Home Assistant influenced by Material You on Android.
 
-This theme aims to match the styling of the Google Home app as closely as possible, so it may change over time as the style of the Google Home app changes.
+This theme aims to match the styling of the Google Home app as closely as possible, so it may change over time as the style of the Google Home app changes. It also aims to implement Material You redesigns of elements.
 
-Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for header/footer modifications and Material You coloring. If you have card-mod installed and do not want these changes to apply, use the "No Mod" versions of this theme.
+Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for toolbar modifications, other Material You component redesigns, and Material You coloring. If you have card-mod installed and do not want these changes to apply, use the "No Mod" versions of this theme.
 
 Don't like blue? You can choose a different Material You base color! See below for more. Also requires card-mod.
 
@@ -48,16 +48,47 @@ Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelac
 5. Refresh Home Assistant.
 6. Navigate to your Profile, and select `Material Rounded` under Theme along with your preference for light or dark mode.
 
-## Card Mod Powered Footer
+## Powered By Card Mod
 
-This theme uses [card-mod](https://github.com/thomasloven/lovelace-card-mod) to:
+This theme is super-charged by [card-mod](https://github.com/thomasloven/lovelace-card-mod)! Using card-mod many components have received Material You design upgrades.
 
--   Turn the toolbar header into a footer.
--   Remove the selection bar.
--   Space the view icons evenly along the entire toolbar.
--   Add the view name below the icon.
--   Highlight the current view with a colored icon and background behind the icon.
--   Add a 12px margin to each side of the view.
+### Navigation
+
+Redesigns the toolbar and sidebar buttons to follow Material You navigation component guidelines.
+
+#### [Navigation Bar](https://m3.material.io/components/navigation-bar/overview)
+
+-   Converts the header toolbar to a footer.
+-   Removes the default selection bar and ripple.
+-   Spaces the view icons evenly along the entire toolbar.
+-   Adds view names below the view icons.
+-   Highlights the current view with a colored icon and background behind the icon.
+-   Transition animation on view icon background when selected.
+
+#### [Navigation Drawer](https://m3.material.io/components/navigation-drawer/overview)
+
+Desktop sidebar expanded and mobile.
+
+-   Icon and background of current view now uses primary and accent colors.
+-   Transition animation on view icon background when selected.
+
+#### [Navigation Rail](https://m3.material.io/components/navigation-rail/overview)
+
+Desktop sidebar collapsed.
+
+-   Background of current view now uses primary and accent colors.
+-   Current view icon background is a circle to match Material You example of a navigation rail menu without labels.
+
+### [Switches](https://m3.material.io/components/switch/overview)
+
+-   Track now encompasses thumb.
+-   Removes the default ripple in favor of a thumb that changes size when used.
+-   Uses primary and accent colors for the switch thumb and track.
+
+### Views
+
+-  Adds a 12px margin to each side of the view to match the Google Home app.
+-  Add card button updated to match the [extended FAB specification](https://m3.material.io/components/extended-fab/overview).
 
 If you do not want these changes, use the "No Mod" versions of the theme.
 
