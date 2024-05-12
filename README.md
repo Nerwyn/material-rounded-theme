@@ -84,7 +84,7 @@ If you are using the Home Assistant Android companion app, you can enable the ac
 3. Scroll down to the section titled `Dynamic color` and click `Accent color`.
 4. Toggle `Enable sensor` on. It should now return your phone's Material You base color as a hex code.
 
-**NOTE**: Card mod does not support all Home Assistant pages. Namely the developer tools and settings pages, and view configuration, add card, and edit card configuration popups. These pages will still use the theme default colors.
+**NOTE**: Card mod does not support all Home Assistant pages. Namely the developer tools and settings pages, and view configuration, add card, and edit card configuration popups. These pages will still use the theme default colors on parts of the UI.
 
 ## Similar Projects and Credits
 
