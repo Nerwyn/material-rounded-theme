@@ -1,4 +1,4 @@
-/* Material 3 Toggles */
+/* Material 3 colors and adjust padding to match footprint of old switch  */
 :host {
 	padding: 3px 5px !important;
 	--switch-checked-button-color: var(--mdc-switch-checked-thumb-color);
@@ -6,6 +6,8 @@
 	--switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color);
 	--switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color);
 }
+
+/* Increase track size and make it always opaque */
 .mdc-switch__track {
 	height: 24px !important;
 	width: 40px !important;
@@ -15,17 +17,46 @@
 .mdc-switch--checked > .mdc-switch__track {
 	opacity: 1 !important;
 }
+
+/* Remove ripple */
+mwc-ripple {
+	display: none !important;
+}
+
+/* Fix thumb position */
 .mdc-switch__thumb-underlay {
 	top: -12px !important;
 	left: -12px !important;
 }
+
+/* Switch on thumb size */
+.mdc-switch__thumb {
+	height: var(
+		--thumb-size-active,
+		var(--thumb-size-off, var(--thumb-size-on))
+	) !important;
+	width: var(
+		--thumb-size-active,
+		var(--thumb-size-off, var(--thumb-size-on))
+	) !important;
+	--thumb-size-on: 20px;
+}
+
+/* Switch off color and thumb size */
 .mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {
 	background-color: var(--mdc-switch-unchecked-button-color) !important;
-	height: 14px !important;
-	width: 14px !important;
 	border: none !important;
+	--thumb-size-off: 14px;
 }
+
+/* Switch off border */
 .mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {
 	border: 2px solid gray !important;
 	--border-color: var(--mdc-switch-unchecked-button-color);
+}
+
+/* Thumb active size */
+.mdc-switch__thumb:active {
+	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
+	--thumb-size-active: 22px !important;
 }
