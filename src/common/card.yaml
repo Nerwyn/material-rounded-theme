@@ -1,8 +1,7 @@
 .: |-
   {{ hex2hsl.jinja }}
   {{ user_colors.jinja }}
+  {{ card.css }}
 hui-entities-toggle$:
-  .: |-
-    {{ card.css }}
   ha-switch$: |-
     {{ ha_switch.css }}
