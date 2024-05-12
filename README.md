@@ -87,8 +87,8 @@ Desktop sidebar collapsed.
 
 ### Views
 
--  Adds a 12px margin to each side of the view to match the Google Home app.
--  Add card button updated to match the [extended FAB specification](https://m3.material.io/components/extended-fab/overview).
+-   Adds a 12px margin to each side of the view to match the Google Home app.
+-   Add card button updated to better match the [extended FAB specification](https://m3.material.io/components/extended-fab/overview).
 
 If you do not want these changes, use the "No Mod" versions of the theme.
 

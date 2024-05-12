@@ -18,4 +18,5 @@ mwc-ripple {
 /* Remove all caps */
 .mdc-fab__label {
 	text-transform: none !important;
+	font-size: 11pt;
 }
