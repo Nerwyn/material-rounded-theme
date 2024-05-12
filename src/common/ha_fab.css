@@ -1,4 +1,14 @@
-ha-fab {
+/* Fix add card button position  */
+:host {
 	position: fixed !important;
-	bottom: calc(2 * var(--footer-height) + 4px) !important;
+	bottom: calc(2 * var(--footer-height) + 16px) !important;
+	overflow: hidden;
+}
+
+/* Decrease border radius */
+button {
+	border-radius: 16px !important;
+}
+mwc-ripple {
+	border-radius: 16px !important;
 }
