@@ -8,7 +8,7 @@ paper-icon-item {
 	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
-/* Change background of current dashboard icon */
+/* Change background of current dashboard icon with transition */
 .iron-selected paper-icon-item::before {
 	content: '';
 	background-color: var(--accent-color) !important;
@@ -32,4 +32,9 @@ paper-icon-item::before {
 /* Display current dashboard text above background */
 .item-text {
 	z-index: 2;
+}
+
+/* Add shadow to badges so it doesn't blend with background */
+.configuration-badge {
+	box-shadow: inset 0px 0px 0px 1px var(--sidebar-icon-color);
 }
