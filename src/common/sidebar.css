@@ -1,11 +1,9 @@
-/* Disable dashboard pre-select background */
-:not(.iron-selected) > paper-icon-item:focus::before {
-	display: none !important;
-}
-
 /* Animate background when expanding/retracting sidebar */
 paper-icon-item {
 	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1);
+	height: 48px;
+	left: 4px;
+	margin: 0 !important;
 }
 
 /* Change background of current dashboard icon with transition */
@@ -14,10 +12,8 @@ paper-icon-item {
 	background-color: var(--accent-color) !important;
 	opacity: 1 !important;
 	position: absolute !important;
-	top: 5% !important;
-	height: 90% !important;
 	width: 100% !important;
-	border-radius: var(--border-radius) !important;
+	border-radius: 128px !important;
 	will-change: unset !important;
 }
 paper-icon-item::before {
