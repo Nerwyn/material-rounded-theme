@@ -33,7 +33,7 @@ paper-tabs {
 /* Add background and color current view icon */
 paper-tab.iron-selected > ha-icon {
 	width: 100%;
-	max-width: 72px;
+	max-width: 64px;
 	color: var(--primary-color);
 	background-color: var(--accent-color);
 	border-radius: 16px;
