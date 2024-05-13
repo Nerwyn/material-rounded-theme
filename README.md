@@ -9,7 +9,7 @@
 
 # Material Rounded Theme
 
-Material Rounded theme for Home Assistant influenced by Material You on Android.
+Themes for Home Assistant influenced by Material You by Google on Android.
 
 This theme aims to match the styling of the Google Home app as closely as possible, so it may change over time as the style of the Google Home app changes. It also aims to implement Material You redesigns of elements.
 
@@ -39,16 +39,13 @@ This theme also includes "Transparent Card" versions with card backgrounds that 
 
 Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card).
 
-## Installation
+### Updated Material You Components
 
-1. Navigate to HACS (install from [here](https://hacs.xyz/) if you do not have it yet).
-2. Navigate to `Frontend`.
-3. Click `+ EXPLORE & DOWNLOAD REPOSITORIES` and search for `Material Rounded Theme`.
-4. Open this repository in HACS and click `DOWNLOAD`.
-5. Refresh Home Assistant.
-6. Navigate to your Profile, and select `Material Rounded` under Theme along with your preference for light or dark mode.
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/components-dark.png" alt="components-dark" width="600"/>
 
-## Powered By Card Mod
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/components-light.png" alt="components-light" width="600"/>
+
+## Material You Components, Powered By Card Mod
 
 This theme is super-charged by [card-mod](https://github.com/thomasloven/lovelace-card-mod)! Using card-mod many components have received Material You design upgrades.
 
@@ -115,7 +112,16 @@ If you are using the Home Assistant Android companion app, you can enable the ac
 3. Scroll down to the section titled `Dynamic color` and click `Accent color`.
 4. Toggle `Enable sensor` on. It should now return your phone's Material You base color as a hex code.
 
-**NOTE**: Card mod does not support all Home Assistant pages. Namely the developer tools and settings pages, and view configuration, add card, and edit card configuration popups. These pages will still use the theme default colors on parts of the UI.
+**NOTE**: Card mod does not support all Home Assistant frontend elements like the developer tools and settings pages, and thew view configuration, add card, edit card configuration, and assist dialogues. These pages will still use the theme default colors on parts of the UI.
+
+## Installation
+
+1. Navigate to HACS (install from [here](https://hacs.xyz/) if you do not have it yet).
+2. Navigate to `Frontend`.
+3. Click `+ EXPLORE & DOWNLOAD REPOSITORIES` and search for `Material Rounded Theme`.
+4. Open this repository in HACS and click `DOWNLOAD`.
+5. Refresh Home Assistant.
+6. Navigate to your Profile, and select `Material Rounded` under Theme along with your preference for light or dark mode.
 
 ## Similar Projects and Credits
 
