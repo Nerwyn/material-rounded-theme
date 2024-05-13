@@ -32,7 +32,7 @@ mwc-ripple {
 	--thumb-left-on: -4px;
 }
 .mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb-underlay {
-	--thumb-left-on: -8px;
+	--thumb-left-off: -8px;
 }
 
 /* Switch on thumb size */
