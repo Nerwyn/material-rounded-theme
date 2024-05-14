@@ -1,6 +1,7 @@
 Material Rounded:
   modes:
     dark:
+      dark-mode: 1
       accent-color: rgb(0, 74, 118)
       primary-color: rgb(194, 231, 254)
       accent-luminance: 27%
@@ -24,6 +25,7 @@ Material Rounded:
       mdc-switch-unchecked-track-color: rgb(65, 71, 83)
 
     light:
+      dark-mode: 0
       accent-color: rgb(194, 231, 254)
       primary-color: rgb(0, 29, 53)
       accent-luminance: 88%
@@ -40,7 +42,7 @@ Material Rounded:
       disabled-color: rgb(173, 176, 174)
       input-background-color: rgb(234, 234, 235)
       card-background-color: rgb(233, 238, 246)
-      mdc-switch-checked-thumb-color: var(--lovelace-background)
+      mdc-switch-checked-thumb-color: rgb(255, 255, 255)
       mdc-switch-checked-track-color: rgb(0, 91, 191)
       mdc-switch-unchecked-button-color: rgb(114, 119, 133)
       mdc-switch-unchecked-track-color: rgb(222, 226, 242)
@@ -79,7 +81,7 @@ Material Rounded:
   rgb-primary-text-color: var(--primary-text-color)
   text-field-overflow: hidden;
 
-  # Main interface colors
+  # Main Interface Colors
   primary-background-color: var(--navbar-background)
   dark-primary-color: var(--primary-color)
   light-primary-color: var(--primary-color)
@@ -90,7 +92,7 @@ Material Rounded:
   mdc-theme-secondary: var(--primary-color)
   mdc-theme-on-secondary: var(--accent-color)
 
-  # Navbar
+  # Toolbar
   app-header-background-color: var(--lovelace-background)
   app-header-text-color: var(--primary-text-color)
   app-header-edit-text-color: var(--app-header-text-color)
@@ -114,17 +116,17 @@ Material Rounded:
   ha-config-card-border-radius: 16px
   paper-item-icon-color: var(--state-icon-color)
 
-  # Dialog
+  # Dialogs
   mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
 
-  # Slider
+  # Sliders
   paper-slider-knob-color: var(--primary-color)
   paper-slider-knob-start-color: var(--paper-slider-knob-color)
   paper-slider-pin-color: var(--paper-slider-knob-color)
   paper-slider-active-color: var(--paper-slider-knob-color)
   paper-slider-secondary-color: var(--light-primary-color)
 
-  # Switch
+  # Switches
   switch-checked-button-color: var(--mdc-switch-checked-thumb-color)
   switch-checked-track-color: var(--mdc-switch-checked-track-color)
   switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color)
@@ -137,7 +139,7 @@ Material Rounded:
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
 
-  # Text Fields an Dropdown
+  # Text Fields and Dropdowns
   input-fill-color: var(--input-background-color)
   input-ink-color: var(--primary-text-color)
   input-label-ink-color: var(--primary-text-color)
@@ -154,7 +156,7 @@ Material Rounded:
   mdc-text-field-idle-line-color: var(--input-idle-line-color)
   mdc-text-field-hover-line-color: var(--input-hover-line-color)
 
-  # Editor
+  # Editors
   code-editor-background-color: var(--navbar-background)
   codemirror-meta: var(--primary-text-color)
   codemirror-property: var(--primary-color)
@@ -162,8 +164,3 @@ Material Rounded:
   codemirror-string: rgb(119 196 229)
   codemirror-keyword: rgb(140 169 255)
   codemirror-number: rgb(255 91 29)
-
-  # HACS
-  hacs-new-color: rgb(27 153 123)
-  hacs-error-color: rgb(182 46 95)
-  link-text-color: rgb(0, 86, 207)

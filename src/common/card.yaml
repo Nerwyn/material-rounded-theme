@@ -8,7 +8,7 @@ hui-entities-toggle$:
   ha-switch$: |-
     {{ ha_switch.css }}
 
-# Settings toggles
+# Profile toggles
 ha-advanced-mode-row$:
   ha-switch$: |-
     {{ ha_switch.css }}
