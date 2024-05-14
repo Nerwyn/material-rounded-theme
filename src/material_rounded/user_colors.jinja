@@ -8,15 +8,15 @@
 	{%- set base_color = states("sensor.material_rounded_base_color") -%}
 	{%- endif -%}
 
-	{%- if (base_color | length) -%}
+	{%- if (base_color | length) in [6, 7] -%}
 	{%- set hsl = hex2hsl(base_color).split(',') -%}
 	
 	--accent-color: hsl({{ hsl[0] }}, {{ hsl[1] }}%, var(--accent-luminance));
 	--text-light-primary-color: var(--text-primary-color);
 	--mdc-theme-on-primary: var(--accent-color);
 	--mdc-theme-on-secondary: var(--accent-color);
-	--mdc-switch-checked-thumb-color: hsl(calc({{ hsl[0] }} * var(--dark-mode)), calc({{ hsl[1] }}% * var(--dark-mode)), calc(var(--accent-luminance) * var(--dark-mode) + 100% * (1 - var(--dark-mode))));
-	--mdc-switch-checked-track-color: var(--primary-color);
+	--mdc-switch-checked-thumb-color: hsl(calc(({{ hsl[0] }} + 2) * var(--dark-mode)), calc({{ hsl[1] }}% * var(--dark-mode)), var(--mdc-switch-checked-thumb-luminace));
+	--mdc-switch-checked-track-color: hsl(calc({{ hsl[0] }} + 9 * var(--dark-mode)), 100%, var(--mdc-switch-checked-track-luminace));
 	--mdc-switch-unchecked-thumb-color: hsl(calc({{ hsl[0] }} + 16), 9%, 59%);
 	--mdc-switch-unchecked-track-color: hsl(calc({{ hsl[0] }} + 9), 12%, 29%);
 
