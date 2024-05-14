@@ -1,14 +1,9 @@
 Material Rounded:
   modes:
     dark:
-      # For Material You color calculations
       dark-mode: 1
       accent-luminance: 27%
       primary-luminance: 85%
-      mdc-switch-checked-thumb-luminace: 20%
-      mdc-switch-checked-track-luminace: 84%
-
-      # Base theme colors
       accent-color: rgb(0, 74, 118)
       primary-color: rgb(194, 231, 254)
       state-icon-color: rgb(196, 199, 197)
@@ -30,14 +25,9 @@ Material Rounded:
       mdc-switch-unchecked-track-color: rgb(65, 71, 83)
 
     light:
-      # For Material You color calculations
       dark-mode: 0
       accent-luminance: 88%
       primary-luminance: 10%
-      mdc-switch-checked-thumb-luminace: 100%
-      mdc-switch-checked-track-luminace: 37%
-
-      # Base theme colors
       accent-color: rgb(194, 231, 254)
       primary-color: rgb(0, 29, 53)
       state-icon-color: rgb(69, 71, 70)
