@@ -5,9 +5,9 @@
 
 # Evenly space icons along entire length of toolbar
 ha-tabs$: |-
-  {{ ha_tab.css }}
+  {{ ha_tabs.css }}
 paper-tabs$: |-
-  {{ ha_tab.css }}
+  {{ ha_tabs.css }}
 
 paper-tab$: |-
   {{ paper_tab.css }}
