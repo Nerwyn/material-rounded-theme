@@ -148,8 +148,9 @@ Material Rounded:
   input-hover-line-color: var(--primary-color)
   input-dropdown-icon-color: var(--secondary-text-color)
   mdc-select-fill-color: var(--input-fill-color)
+  mdc-select-idle-line-color: var(--input-idle-line-color)
+  mdc-select-hover-line-color: var(--input-hover-line-color)
   mdc-text-field-fill-color: var(--input-fill-color)
-  mdc-select-idle-line-color: var(--color-background-base)
   mdc-text-field-idle-line-color: var(--input-idle-line-color)
   mdc-text-field-hover-line-color: var(--input-hover-line-color)
 
