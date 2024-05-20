@@ -84,12 +84,7 @@ def main():
 					# Save template to buffer and then read to get yaml as string
 					buffer = StringIO()
 					yaml.dump(element_yaml, buffer)
-					element = element.replace('_', '-')
-					output['Material Rounded'][f'card-mod-{element}-yaml'] = buffer.getvalue().strip()
-
-					# Copy card mod fields to transparent card version of theme
-					output['Material Rounded Transparent Card'][f'card-mod-{element}-yaml'] = output[
-						'Material Rounded'][f'card-mod-{element}-yaml']
+					output['Material Rounded'][f'card-mod-{element.replace('_', '-')}-yaml'] = buffer.getvalue().strip()
 
 		yaml.dump(output, dist)
 

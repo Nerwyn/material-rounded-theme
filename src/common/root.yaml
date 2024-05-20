@@ -10,3 +10,26 @@ paper-tabs$: |-
   {{ ha_tabs.css }}
 paper-tab$: |-
   {{ paper_tab.css }}
+
+# Edit mode Add Card position fixes
+hui-masonry-view$:
+  ha-fab$: |-
+    {{ ha_fab.css }}
+hui-sidebar-view$:
+  ha-fab$: |-
+    {{ ha_fab.css }}
+hui-panel-view$:
+  ha-fab$: |-
+    {{ ha_fab.css }}
+masonry-layout$:
+  ha-fab$: |-
+    {{ ha_fab.css }}
+horizontal-layout$:
+  ha-fab$: |-
+    {{ ha_fab.css }}
+vertical-layout$:
+  ha-fab$: |-
+    {{ ha_fab.css }}
+grid-layout$:
+  ha-fab$: |-
+    {{ ha_fab.css }}

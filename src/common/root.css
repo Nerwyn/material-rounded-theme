@@ -4,7 +4,7 @@
 	bottom: 0 !important;
 	height: var(--footer-height) !important;
 	background-color: var(--navbar-background) !important;
-	--mdc-icon-button-size: 32px;
+	--mdc-icon-button-size: 36px;
 }
 
 /* Modify toolbar height but only for card-mod version of theme */
@@ -108,4 +108,19 @@ paper-tab.iron-selected::after {
 /* Restore icon size for subview back button */
 ha-icon-button-arrow-prev[slot='navigationIcon'] {
 	--mdc-icon-button-size: 48px;
+}
+
+/* Fix view box to work with footer and add padding to sides */
+#view {
+	padding-top: 0 !important;
+	padding-bottom: var(--footer-height) !important;
+	padding-left: 12px !important;
+	padding-right: 12px !important;
+}
+
+/* Fix view box when in edit mode */
+.edit-mode > #view {
+	padding-top: calc(2 * var(--footer-height)) !important;
+	padding-bottom: 0 !important;
+	bottom: calc(2 * var(--footer-height)) !important;
 }
