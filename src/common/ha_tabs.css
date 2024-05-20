@@ -4,3 +4,10 @@
 	display: flex !important;
 	justify-content: space-between !important;
 }
+
+/* Reduce size of edit mode scroll buttons */
+paper-icon-button {
+	padding: 0 !important;
+	margin: 0 !important;
+	width: 24px !important;
+}

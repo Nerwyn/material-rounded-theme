@@ -2,7 +2,6 @@
 .header {
 	top: unset !important;
 	bottom: 0 !important;
-	height: var(--footer-height) !important;
 	background-color: var(--navbar-background) !important;
 	--mdc-icon-button-size: 36px;
 }
@@ -23,10 +22,8 @@ paper-tabs {
 	height: 50%;
 }
 
-/* Remove default current view ripple */
-ha-tabs,
-paper-tabs {
-	--paper-tabs-selection-bar-color: none !important;
+/* Remove toolbar margin */
+ha-tabs {
 	margin: 0 !important;
 }
 
@@ -39,11 +36,6 @@ paper-tab.iron-selected > ha-icon {
 	border-radius: 16px;
 }
 
-/* Prevent icon from shrinking on small width displays */
-paper-tab > ha-svg-icon {
-	min-width: 24px;
-}
-
 /* View icon transition and display centering */
 paper-tab > ha-icon {
 	width: 24px;
@@ -51,7 +43,6 @@ paper-tab > ha-icon {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	align-self: center;
 	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
@@ -61,8 +52,12 @@ paper-tab {
 	display: inline-flex;
 	flex-direction: column;
 	flex: 1;
-	justify-items: stretch;
 	min-width: min(calc((100vw - 2 * var(--mdc-icon-button-size)) / 5), 72px);
+}
+
+/* Prevent edit mode icon from shrinking on small width displays */
+paper-tab > ha-svg-icon {
+	min-width: 24px;
 }
 
 /* Make edit mode current view tab fit all buttons */
@@ -85,14 +80,10 @@ paper-tab {
 paper-tab::after {
 	content: attr(aria-label);
 	text-transform: none;
-	text-align: center;
-	position: relative;
 	font-weight: 500;
 	font-size: min(3vw, 13px);
 	opacity: 0.8;
 	padding: 0px 1px;
-	max-width: -webkit-fill-available;
-	max-width: -moz-available;
 	text-wrap: wrap;
 	overflow: hidden;
 	line-height: 14px;
