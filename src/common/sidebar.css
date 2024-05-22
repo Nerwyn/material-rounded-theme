@@ -23,7 +23,7 @@ paper-icon-item::before {
 
 /* Change background of current dashboard icon with transition */
 .iron-selected paper-icon-item::before {
-	background-color: var(--accent-color) !important;
+	background: var(--accent-color) !important;
 	opacity: 1 !important;
 	width: 100% !important;
 	will-change: unset !important;

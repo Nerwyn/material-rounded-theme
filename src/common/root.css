@@ -2,7 +2,7 @@
 .header {
 	top: unset !important;
 	bottom: 0 !important;
-	background-color: var(--navbar-background) !important;
+	background: var(--navbar-background) !important;
 	--mdc-icon-button-size: 36px;
 }
 
@@ -32,7 +32,7 @@ paper-tab.iron-selected ha-icon {
 	width: 100%;
 	max-width: 64px;
 	color: var(--primary-color);
-	background-color: var(--accent-color);
+	background: var(--accent-color);
 }
 
 paper-tab {
@@ -52,7 +52,7 @@ ha-icon {
 	justify-content: center;
 	align-items: center;
 	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1);
-	will-change: width, color, background-color;
+	will-change: width, color, background;
 }
 
 /* Prevent edit mode icon from shrinking on small width displays */
@@ -89,10 +89,8 @@ paper-tab.iron-selected::after {
 
 /* Fix view box to work with footer and add padding to sides */
 #view {
-	padding-top: 0 !important;
-	padding-bottom: var(--footer-height) !important;
-	padding-left: 12px !important;
-	padding-right: 12px !important;
+	padding: 0 12px var(--footer-height) !important;
+	background: var(--lovelace-background) !important;
 }
 
 /* Fix edit mode header height */

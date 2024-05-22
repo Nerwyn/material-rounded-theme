@@ -44,13 +44,13 @@
 		--thumb-size-active,
 		var(--thumb-size-on, var(--thumb-size-off))
 	) !important;
-	background-color: var(--mdc-switch-unchecked-button-color) !important;
+	background: var(--mdc-switch-unchecked-button-color) !important;
 	border: none !important;
 	--thumb-size-off: 16px;
 }
 /* Switch on thumb color and size */
 .mdc-switch--checked .mdc-switch__thumb {
-	background-color: var(--mdc-switch-checked-button-color) !important;
+	background: var(--mdc-switch-checked-button-color) !important;
 	--thumb-size-on: 24px;
 }
 
