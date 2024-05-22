@@ -115,7 +115,6 @@ paper-tab.iron-selected::after {
 
 .edit-mode #view {
 	/* Fix view box when in edit mode */
-	padding-top: calc(2 * var(--footer-height)) !important;
-	padding-bottom: 0 !important;
+	padding: calc(2 * var(--footer-height)) 12px 0 !important;
 	bottom: calc(2 * var(--footer-height)) !important;
 }
