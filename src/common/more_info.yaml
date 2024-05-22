@@ -1,9 +1,6 @@
-.: |-
+.: >-
   {{ hex2hsl.jinja }}
   {{ user_colors.jinja }}
-ha-more-info-info$:
-  state-card-content$:
-    state-card-toggle$:
-      ha-entity-toggle$:
-        ha-switch$: |-
-          {{ ha_switch.css }}
+? ha-more-info-info$ state-card-content$ state-card-toggle$ ha-entity-toggle$ ha-switch$
+: >-
+  {{ ha_switch.css }}

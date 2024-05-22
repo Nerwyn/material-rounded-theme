@@ -34,6 +34,8 @@ def main():
 		for element in common_context:
 			if 'yaml' in common_context[element]:
 				common_context[element]['yaml'] = recursiveRender(common_context[element]['yaml'], common_context)
+				if 'ha-advanced-mode-row$ ha-switch$' in common_context[element]['yaml']:
+					print(common_context[element]['yaml'])
 
 		with open('./src/material_rounded/theme.yaml', 'r') as src:
 			# Create Material Rounded theme
@@ -86,7 +88,12 @@ def main():
 					yaml.dump(element_yaml, buffer)
 					output['Material Rounded'][f'card-mod-{element.replace('_', '-')}-yaml'] = buffer.getvalue().strip()
 
-		yaml.dump(output, dist)
+		# Get rid of extra new lines before dumping
+		buffer = StringIO()
+		yaml.dump(output, buffer)
+		yamlString = buffer.getvalue().strip().replace('\n\n', ' ')
+		dist.write(yamlString)
+		# yaml.dump(output, dist)
 
 
 def recursiveRender(element, context):

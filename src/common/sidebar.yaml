@@ -1,6 +1,6 @@
-.: |-
+.: >-
   {{ hex2hsl.jinja }}
   {{ user_colors.jinja }}
   {{ sidebar.css }}
-ha-user-badge$: |-
+ha-user-badge$: >-
   {{ ha_user_badge.css }}
