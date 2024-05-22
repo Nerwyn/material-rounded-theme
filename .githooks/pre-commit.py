@@ -34,8 +34,6 @@ def main():
 		for element in common_context:
 			if 'yaml' in common_context[element]:
 				common_context[element]['yaml'] = recursiveRender(common_context[element]['yaml'], common_context)
-				if 'ha-advanced-mode-row$ ha-switch$' in common_context[element]['yaml']:
-					print(common_context[element]['yaml'])
 
 		with open('./src/material_rounded/theme.yaml', 'r') as src:
 			# Create Material Rounded theme
