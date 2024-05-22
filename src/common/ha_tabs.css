@@ -2,8 +2,7 @@
 	/* Evenly space icons along entire length of toolbar */
 	> #tabsContent {
 		width: 100% !important;
-		display: flex !important;
-		justify-content: space-between !important;
+		display: inline-flex !important;
 	}
 }
 

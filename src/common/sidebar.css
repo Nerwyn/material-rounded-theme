@@ -20,6 +20,7 @@ paper-listbox,
 			position: absolute !important;
 			transition: width 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
 			left: 50% !important;
+			border-radius: 128px !important;
 			transform: translateX(-50%);
 		}
 	}
@@ -29,7 +30,6 @@ paper-listbox,
 		background-color: var(--accent-color) !important;
 		opacity: 1 !important;
 		width: 100% !important;
-		border-radius: 128px !important;
 		will-change: unset !important;
 	}
 

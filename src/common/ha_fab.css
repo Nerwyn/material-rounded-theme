@@ -1,10 +1,7 @@
 /* Fix add card button position  */
 :host {
-	position: fixed !important;
 	bottom: calc(2 * var(--footer-height) + 16px) !important;
-	overflow: hidden;
-	border-radius: 16px !important;
-	z-index: 9 !important;
+	z-index: 3 !important;
 }
 
 /* Decrease border radius and increase height */
