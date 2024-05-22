@@ -21,7 +21,7 @@ Material You:
       input-background-color: hsl(calc(var(--hue) + 11), 30%, 8%)
       card-background-color: hsl(calc(var(--hue) + 10), 26%, 14%)
       state-inactive-color: hsl(calc(var(--hue) - 71), 1%, 56%)
-      mdc-switch-checked-thumb-color: var(--accent-color)
+      mdc-switch-checked-button-color: var(--accent-color)
       mdc-switch-checked-track-color: var(--primary-color)
       mdc-switch-unchecked-button-color: hsl(calc(var(--hue) + 16), 9%, 59%)
       mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%)
@@ -45,7 +45,7 @@ Material You:
       disabled-color: rgb(173, 176, 174)
       input-background-color: rgb(234, 234, 235)
       card-background-color: rgb(233, 238, 246)
-      mdc-switch-checked-thumb-color: var(--lovelace-background)
+      mdc-switch-checked-button-color: var(--lovelace-background)
       mdc-switch-checked-track-color: rgb(0, 91, 191)
       mdc-switch-unchecked-button-color: hsl(224, 8%, 48%)
       mdc-switch-unchecked-track-color: hsl(228, 8%, 95%)
@@ -129,7 +129,7 @@ Material You:
   paper-slider-secondary-color: var(--light-primary-color)
 
   # Switch
-  switch-checked-button-color: var(--mdc-switch-checked-thumb-color)
+  switch-checked-button-color: var(--mdc-switch-checked-button-color)
   switch-checked-track-color: var(--mdc-switch-checked-track-color)
   switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
   switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
@@ -234,7 +234,7 @@ Material You:
         --input-background-color: hsl(calc(var(--hue) + 11), 30%, 8%);
         --card-background-color: hsl(calc(var(--hue) + 10), 26%, 14%);
         --state-inactive-color: hsl(calc(var(--hue) - 71), 1%, 56%);
-        --mdc-switch-checked-thumb-color: var(--accent-color);
+        --mdc-switch-checked-button-color: var(--accent-color);
         --mdc-switch-checked-track-color: var(--primary-color);
         --mdc-switch-unchecked-button-color: hsl(calc(var(--hue) + 16), 9%, 59%);
         --mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);
@@ -297,9 +297,9 @@ Material You:
 
         {%- endif -%}
 
-        --switch-checked-button-color: var(--mdc-switch-checked-thumb-color) !important;
+        --switch-checked-button-color: var(--mdc-switch-checked-button-color) !important;
         --switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;
-        --switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color) !important;
+        --switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color) !important;
         --switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;
       }
 
@@ -373,7 +373,7 @@ Material You:
         --input-background-color: hsl(calc(var(--hue) + 11), 30%, 8%);
         --card-background-color: hsl(calc(var(--hue) + 10), 26%, 14%);
         --state-inactive-color: hsl(calc(var(--hue) - 71), 1%, 56%);
-        --mdc-switch-checked-thumb-color: var(--accent-color);
+        --mdc-switch-checked-button-color: var(--accent-color);
         --mdc-switch-checked-track-color: var(--primary-color);
         --mdc-switch-unchecked-button-color: hsl(calc(var(--hue) + 16), 9%, 59%);
         --mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);
@@ -436,9 +436,9 @@ Material You:
 
         {%- endif -%}
 
-        --switch-checked-button-color: var(--mdc-switch-checked-thumb-color) !important;
+        --switch-checked-button-color: var(--mdc-switch-checked-button-color) !important;
         --switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;
-        --switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color) !important;
+        --switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color) !important;
         --switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;
       }
 
@@ -702,7 +702,7 @@ Material You:
         --input-background-color: hsl(calc(var(--hue) + 11), 30%, 8%);
         --card-background-color: hsl(calc(var(--hue) + 10), 26%, 14%);
         --state-inactive-color: hsl(calc(var(--hue) - 71), 1%, 56%);
-        --mdc-switch-checked-thumb-color: var(--accent-color);
+        --mdc-switch-checked-button-color: var(--accent-color);
         --mdc-switch-checked-track-color: var(--primary-color);
         --mdc-switch-unchecked-button-color: hsl(calc(var(--hue) + 16), 9%, 59%);
         --mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);
@@ -765,9 +765,9 @@ Material You:
 
         {%- endif -%}
 
-        --switch-checked-button-color: var(--mdc-switch-checked-thumb-color) !important;
+        --switch-checked-button-color: var(--mdc-switch-checked-button-color) !important;
         --switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;
-        --switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color) !important;
+        --switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color) !important;
         --switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;
       }
 
@@ -868,7 +868,7 @@ Material You:
         --input-background-color: hsl(calc(var(--hue) + 11), 30%, 8%);
         --card-background-color: hsl(calc(var(--hue) + 10), 26%, 14%);
         --state-inactive-color: hsl(calc(var(--hue) - 71), 1%, 56%);
-        --mdc-switch-checked-thumb-color: var(--accent-color);
+        --mdc-switch-checked-button-color: var(--accent-color);
         --mdc-switch-checked-track-color: var(--primary-color);
         --mdc-switch-unchecked-button-color: hsl(calc(var(--hue) + 16), 9%, 59%);
         --mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);
@@ -931,9 +931,9 @@ Material You:
 
         {%- endif -%}
 
-        --switch-checked-button-color: var(--mdc-switch-checked-thumb-color) !important;
+        --switch-checked-button-color: var(--mdc-switch-checked-button-color) !important;
         --switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;
-        --switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color) !important;
+        --switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color) !important;
         --switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;
       }
 

@@ -1,9 +1,7 @@
-#tabsContainer {
-	/* Evenly space icons along entire length of toolbar */
-	> #tabsContent {
-		width: 100% !important;
-		display: inline-flex !important;
-	}
+/* Evenly space icons along entire length of toolbar */
+#tabsContent {
+	width: 100% !important;
+	display: inline-flex !important;
 }
 
 /* Reduce size of edit mode scroll buttons */

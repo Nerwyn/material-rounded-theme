@@ -19,7 +19,7 @@ Material Rounded:
       input-background-color: rgb(46, 48, 56)
       card-background-color: rgb(39, 42, 44)
       state-inactive-color: rgb(72, 74, 78)
-      mdc-switch-checked-thumb-color: var(--accent-color)
+      mdc-switch-checked-button-color: var(--accent-color)
       mdc-switch-checked-track-color: var(--primary-color)
       mdc-switch-unchecked-button-color: rgb(140, 144, 159)
       mdc-switch-unchecked-track-color: rgb(65, 71, 83)
@@ -42,7 +42,7 @@ Material Rounded:
       disabled-color: rgb(173, 176, 174)
       input-background-color: rgb(234, 234, 235)
       card-background-color: rgb(233, 238, 246)
-      mdc-switch-checked-thumb-color: rgb(255, 255, 255)
+      mdc-switch-checked-button-color: rgb(255, 255, 255)
       mdc-switch-checked-track-color: rgb(0, 91, 191)
       mdc-switch-unchecked-button-color: rgb(114, 119, 133)
       mdc-switch-unchecked-track-color: rgb(222, 226, 242)
@@ -129,9 +129,9 @@ Material Rounded:
   paper-slider-secondary-color: var(--light-primary-color)
 
   # Switches
-  switch-checked-button-color: var(--mdc-switch-checked-thumb-color)
+  switch-checked-button-color: var(--mdc-switch-checked-button-color)
   switch-checked-track-color: var(--mdc-switch-checked-track-color)
-  switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color)
+  switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color)
   switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color)
 
   # Toggles

@@ -35,14 +35,14 @@
 	--codemirror-property: var(--primary-color);
 	--codemirror-atom: var(--codemirror-property);
 
-	--mdc-switch-checked-thumb-color: hsl(calc(({{ hsl[0] }}) * var(--dark-mode)), calc({{ hsl[1] }}% * var(--dark-mode)),calc(var(--accent-luminance) * var(--dark-mode) + 100% * (1 - var(--dark-mode))));
+	--mdc-switch-checked-button-color: hsl(calc(({{ hsl[0] }}) * var(--dark-mode)), calc({{ hsl[1] }}% * var(--dark-mode)),calc(var(--accent-luminance) * var(--dark-mode) + 100% * (1 - var(--dark-mode))));
 	--mdc-switch-checked-track-color: hsl({{ hsl[0] }}, {{ hsl[1] }}%, calc(var(--primary-luminance) * var(--dark-mode) + 30% * (1 - var(--dark-mode))));
 	--mdc-switch-unchecked-button-color: hsl({{ (hsl[0] | int ) + 16 }}, calc(3% * var(--dark-mode)), calc(60% * var(--dark-mode) + 50% * (1 - var(--dark-mode))));
 	--mdc-switch-unchecked-track-color: hsl({{ (hsl[0] | int ) + 9 }}, 3%, calc(29% * var(--dark-mode) + 90% * (1 - var(--dark-mode))));
 	{%- endif -%}
 
-	--switch-checked-button-color: var(--mdc-switch-checked-thumb-color) !important;
+	--switch-checked-button-color: var(--mdc-switch-checked-button-color) !important;
 	--switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;
-	--switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color) !important;
+	--switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color) !important;
 	--switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;
 }

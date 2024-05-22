@@ -3,71 +3,64 @@
 	padding: 0 !important;
 	position: relative;
 	top: 3px;
-	--switch-checked-button-color: var(--mdc-switch-checked-thumb-color);
+	--switch-checked-button-color: var(--mdc-switch-checked-button-color);
 	--switch-checked-track-color: var(--mdc-switch-checked-track-color);
-	--switch-unchecked-button-color: var(--mdc-switch-unchecked-thumb-color);
+	--switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color);
 	--switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color);
 }
 
-.mdc-switch {
-	/* Increase track size and make it always opaque */
-	> .mdc-switch__track {
-		height: 32px !important;
-		width: 52px !important;
-		border-radius: 32px !important;
-		opacity: 1 !important;
-	}
-
-	/* Fix thumb position */
-	> .mdc-switch__thumb-underlay {
-		top: -8px !important;
-		left: var(--thumb-left-off, var(--thumb-left-on)) !important;
-		--thumb-left-on: -4px;
-
-		/* Remove ripple */
-		> mwc-ripple {
-			display: none !important;
-		}
-
-		/* Switch on thumb size */
-		> .mdc-switch__thumb {
-			height: var(
-				--thumb-size-active,
-				var(--thumb-size-off, var(--thumb-size-on))
-			) !important;
-			width: var(
-				--thumb-size-active,
-				var(--thumb-size-off, var(--thumb-size-on))
-			) !important;
-			--thumb-size-on: 24px;
-		}
-
-		/* Thumb active size */
-		> .mdc-switch__thumb:active {
-			transition: width 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
-			--thumb-size-active: 28px !important;
-		}
-	}
+/* Increase track size, make always opaque, and border. */
+.mdc-switch__track {
+	height: 32px !important;
+	width: 52px !important;
+	border-radius: 32px !important;
+	opacity: 1 !important;
+	border: 2px solid gray !important;
+	--border-color: var(--mdc-switch-unchecked-button-color);
+}
+/* Remove border when on */
+.mdc-switch--checked .mdc-switch__track {
+	border: none !important;
 }
 
-.mdc-switch:not(.mdc-switch--checked) {
-	/* Switch off border */
-	> .mdc-switch__track {
-		border: 2px solid gray !important;
-		--border-color: var(--mdc-switch-unchecked-button-color);
-	}
+/* Fix thumb position */
+.mdc-switch__thumb-underlay {
+	top: -8px !important;
+	left: var(--thumb-left-on, var(--thumb-left-off)) !important;
+	--thumb-left-off: -8px;
+}
+/* Thumb position when on */
+.mdc-switch--checked .mdc-switch__thumb-underlay {
+	--thumb-left-on: -4px;
+}
 
-	> .mdc-switch__thumb-underlay {
-		/* Fix thumb position */
-		--thumb-left-off: -8px;
+/* Switch thumb color and size */
+.mdc-switch__thumb {
+	height: var(
+		--thumb-size-active,
+		var(--thumb-size-on, var(--thumb-size-off))
+	) !important;
+	width: var(
+		--thumb-size-active,
+		var(--thumb-size-on, var(--thumb-size-off))
+	) !important;
+	background-color: var(--mdc-switch-unchecked-button-color) !important;
+	border: none !important;
+	--thumb-size-off: 16px;
+}
+/* Switch on thumb color and size */
+.mdc-switch--checked .mdc-switch__thumb {
+	background-color: var(--mdc-switch-checked-button-color) !important;
+	--thumb-size-on: 24px;
+}
 
-		/* Switch off color and thumb size */
-		> .mdc-switch__thumb {
-			background-color: var(
-				--mdc-switch-unchecked-button-color
-			) !important;
-			border: none !important;
-			--thumb-size-off: 16px;
-		}
-	}
+/* Thumb active size */
+.mdc-switch__thumb:active {
+	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
+	--thumb-size-active: 28px !important;
+}
+
+/* Remove ripple */
+mwc-ripple {
+	display: none !important;
 }

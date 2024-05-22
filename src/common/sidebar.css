@@ -1,40 +1,35 @@
-paper-listbox,
-:host {
-	> a {
-		/* Animate background when expanding/retracting sidebar */
-		> paper-icon-item {
-			transition: width 0.2s cubic-bezier(0.2, 0, 0, 1);
-			height: 48px;
-			left: 4px;
-			margin: 0 !important;
+/* Animate background when expanding/retracting sidebar */
+paper-icon-item {
+	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1);
+	height: 48px;
+	left: 4px;
+	margin: 0 !important;
+}
 
-			/* Display current dashboard text above background */
-			.item-text {
-				z-index: 2;
-			}
-		}
+/* Display current dashboard text above background */
+.item-text {
+	z-index: 2;
+}
 
-		> paper-icon-item::before {
-			content: '';
-			width: 0px;
-			position: absolute !important;
-			transition: width 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
-			left: 50% !important;
-			border-radius: 128px !important;
-			transform: translateX(-50%);
-		}
-	}
+paper-icon-item::before {
+	content: '';
+	width: 0px;
+	position: absolute !important;
+	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
+	left: 50% !important;
+	border-radius: 128px !important;
+	transform: translateX(-50%);
+}
 
-	/* Change background of current dashboard icon with transition */
-	> .iron-selected > paper-icon-item::before {
-		background-color: var(--accent-color) !important;
-		opacity: 1 !important;
-		width: 100% !important;
-		will-change: unset !important;
-	}
+/* Change background of current dashboard icon with transition */
+.iron-selected paper-icon-item::before {
+	background-color: var(--accent-color) !important;
+	opacity: 1 !important;
+	width: 100% !important;
+	will-change: unset !important;
+}
 
-	/* Add shadow to badges so it doesn't blend with background */
-	> .configuration-container > .configuration > .configuration-badge {
-		box-shadow: inset 0px 0px 0px 1px var(--sidebar-icon-color);
-	}
+/* Add shadow to badges so it doesn't blend with background */
+.configuration-badge {
+	box-shadow: inset 0px 0px 0px 1px var(--sidebar-icon-color);
 }

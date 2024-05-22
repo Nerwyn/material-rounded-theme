@@ -1,5 +1,5 @@
 /* Correct Material 3 header toggle position */
-.card-header > hui-entities-toggle {
+hui-entities-toggle {
 	position: relative !important;
 	width: 40px !important;
 	left: -4px !important;
