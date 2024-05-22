@@ -1,117 +1,131 @@
 /* Turn header toolbar into a footer */
-.header {
-	top: unset !important;
-	bottom: 0 !important;
-	background-color: var(--navbar-background) !important;
-	--mdc-icon-button-size: 36px;
+div,
+.edit-mode {
+	> .header {
+		top: unset !important;
+		bottom: 0 !important;
+		background-color: var(--navbar-background) !important;
+		--mdc-icon-button-size: 36px;
+
+		> .toolbar {
+			/* Modify toolbar height but only for card-mod version of theme */
+			height: var(--footer-height) !important;
+			padding: 0 !important;
+
+			/* Remove toolbar margin */
+			> ha-tabs {
+				margin: 0 !important;
+
+				/* Hide subview */
+				> .hide-tab {
+					display: none !important;
+				}
+			}
+
+			/* Restore icon size for subview back button */
+			> ha-icon-button-arrow-prev[slot='navigationIcon'] {
+				--mdc-icon-button-size: 48px;
+			}
+		}
+
+		> .toolbar > ha-tabs,
+		> paper-tabs {
+			/* Add background and color current view icon */
+			> paper-tab.iron-selected > ha-icon {
+				width: 100%;
+				max-width: 64px;
+				color: var(--primary-color);
+				background-color: var(--accent-color);
+				border-radius: 16px;
+			}
+
+			> paper-tab {
+				/* Display view tab contents vertically and set minimum size */
+				padding: 0;
+				display: inline-flex;
+				flex-direction: column;
+				flex: 1;
+				min-width: min(
+					calc((100vw - 2 * var(--mdc-icon-button-size)) / 5),
+					72px
+				);
+
+				/* View icon transition and display centering */
+				> ha-icon {
+					width: 24px;
+					height: 32px;
+					display: inline-flex;
+					justify-content: center;
+					align-items: center;
+					transition: width 0.2s cubic-bezier(0.2, 0, 0, 1);
+				}
+
+				/* Prevent edit mode icon from shrinking on small width displays */
+				> ha-svg-icon {
+					min-width: 24px;
+				}
+			}
+
+			/* View label */
+			> paper-tab::after {
+				content: attr(aria-label);
+				text-transform: none;
+				font-weight: 500;
+				font-size: min(3vw, 13px);
+				opacity: 0.8;
+				padding: 0px 1px;
+				text-wrap: wrap;
+				overflow: hidden;
+				line-height: 14px;
+				height: 100%;
+				margin-top: 20px;
+			}
+
+			/* Make current view label opaque */
+			> paper-tab.iron-selected::after {
+				opacity: 1;
+			}
+
+			/* Align edit mode add view button */
+			> #add-view {
+				position: relative !important;
+				top: 11px;
+			}
+		}
+	}
+
+	/* Fix view box to work with footer and add padding to sides */
+	> #view {
+		padding-top: 0 !important;
+		padding-bottom: var(--footer-height) !important;
+		padding-left: 12px !important;
+		padding-right: 12px !important;
+	}
+
+	/* Fix view box when in edit mode */
+	> .edit-mode > #view {
+		padding-top: calc(2 * var(--footer-height)) !important;
+		padding-bottom: 0 !important;
+		bottom: calc(2 * var(--footer-height)) !important;
+	}
 }
 
-/* Modify toolbar height but only for card-mod version of theme */
-.toolbar {
-	height: var(--footer-height) !important;
-	padding: 0 !important;
-}
-
-/* Fix edit mode header height */
 .edit-mode > .header {
+	/* Fix edit mode header height */
 	height: calc(2 * var(--footer-height)) !important;
-}
 
-/* Fix edit mode toolbar height */
-paper-tabs {
-	height: 50%;
-}
+	/* Fix edit mode toolbar height */
+	> paper-tabs {
+		height: 50%;
 
-/* Remove toolbar margin */
-ha-tabs {
-	margin: 0 !important;
-}
+		> paper-tab {
+			/* Make edit mode current view tab fit all buttons */
+			min-width: fit-content !important;
 
-/* Add background and color current view icon */
-paper-tab.iron-selected > ha-icon {
-	width: 100%;
-	max-width: 64px;
-	color: var(--primary-color);
-	background-color: var(--accent-color);
-	border-radius: 16px;
-}
-
-/* View icon transition and display centering */
-paper-tab > ha-icon {
-	width: 24px;
-	height: 32px;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1);
-}
-
-/* Display view tab contents vertically and set minimum size */
-paper-tab {
-	padding: 0;
-	display: inline-flex;
-	flex-direction: column;
-	flex: 1;
-	min-width: min(calc((100vw - 2 * var(--mdc-icon-button-size)) / 5), 72px);
-}
-
-/* Prevent edit mode icon from shrinking on small width displays */
-paper-tab > ha-svg-icon {
-	min-width: 24px;
-}
-
-/* Make edit mode current view tab fit all buttons */
-.edit-mode > .header > paper-tabs > paper-tab {
-	min-width: fit-content;
-}
-
-/* Remove extra left padding from edit view buttons */
-.edit-icon {
-	padding-left: 0 !important;
-}
-
-/* Align edit mode add view button */
-#add-view {
-	position: relative !important;
-	top: 11px;
-}
-
-/* View label */
-paper-tab::after {
-	content: attr(aria-label);
-	text-transform: none;
-	font-weight: 500;
-	font-size: min(3vw, 13px);
-	opacity: 0.8;
-	padding: 0px 1px;
-	text-wrap: wrap;
-	overflow: hidden;
-	line-height: 14px;
-	height: 100%;
-	margin-top: 20px;
-}
-
-/* Make current view label opaque */
-paper-tab.iron-selected::after {
-	opacity: 1;
-}
-
-/* Restore icon size for subview back button */
-ha-icon-button-arrow-prev[slot='navigationIcon'] {
-	--mdc-icon-button-size: 48px;
-}
-
-/* Fix view box to work with footer and add padding to sides */
-#view {
-	padding-top: 0 !important;
-	padding-bottom: var(--footer-height) !important;
-	padding-left: 12px !important;
-	padding-right: 12px !important;
-}
-
-/* Fix view box when in edit mode */
-.edit-mode > #view {
-	padding-top: calc(2 * var(--footer-height)) !important;
-	padding-bottom: 0 !important;
-	bottom: calc(2 * var(--footer-height)) !important;
+			/* Remove extra left padding from edit view buttons */
+			> .edit-icon {
+				padding-left: 0 !important;
+			}
+		}
+	}
 }

@@ -9,10 +9,11 @@
 /* Decrease border radius and increase height */
 button {
 	height: 56px !important;
+
+	/* Remove all caps */
+	> .mdc-fab__label {
+		text-transform: none !important;
+		font-size: 11pt;
+	}
 }
 
-/* Remove all caps */
-.mdc-fab__label {
-	text-transform: none !important;
-	font-size: 11pt;
-}

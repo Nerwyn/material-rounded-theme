@@ -1,8 +1,10 @@
-/* Evenly space icons along entire length of toolbar */
-#tabsContent.scrollable {
-	width: 100% !important;
-	display: flex !important;
-	justify-content: space-between !important;
+#tabsContainer {
+	/* Evenly space icons along entire length of toolbar */
+	> #tabsContent {
+		width: 100% !important;
+		display: flex !important;
+		justify-content: space-between !important;
+	}
 }
 
 /* Reduce size of edit mode scroll buttons */
