@@ -86,12 +86,7 @@ def main():
 					yaml.dump(element_yaml, buffer)
 					output['Material Rounded'][f'card-mod-{element.replace('_', '-')}-yaml'] = buffer.getvalue().strip()
 
-		# Get rid of extra new lines before dumping
-		buffer = StringIO()
-		yaml.dump(output, buffer)
-		yamlString = buffer.getvalue().strip().replace('\n\n', ' ')
-		dist.write(yamlString)
-		# yaml.dump(output, dist)
+		yaml.dump(output, dist)
 
 
 def recursiveRender(element, context):

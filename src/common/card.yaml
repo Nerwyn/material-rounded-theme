@@ -20,3 +20,7 @@ ha-set-suspend-row$ ha-switch$: >-
   {{ ha_switch.css }}
 ha-enable-shortcuts-row$ ha-switch$: >-
   {{ ha_switch.css }}
+
+# Browser Mod
+ha-switch$: >-
+  {{ ha_switch.css }}
