@@ -4,6 +4,7 @@
 	bottom: calc(2 * var(--footer-height) + 16px) !important;
 	overflow: hidden;
 	border-radius: 16px !important;
+	z-index: 9 !important;
 }
 
 /* Decrease border radius and increase height */
@@ -16,4 +17,3 @@ button {
 		font-size: 11pt;
 	}
 }
-
