@@ -10,3 +10,5 @@ ha-more-info-settings$:
     {{ ha_switch.css }}
   entity-settings-helper-tab$ entity-registry-settings-editor$ ha-switch$: >-
     {{ ha_switch.css }}
+ha-more-info-view-voice-assistants$ entity-voice-settings$ ha-switch$: >-
+  {{ ha_switch.css }}
