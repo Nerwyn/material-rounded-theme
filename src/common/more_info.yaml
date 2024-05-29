@@ -5,6 +5,8 @@
 ? ha-more-info-info$ state-card-content$ state-card-toggle$ ha-entity-toggle$ ha-switch$
 : >-
   {{ ha_switch.css }}
-? ha-more-info-settings$ entity-registry-settings$ entity-registry-settings-editor$ ha-switch$
-: >-
-  {{ ha_switch.css }}
+ha-more-info-settings$:
+  entity-registry-settings$ entity-registry-settings-editor$ ha-switch$: >-
+    {{ ha_switch.css }}
+  entity-settings-helper-tab$ entity-registry-settings-editor$ ha-switch$: >-
+    {{ ha_switch.css }}
