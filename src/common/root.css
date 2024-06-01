@@ -3,7 +3,6 @@
 	top: unset !important;
 	bottom: 0 !important;
 	background: var(--navbar-background) !important;
-	--mdc-icon-button-size: 36px;
 }
 
 /* Modify toolbar height but only for card-mod version of theme */
@@ -12,9 +11,27 @@
 	padding: 0 !important;
 }
 
-/* Restore icon size for subview back button */
-ha-icon-button-arrow-prev[slot='navigationIcon'] {
-	--mdc-icon-button-size: 48px;
+/* Move menu and action items buttons to top corners outside of toolbar */
+ha-menu-button,
+.action-items {
+	position: fixed;
+	z-index: 3;
+	top: 0px;
+	transition: top 20ms ease-in-out 0s;
+}
+ha-menu-button {
+	left: 0px;
+}
+.action-items {
+	right: 0px;
+}
+
+/* Hide menu and action items if not scrolled to top  */
+:host([scrolled]) ha-menu-button,
+:host([scrolled]) .action-items {
+	pointer-events: none;
+	top: -48px !important;
+	transition: top 100ms ease-in-out 0s;
 }
 
 /* Remove toolbar margin */
@@ -22,7 +39,7 @@ ha-tabs {
 	margin: 0 !important;
 }
 
-/* Hide subview */
+/* Force hide subview */
 .hide-tab {
 	display: none !important;
 }
@@ -40,7 +57,7 @@ paper-tab {
 	padding: 0;
 	flex-direction: column;
 	flex: 1;
-	min-width: min(calc((100vw - 2 * var(--mdc-icon-button-size)) / 5), 72px);
+	min-width: min(calc(100vw / 5), 72px);
 }
 
 /* View icon transition and display centering */
@@ -108,13 +125,21 @@ paper-tab.iron-selected::after {
 	min-width: fit-content !important;
 }
 
-/* Remove extra left padding from edit view buttons */
-.edit-icon {
-	padding-left: 0 !important;
+/* Fix edit mode current view label position */
+.edit-mode paper-tab.iron-selected::after {
+	margin-top: 4px !important;
 }
 
+/* Fix edit mode view box */
 .edit-mode #view {
-	/* Fix view box when in edit mode */
 	padding: calc(2 * var(--footer-height)) 12px 0 !important;
 	bottom: calc(2 * var(--footer-height)) !important;
+}
+
+/* Move edit mode action items back to bottom toolbar and make usable when scrolled */
+.edit-mode .action-items {
+	position: static !important;
+}
+:host([scrolled]) .edit-mode .action-items {
+	pointer-events: all !important;
 }

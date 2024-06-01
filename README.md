@@ -15,7 +15,7 @@ This theme aims to match the styling of the Google Home app as closely as possib
 
 Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for toolbar modifications, other Material You component redesigns, and Material You coloring. If you have card-mod installed and do not want these changes to apply, use the "No Mod" versions of this theme.
 
-Don't like blue? You can choose a different Material You base color! See below for more. Also requires card-mod.
+Don't like the blue accents? You can choose a different Material You base color! See below for more. Also requires card-mod.
 
 This theme also includes "Transparent Card" versions with card backgrounds that match the view background.
 
@@ -91,7 +91,7 @@ If you do not want these changes, use the "No Mod" versions of the theme.
 
 ## Material You Colors
 
-This theme supports Material You color theming! Create a helper template sensor named `Material Rounded Base Color` that returns the hex code of your preferred base color. The accent and primary color will be calculated using it, retaining your color's hue and saturation but altering it's luminance. The entity ID should be `sensor.material_rounded_base_color`.
+This theme supports Material You color theming! Create a helper template sensor named `Material Rounded Base Color` that returns the hex code of your preferred base color. The accent and primary color will be calculated using it, retaining your color's hue and saturation but altering it's luminance.
 
 To create a template sensor helper:
 
@@ -99,11 +99,11 @@ To create a template sensor helper:
 2. Click `+ CREATE HELPER`.
 3. Click `Template`.
 4. Click `Template a sensor`.
-5. Name the sensor `Material Rounded Base Color`. If you want this color to only apply to your profile, add your name as it appears in the [Home Assistant people page](http://homeassistant.local:8123/config/person) to the end.
+5. Name the sensor `Material Rounded Base Color`. The sensor entity ID should be `sensor.material_rounded_base_color`.
 6. Enter your Material You base color as a six digit hex code, like `238636` or `#db4437`. You can also use a template to read a hex code from the state or attribute of a different entity, like `{{ states("sensor.pixel_fold_accent_color") }}`.
 7. Click `SUBMIT`.
 
-You can also choose user specific colors by creating a sensor named `Material Rounded Base Color Your Name`, with your name being your person name as it appears on the [Home Assistant people page](http://homeassistant.local:8123/config/person). The sensory entity Id should be something like `sensor.material_rounded_base_color_john_doe`.
+You can also choose user specific colors by creating a sensor named `Material Rounded Base Color Your Name`, with your name being your person name as it appears on the [Home Assistant people page](http://homeassistant.local:8123/config/person). The sensory entity ID should be something like `sensor.material_rounded_base_color_john_doe`.
 
 If you are using the Home Assistant Android companion app, you can enable the accent color sensor in the companion app settings to use your phone's Material You accent color as the theme base color:
 
