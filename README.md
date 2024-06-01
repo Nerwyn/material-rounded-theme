@@ -67,6 +67,7 @@ Redesigns the toolbar and sidebar buttons to follow Material You navigation comp
 -   Adds view names below the view icons.
 -   Highlights the current view with a colored icon and background behind the icon.
 -   Transition animation on view icon background when selected.
+-   Separates out the drawer and kebab menu buttons to remain at the top of the screen and disappear on scroll.
 
 #### [Navigation Drawer](https://m3.material.io/components/navigation-drawer/overview)
 
