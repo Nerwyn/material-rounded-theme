@@ -45,6 +45,12 @@ Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelac
 
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/components-light.png" alt="components-light" width="600"/>
 
+### User Defined Base Color
+
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/custom-color-dark.png" alt="custom-color-dark" width="600"/>
+
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/custom-color-light.png" alt="custom-color-light" width="600"/>
+
 ## Material You Components, Powered By Card Mod
 
 This theme is super-charged by [card-mod](https://github.com/thomasloven/lovelace-card-mod)! Using card-mod many components have received Material You design upgrades.
