@@ -159,7 +159,17 @@ Check out [Material Symbols](https://github.com/beecho01/material-symbols) to us
 
 ### Graphite Theme
 
-This theme was initially modified from the [Graphite theme](https://github.com/TilmanGriesel/graphite), as it was my favorite Home Assistant theme on HACS before I created this one. Therefore, it contains similar logic and variables.
+This theme was initially modified from the [Graphite theme](https://github.com/TilmanGriesel/graphite), as it was my favorite Home Assistant theme on HACS before I created this one. Therefore, it may contain some legacy variables from it.
+
+## Developing, Modifying, and Building The Theme
+
+Due to the multiple versions and complexity of this theme, I have split it into multiple CSS and yaml files and created a Python git pre-commit build pipeline to compile all of the files into a single Home Assistant theme file. You can either run this build pipeline by making a git commit (not to the main repo of course) running the file `build.sh`, or running the `pre-commit.py` Python file.
+
+Four versions of a theme are created per base theme - with card mod, without card mod, transparent cards with card mod, and transparent cards without card mod. The no card mod versions of theme have the `card-mod-theme` fields removed and will have no design upgrades or custom colors. The transparent card versions of the theme use the same color for the background and cards, making them appear transparent (true transparency breaks overlays like dropdowns).
+
+Any files under common that end in `.yaml` are treated as `card-mod-*-yaml` fields in the themes, and files ending in `.css` contain the actual card-mod CSS. Different overall version of the theme are included in separate folders, such as `material_rounded`. CSS files are copied into the card-mod yaml fields using jinja2 templates, allowing for repetitive styles that go in different shadow roots to all source from the same file.
+
+The common folder also includes `hex2hsl.jinja` - a hex to HSL color formula ported to jinja2 for transforming user defined base colors into HSL. The HSL base color is used for calculating primary, accent, and other custom colors. How these custom colors are defined and used is determined at the theme folder level in `user_colors.jinja`. If possible, I would like to instead use Material You's HCT color system, but it would have to be ported to jinja2 along with a HCT to hex/rgb/hsl/etc function.
 
 [last-commit-shield]: https://img.shields.io/github/last-commit/Nerwyn/material-rounded-theme?style=for-the-badge
 [commits]: https://github.com/Nerwyn/material-rounded-theme/commits/main
