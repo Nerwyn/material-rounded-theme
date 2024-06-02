@@ -67,7 +67,7 @@ paper-tab.iron-selected ha-icon {
 
 /* View icon transition and display centering */
 ha-icon {
-	width: 24px;
+	min-width: 24px;
 	height: 32px;
 	border-radius: 16px;
 	display: inline-flex;
