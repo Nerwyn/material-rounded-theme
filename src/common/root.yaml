@@ -2,6 +2,7 @@
   {{ hex2hsl.jinja }}
   {{ user_colors.jinja }}
   {{ root.css }}
+  {{ view_tabs_count.jinja }}
 
 # Edit mode Add Card position fixes
 hui-masonry-view$ ha-fab$: >-

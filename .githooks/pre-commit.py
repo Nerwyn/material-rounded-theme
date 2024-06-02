@@ -1,6 +1,7 @@
 import os
 import copy
 import ruamel.yaml
+import rcssmin
 from jinja2 import Template
 from io import StringIO
 
@@ -24,11 +25,15 @@ def main():
 				name, file_type = resource.split('.')
 				if name not in common_context:
 					common_context[name] = {}
-				if file_type == 'yaml':
-					with open(f'./src/common/{name}.yaml', 'r') as y:
-						common_context[name][file_type] = yaml.load(y)
-				else:
-					common_context[name][file_type] = f.read()
+				r_str = ''
+				match file_type:
+					case 'yaml':
+						r_str = yaml.load(f)
+					case 'css':
+						r_str = rcssmin.cssmin(f.read())
+					case _:
+						r_str= f.read()
+				common_context[name][file_type] = r_str
 		
 		# Build element yaml subelements
 		for element in common_context:

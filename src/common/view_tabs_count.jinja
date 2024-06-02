@@ -1,0 +1,3 @@
+{% for i in range(50) %}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child({{ i }})) { --view-tabs-count: {{ i }}; }
+{% endfor %}
