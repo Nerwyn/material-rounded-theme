@@ -89,7 +89,7 @@ paper-tab::after {
 	text-wrap: wrap;
 	text-align: center;
 	font-weight: 500;
-	font-size: min(3vw, 13px);
+	font-size: min(3.6vw, 13px);
 	opacity: 0.8;
 	padding: 0px 1px;
 	overflow: hidden;
