@@ -37,6 +37,7 @@ ha-menu-button {
 /* Remove toolbar margin */
 ha-tabs {
 	margin: 0 !important;
+	margin-inline: 0 !important;
 }
 
 /* Force hide subview */
@@ -44,20 +45,24 @@ ha-tabs {
 	display: none !important;
 }
 
-/* Add background and color current view icon */
-paper-tab.iron-selected ha-icon {
-	width: 100%;
-	max-width: 64px;
-	color: var(--primary-color);
-	background: var(--accent-color);
-}
-
+/* Display view tab contents vertically and calculate size to fill entire toolbar */
 paper-tab {
-	/* Display view tab contents vertically and set minimum size */
-	padding: 0;
+	padding: 11px 0;
 	flex-direction: column;
 	flex: 1;
-	min-width: min(calc(100vw / 5), 72px);
+	width: var(--tab-width);
+	--tab-width: clamp(
+		min(calc(((100vw - var(--mdc-drawer-width, 0px)) / 5) - 3px), 72px),
+		((100vw - var(--mdc-drawer-width, 0px)) / var(--count)) - 3px,
+		calc(((100vw - var(--mdc-drawer-width, 0px))) - 3px)
+	);
+}
+
+/* Add background and color current view icon */
+paper-tab.iron-selected ha-icon {
+	width: min(64px, var(--tab-width));
+	color: var(--primary-color);
+	background: var(--accent-color);
 }
 
 /* View icon transition and display centering */
@@ -88,20 +93,14 @@ paper-tab::after {
 	opacity: 0.8;
 	padding: 0px 1px;
 	overflow: hidden;
-	line-height: 14px;
+	line-height: 12px;
 	height: 100%;
-	margin-top: 20px;
+	margin-top: 4px;
 }
 
 /* Make current view label opaque */
 paper-tab.iron-selected::after {
 	opacity: 1;
-}
-
-/* Align edit mode add view button */
-#add-view {
-	position: relative !important;
-	top: 11px;
 }
 
 /* Fix view box to work with footer and add padding to sides */
@@ -116,7 +115,7 @@ paper-tab.iron-selected::after {
 }
 
 /* Fix edit mode toolbar height */
-.edit-mode paper-tabs {
+paper-tabs {
 	height: 50%;
 }
 
@@ -142,4 +141,93 @@ paper-tab.iron-selected::after {
 }
 :host([scrolled]) .edit-mode .action-items {
 	pointer-events: all !important;
+}
+
+/* Hacky logic to count number of view tabs */
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(1)) {
+	--count: 1;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(2)) {
+	--count: 2;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(3)) {
+	--count: 3;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(4)) {
+	--count: 4;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(5)) {
+	--count: 5;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(6)) {
+	--count: 6;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(7)) {
+	--count: 7;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(8)) {
+	--count: 8;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(9)) {
+	--count: 9;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(10)) {
+	--count: 10;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(11)) {
+	--count: 11;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(12)) {
+	--count: 12;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(13)) {
+	--count: 13;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(14)) {
+	--count: 14;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(15)) {
+	--count: 15;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(16)) {
+	--count: 16;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(17)) {
+	--count: 17;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(18)) {
+	--count: 18;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(19)) {
+	--count: 19;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(21)) {
+	--count: 21;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(22)) {
+	--count: 22;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(23)) {
+	--count: 23;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(24)) {
+	--count: 24;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(25)) {
+	--count: 25;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(26)) {
+	--count: 26;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(27)) {
+	--count: 27;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(28)) {
+	--count: 28;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(29)) {
+	--count: 29;
+}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child(30)) {
+	--count: 30;
 }

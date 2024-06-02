@@ -3,14 +3,6 @@
   {{ user_colors.jinja }}
   {{ root.css }}
 
-# Evenly space icons along entire length of toolbar
-ha-tabs$: >-
-  {{ ha_tabs.css }}
-paper-tabs$: >-
-  {{ ha_tabs.css }}
-paper-tab$: >-
-  {{ paper_tab.css }}
-
 # Edit mode Add Card position fixes
 hui-masonry-view$ ha-fab$: >-
   {{ ha_fab.css }}
