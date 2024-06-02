@@ -64,6 +64,7 @@ Redesigns the toolbar and sidebar buttons to follow Material You navigation comp
 -   Converts the header toolbar to a footer.
 -   Removes the default selection bar and ripple.
 -   Spaces the view icons evenly along the entire toolbar.
+    -   **WARNING**: Subviews must be placed at the end of the toolbar for the view tab count to be correct, otherwise the view tabs will end up smaller than expected.
 -   Adds view names below the view icons.
 -   Highlights the current view with a colored icon and background behind the icon.
 -   Transition animation on view icon background when selected.
