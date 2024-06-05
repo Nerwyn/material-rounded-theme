@@ -50,6 +50,7 @@ Material Rounded:
   input-ink-color: var(--primary-text-color)
   input-label-ink-color: var(--primary-text-color)
   light-primary-color: var(--primary-color)
+  link-text-color: var(--primary-color)
   mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
   mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
   mdc-select-fill-color: var(--input-fill-color)
@@ -144,7 +145,7 @@ Material Rounded:
   switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color)
   switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color)
   text-accent-color: var(--primary-color)
-  text-field-overflow: hidden;
+  text-field-overflow: hidden
   text-light-primary-color: var(--text-primary-color)
   text-primary-color: var(--lovelace-background)
   title-font-size: 28px
@@ -188,6 +189,7 @@ Material Rounded No Mod:
   input-ink-color: var(--primary-text-color)
   input-label-ink-color: var(--primary-text-color)
   light-primary-color: var(--primary-color)
+  link-text-color: var(--primary-color)
   mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
   mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
   mdc-select-fill-color: var(--input-fill-color)
@@ -282,7 +284,7 @@ Material Rounded No Mod:
   switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color)
   switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color)
   text-accent-color: var(--primary-color)
-  text-field-overflow: hidden;
+  text-field-overflow: hidden
   text-light-primary-color: var(--text-primary-color)
   text-primary-color: var(--lovelace-background)
   title-font-size: 28px
@@ -327,6 +329,7 @@ Material Rounded Transparent Card:
   input-ink-color: var(--primary-text-color)
   input-label-ink-color: var(--primary-text-color)
   light-primary-color: var(--primary-color)
+  link-text-color: var(--primary-color)
   mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
   mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
   mdc-select-fill-color: var(--input-fill-color)
@@ -421,7 +424,7 @@ Material Rounded Transparent Card:
   switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color)
   switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color)
   text-accent-color: var(--primary-color)
-  text-field-overflow: hidden;
+  text-field-overflow: hidden
   text-light-primary-color: var(--text-primary-color)
   text-primary-color: var(--lovelace-background)
   title-font-size: 28px
@@ -465,6 +468,7 @@ Material Rounded Transparent Card No Mod:
   input-ink-color: var(--primary-text-color)
   input-label-ink-color: var(--primary-text-color)
   light-primary-color: var(--primary-color)
+  link-text-color: var(--primary-color)
   mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
   mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
   mdc-select-fill-color: var(--input-fill-color)
@@ -559,7 +563,7 @@ Material Rounded Transparent Card No Mod:
   switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color)
   switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color)
   text-accent-color: var(--primary-color)
-  text-field-overflow: hidden;
+  text-field-overflow: hidden
   text-light-primary-color: var(--text-primary-color)
   text-primary-color: var(--lovelace-background)
   title-font-size: 28px

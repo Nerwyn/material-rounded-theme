@@ -82,6 +82,7 @@ Material You:
   text-accent-color: var(--primary-color)
   text-light-primary-color: var(--text-primary-color)
   rgb-primary-text-color: var(--primary-text-color)
+  link-text-color: var(--primary-color)
 
   # Main interface colors
   primary-background-color: var(--navbar-background)
@@ -165,11 +166,6 @@ Material You:
   codemirror-string: rgb(119 196 229)
   codemirror-keyword: rgb(140 169 255)
   codemirror-number: rgb(255 91 29)
-
-  # HACS
-  hacs-new-color: rgb(27 153 123)
-  hacs-error-color: rgb(182 46 95)
-  link-text-color: rgb(0, 86, 207)
 
   card-mod-theme: Material You
   card-mod-more-info-yaml: |

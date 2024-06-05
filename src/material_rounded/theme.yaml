@@ -79,7 +79,8 @@ Material Rounded:
   text-accent-color: var(--primary-color)
   text-light-primary-color: var(--text-primary-color)
   rgb-primary-text-color: var(--primary-text-color)
-  text-field-overflow: hidden;
+  text-field-overflow: hidden
+  link-text-color: var(--primary-color)
 
   # Main Interface Colors
   primary-background-color: var(--navbar-background)
