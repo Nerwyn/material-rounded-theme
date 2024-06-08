@@ -87,6 +87,7 @@ Material Rounded:
   dark-primary-color: var(--primary-color)
   light-primary-color: var(--primary-color)
   divider-color: var(--navbar-background)
+  md-divider-color: var(--divider-color)
   scrollbar-thumb-color: rgb(46, 48, 56)
   mdc-theme-primary: var(--primary-color)
   mdc-theme-on-primary: var(--accent-color)
