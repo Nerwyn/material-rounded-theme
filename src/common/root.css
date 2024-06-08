@@ -17,6 +17,7 @@ ha-menu-button,
 	position: fixed;
 	z-index: 3;
 	top: 0px;
+	padding: 0 4px;
 	transition: top 20ms ease-in-out 0s;
 }
 ha-menu-button {

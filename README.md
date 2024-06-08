@@ -59,6 +59,14 @@ This theme is super-charged by [card-mod](https://github.com/thomasloven/lovelac
 
 Redesigns the toolbar and sidebar buttons to follow Material You navigation component guidelines.
 
+#### [Top App Bar](https://m3.material.io/components/top-app-bar/overview)
+
+Separates out the sidebar toggle and dashboard menu (small width screens), and action items (large width screens) from the navigation toolbar into a separate top app bar.
+
+-   Non-view buttons appear at top of screen near their original locations.
+-   Buttons disappear when not scrolled to the top of the view.
+-   Buttons hover over the top of the view rather than the top app bar taking up space to give users the option to keep them as hover elements, or to create their own header using a card like markdown card or [button-card](https://github.com/custom-cards/button-card) as is done in the screenshots.
+
 #### [Navigation Bar](https://m3.material.io/components/navigation-bar/overview)
 
 -   Converts the header toolbar to a footer.
@@ -68,7 +76,6 @@ Redesigns the toolbar and sidebar buttons to follow Material You navigation comp
 -   Adds view names below the view icons.
 -   Highlights the current view with a colored icon and background behind the icon.
 -   Transition animation on view icon background when selected.
--   Separates out the drawer and kebab menu buttons to remain at the top of the screen and disappear on scroll.
 
 #### [Navigation Drawer](https://m3.material.io/components/navigation-drawer/overview)
 
