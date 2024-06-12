@@ -5,8 +5,12 @@
 }
 
 /* Decrease border radius and increase height */
-button {
+.mdc-fab {
 	height: 56px !important;
+	border-radius: 12px !important;
+}
+.ripple {
+	border-radius: 12px !important;
 }
 
 /* Remove all caps */

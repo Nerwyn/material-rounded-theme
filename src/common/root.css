@@ -104,12 +104,6 @@ paper-tab.iron-selected::after {
 	opacity: 1;
 }
 
-/* Add padding to sides of viewbox and force background color just in case */
-#view {
-	padding: 0 12px var(--footer-height) !important;
-	background: var(--lovelace-background) !important;
-}
-
 /* Fix edit mode header (footer) height */
 .edit-mode .header {
 	height: calc(2 * var(--footer-height)) !important;
@@ -128,12 +122,6 @@ paper-tabs {
 /* Fix edit mode current view label position */
 .edit-mode paper-tab.iron-selected::after {
 	margin-top: -4px !important;
-}
-
-/* Fix edit mode view box */
-.edit-mode #view {
-	padding: calc(2 * var(--footer-height)) 12px 0 !important;
-	bottom: calc(2 * var(--footer-height)) !important;
 }
 
 /* Move edit mode action items back to bottom toolbar */
