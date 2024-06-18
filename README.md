@@ -131,12 +131,13 @@ If you are using the Home Assistant Android companion app, you can enable the ac
 
 ## Installation
 
-1. Navigate to HACS (install from [here](https://hacs.xyz/) if you do not have it yet).
-2. Navigate to `Frontend`.
-3. Click `+ EXPLORE & DOWNLOAD REPOSITORIES` and search for `Material Rounded Theme`.
-4. Open this repository in HACS and click `DOWNLOAD`.
-5. Refresh Home Assistant.
-6. Navigate to your Profile, and select `Material Rounded` under Theme along with your preference for light or dark mode.
+1. Install [card-mod](https://github.com/thomasloven/lovelace-card-mod). This is a prerequisite for theme to work.
+2. Navigate to HACS (install from [here](https://hacs.xyz/) if you do not have it yet).
+3. Navigate to `Frontend`.
+4. Click `+ EXPLORE & DOWNLOAD REPOSITORIES` and search for `Material Rounded Theme`.
+5. Open this repository in HACS and click `DOWNLOAD`.
+6. Refresh Home Assistant.
+7. Navigate to your Profile, and select `Material Rounded` under Theme along with your preference for light or dark mode.
 
 ## Similar Projects and Credits
 
