@@ -1,1 +1,1 @@
-python ./.githooks/pre-commit.py
+python ./githooks/pre-commit.py

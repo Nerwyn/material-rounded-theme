@@ -1,4 +1,4 @@
 #!/bin/sh
 
-python ./.githooks/pre-commit.py
+python ./githooks/pre-commit.py
 git add ./themes
