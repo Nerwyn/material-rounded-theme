@@ -1,4 +1,6 @@
 #!/bin/sh
 
+echo Building theme...
 python ./githooks/pre-commit.py
 git add ./themes
+echo Done!
