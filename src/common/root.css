@@ -121,10 +121,32 @@ paper-tabs {
 
 /* Fix edit mode current view label position */
 .edit-mode paper-tab.iron-selected::after {
-	margin-top: -4px !important;
+	margin-top: -2px !important;
 }
 
 /* Move edit mode action items back to bottom toolbar */
 .edit-mode .action-items {
 	position: static !important;
+}
+
+/* Style add view button to look like view buttons */
+#add-view {
+	top: 12px;
+	height: 100% !important;
+	display: inline-flex;
+	flex-direction: column;
+}
+#add-view::after {
+	content: 'Add View';
+	text-transform: none;
+	text-wrap: wrap;
+	text-align: center;
+	font-weight: 500;
+	font-size: min(3.6vw, 13px);
+	opacity: 0.8;
+	padding: 0px 1px;
+	overflow: hidden;
+	line-height: 12px;
+	height: 100%;
+	margin-top: -10px;
 }
