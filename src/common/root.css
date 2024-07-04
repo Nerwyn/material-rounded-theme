@@ -131,7 +131,7 @@ paper-tabs {
 
 /* Style add view button to look like view buttons */
 #add-view {
-	top: 12px;
+	top: 6px;
 	height: 100% !important;
 	display: inline-flex;
 	flex-direction: column;
@@ -148,5 +148,5 @@ paper-tabs {
 	overflow: hidden;
 	line-height: 12px;
 	height: 100%;
-	margin-top: -10px;
+	margin-top: -4px;
 }
