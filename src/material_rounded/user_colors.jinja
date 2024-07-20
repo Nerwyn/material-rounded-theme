@@ -21,6 +21,7 @@
 	--link-text-color: var(--primary-color);
 	--dark-primary-color: var(--primary-color);
 	--light-primary-color: var(--primary-color);
+  	--slider-secondary-color: var(--primary-color);
 	--mdc-theme-primary: var(--primary-color);
 	--mdc-theme-secondary: var(--primary-color);
 	--sidebar-selected-text-color: var(--primary-text-color);
@@ -36,6 +37,7 @@
 	--codemirror-property: var(--primary-color);
 	--codemirror-atom: var(--codemirror-property);
 
+	--slider-color: hsl({{ (hsl[0] | int) + 14 }}, 90%, calc(var(--dark-mode) * 33% + (1 - var(--dark-mode)) * 91%));
 	--mdc-switch-checked-button-color: hsl(calc(({{ hsl[0] }}) * var(--dark-mode)), calc({{ hsl[1] }}% * var(--dark-mode)),calc(var(--accent-luminance) * var(--dark-mode) + 100% * (1 - var(--dark-mode))));
 	--mdc-switch-checked-track-color: hsl({{ hsl[0] }}, {{ hsl[1] }}%, calc(var(--primary-luminance) * var(--dark-mode) + 30% * (1 - var(--dark-mode))));
 	--mdc-switch-unchecked-button-color: hsl({{ (hsl[0] | int ) + 16 }}, calc(3% * var(--dark-mode)), calc(60% * var(--dark-mode) + 50% * (1 - var(--dark-mode))));
