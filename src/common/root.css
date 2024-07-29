@@ -49,7 +49,7 @@ ha-tabs {
 div:not(.edit-mode) .header:has(.main-title) {
 	top: 0 !important;
 	bottom: unset !important;
-	background: var(--lovelace-background) !important;
+	background: rgb(0, 0, 0, 0) !important;
 	--toolbar-height: 48px;
 }
 
