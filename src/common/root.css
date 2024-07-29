@@ -46,7 +46,7 @@ ha-tabs {
 }
 
 /* Move subview toolbar back to the header */
-.header:has(.main-title) {
+div:not(.edit-mode) .header:has(.main-title) {
 	top: 0 !important;
 	bottom: unset !important;
 	background: var(--lovelace-background) !important;
