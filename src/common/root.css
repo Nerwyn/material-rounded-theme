@@ -7,7 +7,7 @@
 
 /* Modify toolbar height but only for card-mod version of theme */
 .toolbar {
-	height: var(--footer-height) !important;
+	height: var(--toolbar-height) !important;
 	padding: 0 !important;
 }
 
@@ -43,6 +43,14 @@ ha-tabs {
 /* Force hide subview tab just in case */
 .hide-tab {
 	display: none !important;
+}
+
+/* Move subview toolbar back to the header */
+.header:has(.main-title) {
+	top: 0 !important;
+	bottom: unset !important;
+	background: var(--lovelace-background) !important;
+	--toolbar-height: 48px;
 }
 
 /* Display view tab contents vertically and calculate width to fill entire toolbar */
@@ -106,7 +114,7 @@ paper-tab.iron-selected::after {
 
 /* Fix edit mode header (footer) height */
 .edit-mode .header {
-	height: calc(2 * var(--footer-height)) !important;
+	height: calc(2 * var(--toolbar-height)) !important;
 }
 
 /* Fix edit mode toolbar height */

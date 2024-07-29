@@ -55,7 +55,7 @@ Material Rounded:
 
   # Sizes
   paper-slider-height: 4px
-  footer-height: 80px
+  toolbar-height: 80px
 
   # Typography
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,

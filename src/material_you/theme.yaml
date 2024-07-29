@@ -56,7 +56,7 @@ Material You:
 
   # Sizes
   paper-slider-height: 4px
-  footer-height: 80px
+  toolbar-height: 80px
 
   # Typography
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
@@ -442,20 +442,20 @@ Material You:
       .header {
         top: unset !important;
         bottom: 0 !important;
-        height: var(--footer-height) !important;
+        height: var(--toolbar-height) !important;
         background-color: var(--navbar-background) !important;
         --mdc-icon-button-size: 32px;
       }
 
       /* Modify toolbar height but only for card-mod version of theme */
       .toolbar {
-        height: var(--footer-height) !important;
+        height: var(--toolbar-height) !important;
         padding: 0 !important;
       }
 
       /* Fix edit mode header height */
       .edit-mode > .header {
-        height: calc(2*var(--footer-height)) !important;
+        height: calc(2*var(--toolbar-height)) !important;
       }
 
       /* Fix edit mode toolbar height */
@@ -552,7 +552,7 @@ Material You:
       /* Fix view box to work with footer and add margins to sides */
       #view {
         padding-top: 0 !important;
-        padding-bottom: var(--footer-height) !important;
+        padding-bottom: var(--toolbar-height) !important;
         padding-left: 12px !important;
         padding-right: 12px !important;
         --lovelace-background: unset !important;
@@ -560,11 +560,11 @@ Material You:
 
       /* Fix view box when in edit mode */
       .edit-mode > #view {
-        padding-top: calc(2*var(--footer-height)) !important;
+        padding-top: calc(2*var(--toolbar-height)) !important;
         padding-bottom: 0 !important;
         padding-left: 12px !important;
         padding-right: 12px !important;
-        bottom: calc(2*var(--footer-height)) !important;
+        bottom: calc(2*var(--toolbar-height)) !important;
       }
 
     # Evenly space icons along entire length of toolbar
@@ -602,37 +602,37 @@ Material You:
     hui-masonry-view:
       $: |
         ha-fab {
-          bottom: calc(2*var(--footer-height) + 4px) !important;
+          bottom: calc(2*var(--toolbar-height) + 4px) !important;
         }
     hui-sidebar-view:
       $: |
         ha-fab {
-          bottom: calc(2*var(--footer-height) + 4px) !important;
+          bottom: calc(2*var(--toolbar-height) + 4px) !important;
         }
     hui-panel-view:
       $: |
         ha-fab {
-          bottom: calc(2*var(--footer-height) + 4px) !important;
+          bottom: calc(2*var(--toolbar-height) + 4px) !important;
         }
     masonry-layout:
       $: |
         ha-fab {
-          bottom: calc(2*var(--footer-height) + 4px) !important;
+          bottom: calc(2*var(--toolbar-height) + 4px) !important;
         }
     horizontal-layout:
       $: |
         ha-fab {
-          bottom: calc(2*var(--footer-height) + 4px) !important;
+          bottom: calc(2*var(--toolbar-height) + 4px) !important;
         }
     vertical-layout:
       $: |
         ha-fab {
-          bottom: calc(2*var(--footer-height) + 4px) !important;
+          bottom: calc(2*var(--toolbar-height) + 4px) !important;
         }
     grid-layout:
       $: |
         ha-fab {
-          bottom: calc(2*var(--footer-height) + 4px) !important;
+          bottom: calc(2*var(--toolbar-height) + 4px) !important;
         }
 
   # Material 3 toggles
