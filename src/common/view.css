@@ -1,16 +1,5 @@
 /* Add padding to sides of viewbox and force background color just in case */
 #view {
-	padding: 0px 12px var(--toolbar-height) !important;
+	padding: 40px 12px var(--footer-height) !important;
 	background: var(--lovelace-background) !important;
-}
-
-/* Fix edit mode view box */
-.edit-mode #view {
-	padding: calc(2 * var(--toolbar-height)) 12px 0 !important;
-	bottom: calc(2 * var(--toolbar-height)) !important;
-}
-
-/* Change padding in subview */
-div:not(.edit-mode):has(.main-title) #view {
-	padding: 48px 12px 0px !important;
 }

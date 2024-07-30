@@ -1,56 +1,48 @@
-/* Turn header toolbar into a footer */
-.header {
+/* Turn view tabs into a separate footer */
+paper-tabs,
+ha-tabs {
+	position: fixed;
 	top: unset !important;
 	bottom: 0 !important;
 	background: var(--navbar-background) !important;
-}
-
-/* Modify toolbar height but only for card-mod version of theme */
-.toolbar {
-	height: var(--toolbar-height) !important;
+	height: var(--footer-height) !important;
+	width: calc(100% - var(--mdc-drawer-width, 0px));
 	padding: 0 !important;
+	margin: 0px !important;
+	margin-inline: 0px !important;
 }
 
-/* Move menu and action items buttons to top corners outside of toolbar */
-ha-menu-button,
-.action-items {
-	position: fixed;
-	z-index: 3;
-	top: 0px;
-	padding: 0 4px;
-	transition: top 20ms ease-in-out 0s;
-}
-ha-menu-button {
-	left: 0px;
-}
-.action-items {
-	right: 0px;
+/* Make header transparent and add transition */
+.header {
+	background-color: rgb(0, 0, 0, 0) !important;
+	transition: top 100ms ease-in-out 0s;
 }
 
-/* Hide menu and action items if not scrolled to top  */
-:host([scrolled]) ha-menu-button,
-:host([scrolled]) .action-items {
+/* Hide header if not scrolled to top  */
+:host([scrolled]) .header {
 	top: -48px !important;
 	transition: top 100ms ease-in-out 0s;
 }
 
-/* Remove toolbar margins */
-ha-tabs {
-	margin: 0 !important;
-	margin-inline: 0 !important;
+/* Remove toolbar padding */
+.toolbar {
+	padding: 0 !important;
+}
+
+/* Move menu and action items buttons to top corners outside of toolbar */
+.action-items {
+	position: fixed;
+	right: 0px;
+	padding: 0 12px;
+	transition: top 20ms ease-in-out 0s;
+}
+ha-menu-button {
+	padding: 0 12px;
 }
 
 /* Force hide subview tab just in case */
 .hide-tab {
 	display: none !important;
-}
-
-/* Move subview toolbar back to the header */
-div:not(.edit-mode) .header:has(.main-title) {
-	top: 0 !important;
-	bottom: unset !important;
-	background: rgb(0, 0, 0, 0) !important;
-	--toolbar-height: 48px;
 }
 
 /* Display view tab contents vertically and calculate width to fill entire toolbar */
@@ -112,11 +104,6 @@ paper-tab.iron-selected::after {
 	opacity: 1;
 }
 
-/* Fix edit mode header (footer) height */
-.edit-mode .header {
-	height: calc(2 * var(--toolbar-height)) !important;
-}
-
 /* Fix edit mode toolbar height */
 paper-tabs {
 	height: 50%;
@@ -156,5 +143,5 @@ paper-tabs {
 	overflow: hidden;
 	line-height: 12px;
 	height: 100%;
-	margin-top: -4px;
+	margin-top: -6px;
 }
