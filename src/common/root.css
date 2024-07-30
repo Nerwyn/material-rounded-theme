@@ -8,8 +8,8 @@ ha-tabs {
 	height: var(--footer-height) !important;
 	width: calc(100% - var(--mdc-drawer-width, 0px));
 	padding: 0 !important;
-	margin: 0px !important;
-	margin-inline: 0px !important;
+	margin: 0 !important;
+	margin-inline: 0 !important;
 }
 
 /* Make header transparent and add transition */
@@ -45,7 +45,12 @@ ha-menu-button {
 	display: none !important;
 }
 
-/* Display view tab contents vertically and calculate width to fill entire toolbar */
+/*
+Display view tab contents vertically and calculate width to fill entire toolbar.
+While this can be (and previously was) done by making the view tabs parent a flexbox,
+The parent of the view tabs is within a shadow-root which the view tabs are slotted into.
+Styling their parent element is much slower and inconsistent.
+*/
 paper-tab {
 	padding: 11px 0;
 	flex-direction: column;
