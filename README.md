@@ -11,13 +11,13 @@
 
 Themes for Home Assistant influenced by Material You by Google on Android.
 
-This theme aims to match the styling of the Google Home app as closely as possible, so it may change over time as the style of the Google Home app changes. It also aims to implement Material You redesigns of elements.
+This theme aims to match the styling of Material Design 3 (also known as Material You) apps like Google Home as closely as possible, so it may change over time as these apps evolve. It also aims to implement Material You redesigns of elements when possible.
 
 Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for toolbar modifications, other Material You component redesigns, and Material You coloring. If you have card-mod installed and do not want these changes to apply, use the "No Mod" versions of this theme.
 
 Don't like the blue accents? You can choose a different Material You base color! See below for more. Also requires card-mod.
 
-This theme also includes "Transparent Card" versions with card backgrounds that match the view background.
+This theme also includes "Transparent Card" versions with card backgrounds that match the view background. It also includes separate light and dark versions of all themes for niche use cases.
 
 ## Screenshots
 
@@ -61,18 +61,17 @@ Redesigns the toolbar and sidebar buttons to follow Material You navigation comp
 
 #### [Top App Bar](https://m3.material.io/components/top-app-bar/overview)
 
-Separates out the sidebar toggle and dashboard menu (small width screens), and action items (large width screens) from the navigation toolbar into a separate top app bar.
-
+-   Retains the sidebar toggle and dashboard menu (small width screens) or action items (large width screens) from the navigation toolbar header in a top app bar.
 -   Non-view buttons appear at top of screen near their original locations.
--   Buttons disappear when not scrolled to the top of the view.
--   Buttons hover over the top of the view rather than the top app bar taking up space to give users the option to keep them as hover elements, or to create their own header using a card like markdown card or [button-card](https://github.com/custom-cards/button-card) as is done in the screenshots.
+-   Buttons disappear when user is not scrolled to the top of the view.
 
 #### [Navigation Bar](https://m3.material.io/components/navigation-bar/overview)
 
--   Converts the header toolbar to a footer.
+-   Converts the toolbar header view tabs bar into a navigation bar footer.
 -   Removes the default selection bar and ripple.
 -   Spaces the view icons evenly along the entire toolbar.
     -   **WARNING**: Subviews must be placed at the end of the toolbar for the view tab count to be correct, otherwise the view tabs will end up smaller than expected.
+    -   While evenly spacing the icons should (and previously) be done by making their parent a flexbox, their parent is within a shadow-root which the view tabs are slotted into. Modifying this parent element with card-mod is possible but it is slow and inconsistent. A tab count and width calculation method is used instead, which is much faster and more consistent.
 -   Adds view names below the view icons.
 -   Highlights the current view with a colored icon and background behind the icon.
 -   Transition animation on view icon background when selected.
@@ -99,8 +98,9 @@ Desktop sidebar collapsed.
 
 ### Views
 
+-   Adds a 40px margin to the top for the top app bar and an 80px margin to the bottom for the navigation bar.
 -   Adds a 12px margin to each side of the view to match the Google Home app.
--   Add card button updated to better match the [extended FAB specification](https://m3.material.io/components/extended-fab/overview).
+-   Add card button of classic lovelace views updated to better match the [extended FAB specification](https://m3.material.io/components/extended-fab/overview).
 
 If you do not want these changes, use the "No Mod" versions of the theme.
 
@@ -164,17 +164,17 @@ max: 0
 
 ### Material Symbols
 
-Check out [Material Symbols](https://github.com/beecho01/material-symbols) to use updated material icons, as shown in the screenshots!
+Check out [Material Symbols](https://github.com/beecho01/material-symbols) to use updated material icons as shown in the screenshots!
 
 ### Graphite Theme
 
-This theme was initially modified from the [Graphite theme](https://github.com/TilmanGriesel/graphite), as it was my favorite Home Assistant theme on HACS before I created this one. Therefore, it may contain some legacy variables from it.
+This theme was initially modified from [Graphite theme](https://github.com/TilmanGriesel/graphite), as it was my favorite Home Assistant theme on HACS before I created this one. Therefore, it may contain some legacy variables from it.
 
 ## Developing, Modifying, and Building The Theme
 
 Due to the multiple versions and complexity of this theme, I have split it into multiple CSS and yaml files and created a Python git pre-commit build pipeline to compile all of the files into a single Home Assistant theme file. You can either run this build pipeline by making a git commit (not to the main repo of course) running the file `build.sh`, or running the `pre-commit.py` Python file.
 
-Four versions of a theme are created per base theme - with card mod, without card mod, transparent cards with card mod, and transparent cards without card mod. The no card mod versions of theme have the `card-mod-theme` fields removed and will have no design upgrades or custom colors. The transparent card versions of the theme use the same color for the background and cards, making them appear transparent (true transparency breaks overlays like dropdowns).
+Twelve versions of a theme are created per base theme - with card mod, without card mod, transparent cards with card mod, transparent cards without card mod, and a separate light and dark version of each. The no card mod versions of theme have the `card-mod-theme` fields removed and will have no design upgrades or custom colors. The transparent card versions of the theme use the same color for the background and cards, making them appear transparent (true transparency breaks overlays like dropdowns). The separate light and dark versions of the theme are if you need to explicitly set a device to use light or dark mode without the Home Assistant built in theme mode options.
 
 Any files under common that end in `.yaml` are treated as `card-mod-*-yaml` fields in the themes, and files ending in `.css` contain the actual card-mod CSS. Different overall version of the theme are included in separate folders, such as `material_rounded`. CSS files are copied into the card-mod yaml fields using jinja2 templates, allowing for repetitive styles that go in different shadow roots to all source from the same file.
 
