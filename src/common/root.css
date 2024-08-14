@@ -7,7 +7,7 @@ ha-tabs {
 	background: var(--navbar-background) !important;
 	height: var(--footer-height) !important;
 	width: calc(100% - var(--mdc-drawer-width, 0px));
-	padding: 0 !important;
+	padding-bottom: env(safe-area-inset-bottom) !important;
 	margin: 0 !important;
 	margin-inline: 0 !important;
 }

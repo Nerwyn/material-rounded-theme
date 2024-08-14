@@ -1,5 +1,10 @@
 /* Add padding to sides of viewbox and force background color just in case */
 #view {
-	padding: 40px 12px var(--footer-height) !important;
+	padding-top: calc(40px + env(safe-area-inset-top)) !important;
+	padding-left: calc(12px + env(safe-area-inset-left)) !important;
+	padding-right: calc(12px + env(safe-area-inset-right)) !important;
+	padding-bottom: calc(
+		var(--footer-height) + env(safe-area-inset-bottom)
+	) !important;
 	background: var(--lovelace-background) !important;
 }
