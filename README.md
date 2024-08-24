@@ -17,7 +17,7 @@ Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for toolb
 
 Don't like the blue accents? You can choose a different Material You base color! See below for more. Also requires card-mod.
 
-This theme also includes "Transparent Card" versions with card backgrounds that match the view background. It also includes separate light and dark versions of all themes for niche use cases.
+This theme also includes "Transparent Card" versions with transparent card backgrounds. It also includes separate light and dark versions of all themes for niche use cases.
 
 ## Screenshots
 
@@ -174,7 +174,7 @@ This theme was initially modified from [Graphite theme](https://github.com/Tilma
 
 Due to the multiple versions and complexity of this theme, I have split it into multiple CSS and yaml files and created a Python git pre-commit build pipeline to compile all of the files into a single Home Assistant theme file. You can either run this build pipeline by making a git commit (not to the main repo of course) running the file `build.sh`, or running the `pre-commit.py` Python file.
 
-Twelve versions of a theme are created per base theme - with card mod, without card mod, transparent cards with card mod, transparent cards without card mod, and a separate light and dark version of each. The no card mod versions of theme have the `card-mod-theme` fields removed and will have no design upgrades or custom colors. The transparent card versions of the theme use the same color for the background and cards, making them appear transparent (true transparency breaks overlays like dropdowns). The separate light and dark versions of the theme are if you need to explicitly set a device to use light or dark mode without the Home Assistant built in theme mode options.
+Twelve versions of a theme are created per base theme - with card mod, without card mod, transparent cards with card mod, transparent cards without card mod, and a separate light and dark version of each. The no card mod versions of theme have the `card-mod-theme` fields removed and will have no design upgrades or custom colors. The separate light and dark versions of the theme are if you need to explicitly set a device to use light or dark mode without the Home Assistant built in theme mode options.
 
 Any files under common that end in `.yaml` are treated as `card-mod-*-yaml` fields in the themes, and files ending in `.css` contain the actual card-mod CSS. Different overall version of the theme are included in separate folders, such as `material_rounded`. CSS files are copied into the card-mod yaml fields using jinja2 templates, allowing for repetitive styles that go in different shadow roots to all source from the same file.
 
