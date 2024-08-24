@@ -827,7 +827,6 @@ Material Rounded Transparent Card:
   input-label-ink-color: var(--primary-text-color)
   light-primary-color: var(--primary-color)
   link-text-color: var(--primary-color)
-  material-background-color: var(--lovelace-background)
   md-divider-color: var(--divider-color)
   mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
   mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
@@ -841,7 +840,6 @@ Material Rounded Transparent Card:
   mdc-theme-on-secondary: var(--accent-color)
   mdc-theme-primary: var(--primary-color)
   mdc-theme-secondary: var(--primary-color)
-  mdc-theme-surface: var(--lovelace-background)
   mdc-top-app-bar-fixed-box-shadow: none
   mdc-typography-body1-font-family: var(--font-family)
   mdc-typography-button-font-family: var(--font-family)
@@ -851,11 +849,11 @@ Material Rounded Transparent Card:
     dark:
       accent-color: rgb(0, 74, 119)
       accent-luminance: 23%
-      card-background-color: rgb(0, 0, 0, 0)
+      card-background-color: rgb(40, 42, 44)
       dark-mode: 1
       disabled-color: rgb(0, 0, 0)
       disabled-text-color: rgba(255, 255, 255, 0.5)
-      input-background-color: rgb(0, 0, 0, 0)
+      input-background-color: rgb(46, 48, 56)
       lovelace-background: rgb(19, 19, 20)
       mdc-checkbox-unchecked-color: rgb(138, 140, 153)
       mdc-switch-checked-button-color: var(--accent-color)
@@ -875,11 +873,11 @@ Material Rounded Transparent Card:
     light:
       accent-color: rgb(194, 231, 255)
       accent-luminance: 88%
-      card-background-color: rgb(0, 0, 0, 0)
+      card-background-color: rgb(233, 238, 246)
       dark-mode: 0
       disabled-color: rgb(173, 176, 174)
       disabled-text-color: rgb(128, 128, 128)
-      input-background-color: rgb(0, 0, 0, 0)
+      input-background-color: rgb(234, 234, 235)
       lovelace-background: rgb(255, 255, 255)
       mdc-checkbox-unchecked-color: rgb(42, 43, 51)
       mdc-switch-checked-button-color: rgb(255, 255, 255)
@@ -943,7 +941,7 @@ Material Rounded Transparent Card Dark:
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
-  card-background-color: rgb(0, 0, 0, 0)
+  card-background-color: rgb(40, 42, 44)
   card-mod-theme: Material Rounded
   code-editor-background-color: var(--navbar-background)
   codemirror-atom: var(--codemirror-property)
@@ -970,7 +968,7 @@ Material Rounded Transparent Card Dark:
   ha-config-card-border-radius: 16px
   header-height: 48px
   horizontal-stack-card-margin: 0px 4px
-  input-background-color: rgb(0, 0, 0, 0)
+  input-background-color: rgb(46, 48, 56)
   input-disabled-fill-color: rgba(var(--input-background-color), 0.5)
   input-disabled-ink-color: var(--disabled-text-color)
   input-disabled-label-ink-color: var(--disabled-text-color)
@@ -983,7 +981,6 @@ Material Rounded Transparent Card Dark:
   light-primary-color: var(--primary-color)
   link-text-color: var(--primary-color)
   lovelace-background: rgb(19, 19, 20)
-  material-background-color: var(--lovelace-background)
   md-divider-color: var(--divider-color)
   mdc-checkbox-unchecked-color: rgb(138, 140, 153)
   mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
@@ -1002,7 +999,6 @@ Material Rounded Transparent Card Dark:
   mdc-theme-on-secondary: var(--accent-color)
   mdc-theme-primary: var(--primary-color)
   mdc-theme-secondary: var(--primary-color)
-  mdc-theme-surface: var(--lovelace-background)
   mdc-top-app-bar-fixed-box-shadow: none
   mdc-typography-body1-font-family: var(--font-family)
   mdc-typography-button-font-family: var(--font-family)
@@ -1066,7 +1062,7 @@ Material Rounded Transparent Card Light:
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
-  card-background-color: rgb(0, 0, 0, 0)
+  card-background-color: rgb(233, 238, 246)
   card-mod-theme: Material Rounded
   code-editor-background-color: var(--navbar-background)
   codemirror-atom: var(--codemirror-property)
@@ -1093,7 +1089,7 @@ Material Rounded Transparent Card Light:
   ha-config-card-border-radius: 16px
   header-height: 48px
   horizontal-stack-card-margin: 0px 4px
-  input-background-color: rgb(0, 0, 0, 0)
+  input-background-color: rgb(234, 234, 235)
   input-disabled-fill-color: rgba(var(--input-background-color), 0.5)
   input-disabled-ink-color: var(--disabled-text-color)
   input-disabled-label-ink-color: var(--disabled-text-color)
@@ -1106,7 +1102,6 @@ Material Rounded Transparent Card Light:
   light-primary-color: var(--primary-color)
   link-text-color: var(--primary-color)
   lovelace-background: rgb(255, 255, 255)
-  material-background-color: var(--lovelace-background)
   md-divider-color: var(--divider-color)
   mdc-checkbox-unchecked-color: rgb(42, 43, 51)
   mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
@@ -1125,7 +1120,6 @@ Material Rounded Transparent Card Light:
   mdc-theme-on-secondary: var(--accent-color)
   mdc-theme-primary: var(--primary-color)
   mdc-theme-secondary: var(--primary-color)
-  mdc-theme-surface: var(--lovelace-background)
   mdc-top-app-bar-fixed-box-shadow: none
   mdc-typography-body1-font-family: var(--font-family)
   mdc-typography-button-font-family: var(--font-family)
@@ -1219,7 +1213,6 @@ Material Rounded Transparent Card No Mod:
   input-label-ink-color: var(--primary-text-color)
   light-primary-color: var(--primary-color)
   link-text-color: var(--primary-color)
-  material-background-color: var(--lovelace-background)
   md-divider-color: var(--divider-color)
   mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
   mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
@@ -1233,7 +1226,6 @@ Material Rounded Transparent Card No Mod:
   mdc-theme-on-secondary: var(--accent-color)
   mdc-theme-primary: var(--primary-color)
   mdc-theme-secondary: var(--primary-color)
-  mdc-theme-surface: var(--lovelace-background)
   mdc-top-app-bar-fixed-box-shadow: none
   mdc-typography-body1-font-family: var(--font-family)
   mdc-typography-button-font-family: var(--font-family)
@@ -1243,11 +1235,11 @@ Material Rounded Transparent Card No Mod:
     dark:
       accent-color: rgb(0, 74, 119)
       accent-luminance: 23%
-      card-background-color: rgb(0, 0, 0, 0)
+      card-background-color: rgb(40, 42, 44)
       dark-mode: 1
       disabled-color: rgb(0, 0, 0)
       disabled-text-color: rgba(255, 255, 255, 0.5)
-      input-background-color: rgb(0, 0, 0, 0)
+      input-background-color: rgb(46, 48, 56)
       lovelace-background: rgb(19, 19, 20)
       mdc-checkbox-unchecked-color: rgb(138, 140, 153)
       mdc-switch-checked-button-color: var(--accent-color)
@@ -1267,11 +1259,11 @@ Material Rounded Transparent Card No Mod:
     light:
       accent-color: rgb(194, 231, 255)
       accent-luminance: 88%
-      card-background-color: rgb(0, 0, 0, 0)
+      card-background-color: rgb(233, 238, 246)
       dark-mode: 0
       disabled-color: rgb(173, 176, 174)
       disabled-text-color: rgb(128, 128, 128)
-      input-background-color: rgb(0, 0, 0, 0)
+      input-background-color: rgb(234, 234, 235)
       lovelace-background: rgb(255, 255, 255)
       mdc-checkbox-unchecked-color: rgb(42, 43, 51)
       mdc-switch-checked-button-color: rgb(255, 255, 255)
@@ -1335,7 +1327,7 @@ Material Rounded Transparent Card No Mod Dark:
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
-  card-background-color: rgb(0, 0, 0, 0)
+  card-background-color: rgb(40, 42, 44)
   code-editor-background-color: var(--navbar-background)
   codemirror-atom: var(--codemirror-property)
   codemirror-keyword: rgb(140 169 255)
@@ -1361,7 +1353,7 @@ Material Rounded Transparent Card No Mod Dark:
   ha-config-card-border-radius: 16px
   header-height: 48px
   horizontal-stack-card-margin: 0px 4px
-  input-background-color: rgb(0, 0, 0, 0)
+  input-background-color: rgb(46, 48, 56)
   input-disabled-fill-color: rgba(var(--input-background-color), 0.5)
   input-disabled-ink-color: var(--disabled-text-color)
   input-disabled-label-ink-color: var(--disabled-text-color)
@@ -1374,7 +1366,6 @@ Material Rounded Transparent Card No Mod Dark:
   light-primary-color: var(--primary-color)
   link-text-color: var(--primary-color)
   lovelace-background: rgb(19, 19, 20)
-  material-background-color: var(--lovelace-background)
   md-divider-color: var(--divider-color)
   mdc-checkbox-unchecked-color: rgb(138, 140, 153)
   mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
@@ -1393,7 +1384,6 @@ Material Rounded Transparent Card No Mod Dark:
   mdc-theme-on-secondary: var(--accent-color)
   mdc-theme-primary: var(--primary-color)
   mdc-theme-secondary: var(--primary-color)
-  mdc-theme-surface: var(--lovelace-background)
   mdc-top-app-bar-fixed-box-shadow: none
   mdc-typography-body1-font-family: var(--font-family)
   mdc-typography-button-font-family: var(--font-family)
@@ -1457,7 +1447,7 @@ Material Rounded Transparent Card No Mod Light:
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
-  card-background-color: rgb(0, 0, 0, 0)
+  card-background-color: rgb(233, 238, 246)
   code-editor-background-color: var(--navbar-background)
   codemirror-atom: var(--codemirror-property)
   codemirror-keyword: rgb(140 169 255)
@@ -1483,7 +1473,7 @@ Material Rounded Transparent Card No Mod Light:
   ha-config-card-border-radius: 16px
   header-height: 48px
   horizontal-stack-card-margin: 0px 4px
-  input-background-color: rgb(0, 0, 0, 0)
+  input-background-color: rgb(234, 234, 235)
   input-disabled-fill-color: rgba(var(--input-background-color), 0.5)
   input-disabled-ink-color: var(--disabled-text-color)
   input-disabled-label-ink-color: var(--disabled-text-color)
@@ -1496,7 +1486,6 @@ Material Rounded Transparent Card No Mod Light:
   light-primary-color: var(--primary-color)
   link-text-color: var(--primary-color)
   lovelace-background: rgb(255, 255, 255)
-  material-background-color: var(--lovelace-background)
   md-divider-color: var(--divider-color)
   mdc-checkbox-unchecked-color: rgb(42, 43, 51)
   mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
@@ -1515,7 +1504,6 @@ Material Rounded Transparent Card No Mod Light:
   mdc-theme-on-secondary: var(--accent-color)
   mdc-theme-primary: var(--primary-color)
   mdc-theme-secondary: var(--primary-color)
-  mdc-theme-surface: var(--lovelace-background)
   mdc-top-app-bar-fixed-box-shadow: none
   mdc-typography-body1-font-family: var(--font-family)
   mdc-typography-button-font-family: var(--font-family)

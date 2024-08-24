@@ -50,13 +50,7 @@ def main():
 			theme_title = 'Material Rounded Transparent Card'
 			transparent = 'rgb(0, 0, 0, 0)'
 			output[theme_title] = deepcopy(base_theme)
-			output[theme_title]['modes']['dark']['card-background-color'] = transparent
-			output[theme_title]['modes']['light']['card-background-color'] = transparent
 			output[theme_title]['ha-card-background'] = transparent
-			output[theme_title]['modes']['dark']['input-background-color'] = transparent
-			output[theme_title]['modes']['light']['input-background-color'] = transparent
-			output[theme_title]['mdc-theme-surface'] = 'var(--lovelace-background)'
-			output[theme_title]['material-background-color'] = 'var(--lovelace-background)'
 
 			# Create a no mod versions of theme with fixed status and navbar colors
 			theme_title = 'Material Rounded No Mod'
