@@ -5,3 +5,9 @@ hui-entities-toggle {
 	left: -4px !important;
 	top: 8px !important;
 }
+
+/* Animate card when clicked */
+ha-card:active {
+	transform: scale(0.975);
+	transition: 0s;
+}

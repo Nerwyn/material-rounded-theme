@@ -33,3 +33,10 @@ paper-icon-item::before {
 .configuration-badge {
 	box-shadow: inset 0px 0px 0px 1px var(--sidebar-icon-color);
 }
+
+/* Change HomeAssistant title font */
+.menu .title {
+	font-weight: 600;
+	font-family: var(--font-family);
+	padding-top: 4px;
+}
