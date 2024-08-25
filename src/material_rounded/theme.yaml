@@ -4,6 +4,8 @@ Material Rounded:
       dark-mode: 1
       accent-luminance: 23%
       primary-luminance: 88%
+      background-luminance: 2%
+      navbar-luminance: 8%
       accent-color: rgb(0, 74, 119)
       primary-color: rgb(194, 231, 254)
       state-icon-color: rgb(196, 199, 197)
@@ -29,6 +31,8 @@ Material Rounded:
       dark-mode: 0
       accent-luminance: 88%
       primary-luminance: 10%
+      background-luminance: 98%
+      navbar-luminance: 97%
       accent-color: rgb(194, 231, 255)
       primary-color: rgb(0, 29, 53)
       state-icon-color: rgb(69, 71, 70)
