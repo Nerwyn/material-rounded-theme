@@ -8,6 +8,6 @@ hui-entities-toggle {
 
 /* Animate card when clicked */
 ha-card:active {
-	transform: scale(0.975);
+	transform: scale(0.99);
 	transition: 0s;
 }

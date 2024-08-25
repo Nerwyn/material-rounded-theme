@@ -22,6 +22,9 @@ def main():
 		resources = os.listdir('./src/common/')
 		for resource in resources:
 			with open(f'./src/common/{resource}', 'r') as f:
+				if 'disabled' in resource:
+					continue
+
 				name, file_type = resource.split('.')
 				if name not in common_context:
 					common_context[name] = {}

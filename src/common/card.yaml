@@ -3,31 +3,31 @@
   {{ user_colors.jinja }}
   {{ card.css }}
 
-# Entities header toggle
-hui-entities-toggle$ ha-switch$: >-
-  {{ ha_switch.css }}
-
-# Profile toggles
-ha-advanced-mode-row$ ha-switch$: >-
-  {{ ha_switch.css }}
-ha-force-narrow-row$ ha-switch$: >-
-  {{ ha_switch.css }}
-ha-set-vibrate-row$ ha-switch$: >-
-  {{ ha_switch.css }}
-ha-push-notifications-row$ ha-push-notifications-toggle$ ha-switch$: >-
-  {{ ha_switch.css }}
-ha-set-suspend-row$ ha-switch$: >-
-  {{ ha_switch.css }}
-ha-enable-shortcuts-row$ ha-switch$: >-
-  {{ ha_switch.css }}
-
-# Device page
-hui-toggle-entity-row$:
-  ha-entity-toggle$ ha-switch$: >-
-    {{ ha_switch.css }}
-
-# Browser Mod
-.card-content:
-  ha-settings-row:
-    ha-switch$: >-
-      {{ ha_switch.css }}
+## Entities header toggle
+#hui-entities-toggle$ ha-switch$: >-
+#  {{ ha_switch.css }}
+#
+## Profile toggles
+#ha-advanced-mode-row$ ha-switch$: >-
+#  {{ ha_switch.css }}
+#ha-force-narrow-row$ ha-switch$: >-
+#  {{ ha_switch.css }}
+#ha-set-vibrate-row$ ha-switch$: >-
+#  {{ ha_switch.css }}
+#ha-push-notifications-row$ ha-push-notifications-toggle$ ha-switch$: >-
+#  {{ ha_switch.css }}
+#ha-set-suspend-row$ ha-switch$: >-
+#  {{ ha_switch.css }}
+#ha-enable-shortcuts-row$ ha-switch$: >-
+#  {{ ha_switch.css }}
+#
+## Device page
+#hui-toggle-entity-row$:
+#  ha-entity-toggle$ ha-switch$: >-
+#    {{ ha_switch.css }}
+#
+## Browser Mod
+#.card-content:
+#  ha-settings-row:
+#    ha-switch$: >-
+#      {{ ha_switch.css }}
