@@ -3,6 +3,10 @@
   {{ user_colors.jinja }}
   {{ card.css }}
 
+# No parent shadow-root in card
+ha-switch$: >-
+  {{ ha_switch.css }}
+
 # Entities header toggle
 hui-entities-toggle$ ha-switch$: >-
   {{ ha_switch.css }}
