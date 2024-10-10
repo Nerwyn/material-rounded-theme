@@ -1,9 +1,14 @@
+/* Make sidebar width an even number */
+ha-sidebar {
+	width: 56px;
+}
+
 /* Animate background when expanding/retracting sidebar */
-paper-icon-item {
+:not(.profile) > paper-icon-item {
 	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1);
 	height: 48px;
-	left: 4px;
-	margin: 0 !important;
+	margin: 0 4px !important;
+	padding: 0 12px !important;
 }
 
 /* Display current dashboard text above background */
@@ -13,20 +18,22 @@ paper-icon-item {
 
 paper-icon-item::before {
 	content: '';
-	width: 0px;
+	height: 48px;
+	width: 100% !important;
 	position: absolute !important;
-	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
-	left: 50% !important;
+	transition: all 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
+	left: 0 !important;
+	right: 0 !important;
+	opacity: 1 !important;
+	background: var(--accent-color) !important;
 	border-radius: 128px !important;
-	transform: translateX(-50%);
+	transform: scaleX(0);
 }
 
 /* Change background of current dashboard icon with transition */
 .iron-selected paper-icon-item::before {
-	background: var(--accent-color) !important;
-	opacity: 1 !important;
-	width: 100% !important;
 	will-change: unset !important;
+	transform: scaleX(1);
 }
 
 /* Add shadow to badges so it doesn't blend with background */

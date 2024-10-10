@@ -1,4 +1,5 @@
 /* Move user picture above navigation background */
 .picture {
 	z-index: 2;
+	margin: 4px 0;
 }
