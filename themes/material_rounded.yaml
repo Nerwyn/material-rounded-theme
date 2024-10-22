@@ -1,6 +1,6 @@
 Material Rounded:
   app-header-background-color: var(--lovelace-background)
-  app-header-edit-background-color: var(--navbar-background)
+  app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
@@ -23,7 +23,7 @@ Material Rounded:
   card-mod-theme: Material Rounded
   card-mod-view-yaml: ".: \"{# https://gist.github.com/mjackson/5311256 #}\\n{%- macro hex2hsl(hex) -%}\\n  {%- if hex[0] == \\\"#\\\" -%}\\n  {%- set hex = hex[1:] -%}\\n  {%- endif -%}\\n  {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}\\n  {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}\\n  {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}\\n  {%- set rgb_max = [r, g, b] | max -%}\\n  {%- set rgb_min = [r, g, b] | min -%}\\n  {%- set l = (rgb_max + rgb_min) / 2 -%}\\n  {%- if rgb_max != rgb_min -%}\\n    {%- set d = rgb_max - rgb_min -%}\\n    {%- set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) -%}\\n    {%- if r == rgb_max -%}\\n      {%- set h = (g - b) / d + (6 if g < b else 0) -%}\\n    {%- elif g == rgb_max -%}\\n      {%- set h = (b - r) / d + 2 -%}\\n    {%- elif b == rgb_max -%}\\n      {%- set h = (r - g) / d + 4 -%}\\n    {%- endif -%}\\n    {%- set h = h / 6 -%}\\n  {%- endif -%}\\n  {%- set h = (h * 360) | int if h else 0 -%}\\n  {%- set s = (s * 100) | int if s else 0 -%}\\n  {%- set l = (l * 100) | int if l else 0 -%}\\n  {{ h }},{{ s }},{{ l }}\\n{%- endmacro -%} :host {\\n\\t{%- set id = \\\"_\\\" + user | lower | replace(\\\" \\\",\\\"_\\\") -%}\\n\\t{%- set base_color = \\\"\\\" -%}\\n\\n\\t{%- if has_value(\\\"sensor.material_rounded_base_color\\\" + id) -%}\\n\\t{%- set base_color = states(\\\"sensor.material_rounded_base_color\\\" + id) -%}\\n\\t{%- elif has_value(\\\"sensor.material_rounded_base_color\\\") -%}\\n\\t{%- set base_color = states(\\\"sensor.material_rounded_base_color\\\") -%}\\n\\t{%- endif -%}\\n\\n\\t{%- if (base_color | length) in [6, 7] -%}\\n\\t{%- set hsl = hex2hsl(base_color).split(',') -%}\\n\\t\\n\\t--accent-color: hsl({{ hsl[0] }}, {{ hsl[1] }}%, var(--accent-luminance));\\n\\t--text-light-primary-color: var(--text-primary-color);\\n\\t--mdc-theme-on-primary: var(--accent-color);\\n\\t--mdc-theme-on-secondary: var(--accent-color);\\n\\t\\n\\t--primary-color: hsl({{ hsl[0] }}, {{ hsl[1] }}%, var(--primary-luminance));\\n\\t--text-accent-color: var(--primary-color);\\n\\t--link-text-color: var(--primary-color);\\n\\t--dark-primary-color: var(--primary-color);\\n\\t--light-primary-color: var(--primary-color);\\n  \\t--slider-secondary-color: var(--primary-color);\\n\\t--mdc-theme-primary: var(--primary-color);\\n\\t--mdc-theme-secondary: var(--primary-color);\\n\\t--sidebar-selected-text-color: var(--primary-text-color);\\n\\t--sidebar-selected-icon-color: var(--primary-color);\\n\\t--paper-slider-knob-color: var(--primary-color);\\n\\t--paper-slider-knob-start-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-pin-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-active-color: var(--paper-slider-knob-color);\\n\\t--paper-slider-secondary-color: var(--light-primary-color);\\n\\t--input-hover-line-color: var(--primary-color);\\n\\t--mdc-select-hover-line-color: var(--input-hover-line-color);\\n\\t--mdc-text-field-hover-line-color: var(--input-hover-line-color);\\n\\t--codemirror-property: var(--primary-color);\\n\\t--codemirror-atom: var(--codemirror-property);\\n\\n\\t--slider-color: hsl({{ (hsl[0] | int) + 14 }}, 90%, calc(var(--dark-mode) * 33% + (1 - var(--dark-mode)) * 91%));\\n\\t--mdc-switch-checked-button-color: hsl(calc(({{ hsl[0] }}) * var(--dark-mode)), calc({{ hsl[1] }}% * var(--dark-mode)),calc(var(--accent-luminance) * var(--dark-mode) + 100% * (1 - var(--dark-mode))));\\n\\t--mdc-switch-checked-track-color: hsl({{ hsl[0] }}, {{ hsl[1] }}%, calc(var(--primary-luminance) * var(--dark-mode) + 30% * (1 - var(--dark-mode))));\\n\\t--mdc-switch-unchecked-button-color: hsl({{ (hsl[0] | int ) + 16 }}, calc(3% * var(--dark-mode)), calc(60% * var(--dark-mode) + 50% * (1 - var(--dark-mode))));\\n\\t--mdc-switch-unchecked-track-color: hsl({{ (hsl[0] | int ) + 9 }}, 3%, calc(29% * var(--dark-mode) + 90% * (1 - var(--dark-mode))));\\n\\t{%- endif -%}\\n\\n\\t--switch-checked-button-color: var(--mdc-switch-checked-button-color) !important;\\n\\t--switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;\\n\\t--switch-unchecked-button-color:
     var(--mdc-switch-unchecked-button-color) !important;\\n\\t--switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;\\n} #view{padding-top:calc(40px\n  + env(safe-area-inset-top))!important;padding-left:calc(12px + env(safe-area-inset-left))!important;padding-right:calc(12px + env(safe-area-inset-right))!important;padding-bottom:calc(var(--footer-height) + env(safe-area-inset-bottom))!important;background:var(--lovelace-background)!important}\"\ngrid-layout$:\n  ha-fab$: :host{bottom:calc(var(--footer-height) + 16px)!important;z-index:3!important}.mdc-fab{height:56px!important;border-radius:12px!important}.ripple{border-radius:12px!important}.mdc-fab__label{text-transform:none!important;font-size:11pt}\nhorizontal-layout$:\n  ha-fab$: :host{bottom:calc(var(--footer-height) + 16px)!important;z-index:3!important}.mdc-fab{height:56px!important;border-radius:12px!important}.ripple{border-radius:12px!important}.mdc-fab__label{text-transform:none!important;font-size:11pt}\nhui-masonry-view$:\n  ha-fab$: :host{bottom:calc(var(--footer-height) + 16px)!important;z-index:3!important}.mdc-fab{height:56px!important;border-radius:12px!important}.ripple{border-radius:12px!important}.mdc-fab__label{text-transform:none!important;font-size:11pt}\nhui-panel-view$:\n  ha-fab$: :host{bottom:calc(var(--footer-height) + 16px)!important;z-index:3!important}.mdc-fab{height:56px!important;border-radius:12px!important}.ripple{border-radius:12px!important}.mdc-fab__label{text-transform:none!important;font-size:11pt}\nhui-sidebar-view$:\n  ha-fab$: :host{bottom:calc(var(--footer-height) + 16px)!important;z-index:3!important}.mdc-fab{height:56px!important;border-radius:12px!important}.ripple{border-radius:12px!important}.mdc-fab__label{text-transform:none!important;font-size:11pt}\nmasonry-layout$:\n  ha-fab$: :host{bottom:calc(var(--footer-height) + 16px)!important;z-index:3!important}.mdc-fab{height:56px!important;border-radius:12px!important}.ripple{border-radius:12px!important}.mdc-fab__label{text-transform:none!important;font-size:11pt}\nvertical-layout$:\n  ha-fab$: :host{bottom:calc(var(--footer-height) + 16px)!important;z-index:3!important}.mdc-fab{height:56px!important;border-radius:12px!important}.ripple{border-radius:12px!important}.mdc-fab__label{text-transform:none!important;font-size:11pt}"
-  code-editor-background-color: var(--navbar-background)
+  code-editor-background-color: var(--primary-background-color)
   codemirror-atom: var(--codemirror-property)
   codemirror-keyword: rgb(140 169 255)
   codemirror-meta: var(--primary-text-color)
@@ -31,7 +31,7 @@ Material Rounded:
   codemirror-property: var(--primary-color)
   codemirror-string: rgb(119 196 229)
   dark-primary-color: var(--primary-color)
-  divider-color: var(--navbar-background)
+  divider-color: var(--primary-background-color)
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: var(--card-background-color)
@@ -89,7 +89,7 @@ Material Rounded:
       mdc-switch-checked-track-color: var(--primary-color)
       mdc-switch-unchecked-button-color: rgb(140, 144, 159)
       mdc-switch-unchecked-track-color: rgb(65, 71, 83)
-      navbar-background: rgb(30, 31, 32)
+      primary-background-color: rgb(30, 31, 32)
       primary-color: rgb(194, 231, 254)
       primary-luminance: 88%
       primary-text-color: rgb(228, 228, 231)
@@ -113,15 +113,15 @@ Material Rounded:
       mdc-switch-checked-track-color: rgb(0, 91, 191)
       mdc-switch-unchecked-button-color: rgb(114, 119, 133)
       mdc-switch-unchecked-track-color: rgb(222, 226, 242)
-      navbar-background: rgb(240, 244, 249)
+      primary-background-color: rgb(240, 244, 249)
       primary-color: rgb(0, 29, 53)
       primary-luminance: 10%
       primary-text-color: rgb(31, 31, 31)
-      secondary-background-color: rgb(255, 255, 255)
       secondary-text-color: rgb(68, 71, 70)
       sidebar-icon-color: rgb(88, 89, 95)
       slider-color: rgb(211, 227, 253)
       state-icon-color: rgb(69, 71, 70)
+  navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
@@ -141,11 +141,10 @@ Material Rounded:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--navbar-background)
   primary-font-family: var(--font-family)
   rgb-primary-text-color: var(--primary-text-color)
   scrollbar-thumb-color: rgb(46, 48, 56)
-  sidebar-background-color: var(--navbar-background)
+  sidebar-background-color: var(--primary-background-color)
   sidebar-selected-icon-color: var(--primary-color)
   sidebar-selected-text-color: var(--primary-text-color)
   sidebar-text-color: var(--sidebar-icon-color)
@@ -165,14 +164,14 @@ Material Rounded Dark:
   accent-color: rgb(0, 74, 119)
   accent-luminance: 23%
   app-header-background-color: var(--lovelace-background)
-  app-header-edit-background-color: var(--navbar-background)
+  app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   card-background-color: rgb(40, 42, 44)
   card-mod-theme: Material Rounded
-  code-editor-background-color: var(--navbar-background)
+  code-editor-background-color: var(--primary-background-color)
   codemirror-atom: var(--codemirror-property)
   codemirror-keyword: rgb(140 169 255)
   codemirror-meta: var(--primary-text-color)
@@ -183,7 +182,7 @@ Material Rounded Dark:
   dark-primary-color: var(--primary-color)
   disabled-color: rgb(0, 0, 0)
   disabled-text-color: rgba(255, 255, 255, 0.5)
-  divider-color: var(--navbar-background)
+  divider-color: var(--primary-background-color)
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: var(--card-background-color)
@@ -233,7 +232,7 @@ Material Rounded Dark:
   mdc-typography-button-font-family: var(--font-family)
   mdc-typography-button-font-weight: var(--title-font-weight)
   mdc-typography-font-family: var(--font-family)
-  navbar-background: rgb(30, 31, 32)
+  navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
@@ -253,7 +252,7 @@ Material Rounded Dark:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--navbar-background)
+  primary-background-color: rgb(30, 31, 32)
   primary-color: rgb(194, 231, 254)
   primary-font-family: var(--font-family)
   primary-luminance: 88%
@@ -262,7 +261,7 @@ Material Rounded Dark:
   scrollbar-thumb-color: rgb(46, 48, 56)
   secondary-background-color: rgb(55, 57, 59)
   secondary-text-color: rgb(138 140 153)
-  sidebar-background-color: var(--navbar-background)
+  sidebar-background-color: var(--primary-background-color)
   sidebar-icon-color: rgb(147, 149, 159)
   sidebar-selected-icon-color: var(--primary-color)
   sidebar-selected-text-color: var(--primary-text-color)
@@ -286,14 +285,14 @@ Material Rounded Light:
   accent-color: rgb(194, 231, 255)
   accent-luminance: 88%
   app-header-background-color: var(--lovelace-background)
-  app-header-edit-background-color: var(--navbar-background)
+  app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   card-background-color: rgb(233, 238, 246)
   card-mod-theme: Material Rounded
-  code-editor-background-color: var(--navbar-background)
+  code-editor-background-color: var(--primary-background-color)
   codemirror-atom: var(--codemirror-property)
   codemirror-keyword: rgb(140 169 255)
   codemirror-meta: var(--primary-text-color)
@@ -304,7 +303,7 @@ Material Rounded Light:
   dark-primary-color: var(--primary-color)
   disabled-color: rgb(173, 176, 174)
   disabled-text-color: rgb(128, 128, 128)
-  divider-color: var(--navbar-background)
+  divider-color: var(--primary-background-color)
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: var(--card-background-color)
@@ -354,7 +353,7 @@ Material Rounded Light:
   mdc-typography-button-font-family: var(--font-family)
   mdc-typography-button-font-weight: var(--title-font-weight)
   mdc-typography-font-family: var(--font-family)
-  navbar-background: rgb(240, 244, 249)
+  navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
@@ -374,16 +373,15 @@ Material Rounded Light:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--navbar-background)
+  primary-background-color: rgb(240, 244, 249)
   primary-color: rgb(0, 29, 53)
   primary-font-family: var(--font-family)
   primary-luminance: 10%
   primary-text-color: rgb(31, 31, 31)
   rgb-primary-text-color: var(--primary-text-color)
   scrollbar-thumb-color: rgb(46, 48, 56)
-  secondary-background-color: rgb(255, 255, 255)
   secondary-text-color: rgb(68, 71, 70)
-  sidebar-background-color: var(--navbar-background)
+  sidebar-background-color: var(--primary-background-color)
   sidebar-icon-color: rgb(88, 89, 95)
   sidebar-selected-icon-color: var(--primary-color)
   sidebar-selected-text-color: var(--primary-text-color)
@@ -404,12 +402,12 @@ Material Rounded Light:
   vertical-stack-card-margin: 4px 0px
 Material Rounded No Mod:
   app-header-background-color: var(--navbar-background)
-  app-header-edit-background-color: var(--navbar-background)
+  app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
-  code-editor-background-color: var(--navbar-background)
+  code-editor-background-color: var(--primary-background-color)
   codemirror-atom: var(--codemirror-property)
   codemirror-keyword: rgb(140 169 255)
   codemirror-meta: var(--primary-text-color)
@@ -417,7 +415,7 @@ Material Rounded No Mod:
   codemirror-property: var(--primary-color)
   codemirror-string: rgb(119 196 229)
   dark-primary-color: var(--primary-color)
-  divider-color: var(--navbar-background)
+  divider-color: var(--primary-background-color)
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: var(--card-background-color)
@@ -475,7 +473,7 @@ Material Rounded No Mod:
       mdc-switch-checked-track-color: var(--primary-color)
       mdc-switch-unchecked-button-color: rgb(140, 144, 159)
       mdc-switch-unchecked-track-color: rgb(65, 71, 83)
-      navbar-background: rgb(30, 31, 32)
+      primary-background-color: rgb(30, 31, 32)
       primary-color: rgb(194, 231, 254)
       primary-luminance: 88%
       primary-text-color: rgb(228, 228, 231)
@@ -499,15 +497,15 @@ Material Rounded No Mod:
       mdc-switch-checked-track-color: rgb(0, 91, 191)
       mdc-switch-unchecked-button-color: rgb(114, 119, 133)
       mdc-switch-unchecked-track-color: rgb(222, 226, 242)
-      navbar-background: rgb(240, 244, 249)
+      primary-background-color: rgb(240, 244, 249)
       primary-color: rgb(0, 29, 53)
       primary-luminance: 10%
       primary-text-color: rgb(31, 31, 31)
-      secondary-background-color: rgb(255, 255, 255)
       secondary-text-color: rgb(68, 71, 70)
       sidebar-icon-color: rgb(88, 89, 95)
       slider-color: rgb(211, 227, 253)
       state-icon-color: rgb(69, 71, 70)
+  navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
@@ -531,7 +529,7 @@ Material Rounded No Mod:
   primary-font-family: var(--font-family)
   rgb-primary-text-color: var(--primary-text-color)
   scrollbar-thumb-color: rgb(46, 48, 56)
-  sidebar-background-color: var(--navbar-background)
+  sidebar-background-color: var(--primary-background-color)
   sidebar-selected-icon-color: var(--primary-color)
   sidebar-selected-text-color: var(--primary-text-color)
   sidebar-text-color: var(--sidebar-icon-color)
@@ -551,13 +549,13 @@ Material Rounded No Mod Dark:
   accent-color: rgb(0, 74, 119)
   accent-luminance: 23%
   app-header-background-color: var(--navbar-background)
-  app-header-edit-background-color: var(--navbar-background)
+  app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   card-background-color: rgb(40, 42, 44)
-  code-editor-background-color: var(--navbar-background)
+  code-editor-background-color: var(--primary-background-color)
   codemirror-atom: var(--codemirror-property)
   codemirror-keyword: rgb(140 169 255)
   codemirror-meta: var(--primary-text-color)
@@ -568,7 +566,7 @@ Material Rounded No Mod Dark:
   dark-primary-color: var(--primary-color)
   disabled-color: rgb(0, 0, 0)
   disabled-text-color: rgba(255, 255, 255, 0.5)
-  divider-color: var(--navbar-background)
+  divider-color: var(--primary-background-color)
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: var(--card-background-color)
@@ -618,7 +616,7 @@ Material Rounded No Mod Dark:
   mdc-typography-button-font-family: var(--font-family)
   mdc-typography-button-font-weight: var(--title-font-weight)
   mdc-typography-font-family: var(--font-family)
-  navbar-background: rgb(30, 31, 32)
+  navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
@@ -638,7 +636,7 @@ Material Rounded No Mod Dark:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--lovelace-background)
+  primary-background-color: rgb(30, 31, 32)
   primary-color: rgb(194, 231, 254)
   primary-font-family: var(--font-family)
   primary-luminance: 88%
@@ -647,7 +645,7 @@ Material Rounded No Mod Dark:
   scrollbar-thumb-color: rgb(46, 48, 56)
   secondary-background-color: rgb(55, 57, 59)
   secondary-text-color: rgb(138 140 153)
-  sidebar-background-color: var(--navbar-background)
+  sidebar-background-color: var(--primary-background-color)
   sidebar-icon-color: rgb(147, 149, 159)
   sidebar-selected-icon-color: var(--primary-color)
   sidebar-selected-text-color: var(--primary-text-color)
@@ -671,13 +669,13 @@ Material Rounded No Mod Light:
   accent-color: rgb(194, 231, 255)
   accent-luminance: 88%
   app-header-background-color: var(--navbar-background)
-  app-header-edit-background-color: var(--navbar-background)
+  app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   card-background-color: rgb(233, 238, 246)
-  code-editor-background-color: var(--navbar-background)
+  code-editor-background-color: var(--primary-background-color)
   codemirror-atom: var(--codemirror-property)
   codemirror-keyword: rgb(140 169 255)
   codemirror-meta: var(--primary-text-color)
@@ -688,7 +686,7 @@ Material Rounded No Mod Light:
   dark-primary-color: var(--primary-color)
   disabled-color: rgb(173, 176, 174)
   disabled-text-color: rgb(128, 128, 128)
-  divider-color: var(--navbar-background)
+  divider-color: var(--primary-background-color)
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: var(--card-background-color)
@@ -738,7 +736,7 @@ Material Rounded No Mod Light:
   mdc-typography-button-font-family: var(--font-family)
   mdc-typography-button-font-weight: var(--title-font-weight)
   mdc-typography-font-family: var(--font-family)
-  navbar-background: rgb(240, 244, 249)
+  navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
@@ -758,16 +756,15 @@ Material Rounded No Mod Light:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--lovelace-background)
+  primary-background-color: rgb(240, 244, 249)
   primary-color: rgb(0, 29, 53)
   primary-font-family: var(--font-family)
   primary-luminance: 10%
   primary-text-color: rgb(31, 31, 31)
   rgb-primary-text-color: var(--primary-text-color)
   scrollbar-thumb-color: rgb(46, 48, 56)
-  secondary-background-color: rgb(255, 255, 255)
   secondary-text-color: rgb(68, 71, 70)
-  sidebar-background-color: var(--navbar-background)
+  sidebar-background-color: var(--primary-background-color)
   sidebar-icon-color: rgb(88, 89, 95)
   sidebar-selected-icon-color: var(--primary-color)
   sidebar-selected-text-color: var(--primary-text-color)
@@ -788,13 +785,13 @@ Material Rounded No Mod Light:
   vertical-stack-card-margin: 4px 0px
 Material Rounded Transparent Card:
   app-header-background-color: var(--lovelace-background)
-  app-header-edit-background-color: var(--navbar-background)
+  app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   card-mod-theme: Material Rounded
-  code-editor-background-color: var(--navbar-background)
+  code-editor-background-color: var(--primary-background-color)
   codemirror-atom: var(--codemirror-property)
   codemirror-keyword: rgb(140 169 255)
   codemirror-meta: var(--primary-text-color)
@@ -802,7 +799,7 @@ Material Rounded Transparent Card:
   codemirror-property: var(--primary-color)
   codemirror-string: rgb(119 196 229)
   dark-primary-color: var(--primary-color)
-  divider-color: var(--navbar-background)
+  divider-color: var(--primary-background-color)
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: rgb(0, 0, 0, 0)
@@ -860,7 +857,7 @@ Material Rounded Transparent Card:
       mdc-switch-checked-track-color: var(--primary-color)
       mdc-switch-unchecked-button-color: rgb(140, 144, 159)
       mdc-switch-unchecked-track-color: rgb(65, 71, 83)
-      navbar-background: rgb(30, 31, 32)
+      primary-background-color: rgb(30, 31, 32)
       primary-color: rgb(194, 231, 254)
       primary-luminance: 88%
       primary-text-color: rgb(228, 228, 231)
@@ -884,15 +881,15 @@ Material Rounded Transparent Card:
       mdc-switch-checked-track-color: rgb(0, 91, 191)
       mdc-switch-unchecked-button-color: rgb(114, 119, 133)
       mdc-switch-unchecked-track-color: rgb(222, 226, 242)
-      navbar-background: rgb(240, 244, 249)
+      primary-background-color: rgb(240, 244, 249)
       primary-color: rgb(0, 29, 53)
       primary-luminance: 10%
       primary-text-color: rgb(31, 31, 31)
-      secondary-background-color: rgb(255, 255, 255)
       secondary-text-color: rgb(68, 71, 70)
       sidebar-icon-color: rgb(88, 89, 95)
       slider-color: rgb(211, 227, 253)
       state-icon-color: rgb(69, 71, 70)
+  navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
@@ -912,11 +909,10 @@ Material Rounded Transparent Card:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--navbar-background)
   primary-font-family: var(--font-family)
   rgb-primary-text-color: var(--primary-text-color)
   scrollbar-thumb-color: rgb(46, 48, 56)
-  sidebar-background-color: var(--navbar-background)
+  sidebar-background-color: var(--primary-background-color)
   sidebar-selected-icon-color: var(--primary-color)
   sidebar-selected-text-color: var(--primary-text-color)
   sidebar-text-color: var(--sidebar-icon-color)
@@ -936,14 +932,14 @@ Material Rounded Transparent Card Dark:
   accent-color: rgb(0, 74, 119)
   accent-luminance: 23%
   app-header-background-color: var(--lovelace-background)
-  app-header-edit-background-color: var(--navbar-background)
+  app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   card-background-color: rgb(40, 42, 44)
   card-mod-theme: Material Rounded
-  code-editor-background-color: var(--navbar-background)
+  code-editor-background-color: var(--primary-background-color)
   codemirror-atom: var(--codemirror-property)
   codemirror-keyword: rgb(140 169 255)
   codemirror-meta: var(--primary-text-color)
@@ -954,7 +950,7 @@ Material Rounded Transparent Card Dark:
   dark-primary-color: var(--primary-color)
   disabled-color: rgb(0, 0, 0)
   disabled-text-color: rgba(255, 255, 255, 0.5)
-  divider-color: var(--navbar-background)
+  divider-color: var(--primary-background-color)
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: rgb(0, 0, 0, 0)
@@ -1004,7 +1000,7 @@ Material Rounded Transparent Card Dark:
   mdc-typography-button-font-family: var(--font-family)
   mdc-typography-button-font-weight: var(--title-font-weight)
   mdc-typography-font-family: var(--font-family)
-  navbar-background: rgb(30, 31, 32)
+  navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
@@ -1024,7 +1020,7 @@ Material Rounded Transparent Card Dark:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--navbar-background)
+  primary-background-color: rgb(30, 31, 32)
   primary-color: rgb(194, 231, 254)
   primary-font-family: var(--font-family)
   primary-luminance: 88%
@@ -1033,7 +1029,7 @@ Material Rounded Transparent Card Dark:
   scrollbar-thumb-color: rgb(46, 48, 56)
   secondary-background-color: rgb(55, 57, 59)
   secondary-text-color: rgb(138 140 153)
-  sidebar-background-color: var(--navbar-background)
+  sidebar-background-color: var(--primary-background-color)
   sidebar-icon-color: rgb(147, 149, 159)
   sidebar-selected-icon-color: var(--primary-color)
   sidebar-selected-text-color: var(--primary-text-color)
@@ -1057,14 +1053,14 @@ Material Rounded Transparent Card Light:
   accent-color: rgb(194, 231, 255)
   accent-luminance: 88%
   app-header-background-color: var(--lovelace-background)
-  app-header-edit-background-color: var(--navbar-background)
+  app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   card-background-color: rgb(233, 238, 246)
   card-mod-theme: Material Rounded
-  code-editor-background-color: var(--navbar-background)
+  code-editor-background-color: var(--primary-background-color)
   codemirror-atom: var(--codemirror-property)
   codemirror-keyword: rgb(140 169 255)
   codemirror-meta: var(--primary-text-color)
@@ -1075,7 +1071,7 @@ Material Rounded Transparent Card Light:
   dark-primary-color: var(--primary-color)
   disabled-color: rgb(173, 176, 174)
   disabled-text-color: rgb(128, 128, 128)
-  divider-color: var(--navbar-background)
+  divider-color: var(--primary-background-color)
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: rgb(0, 0, 0, 0)
@@ -1125,7 +1121,7 @@ Material Rounded Transparent Card Light:
   mdc-typography-button-font-family: var(--font-family)
   mdc-typography-button-font-weight: var(--title-font-weight)
   mdc-typography-font-family: var(--font-family)
-  navbar-background: rgb(240, 244, 249)
+  navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
@@ -1145,16 +1141,15 @@ Material Rounded Transparent Card Light:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--navbar-background)
+  primary-background-color: rgb(240, 244, 249)
   primary-color: rgb(0, 29, 53)
   primary-font-family: var(--font-family)
   primary-luminance: 10%
   primary-text-color: rgb(31, 31, 31)
   rgb-primary-text-color: var(--primary-text-color)
   scrollbar-thumb-color: rgb(46, 48, 56)
-  secondary-background-color: rgb(255, 255, 255)
   secondary-text-color: rgb(68, 71, 70)
-  sidebar-background-color: var(--navbar-background)
+  sidebar-background-color: var(--primary-background-color)
   sidebar-icon-color: rgb(88, 89, 95)
   sidebar-selected-icon-color: var(--primary-color)
   sidebar-selected-text-color: var(--primary-text-color)
@@ -1175,12 +1170,12 @@ Material Rounded Transparent Card Light:
   vertical-stack-card-margin: 4px 0px
 Material Rounded Transparent Card No Mod:
   app-header-background-color: var(--navbar-background)
-  app-header-edit-background-color: var(--navbar-background)
+  app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
-  code-editor-background-color: var(--navbar-background)
+  code-editor-background-color: var(--primary-background-color)
   codemirror-atom: var(--codemirror-property)
   codemirror-keyword: rgb(140 169 255)
   codemirror-meta: var(--primary-text-color)
@@ -1188,7 +1183,7 @@ Material Rounded Transparent Card No Mod:
   codemirror-property: var(--primary-color)
   codemirror-string: rgb(119 196 229)
   dark-primary-color: var(--primary-color)
-  divider-color: var(--navbar-background)
+  divider-color: var(--primary-background-color)
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: rgb(0, 0, 0, 0)
@@ -1246,7 +1241,7 @@ Material Rounded Transparent Card No Mod:
       mdc-switch-checked-track-color: var(--primary-color)
       mdc-switch-unchecked-button-color: rgb(140, 144, 159)
       mdc-switch-unchecked-track-color: rgb(65, 71, 83)
-      navbar-background: rgb(30, 31, 32)
+      primary-background-color: rgb(30, 31, 32)
       primary-color: rgb(194, 231, 254)
       primary-luminance: 88%
       primary-text-color: rgb(228, 228, 231)
@@ -1270,15 +1265,15 @@ Material Rounded Transparent Card No Mod:
       mdc-switch-checked-track-color: rgb(0, 91, 191)
       mdc-switch-unchecked-button-color: rgb(114, 119, 133)
       mdc-switch-unchecked-track-color: rgb(222, 226, 242)
-      navbar-background: rgb(240, 244, 249)
+      primary-background-color: rgb(240, 244, 249)
       primary-color: rgb(0, 29, 53)
       primary-luminance: 10%
       primary-text-color: rgb(31, 31, 31)
-      secondary-background-color: rgb(255, 255, 255)
       secondary-text-color: rgb(68, 71, 70)
       sidebar-icon-color: rgb(88, 89, 95)
       slider-color: rgb(211, 227, 253)
       state-icon-color: rgb(69, 71, 70)
+  navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
@@ -1302,7 +1297,7 @@ Material Rounded Transparent Card No Mod:
   primary-font-family: var(--font-family)
   rgb-primary-text-color: var(--primary-text-color)
   scrollbar-thumb-color: rgb(46, 48, 56)
-  sidebar-background-color: var(--navbar-background)
+  sidebar-background-color: var(--primary-background-color)
   sidebar-selected-icon-color: var(--primary-color)
   sidebar-selected-text-color: var(--primary-text-color)
   sidebar-text-color: var(--sidebar-icon-color)
@@ -1322,13 +1317,13 @@ Material Rounded Transparent Card No Mod Dark:
   accent-color: rgb(0, 74, 119)
   accent-luminance: 23%
   app-header-background-color: var(--navbar-background)
-  app-header-edit-background-color: var(--navbar-background)
+  app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   card-background-color: rgb(40, 42, 44)
-  code-editor-background-color: var(--navbar-background)
+  code-editor-background-color: var(--primary-background-color)
   codemirror-atom: var(--codemirror-property)
   codemirror-keyword: rgb(140 169 255)
   codemirror-meta: var(--primary-text-color)
@@ -1339,7 +1334,7 @@ Material Rounded Transparent Card No Mod Dark:
   dark-primary-color: var(--primary-color)
   disabled-color: rgb(0, 0, 0)
   disabled-text-color: rgba(255, 255, 255, 0.5)
-  divider-color: var(--navbar-background)
+  divider-color: var(--primary-background-color)
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: rgb(0, 0, 0, 0)
@@ -1389,7 +1384,7 @@ Material Rounded Transparent Card No Mod Dark:
   mdc-typography-button-font-family: var(--font-family)
   mdc-typography-button-font-weight: var(--title-font-weight)
   mdc-typography-font-family: var(--font-family)
-  navbar-background: rgb(30, 31, 32)
+  navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
@@ -1409,7 +1404,7 @@ Material Rounded Transparent Card No Mod Dark:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--lovelace-background)
+  primary-background-color: rgb(30, 31, 32)
   primary-color: rgb(194, 231, 254)
   primary-font-family: var(--font-family)
   primary-luminance: 88%
@@ -1418,7 +1413,7 @@ Material Rounded Transparent Card No Mod Dark:
   scrollbar-thumb-color: rgb(46, 48, 56)
   secondary-background-color: rgb(55, 57, 59)
   secondary-text-color: rgb(138 140 153)
-  sidebar-background-color: var(--navbar-background)
+  sidebar-background-color: var(--primary-background-color)
   sidebar-icon-color: rgb(147, 149, 159)
   sidebar-selected-icon-color: var(--primary-color)
   sidebar-selected-text-color: var(--primary-text-color)
@@ -1442,13 +1437,13 @@ Material Rounded Transparent Card No Mod Light:
   accent-color: rgb(194, 231, 255)
   accent-luminance: 88%
   app-header-background-color: var(--navbar-background)
-  app-header-edit-background-color: var(--navbar-background)
+  app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   card-background-color: rgb(233, 238, 246)
-  code-editor-background-color: var(--navbar-background)
+  code-editor-background-color: var(--primary-background-color)
   codemirror-atom: var(--codemirror-property)
   codemirror-keyword: rgb(140 169 255)
   codemirror-meta: var(--primary-text-color)
@@ -1459,7 +1454,7 @@ Material Rounded Transparent Card No Mod Light:
   dark-primary-color: var(--primary-color)
   disabled-color: rgb(173, 176, 174)
   disabled-text-color: rgb(128, 128, 128)
-  divider-color: var(--navbar-background)
+  divider-color: var(--primary-background-color)
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   footer-height: 80px
   ha-card-background: rgb(0, 0, 0, 0)
@@ -1509,7 +1504,7 @@ Material Rounded Transparent Card No Mod Light:
   mdc-typography-button-font-family: var(--font-family)
   mdc-typography-button-font-weight: var(--title-font-weight)
   mdc-typography-font-family: var(--font-family)
-  navbar-background: rgb(240, 244, 249)
+  navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
@@ -1529,16 +1524,15 @@ Material Rounded Transparent Card No Mod Light:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--lovelace-background)
+  primary-background-color: rgb(240, 244, 249)
   primary-color: rgb(0, 29, 53)
   primary-font-family: var(--font-family)
   primary-luminance: 10%
   primary-text-color: rgb(31, 31, 31)
   rgb-primary-text-color: var(--primary-text-color)
   scrollbar-thumb-color: rgb(46, 48, 56)
-  secondary-background-color: rgb(255, 255, 255)
   secondary-text-color: rgb(68, 71, 70)
-  sidebar-background-color: var(--navbar-background)
+  sidebar-background-color: var(--primary-background-color)
   sidebar-icon-color: rgb(88, 89, 95)
   sidebar-selected-icon-color: var(--primary-color)
   sidebar-selected-text-color: var(--primary-text-color)

@@ -13,17 +13,17 @@ Material Rounded:
       secondary-text-color: rgb(138 140 153)
       disabled-text-color: rgba(255, 255, 255, 0.5)
       lovelace-background: rgb(19, 19, 20)
-      navbar-background: rgb(30, 31, 32)
-      secondary-background-color: rgb(55, 57, 59)
+      primary-background-color: rgb(30, 31, 32)
       disabled-color: rgb(0, 0, 0)
       input-background-color: rgb(46, 48, 56)
       card-background-color: rgb(40, 42, 44)
-      state-inactive-color: rgb(72, 74, 78)
       slider-color: rgb(8, 66, 160)
       mdc-switch-checked-button-color: var(--accent-color)
       mdc-switch-checked-track-color: var(--primary-color)
       mdc-switch-unchecked-button-color: rgb(140, 144, 159)
       mdc-switch-unchecked-track-color: rgb(65, 71, 83)
+      secondary-background-color: rgb(55, 57, 59) # dark mode only
+      state-inactive-color: rgb(72, 74, 78) # dark mode only
 
     light:
       dark-mode: 0
@@ -38,8 +38,7 @@ Material Rounded:
       secondary-text-color: rgb(68, 71, 70)
       disabled-text-color: rgb(128, 128, 128)
       lovelace-background: rgb(255, 255, 255)
-      navbar-background: rgb(240, 244, 249)
-      secondary-background-color: rgb(255, 255, 255)
+      primary-background-color: rgb(240, 244, 249)
       disabled-color: rgb(173, 176, 174)
       input-background-color: rgb(234, 234, 235)
       card-background-color: rgb(233, 238, 246)
@@ -61,8 +60,9 @@ Material Rounded:
   app-header-background-color: var(--lovelace-background)
   app-header-text-color: var(--primary-text-color)
   app-header-edit-text-color: var(--app-header-text-color)
-  app-header-edit-background-color: var(--navbar-background)
+  app-header-edit-background-color: var(--primary-background-color)
   app-header-selection-bar-color: none
+  navbar-background: var(--primary-background-color)
   paper-tab-ink: rgba(0, 0, 0, 0)
 
   # Typography
@@ -93,10 +93,9 @@ Material Rounded:
   link-text-color: var(--primary-color)
 
   # Main Interface Colors
-  primary-background-color: var(--navbar-background)
   dark-primary-color: var(--primary-color)
   light-primary-color: var(--primary-color)
-  divider-color: var(--navbar-background)
+  divider-color: var(--primary-background-color)
   slider-secondary-color: var(--primary-color)
   md-divider-color: var(--divider-color)
   mdc-theme-primary: var(--primary-color)
@@ -109,7 +108,7 @@ Material Rounded:
   sidebar-selected-text-color: var(--primary-text-color)
   sidebar-selected-icon-color: var(--primary-color)
   sidebar-text-color: var(--sidebar-icon-color)
-  sidebar-background-color: var(--navbar-background)
+  sidebar-background-color: var(--primary-background-color)
 
   # Cards
   border-radius: 28px
@@ -164,7 +163,7 @@ Material Rounded:
   mdc-text-field-hover-line-color: var(--input-hover-line-color)
 
   # Editors
-  code-editor-background-color: var(--navbar-background)
+  code-editor-background-color: var(--primary-background-color)
   codemirror-meta: var(--primary-text-color)
   codemirror-property: var(--primary-color)
   codemirror-atom: var(--codemirror-property)
