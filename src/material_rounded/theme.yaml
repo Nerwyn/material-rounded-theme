@@ -114,8 +114,7 @@ Material Rounded:
   border-radius: 28px
   ha-card-background: var(--card-background-color)
   ha-card-border-radius: var(--border-radius)
-  ha-card-border-color: rgba(0, 0, 0, 0)
-  ha-card-border-width: 0px
+  ha-card-border-color: var(--lovelace-background)
   ha-card-border-style: none
   ha-card-border: none
   ha-card-box-shadow: none
