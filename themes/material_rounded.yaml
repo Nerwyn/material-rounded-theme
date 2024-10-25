@@ -36,9 +36,10 @@ Material Rounded:
   footer-height: 80px
   ha-card-background: var(--card-background-color)
   ha-card-border: none
-  ha-card-border-color: var(--lovelace-background)
+  ha-card-border-color: rgba(0, 0, 0, 0)
   ha-card-border-radius: var(--border-radius)
   ha-card-border-style: none
+  ha-card-border-width: 0px
   ha-card-box-shadow: none
   ha-card-header-font-family: var(--font-family)
   ha-config-card-border-radius: 16px
@@ -186,9 +187,10 @@ Material Rounded Dark:
   footer-height: 80px
   ha-card-background: var(--card-background-color)
   ha-card-border: none
-  ha-card-border-color: var(--lovelace-background)
+  ha-card-border-color: rgba(0, 0, 0, 0)
   ha-card-border-radius: var(--border-radius)
   ha-card-border-style: none
+  ha-card-border-width: 0px
   ha-card-box-shadow: none
   ha-card-header-font-family: var(--font-family)
   ha-config-card-border-radius: 16px
@@ -306,9 +308,10 @@ Material Rounded Light:
   footer-height: 80px
   ha-card-background: var(--card-background-color)
   ha-card-border: none
-  ha-card-border-color: var(--lovelace-background)
+  ha-card-border-color: rgba(0, 0, 0, 0)
   ha-card-border-radius: var(--border-radius)
   ha-card-border-style: none
+  ha-card-border-width: 0px
   ha-card-box-shadow: none
   ha-card-header-font-family: var(--font-family)
   ha-config-card-border-radius: 16px
@@ -417,9 +420,10 @@ Material Rounded No Mod:
   footer-height: 80px
   ha-card-background: var(--card-background-color)
   ha-card-border: none
-  ha-card-border-color: var(--lovelace-background)
+  ha-card-border-color: rgba(0, 0, 0, 0)
   ha-card-border-radius: var(--border-radius)
   ha-card-border-style: none
+  ha-card-border-width: 0px
   ha-card-box-shadow: none
   ha-card-header-font-family: var(--font-family)
   ha-config-card-border-radius: 16px
@@ -567,9 +571,10 @@ Material Rounded No Mod Dark:
   footer-height: 80px
   ha-card-background: var(--card-background-color)
   ha-card-border: none
-  ha-card-border-color: var(--lovelace-background)
+  ha-card-border-color: rgba(0, 0, 0, 0)
   ha-card-border-radius: var(--border-radius)
   ha-card-border-style: none
+  ha-card-border-width: 0px
   ha-card-box-shadow: none
   ha-card-header-font-family: var(--font-family)
   ha-config-card-border-radius: 16px
@@ -686,9 +691,10 @@ Material Rounded No Mod Light:
   footer-height: 80px
   ha-card-background: var(--card-background-color)
   ha-card-border: none
-  ha-card-border-color: var(--lovelace-background)
+  ha-card-border-color: rgba(0, 0, 0, 0)
   ha-card-border-radius: var(--border-radius)
   ha-card-border-style: none
+  ha-card-border-width: 0px
   ha-card-box-shadow: none
   ha-card-header-font-family: var(--font-family)
   ha-config-card-border-radius: 16px
@@ -798,9 +804,10 @@ Material Rounded Transparent Card:
   footer-height: 80px
   ha-card-background: rgb(0, 0, 0, 0)
   ha-card-border: none
-  ha-card-border-color: var(--lovelace-background)
+  ha-card-border-color: rgba(0, 0, 0, 0)
   ha-card-border-radius: var(--border-radius)
   ha-card-border-style: none
+  ha-card-border-width: 0px
   ha-card-box-shadow: none
   ha-card-header-font-family: var(--font-family)
   ha-config-card-border-radius: 16px
@@ -948,9 +955,10 @@ Material Rounded Transparent Card Dark:
   footer-height: 80px
   ha-card-background: rgb(0, 0, 0, 0)
   ha-card-border: none
-  ha-card-border-color: var(--lovelace-background)
+  ha-card-border-color: rgba(0, 0, 0, 0)
   ha-card-border-radius: var(--border-radius)
   ha-card-border-style: none
+  ha-card-border-width: 0px
   ha-card-box-shadow: none
   ha-card-header-font-family: var(--font-family)
   ha-config-card-border-radius: 16px
@@ -1068,9 +1076,10 @@ Material Rounded Transparent Card Light:
   footer-height: 80px
   ha-card-background: rgb(0, 0, 0, 0)
   ha-card-border: none
-  ha-card-border-color: var(--lovelace-background)
+  ha-card-border-color: rgba(0, 0, 0, 0)
   ha-card-border-radius: var(--border-radius)
   ha-card-border-style: none
+  ha-card-border-width: 0px
   ha-card-box-shadow: none
   ha-card-header-font-family: var(--font-family)
   ha-config-card-border-radius: 16px
@@ -1179,9 +1188,10 @@ Material Rounded Transparent Card No Mod:
   footer-height: 80px
   ha-card-background: rgb(0, 0, 0, 0)
   ha-card-border: none
-  ha-card-border-color: var(--lovelace-background)
+  ha-card-border-color: rgba(0, 0, 0, 0)
   ha-card-border-radius: var(--border-radius)
   ha-card-border-style: none
+  ha-card-border-width: 0px
   ha-card-box-shadow: none
   ha-card-header-font-family: var(--font-family)
   ha-config-card-border-radius: 16px
@@ -1329,9 +1339,10 @@ Material Rounded Transparent Card No Mod Dark:
   footer-height: 80px
   ha-card-background: rgb(0, 0, 0, 0)
   ha-card-border: none
-  ha-card-border-color: var(--lovelace-background)
+  ha-card-border-color: rgba(0, 0, 0, 0)
   ha-card-border-radius: var(--border-radius)
   ha-card-border-style: none
+  ha-card-border-width: 0px
   ha-card-box-shadow: none
   ha-card-header-font-family: var(--font-family)
   ha-config-card-border-radius: 16px
@@ -1448,9 +1459,10 @@ Material Rounded Transparent Card No Mod Light:
   footer-height: 80px
   ha-card-background: rgb(0, 0, 0, 0)
   ha-card-border: none
-  ha-card-border-color: var(--lovelace-background)
+  ha-card-border-color: rgba(0, 0, 0, 0)
   ha-card-border-radius: var(--border-radius)
   ha-card-border-style: none
+  ha-card-border-width: 0px
   ha-card-box-shadow: none
   ha-card-header-font-family: var(--font-family)
   ha-config-card-border-radius: 16px
