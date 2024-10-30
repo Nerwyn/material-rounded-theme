@@ -8,3 +8,8 @@
 	) !important;
 	background: var(--lovelace-background) !important;
 }
+
+/* Remove bottom footer padding from subviews */
+.header:has(ha-icon-button-arrow-prev) ~ #view {
+	padding-bottom: env(safe-area-inset-bottom) !important;
+}
