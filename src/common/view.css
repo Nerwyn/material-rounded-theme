@@ -3,13 +3,12 @@
 	padding-top: calc(40px + env(safe-area-inset-top)) !important;
 	padding-left: calc(12px + env(safe-area-inset-left)) !important;
 	padding-right: calc(12px + env(safe-area-inset-right)) !important;
-	padding-bottom: calc(
-		var(--footer-height) + env(safe-area-inset-bottom)
-	) !important;
 	background: var(--lovelace-background) !important;
 }
 
-/* Remove bottom footer padding when not present */
-.header:not(:has(ha-tabs, paper-tabs)) + #view {
-	padding-bottom: env(safe-area-inset-bottom) !important;
+/* Add bottom footer padding when present */
+.header:has(ha-tabs, paper-tabs) + #view {
+	padding-bottom: calc(
+		var(--footer-height) + env(safe-area-inset-bottom)
+	) !important;
 }
