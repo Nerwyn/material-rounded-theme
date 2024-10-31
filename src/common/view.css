@@ -9,7 +9,7 @@
 	background: var(--lovelace-background) !important;
 }
 
-/* Remove bottom footer padding from subviews */
-.header:has(ha-icon-button-arrow-prev) ~ #view {
+/* Remove bottom footer padding when not present */
+.header:not(:has(ha-tabs, paper-tabs)) + #view {
 	padding-bottom: env(safe-area-inset-bottom) !important;
 }
