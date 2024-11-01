@@ -11,11 +11,12 @@
 	{%- if (base_color | length) in [6, 7] -%}
 	{%- set hsl = hex2hsl(base_color).split(',') -%}
 	
+	{# accent color #}
 	--accent-color: hsl({{ hsl[0] }}, {{ hsl[1] }}%, var(--accent-luminance));
-	--text-light-primary-color: var(--text-primary-color);
 	--mdc-theme-on-primary: var(--accent-color);
 	--mdc-theme-on-secondary: var(--accent-color);
 	
+	{# primary color #}
 	--primary-color: hsl({{ hsl[0] }}, {{ hsl[1] }}%, var(--primary-luminance));
 	--text-accent-color: var(--primary-color);
 	--link-text-color: var(--primary-color);
@@ -24,28 +25,43 @@
   	--slider-secondary-color: var(--primary-color);
 	--mdc-theme-primary: var(--primary-color);
 	--mdc-theme-secondary: var(--primary-color);
-	--sidebar-selected-text-color: var(--primary-text-color);
+	--sidebar-selected-text-color: var(--primary-color);
 	--sidebar-selected-icon-color: var(--primary-color);
 	--paper-slider-knob-color: var(--primary-color);
-	--paper-slider-knob-start-color: var(--paper-slider-knob-color);
-	--paper-slider-pin-color: var(--paper-slider-knob-color);
-	--paper-slider-active-color: var(--paper-slider-knob-color);
-	--paper-slider-secondary-color: var(--light-primary-color);
+	--paper-slider-knob-start-color: var(--primary-color);
+	--paper-slider-pin-color: var(--primary-color);
+	--paper-slider-active-color: var(--primary-color);
+	--paper-slider-secondary-color: var(--primary-color);
 	--input-hover-line-color: var(--primary-color);
-	--mdc-select-hover-line-color: var(--input-hover-line-color);
-	--mdc-text-field-hover-line-color: var(--input-hover-line-color);
+	--mdc-select-hover-line-color: var(--primary-color);
+	--mdc-text-field-hover-line-color: var(--primary-color);
 	--codemirror-property: var(--primary-color);
-	--codemirror-atom: var(--codemirror-property);
+	--codemirror-atom: var(--primary-color);
 
-	--slider-color: hsl({{ (hsl[0] | int) + 14 }}, 90%, calc(var(--dark-mode) * 33% + (1 - var(--dark-mode)) * 91%));
-	--mdc-switch-checked-button-color: hsl(calc(({{ hsl[0] }}) * var(--dark-mode)), calc({{ hsl[1] }}% * var(--dark-mode)),calc(var(--accent-luminance) * var(--dark-mode) + 100% * (1 - var(--dark-mode))));
-	--mdc-switch-checked-track-color: hsl({{ hsl[0] }}, {{ hsl[1] }}%, calc(var(--primary-luminance) * var(--dark-mode) + 30% * (1 - var(--dark-mode))));
-	--mdc-switch-unchecked-button-color: hsl({{ (hsl[0] | int ) + 16 }}, calc(3% * var(--dark-mode)), calc(60% * var(--dark-mode) + 50% * (1 - var(--dark-mode))));
-	--mdc-switch-unchecked-track-color: hsl({{ (hsl[0] | int ) + 9 }}, 3%, calc(29% * var(--dark-mode) + 90% * (1 - var(--dark-mode))));
+	--slider-color: light-dark(
+		hsl({{ (hsl[0] | int) + 14 }}, 90%, 91%),
+		hsl({{ (hsl[0] | int) + 14 }}, 90%, 33%),
+	);
+	--md-switch-checked-button-color: light-dark(
+		hsl(0, 0%, 100%),
+		var(--accent-color)
+	);
+	--md-switch-checked-track-color: light-dark(
+		hsl({{ hsl[0] }}, {{ hsl[1] }}%, 30%),
+		var(--primary-color)
+	);
+	--md-switch-unchecked-button-color: light-dark(
+		hsl({{ (hsl[0] | int ) + 16 }}, 0%, 50%),
+		hsl({{ (hsl[0] | int ) + 16 }}, 3%, 60%)
+	);
+	--md-switch-unchecked-track-color: light-dark(
+		hsl({{ (hsl[0] | int ) + 9 }}, 3%, 90%),
+		hsl({{ (hsl[0] | int ) + 9 }}, 3%, 29%)
+	);
 	{%- endif -%}
 
-	--switch-checked-button-color: var(--mdc-switch-checked-button-color) !important;
-	--switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;
-	--switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color) !important;
-	--switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;
+	--switch-checked-button-color: var(--md-switch-checked-button-color) !important;
+	--switch-checked-track-color: var(--md-switch-checked-track-color) !important;
+	--switch-unchecked-button-color: var(--md-switch-unchecked-button-color) !important;
+	--switch-unchecked-track-color: var(--md-switch-unchecked-track-color) !important;
 }

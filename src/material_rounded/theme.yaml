@@ -1,7 +1,6 @@
 Material Rounded:
   modes:
     dark:
-      dark-mode: 1
       accent-luminance: 23%
       primary-luminance: 88%
       accent-color: rgb(0, 74, 119)
@@ -18,15 +17,14 @@ Material Rounded:
       input-background-color: rgb(46, 48, 56)
       card-background-color: rgb(40, 42, 44)
       slider-color: rgb(8, 66, 160)
-      mdc-switch-checked-button-color: var(--accent-color)
-      mdc-switch-checked-track-color: var(--primary-color)
-      mdc-switch-unchecked-button-color: rgb(140, 144, 159)
-      mdc-switch-unchecked-track-color: rgb(65, 71, 83)
+      md-switch-checked-button-color: var(--accent-color)
+      md-switch-checked-track-color: var(--primary-color)
+      md-switch-unchecked-button-color: rgb(140, 144, 159)
+      md-switch-unchecked-track-color: rgb(65, 71, 83)
       secondary-background-color: rgb(55, 57, 59) # dark mode only
       state-inactive-color: rgb(72, 74, 78) # dark mode only
 
     light:
-      dark-mode: 0
       accent-luminance: 88%
       primary-luminance: 10%
       accent-color: rgb(194, 231, 255)
@@ -43,10 +41,10 @@ Material Rounded:
       input-background-color: rgb(234, 234, 235)
       card-background-color: rgb(233, 238, 246)
       slider-color: rgb(211, 227, 253)
-      mdc-switch-checked-button-color: rgb(255, 255, 255)
-      mdc-switch-checked-track-color: rgb(0, 91, 191)
-      mdc-switch-unchecked-button-color: rgb(114, 119, 133)
-      mdc-switch-unchecked-track-color: rgb(222, 226, 242)
+      md-switch-checked-button-color: rgb(255, 255, 255)
+      md-switch-checked-track-color: rgb(0, 91, 191)
+      md-switch-unchecked-button-color: rgb(114, 119, 133)
+      md-switch-unchecked-track-color: rgb(222, 226, 242)
 
   # Spacings
   horizontal-stack-card-margin: 0px 4px
@@ -133,10 +131,10 @@ Material Rounded:
   paper-slider-secondary-color: var(--light-primary-color)
 
   # Switches
-  switch-checked-button-color: var(--mdc-switch-checked-button-color)
-  switch-checked-track-color: var(--mdc-switch-checked-track-color)
-  switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color)
-  switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color)
+  switch-checked-button-color: var(--md-switch-checked-button-color)
+  switch-checked-track-color: var(--md-switch-checked-track-color)
+  switch-unchecked-button-color: var(--md-switch-unchecked-button-color)
+  switch-unchecked-track-color: var(--md-switch-unchecked-track-color)
 
   # Toggles
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)

@@ -5,3 +5,15 @@ hui-entities-toggle {
 	left: -4px !important;
 	top: 8px !important;
 }
+
+/* Fix Header/Footer Overflow */
+.header {
+	border-top-left-radius: var(--ha-card-border-radius);
+	border-top-right-radius: var(--ha-card-border-radius);
+	overflow: hidden;
+}
+.footer {
+	border-bottom-left-radius: var(--ha-card-border-radius);
+	border-bottom-right-radius: var(--ha-card-border-radius);
+	overflow: hidden;
+}
