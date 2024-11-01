@@ -26,8 +26,9 @@ ha-enable-shortcuts-row$ ha-switch$: >-
   {{ ha_switch.css }}
 
 # Device page
-hui-toggle-entity-row$ ha-entity-toggle$ ha-switch$: >-
-  {{ ha_switch.css }}
+hui-toggle-entity-row$:
+  ha-entity-toggle$ ha-switch$: >-
+    {{ ha_switch.css }}
 
 # Browser Mod
 .card-content:
