@@ -3,7 +3,7 @@
 	padding-top: calc(40px + env(safe-area-inset-top)) !important;
 	padding-left: calc(12px + env(safe-area-inset-left)) !important;
 	padding-right: calc(12px + env(safe-area-inset-right)) !important;
-	background: var(--lovelace-background) !important;
+	background: var(--view-background, var(--lovelace-background)) !important;
 }
 
 /* Add bottom footer padding when present */
