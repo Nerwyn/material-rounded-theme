@@ -53,7 +53,6 @@ Material Rounded:
   # Toolbar
   paper-slider-height: 4px
   header-height: 48px
-  footer-height: 80px
   mdc-top-app-bar-fixed-box-shadow: none
   app-header-background-color: var(--lovelace-background)
   app-header-text-color: var(--primary-text-color)
