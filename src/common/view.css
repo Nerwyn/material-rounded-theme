@@ -8,6 +8,7 @@
 /* Add bottom footer padding when present */
 .header:has(ha-tabs, paper-tabs) + #view {
 	padding-bottom: calc(
-		calc(var(--header-height) / 0.6) + env(safe-area-inset-bottom)
+		var(--kiosk-header-height, var(--footer-height)) +
+			env(safe-area-inset-bottom)
 	) !important;
 }

@@ -1,6 +1,6 @@
 /* Fix add card button position  */
 :host {
-	bottom: calc(var(--header-height) / 0.6 + 16px) !important;
+	bottom: var(--footer-height) !important;
 	z-index: 3 !important;
 }
 
