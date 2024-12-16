@@ -6,11 +6,9 @@ import {
 import { HassElement, HomeAssistant } from './models/interfaces';
 
 function getBaseColor(hass: HomeAssistant): string | undefined {
-	console.log('Getting user defined base color');
 	let baseColor: string | undefined = undefined;
 	const userId = hass.user?.name.toLowerCase().replace(' ', '_');
 	if (userId) {
-		console.log(`Getting base color for user ${userId}`);
 		baseColor =
 			hass.states[`sensor.material_rounded_base_color_${userId}`]?.state;
 	}
@@ -26,16 +24,18 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 	) as HassElement;
 	const hass: HomeAssistant = homeAssistant?.hass;
 	if (hass && hass.themes.theme.includes('Material Rounded')) {
-		console.log('Material Rounded theme detected!');
-
 		const baseColor = getBaseColor(hass);
 		if (baseColor) {
-			console.log(`Base color ${baseColor} detected.`);
+			const isDarkMode = hass.themes.darkMode;
 			const theme = themeFromSourceColor(argbFromHex(baseColor));
 			console.log(theme);
-			applyTheme(theme, { target: homeAssistant as HassElement });
-		} else {
-			console.log('No base color detected!');
+			applyTheme(theme, {
+				target: homeAssistant as HassElement,
+				dark: isDarkMode,
+			});
+			console.info(
+				`Material Rounded theme colors generated using user defined base color ${baseColor}.`,
+			);
 		}
 	}
 });
