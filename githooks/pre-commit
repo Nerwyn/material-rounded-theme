@@ -5,3 +5,23 @@ python ./githooks/pre-commit.py
 echo Adding compiled theme to commit...
 git add ./themes
 echo Done!
+
+echo Building material color script...
+npx lint-staged
+if [ $? -ne 0 ]
+then
+  exit 1
+fi
+
+npm run build
+if [ $? -ne 0 ]
+then
+  exit 1
+fi
+
+git add dist/
+if [ $? -ne 0 ]
+then
+  exit 1
+fi
+echo Done!

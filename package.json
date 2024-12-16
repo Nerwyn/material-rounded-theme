@@ -1,0 +1,42 @@
+{
+	"name": "material-rounded-theme",
+	"version": "3.0.0",
+	"description": "A Material You and Google Home app influenced theme for Home Assistant",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "npx webpack",
+		"prelint": "tsc --noemit",
+		"lint": "eslint --fix --config ./.eslintrc.config.cjs"
+	},
+	"lint-staged": {
+		"*": "prettier -w"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Nerwyn/material-rounded-theme.git"
+	},
+	"author": "Nerwyn",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Nerwyn/material-rounded-theme/issues"
+	},
+	"homepage": "https://github.com/Nerwyn/material-rounded-theme#readme",
+	"dependencies": {
+		"@material/material-color-utilities": "latest"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "latest",
+		"@typescript-eslint/parser": "latest",
+		"eslint": "latest",
+		"eslint-config-prettier": "latest",
+		"eslint-plugin-prettier": "latest",
+		"lint-staged": "latest",
+		"prettier": "latest",
+		"prettier-plugin-organize-imports": "latest",
+		"ts-loader": "latest",
+		"typescript": "latest",
+		"webpack": "latest",
+		"webpack-cli": "latest"
+	}
+}
