@@ -23,8 +23,7 @@
 	},
 	"homepage": "https://github.com/Nerwyn/material-rounded-theme#readme",
 	"dependencies": {
-		"@material/material-color-utilities": "latest",
-		"home-assistant-js-websocket": "latest"
+		"@material/material-color-utilities": "latest"
 	},
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "latest",
@@ -32,6 +31,7 @@
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-prettier": "latest",
+		"home-assistant-js-websocket": "^9.4.0",
 		"lint-staged": "latest",
 		"prettier": "latest",
 		"prettier-plugin-organize-imports": "latest",
