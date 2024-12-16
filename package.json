@@ -23,7 +23,8 @@
 	},
 	"homepage": "https://github.com/Nerwyn/material-rounded-theme#readme",
 	"dependencies": {
-		"@material/material-color-utilities": "latest"
+		"@material/material-color-utilities": "latest",
+		"home-assistant-js-websocket": "latest"
 	},
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "latest",
