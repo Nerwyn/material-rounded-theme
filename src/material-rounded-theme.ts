@@ -58,7 +58,7 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 								dark: isDarkMode,
 							});
 							console.info(
-								`Material Rounded Theme colors updated using user defined base color ${baseColor}.`,
+								`Material Rounded Theme colors updated using user defined base color ${baseColor} and ${isDarkMode ? 'dark' : 'light'} mode.`,
 							);
 						}
 					}
