@@ -93,7 +93,7 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 	// Trigger on set theme service call
 	ha.hass.connection.subscribeEvents((e: Record<string, any>) => {
 		if (e?.data?.service == 'set_theme') {
-			setTheme();
+			setTimeout(() => setTheme(), 1000);
 		}
 	}, 'call_service');
 
