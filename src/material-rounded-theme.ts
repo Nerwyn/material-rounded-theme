@@ -6,38 +6,41 @@ import {
 import { HassElement } from './models/interfaces';
 
 Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
-	let baseColor: string | undefined = undefined;
-	let isDarkMode: boolean = false;
+	const ha = document.querySelector('home-assistant') as HassElement;
+	const userId = ha.hass.user?.name.toLowerCase().replace(' ', '_');
+	const sensorName = 'sensor.material_rounded_base_color';
+	const userSensorName = `${sensorName}_${userId}`;
+
+	let baseColor: string | undefined;
+	let isDarkMode = ha.hass.themes.darkMode;
 
 	function setTheme() {
 		{
 			try {
-				const ha = document.querySelector(
-					'home-assistant',
-				) as HassElement;
+				const themeName = ha?.hass?.themes?.theme ?? '';
+				if (themeName.includes('Material ')) {
+					let newIsDarkMode = ha.hass.themes.darkMode;
 
-				if (ha?.hass?.themes?.theme?.includes('Material Rounded')) {
+					// Fixed light/dark mode versions of theme
+					if (!ha.hass.themes.themes[themeName].modes) {
+						if (themeName.includes('Light')) {
+							newIsDarkMode = false;
+						} else if (themeName.includes('Dark')) {
+							newIsDarkMode = true;
+						}
+					}
+
 					let newBaseColor: string | undefined;
 
 					// User specific base color
-					const userId = ha.hass.user?.name
-						.toLowerCase()
-						.replace(' ', '_');
 					if (userId) {
-						newBaseColor =
-							ha.hass.states[
-								`sensor.material_rounded_base_color_${userId}`
-							]?.state;
+						newBaseColor = ha.hass.states[userSensorName]?.state;
 					}
 
 					// General base color
 					if (!newBaseColor) {
-						newBaseColor =
-							ha.hass.states[`sensor.material_rounded_base_color`]
-								?.state;
+						newBaseColor = ha.hass.states[sensorName]?.state;
 					}
-
-					const newIsDarkMode = ha.hass.themes.darkMode;
 
 					// Only update if base color or dark mode changed
 					if (
@@ -70,5 +73,18 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 	}
 
 	setTheme();
-	setInterval(() => setTheme(), 10000);
+
+	ha.hass.connection.subscribeMessage(
+		() => setTheme(),
+		{
+			type: 'subscribe_trigger',
+			trigger: {
+				platform: 'state',
+				entity_id: [sensorName, userSensorName],
+			},
+		},
+		{ resubscribe: true },
+	);
+
+	// TODO trigger on dark mode change
 });
