@@ -66,8 +66,8 @@ paper-tab {
 /* Add background and color current view icon */
 paper-tab.iron-selected ha-icon {
 	width: min(64px, var(--tab-width));
-	color: var(--primary-color);
-	background: var(--accent-color);
+	color: var(--md-sys-color-on-secondary-container, var(--primary-color));
+	background: var(--md-sys-color-secondary-container, var(--accent-color));
 }
 
 /* View icon transition and display centering */

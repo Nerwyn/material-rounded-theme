@@ -3,42 +3,72 @@ import {
 	argbFromHex,
 	themeFromSourceColor,
 } from '@material/material-color-utilities';
-import { HassElement, HomeAssistant } from './models/interfaces';
+import { HassElement } from './models/interfaces';
 
 Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
-	const homeAssistant = document.querySelector(
-		'home-assistant',
-	) as HassElement;
-	const hass: HomeAssistant = homeAssistant?.hass;
+	let baseColor: string | undefined = undefined;
+	let isDarkMode: boolean = false;
 
-	if (hass && hass.themes.theme.includes('Material Rounded')) {
-		let baseColor: string | undefined = undefined;
-		const userId = hass.user?.name.toLowerCase().replace(' ', '_');
+	function setTheme() {
+		{
+			try {
+				const ha = document.querySelector(
+					'home-assistant',
+				) as HassElement;
 
-		// User specific base color
-		if (userId) {
-			baseColor =
-				hass.states[`sensor.material_rounded_base_color_${userId}`]
-					?.state;
-		}
+				if (ha?.hass?.themes?.theme?.includes('Material Rounded')) {
+					let newBaseColor: string | undefined;
 
-		// General base color
-		if (!baseColor) {
-			baseColor =
-				hass.states[`sensor.material_rounded_base_color`]?.state;
-		}
+					// User specific base color
+					const userId = ha.hass.user?.name
+						.toLowerCase()
+						.replace(' ', '_');
+					if (userId) {
+						newBaseColor =
+							ha.hass.states[
+								`sensor.material_rounded_base_color_${userId}`
+							]?.state;
+					}
 
-		if (baseColor) {
-			const isDarkMode = hass.themes.darkMode;
-			const theme = themeFromSourceColor(argbFromHex(baseColor));
-			console.log(theme);
-			applyTheme(theme, {
-				target: homeAssistant as HassElement,
-				dark: isDarkMode,
-			});
-			console.info(
-				`Material Rounded theme colors generated using user defined base color ${baseColor}.`,
-			);
+					// General base color
+					if (!newBaseColor) {
+						newBaseColor =
+							ha.hass.states[`sensor.material_rounded_base_color`]
+								?.state;
+					}
+
+					const newIsDarkMode = ha.hass.themes.darkMode;
+
+					// Only update if base color or dark mode changed
+					if (
+						newBaseColor != baseColor ||
+						newIsDarkMode != isDarkMode
+					) {
+						baseColor = newBaseColor;
+						isDarkMode = newIsDarkMode;
+
+						if (baseColor) {
+							const theme = themeFromSourceColor(
+								argbFromHex(baseColor),
+							);
+							applyTheme(theme, {
+								target: document.querySelector(
+									'html',
+								) as HTMLElement,
+								dark: isDarkMode,
+							});
+							console.info(
+								`Material Rounded Theme colors updated using user defined base color ${baseColor}.`,
+							);
+						}
+					}
+				}
+			} catch (e) {
+				console.error(e);
+			}
 		}
 	}
+
+	setTheme();
+	setInterval(() => setTheme(), 10000);
 });

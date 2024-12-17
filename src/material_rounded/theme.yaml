@@ -100,7 +100,7 @@ Material Rounded:
 
   # Sidebar
   sidebar-selected-text-color: var(--primary-text-color)
-  sidebar-selected-icon-color: var(--primary-color)
+  sidebar-selected-icon-color: var(--md-sys-color-on-secondary-container, var(--primary-color))
   sidebar-text-color: var(--sidebar-icon-color)
   sidebar-background-color: var(--primary-background-color)
 

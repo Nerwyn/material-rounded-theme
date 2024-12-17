@@ -64,11 +64,12 @@ def main():
 			output['Material Rounded Transparent Card']['card-mod-theme'] = 'Material Rounded'
 			
 			for element in theme_context:
-				if 'yaml' in theme_context[element] and '.' in theme_context[element]['yaml']:
+				if 'yaml' in theme_context[element]:
 					element_yaml = {
 						**{ key: theme_context[element]['yaml'][key] for key in theme_context[element]['yaml'] },
-						'.': Template(theme_context[element]['yaml']['.']).render(theme_context).strip()
 					}
+					if '.' in theme_context[element]['yaml']:
+						element_yaml['.'] = Template(theme_context[element]['yaml']['.']).render(theme_context).strip()
 
 					# Save template to buffer and then read zto get yaml as string
 					buffer = StringIO()
