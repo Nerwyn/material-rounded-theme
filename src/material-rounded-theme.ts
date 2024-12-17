@@ -74,6 +74,7 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 
 	setTheme();
 
+	// Trigger on use color sensor change
 	ha.hass.connection.subscribeMessage(
 		() => setTheme(),
 		{
@@ -86,5 +87,20 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 		{ resubscribe: true },
 	);
 
-	// TODO trigger on dark mode change
+	// Trigger on theme changed event
+	ha.hass.connection.subscribeEvents(() => setTheme(), 'themes_updated');
+
+	// Trigger on set theme service call
+	ha.hass.connection.subscribeEvents((e: Record<string, any>) => {
+		if (e?.data?.service == 'set_theme') {
+			setTheme();
+		}
+	}, 'call_service');
+
+	// Trigger on window light/dark change
+	window
+		.matchMedia('(prefers-color-scheme: dark)')
+		.addEventListener('change', () => setTheme());
+
+	// TODO trigger on hass theme dark mode flag change
 });
