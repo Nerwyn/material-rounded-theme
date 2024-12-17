@@ -66,8 +66,8 @@ paper-tab {
 /* Add background and color current view icon */
 paper-tab.iron-selected ha-icon {
 	width: min(64px, var(--tab-width));
-	color: var(--md-sys-color-on-secondary-container, var(--primary-color));
-	background: var(--md-sys-color-secondary-container, var(--accent-color));
+	color: var(--md-current-tab-icon-color);
+	background: var(--md-current-tab-icon-background);
 }
 
 /* View icon transition and display centering */
@@ -96,17 +96,17 @@ paper-tab::after {
 	text-align: center;
 	font-weight: 500;
 	font-size: min(3.6vw, 13px);
-	opacity: 0.8;
 	padding: 0px 1px;
 	overflow: hidden;
 	line-height: 12px;
 	height: 100%;
 	margin-top: 4px;
+	color: var(--md-inactive-tab-text-color);
 }
 
-/* Make current view label opaque */
+/* Current view label color */
 paper-tab.iron-selected::after {
-	opacity: 1;
+	color: var(--md-current-tab-text-color);
 }
 
 /* Fix edit mode toolbar height */

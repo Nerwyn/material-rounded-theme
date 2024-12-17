@@ -4,10 +4,9 @@ Material Rounded:
       primary-color: var(--md-sys-color-primary, rgb(194, 231, 254))
       accent-color: var(--md-sys-color-on-primary, rgb(0, 74, 119))
       state-icon-color: rgb(196, 199, 197)
-      mdc-checkbox-unchecked-color: rgb(138, 140, 153)
-      sidebar-icon-color: rgb(147, 149, 159)
+      mdc-checkbox-unchecked-color: rgb(138, 140, 153) # unused?
       primary-text-color: rgb(228, 228, 231)
-      secondary-text-color: rgb(138 140 153)
+      secondary-text-color: rgb(187, 188, 196)
       disabled-text-color: rgba(255, 255, 255, 0.5)
       lovelace-background: rgb(19, 19, 20)
       primary-background-color: rgb(30, 31, 32)
@@ -15,19 +14,20 @@ Material Rounded:
       input-background-color: rgb(46, 48, 56)
       card-background-color: rgb(40, 42, 44)
       slider-color: rgb(8, 66, 160)
-      md-switch-checked-button-color: var(--accent-color)
-      md-switch-checked-track-color: var(--primary-color)
-      md-switch-unchecked-button-color: rgb(140, 144, 159)
-      md-switch-unchecked-track-color: rgb(65, 71, 83)
       secondary-background-color: rgb(55, 57, 59) # dark mode only
       state-inactive-color: rgb(72, 74, 78) # dark mode only
+
+      # Switches
+      md-switch-checked-button-color: var(--md-sys-color-on-primary, var(--accent-color))
+      md-switch-unchecked-button-color: var(--md-sys-color-outline, rgb(140, 144, 159))
+      md-switch-checked-track-color: var(--md-sys-color-primary, var(--primary-color))
+      md-switch-unchecked-track-color: var(--md-sys-color-surface-variant, rgb(65, 71, 83))
 
     light:
       primary-color: var(--md-sys-color-primary, rgb(0, 29, 53))
       accent-color: var(--md-sys-color-on-primary, rgb(194, 231, 255))
       state-icon-color: rgb(69, 71, 70)
-      mdc-checkbox-unchecked-color: rgb(42, 43, 51)
-      sidebar-icon-color: rgb(88, 89, 95)
+      mdc-checkbox-unchecked-color: rgb(42, 43, 51) # unused?
       primary-text-color: rgb(31, 31, 31)
       secondary-text-color: rgb(68, 71, 70)
       disabled-text-color: rgb(128, 128, 128)
@@ -37,16 +37,22 @@ Material Rounded:
       input-background-color: rgb(234, 234, 235)
       card-background-color: rgb(233, 238, 246)
       slider-color: rgb(211, 227, 253)
-      md-switch-checked-button-color: rgb(255, 255, 255)
-      md-switch-checked-track-color: rgb(0, 91, 191)
-      md-switch-unchecked-button-color: rgb(114, 119, 133)
-      md-switch-unchecked-track-color: rgb(222, 226, 242)
+
+      # Switches
+      md-switch-checked-button-color: var(--md-sys-color-on-primary, rgb(255, 255, 255))
+      md-switch-unchecked-button-color: var(--md-sys-color-outline, rgb(114, 119, 133))
+      md-switch-checked-track-color: var(--md-sys-color-primary, rgb(0, 91, 191))
+      md-switch-unchecked-track-color: var(--md-sys-color-surface-variant, rgb(222, 226, 242))
 
   # Spacings
   horizontal-stack-card-margin: 0px 4px
   vertical-stack-card-margin: 4px 0px
 
   # Toolbar
+  md-current-tab-icon-color: var(--md-sys-color-on-secondary-container, var(--primary-color))
+  md-current-tab-icon-background: var(--md-sys-color-secondary-container, var(--accent-color))
+  md-current-tab-text-color: var(--md-sys-color-on-surface, var(--primary-text-color))
+  md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant, var(--secondary-text-color))
   paper-slider-height: 4px
   header-height: 48px
   footer-height: 80px
@@ -58,6 +64,14 @@ Material Rounded:
   app-header-selection-bar-color: none
   navbar-background: var(--primary-background-color)
   paper-tab-ink: rgba(0, 0, 0, 0)
+
+  # Sidebar
+  sidebar-selected-text-color: var(--md-sys-color-on-secondary-container, var(--primary-color))
+  sidebar-selected-icon-color: var(--md-sys-color-on-secondary-container, var(--primary-color))
+  sidebar-selected-icon-background: var(--md-sys-color-secondary-container, var(--secondary-color))
+  sidebar-icon-color: var(--md-sys-color-on-surface-variant, var(--secondary-text-color))
+  sidebar-text-color: var(--md-sys-color-on-surface-variant, var(--secondary-text-color))
+  sidebar-background-color: var(--primary-background-color)
 
   # Typography
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
@@ -98,12 +112,6 @@ Material Rounded:
   mdc-theme-on-secondary: var(--accent-color)
   scrollbar-thumb-color: rgb(46, 48, 56)
 
-  # Sidebar
-  sidebar-selected-text-color: var(--primary-text-color)
-  sidebar-selected-icon-color: var(--md-sys-color-on-secondary-container, var(--primary-color))
-  sidebar-text-color: var(--sidebar-icon-color)
-  sidebar-background-color: var(--primary-background-color)
-
   # Cards
   border-radius: 28px
   ha-card-background: var(--card-background-color)
@@ -128,8 +136,8 @@ Material Rounded:
 
   # Switches
   switch-checked-button-color: var(--md-switch-checked-button-color)
-  switch-checked-track-color: var(--md-switch-checked-track-color)
   switch-unchecked-button-color: var(--md-switch-unchecked-button-color)
+  switch-checked-track-color: var(--md-switch-checked-track-color)
   switch-unchecked-track-color: var(--md-switch-unchecked-track-color)
 
   # Toggles

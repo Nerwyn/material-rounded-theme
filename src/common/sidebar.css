@@ -25,10 +25,7 @@ paper-icon-item::before {
 	left: 0 !important;
 	right: 0 !important;
 	opacity: 1 !important;
-	background: var(
-		--md-sys-color-secondary-container,
-		var(--accent-color)
-	) !important;
+	background: var(--md-current-tab-icon-background) !important;
 	border-radius: 128px !important;
 	transform: scaleX(0);
 }

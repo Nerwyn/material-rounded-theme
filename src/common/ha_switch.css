@@ -4,8 +4,8 @@
 	position: relative;
 	top: 3px;
 	--switch-checked-button-color: var(--md-switch-checked-button-color);
-	--switch-checked-track-color: var(--md-switch-checked-track-color);
 	--switch-unchecked-button-color: var(--md-switch-unchecked-button-color);
+	--switch-checked-track-color: var(--md-switch-checked-track-color);
 	--switch-unchecked-track-color: var(--md-switch-unchecked-track-color);
 }
 
@@ -44,13 +44,13 @@
 		--thumb-size-active,
 		var(--thumb-size-on, var(--thumb-size-off))
 	) !important;
-	background: var(--md-switch-unchecked-button-color) !important;
+	background: var(--switch-unchecked-button-color) !important;
 	border: none !important;
 	--thumb-size-off: 16px;
 }
 /* Switch on thumb color and size */
 .mdc-switch--checked .mdc-switch__thumb {
-	background: var(--md-switch-checked-button-color) !important;
+	background: var(--switch-checked-button-color) !important;
 	--thumb-size-on: 24px;
 }
 
