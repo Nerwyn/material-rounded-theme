@@ -1,6 +1,4 @@
 .: >-
-  {{ hex2hsl.jinja }}
-  {{ user_colors.jinja }}
   {{ root.css }}
   {{ view_tabs_count.jinja }}
   {{ view.css }}

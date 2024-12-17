@@ -1,6 +1,4 @@
 .: >-
-  {{ hex2hsl.jinja }}
-  {{ user_colors.jinja }}
   {{ card.css }}
 
 # No parent shadow-root in card

@@ -14,17 +14,13 @@ def main():
 		output = {}
 
 		# Load common card-mod resources
-		common_context = {
-			'user_colors': {
-				'jinja': '{{ user_colors }}'
-			}
-		}
+		theme_context = {}
 		resources = os.listdir('./src/common/')
 		for resource in resources:
 			with open(f'./src/common/{resource}', 'r') as f:
 				name, file_type = resource.split('.')
-				if name not in common_context:
-					common_context[name] = {}
+				if name not in theme_context:
+					theme_context[name] = {}
 				r_str = ''
 				match file_type:
 					case 'yaml':
@@ -33,12 +29,12 @@ def main():
 						r_str = rcssmin.cssmin(f.read())
 					case _:
 						r_str= f.read()
-				common_context[name][file_type] = r_str
+				theme_context[name][file_type] = r_str
 		
 		# Build element yaml subelements
-		for element in common_context:
-			if 'yaml' in common_context[element]:
-				common_context[element]['yaml'] = recursiveRender(common_context[element]['yaml'], common_context)
+		for element in theme_context:
+			if 'yaml' in theme_context[element]:
+				theme_context[element]['yaml'] = recursiveRender(theme_context[element]['yaml'], theme_context)
 
 		with open('./src/material_rounded/theme.yaml', 'r') as src:
 			# Create Material Rounded theme
@@ -66,24 +62,15 @@ def main():
 			# Add card mod fields to main versions of theme
 			output['Material Rounded']['card-mod-theme'] = 'Material Rounded'
 			output['Material Rounded Transparent Card']['card-mod-theme'] = 'Material Rounded'
-
-			# Load Material Rounded user colors code
-			with open('./src/material_rounded/user_colors.jinja') as f:
-				theme_context = {
-					**common_context,
-					'user_colors': {
-						'jinja': f.read()
-					},
-				}
 			
 			for element in theme_context:
-				if 'yaml' in theme_context[element]:
+				if 'yaml' in theme_context[element] and '.' in theme_context[element]['yaml']:
 					element_yaml = {
-						**{ key: common_context[element]['yaml'][key] for key in common_context[element]['yaml'] },
-						'.': Template(common_context[element]['yaml']['.']).render(theme_context).strip()
+						**{ key: theme_context[element]['yaml'][key] for key in theme_context[element]['yaml'] },
+						'.': Template(theme_context[element]['yaml']['.']).render(theme_context).strip()
 					}
 
-					# Save template to buffer and then read to get yaml as string
+					# Save template to buffer and then read zto get yaml as string
 					buffer = StringIO()
 					yaml.dump(element_yaml, buffer)
 					output['Material Rounded'][f'card-mod-{element.replace('_', '-')}-yaml'] = buffer.getvalue().strip()

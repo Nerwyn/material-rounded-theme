@@ -1,10 +1,8 @@
 Material Rounded:
   modes:
     dark:
-      accent-luminance: 23%
-      primary-luminance: 88%
-      accent-color: rgb(0, 74, 119)
-      primary-color: rgb(194, 231, 254)
+      primary-color: var(--md-sys-color-primary, rgb(194, 231, 254))
+      accent-color: var(--md-sys-color-on-primary, rgb(0, 74, 119))
       state-icon-color: rgb(196, 199, 197)
       mdc-checkbox-unchecked-color: rgb(138, 140, 153)
       sidebar-icon-color: rgb(147, 149, 159)
@@ -25,10 +23,8 @@ Material Rounded:
       state-inactive-color: rgb(72, 74, 78) # dark mode only
 
     light:
-      accent-luminance: 88%
-      primary-luminance: 10%
-      accent-color: rgb(194, 231, 255)
-      primary-color: rgb(0, 29, 53)
+      primary-color: var(--md-sys-color-primary, rgb(0, 29, 53))
+      accent-color: var(--md-sys-color-on-primary, rgb(194, 231, 255))
       state-icon-color: rgb(69, 71, 70)
       mdc-checkbox-unchecked-color: rgb(42, 43, 51)
       sidebar-icon-color: rgb(88, 89, 95)

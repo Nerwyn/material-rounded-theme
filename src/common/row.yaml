@@ -1,6 +1,3 @@
-.: >-
-  {{ hex2hsl.jinja }}
-  {{ user_colors.jinja }}
 ha-entity-toggle$:
   ha-switch$: >-
     {{ ha_switch.css }}

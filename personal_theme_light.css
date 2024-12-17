@@ -1,0 +1,39 @@
+home-assistant {
+	--md-sys-color-primary: #005bbf;
+	--md-sys-color-on-primary: #ffffff;
+	--md-sys-color-primary-container: #d7e2ff;
+	--md-sys-color-on-primary-container: #001a40;
+
+	--md-sys-color-secondary: #565e71;
+	--md-sys-color-on-secondary: #ffffff;
+	--md-sys-color-secondary-container: #dae2f9;
+	--md-sys-color-on-secondary-container: #131b2c;
+
+	--md-sys-color-tertiary: #715574;
+	--md-sys-color-on-tertiary: #ffffff;
+	--md-sys-color-tertiary-container: #fbd7fc;
+	--md-sys-color-on-tertiary-container: #29132d;
+
+	--md-sys-color-error: #ba1a1a;
+	--md-sys-color-on-error: #ffffff;
+	--md-sys-color-error-container: #ffdad6;
+	--md-sys-color-on-error-container: #410002;
+
+	--md-sys-color-background: #fefbff;
+	--md-sys-color-on-background: #1b1b1f;
+
+	--md-sys-color-surface: #fefbff;
+	--md-sys-color-on-surface: #1b1b1f;
+	--md-sys-color-surface-variant: #e1e2ec;
+	--md-sys-color-on-surface-variant: #44474f;
+
+	--md-sys-color-outline: #74777f;
+	--md-sys-color-outline-variant: #c4c6d0;
+
+	--md-sys-color-shadow: #000000;
+	--md-sys-color-scrim: #000000;
+
+	--md-sys-color-inverse-surface: #2f3033;
+	--md-sys-color-inverse-on-surface: #f2f0f4;
+	--md-sys-color-inverse-primary: #acc7ff;
+}

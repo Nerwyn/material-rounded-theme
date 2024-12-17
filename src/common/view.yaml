@@ -1,6 +1,4 @@
 .: >-
-  {{ hex2hsl.jinja }}
-  {{ user_colors.jinja }}
   {{ view.css }}
 
 # Edit mode Add Card position fixes

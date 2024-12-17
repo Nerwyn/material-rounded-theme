@@ -61,46 +61,46 @@ Redesigns the toolbar and sidebar buttons to follow Material You navigation comp
 
 #### [Top App Bar](https://m3.material.io/components/top-app-bar/overview)
 
--   Retains the sidebar toggle and dashboard menu (small width screens) or action items (large width screens) from the navigation toolbar header in a top app bar.
--   Non-view buttons appear at top of screen near their original locations.
--   Buttons disappear when user is not scrolled to the top of the view.
+- Retains the sidebar toggle and dashboard menu (small width screens) or action items (large width screens) from the navigation toolbar header in a top app bar.
+- Non-view buttons appear at top of screen near their original locations.
+- Buttons disappear when user is not scrolled to the top of the view.
 
 #### [Navigation Bar](https://m3.material.io/components/navigation-bar/overview)
 
--   Converts the toolbar header view tabs bar into a navigation bar footer.
--   Removes the default selection bar and ripple.
--   Spaces the view icons evenly along the entire toolbar.
-    -   **WARNING**: Subviews must be placed at the end of the toolbar for the view tab count to be correct, otherwise the view tabs will end up smaller than expected.
-    -   While evenly spacing the icons should (and previously) be done by making their parent a flexbox, their parent is within a shadow-root which the view tabs are slotted into. Modifying this parent element with card-mod is possible but it is slow and inconsistent. A tab count and width calculation method is used instead, which is much faster and more consistent.
--   Adds view names below the view icons.
--   Highlights the current view with a colored icon and background behind the icon.
--   Transition animation on view icon background when selected.
+- Converts the toolbar header view tabs bar into a navigation bar footer.
+- Removes the default selection bar and ripple.
+- Spaces the view icons evenly along the entire toolbar.
+  - **WARNING**: Subviews must be placed at the end of the toolbar for the view tab count to be correct, otherwise the view tabs will end up smaller than expected.
+  - While evenly spacing the icons should (and previously) be done by making their parent a flexbox, their parent is within a shadow-root which the view tabs are slotted into. Modifying this parent element with card-mod is possible but it is slow and inconsistent. A tab count and width calculation method is used instead, which is much faster and more consistent.
+- Adds view names below the view icons.
+- Highlights the current view with a colored icon and background behind the icon.
+- Transition animation on view icon background when selected.
 
 #### [Navigation Drawer](https://m3.material.io/components/navigation-drawer/overview)
 
 Desktop sidebar expanded and mobile.
 
--   Icon and background of current view now uses primary and accent colors.
--   Transition animation on view icon background when selected.
+- Icon and background of current view now uses primary and accent colors.
+- Transition animation on view icon background when selected.
 
 #### [Navigation Rail](https://m3.material.io/components/navigation-rail/overview)
 
 Desktop sidebar collapsed.
 
--   Background of current view now uses primary and accent colors.
--   Current view icon background is a circle to match Material You example of a navigation rail menu without labels.
+- Background of current view now uses primary and accent colors.
+- Current view icon background is a circle to match Material You example of a navigation rail menu without labels.
 
 ### [Switches](https://m3.material.io/components/switch/overview)
 
--   Track now encompasses thumb.
--   Removes the default ripple in favor of a thumb that changes size when used.
--   Uses primary and accent colors for the switch thumb and track.
+- Track now encompasses thumb.
+- Removes the default ripple in favor of a thumb that changes size when used.
+- Uses primary and accent colors for the switch thumb and track.
 
 ### Views
 
--   Adds a 40px margin to the top for the top app bar and an 80px margin to the bottom for the navigation bar.
--   Adds a 12px margin to each side of the view to match the Google Home app.
--   Add card button of classic lovelace views updated to better match the [extended FAB specification](https://m3.material.io/components/extended-fab/overview).
+- Adds a 40px margin to the top for the top app bar and an 80px margin to the bottom for the navigation bar.
+- Adds a 12px margin to each side of the view to match the Google Home app.
+- Add card button of classic lovelace views updated to better match the [extended FAB specification](https://m3.material.io/components/extended-fab/overview).
 
 If you do not want these changes, use the "No Mod" versions of the theme.
 
@@ -178,7 +178,7 @@ Twelve versions of a theme are created per base theme - with card mod, without c
 
 Any files under common that end in `.yaml` are treated as `card-mod-*-yaml` fields in the themes, and files ending in `.css` contain the actual card-mod CSS. Different overall version of the theme are included in separate folders, such as `material_rounded`. CSS files are copied into the card-mod yaml fields using jinja2 templates, allowing for repetitive styles that go in different shadow roots to all source from the same file.
 
-The common folder also includes `hex2hsl.jinja` - a hex to HSL color formula ported to jinja2 for transforming user defined base colors into HSL. The HSL base color is used for calculating primary, accent, and other custom colors. How these custom colors are defined and used is determined at the theme folder level in `user_colors.jinja`. If possible, I would like to instead use Material You's HCT color system, but it would have to be ported to jinja2 along with a HCT to hex/rgb/hsl/etc function.
+The common folder also includes `hex2hsl.jinja` - a hex to HSL color formula ported to jinja2 for transforming user defined base colors into HSL. The HSL base color is used for calculating primary, accent, and other custom colors. How these custom colors are defined and used is determined at the theme folder level in `user_colors.jinja`. If possible, I would like to instead use Material You's HCT color system, but it would have to be ported to jinja2 along with a HCT to hex/rgb/hsl/etc function. TODO remove this
 
 [last-commit-shield]: https://img.shields.io/github/last-commit/Nerwyn/material-rounded-theme?style=for-the-badge
 [commits]: https://github.com/Nerwyn/material-rounded-theme/commits/main
