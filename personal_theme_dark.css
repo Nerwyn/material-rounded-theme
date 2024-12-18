@@ -1,39 +1,39 @@
 home-assistant {
-	--md-sys-color-primary: #acc7ff;
-	--md-sys-color-on-primary: #002e68;
-	--md-sys-color-primary-container: #004492;
-	--md-sys-color-on-primary-container: #d7e2ff;
+	--md-sys-color-primary: rgb(158, 202, 255);
+	--md-sys-color-on-primary: rgb(0, 49, 87);
+	--md-sys-color-primary-container: rgb(0, 74, 128);
+	--md-sys-color-on-primary-container: rgb(209, 228, 255);
 
-	--md-sys-color-secondary: #bec6dc;
-	--md-sys-color-on-secondary: #283041;
-	--md-sys-color-secondary-container: #3f4759;
-	--md-sys-color-on-secondary-container: #dae2f9;
+	--md-sys-color-secondary: rgb(188, 200, 220);
+	--md-sys-color-on-secondary: rgb(37, 50, 65);
+	--md-sys-color-secondary-container: rgb(59, 72, 89);
+	--md-sys-color-on-secondary-container: rgb(212, 226, 247);
 
-	--md-sys-color-tertiary: #debcdf;
-	--md-sys-color-on-tertiary: #402844;
-	--md-sys-color-tertiary-container: #583e5b;
-	--md-sys-color-on-tertiary-container: #fbd7fc;
+	--md-sys-color-tertiary: rgb(214, 190, 228);
+	--md-sys-color-on-tertiary: rgb(59, 41, 71);
+	--md-sys-color-tertiary-container: rgb(82, 63, 95);
+	--md-sys-color-on-tertiary-container: rgb(243, 219, 255);
 
-	--md-sys-color-error: #ffb4ab;
-	--md-sys-color-on-error: #690005;
-	--md-sys-color-error-container: #93000a;
-	--md-sys-color-on-error-container: #ffb4ab;
+	--md-sys-color-error: rgb(255, 182, 173);
+	--md-sys-color-on-error: rgb(107, 0, 5);
+	--md-sys-color-error-container: rgb(148, 0, 10);
+	--md-sys-color-on-error-container: rgb(255, 182, 173);
 
-	--md-sys-color-background: #1b1b1f;
-	--md-sys-color-on-background: #e3e2e6;
+	--md-sys-color-background: rgb(26, 28, 30);
+	--md-sys-color-on-background: rgb(225, 225, 229);
 
-	--md-sys-color-surface: #1b1b1f;
-	--md-sys-color-on-surface: #e3e2e6;
-	--md-sys-color-surface-variant: #44474f;
-	--md-sys-color-on-surface-variant: #c4c6d0;
+	--md-sys-color-surface: rgb(26, 28, 30);
+	--md-sys-color-on-surface: rgb(225, 225, 229);
+	--md-sys-color-surface-variant: rgb(66, 70, 77);
+	--md-sys-color-on-surface-variant: rgb(196, 199, 207);
 
-	--md-sys-color-outline: #8e9099;
-	--md-sys-color-outline-variant: #44474f;
+	--md-sys-color-outline: rgb(141, 146, 154);
+	--md-sys-color-outline-variant: rgb(66, 70, 77);
 
-	--md-sys-color-shadow: #000000;
-	--md-sys-color-scrim: #000000;
+	--md-sys-color-shadow: rgb(0, 0, 0);
+	--md-sys-color-scrim: rgb(0, 0, 0);
 
-	--md-sys-color-inverse-surface: #e3e2e6;
-	--md-sys-color-inverse-on-surface: #2f3033;
-	--md-sys-color-inverse-primary: #005bbf;
+	--md-sys-color-inverse-surface: rgb(225, 225, 229);
+	--md-sys-color-inverse-on-surface: rgb(47, 47, 50);
+	--md-sys-color-inverse-primary: rgb(1, 98, 162);
 }

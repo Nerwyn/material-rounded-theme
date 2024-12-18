@@ -1,62 +1,139 @@
 Material You:
   modes:
     dark:
-      hue: 211
-      accent-luminance: 33%
-      primary-luminance: 94%
-      accent-color: hsl(calc(var(--hue) + 24), 22%, 33%)
-      primary-color: hsl(calc(var(--hue) + 27), 100%, 95%)
-      state-icon-color: hsl(calc(var(--hue) + 9), 100%, 84%)
-      mdc-checkbox-unchecked-color: rgb(138, 140, 153)
-      sidebar-icon-color: hsl(calc(var(--hue) + 15), 20%, 80%)
-      sidebar-selected-icon-color: rgb(174, 176, 183)
-      primary-text-color: hsl(0, 0%, 100%)
-      secondary-text-color: hsl(calc(var(--hue) + 18), 33%, 91%)
+      # Default material design colors
+      default-md-sys-color-primary: rgb(158, 202, 255)
+      default-md-sys-color-on-primary: rgb(0, 49, 87)
+      default-md-sys-color-primary-container: rgb(0, 74, 128)
+      default-md-sys-color-on-primary-container: rgb(209, 228, 255)
+
+      default-md-sys-color-secondary: rgb(188, 200, 220)
+      default-md-sys-color-on-secondary: rgb(37, 50, 65)
+      default-md-sys-color-secondary-container: rgb(59, 72, 89)
+      default-md-sys-color-on-secondary-container: rgb(212, 226, 247)
+
+      default-md-sys-color-tertiary: rgb(214, 190, 228)
+      default-md-sys-color-on-tertiary: rgb(59, 41, 71)
+      default-md-sys-color-tertiary-container: rgb(82, 63, 95)
+      default-md-sys-color-on-tertiary-container: rgb(243, 219, 255)
+
+      default-md-sys-color-error: rgb(255, 182, 173)
+      default-md-sys-color-on-error: rgb(107, 0, 5)
+      default-md-sys-color-error-container: rgb(148, 0, 10)
+      default-md-sys-color-on-error-container: rgb(255, 182, 173)
+
+      default-md-sys-color-background: rgb(26, 28, 30)
+      default-md-sys-color-on-background: rgb(225, 225, 229)
+
+      default-md-sys-color-surface: rgb(26, 28, 30)
+      default-md-sys-color-on-surface: rgb(225, 225, 229)
+      default-md-sys-color-surface-variant: rgb(66, 70, 77)
+      default-md-sys-color-on-surface-variant: rgb(196, 199, 207)
+
+      default-md-sys-color-outline: rgb(141, 146, 154)
+      default-md-sys-color-outline-variant: rgb(66, 70, 77)
+
+      default-md-sys-color-shadow: rgb(0, 0, 0)
+      default-md-sys-color-scrim: rgb(0, 0, 0)
+
+      default-md-sys-color-inverse-surface: rgb(225, 225, 229)
+      default-md-sys-color-inverse-on-surface: rgb(47, 47, 50)
+      default-md-sys-color-inverse-primary: rgb(1, 98, 162)
+
+      # Other mode specific colors
       disabled-text-color: rgba(255, 255, 255, 0.5)
-      sidebar-selected-text-color: rgb(214, 215, 219)
-      lovelace-background: hsl(calc(var(--hue) + 11), 30%, 8%)
-      navbar-background: hsl(calc(var(--hue) + 11), 19%, 14%)
-      secondary-background-color: hsl(calc(var(--hue) + 7), 26%, 14%)
+      lovelace-background: rgb(18, 18, 18)
+      app-header-background-color: rgb(18, 18, 18)
       disabled-color: rgb(0, 0, 0)
-      input-background-color: hsl(calc(var(--hue) + 11), 30%, 8%)
-      card-background-color: hsl(calc(var(--hue) + 10), 26%, 14%)
-      state-inactive-color: hsl(calc(var(--hue) - 71), 1%, 56%)
-      mdc-switch-checked-button-color: var(--accent-color)
-      mdc-switch-checked-track-color: var(--primary-color)
-      mdc-switch-unchecked-button-color: hsl(calc(var(--hue) + 16), 9%, 59%)
-      mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%)
+      card-background-color: var(--md-sys-color-surface, var(--default-md-sys-color-surface))
+      state-inactive-color: rgb(72, 74, 78) # dark mode only
 
     light:
-      accent-color: rgb(194, 231, 254)
-      primary-color: rgb(0, 29, 53)
-      accent-luminance: 88%
-      primary-luminance: 10%
-      state-icon-color: rgb(69, 71, 70)
-      mdc-checkbox-unchecked-color: rgb(42, 43, 51)
-      sidebar-icon-color: rgb(88, 89, 95)
-      sidebar-selected-icon-color: rgb(29, 30, 32)
-      primary-text-color: rgb(31, 31, 31)
-      secondary-text-color: rgb(68, 71, 70)
+      # Default material design colors
+      default-md-sys-color-primary: rgb(1, 98, 162)
+      default-md-sys-color-on-primary: rgb(255, 255, 255)
+      default-md-sys-color-primary-container: rgb(209, 228, 255)
+      default-md-sys-color-on-primary-container: rgb(0, 30, 56)
+
+      default-md-sys-color-secondary: rgb(82, 94, 111)
+      default-md-sys-color-on-secondary: rgb(255, 255, 255)
+      default-md-sys-color-secondary-container: rgb(212, 226, 247)
+      default-md-sys-color-on-secondary-container: rgb(17, 29, 45)
+
+      default-md-sys-color-tertiary: rgb(108, 88, 121)
+      default-md-sys-color-on-tertiary: rgb(255, 255, 255)
+      default-md-sys-color-tertiary-container: rgb(243, 219, 255)
+      default-md-sys-color-on-tertiary-container: rgb(38, 21, 51)
+
+      default-md-sys-color-error: rgb(187, 27, 27)
+      default-md-sys-color-on-error: rgb(255, 255, 255)
+      default-md-sys-color-error-container: rgb(255, 218, 214)
+      default-md-sys-color-on-error-container: rgb(66, 0, 2)
+
+      default-md-sys-color-background: rgb(252, 250, 255)
+      default-md-sys-color-on-background: rgb(26, 28, 30)
+
+      default-md-sys-color-surface: rgb(252, 250, 255)
+      default-md-sys-color-on-surface: rgb(26, 28, 30)
+      default-md-sys-color-surface-variant: rgb(224, 227, 235)
+      default-md-sys-color-on-surface-variant: rgb(66, 70, 77)
+
+      default-md-sys-color-outline: rgb(114, 118, 126)
+      default-md-sys-color-outline-variant: rgb(196, 199, 207)
+
+      default-md-sys-color-shadow: rgb(0, 0, 0)
+      default-md-sys-color-scrim: rgb(0, 0, 0)
+
+      default-md-sys-color-inverse-surface: rgb(47, 47, 50)
+      default-md-sys-color-inverse-on-surface: rgb(241, 240, 244)
+      default-md-sys-color-inverse-primary: rgb(158, 202, 255)
+
+      # Other mode specific colors
       disabled-text-color: rgb(128, 128, 128)
-      sidebar-selected-text-color: rgb(41, 40, 36)
-      lovelace-background: rgb(255, 255, 255)
-      navbar-background: rgb(240, 244, 250)
-      secondary-background-color: rgb(215, 213, 209)
-      disabled-color: rgb(173, 176, 174)
-      input-background-color: rgb(234, 234, 235)
-      card-background-color: rgb(233, 238, 246)
-      mdc-switch-checked-button-color: var(--lovelace-background)
-      mdc-switch-checked-track-color: rgb(0, 91, 191)
-      mdc-switch-unchecked-button-color: hsl(224, 8%, 48%)
-      mdc-switch-unchecked-track-color: hsl(228, 8%, 95%)
+      lovelace-background: rgb(250, 250, 250)
+      app-header-background-color: rgb(250, 250, 250)
+      disabled-color: rgb(165, 165, 165)
+      card-background-color: var(--md-sys-color-surface-variant, var(--default-md-sys-color-surface-variant))
+
+  # Basic colors inherited from color theme
+  primary-color: var(--md-sys-color-primary, var(--default-md-sys-color-primary))
+  accent-color: var(--md-sys-color-on-primary, var(--default-md-sys-color-on-primary))
+  state-icon-color: var(--md-sys-color-on-surface-variant, var(--default-md-sys-color-on-surface-variant))
+  primary-text-color: var(--md-sys-color-on-surface, var(--default-md-sys-color-on-surface))
+  secondary-text-color: var(--md-sys-color-on-surface-variant, var(--default-md-sys-color-on-surface-variant))
+  primary-background-color: var(--md-sys-color-surface, var(--default-md-sys-color-surface))
+  input-background-color: var(--md-sys-color-inverse-on-surface, var(--default-md-sys-color-inverse-on-surface))
+  slider-color: var(--md-sys-color-inverse-primary, var(--default-md-sys-color-inverse-primary))
+  secondary-background-color: var(--md-sys-color-secondary-container, var(--default-md-sys-color-secondary-container))
+  error-color: var(--md-sys-color-error, var(--default-md-sys-color-error))
 
   # Spacings
   horizontal-stack-card-margin: 0px 4px
   vertical-stack-card-margin: 4px 0px
 
-  # Sizes
+  # Toolbar
+  md-current-tab-icon-color: var(--md-sys-color-on-secondary-container, var(--default-md-sys-color-on-secondary-container))
+  md-current-tab-icon-background: var(--md-sys-color-secondary-container, var(--default-md-sys-color-secondary-container))
+  md-current-tab-text-color: var(--md-sys-color-on-surface, var(--default-md-sys-color-on-surface))
+  md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant, var(--default-md-sys-color-on-surface-variant))
   paper-slider-height: 4px
+  header-height: 48px
   footer-height: 80px
+  mdc-top-app-bar-fixed-box-shadow: none
+  app-header-text-color: var(--md-sys-color-on-surface, var(--default-md-sys-color-on-surface))
+  app-header-edit-text-color: var(--app-header-text-color)
+  app-header-edit-background-color: var(--primary-background-color)
+  app-header-selection-bar-color: none
+  navbar-background: var(--primary-background-color)
+  paper-tab-ink: rgba(0, 0, 0, 0)
+
+  # Sidebar
+  sidebar-selected-text-color: var(--md-sys-color-on-secondary-container, var(--default-md-sys-color-on-secondary-container))
+  sidebar-selected-icon-color: var(--md-sys-color-on-secondary-container, var(--default-md-sys-color-on-secondary-container))
+  sidebar-selected-icon-background: var(--md-sys-color-secondary-container, var(--default-md-sys-color-secondary-container))
+  sidebar-icon-color: var(--md-sys-color-on-surface-variant, var(--default-md-sys-color-on-surface-variant))
+  sidebar-text-color: var(--md-sys-color-on-surface-variant, var(--default-md-sys-color-on-surface-variant))
+  sidebar-background-color: var(--primary-background-color)
 
   # Typography
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
@@ -84,28 +161,26 @@ Material You:
   rgb-primary-text-color: var(--primary-text-color)
   link-text-color: var(--primary-color)
 
-  # Main interface colors
-  primary-background-color: var(--navbar-background)
+  # Main Interface Colors
   dark-primary-color: var(--primary-color)
   light-primary-color: var(--primary-color)
-  divider-color: var(--navbar-background)
+  divider-color: var(--primary-background-color)
+  slider-secondary-color: var(--primary-color)
   scrollbar-thumb-color: rgb(46, 48, 56)
-  mdc-theme-primary: var(--primary-color)
-  mdc-theme-on-primary: var(--accent-color)
-  mdc-theme-secondary: var(--primary-color)
-  mdc-theme-on-secondary: var(--accent-color)
-
-  # Navbar
-  app-header-background-color: var(--lovelace-background)
-  app-header-text-color: var(--primary-text-color)
-  app-header-edit-text-color: var(--app-header-text-color)
-  app-header-edit-background-color: var(--navbar-background)
-  app-header-selection-bar-color: none
-  paper-tab-ink: rgba(0, 0, 0, 0)
-
-  # Sidebar
-  sidebar-text-color: var(--sidebar-icon-color)
-  sidebar-background-color: var(--navbar-background)
+  md-divider-color: var(--divider-color)
+  mdc-theme-primary: var(--md-sys-color-primary, var(--default-md-sys-color-primary))
+  mdc-theme-secondary: var(--md-sys-color-secondary, var(--default-md-sys-color-secondary))
+  mdc-theme-background: var(--lovelace-background)
+  mdc-theme-surface: var(--card-background-color)
+  mdc-theme-on-primary: var(--md-sys-color-on-primary, var(--default-md-sys-color-on-primary))
+  mdc-theme-on-secondary: var(--md-sys-color-on-secondary, var(--default-md-sys-color-on-secondary))
+  mdc-theme-on-surface: var(--md-sys-color-on-surface, var(--default-md-sys-color-on-surface))
+  mdc-theme-text-disabled-on-light: var(--disabled-text-color)
+  mdc-theme-text-primary-on-background: var(--primary-text-color)
+  mdc-theme-text-secondary-on-background: var(--secondary-text-color)
+  mdc-theme-text-hint-on-background: var(--secondary-text-color)
+  mdc-theme-text-icon-on-background: var(--secondary-text-color)
+  mdc-theme-error: var(--md-sys-color-error, var(--default-md-sys-color-error))
 
   # Cards
   border-radius: 28px
@@ -119,21 +194,25 @@ Material You:
   ha-config-card-border-radius: 16px
   paper-item-icon-color: var(--state-icon-color)
 
-  # Dialog
-  mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
+  # Dialogs
+  mdc-dialog-scrim-color: var(--md-sys-color-scrim, var(--default-md-sys-color-scrim))
 
-  # Slider
+  # Sliders
   paper-slider-knob-color: var(--primary-color)
   paper-slider-knob-start-color: var(--paper-slider-knob-color)
   paper-slider-pin-color: var(--paper-slider-knob-color)
   paper-slider-active-color: var(--paper-slider-knob-color)
   paper-slider-secondary-color: var(--light-primary-color)
 
-  # Switch
-  switch-checked-button-color: var(--mdc-switch-checked-button-color)
-  switch-checked-track-color: var(--mdc-switch-checked-track-color)
-  switch-unchecked-button-color: rgba(255, 255, 255, 0.7)
-  switch-unchecked-track-color: rgba(125, 128, 132, 0.4)
+  # Switches
+  md-switch-checked-button-color: var(--md-sys-color-on-primary, var(--default-md-sys-color-on-primary))
+  md-switch-unchecked-button-color: var(--md-sys-color-outline, var(--default-md-sys-color-outline))
+  md-switch-checked-track-color: var(--md-sys-color-primary, var(--default-md-sys-color-primary))
+  md-switch-unchecked-track-color: var(--md-sys-color-surface-variant, var(--default-md-sys-color-surface-variant))
+  switch-checked-button-color: var(--md-switch-checked-button-color)
+  switch-unchecked-button-color: var(--md-switch-unchecked-button-color)
+  switch-checked-track-color: var(--md-switch-checked-track-color)
+  switch-unchecked-track-color: var(--md-switch-unchecked-track-color)
 
   # Toggles
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
@@ -142,822 +221,28 @@ Material You:
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
 
-  # Text Fields an Dropdown
+  # Text Fields and Dropdowns
   input-fill-color: var(--input-background-color)
   input-ink-color: var(--primary-text-color)
   input-label-ink-color: var(--primary-text-color)
-  input-disabled-fill-color: hsla(var(--input-background-color), 0.5)
+  input-disabled-fill-color: rgba(var(--input-background-color), 0.5)
   input-disabled-ink-color: var(--disabled-text-color)
   input-disabled-label-ink-color: var(--disabled-text-color)
   input-idle-line-color: rgba(0, 0, 0, 0)
   input-hover-line-color: var(--primary-color)
   input-dropdown-icon-color: var(--secondary-text-color)
   mdc-select-fill-color: var(--input-fill-color)
-  mdc-text-field-fill-color: var(--input-fill-color)
   mdc-select-idle-line-color: var(--input-idle-line-color)
-  mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color)
+  mdc-select-hover-line-color: var(--input-hover-line-color)
+  mdc-text-field-fill-color: var(--input-fill-color)
+  mdc-text-field-idle-line-color: var(--input-idle-line-color)
   mdc-text-field-hover-line-color: var(--input-hover-line-color)
 
-  # Editor
-  code-editor-background-color: var(--navbar-background)
+  # Editors
+  code-editor-background-color: var(--primary-background-color)
   codemirror-meta: var(--primary-text-color)
   codemirror-property: var(--primary-color)
   codemirror-atom: var(--codemirror-property)
-  codemirror-string: rgb(119 196 229)
-  codemirror-keyword: rgb(140 169 255)
-  codemirror-number: rgb(255 91 29)
-
-  card-mod-theme: Material You
-  card-mod-more-info-yaml: |
-    .: |
-      /* Material You */
-      {%- macro hex2hsl(hex) -%}
-          {# https://gist.github.com/mjackson/5311256 #}
-          {%- if hex[0] == "#" -%}
-          {%- set hex = hex[1:] -%}
-          {%- endif -%}
-          {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}
-          {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}
-          {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}
-          {%- set rgb_max = [r, g, b] | max -%}
-          {%- set rgb_min = [r, g, b] | min -%}
-          {%- set h = 0 -%}
-          {%- set s = 0 -%}
-          {%- set l = (rgb_max + rgb_min) / 2 -%}
-          {%- if rgb_max != rgb_min -%}
-            {%- set d = rgb_max - rgb_min -%}
-            {%- set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) -%}
-            {%- if r == rgb_max -%}
-              {%- set h = (g - b) / d + (6 if g < b else 0) -%}
-            {%- elif g == rgb_max -%}
-              {%- set h = (b - r) / d + 2 -%}
-            {%- elif b == rgb_max -%}
-              {%- set h = (r - g) / d + 4 -%}
-            {%- endif -%}
-            {%- set h = h / 6 -%}
-          {%- endif -%}
-          {%- set h = (h * 360) | int -%}
-          {%- set s = (s * 100) | int -%}
-          {%- set l = (l * 100) | int -%}
-          {{ h }},{{ s }},{{ l }}
-      {%- endmacro -%}
-
-      {%- set id = "_" + user | lower | replace(" ","_") -%}
-      {%- set base_color = "" -%}
-
-      * {
-        {%- if has_value("sensor.material_rounded_base_color" + id) -%}
-        {%- set base_color = states("sensor.material_rounded_base_color" + id) -%}
-        {%- elif has_value("sensor.material_rounded_base_color") -%}
-        {%- set base_color = states("sensor.material_rounded_base_color") -%}
-        {%- endif -%}
-
-        {%- if (base_color | length) -%}
-        {%- set hsl = hex2hsl(base_color).split(',') -%}
-
-        --hue: {{ hsl[0] }};
-        --accent-color: hsl(calc(var(--hue) + 24), 22%, var(--accent-luminance));
-        --primary-color: hsl(calc(var(--hue) + 27), 100%, var(--primary-luminance));
-        --state-icon-color: hsl(calc(var(--hue) + 9), 100%, 84%);
-        --mdc-checkbox-unchecked-color: rgb(138, 140, 153);
-        --sidebar-icon-color: hsl(calc(var(--hue) + 15), 20%, 80%);
-        --primary-text-color: hsl(0, 0%, 100%);
-        --secondary-text-color: hsl(calc(var(--hue) + 18), 33%, 91%);
-        --sidebar-selected-text-color: rgb(214, 215, 219);
-        --lovelace-background: hsl(calc(var(--hue) + 11), 30%, 8%);
-        --navbar-background: hsl(calc(var(--hue) + 11), 19%, 14%);
-        --secondary-background-color: hsl(calc(var(--hue) + 7), 26%, 14%);
-        --input-background-color: hsl(calc(var(--hue) + 11), 30%, 8%);
-        --card-background-color: hsl(calc(var(--hue) + 10), 26%, 14%);
-        --state-inactive-color: hsl(calc(var(--hue) - 71), 1%, 56%);
-        --mdc-switch-checked-button-color: var(--accent-color);
-        --mdc-switch-checked-track-color: var(--primary-color);
-        --mdc-switch-unchecked-button-color: hsl(calc(var(--hue) + 16), 9%, 59%);
-        --mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);
-
-        --text-primary-color: var(--lovelace-background);
-        --text-accent-color: var(--primary-color);
-        --text-light-primary-color: var(--text-primary-color);
-        --rgb-primary-text-color: var(--primary-text-color);
-
-        --primary-background-color: var(--navbar-background);
-        --dark-primary-color: var(--primary-color);
-        --light-primary-color: var(--primary-color);
-        --divider-color: var(--navbar-background);
-        --mdc-theme-primary: var(--primary-color);
-        --mdc-theme-on-primary: var(--accent-color);
-        --mdc-theme-secondary: var(--primary-color);
-        --mdc-theme-on-secondary: var(--accent-color);
-
-        --app-header-background-color: var(--lovelace-background);
-        --app-header-text-color: var(--primary-text-color);
-        --app-header-edit-text-color: var(--app-header-text-color);
-        --app-header-edit-background-color: var(--navbar-background);
-
-        --sidebar-text-color: var(--sidebar-icon-color);
-        --sidebar-background-color: var(--navbar-background);
-
-        --ha-card-background: var(--card-background-color);
-        --paper-item-icon-color: var(--state-icon-color);
-
-        --paper-slider-knob-color: var(--primary-color);
-        --paper-slider-knob-start-color: var(--paper-slider-knob-color);
-        --paper-slider-pin-color: var(--paper-slider-knob-color);
-        --paper-slider-active-color: var(--paper-slider-knob-color);
-        --paper-slider-secondary-color: var(--light-primary-color);
-
-        --paper-toggle-button-checked-button-color: var(--switch-checked-button-color);
-        --paper-toggle-button-checked-bar-color: var(--switch-checked-track-color);
-        --paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color);
-        --paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color);
-        --mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color);
-
-        --input-fill-color: var(--input-background-color);
-        --input-ink-color: var(--primary-text-color);
-        --input-label-ink-color: var(--primary-text-color);
-        --input-disabled-fill-color: hsla(var(--input-background-color), 0.5);
-        --input-disabled-ink-color: var(--disabled-text-color);
-        --input-disabled-label-ink-color: var(--disabled-text-color);
-        --input-idle-line-color: var(--background-color);
-        --input-dropdown-icon-color: var(--secondary-text-color);
-        --input-hover-line-color: var(--primary-color);
-        --mdc-select-fill-color: var(--input-fill-color);
-        --mdc-text-field-fill-color: var(--input-fill-color);
-        --mdc-select-idle-line-color: var(--color-background-base);
-        --mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color);
-
-        --code-editor-background-color: var(--navbar-background);
-        --codemirror-meta: var(--primary-text-color);
-        --codemirror-property: var(--primary-color);
-        --codemirror-atom: var(--codemirror-property);
-
-        {%- endif -%}
-
-        --switch-checked-button-color: var(--mdc-switch-checked-button-color) !important;
-        --switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;
-        --switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color) !important;
-        --switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;
-      }
-
-      /* Fix more-info background */
-      ha-dialog-header {
-        background: var(--navbar-background);
-      }
-      .content {
-        background: var(--navbar-background);
-      }
-
-  card-mod-root-yaml: |
-    .: |
-      /* Material You */
-      {%- macro hex2hsl(hex) -%}
-          {# https://gist.github.com/mjackson/5311256 #}
-          {%- if hex[0] == "#" -%}
-          {%- set hex = hex[1:] -%}
-          {%- endif -%}
-          {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}
-          {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}
-          {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}
-          {%- set rgb_max = [r, g, b] | max -%}
-          {%- set rgb_min = [r, g, b] | min -%}
-          {%- set h = 0 -%}
-          {%- set s = 0 -%}
-          {%- set l = (rgb_max + rgb_min) / 2 -%}
-          {%- if rgb_max != rgb_min -%}
-            {%- set d = rgb_max - rgb_min -%}
-            {%- set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) -%}
-            {%- if r == rgb_max -%}
-              {%- set h = (g - b) / d + (6 if g < b else 0) -%}
-            {%- elif g == rgb_max -%}
-              {%- set h = (b - r) / d + 2 -%}
-            {%- elif b == rgb_max -%}
-              {%- set h = (r - g) / d + 4 -%}
-            {%- endif -%}
-            {%- set h = h / 6 -%}
-          {%- endif -%}
-          {%- set h = (h * 360) | int -%}
-          {%- set s = (s * 100) | int -%}
-          {%- set l = (l * 100) | int -%}
-          {{ h }},{{ s }},{{ l }}
-      {%- endmacro -%}
-
-      {%- set id = "_" + user | lower | replace(" ","_") -%}
-      {%- set base_color = "" -%}
-
-      * {
-        {%- if has_value("sensor.material_rounded_base_color" + id) -%}
-        {%- set base_color = states("sensor.material_rounded_base_color" + id) -%}
-        {%- elif has_value("sensor.material_rounded_base_color") -%}
-        {%- set base_color = states("sensor.material_rounded_base_color") -%}
-        {%- endif -%}
-
-        {%- if (base_color | length) -%}
-        {%- set hsl = hex2hsl(base_color).split(',') -%}
-
-        --hue: {{ hsl[0] }};
-        --accent-color: hsl(calc(var(--hue) + 24), 22%, var(--accent-luminance));
-        --primary-color: hsl(calc(var(--hue) + 27), 100%, var(--primary-luminance));
-        --state-icon-color: hsl(calc(var(--hue) + 9), 100%, 84%);
-        --mdc-checkbox-unchecked-color: rgb(138, 140, 153);
-        --sidebar-icon-color: hsl(calc(var(--hue) + 15), 20%, 80%);
-        --primary-text-color: hsl(0, 0%, 100%);
-        --secondary-text-color: hsl(calc(var(--hue) + 18), 33%, 91%);
-        --sidebar-selected-text-color: rgb(214, 215, 219);
-        --lovelace-background: hsl(calc(var(--hue) + 11), 30%, 8%);
-        --navbar-background: hsl(calc(var(--hue) + 11), 19%, 14%);
-        --secondary-background-color: hsl(calc(var(--hue) + 7), 26%, 14%);
-        --input-background-color: hsl(calc(var(--hue) + 11), 30%, 8%);
-        --card-background-color: hsl(calc(var(--hue) + 10), 26%, 14%);
-        --state-inactive-color: hsl(calc(var(--hue) - 71), 1%, 56%);
-        --mdc-switch-checked-button-color: var(--accent-color);
-        --mdc-switch-checked-track-color: var(--primary-color);
-        --mdc-switch-unchecked-button-color: hsl(calc(var(--hue) + 16), 9%, 59%);
-        --mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);
-
-        --text-primary-color: var(--lovelace-background);
-        --text-accent-color: var(--primary-color);
-        --text-light-primary-color: var(--text-primary-color);
-        --rgb-primary-text-color: var(--primary-text-color);
-
-        --primary-background-color: var(--navbar-background);
-        --dark-primary-color: var(--primary-color);
-        --light-primary-color: var(--primary-color);
-        --divider-color: var(--navbar-background);
-        --mdc-theme-primary: var(--primary-color);
-        --mdc-theme-on-primary: var(--accent-color);
-        --mdc-theme-secondary: var(--primary-color);
-        --mdc-theme-on-secondary: var(--accent-color);
-
-        --app-header-background-color: var(--lovelace-background);
-        --app-header-text-color: var(--primary-text-color);
-        --app-header-edit-text-color: var(--app-header-text-color);
-        --app-header-edit-background-color: var(--navbar-background);
-
-        --sidebar-text-color: var(--sidebar-icon-color);
-        --sidebar-background-color: var(--navbar-background);
-
-        --ha-card-background: var(--card-background-color);
-        --paper-item-icon-color: var(--state-icon-color);
-
-        --paper-slider-knob-color: var(--primary-color);
-        --paper-slider-knob-start-color: var(--paper-slider-knob-color);
-        --paper-slider-pin-color: var(--paper-slider-knob-color);
-        --paper-slider-active-color: var(--paper-slider-knob-color);
-        --paper-slider-secondary-color: var(--light-primary-color);
-
-        --paper-toggle-button-checked-button-color: var(--switch-checked-button-color);
-        --paper-toggle-button-checked-bar-color: var(--switch-checked-track-color);
-        --paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color);
-        --paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color);
-        --mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color);
-
-        --input-fill-color: var(--input-background-color);
-        --input-ink-color: var(--primary-text-color);
-        --input-label-ink-color: var(--primary-text-color);
-        --input-disabled-fill-color: hsla(var(--input-background-color), 0.5);
-        --input-disabled-ink-color: var(--disabled-text-color);
-        --input-disabled-label-ink-color: var(--disabled-text-color);
-        --input-idle-line-color: var(--background-color);
-        --input-dropdown-icon-color: var(--secondary-text-color);
-        --input-hover-line-color: var(--primary-color);
-        --mdc-select-fill-color: var(--input-fill-color);
-        --mdc-text-field-fill-color: var(--input-fill-color);
-        --mdc-select-idle-line-color: var(--color-background-base);
-        --mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color);
-
-        --code-editor-background-color: var(--navbar-background);
-        --codemirror-meta: var(--primary-text-color);
-        --codemirror-property: var(--primary-color);
-        --codemirror-atom: var(--codemirror-property);
-
-        {%- endif -%}
-
-        --switch-checked-button-color: var(--mdc-switch-checked-button-color) !important;
-        --switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;
-        --switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color) !important;
-        --switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;
-      }
-
-      /* Turn header toolbar into a footer */
-      .header {
-        top: unset !important;
-        bottom: 0 !important;
-        height: var(--footer-height) !important;
-        background-color: var(--navbar-background) !important;
-        --mdc-icon-button-size: 32px;
-      }
-
-      /* Modify toolbar height but only for card-mod version of theme */
-      .toolbar {
-        height: var(--footer-height) !important;
-        padding: 0 !important;
-      }
-
-      /* Fix edit mode header height */
-      .edit-mode > .header {
-        height: calc(2*var(--footer-height)) !important;
-      }
-
-      /* Fix edit mode toolbar height */
-      paper-tabs {
-        height: 50%;
-      }
-      
-      /* Remove default current view ripple */
-      ha-tabs, paper-tabs {
-        --paper-tabs-selection-bar-color: none !important;
-        margin: 0 !important;
-      }
-
-      /* Add background and color current view icon */
-      paper-tab.iron-selected > ha-icon {
-        width: 100%;
-        max-width: 72px;
-        color: var(--primary-color);
-        background-color: var(--accent-color);
-        border-radius: 16px;
-      }
-
-      /* Prevent icon from shrinking on small width displays */
-      paper-tab > ha-svg-icon {
-        min-width: 24px;
-      }
-
-      /* View icon transition and display centering */
-      paper-tab > ha-icon {
-        width: 24px;
-        height: 32px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-        transition: width 0.2s cubic-bezier(.2,0,0,1);
-      }
-      
-      /* Display view tab contents vertically and set minimum size */
-      paper-tab {
-        padding: 0;
-        display: inline-flex;
-        flex-direction: column;
-        flex: 1;
-        justify-items: stretch;
-        min-width: min(calc((100vw - 2 * var(--mdc-icon-button-size)) / 5), 72px);
-      }
-
-      /* Make edit mode current view tab fit all buttons */
-      .edit-mode > .header > paper-tabs > paper-tab {
-        min-width: fit-content;
-      }
-
-      /* Remove extra left padding from edit view buttons */
-      .edit-icon {
-        padding-left: 0 !important;
-      }
-
-      /* Align edit mode add view button */
-      #add-view {
-        position: relative !important;
-        top: 11px;
-      }
-
-      /* View label */
-      paper-tab::after {
-        content: attr(aria-label);
-        text-transform: none;
-        text-align: center;
-        position: relative;
-        font-weight: 500;
-        font-size: min(3vw, 13px);
-        opacity: 0.8;
-        padding: 0px 1px;
-        max-width: -webkit-fill-available;
-        max-width: -moz-available;
-        text-wrap: wrap;
-        overflow: hidden;
-        line-height: 14px;
-        height: 100%;
-        margin-top: 20px;
-      }
-
-      /* Make current view label opaque */
-      paper-tab.iron-selected::after {
-        opacity: 1.0;
-      }
-
-      /* Restore icon size for subview back button */
-      ha-icon-button-arrow-prev[slot="navigationIcon"] {
-        --mdc-icon-button-size: 48px;
-      }
-
-      /* Fix view box to work with footer and add margins to sides */
-      #view {
-        padding-top: 0 !important;
-        padding-bottom: var(--footer-height) !important;
-        padding-left: 12px !important;
-        padding-right: 12px !important;
-        --lovelace-background: unset !important;
-      }
-
-      /* Fix view box when in edit mode */
-      .edit-mode > #view {
-        padding-top: calc(2*var(--footer-height)) !important;
-        padding-bottom: 0 !important;
-        padding-left: 12px !important;
-        padding-right: 12px !important;
-        bottom: calc(2*var(--footer-height)) !important;
-      }
-
-    # Evenly space icons along entire length of toolbar
-    ha-tabs:
-      $: |
-        #tabsContent.scrollable {
-          width: 100% !important;
-          display: flex !important;
-          justify-content: space-between !important;
-        }
-    paper-tabs:
-      $: |
-        #tabsContent.scrollable {
-          width: 100% !important;
-          display: flex !important;
-          justify-content: space-between !important;
-        }
-
-    paper-tab:
-      $: |
-        /* Disable default ripple effect */
-        paper-ripple {
-          display: none;
-        }
-        /* Align view icon */
-        .tab-content {
-          display: inline-flex;
-          justify-content: space-evenly;
-          width: 100%;
-          position: relative;
-          top: 11px;
-        }
-
-    # Edit mode Add Card position fixes
-    hui-masonry-view:
-      $: |
-        ha-fab {
-          bottom: calc(2*var(--footer-height) + 4px) !important;
-        }
-    hui-sidebar-view:
-      $: |
-        ha-fab {
-          bottom: calc(2*var(--footer-height) + 4px) !important;
-        }
-    hui-panel-view:
-      $: |
-        ha-fab {
-          bottom: calc(2*var(--footer-height) + 4px) !important;
-        }
-    masonry-layout:
-      $: |
-        ha-fab {
-          bottom: calc(2*var(--footer-height) + 4px) !important;
-        }
-    horizontal-layout:
-      $: |
-        ha-fab {
-          bottom: calc(2*var(--footer-height) + 4px) !important;
-        }
-    vertical-layout:
-      $: |
-        ha-fab {
-          bottom: calc(2*var(--footer-height) + 4px) !important;
-        }
-    grid-layout:
-      $: |
-        ha-fab {
-          bottom: calc(2*var(--footer-height) + 4px) !important;
-        }
-
-  # Material 3 toggles
-  card-mod-card-yaml: |
-    .: |
-      /* Material You */
-      {%- macro hex2hsl(hex) -%}
-          {# https://gist.github.com/mjackson/5311256 #}
-          {%- if hex[0] == "#" -%}
-          {%- set hex = hex[1:] -%}
-          {%- endif -%}
-          {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}
-          {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}
-          {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}
-          {%- set rgb_max = [r, g, b] | max -%}
-          {%- set rgb_min = [r, g, b] | min -%}
-          {%- set h = 0 -%}
-          {%- set s = 0 -%}
-          {%- set l = (rgb_max + rgb_min) / 2 -%}
-          {%- if rgb_max != rgb_min -%}
-            {%- set d = rgb_max - rgb_min -%}
-            {%- set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) -%}
-            {%- if r == rgb_max -%}
-              {%- set h = (g - b) / d + (6 if g < b else 0) -%}
-            {%- elif g == rgb_max -%}
-              {%- set h = (b - r) / d + 2 -%}
-            {%- elif b == rgb_max -%}
-              {%- set h = (r - g) / d + 4 -%}
-            {%- endif -%}
-            {%- set h = h / 6 -%}
-          {%- endif -%}
-          {%- set h = (h * 360) | int -%}
-          {%- set s = (s * 100) | int -%}
-          {%- set l = (l * 100) | int -%}
-          {{ h }},{{ s }},{{ l }}
-      {%- endmacro -%}
-
-      {%- set id = "_" + user | lower | replace(" ","_") -%}
-      {%- set base_color = "" -%}
-
-      * {
-        {%- if has_value("sensor.material_rounded_base_color" + id) -%}
-        {%- set base_color = states("sensor.material_rounded_base_color" + id) -%}
-        {%- elif has_value("sensor.material_rounded_base_color") -%}
-        {%- set base_color = states("sensor.material_rounded_base_color") -%}
-        {%- endif -%}
-
-        {%- if (base_color | length) -%}
-        {%- set hsl = hex2hsl(base_color).split(',') -%}
-
-                    --hue: {{ hsl[0] }};
-        --accent-color: hsl(calc(var(--hue) + 24), 22%, var(--accent-luminance));
-        --primary-color: hsl(calc(var(--hue) + 27), 100%, var(--primary-luminance));
-        --state-icon-color: hsl(calc(var(--hue) + 9), 100%, 84%);
-        --mdc-checkbox-unchecked-color: rgb(138, 140, 153);
-        --sidebar-icon-color: hsl(calc(var(--hue) + 15), 20%, 80%);
-        --primary-text-color: hsl(0, 0%, 100%);
-        --secondary-text-color: hsl(calc(var(--hue) + 18), 33%, 91%);
-        --sidebar-selected-text-color: rgb(214, 215, 219);
-        --lovelace-background: hsl(calc(var(--hue) + 11), 30%, 8%);
-        --navbar-background: hsl(calc(var(--hue) + 11), 19%, 14%);
-        --secondary-background-color: hsl(calc(var(--hue) + 7), 26%, 14%);
-        --input-background-color: hsl(calc(var(--hue) + 11), 30%, 8%);
-        --card-background-color: hsl(calc(var(--hue) + 10), 26%, 14%);
-        --state-inactive-color: hsl(calc(var(--hue) - 71), 1%, 56%);
-        --mdc-switch-checked-button-color: var(--accent-color);
-        --mdc-switch-checked-track-color: var(--primary-color);
-        --mdc-switch-unchecked-button-color: hsl(calc(var(--hue) + 16), 9%, 59%);
-        --mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);
-
-        --text-primary-color: var(--lovelace-background);
-        --text-accent-color: var(--primary-color);
-        --text-light-primary-color: var(--text-primary-color);
-        --rgb-primary-text-color: var(--primary-text-color);
-
-        --primary-background-color: var(--navbar-background);
-        --dark-primary-color: var(--primary-color);
-        --light-primary-color: var(--primary-color);
-        --divider-color: var(--navbar-background);
-        --mdc-theme-primary: var(--primary-color);
-        --mdc-theme-on-primary: var(--accent-color);
-        --mdc-theme-secondary: var(--primary-color);
-        --mdc-theme-on-secondary: var(--accent-color);
-
-        --app-header-background-color: var(--lovelace-background);
-        --app-header-text-color: var(--primary-text-color);
-        --app-header-edit-text-color: var(--app-header-text-color);
-        --app-header-edit-background-color: var(--navbar-background);
-
-        --sidebar-text-color: var(--sidebar-icon-color);
-        --sidebar-background-color: var(--navbar-background);
-
-        --ha-card-background: var(--card-background-color);
-        --paper-item-icon-color: var(--state-icon-color);
-
-        --paper-slider-knob-color: var(--primary-color);
-        --paper-slider-knob-start-color: var(--paper-slider-knob-color);
-        --paper-slider-pin-color: var(--paper-slider-knob-color);
-        --paper-slider-active-color: var(--paper-slider-knob-color);
-        --paper-slider-secondary-color: var(--light-primary-color);
-
-        --paper-toggle-button-checked-button-color: var(--switch-checked-button-color);
-        --paper-toggle-button-checked-bar-color: var(--switch-checked-track-color);
-        --paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color);
-        --paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color);
-        --mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color);
-
-        --input-fill-color: var(--input-background-color);
-        --input-ink-color: var(--primary-text-color);
-        --input-label-ink-color: var(--primary-text-color);
-        --input-disabled-fill-color: hsla(var(--input-background-color), 0.5);
-        --input-disabled-ink-color: var(--disabled-text-color);
-        --input-disabled-label-ink-color: var(--disabled-text-color);
-        --input-idle-line-color: var(--background-color);
-        --input-dropdown-icon-color: var(--secondary-text-color);
-        --input-hover-line-color: var(--primary-color);
-        --mdc-select-fill-color: var(--input-fill-color);
-        --mdc-text-field-fill-color: var(--input-fill-color);
-        --mdc-select-idle-line-color: var(--color-background-base);
-        --mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color);
-
-        --code-editor-background-color: var(--navbar-background);
-        --codemirror-meta: var(--primary-text-color);
-        --codemirror-property: var(--primary-color);
-        --codemirror-atom: var(--codemirror-property);
-
-        {%- endif -%}
-
-        --switch-checked-button-color: var(--mdc-switch-checked-button-color) !important;
-        --switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;
-        --switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color) !important;
-        --switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;
-      }
-
-    hui-entities-toggle$:
-      .: |
-        :host {
-          position: relative !important;
-          width: 40px !important;
-          left: -2px !important;
-          top: 5px !important;
-        }
-      ha-switch$: |
-        :host {
-          padding: 3px 5px !important;
-        }
-        .mdc-switch__track {
-          height: 24px !important;
-          width: 40px !important;
-          border-radius: 32px !important;
-          opacity: 1 !important;
-        }
-        .mdc-switch--checked > .mdc-switch__track {
-          opacity: 1 !important;
-        }
-        .mdc-switch__thumb-underlay {
-          top: -12px !important;
-          left: -12px !important;
-        }
-        .mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {
-          background-color: var(--mdc-switch-unchecked-button-color) !important;
-          height: 14px !important;
-          width: 14px !important;
-          border: none !important;
-        }
-        .mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {
-            --border-color: var(--mdc-switch-unchecked-button-color);
-            border: 2px solid gray !important;
-        }
-  card-mod-row-yaml: |
-    .: |
-      /* Material You */
-      {%- macro hex2hsl(hex) -%}
-          {# https://gist.github.com/mjackson/5311256 #}
-          {%- if hex[0] == "#" -%}
-          {%- set hex = hex[1:] -%}
-          {%- endif -%}
-          {%- set r = (hex[0:2] | int(hex[0:2],16))/255 -%}
-          {%- set g = (hex[2:4] | int(hex[2:4],16))/255 -%}
-          {%- set b = (hex[4:6] | int(hex[4:6],16))/255 -%}
-          {%- set rgb_max = [r, g, b] | max -%}
-          {%- set rgb_min = [r, g, b] | min -%}
-          {%- set h = 0 -%}
-          {%- set s = 0 -%}
-          {%- set l = (rgb_max + rgb_min) / 2 -%}
-          {%- if rgb_max != rgb_min -%}
-            {%- set d = rgb_max - rgb_min -%}
-            {%- set s = d / (2 - rgb_max - rgb_min) if l > 0.5 else d / (rgb_max + rgb_min) -%}
-            {%- if r == rgb_max -%}
-              {%- set h = (g - b) / d + (6 if g < b else 0) -%}
-            {%- elif g == rgb_max -%}
-              {%- set h = (b - r) / d + 2 -%}
-            {%- elif b == rgb_max -%}
-              {%- set h = (r - g) / d + 4 -%}
-            {%- endif -%}
-            {%- set h = h / 6 -%}
-          {%- endif -%}
-          {%- set h = (h * 360) | int -%}
-          {%- set s = (s * 100) | int -%}
-          {%- set l = (l * 100) | int -%}
-          {{ h }},{{ s }},{{ l }}
-      {%- endmacro -%}
-
-      {%- set id = "_" + user | lower | replace(" ","_") -%}
-      {%- set base_color = "" -%}
-
-      * {
-        {%- if has_value("sensor.material_rounded_base_color" + id) -%}
-        {%- set base_color = states("sensor.material_rounded_base_color" + id) -%}
-        {%- elif has_value("sensor.material_rounded_base_color") -%}
-        {%- set base_color = states("sensor.material_rounded_base_color") -%}
-        {%- endif -%}
-
-        {%- if (base_color | length) -%}
-        {%- set hsl = hex2hsl(base_color).split(',') -%}
-
-                    --hue: {{ hsl[0] }};
-        --accent-color: hsl(calc(var(--hue) + 24), 22%, var(--accent-luminance));
-        --primary-color: hsl(calc(var(--hue) + 27), 100%, var(--primary-luminance));
-        --state-icon-color: hsl(calc(var(--hue) + 9), 100%, 84%);
-        --mdc-checkbox-unchecked-color: rgb(138, 140, 153);
-        --sidebar-icon-color: hsl(calc(var(--hue) + 15), 20%, 80%);
-        --primary-text-color: hsl(0, 0%, 100%);
-        --secondary-text-color: hsl(calc(var(--hue) + 18), 33%, 91%);
-        --sidebar-selected-text-color: rgb(214, 215, 219);
-        --lovelace-background: hsl(calc(var(--hue) + 11), 30%, 8%);
-        --navbar-background: hsl(calc(var(--hue) + 11), 19%, 14%);
-        --secondary-background-color: hsl(calc(var(--hue) + 7), 26%, 14%);
-        --input-background-color: hsl(calc(var(--hue) + 11), 30%, 8%);
-        --card-background-color: hsl(calc(var(--hue) + 10), 26%, 14%);
-        --state-inactive-color: hsl(calc(var(--hue) - 71), 1%, 56%);
-        --mdc-switch-checked-button-color: var(--accent-color);
-        --mdc-switch-checked-track-color: var(--primary-color);
-        --mdc-switch-unchecked-button-color: hsl(calc(var(--hue) + 16), 9%, 59%);
-        --mdc-switch-unchecked-track-color: hsl(calc(var(--hue) + 9), 12%, 29%);
-
-        --text-primary-color: var(--lovelace-background);
-        --text-accent-color: var(--primary-color);
-        --text-light-primary-color: var(--text-primary-color);
-        --rgb-primary-text-color: var(--primary-text-color);
-
-        --primary-background-color: var(--navbar-background);
-        --dark-primary-color: var(--primary-color);
-        --light-primary-color: var(--primary-color);
-        --divider-color: var(--navbar-background);
-        --mdc-theme-primary: var(--primary-color);
-        --mdc-theme-on-primary: var(--accent-color);
-        --mdc-theme-secondary: var(--primary-color);
-        --mdc-theme-on-secondary: var(--accent-color);
-
-        --app-header-background-color: var(--lovelace-background);
-        --app-header-text-color: var(--primary-text-color);
-        --app-header-edit-text-color: var(--app-header-text-color);
-        --app-header-edit-background-color: var(--navbar-background);
-
-        --sidebar-text-color: var(--sidebar-icon-color);
-        --sidebar-background-color: var(--navbar-background);
-
-        --ha-card-background: var(--card-background-color);
-        --paper-item-icon-color: var(--state-icon-color);
-
-        --paper-slider-knob-color: var(--primary-color);
-        --paper-slider-knob-start-color: var(--paper-slider-knob-color);
-        --paper-slider-pin-color: var(--paper-slider-knob-color);
-        --paper-slider-active-color: var(--paper-slider-knob-color);
-        --paper-slider-secondary-color: var(--light-primary-color);
-
-        --paper-toggle-button-checked-button-color: var(--switch-checked-button-color);
-        --paper-toggle-button-checked-bar-color: var(--switch-checked-track-color);
-        --paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color);
-        --paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color);
-        --mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color);
-
-        --input-fill-color: var(--input-background-color);
-        --input-ink-color: var(--primary-text-color);
-        --input-label-ink-color: var(--primary-text-color);
-        --input-disabled-fill-color: hsla(var(--input-background-color), 0.5);
-        --input-disabled-ink-color: var(--disabled-text-color);
-        --input-disabled-label-ink-color: var(--disabled-text-color);
-        --input-idle-line-color: var(--background-color);
-        --input-dropdown-icon-color: var(--secondary-text-color);
-        --input-hover-line-color: var(--primary-color);
-        --mdc-select-fill-color: var(--input-fill-color);
-        --mdc-text-field-fill-color: var(--input-fill-color);
-        --mdc-select-idle-line-color: var(--color-background-base);
-        --mdc-text-field-idle-line-color: var(--mdc-select-idle-line-color);
-
-        --code-editor-background-color: var(--navbar-background);
-        --codemirror-meta: var(--primary-text-color);
-        --codemirror-property: var(--primary-color);
-        --codemirror-atom: var(--codemirror-property);
-
-        {%- endif -%}
-
-        --switch-checked-button-color: var(--mdc-switch-checked-button-color) !important;
-        --switch-checked-track-color: var(--mdc-switch-checked-track-color) !important;
-        --switch-unchecked-button-color: var(--mdc-switch-unchecked-button-color) !important;
-        --switch-unchecked-track-color: var(--mdc-switch-unchecked-track-color) !important;
-      }
-
-    ha-entity-toggle$:
-      ha-switch$: |
-        :host {
-          padding: 3px 5px !important;
-        }
-        .mdc-switch__track {
-          height: 24px !important;
-          width: 40px !important;
-          border-radius: 32px !important;
-          opacity: 1 !important;
-        }
-        .mdc-switch--checked > .mdc-switch__track {
-          opacity: 1 !important;
-        }
-        .mdc-switch__thumb-underlay {
-          top: -12px !important;
-          left: -12px !important;
-        }
-        .mdc-switch:not(.mdc-switch--checked) .mdc-switch__thumb {
-          background-color: var(--mdc-switch-unchecked-button-color) !important;
-          height: 14px !important;
-          width: 14px !important;
-          border: none !important;
-        }
-        .mdc-switch:not(.mdc-switch--checked) .mdc-switch__track {
-            --border-color: var(--mdc-switch-unchecked-button-color);
-            border: 2px solid gray !important;
-        }
+  codemirror-string: rgb(119, 196, 229)
+  codemirror-keyword: rgb(140, 169, 255)
+  codemirror-number: rgb(255, 91, 29)

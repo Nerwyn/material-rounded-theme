@@ -11,59 +11,50 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 	const sensorName = 'sensor.material_rounded_base_color';
 	const userSensorName = `${sensorName}_${userId}`;
 
-	let baseColor: string | undefined;
-	let isDarkMode = ha.hass.themes.darkMode;
-
 	function setTheme() {
 		{
 			try {
 				const themeName = ha?.hass?.themes?.theme ?? '';
-				if (themeName.includes('Material ')) {
-					let newIsDarkMode = ha.hass.themes.darkMode;
+				if (
+					themeName.includes('Material Rounded') ||
+					themeName.includes('Material You')
+				) {
+					let baseColor: string | undefined;
+					let isDarkMode = ha.hass.themes.darkMode;
 
 					// Fixed light/dark mode versions of theme
 					if (!ha.hass.themes.themes[themeName].modes) {
 						if (themeName.includes('Light')) {
-							newIsDarkMode = false;
+							isDarkMode = false;
 						} else if (themeName.includes('Dark')) {
-							newIsDarkMode = true;
+							isDarkMode = true;
 						}
 					}
-
-					let newBaseColor: string | undefined;
 
 					// User specific base color
 					if (userId) {
-						newBaseColor = ha.hass.states[userSensorName]?.state;
+						baseColor = ha.hass.states[userSensorName]?.state;
 					}
 
 					// General base color
-					if (!newBaseColor) {
-						newBaseColor = ha.hass.states[sensorName]?.state;
+					if (!baseColor) {
+						baseColor = ha.hass.states[sensorName]?.state;
 					}
 
 					// Only update if base color or dark mode changed
-					if (
-						newBaseColor != baseColor ||
-						newIsDarkMode != isDarkMode
-					) {
-						baseColor = newBaseColor;
-						isDarkMode = newIsDarkMode;
-
-						if (baseColor) {
-							const theme = themeFromSourceColor(
-								argbFromHex(baseColor),
-							);
-							applyTheme(theme, {
-								target: document.querySelector(
-									'html',
-								) as HTMLElement,
-								dark: isDarkMode,
-							});
-							console.info(
-								`Material Rounded Theme colors updated using user defined base color ${baseColor} and ${isDarkMode ? 'dark' : 'light'} mode.`,
-							);
-						}
+					if (baseColor) {
+						const theme = themeFromSourceColor(
+							argbFromHex(baseColor),
+						);
+						applyTheme(theme, {
+							target: document.querySelector(
+								'html',
+							) as HTMLElement,
+							dark: isDarkMode,
+						});
+						console.info(
+							`Material Rounded Theme colors updated using user defined base color ${baseColor} and ${isDarkMode ? 'dark' : 'light'} mode.`,
+						);
 					}
 				}
 			} catch (e) {
@@ -101,6 +92,4 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 	window
 		.matchMedia('(prefers-color-scheme: dark)')
 		.addEventListener('change', () => setTheme());
-
-	// TODO trigger on hass theme dark mode flag change
 });

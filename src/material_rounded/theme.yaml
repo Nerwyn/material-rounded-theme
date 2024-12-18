@@ -4,11 +4,11 @@ Material Rounded:
       primary-color: var(--md-sys-color-primary, rgb(194, 231, 254))
       accent-color: var(--md-sys-color-on-primary, rgb(0, 74, 119))
       state-icon-color: rgb(196, 199, 197)
-      mdc-checkbox-unchecked-color: rgb(138, 140, 153) # unused?
       primary-text-color: rgb(228, 228, 231)
       secondary-text-color: rgb(187, 188, 196)
       disabled-text-color: rgba(255, 255, 255, 0.5)
       lovelace-background: rgb(19, 19, 20)
+      app-header-background-color: rgb(19, 19, 20)
       primary-background-color: rgb(30, 31, 32)
       disabled-color: rgb(0, 0, 0)
       input-background-color: rgb(46, 48, 56)
@@ -27,11 +27,11 @@ Material Rounded:
       primary-color: var(--md-sys-color-primary, rgb(0, 29, 53))
       accent-color: var(--md-sys-color-on-primary, rgb(194, 231, 255))
       state-icon-color: rgb(69, 71, 70)
-      mdc-checkbox-unchecked-color: rgb(42, 43, 51) # unused?
       primary-text-color: rgb(31, 31, 31)
       secondary-text-color: rgb(68, 71, 70)
       disabled-text-color: rgb(128, 128, 128)
       lovelace-background: rgb(255, 255, 255)
+      app-header-background-color: rgb(255, 255, 255)
       primary-background-color: rgb(240, 244, 249)
       disabled-color: rgb(173, 176, 174)
       input-background-color: rgb(234, 234, 235)
@@ -57,7 +57,6 @@ Material Rounded:
   header-height: 48px
   footer-height: 80px
   mdc-top-app-bar-fixed-box-shadow: none
-  app-header-background-color: var(--lovelace-background)
   app-header-text-color: var(--primary-text-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-edit-background-color: var(--primary-background-color)
