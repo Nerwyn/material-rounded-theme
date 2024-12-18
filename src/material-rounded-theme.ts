@@ -78,16 +78,6 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 					themeName.includes('Material You')
 				) {
 					let baseColor: string | undefined;
-					let isDarkMode = ha.hass.themes.darkMode;
-
-					// Fixed light/dark mode versions of theme
-					if (!ha.hass.themes.themes[themeName].modes) {
-						if (themeName.includes('Light')) {
-							isDarkMode = false;
-						} else if (themeName.includes('Dark')) {
-							isDarkMode = true;
-						}
-					}
 
 					// User specific base color
 					if (userId) {
@@ -101,30 +91,33 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 
 					// Only update if base color is provided
 					if (baseColor) {
-						const schemeTonalSpot = new SchemeTonalSpot(
-							Hct.fromInt(argbFromHex(baseColor)),
-							isDarkMode,
-							0,
-						);
-						const scheme: Record<string, number> = {};
-						for (const color of colors) {
-							scheme[color] = (
-								MaterialDynamicColors[color] as DynamicColor
-							).getArgb(schemeTonalSpot);
-						}
-						const target = document.querySelector('html');
-						for (const [key, value] of Object.entries(scheme)) {
-							const token = key
-								.replace(/([a-z])([A-Z])/g, '$1-$2')
-								.toLowerCase();
-							const color = hexFromArgb(value);
-							target?.style.setProperty(
-								`--md-sys-color-${token}`,
-								color,
+						for (const mode in ['light', 'dark']) {
+							const schemeTonalSpot = new SchemeTonalSpot(
+								Hct.fromInt(argbFromHex(baseColor)),
+								mode == 'dark',
+								0,
 							);
+
+							const scheme: Record<string, number> = {};
+							for (const color of colors) {
+								scheme[color] = (
+									MaterialDynamicColors[color] as DynamicColor
+								).getArgb(schemeTonalSpot);
+							}
+							const target = document.querySelector('html');
+							for (const [key, value] of Object.entries(scheme)) {
+								const token = key
+									.replace(/([a-z])([A-Z])/g, '$1-$2')
+									.toLowerCase();
+								const color = hexFromArgb(value);
+								target?.style.setProperty(
+									`--md-sys-color-${token}-${mode}`,
+									color,
+								);
+							}
 						}
 						console.info(
-							`Material Rounded Theme colors updated using user defined base color ${baseColor} and ${isDarkMode ? 'dark' : 'light'} mode.`,
+							`Material design system colors updated using user defined base color ${baseColor}.`,
 						);
 					}
 				}
@@ -158,9 +151,4 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 			setTimeout(() => setTheme(), 1000);
 		}
 	}, 'call_service');
-
-	// Trigger on window light/dark change
-	window
-		.matchMedia('(prefers-color-scheme: dark)')
-		.addEventListener('change', () => setTheme());
 });
