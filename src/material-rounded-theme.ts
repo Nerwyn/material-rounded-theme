@@ -1,9 +1,67 @@
 import {
-	applyTheme,
 	argbFromHex,
-	themeFromSourceColor,
+	DynamicColor,
+	Hct,
+	hexFromArgb,
+	MaterialDynamicColors,
+	SchemeTonalSpot,
 } from '@material/material-color-utilities';
 import { HassElement } from './models/interfaces';
+
+const colors: (keyof typeof MaterialDynamicColors)[] = [
+	'primary',
+	'onPrimary',
+	'primaryContainer',
+	'onPrimaryContainer',
+	'primaryPaletteKeyColor',
+	'inversePrimary',
+	'primaryFixed',
+	'primaryFixedDim',
+	'onPrimaryFixed',
+	'onPrimaryFixedVariant',
+	'secondary',
+	'onSecondary',
+	'secondaryContainer',
+	'onSecondaryContainer',
+	'secondaryPaletteKeyColor',
+	'secondaryFixed',
+	'secondaryFixedDim',
+	'onSecondaryFixed',
+	'onSecondaryFixedVariant',
+	'tertiary',
+	'onTertiary',
+	'tertiaryContainer',
+	'onTertiaryContainer',
+	'tertiaryPaletteKeyColor',
+	'tertiaryFixed',
+	'tertiaryFixedDim',
+	'onTertiaryFixed',
+	'onTertiaryFixedVariant',
+	'neutralPaletteKeyColor',
+	'neutralVariantPaletteKeyColor',
+	'error',
+	'onError',
+	'errorContainer',
+	'onErrorContainer',
+	'surface',
+	'onSurface',
+	'surfaceVariant',
+	'onSurfaceVariant',
+	'surfaceDim',
+	'surfaceBright',
+	'surfaceContainerLowest',
+	'surfaceContainerLow',
+	'surfaceContainer',
+	'surfaceContainerHigh',
+	'surfaceContainerHighest',
+	'inverseSurface',
+	'inverseOnSurface',
+	'surfaceTint',
+	'outline',
+	'outlineVariant',
+	'shadow',
+	'scrim',
+];
 
 Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 	const ha = document.querySelector('home-assistant') as HassElement;
@@ -41,17 +99,30 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 						baseColor = ha.hass.states[sensorName]?.state;
 					}
 
-					// Only update if base color or dark mode changed
+					// Only update if base color is provided
 					if (baseColor) {
-						const theme = themeFromSourceColor(
-							argbFromHex(baseColor),
+						const schemeTonalSpot = new SchemeTonalSpot(
+							Hct.fromInt(argbFromHex(baseColor)),
+							isDarkMode,
+							0,
 						);
-						applyTheme(theme, {
-							target: document.querySelector(
-								'html',
-							) as HTMLElement,
-							dark: isDarkMode,
-						});
+						const scheme: Record<string, number> = {};
+						for (const color of colors) {
+							scheme[color] = (
+								MaterialDynamicColors[color] as DynamicColor
+							).getArgb(schemeTonalSpot);
+						}
+						const target = document.querySelector('html');
+						for (const [key, value] of Object.entries(scheme)) {
+							const token = key
+								.replace(/([a-z])([A-Z])/g, '$1-$2')
+								.toLowerCase();
+							const color = hexFromArgb(value);
+							target?.style.setProperty(
+								`--md-sys-color-${token}`,
+								color,
+							);
+						}
 						console.info(
 							`Material Rounded Theme colors updated using user defined base color ${baseColor} and ${isDarkMode ? 'dark' : 'light'} mode.`,
 						);

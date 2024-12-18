@@ -1648,35 +1648,58 @@ Material You:
     dark:
       app-header-background-color: rgb(18, 18, 18)
       card-background-color: var(--md-sys-color-surface, var(--default-md-sys-color-surface))
-      default-md-sys-color-background: rgb(26, 28, 30)
-      default-md-sys-color-error: rgb(255, 182, 173)
-      default-md-sys-color-error-container: rgb(148, 0, 10)
-      default-md-sys-color-inverse-on-surface: rgb(47, 47, 50)
-      default-md-sys-color-inverse-primary: rgb(1, 98, 162)
-      default-md-sys-color-inverse-surface: rgb(225, 225, 229)
-      default-md-sys-color-on-background: rgb(225, 225, 229)
-      default-md-sys-color-on-error: rgb(107, 0, 5)
-      default-md-sys-color-on-error-container: rgb(255, 182, 173)
-      default-md-sys-color-on-primary: rgb(0, 49, 87)
-      default-md-sys-color-on-primary-container: rgb(209, 228, 255)
-      default-md-sys-color-on-secondary: rgb(37, 50, 65)
-      default-md-sys-color-on-secondary-container: rgb(212, 226, 247)
-      default-md-sys-color-on-surface: rgb(225, 225, 229)
-      default-md-sys-color-on-surface-variant: rgb(196, 199, 207)
-      default-md-sys-color-on-tertiary: rgb(59, 41, 71)
-      default-md-sys-color-on-tertiary-container: rgb(243, 219, 255)
-      default-md-sys-color-outline: rgb(141, 146, 154)
-      default-md-sys-color-outline-variant: rgb(66, 70, 77)
-      default-md-sys-color-primary: rgb(158, 202, 255)
-      default-md-sys-color-primary-container: rgb(0, 74, 128)
-      default-md-sys-color-scrim: rgb(0, 0, 0)
-      default-md-sys-color-secondary: rgb(188, 200, 220)
-      default-md-sys-color-secondary-container: rgb(59, 72, 89)
-      default-md-sys-color-shadow: rgb(0, 0, 0)
-      default-md-sys-color-surface: rgb(26, 28, 30)
-      default-md-sys-color-surface-variant: rgb(66, 70, 77)
-      default-md-sys-color-tertiary: rgb(214, 190, 228)
-      default-md-sys-color-tertiary-container: rgb(82, 63, 95)
+      default-md-sys-color-error: '#ffb4ab'
+      default-md-sys-color-error-container: '#93000a'
+      default-md-sys-color-inverse-on-surface: '#2f3036'
+      default-md-sys-color-inverse-primary: '#4c5c92'
+      default-md-sys-color-inverse-surface: '#e3e1e9'
+      default-md-sys-color-neutral-palette-key-color: '#76767d'
+      default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+      default-md-sys-color-on-error: '#690005'
+      default-md-sys-color-on-error-container: '#ffdad6'
+      default-md-sys-color-on-primary: '#1c2d61'
+      default-md-sys-color-on-primary-container: '#dce1ff'
+      default-md-sys-color-on-primary-fixed: '#02174b'
+      default-md-sys-color-on-primary-fixed-variant: '#344479'
+      default-md-sys-color-on-secondary: '#2b3042'
+      default-md-sys-color-on-secondary-container: '#dee1f9'
+      default-md-sys-color-on-secondary-fixed: '#161b2c'
+      default-md-sys-color-on-secondary-fixed-variant: '#414659'
+      default-md-sys-color-on-surface: '#e3e1e9'
+      default-md-sys-color-on-surface-variant: '#c6c6d0'
+      default-md-sys-color-on-tertiary: '#432740'
+      default-md-sys-color-on-tertiary-container: '#ffd7f6'
+      default-md-sys-color-on-tertiary-fixed: '#2c122a'
+      default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+      default-md-sys-color-outline: '#8f909a'
+      default-md-sys-color-outline-variant: '#45464f'
+      default-md-sys-color-primary: '#b5c4ff'
+      default-md-sys-color-primary-container: '#344479'
+      default-md-sys-color-primary-fixed: '#dce1ff'
+      default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+      default-md-sys-color-primary-palette-key-color: '#6575ad'
+      default-md-sys-color-scrim: '#000000'
+      default-md-sys-color-secondary: '#c1c5dd'
+      default-md-sys-color-secondary-container: '#414659'
+      default-md-sys-color-secondary-fixed: '#dee1f9'
+      default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+      default-md-sys-color-secondary-palette-key-color: '#72768b'
+      default-md-sys-color-shadow: '#000000'
+      default-md-sys-color-surface: '#121318'
+      default-md-sys-color-surface-bright: '#38393f'
+      default-md-sys-color-surface-container: '#1e1f25'
+      default-md-sys-color-surface-container-high: '#292a2f'
+      default-md-sys-color-surface-container-highest: '#34343a'
+      default-md-sys-color-surface-container-low: '#1a1b21'
+      default-md-sys-color-surface-container-lowest: '#0d0e13'
+      default-md-sys-color-surface-dim: '#121318'
+      default-md-sys-color-surface-tint: '#b5c4ff'
+      default-md-sys-color-surface-variant: '#45464f'
+      default-md-sys-color-tertiary: '#e3badb'
+      default-md-sys-color-tertiary-container: '#5b3d57'
+      default-md-sys-color-tertiary-fixed: '#ffd7f6'
+      default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+      default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
       disabled-color: rgb(0, 0, 0)
       disabled-text-color: rgba(255, 255, 255, 0.5)
       lovelace-background: rgb(18, 18, 18)
@@ -1684,35 +1707,58 @@ Material You:
     light:
       app-header-background-color: rgb(250, 250, 250)
       card-background-color: var(--md-sys-color-surface-variant, var(--default-md-sys-color-surface-variant))
-      default-md-sys-color-background: rgb(252, 250, 255)
-      default-md-sys-color-error: rgb(187, 27, 27)
-      default-md-sys-color-error-container: rgb(255, 218, 214)
-      default-md-sys-color-inverse-on-surface: rgb(241, 240, 244)
-      default-md-sys-color-inverse-primary: rgb(158, 202, 255)
-      default-md-sys-color-inverse-surface: rgb(47, 47, 50)
-      default-md-sys-color-on-background: rgb(26, 28, 30)
-      default-md-sys-color-on-error: rgb(255, 255, 255)
-      default-md-sys-color-on-error-container: rgb(66, 0, 2)
-      default-md-sys-color-on-primary: rgb(255, 255, 255)
-      default-md-sys-color-on-primary-container: rgb(0, 30, 56)
-      default-md-sys-color-on-secondary: rgb(255, 255, 255)
-      default-md-sys-color-on-secondary-container: rgb(17, 29, 45)
-      default-md-sys-color-on-surface: rgb(26, 28, 30)
-      default-md-sys-color-on-surface-variant: rgb(66, 70, 77)
-      default-md-sys-color-on-tertiary: rgb(255, 255, 255)
-      default-md-sys-color-on-tertiary-container: rgb(38, 21, 51)
-      default-md-sys-color-outline: rgb(114, 118, 126)
-      default-md-sys-color-outline-variant: rgb(196, 199, 207)
-      default-md-sys-color-primary: rgb(1, 98, 162)
-      default-md-sys-color-primary-container: rgb(209, 228, 255)
-      default-md-sys-color-scrim: rgb(0, 0, 0)
-      default-md-sys-color-secondary: rgb(82, 94, 111)
-      default-md-sys-color-secondary-container: rgb(212, 226, 247)
-      default-md-sys-color-shadow: rgb(0, 0, 0)
-      default-md-sys-color-surface: rgb(252, 250, 255)
-      default-md-sys-color-surface-variant: rgb(224, 227, 235)
-      default-md-sys-color-tertiary: rgb(108, 88, 121)
-      default-md-sys-color-tertiary-container: rgb(243, 219, 255)
+      default-md-sys-color-error: '#ba1a1a'
+      default-md-sys-color-error-container: '#ffdad6'
+      default-md-sys-color-inverse-on-surface: '#f1f0f7'
+      default-md-sys-color-inverse-primary: '#b5c4ff'
+      default-md-sys-color-inverse-surface: '#2f3036'
+      default-md-sys-color-neutral-palette-key-color: '#76767d'
+      default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+      default-md-sys-color-on-error: '#ffffff'
+      default-md-sys-color-on-error-container: '#93000a'
+      default-md-sys-color-on-primary: '#ffffff'
+      default-md-sys-color-on-primary-container: '#344479'
+      default-md-sys-color-on-primary-fixed: '#02174b'
+      default-md-sys-color-on-primary-fixed-variant: '#344479'
+      default-md-sys-color-on-secondary: '#ffffff'
+      default-md-sys-color-on-secondary-container: '#414659'
+      default-md-sys-color-on-secondary-fixed: '#161b2c'
+      default-md-sys-color-on-secondary-fixed-variant: '#414659'
+      default-md-sys-color-on-surface: '#1a1b21'
+      default-md-sys-color-on-surface-variant: '#45464f'
+      default-md-sys-color-on-tertiary: '#ffffff'
+      default-md-sys-color-on-tertiary-container: '#5b3d57'
+      default-md-sys-color-on-tertiary-fixed: '#2c122a'
+      default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+      default-md-sys-color-outline: '#767680'
+      default-md-sys-color-outline-variant: '#c6c6d0'
+      default-md-sys-color-primary: '#4c5c92'
+      default-md-sys-color-primary-container: '#dce1ff'
+      default-md-sys-color-primary-fixed: '#dce1ff'
+      default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+      default-md-sys-color-primary-palette-key-color: '#6575ad'
+      default-md-sys-color-scrim: '#000000'
+      default-md-sys-color-secondary: '#595e72'
+      default-md-sys-color-secondary-container: '#dee1f9'
+      default-md-sys-color-secondary-fixed: '#dee1f9'
+      default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+      default-md-sys-color-secondary-palette-key-color: '#72768b'
+      default-md-sys-color-shadow: '#000000'
+      default-md-sys-color-surface: '#faf8ff'
+      default-md-sys-color-surface-bright: '#faf8ff'
+      default-md-sys-color-surface-container: '#eeedf4'
+      default-md-sys-color-surface-container-high: '#e9e7ef'
+      default-md-sys-color-surface-container-highest: '#e3e1e9'
+      default-md-sys-color-surface-container-low: '#f4f3fa'
+      default-md-sys-color-surface-container-lowest: '#ffffff'
+      default-md-sys-color-surface-dim: '#dad9e0'
+      default-md-sys-color-surface-tint: '#4c5c92'
+      default-md-sys-color-surface-variant: '#e2e1ec'
+      default-md-sys-color-tertiary: '#745470'
+      default-md-sys-color-tertiary-container: '#ffd7f6'
+      default-md-sys-color-tertiary-fixed: '#ffd7f6'
+      default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+      default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
       disabled-color: rgb(165, 165, 165)
       disabled-text-color: rgb(128, 128, 128)
       lovelace-background: rgb(250, 250, 250)
@@ -1781,35 +1827,58 @@ Material You Dark:
   codemirror-property: var(--primary-color)
   codemirror-string: rgb(119, 196, 229)
   dark-primary-color: var(--primary-color)
-  default-md-sys-color-background: rgb(26, 28, 30)
-  default-md-sys-color-error: rgb(255, 182, 173)
-  default-md-sys-color-error-container: rgb(148, 0, 10)
-  default-md-sys-color-inverse-on-surface: rgb(47, 47, 50)
-  default-md-sys-color-inverse-primary: rgb(1, 98, 162)
-  default-md-sys-color-inverse-surface: rgb(225, 225, 229)
-  default-md-sys-color-on-background: rgb(225, 225, 229)
-  default-md-sys-color-on-error: rgb(107, 0, 5)
-  default-md-sys-color-on-error-container: rgb(255, 182, 173)
-  default-md-sys-color-on-primary: rgb(0, 49, 87)
-  default-md-sys-color-on-primary-container: rgb(209, 228, 255)
-  default-md-sys-color-on-secondary: rgb(37, 50, 65)
-  default-md-sys-color-on-secondary-container: rgb(212, 226, 247)
-  default-md-sys-color-on-surface: rgb(225, 225, 229)
-  default-md-sys-color-on-surface-variant: rgb(196, 199, 207)
-  default-md-sys-color-on-tertiary: rgb(59, 41, 71)
-  default-md-sys-color-on-tertiary-container: rgb(243, 219, 255)
-  default-md-sys-color-outline: rgb(141, 146, 154)
-  default-md-sys-color-outline-variant: rgb(66, 70, 77)
-  default-md-sys-color-primary: rgb(158, 202, 255)
-  default-md-sys-color-primary-container: rgb(0, 74, 128)
-  default-md-sys-color-scrim: rgb(0, 0, 0)
-  default-md-sys-color-secondary: rgb(188, 200, 220)
-  default-md-sys-color-secondary-container: rgb(59, 72, 89)
-  default-md-sys-color-shadow: rgb(0, 0, 0)
-  default-md-sys-color-surface: rgb(26, 28, 30)
-  default-md-sys-color-surface-variant: rgb(66, 70, 77)
-  default-md-sys-color-tertiary: rgb(214, 190, 228)
-  default-md-sys-color-tertiary-container: rgb(82, 63, 95)
+  default-md-sys-color-error: '#ffb4ab'
+  default-md-sys-color-error-container: '#93000a'
+  default-md-sys-color-inverse-on-surface: '#2f3036'
+  default-md-sys-color-inverse-primary: '#4c5c92'
+  default-md-sys-color-inverse-surface: '#e3e1e9'
+  default-md-sys-color-neutral-palette-key-color: '#76767d'
+  default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+  default-md-sys-color-on-error: '#690005'
+  default-md-sys-color-on-error-container: '#ffdad6'
+  default-md-sys-color-on-primary: '#1c2d61'
+  default-md-sys-color-on-primary-container: '#dce1ff'
+  default-md-sys-color-on-primary-fixed: '#02174b'
+  default-md-sys-color-on-primary-fixed-variant: '#344479'
+  default-md-sys-color-on-secondary: '#2b3042'
+  default-md-sys-color-on-secondary-container: '#dee1f9'
+  default-md-sys-color-on-secondary-fixed: '#161b2c'
+  default-md-sys-color-on-secondary-fixed-variant: '#414659'
+  default-md-sys-color-on-surface: '#e3e1e9'
+  default-md-sys-color-on-surface-variant: '#c6c6d0'
+  default-md-sys-color-on-tertiary: '#432740'
+  default-md-sys-color-on-tertiary-container: '#ffd7f6'
+  default-md-sys-color-on-tertiary-fixed: '#2c122a'
+  default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+  default-md-sys-color-outline: '#8f909a'
+  default-md-sys-color-outline-variant: '#45464f'
+  default-md-sys-color-primary: '#b5c4ff'
+  default-md-sys-color-primary-container: '#344479'
+  default-md-sys-color-primary-fixed: '#dce1ff'
+  default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+  default-md-sys-color-primary-palette-key-color: '#6575ad'
+  default-md-sys-color-scrim: '#000000'
+  default-md-sys-color-secondary: '#c1c5dd'
+  default-md-sys-color-secondary-container: '#414659'
+  default-md-sys-color-secondary-fixed: '#dee1f9'
+  default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+  default-md-sys-color-secondary-palette-key-color: '#72768b'
+  default-md-sys-color-shadow: '#000000'
+  default-md-sys-color-surface: '#121318'
+  default-md-sys-color-surface-bright: '#38393f'
+  default-md-sys-color-surface-container: '#1e1f25'
+  default-md-sys-color-surface-container-high: '#292a2f'
+  default-md-sys-color-surface-container-highest: '#34343a'
+  default-md-sys-color-surface-container-low: '#1a1b21'
+  default-md-sys-color-surface-container-lowest: '#0d0e13'
+  default-md-sys-color-surface-dim: '#121318'
+  default-md-sys-color-surface-tint: '#b5c4ff'
+  default-md-sys-color-surface-variant: '#45464f'
+  default-md-sys-color-tertiary: '#e3badb'
+  default-md-sys-color-tertiary-container: '#5b3d57'
+  default-md-sys-color-tertiary-fixed: '#ffd7f6'
+  default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+  default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
   disabled-color: rgb(0, 0, 0)
   disabled-text-color: rgba(255, 255, 255, 0.5)
   divider-color: var(--primary-background-color)
@@ -1941,35 +2010,58 @@ Material You Light:
   codemirror-property: var(--primary-color)
   codemirror-string: rgb(119, 196, 229)
   dark-primary-color: var(--primary-color)
-  default-md-sys-color-background: rgb(252, 250, 255)
-  default-md-sys-color-error: rgb(187, 27, 27)
-  default-md-sys-color-error-container: rgb(255, 218, 214)
-  default-md-sys-color-inverse-on-surface: rgb(241, 240, 244)
-  default-md-sys-color-inverse-primary: rgb(158, 202, 255)
-  default-md-sys-color-inverse-surface: rgb(47, 47, 50)
-  default-md-sys-color-on-background: rgb(26, 28, 30)
-  default-md-sys-color-on-error: rgb(255, 255, 255)
-  default-md-sys-color-on-error-container: rgb(66, 0, 2)
-  default-md-sys-color-on-primary: rgb(255, 255, 255)
-  default-md-sys-color-on-primary-container: rgb(0, 30, 56)
-  default-md-sys-color-on-secondary: rgb(255, 255, 255)
-  default-md-sys-color-on-secondary-container: rgb(17, 29, 45)
-  default-md-sys-color-on-surface: rgb(26, 28, 30)
-  default-md-sys-color-on-surface-variant: rgb(66, 70, 77)
-  default-md-sys-color-on-tertiary: rgb(255, 255, 255)
-  default-md-sys-color-on-tertiary-container: rgb(38, 21, 51)
-  default-md-sys-color-outline: rgb(114, 118, 126)
-  default-md-sys-color-outline-variant: rgb(196, 199, 207)
-  default-md-sys-color-primary: rgb(1, 98, 162)
-  default-md-sys-color-primary-container: rgb(209, 228, 255)
-  default-md-sys-color-scrim: rgb(0, 0, 0)
-  default-md-sys-color-secondary: rgb(82, 94, 111)
-  default-md-sys-color-secondary-container: rgb(212, 226, 247)
-  default-md-sys-color-shadow: rgb(0, 0, 0)
-  default-md-sys-color-surface: rgb(252, 250, 255)
-  default-md-sys-color-surface-variant: rgb(224, 227, 235)
-  default-md-sys-color-tertiary: rgb(108, 88, 121)
-  default-md-sys-color-tertiary-container: rgb(243, 219, 255)
+  default-md-sys-color-error: '#ba1a1a'
+  default-md-sys-color-error-container: '#ffdad6'
+  default-md-sys-color-inverse-on-surface: '#f1f0f7'
+  default-md-sys-color-inverse-primary: '#b5c4ff'
+  default-md-sys-color-inverse-surface: '#2f3036'
+  default-md-sys-color-neutral-palette-key-color: '#76767d'
+  default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+  default-md-sys-color-on-error: '#ffffff'
+  default-md-sys-color-on-error-container: '#93000a'
+  default-md-sys-color-on-primary: '#ffffff'
+  default-md-sys-color-on-primary-container: '#344479'
+  default-md-sys-color-on-primary-fixed: '#02174b'
+  default-md-sys-color-on-primary-fixed-variant: '#344479'
+  default-md-sys-color-on-secondary: '#ffffff'
+  default-md-sys-color-on-secondary-container: '#414659'
+  default-md-sys-color-on-secondary-fixed: '#161b2c'
+  default-md-sys-color-on-secondary-fixed-variant: '#414659'
+  default-md-sys-color-on-surface: '#1a1b21'
+  default-md-sys-color-on-surface-variant: '#45464f'
+  default-md-sys-color-on-tertiary: '#ffffff'
+  default-md-sys-color-on-tertiary-container: '#5b3d57'
+  default-md-sys-color-on-tertiary-fixed: '#2c122a'
+  default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+  default-md-sys-color-outline: '#767680'
+  default-md-sys-color-outline-variant: '#c6c6d0'
+  default-md-sys-color-primary: '#4c5c92'
+  default-md-sys-color-primary-container: '#dce1ff'
+  default-md-sys-color-primary-fixed: '#dce1ff'
+  default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+  default-md-sys-color-primary-palette-key-color: '#6575ad'
+  default-md-sys-color-scrim: '#000000'
+  default-md-sys-color-secondary: '#595e72'
+  default-md-sys-color-secondary-container: '#dee1f9'
+  default-md-sys-color-secondary-fixed: '#dee1f9'
+  default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+  default-md-sys-color-secondary-palette-key-color: '#72768b'
+  default-md-sys-color-shadow: '#000000'
+  default-md-sys-color-surface: '#faf8ff'
+  default-md-sys-color-surface-bright: '#faf8ff'
+  default-md-sys-color-surface-container: '#eeedf4'
+  default-md-sys-color-surface-container-high: '#e9e7ef'
+  default-md-sys-color-surface-container-highest: '#e3e1e9'
+  default-md-sys-color-surface-container-low: '#f4f3fa'
+  default-md-sys-color-surface-container-lowest: '#ffffff'
+  default-md-sys-color-surface-dim: '#dad9e0'
+  default-md-sys-color-surface-tint: '#4c5c92'
+  default-md-sys-color-surface-variant: '#e2e1ec'
+  default-md-sys-color-tertiary: '#745470'
+  default-md-sys-color-tertiary-container: '#ffd7f6'
+  default-md-sys-color-tertiary-fixed: '#ffd7f6'
+  default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+  default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
   disabled-color: rgb(165, 165, 165)
   disabled-text-color: rgb(128, 128, 128)
   divider-color: var(--primary-background-color)
@@ -2164,35 +2256,58 @@ Material You No Mod:
     dark:
       app-header-background-color: rgb(18, 18, 18)
       card-background-color: var(--md-sys-color-surface, var(--default-md-sys-color-surface))
-      default-md-sys-color-background: rgb(26, 28, 30)
-      default-md-sys-color-error: rgb(255, 182, 173)
-      default-md-sys-color-error-container: rgb(148, 0, 10)
-      default-md-sys-color-inverse-on-surface: rgb(47, 47, 50)
-      default-md-sys-color-inverse-primary: rgb(1, 98, 162)
-      default-md-sys-color-inverse-surface: rgb(225, 225, 229)
-      default-md-sys-color-on-background: rgb(225, 225, 229)
-      default-md-sys-color-on-error: rgb(107, 0, 5)
-      default-md-sys-color-on-error-container: rgb(255, 182, 173)
-      default-md-sys-color-on-primary: rgb(0, 49, 87)
-      default-md-sys-color-on-primary-container: rgb(209, 228, 255)
-      default-md-sys-color-on-secondary: rgb(37, 50, 65)
-      default-md-sys-color-on-secondary-container: rgb(212, 226, 247)
-      default-md-sys-color-on-surface: rgb(225, 225, 229)
-      default-md-sys-color-on-surface-variant: rgb(196, 199, 207)
-      default-md-sys-color-on-tertiary: rgb(59, 41, 71)
-      default-md-sys-color-on-tertiary-container: rgb(243, 219, 255)
-      default-md-sys-color-outline: rgb(141, 146, 154)
-      default-md-sys-color-outline-variant: rgb(66, 70, 77)
-      default-md-sys-color-primary: rgb(158, 202, 255)
-      default-md-sys-color-primary-container: rgb(0, 74, 128)
-      default-md-sys-color-scrim: rgb(0, 0, 0)
-      default-md-sys-color-secondary: rgb(188, 200, 220)
-      default-md-sys-color-secondary-container: rgb(59, 72, 89)
-      default-md-sys-color-shadow: rgb(0, 0, 0)
-      default-md-sys-color-surface: rgb(26, 28, 30)
-      default-md-sys-color-surface-variant: rgb(66, 70, 77)
-      default-md-sys-color-tertiary: rgb(214, 190, 228)
-      default-md-sys-color-tertiary-container: rgb(82, 63, 95)
+      default-md-sys-color-error: '#ffb4ab'
+      default-md-sys-color-error-container: '#93000a'
+      default-md-sys-color-inverse-on-surface: '#2f3036'
+      default-md-sys-color-inverse-primary: '#4c5c92'
+      default-md-sys-color-inverse-surface: '#e3e1e9'
+      default-md-sys-color-neutral-palette-key-color: '#76767d'
+      default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+      default-md-sys-color-on-error: '#690005'
+      default-md-sys-color-on-error-container: '#ffdad6'
+      default-md-sys-color-on-primary: '#1c2d61'
+      default-md-sys-color-on-primary-container: '#dce1ff'
+      default-md-sys-color-on-primary-fixed: '#02174b'
+      default-md-sys-color-on-primary-fixed-variant: '#344479'
+      default-md-sys-color-on-secondary: '#2b3042'
+      default-md-sys-color-on-secondary-container: '#dee1f9'
+      default-md-sys-color-on-secondary-fixed: '#161b2c'
+      default-md-sys-color-on-secondary-fixed-variant: '#414659'
+      default-md-sys-color-on-surface: '#e3e1e9'
+      default-md-sys-color-on-surface-variant: '#c6c6d0'
+      default-md-sys-color-on-tertiary: '#432740'
+      default-md-sys-color-on-tertiary-container: '#ffd7f6'
+      default-md-sys-color-on-tertiary-fixed: '#2c122a'
+      default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+      default-md-sys-color-outline: '#8f909a'
+      default-md-sys-color-outline-variant: '#45464f'
+      default-md-sys-color-primary: '#b5c4ff'
+      default-md-sys-color-primary-container: '#344479'
+      default-md-sys-color-primary-fixed: '#dce1ff'
+      default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+      default-md-sys-color-primary-palette-key-color: '#6575ad'
+      default-md-sys-color-scrim: '#000000'
+      default-md-sys-color-secondary: '#c1c5dd'
+      default-md-sys-color-secondary-container: '#414659'
+      default-md-sys-color-secondary-fixed: '#dee1f9'
+      default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+      default-md-sys-color-secondary-palette-key-color: '#72768b'
+      default-md-sys-color-shadow: '#000000'
+      default-md-sys-color-surface: '#121318'
+      default-md-sys-color-surface-bright: '#38393f'
+      default-md-sys-color-surface-container: '#1e1f25'
+      default-md-sys-color-surface-container-high: '#292a2f'
+      default-md-sys-color-surface-container-highest: '#34343a'
+      default-md-sys-color-surface-container-low: '#1a1b21'
+      default-md-sys-color-surface-container-lowest: '#0d0e13'
+      default-md-sys-color-surface-dim: '#121318'
+      default-md-sys-color-surface-tint: '#b5c4ff'
+      default-md-sys-color-surface-variant: '#45464f'
+      default-md-sys-color-tertiary: '#e3badb'
+      default-md-sys-color-tertiary-container: '#5b3d57'
+      default-md-sys-color-tertiary-fixed: '#ffd7f6'
+      default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+      default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
       disabled-color: rgb(0, 0, 0)
       disabled-text-color: rgba(255, 255, 255, 0.5)
       lovelace-background: rgb(18, 18, 18)
@@ -2200,35 +2315,58 @@ Material You No Mod:
     light:
       app-header-background-color: rgb(250, 250, 250)
       card-background-color: var(--md-sys-color-surface-variant, var(--default-md-sys-color-surface-variant))
-      default-md-sys-color-background: rgb(252, 250, 255)
-      default-md-sys-color-error: rgb(187, 27, 27)
-      default-md-sys-color-error-container: rgb(255, 218, 214)
-      default-md-sys-color-inverse-on-surface: rgb(241, 240, 244)
-      default-md-sys-color-inverse-primary: rgb(158, 202, 255)
-      default-md-sys-color-inverse-surface: rgb(47, 47, 50)
-      default-md-sys-color-on-background: rgb(26, 28, 30)
-      default-md-sys-color-on-error: rgb(255, 255, 255)
-      default-md-sys-color-on-error-container: rgb(66, 0, 2)
-      default-md-sys-color-on-primary: rgb(255, 255, 255)
-      default-md-sys-color-on-primary-container: rgb(0, 30, 56)
-      default-md-sys-color-on-secondary: rgb(255, 255, 255)
-      default-md-sys-color-on-secondary-container: rgb(17, 29, 45)
-      default-md-sys-color-on-surface: rgb(26, 28, 30)
-      default-md-sys-color-on-surface-variant: rgb(66, 70, 77)
-      default-md-sys-color-on-tertiary: rgb(255, 255, 255)
-      default-md-sys-color-on-tertiary-container: rgb(38, 21, 51)
-      default-md-sys-color-outline: rgb(114, 118, 126)
-      default-md-sys-color-outline-variant: rgb(196, 199, 207)
-      default-md-sys-color-primary: rgb(1, 98, 162)
-      default-md-sys-color-primary-container: rgb(209, 228, 255)
-      default-md-sys-color-scrim: rgb(0, 0, 0)
-      default-md-sys-color-secondary: rgb(82, 94, 111)
-      default-md-sys-color-secondary-container: rgb(212, 226, 247)
-      default-md-sys-color-shadow: rgb(0, 0, 0)
-      default-md-sys-color-surface: rgb(252, 250, 255)
-      default-md-sys-color-surface-variant: rgb(224, 227, 235)
-      default-md-sys-color-tertiary: rgb(108, 88, 121)
-      default-md-sys-color-tertiary-container: rgb(243, 219, 255)
+      default-md-sys-color-error: '#ba1a1a'
+      default-md-sys-color-error-container: '#ffdad6'
+      default-md-sys-color-inverse-on-surface: '#f1f0f7'
+      default-md-sys-color-inverse-primary: '#b5c4ff'
+      default-md-sys-color-inverse-surface: '#2f3036'
+      default-md-sys-color-neutral-palette-key-color: '#76767d'
+      default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+      default-md-sys-color-on-error: '#ffffff'
+      default-md-sys-color-on-error-container: '#93000a'
+      default-md-sys-color-on-primary: '#ffffff'
+      default-md-sys-color-on-primary-container: '#344479'
+      default-md-sys-color-on-primary-fixed: '#02174b'
+      default-md-sys-color-on-primary-fixed-variant: '#344479'
+      default-md-sys-color-on-secondary: '#ffffff'
+      default-md-sys-color-on-secondary-container: '#414659'
+      default-md-sys-color-on-secondary-fixed: '#161b2c'
+      default-md-sys-color-on-secondary-fixed-variant: '#414659'
+      default-md-sys-color-on-surface: '#1a1b21'
+      default-md-sys-color-on-surface-variant: '#45464f'
+      default-md-sys-color-on-tertiary: '#ffffff'
+      default-md-sys-color-on-tertiary-container: '#5b3d57'
+      default-md-sys-color-on-tertiary-fixed: '#2c122a'
+      default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+      default-md-sys-color-outline: '#767680'
+      default-md-sys-color-outline-variant: '#c6c6d0'
+      default-md-sys-color-primary: '#4c5c92'
+      default-md-sys-color-primary-container: '#dce1ff'
+      default-md-sys-color-primary-fixed: '#dce1ff'
+      default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+      default-md-sys-color-primary-palette-key-color: '#6575ad'
+      default-md-sys-color-scrim: '#000000'
+      default-md-sys-color-secondary: '#595e72'
+      default-md-sys-color-secondary-container: '#dee1f9'
+      default-md-sys-color-secondary-fixed: '#dee1f9'
+      default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+      default-md-sys-color-secondary-palette-key-color: '#72768b'
+      default-md-sys-color-shadow: '#000000'
+      default-md-sys-color-surface: '#faf8ff'
+      default-md-sys-color-surface-bright: '#faf8ff'
+      default-md-sys-color-surface-container: '#eeedf4'
+      default-md-sys-color-surface-container-high: '#e9e7ef'
+      default-md-sys-color-surface-container-highest: '#e3e1e9'
+      default-md-sys-color-surface-container-low: '#f4f3fa'
+      default-md-sys-color-surface-container-lowest: '#ffffff'
+      default-md-sys-color-surface-dim: '#dad9e0'
+      default-md-sys-color-surface-tint: '#4c5c92'
+      default-md-sys-color-surface-variant: '#e2e1ec'
+      default-md-sys-color-tertiary: '#745470'
+      default-md-sys-color-tertiary-container: '#ffd7f6'
+      default-md-sys-color-tertiary-fixed: '#ffd7f6'
+      default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+      default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
       disabled-color: rgb(165, 165, 165)
       disabled-text-color: rgb(128, 128, 128)
       lovelace-background: rgb(250, 250, 250)
@@ -2296,35 +2434,58 @@ Material You No Mod Dark:
   codemirror-property: var(--primary-color)
   codemirror-string: rgb(119, 196, 229)
   dark-primary-color: var(--primary-color)
-  default-md-sys-color-background: rgb(26, 28, 30)
-  default-md-sys-color-error: rgb(255, 182, 173)
-  default-md-sys-color-error-container: rgb(148, 0, 10)
-  default-md-sys-color-inverse-on-surface: rgb(47, 47, 50)
-  default-md-sys-color-inverse-primary: rgb(1, 98, 162)
-  default-md-sys-color-inverse-surface: rgb(225, 225, 229)
-  default-md-sys-color-on-background: rgb(225, 225, 229)
-  default-md-sys-color-on-error: rgb(107, 0, 5)
-  default-md-sys-color-on-error-container: rgb(255, 182, 173)
-  default-md-sys-color-on-primary: rgb(0, 49, 87)
-  default-md-sys-color-on-primary-container: rgb(209, 228, 255)
-  default-md-sys-color-on-secondary: rgb(37, 50, 65)
-  default-md-sys-color-on-secondary-container: rgb(212, 226, 247)
-  default-md-sys-color-on-surface: rgb(225, 225, 229)
-  default-md-sys-color-on-surface-variant: rgb(196, 199, 207)
-  default-md-sys-color-on-tertiary: rgb(59, 41, 71)
-  default-md-sys-color-on-tertiary-container: rgb(243, 219, 255)
-  default-md-sys-color-outline: rgb(141, 146, 154)
-  default-md-sys-color-outline-variant: rgb(66, 70, 77)
-  default-md-sys-color-primary: rgb(158, 202, 255)
-  default-md-sys-color-primary-container: rgb(0, 74, 128)
-  default-md-sys-color-scrim: rgb(0, 0, 0)
-  default-md-sys-color-secondary: rgb(188, 200, 220)
-  default-md-sys-color-secondary-container: rgb(59, 72, 89)
-  default-md-sys-color-shadow: rgb(0, 0, 0)
-  default-md-sys-color-surface: rgb(26, 28, 30)
-  default-md-sys-color-surface-variant: rgb(66, 70, 77)
-  default-md-sys-color-tertiary: rgb(214, 190, 228)
-  default-md-sys-color-tertiary-container: rgb(82, 63, 95)
+  default-md-sys-color-error: '#ffb4ab'
+  default-md-sys-color-error-container: '#93000a'
+  default-md-sys-color-inverse-on-surface: '#2f3036'
+  default-md-sys-color-inverse-primary: '#4c5c92'
+  default-md-sys-color-inverse-surface: '#e3e1e9'
+  default-md-sys-color-neutral-palette-key-color: '#76767d'
+  default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+  default-md-sys-color-on-error: '#690005'
+  default-md-sys-color-on-error-container: '#ffdad6'
+  default-md-sys-color-on-primary: '#1c2d61'
+  default-md-sys-color-on-primary-container: '#dce1ff'
+  default-md-sys-color-on-primary-fixed: '#02174b'
+  default-md-sys-color-on-primary-fixed-variant: '#344479'
+  default-md-sys-color-on-secondary: '#2b3042'
+  default-md-sys-color-on-secondary-container: '#dee1f9'
+  default-md-sys-color-on-secondary-fixed: '#161b2c'
+  default-md-sys-color-on-secondary-fixed-variant: '#414659'
+  default-md-sys-color-on-surface: '#e3e1e9'
+  default-md-sys-color-on-surface-variant: '#c6c6d0'
+  default-md-sys-color-on-tertiary: '#432740'
+  default-md-sys-color-on-tertiary-container: '#ffd7f6'
+  default-md-sys-color-on-tertiary-fixed: '#2c122a'
+  default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+  default-md-sys-color-outline: '#8f909a'
+  default-md-sys-color-outline-variant: '#45464f'
+  default-md-sys-color-primary: '#b5c4ff'
+  default-md-sys-color-primary-container: '#344479'
+  default-md-sys-color-primary-fixed: '#dce1ff'
+  default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+  default-md-sys-color-primary-palette-key-color: '#6575ad'
+  default-md-sys-color-scrim: '#000000'
+  default-md-sys-color-secondary: '#c1c5dd'
+  default-md-sys-color-secondary-container: '#414659'
+  default-md-sys-color-secondary-fixed: '#dee1f9'
+  default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+  default-md-sys-color-secondary-palette-key-color: '#72768b'
+  default-md-sys-color-shadow: '#000000'
+  default-md-sys-color-surface: '#121318'
+  default-md-sys-color-surface-bright: '#38393f'
+  default-md-sys-color-surface-container: '#1e1f25'
+  default-md-sys-color-surface-container-high: '#292a2f'
+  default-md-sys-color-surface-container-highest: '#34343a'
+  default-md-sys-color-surface-container-low: '#1a1b21'
+  default-md-sys-color-surface-container-lowest: '#0d0e13'
+  default-md-sys-color-surface-dim: '#121318'
+  default-md-sys-color-surface-tint: '#b5c4ff'
+  default-md-sys-color-surface-variant: '#45464f'
+  default-md-sys-color-tertiary: '#e3badb'
+  default-md-sys-color-tertiary-container: '#5b3d57'
+  default-md-sys-color-tertiary-fixed: '#ffd7f6'
+  default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+  default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
   disabled-color: rgb(0, 0, 0)
   disabled-text-color: rgba(255, 255, 255, 0.5)
   divider-color: var(--primary-background-color)
@@ -2455,35 +2616,58 @@ Material You No Mod Light:
   codemirror-property: var(--primary-color)
   codemirror-string: rgb(119, 196, 229)
   dark-primary-color: var(--primary-color)
-  default-md-sys-color-background: rgb(252, 250, 255)
-  default-md-sys-color-error: rgb(187, 27, 27)
-  default-md-sys-color-error-container: rgb(255, 218, 214)
-  default-md-sys-color-inverse-on-surface: rgb(241, 240, 244)
-  default-md-sys-color-inverse-primary: rgb(158, 202, 255)
-  default-md-sys-color-inverse-surface: rgb(47, 47, 50)
-  default-md-sys-color-on-background: rgb(26, 28, 30)
-  default-md-sys-color-on-error: rgb(255, 255, 255)
-  default-md-sys-color-on-error-container: rgb(66, 0, 2)
-  default-md-sys-color-on-primary: rgb(255, 255, 255)
-  default-md-sys-color-on-primary-container: rgb(0, 30, 56)
-  default-md-sys-color-on-secondary: rgb(255, 255, 255)
-  default-md-sys-color-on-secondary-container: rgb(17, 29, 45)
-  default-md-sys-color-on-surface: rgb(26, 28, 30)
-  default-md-sys-color-on-surface-variant: rgb(66, 70, 77)
-  default-md-sys-color-on-tertiary: rgb(255, 255, 255)
-  default-md-sys-color-on-tertiary-container: rgb(38, 21, 51)
-  default-md-sys-color-outline: rgb(114, 118, 126)
-  default-md-sys-color-outline-variant: rgb(196, 199, 207)
-  default-md-sys-color-primary: rgb(1, 98, 162)
-  default-md-sys-color-primary-container: rgb(209, 228, 255)
-  default-md-sys-color-scrim: rgb(0, 0, 0)
-  default-md-sys-color-secondary: rgb(82, 94, 111)
-  default-md-sys-color-secondary-container: rgb(212, 226, 247)
-  default-md-sys-color-shadow: rgb(0, 0, 0)
-  default-md-sys-color-surface: rgb(252, 250, 255)
-  default-md-sys-color-surface-variant: rgb(224, 227, 235)
-  default-md-sys-color-tertiary: rgb(108, 88, 121)
-  default-md-sys-color-tertiary-container: rgb(243, 219, 255)
+  default-md-sys-color-error: '#ba1a1a'
+  default-md-sys-color-error-container: '#ffdad6'
+  default-md-sys-color-inverse-on-surface: '#f1f0f7'
+  default-md-sys-color-inverse-primary: '#b5c4ff'
+  default-md-sys-color-inverse-surface: '#2f3036'
+  default-md-sys-color-neutral-palette-key-color: '#76767d'
+  default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+  default-md-sys-color-on-error: '#ffffff'
+  default-md-sys-color-on-error-container: '#93000a'
+  default-md-sys-color-on-primary: '#ffffff'
+  default-md-sys-color-on-primary-container: '#344479'
+  default-md-sys-color-on-primary-fixed: '#02174b'
+  default-md-sys-color-on-primary-fixed-variant: '#344479'
+  default-md-sys-color-on-secondary: '#ffffff'
+  default-md-sys-color-on-secondary-container: '#414659'
+  default-md-sys-color-on-secondary-fixed: '#161b2c'
+  default-md-sys-color-on-secondary-fixed-variant: '#414659'
+  default-md-sys-color-on-surface: '#1a1b21'
+  default-md-sys-color-on-surface-variant: '#45464f'
+  default-md-sys-color-on-tertiary: '#ffffff'
+  default-md-sys-color-on-tertiary-container: '#5b3d57'
+  default-md-sys-color-on-tertiary-fixed: '#2c122a'
+  default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+  default-md-sys-color-outline: '#767680'
+  default-md-sys-color-outline-variant: '#c6c6d0'
+  default-md-sys-color-primary: '#4c5c92'
+  default-md-sys-color-primary-container: '#dce1ff'
+  default-md-sys-color-primary-fixed: '#dce1ff'
+  default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+  default-md-sys-color-primary-palette-key-color: '#6575ad'
+  default-md-sys-color-scrim: '#000000'
+  default-md-sys-color-secondary: '#595e72'
+  default-md-sys-color-secondary-container: '#dee1f9'
+  default-md-sys-color-secondary-fixed: '#dee1f9'
+  default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+  default-md-sys-color-secondary-palette-key-color: '#72768b'
+  default-md-sys-color-shadow: '#000000'
+  default-md-sys-color-surface: '#faf8ff'
+  default-md-sys-color-surface-bright: '#faf8ff'
+  default-md-sys-color-surface-container: '#eeedf4'
+  default-md-sys-color-surface-container-high: '#e9e7ef'
+  default-md-sys-color-surface-container-highest: '#e3e1e9'
+  default-md-sys-color-surface-container-low: '#f4f3fa'
+  default-md-sys-color-surface-container-lowest: '#ffffff'
+  default-md-sys-color-surface-dim: '#dad9e0'
+  default-md-sys-color-surface-tint: '#4c5c92'
+  default-md-sys-color-surface-variant: '#e2e1ec'
+  default-md-sys-color-tertiary: '#745470'
+  default-md-sys-color-tertiary-container: '#ffd7f6'
+  default-md-sys-color-tertiary-fixed: '#ffd7f6'
+  default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+  default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
   disabled-color: rgb(165, 165, 165)
   disabled-text-color: rgb(128, 128, 128)
   divider-color: var(--primary-background-color)
@@ -2678,35 +2862,58 @@ Material You Transparent Card:
     dark:
       app-header-background-color: rgb(18, 18, 18)
       card-background-color: var(--md-sys-color-surface, var(--default-md-sys-color-surface))
-      default-md-sys-color-background: rgb(26, 28, 30)
-      default-md-sys-color-error: rgb(255, 182, 173)
-      default-md-sys-color-error-container: rgb(148, 0, 10)
-      default-md-sys-color-inverse-on-surface: rgb(47, 47, 50)
-      default-md-sys-color-inverse-primary: rgb(1, 98, 162)
-      default-md-sys-color-inverse-surface: rgb(225, 225, 229)
-      default-md-sys-color-on-background: rgb(225, 225, 229)
-      default-md-sys-color-on-error: rgb(107, 0, 5)
-      default-md-sys-color-on-error-container: rgb(255, 182, 173)
-      default-md-sys-color-on-primary: rgb(0, 49, 87)
-      default-md-sys-color-on-primary-container: rgb(209, 228, 255)
-      default-md-sys-color-on-secondary: rgb(37, 50, 65)
-      default-md-sys-color-on-secondary-container: rgb(212, 226, 247)
-      default-md-sys-color-on-surface: rgb(225, 225, 229)
-      default-md-sys-color-on-surface-variant: rgb(196, 199, 207)
-      default-md-sys-color-on-tertiary: rgb(59, 41, 71)
-      default-md-sys-color-on-tertiary-container: rgb(243, 219, 255)
-      default-md-sys-color-outline: rgb(141, 146, 154)
-      default-md-sys-color-outline-variant: rgb(66, 70, 77)
-      default-md-sys-color-primary: rgb(158, 202, 255)
-      default-md-sys-color-primary-container: rgb(0, 74, 128)
-      default-md-sys-color-scrim: rgb(0, 0, 0)
-      default-md-sys-color-secondary: rgb(188, 200, 220)
-      default-md-sys-color-secondary-container: rgb(59, 72, 89)
-      default-md-sys-color-shadow: rgb(0, 0, 0)
-      default-md-sys-color-surface: rgb(26, 28, 30)
-      default-md-sys-color-surface-variant: rgb(66, 70, 77)
-      default-md-sys-color-tertiary: rgb(214, 190, 228)
-      default-md-sys-color-tertiary-container: rgb(82, 63, 95)
+      default-md-sys-color-error: '#ffb4ab'
+      default-md-sys-color-error-container: '#93000a'
+      default-md-sys-color-inverse-on-surface: '#2f3036'
+      default-md-sys-color-inverse-primary: '#4c5c92'
+      default-md-sys-color-inverse-surface: '#e3e1e9'
+      default-md-sys-color-neutral-palette-key-color: '#76767d'
+      default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+      default-md-sys-color-on-error: '#690005'
+      default-md-sys-color-on-error-container: '#ffdad6'
+      default-md-sys-color-on-primary: '#1c2d61'
+      default-md-sys-color-on-primary-container: '#dce1ff'
+      default-md-sys-color-on-primary-fixed: '#02174b'
+      default-md-sys-color-on-primary-fixed-variant: '#344479'
+      default-md-sys-color-on-secondary: '#2b3042'
+      default-md-sys-color-on-secondary-container: '#dee1f9'
+      default-md-sys-color-on-secondary-fixed: '#161b2c'
+      default-md-sys-color-on-secondary-fixed-variant: '#414659'
+      default-md-sys-color-on-surface: '#e3e1e9'
+      default-md-sys-color-on-surface-variant: '#c6c6d0'
+      default-md-sys-color-on-tertiary: '#432740'
+      default-md-sys-color-on-tertiary-container: '#ffd7f6'
+      default-md-sys-color-on-tertiary-fixed: '#2c122a'
+      default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+      default-md-sys-color-outline: '#8f909a'
+      default-md-sys-color-outline-variant: '#45464f'
+      default-md-sys-color-primary: '#b5c4ff'
+      default-md-sys-color-primary-container: '#344479'
+      default-md-sys-color-primary-fixed: '#dce1ff'
+      default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+      default-md-sys-color-primary-palette-key-color: '#6575ad'
+      default-md-sys-color-scrim: '#000000'
+      default-md-sys-color-secondary: '#c1c5dd'
+      default-md-sys-color-secondary-container: '#414659'
+      default-md-sys-color-secondary-fixed: '#dee1f9'
+      default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+      default-md-sys-color-secondary-palette-key-color: '#72768b'
+      default-md-sys-color-shadow: '#000000'
+      default-md-sys-color-surface: '#121318'
+      default-md-sys-color-surface-bright: '#38393f'
+      default-md-sys-color-surface-container: '#1e1f25'
+      default-md-sys-color-surface-container-high: '#292a2f'
+      default-md-sys-color-surface-container-highest: '#34343a'
+      default-md-sys-color-surface-container-low: '#1a1b21'
+      default-md-sys-color-surface-container-lowest: '#0d0e13'
+      default-md-sys-color-surface-dim: '#121318'
+      default-md-sys-color-surface-tint: '#b5c4ff'
+      default-md-sys-color-surface-variant: '#45464f'
+      default-md-sys-color-tertiary: '#e3badb'
+      default-md-sys-color-tertiary-container: '#5b3d57'
+      default-md-sys-color-tertiary-fixed: '#ffd7f6'
+      default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+      default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
       disabled-color: rgb(0, 0, 0)
       disabled-text-color: rgba(255, 255, 255, 0.5)
       lovelace-background: rgb(18, 18, 18)
@@ -2714,35 +2921,58 @@ Material You Transparent Card:
     light:
       app-header-background-color: rgb(250, 250, 250)
       card-background-color: var(--md-sys-color-surface-variant, var(--default-md-sys-color-surface-variant))
-      default-md-sys-color-background: rgb(252, 250, 255)
-      default-md-sys-color-error: rgb(187, 27, 27)
-      default-md-sys-color-error-container: rgb(255, 218, 214)
-      default-md-sys-color-inverse-on-surface: rgb(241, 240, 244)
-      default-md-sys-color-inverse-primary: rgb(158, 202, 255)
-      default-md-sys-color-inverse-surface: rgb(47, 47, 50)
-      default-md-sys-color-on-background: rgb(26, 28, 30)
-      default-md-sys-color-on-error: rgb(255, 255, 255)
-      default-md-sys-color-on-error-container: rgb(66, 0, 2)
-      default-md-sys-color-on-primary: rgb(255, 255, 255)
-      default-md-sys-color-on-primary-container: rgb(0, 30, 56)
-      default-md-sys-color-on-secondary: rgb(255, 255, 255)
-      default-md-sys-color-on-secondary-container: rgb(17, 29, 45)
-      default-md-sys-color-on-surface: rgb(26, 28, 30)
-      default-md-sys-color-on-surface-variant: rgb(66, 70, 77)
-      default-md-sys-color-on-tertiary: rgb(255, 255, 255)
-      default-md-sys-color-on-tertiary-container: rgb(38, 21, 51)
-      default-md-sys-color-outline: rgb(114, 118, 126)
-      default-md-sys-color-outline-variant: rgb(196, 199, 207)
-      default-md-sys-color-primary: rgb(1, 98, 162)
-      default-md-sys-color-primary-container: rgb(209, 228, 255)
-      default-md-sys-color-scrim: rgb(0, 0, 0)
-      default-md-sys-color-secondary: rgb(82, 94, 111)
-      default-md-sys-color-secondary-container: rgb(212, 226, 247)
-      default-md-sys-color-shadow: rgb(0, 0, 0)
-      default-md-sys-color-surface: rgb(252, 250, 255)
-      default-md-sys-color-surface-variant: rgb(224, 227, 235)
-      default-md-sys-color-tertiary: rgb(108, 88, 121)
-      default-md-sys-color-tertiary-container: rgb(243, 219, 255)
+      default-md-sys-color-error: '#ba1a1a'
+      default-md-sys-color-error-container: '#ffdad6'
+      default-md-sys-color-inverse-on-surface: '#f1f0f7'
+      default-md-sys-color-inverse-primary: '#b5c4ff'
+      default-md-sys-color-inverse-surface: '#2f3036'
+      default-md-sys-color-neutral-palette-key-color: '#76767d'
+      default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+      default-md-sys-color-on-error: '#ffffff'
+      default-md-sys-color-on-error-container: '#93000a'
+      default-md-sys-color-on-primary: '#ffffff'
+      default-md-sys-color-on-primary-container: '#344479'
+      default-md-sys-color-on-primary-fixed: '#02174b'
+      default-md-sys-color-on-primary-fixed-variant: '#344479'
+      default-md-sys-color-on-secondary: '#ffffff'
+      default-md-sys-color-on-secondary-container: '#414659'
+      default-md-sys-color-on-secondary-fixed: '#161b2c'
+      default-md-sys-color-on-secondary-fixed-variant: '#414659'
+      default-md-sys-color-on-surface: '#1a1b21'
+      default-md-sys-color-on-surface-variant: '#45464f'
+      default-md-sys-color-on-tertiary: '#ffffff'
+      default-md-sys-color-on-tertiary-container: '#5b3d57'
+      default-md-sys-color-on-tertiary-fixed: '#2c122a'
+      default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+      default-md-sys-color-outline: '#767680'
+      default-md-sys-color-outline-variant: '#c6c6d0'
+      default-md-sys-color-primary: '#4c5c92'
+      default-md-sys-color-primary-container: '#dce1ff'
+      default-md-sys-color-primary-fixed: '#dce1ff'
+      default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+      default-md-sys-color-primary-palette-key-color: '#6575ad'
+      default-md-sys-color-scrim: '#000000'
+      default-md-sys-color-secondary: '#595e72'
+      default-md-sys-color-secondary-container: '#dee1f9'
+      default-md-sys-color-secondary-fixed: '#dee1f9'
+      default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+      default-md-sys-color-secondary-palette-key-color: '#72768b'
+      default-md-sys-color-shadow: '#000000'
+      default-md-sys-color-surface: '#faf8ff'
+      default-md-sys-color-surface-bright: '#faf8ff'
+      default-md-sys-color-surface-container: '#eeedf4'
+      default-md-sys-color-surface-container-high: '#e9e7ef'
+      default-md-sys-color-surface-container-highest: '#e3e1e9'
+      default-md-sys-color-surface-container-low: '#f4f3fa'
+      default-md-sys-color-surface-container-lowest: '#ffffff'
+      default-md-sys-color-surface-dim: '#dad9e0'
+      default-md-sys-color-surface-tint: '#4c5c92'
+      default-md-sys-color-surface-variant: '#e2e1ec'
+      default-md-sys-color-tertiary: '#745470'
+      default-md-sys-color-tertiary-container: '#ffd7f6'
+      default-md-sys-color-tertiary-fixed: '#ffd7f6'
+      default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+      default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
       disabled-color: rgb(165, 165, 165)
       disabled-text-color: rgb(128, 128, 128)
       lovelace-background: rgb(250, 250, 250)
@@ -2811,35 +3041,58 @@ Material You Transparent Card Dark:
   codemirror-property: var(--primary-color)
   codemirror-string: rgb(119, 196, 229)
   dark-primary-color: var(--primary-color)
-  default-md-sys-color-background: rgb(26, 28, 30)
-  default-md-sys-color-error: rgb(255, 182, 173)
-  default-md-sys-color-error-container: rgb(148, 0, 10)
-  default-md-sys-color-inverse-on-surface: rgb(47, 47, 50)
-  default-md-sys-color-inverse-primary: rgb(1, 98, 162)
-  default-md-sys-color-inverse-surface: rgb(225, 225, 229)
-  default-md-sys-color-on-background: rgb(225, 225, 229)
-  default-md-sys-color-on-error: rgb(107, 0, 5)
-  default-md-sys-color-on-error-container: rgb(255, 182, 173)
-  default-md-sys-color-on-primary: rgb(0, 49, 87)
-  default-md-sys-color-on-primary-container: rgb(209, 228, 255)
-  default-md-sys-color-on-secondary: rgb(37, 50, 65)
-  default-md-sys-color-on-secondary-container: rgb(212, 226, 247)
-  default-md-sys-color-on-surface: rgb(225, 225, 229)
-  default-md-sys-color-on-surface-variant: rgb(196, 199, 207)
-  default-md-sys-color-on-tertiary: rgb(59, 41, 71)
-  default-md-sys-color-on-tertiary-container: rgb(243, 219, 255)
-  default-md-sys-color-outline: rgb(141, 146, 154)
-  default-md-sys-color-outline-variant: rgb(66, 70, 77)
-  default-md-sys-color-primary: rgb(158, 202, 255)
-  default-md-sys-color-primary-container: rgb(0, 74, 128)
-  default-md-sys-color-scrim: rgb(0, 0, 0)
-  default-md-sys-color-secondary: rgb(188, 200, 220)
-  default-md-sys-color-secondary-container: rgb(59, 72, 89)
-  default-md-sys-color-shadow: rgb(0, 0, 0)
-  default-md-sys-color-surface: rgb(26, 28, 30)
-  default-md-sys-color-surface-variant: rgb(66, 70, 77)
-  default-md-sys-color-tertiary: rgb(214, 190, 228)
-  default-md-sys-color-tertiary-container: rgb(82, 63, 95)
+  default-md-sys-color-error: '#ffb4ab'
+  default-md-sys-color-error-container: '#93000a'
+  default-md-sys-color-inverse-on-surface: '#2f3036'
+  default-md-sys-color-inverse-primary: '#4c5c92'
+  default-md-sys-color-inverse-surface: '#e3e1e9'
+  default-md-sys-color-neutral-palette-key-color: '#76767d'
+  default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+  default-md-sys-color-on-error: '#690005'
+  default-md-sys-color-on-error-container: '#ffdad6'
+  default-md-sys-color-on-primary: '#1c2d61'
+  default-md-sys-color-on-primary-container: '#dce1ff'
+  default-md-sys-color-on-primary-fixed: '#02174b'
+  default-md-sys-color-on-primary-fixed-variant: '#344479'
+  default-md-sys-color-on-secondary: '#2b3042'
+  default-md-sys-color-on-secondary-container: '#dee1f9'
+  default-md-sys-color-on-secondary-fixed: '#161b2c'
+  default-md-sys-color-on-secondary-fixed-variant: '#414659'
+  default-md-sys-color-on-surface: '#e3e1e9'
+  default-md-sys-color-on-surface-variant: '#c6c6d0'
+  default-md-sys-color-on-tertiary: '#432740'
+  default-md-sys-color-on-tertiary-container: '#ffd7f6'
+  default-md-sys-color-on-tertiary-fixed: '#2c122a'
+  default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+  default-md-sys-color-outline: '#8f909a'
+  default-md-sys-color-outline-variant: '#45464f'
+  default-md-sys-color-primary: '#b5c4ff'
+  default-md-sys-color-primary-container: '#344479'
+  default-md-sys-color-primary-fixed: '#dce1ff'
+  default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+  default-md-sys-color-primary-palette-key-color: '#6575ad'
+  default-md-sys-color-scrim: '#000000'
+  default-md-sys-color-secondary: '#c1c5dd'
+  default-md-sys-color-secondary-container: '#414659'
+  default-md-sys-color-secondary-fixed: '#dee1f9'
+  default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+  default-md-sys-color-secondary-palette-key-color: '#72768b'
+  default-md-sys-color-shadow: '#000000'
+  default-md-sys-color-surface: '#121318'
+  default-md-sys-color-surface-bright: '#38393f'
+  default-md-sys-color-surface-container: '#1e1f25'
+  default-md-sys-color-surface-container-high: '#292a2f'
+  default-md-sys-color-surface-container-highest: '#34343a'
+  default-md-sys-color-surface-container-low: '#1a1b21'
+  default-md-sys-color-surface-container-lowest: '#0d0e13'
+  default-md-sys-color-surface-dim: '#121318'
+  default-md-sys-color-surface-tint: '#b5c4ff'
+  default-md-sys-color-surface-variant: '#45464f'
+  default-md-sys-color-tertiary: '#e3badb'
+  default-md-sys-color-tertiary-container: '#5b3d57'
+  default-md-sys-color-tertiary-fixed: '#ffd7f6'
+  default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+  default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
   disabled-color: rgb(0, 0, 0)
   disabled-text-color: rgba(255, 255, 255, 0.5)
   divider-color: var(--primary-background-color)
@@ -2971,35 +3224,58 @@ Material You Transparent Card Light:
   codemirror-property: var(--primary-color)
   codemirror-string: rgb(119, 196, 229)
   dark-primary-color: var(--primary-color)
-  default-md-sys-color-background: rgb(252, 250, 255)
-  default-md-sys-color-error: rgb(187, 27, 27)
-  default-md-sys-color-error-container: rgb(255, 218, 214)
-  default-md-sys-color-inverse-on-surface: rgb(241, 240, 244)
-  default-md-sys-color-inverse-primary: rgb(158, 202, 255)
-  default-md-sys-color-inverse-surface: rgb(47, 47, 50)
-  default-md-sys-color-on-background: rgb(26, 28, 30)
-  default-md-sys-color-on-error: rgb(255, 255, 255)
-  default-md-sys-color-on-error-container: rgb(66, 0, 2)
-  default-md-sys-color-on-primary: rgb(255, 255, 255)
-  default-md-sys-color-on-primary-container: rgb(0, 30, 56)
-  default-md-sys-color-on-secondary: rgb(255, 255, 255)
-  default-md-sys-color-on-secondary-container: rgb(17, 29, 45)
-  default-md-sys-color-on-surface: rgb(26, 28, 30)
-  default-md-sys-color-on-surface-variant: rgb(66, 70, 77)
-  default-md-sys-color-on-tertiary: rgb(255, 255, 255)
-  default-md-sys-color-on-tertiary-container: rgb(38, 21, 51)
-  default-md-sys-color-outline: rgb(114, 118, 126)
-  default-md-sys-color-outline-variant: rgb(196, 199, 207)
-  default-md-sys-color-primary: rgb(1, 98, 162)
-  default-md-sys-color-primary-container: rgb(209, 228, 255)
-  default-md-sys-color-scrim: rgb(0, 0, 0)
-  default-md-sys-color-secondary: rgb(82, 94, 111)
-  default-md-sys-color-secondary-container: rgb(212, 226, 247)
-  default-md-sys-color-shadow: rgb(0, 0, 0)
-  default-md-sys-color-surface: rgb(252, 250, 255)
-  default-md-sys-color-surface-variant: rgb(224, 227, 235)
-  default-md-sys-color-tertiary: rgb(108, 88, 121)
-  default-md-sys-color-tertiary-container: rgb(243, 219, 255)
+  default-md-sys-color-error: '#ba1a1a'
+  default-md-sys-color-error-container: '#ffdad6'
+  default-md-sys-color-inverse-on-surface: '#f1f0f7'
+  default-md-sys-color-inverse-primary: '#b5c4ff'
+  default-md-sys-color-inverse-surface: '#2f3036'
+  default-md-sys-color-neutral-palette-key-color: '#76767d'
+  default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+  default-md-sys-color-on-error: '#ffffff'
+  default-md-sys-color-on-error-container: '#93000a'
+  default-md-sys-color-on-primary: '#ffffff'
+  default-md-sys-color-on-primary-container: '#344479'
+  default-md-sys-color-on-primary-fixed: '#02174b'
+  default-md-sys-color-on-primary-fixed-variant: '#344479'
+  default-md-sys-color-on-secondary: '#ffffff'
+  default-md-sys-color-on-secondary-container: '#414659'
+  default-md-sys-color-on-secondary-fixed: '#161b2c'
+  default-md-sys-color-on-secondary-fixed-variant: '#414659'
+  default-md-sys-color-on-surface: '#1a1b21'
+  default-md-sys-color-on-surface-variant: '#45464f'
+  default-md-sys-color-on-tertiary: '#ffffff'
+  default-md-sys-color-on-tertiary-container: '#5b3d57'
+  default-md-sys-color-on-tertiary-fixed: '#2c122a'
+  default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+  default-md-sys-color-outline: '#767680'
+  default-md-sys-color-outline-variant: '#c6c6d0'
+  default-md-sys-color-primary: '#4c5c92'
+  default-md-sys-color-primary-container: '#dce1ff'
+  default-md-sys-color-primary-fixed: '#dce1ff'
+  default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+  default-md-sys-color-primary-palette-key-color: '#6575ad'
+  default-md-sys-color-scrim: '#000000'
+  default-md-sys-color-secondary: '#595e72'
+  default-md-sys-color-secondary-container: '#dee1f9'
+  default-md-sys-color-secondary-fixed: '#dee1f9'
+  default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+  default-md-sys-color-secondary-palette-key-color: '#72768b'
+  default-md-sys-color-shadow: '#000000'
+  default-md-sys-color-surface: '#faf8ff'
+  default-md-sys-color-surface-bright: '#faf8ff'
+  default-md-sys-color-surface-container: '#eeedf4'
+  default-md-sys-color-surface-container-high: '#e9e7ef'
+  default-md-sys-color-surface-container-highest: '#e3e1e9'
+  default-md-sys-color-surface-container-low: '#f4f3fa'
+  default-md-sys-color-surface-container-lowest: '#ffffff'
+  default-md-sys-color-surface-dim: '#dad9e0'
+  default-md-sys-color-surface-tint: '#4c5c92'
+  default-md-sys-color-surface-variant: '#e2e1ec'
+  default-md-sys-color-tertiary: '#745470'
+  default-md-sys-color-tertiary-container: '#ffd7f6'
+  default-md-sys-color-tertiary-fixed: '#ffd7f6'
+  default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+  default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
   disabled-color: rgb(165, 165, 165)
   disabled-text-color: rgb(128, 128, 128)
   divider-color: var(--primary-background-color)
@@ -3194,35 +3470,58 @@ Material You Transparent Card No Mod:
     dark:
       app-header-background-color: rgb(18, 18, 18)
       card-background-color: var(--md-sys-color-surface, var(--default-md-sys-color-surface))
-      default-md-sys-color-background: rgb(26, 28, 30)
-      default-md-sys-color-error: rgb(255, 182, 173)
-      default-md-sys-color-error-container: rgb(148, 0, 10)
-      default-md-sys-color-inverse-on-surface: rgb(47, 47, 50)
-      default-md-sys-color-inverse-primary: rgb(1, 98, 162)
-      default-md-sys-color-inverse-surface: rgb(225, 225, 229)
-      default-md-sys-color-on-background: rgb(225, 225, 229)
-      default-md-sys-color-on-error: rgb(107, 0, 5)
-      default-md-sys-color-on-error-container: rgb(255, 182, 173)
-      default-md-sys-color-on-primary: rgb(0, 49, 87)
-      default-md-sys-color-on-primary-container: rgb(209, 228, 255)
-      default-md-sys-color-on-secondary: rgb(37, 50, 65)
-      default-md-sys-color-on-secondary-container: rgb(212, 226, 247)
-      default-md-sys-color-on-surface: rgb(225, 225, 229)
-      default-md-sys-color-on-surface-variant: rgb(196, 199, 207)
-      default-md-sys-color-on-tertiary: rgb(59, 41, 71)
-      default-md-sys-color-on-tertiary-container: rgb(243, 219, 255)
-      default-md-sys-color-outline: rgb(141, 146, 154)
-      default-md-sys-color-outline-variant: rgb(66, 70, 77)
-      default-md-sys-color-primary: rgb(158, 202, 255)
-      default-md-sys-color-primary-container: rgb(0, 74, 128)
-      default-md-sys-color-scrim: rgb(0, 0, 0)
-      default-md-sys-color-secondary: rgb(188, 200, 220)
-      default-md-sys-color-secondary-container: rgb(59, 72, 89)
-      default-md-sys-color-shadow: rgb(0, 0, 0)
-      default-md-sys-color-surface: rgb(26, 28, 30)
-      default-md-sys-color-surface-variant: rgb(66, 70, 77)
-      default-md-sys-color-tertiary: rgb(214, 190, 228)
-      default-md-sys-color-tertiary-container: rgb(82, 63, 95)
+      default-md-sys-color-error: '#ffb4ab'
+      default-md-sys-color-error-container: '#93000a'
+      default-md-sys-color-inverse-on-surface: '#2f3036'
+      default-md-sys-color-inverse-primary: '#4c5c92'
+      default-md-sys-color-inverse-surface: '#e3e1e9'
+      default-md-sys-color-neutral-palette-key-color: '#76767d'
+      default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+      default-md-sys-color-on-error: '#690005'
+      default-md-sys-color-on-error-container: '#ffdad6'
+      default-md-sys-color-on-primary: '#1c2d61'
+      default-md-sys-color-on-primary-container: '#dce1ff'
+      default-md-sys-color-on-primary-fixed: '#02174b'
+      default-md-sys-color-on-primary-fixed-variant: '#344479'
+      default-md-sys-color-on-secondary: '#2b3042'
+      default-md-sys-color-on-secondary-container: '#dee1f9'
+      default-md-sys-color-on-secondary-fixed: '#161b2c'
+      default-md-sys-color-on-secondary-fixed-variant: '#414659'
+      default-md-sys-color-on-surface: '#e3e1e9'
+      default-md-sys-color-on-surface-variant: '#c6c6d0'
+      default-md-sys-color-on-tertiary: '#432740'
+      default-md-sys-color-on-tertiary-container: '#ffd7f6'
+      default-md-sys-color-on-tertiary-fixed: '#2c122a'
+      default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+      default-md-sys-color-outline: '#8f909a'
+      default-md-sys-color-outline-variant: '#45464f'
+      default-md-sys-color-primary: '#b5c4ff'
+      default-md-sys-color-primary-container: '#344479'
+      default-md-sys-color-primary-fixed: '#dce1ff'
+      default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+      default-md-sys-color-primary-palette-key-color: '#6575ad'
+      default-md-sys-color-scrim: '#000000'
+      default-md-sys-color-secondary: '#c1c5dd'
+      default-md-sys-color-secondary-container: '#414659'
+      default-md-sys-color-secondary-fixed: '#dee1f9'
+      default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+      default-md-sys-color-secondary-palette-key-color: '#72768b'
+      default-md-sys-color-shadow: '#000000'
+      default-md-sys-color-surface: '#121318'
+      default-md-sys-color-surface-bright: '#38393f'
+      default-md-sys-color-surface-container: '#1e1f25'
+      default-md-sys-color-surface-container-high: '#292a2f'
+      default-md-sys-color-surface-container-highest: '#34343a'
+      default-md-sys-color-surface-container-low: '#1a1b21'
+      default-md-sys-color-surface-container-lowest: '#0d0e13'
+      default-md-sys-color-surface-dim: '#121318'
+      default-md-sys-color-surface-tint: '#b5c4ff'
+      default-md-sys-color-surface-variant: '#45464f'
+      default-md-sys-color-tertiary: '#e3badb'
+      default-md-sys-color-tertiary-container: '#5b3d57'
+      default-md-sys-color-tertiary-fixed: '#ffd7f6'
+      default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+      default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
       disabled-color: rgb(0, 0, 0)
       disabled-text-color: rgba(255, 255, 255, 0.5)
       lovelace-background: rgb(18, 18, 18)
@@ -3230,35 +3529,58 @@ Material You Transparent Card No Mod:
     light:
       app-header-background-color: rgb(250, 250, 250)
       card-background-color: var(--md-sys-color-surface-variant, var(--default-md-sys-color-surface-variant))
-      default-md-sys-color-background: rgb(252, 250, 255)
-      default-md-sys-color-error: rgb(187, 27, 27)
-      default-md-sys-color-error-container: rgb(255, 218, 214)
-      default-md-sys-color-inverse-on-surface: rgb(241, 240, 244)
-      default-md-sys-color-inverse-primary: rgb(158, 202, 255)
-      default-md-sys-color-inverse-surface: rgb(47, 47, 50)
-      default-md-sys-color-on-background: rgb(26, 28, 30)
-      default-md-sys-color-on-error: rgb(255, 255, 255)
-      default-md-sys-color-on-error-container: rgb(66, 0, 2)
-      default-md-sys-color-on-primary: rgb(255, 255, 255)
-      default-md-sys-color-on-primary-container: rgb(0, 30, 56)
-      default-md-sys-color-on-secondary: rgb(255, 255, 255)
-      default-md-sys-color-on-secondary-container: rgb(17, 29, 45)
-      default-md-sys-color-on-surface: rgb(26, 28, 30)
-      default-md-sys-color-on-surface-variant: rgb(66, 70, 77)
-      default-md-sys-color-on-tertiary: rgb(255, 255, 255)
-      default-md-sys-color-on-tertiary-container: rgb(38, 21, 51)
-      default-md-sys-color-outline: rgb(114, 118, 126)
-      default-md-sys-color-outline-variant: rgb(196, 199, 207)
-      default-md-sys-color-primary: rgb(1, 98, 162)
-      default-md-sys-color-primary-container: rgb(209, 228, 255)
-      default-md-sys-color-scrim: rgb(0, 0, 0)
-      default-md-sys-color-secondary: rgb(82, 94, 111)
-      default-md-sys-color-secondary-container: rgb(212, 226, 247)
-      default-md-sys-color-shadow: rgb(0, 0, 0)
-      default-md-sys-color-surface: rgb(252, 250, 255)
-      default-md-sys-color-surface-variant: rgb(224, 227, 235)
-      default-md-sys-color-tertiary: rgb(108, 88, 121)
-      default-md-sys-color-tertiary-container: rgb(243, 219, 255)
+      default-md-sys-color-error: '#ba1a1a'
+      default-md-sys-color-error-container: '#ffdad6'
+      default-md-sys-color-inverse-on-surface: '#f1f0f7'
+      default-md-sys-color-inverse-primary: '#b5c4ff'
+      default-md-sys-color-inverse-surface: '#2f3036'
+      default-md-sys-color-neutral-palette-key-color: '#76767d'
+      default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+      default-md-sys-color-on-error: '#ffffff'
+      default-md-sys-color-on-error-container: '#93000a'
+      default-md-sys-color-on-primary: '#ffffff'
+      default-md-sys-color-on-primary-container: '#344479'
+      default-md-sys-color-on-primary-fixed: '#02174b'
+      default-md-sys-color-on-primary-fixed-variant: '#344479'
+      default-md-sys-color-on-secondary: '#ffffff'
+      default-md-sys-color-on-secondary-container: '#414659'
+      default-md-sys-color-on-secondary-fixed: '#161b2c'
+      default-md-sys-color-on-secondary-fixed-variant: '#414659'
+      default-md-sys-color-on-surface: '#1a1b21'
+      default-md-sys-color-on-surface-variant: '#45464f'
+      default-md-sys-color-on-tertiary: '#ffffff'
+      default-md-sys-color-on-tertiary-container: '#5b3d57'
+      default-md-sys-color-on-tertiary-fixed: '#2c122a'
+      default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+      default-md-sys-color-outline: '#767680'
+      default-md-sys-color-outline-variant: '#c6c6d0'
+      default-md-sys-color-primary: '#4c5c92'
+      default-md-sys-color-primary-container: '#dce1ff'
+      default-md-sys-color-primary-fixed: '#dce1ff'
+      default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+      default-md-sys-color-primary-palette-key-color: '#6575ad'
+      default-md-sys-color-scrim: '#000000'
+      default-md-sys-color-secondary: '#595e72'
+      default-md-sys-color-secondary-container: '#dee1f9'
+      default-md-sys-color-secondary-fixed: '#dee1f9'
+      default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+      default-md-sys-color-secondary-palette-key-color: '#72768b'
+      default-md-sys-color-shadow: '#000000'
+      default-md-sys-color-surface: '#faf8ff'
+      default-md-sys-color-surface-bright: '#faf8ff'
+      default-md-sys-color-surface-container: '#eeedf4'
+      default-md-sys-color-surface-container-high: '#e9e7ef'
+      default-md-sys-color-surface-container-highest: '#e3e1e9'
+      default-md-sys-color-surface-container-low: '#f4f3fa'
+      default-md-sys-color-surface-container-lowest: '#ffffff'
+      default-md-sys-color-surface-dim: '#dad9e0'
+      default-md-sys-color-surface-tint: '#4c5c92'
+      default-md-sys-color-surface-variant: '#e2e1ec'
+      default-md-sys-color-tertiary: '#745470'
+      default-md-sys-color-tertiary-container: '#ffd7f6'
+      default-md-sys-color-tertiary-fixed: '#ffd7f6'
+      default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+      default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
       disabled-color: rgb(165, 165, 165)
       disabled-text-color: rgb(128, 128, 128)
       lovelace-background: rgb(250, 250, 250)
@@ -3326,35 +3648,58 @@ Material You Transparent Card No Mod Dark:
   codemirror-property: var(--primary-color)
   codemirror-string: rgb(119, 196, 229)
   dark-primary-color: var(--primary-color)
-  default-md-sys-color-background: rgb(26, 28, 30)
-  default-md-sys-color-error: rgb(255, 182, 173)
-  default-md-sys-color-error-container: rgb(148, 0, 10)
-  default-md-sys-color-inverse-on-surface: rgb(47, 47, 50)
-  default-md-sys-color-inverse-primary: rgb(1, 98, 162)
-  default-md-sys-color-inverse-surface: rgb(225, 225, 229)
-  default-md-sys-color-on-background: rgb(225, 225, 229)
-  default-md-sys-color-on-error: rgb(107, 0, 5)
-  default-md-sys-color-on-error-container: rgb(255, 182, 173)
-  default-md-sys-color-on-primary: rgb(0, 49, 87)
-  default-md-sys-color-on-primary-container: rgb(209, 228, 255)
-  default-md-sys-color-on-secondary: rgb(37, 50, 65)
-  default-md-sys-color-on-secondary-container: rgb(212, 226, 247)
-  default-md-sys-color-on-surface: rgb(225, 225, 229)
-  default-md-sys-color-on-surface-variant: rgb(196, 199, 207)
-  default-md-sys-color-on-tertiary: rgb(59, 41, 71)
-  default-md-sys-color-on-tertiary-container: rgb(243, 219, 255)
-  default-md-sys-color-outline: rgb(141, 146, 154)
-  default-md-sys-color-outline-variant: rgb(66, 70, 77)
-  default-md-sys-color-primary: rgb(158, 202, 255)
-  default-md-sys-color-primary-container: rgb(0, 74, 128)
-  default-md-sys-color-scrim: rgb(0, 0, 0)
-  default-md-sys-color-secondary: rgb(188, 200, 220)
-  default-md-sys-color-secondary-container: rgb(59, 72, 89)
-  default-md-sys-color-shadow: rgb(0, 0, 0)
-  default-md-sys-color-surface: rgb(26, 28, 30)
-  default-md-sys-color-surface-variant: rgb(66, 70, 77)
-  default-md-sys-color-tertiary: rgb(214, 190, 228)
-  default-md-sys-color-tertiary-container: rgb(82, 63, 95)
+  default-md-sys-color-error: '#ffb4ab'
+  default-md-sys-color-error-container: '#93000a'
+  default-md-sys-color-inverse-on-surface: '#2f3036'
+  default-md-sys-color-inverse-primary: '#4c5c92'
+  default-md-sys-color-inverse-surface: '#e3e1e9'
+  default-md-sys-color-neutral-palette-key-color: '#76767d'
+  default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+  default-md-sys-color-on-error: '#690005'
+  default-md-sys-color-on-error-container: '#ffdad6'
+  default-md-sys-color-on-primary: '#1c2d61'
+  default-md-sys-color-on-primary-container: '#dce1ff'
+  default-md-sys-color-on-primary-fixed: '#02174b'
+  default-md-sys-color-on-primary-fixed-variant: '#344479'
+  default-md-sys-color-on-secondary: '#2b3042'
+  default-md-sys-color-on-secondary-container: '#dee1f9'
+  default-md-sys-color-on-secondary-fixed: '#161b2c'
+  default-md-sys-color-on-secondary-fixed-variant: '#414659'
+  default-md-sys-color-on-surface: '#e3e1e9'
+  default-md-sys-color-on-surface-variant: '#c6c6d0'
+  default-md-sys-color-on-tertiary: '#432740'
+  default-md-sys-color-on-tertiary-container: '#ffd7f6'
+  default-md-sys-color-on-tertiary-fixed: '#2c122a'
+  default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+  default-md-sys-color-outline: '#8f909a'
+  default-md-sys-color-outline-variant: '#45464f'
+  default-md-sys-color-primary: '#b5c4ff'
+  default-md-sys-color-primary-container: '#344479'
+  default-md-sys-color-primary-fixed: '#dce1ff'
+  default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+  default-md-sys-color-primary-palette-key-color: '#6575ad'
+  default-md-sys-color-scrim: '#000000'
+  default-md-sys-color-secondary: '#c1c5dd'
+  default-md-sys-color-secondary-container: '#414659'
+  default-md-sys-color-secondary-fixed: '#dee1f9'
+  default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+  default-md-sys-color-secondary-palette-key-color: '#72768b'
+  default-md-sys-color-shadow: '#000000'
+  default-md-sys-color-surface: '#121318'
+  default-md-sys-color-surface-bright: '#38393f'
+  default-md-sys-color-surface-container: '#1e1f25'
+  default-md-sys-color-surface-container-high: '#292a2f'
+  default-md-sys-color-surface-container-highest: '#34343a'
+  default-md-sys-color-surface-container-low: '#1a1b21'
+  default-md-sys-color-surface-container-lowest: '#0d0e13'
+  default-md-sys-color-surface-dim: '#121318'
+  default-md-sys-color-surface-tint: '#b5c4ff'
+  default-md-sys-color-surface-variant: '#45464f'
+  default-md-sys-color-tertiary: '#e3badb'
+  default-md-sys-color-tertiary-container: '#5b3d57'
+  default-md-sys-color-tertiary-fixed: '#ffd7f6'
+  default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+  default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
   disabled-color: rgb(0, 0, 0)
   disabled-text-color: rgba(255, 255, 255, 0.5)
   divider-color: var(--primary-background-color)
@@ -3485,35 +3830,58 @@ Material You Transparent Card No Mod Light:
   codemirror-property: var(--primary-color)
   codemirror-string: rgb(119, 196, 229)
   dark-primary-color: var(--primary-color)
-  default-md-sys-color-background: rgb(252, 250, 255)
-  default-md-sys-color-error: rgb(187, 27, 27)
-  default-md-sys-color-error-container: rgb(255, 218, 214)
-  default-md-sys-color-inverse-on-surface: rgb(241, 240, 244)
-  default-md-sys-color-inverse-primary: rgb(158, 202, 255)
-  default-md-sys-color-inverse-surface: rgb(47, 47, 50)
-  default-md-sys-color-on-background: rgb(26, 28, 30)
-  default-md-sys-color-on-error: rgb(255, 255, 255)
-  default-md-sys-color-on-error-container: rgb(66, 0, 2)
-  default-md-sys-color-on-primary: rgb(255, 255, 255)
-  default-md-sys-color-on-primary-container: rgb(0, 30, 56)
-  default-md-sys-color-on-secondary: rgb(255, 255, 255)
-  default-md-sys-color-on-secondary-container: rgb(17, 29, 45)
-  default-md-sys-color-on-surface: rgb(26, 28, 30)
-  default-md-sys-color-on-surface-variant: rgb(66, 70, 77)
-  default-md-sys-color-on-tertiary: rgb(255, 255, 255)
-  default-md-sys-color-on-tertiary-container: rgb(38, 21, 51)
-  default-md-sys-color-outline: rgb(114, 118, 126)
-  default-md-sys-color-outline-variant: rgb(196, 199, 207)
-  default-md-sys-color-primary: rgb(1, 98, 162)
-  default-md-sys-color-primary-container: rgb(209, 228, 255)
-  default-md-sys-color-scrim: rgb(0, 0, 0)
-  default-md-sys-color-secondary: rgb(82, 94, 111)
-  default-md-sys-color-secondary-container: rgb(212, 226, 247)
-  default-md-sys-color-shadow: rgb(0, 0, 0)
-  default-md-sys-color-surface: rgb(252, 250, 255)
-  default-md-sys-color-surface-variant: rgb(224, 227, 235)
-  default-md-sys-color-tertiary: rgb(108, 88, 121)
-  default-md-sys-color-tertiary-container: rgb(243, 219, 255)
+  default-md-sys-color-error: '#ba1a1a'
+  default-md-sys-color-error-container: '#ffdad6'
+  default-md-sys-color-inverse-on-surface: '#f1f0f7'
+  default-md-sys-color-inverse-primary: '#b5c4ff'
+  default-md-sys-color-inverse-surface: '#2f3036'
+  default-md-sys-color-neutral-palette-key-color: '#76767d'
+  default-md-sys-color-neutral-variant-palette-key-color: '#75767f'
+  default-md-sys-color-on-error: '#ffffff'
+  default-md-sys-color-on-error-container: '#93000a'
+  default-md-sys-color-on-primary: '#ffffff'
+  default-md-sys-color-on-primary-container: '#344479'
+  default-md-sys-color-on-primary-fixed: '#02174b'
+  default-md-sys-color-on-primary-fixed-variant: '#344479'
+  default-md-sys-color-on-secondary: '#ffffff'
+  default-md-sys-color-on-secondary-container: '#414659'
+  default-md-sys-color-on-secondary-fixed: '#161b2c'
+  default-md-sys-color-on-secondary-fixed-variant: '#414659'
+  default-md-sys-color-on-surface: '#1a1b21'
+  default-md-sys-color-on-surface-variant: '#45464f'
+  default-md-sys-color-on-tertiary: '#ffffff'
+  default-md-sys-color-on-tertiary-container: '#5b3d57'
+  default-md-sys-color-on-tertiary-fixed: '#2c122a'
+  default-md-sys-color-on-tertiary-fixed-variant: '#5b3d57'
+  default-md-sys-color-outline: '#767680'
+  default-md-sys-color-outline-variant: '#c6c6d0'
+  default-md-sys-color-primary: '#4c5c92'
+  default-md-sys-color-primary-container: '#dce1ff'
+  default-md-sys-color-primary-fixed: '#dce1ff'
+  default-md-sys-color-primary-fixed-dim: '#b5c4ff'
+  default-md-sys-color-primary-palette-key-color: '#6575ad'
+  default-md-sys-color-scrim: '#000000'
+  default-md-sys-color-secondary: '#595e72'
+  default-md-sys-color-secondary-container: '#dee1f9'
+  default-md-sys-color-secondary-fixed: '#dee1f9'
+  default-md-sys-color-secondary-fixed-dim: '#c1c5dd'
+  default-md-sys-color-secondary-palette-key-color: '#72768b'
+  default-md-sys-color-shadow: '#000000'
+  default-md-sys-color-surface: '#faf8ff'
+  default-md-sys-color-surface-bright: '#faf8ff'
+  default-md-sys-color-surface-container: '#eeedf4'
+  default-md-sys-color-surface-container-high: '#e9e7ef'
+  default-md-sys-color-surface-container-highest: '#e3e1e9'
+  default-md-sys-color-surface-container-low: '#f4f3fa'
+  default-md-sys-color-surface-container-lowest: '#ffffff'
+  default-md-sys-color-surface-dim: '#dad9e0'
+  default-md-sys-color-surface-tint: '#4c5c92'
+  default-md-sys-color-surface-variant: '#e2e1ec'
+  default-md-sys-color-tertiary: '#745470'
+  default-md-sys-color-tertiary-container: '#ffd7f6'
+  default-md-sys-color-tertiary-fixed: '#ffd7f6'
+  default-md-sys-color-tertiary-fixed-dim: '#e3badb'
+  default-md-sys-color-tertiary-palette-key-color: '#8f6c89'
   disabled-color: rgb(165, 165, 165)
   disabled-text-color: rgb(128, 128, 128)
   divider-color: var(--primary-background-color)
