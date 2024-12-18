@@ -65,9 +65,19 @@ const colors: (keyof typeof MaterialDynamicColors)[] = [
 
 Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 	const ha = document.querySelector('home-assistant') as HassElement;
+	const html = document.querySelector('html');
 	const userId = ha.hass.user?.name.toLowerCase().replace(' ', '_');
 	const sensorName = 'sensor.material_rounded_base_color';
 	const userSensorName = `${sensorName}_${userId}`;
+
+	function unsetTheme() {
+		for (const key of colors) {
+			const token = key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+			html?.style.removeProperty(`--md-sys-color-${token}-light`);
+			html?.style.removeProperty(`--md-sys-color-${token}-dark`);
+		}
+		console.info('Material design system colors removed');
+	}
 
 	function setTheme() {
 		{
@@ -104,13 +114,12 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 									MaterialDynamicColors[color] as DynamicColor
 								).getArgb(schemeTonalSpot);
 							}
-							const target = document.querySelector('html');
 							for (const [key, value] of Object.entries(scheme)) {
 								const token = key
 									.replace(/([a-z])([A-Z])/g, '$1-$2')
 									.toLowerCase();
 								const color = hexFromArgb(value);
-								target?.style.setProperty(
+								html?.style.setProperty(
 									`--md-sys-color-${token}-${mode}`,
 									color,
 								);
@@ -119,10 +128,13 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 						console.info(
 							`Material design system colors updated using user defined base color ${baseColor}.`,
 						);
+					} else {
+						unsetTheme();
 					}
 				}
 			} catch (e) {
 				console.error(e);
+				unsetTheme();
 			}
 		}
 	}
