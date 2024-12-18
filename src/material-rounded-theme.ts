@@ -91,7 +91,7 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 
 					// Only update if base color is provided
 					if (baseColor) {
-						for (const mode in ['light', 'dark']) {
+						for (const mode of ['light', 'dark']) {
 							const schemeTonalSpot = new SchemeTonalSpot(
 								Hct.fromInt(argbFromHex(baseColor)),
 								mode == 'dark',

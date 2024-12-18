@@ -161,7 +161,6 @@ Material Rounded:
   paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
-  mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
 
   # Text Fields and Dropdowns
   input-fill-color: var(--input-background-color)
