@@ -24,15 +24,15 @@ Material Rounded:
       md-switch-unchecked-track-color: var(--md-sys-color-surface-variant-dark, rgb(65, 71, 83))
 
       # Toolbar
-      md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-dark, var(--primary-color))
-      md-current-tab-icon-background: var(--md-sys-color-secondary-container-dark, var(--accent-color))
+      md-current-tab-icon-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
+      md-current-tab-icon-background: var(--md-sys-color-primary-container-dark, var(--accent-color))
       md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--primary-text-color))
       md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
 
       # Sidebar
-      sidebar-selected-text-color: var(--md-sys-color-on-secondary-container-dark, var(--primary-color))
-      sidebar-selected-icon-color: var(--md-sys-color-on-secondary-container-dark, var(--primary-color))
-      sidebar-selected-icon-background: var(--md-sys-color-secondary-container-dark, var(--secondary-color))
+      sidebar-selected-text-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
+      sidebar-selected-icon-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
+      sidebar-selected-icon-background: var(--md-sys-color-primary-container-dark, var(--secondary-color))
       sidebar-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
       sidebar-text-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
 
