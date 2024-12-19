@@ -7,7 +7,7 @@ git add ./themes
 echo Done!
 
 echo Building material color JavaScript module...
-npx lint-staged
+npx lint-staged --allow-empty
 if [ $? -ne 0 ]
 then
   exit 1
