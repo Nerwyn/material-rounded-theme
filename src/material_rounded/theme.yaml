@@ -23,6 +23,7 @@ Material Rounded:
 
       # Background and header
       lovelace-background: rgb(19, 19, 20)
+      view-background: rgb(19, 19, 20)
       app-header-background-color: rgb(19, 19, 20)
 
       # Switches
@@ -65,6 +66,7 @@ Material Rounded:
 
       # Background and header
       lovelace-background: rgb(255, 255, 255)
+      view-background: rgb(255, 255, 255)
       app-header-background-color: rgb(255, 255, 255)
 
       # Switches

@@ -103,6 +103,7 @@ Material Rounded:
       slider-color: rgb(8, 66, 160)
       state-icon-color: rgb(196, 199, 197)
       state-inactive-color: rgb(72, 74, 78)
+      view-background: rgb(19, 19, 20)
     light:
       accent-color: var(--md-sys-color-on-primary-light, rgb(194, 231, 255))
       app-header-background-color: rgb(255, 255, 255)
@@ -132,6 +133,7 @@ Material Rounded:
       sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
       slider-color: rgb(211, 227, 253)
       state-icon-color: rgb(69, 71, 70)
+      view-background: rgb(255, 255, 255)
   navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
@@ -290,6 +292,7 @@ Material Rounded Dark:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: rgb(19, 19, 20)
 Material Rounded Light:
   accent-color: var(--md-sys-color-on-primary-light, rgb(194, 231, 255))
   app-header-background-color: rgb(255, 255, 255)
@@ -410,6 +413,7 @@ Material Rounded Light:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: rgb(255, 255, 255)
 Material Rounded No Mod:
   app-header-background-color: var(--navbar-background)
   app-header-edit-background-color: var(--primary-background-color)
@@ -498,6 +502,7 @@ Material Rounded No Mod:
       slider-color: rgb(8, 66, 160)
       state-icon-color: rgb(196, 199, 197)
       state-inactive-color: rgb(72, 74, 78)
+      view-background: rgb(19, 19, 20)
     light:
       accent-color: var(--md-sys-color-on-primary-light, rgb(194, 231, 255))
       app-header-background-color: rgb(255, 255, 255)
@@ -527,6 +532,7 @@ Material Rounded No Mod:
       sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
       slider-color: rgb(211, 227, 253)
       state-icon-color: rgb(69, 71, 70)
+      view-background: rgb(255, 255, 255)
   navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
@@ -685,6 +691,7 @@ Material Rounded No Mod Dark:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: rgb(19, 19, 20)
 Material Rounded No Mod Light:
   accent-color: var(--md-sys-color-on-primary-light, rgb(194, 231, 255))
   app-header-background-color: rgb(255, 255, 255)
@@ -804,6 +811,7 @@ Material Rounded No Mod Light:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: rgb(255, 255, 255)
 Material Rounded Transparent Card:
   app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
@@ -892,6 +900,7 @@ Material Rounded Transparent Card:
       slider-color: rgb(8, 66, 160)
       state-icon-color: rgb(196, 199, 197)
       state-inactive-color: rgb(72, 74, 78)
+      view-background: rgb(19, 19, 20)
     light:
       accent-color: var(--md-sys-color-on-primary-light, rgb(194, 231, 255))
       app-header-background-color: rgb(255, 255, 255)
@@ -921,6 +930,7 @@ Material Rounded Transparent Card:
       sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
       slider-color: rgb(211, 227, 253)
       state-icon-color: rgb(69, 71, 70)
+      view-background: rgb(255, 255, 255)
   navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
@@ -1079,6 +1089,7 @@ Material Rounded Transparent Card Dark:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: rgb(19, 19, 20)
 Material Rounded Transparent Card Light:
   accent-color: var(--md-sys-color-on-primary-light, rgb(194, 231, 255))
   app-header-background-color: rgb(255, 255, 255)
@@ -1199,6 +1210,7 @@ Material Rounded Transparent Card Light:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: rgb(255, 255, 255)
 Material Rounded Transparent Card No Mod:
   app-header-background-color: var(--navbar-background)
   app-header-edit-background-color: var(--primary-background-color)
@@ -1287,6 +1299,7 @@ Material Rounded Transparent Card No Mod:
       slider-color: rgb(8, 66, 160)
       state-icon-color: rgb(196, 199, 197)
       state-inactive-color: rgb(72, 74, 78)
+      view-background: rgb(19, 19, 20)
     light:
       accent-color: var(--md-sys-color-on-primary-light, rgb(194, 231, 255))
       app-header-background-color: rgb(255, 255, 255)
@@ -1316,6 +1329,7 @@ Material Rounded Transparent Card No Mod:
       sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
       slider-color: rgb(211, 227, 253)
       state-icon-color: rgb(69, 71, 70)
+      view-background: rgb(255, 255, 255)
   navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
@@ -1474,6 +1488,7 @@ Material Rounded Transparent Card No Mod Dark:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: rgb(19, 19, 20)
 Material Rounded Transparent Card No Mod Light:
   accent-color: var(--md-sys-color-on-primary-light, rgb(194, 231, 255))
   app-header-background-color: rgb(255, 255, 255)
@@ -1593,6 +1608,7 @@ Material Rounded Transparent Card No Mod Light:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: rgb(255, 255, 255)
 Material You:
   app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
@@ -1760,6 +1776,7 @@ Material You:
       slider-color: var(--md-sys-color-inverse-primary-dark, var(--default-md-sys-color-inverse-primary-dark))
       state-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       state-inactive-color: rgb(72, 74, 78)
+      view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
     light:
       accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
       app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
@@ -1852,6 +1869,7 @@ Material You:
       sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       slider-color: var(--md-sys-color-inverse-primary-light, var(--default-md-sys-color-inverse-primary-light))
       state-icon-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
+      view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
   navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
@@ -2070,6 +2088,7 @@ Material You Dark:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
 Material You Light:
   accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
   app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
@@ -2252,6 +2271,7 @@ Material You Light:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
 Material You No Mod:
   app-header-background-color: var(--navbar-background)
   app-header-edit-background-color: var(--primary-background-color)
@@ -2402,6 +2422,7 @@ Material You No Mod:
       slider-color: var(--md-sys-color-inverse-primary-dark, var(--default-md-sys-color-inverse-primary-dark))
       state-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       state-inactive-color: rgb(72, 74, 78)
+      view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
     light:
       accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
       app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
@@ -2494,6 +2515,7 @@ Material You No Mod:
       sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       slider-color: var(--md-sys-color-inverse-primary-light, var(--default-md-sys-color-inverse-primary-light))
       state-icon-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
+      view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
   navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
@@ -2712,6 +2734,7 @@ Material You No Mod Dark:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
 Material You No Mod Light:
   accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
   app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
@@ -2893,6 +2916,7 @@ Material You No Mod Light:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
 Material You Transparent Card:
   app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
@@ -3043,6 +3067,7 @@ Material You Transparent Card:
       slider-color: var(--md-sys-color-inverse-primary-dark, var(--default-md-sys-color-inverse-primary-dark))
       state-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       state-inactive-color: rgb(72, 74, 78)
+      view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
     light:
       accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
       app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
@@ -3135,6 +3160,7 @@ Material You Transparent Card:
       sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       slider-color: var(--md-sys-color-inverse-primary-light, var(--default-md-sys-color-inverse-primary-light))
       state-icon-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
+      view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
   navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
@@ -3353,6 +3379,7 @@ Material You Transparent Card Dark:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
 Material You Transparent Card Light:
   accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
   app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
@@ -3535,6 +3562,7 @@ Material You Transparent Card Light:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
 Material You Transparent Card No Mod:
   app-header-background-color: var(--navbar-background)
   app-header-edit-background-color: var(--primary-background-color)
@@ -3685,6 +3713,7 @@ Material You Transparent Card No Mod:
       slider-color: var(--md-sys-color-inverse-primary-dark, var(--default-md-sys-color-inverse-primary-dark))
       state-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       state-inactive-color: rgb(72, 74, 78)
+      view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
     light:
       accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
       app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
@@ -3777,6 +3806,7 @@ Material You Transparent Card No Mod:
       sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       slider-color: var(--md-sys-color-inverse-primary-light, var(--default-md-sys-color-inverse-primary-light))
       state-icon-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
+      view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
   navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
@@ -3995,6 +4025,7 @@ Material You Transparent Card No Mod Dark:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
 Material You Transparent Card No Mod Light:
   accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
   app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
@@ -4176,3 +4207,4 @@ Material You Transparent Card No Mod Light:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
+  view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
