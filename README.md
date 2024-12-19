@@ -2,22 +2,54 @@
 [![License](https://img.shields.io/github/license/Nerwyn/material-rounded-theme.svg?style=for-the-badge)](LICENSE)
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-blue.svg?style=for-the-badge)](https://github.com/hacs/default)
 [![Project Maintenance](https://img.shields.io/badge/maintainer-Nerwyn-blue.svg?style=for-the-badge)](https://github.com/Nerwyn)
+![Github](https://img.shields.io/github/followers/Nerwyn.svg?style=for-the-badge)
 [![GitHub Activity](https://img.shields.io/github/last-commit/Nerwyn/material-rounded-theme?style=for-the-badge)](https://github.com/Nerwyn/material-rounded-theme/commits/main)
 [![Community Forum](https://img.shields.io/badge/community-forum-brightgreen.svg?style=for-the-badge)](https://community.home-assistant.io/t/material-rounded-a-google-material-you-inspired-theme/623242)
+[![Buy Me A Coffee](https://img.shields.io/badge/donate-☕buy_me_a_coffee-yellow.svg?style=for-the-badge)](https://www.buymeacoffee.com/nerwyn)
 
 [![My Home Assistant](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=material-rounded-theme&owner=Nerwyn&category=Plugin)
 
-# Material Rounded Theme
+# Material Rounded and Material You - Material Design 3 Themes for Home Assistant
 
-Themes for Home Assistant influenced by Material You by Google on Android.
+Themes for Home Assistant influenced by the Google Home app and Material Design 3 by Google on Android.
 
-This theme aims to match the styling of Material Design 3 (also known as Material You) apps like Google Home as closely as possible, so it may change over time as these apps evolve. It also aims to implement Material You redesigns of elements when possible.
+Both themes implement Material Design 3 redesigns of elements when possible using [card-mod](https://github.com/thomasloven/lovelace-card-mod). If you have card-mod installed and do not the component redesigns, use the "No Mod" versions of this theme.
 
-Relies on [card-mod](https://github.com/thomasloven/lovelace-card-mod) for toolbar modifications and other Material You component redesigns. If you have card-mod installed and do not want these changes to apply, use the "No Mod" versions of this theme.
-
-Don't like the blue accents? You can choose a different Material You base color! See below for more. Requires an additional JS resource script.
+Don't like the blue accents? You can choose a different Material You base color! See below for more. Requires an additional JS resource script. Does not require card-mod.
 
 This theme also includes "Transparent Card" versions with transparent card backgrounds. It also includes separate light and dark versions of all themes for niche use cases.
+
+## Material Rounded
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-red-light.png" alt="material-rounded-red-light" width="300"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-green-light.png" alt="material-rounded-green-light" width="300"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-light.png" alt="material-rounded-blue-light" width="300"/>
+</p>
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-red-dark.png" alt="material-rounded-red-dark" width="300"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-green-dark.png" alt="material-rounded-green-dark" width="300"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-dark.png" alt="material-rounded-blue-dark" width="300"/>
+</p>
+
+The original version of the theme. This theme aims to match the styling of the Google Home app pre Material Design 3 redesign, which uses aspects of Material Design 3 but it's own colors. It supports custom user colors, but just for primary, accent, and toggle switch colors.
+
+## Material You
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-red-light.png" alt="material-you-red-light" width="300"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-green-light.png" alt="material-you-green-light" width="300"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-blue-light.png" alt="material-you-blue-light" width="300"/>
+</p>
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-red-dark.png" alt="material-you-red-dark" width="300"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-green-dark.png" alt="material-you-green-dark" width="300"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-blue-dark.png" alt="material-you-blue-dark" width="300"/>
+</p>
+
+The fullcolor version of the theme. This theme aims to match the styling of Material Design 3 (also known as Material You) Google apps on Android like Phone, Contacts, Messages, Photos, and Drive. Everything has been updated to use colors generated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) following the [Material Design 3 guidelines](https://m3.material.io/). Supports custom user colors for virtually all of Home Assistant.
 
 ## Screenshots
 
@@ -53,6 +85,17 @@ Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelac
 
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/custom-color-light.png" alt="custom-color-light" width="600"/>
 
+## Installation
+
+1. Navigate to HACS (install from [here](https://hacs.xyz/) if you do not have it yet).
+2. Navigate to `Frontend`.
+3. Click `+ EXPLORE & DOWNLOAD REPOSITORIES` and search for `Material Rounded Theme`.
+4. Open this repository in HACS and click `DOWNLOAD`.
+5. Optionally also install card-mod from HACS to take advantage of the Material You components and colors described above.
+6. Refresh Home Assistant.
+7. Navigate to your Profile, and select `Material Rounded` under Theme along with your preference for light or dark mode.
+8. (Optional) Follow the [instructions above](#material-you-colors) for installing the companion Material You color resource JavaScript module.
+
 ## Material You Components, Powered By Card Mod
 
 This theme is super-charged by [card-mod](https://github.com/thomasloven/lovelace-card-mod)! Using card-mod many components have received Material You design upgrades.
@@ -84,6 +127,7 @@ Desktop sidebar expanded and mobile.
 
 - Icon and background of current view now uses primary and accent colors.
 - Transition animation on view icon background when selected.
+- Badge background color removed and color set to same as icon and text.
 
 #### [Navigation Rail](https://m3.material.io/components/navigation-rail/overview)
 
@@ -91,12 +135,13 @@ Desktop sidebar collapsed.
 
 - Background of current view now uses primary and accent colors.
 - Current view icon background is a circle to match Material You example of a navigation rail menu without labels.
+- Badge colors changed to material design error colors (red).
 
 ### [Switches](https://m3.material.io/components/switch/overview)
 
 - Track now encompasses thumb.
 - Removes the default ripple in favor of a thumb that changes size when used.
-- Uses primary and accent colors for the switch thumb and track.
+- Uses material design colors for the switch thumb, track, and outline.
 
 ### Views
 
@@ -143,16 +188,7 @@ If you are using the Home Assistant Android companion app, you can enable the ac
 3. Scroll down to the section titled `Dynamic color` and click `Accent color`.
 4. Toggle `Enable sensor` on. It should now return your phone's Material You base color as a hex code.
 
-## Installation
-
-1. Navigate to HACS (install from [here](https://hacs.xyz/) if you do not have it yet).
-2. Navigate to `Frontend`.
-3. Click `+ EXPLORE & DOWNLOAD REPOSITORIES` and search for `Material Rounded Theme`.
-4. Open this repository in HACS and click `DOWNLOAD`.
-5. Optionally also install card-mod from HACS to take advantage of the Material You components and colors described above.
-6. Refresh Home Assistant.
-7. Navigate to your Profile, and select `Material Rounded` under Theme along with your preference for light or dark mode.
-8. (Optional) Follow the [instructions above](#material-you-colors) for installing the companion Material You color resource JavaScript module.
+Then create a base color template sensor as described above.
 
 ## Similar Projects and Credits
 
@@ -193,6 +229,6 @@ The Star Trek LCARS theme for Home Assistant also uses a JavaScript module resou
 
 Due to the multiple versions and complexity of this theme, I have split it into multiple CSS and yaml files and created a Python git pre-commit build pipeline to compile all of the files into a single Home Assistant theme file. You can either run this build pipeline by making a git commit (not to the main repo of course) running the file `build.sh`, or running the `pre-commit.py` Python file.
 
-Twelve versions of a theme are created per base theme - with card mod, without card mod, transparent cards with card mod, transparent cards without card mod, and a separate light and dark version of each. The no card mod versions of theme have the `card-mod-theme` fields removed and will have no design upgrades or custom colors. The separate light and dark versions of the theme are if you need to explicitly set a device to use light or dark mode without the Home Assistant built in theme mode options.
+Twelve versions of a theme are created per base theme (24 total) - with card mod, without card mod, transparent cards with card mod, transparent cards without card mod, and a separate light and dark version of each. The no card mod versions of theme have the `card-mod-theme` fields removed and will have no design upgrades, but do use user defined colors. The separate light and dark versions of the theme are if you need to explicitly set a device to use light or dark mode without the Home Assistant built in theme mode options.
 
-Any files under common that end in `.yaml` are treated as `card-mod-*-yaml` fields in the themes, and files ending in `.css` contain the actual card-mod CSS. Different overall version of the theme are included in separate folders, such as `material_rounded`. CSS files are copied into the card-mod yaml fields using jinja2 templates, allowing for repetitive styles that go in different shadow roots to all source from the same file.
+Any files under common that end in `.yaml` are treated as `card-mod-*-yaml` fields in the themes, and files ending in `.css` contain the actual card-mod CSS. Different overall version of the `theme.yaml` file are included in separate folders, such as `material_rounded`. CSS files are copied into the card-mod yaml fields using jinja2 templates, allowing for repetitive styles that go in different shadow roots to all source from the same file.

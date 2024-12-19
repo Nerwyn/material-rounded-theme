@@ -76,7 +76,7 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 			html?.style.removeProperty(`--md-sys-color-${token}-light`);
 			html?.style.removeProperty(`--md-sys-color-${token}-dark`);
 		}
-		console.info('Material design system colors removed');
+		console.info('Material design system colors removed.');
 	}
 
 	function setTheme() {
