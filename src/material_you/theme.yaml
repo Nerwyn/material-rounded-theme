@@ -68,14 +68,20 @@ Material You:
       state-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       primary-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
       secondary-text-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      input-background-color: var(--md-sys-color-inverse-on-surface-dark, var(--default-md-sys-color-inverse-on-surface-dark))
-      slider-color: var(--md-sys-color-inverse-primary-dark, var(--default-md-sys-color-inverse-primary-dark))
+      input-background-color: var(--md-sys-color-surface-container-high-dark, var(--default-md-sys-color-surface-container-high-dark))
+      input-label-ink-color: ar(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       secondary-background-color: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
-      error-color: var(--md-sys-color-error-dark, var(--default-md-sys-color-error-dark))
+      slider-color: var(--md-sys-color-inverse-primary-dark, var(--default-md-sys-color-inverse-primary-dark))
 
+      # Error
+      error-color: var(--md-sys-color-error-dark, var(--default-md-sys-color-error-dark))
+      on-error-color: var(--md-sys-color-on-error-dark, var(--default-md-sys-color-on-error-dark))
+
+      # Cards and footer
       card-background-color: var(--md-sys-color-surface-container-low-dark, var(--default-md-sys-color-surface-container-low-dark))
       primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark))
 
+      # Background and header
       lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
       app-header-background-color: var(--lovelace-background, rgb(18, 18, 18))
 
@@ -96,11 +102,12 @@ Material You:
       # Legacy mdc colors
       mdc-theme-primary: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
       mdc-theme-secondary: var(--md-sys-color-secondary-dark, var(--default-md-sys-color-secondary-dark))
+      mdc-theme-surface: var(--md-sys-color-surface-container-high-dark, var(--default-md-sys-color-surface-container-high-dark))
       mdc-theme-on-primary: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
       mdc-theme-on-secondary: var(--md-sys-color-on-secondary-dark, var(--default-md-sys-color-on-secondary-dark))
       mdc-theme-on-surface: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
-      mdc-dialog-scrim-color: var(--md-sys-color-scrim-dark, var(--default-md-sys-color-scrim-dark))
       mdc-theme-error: var(--md-sys-color-error-dark, var(--default-md-sys-color-error-dark))
+      md-divider-color: var(--md-sys-color-outline-variant-dark, var(--default-md-sys-color-outline-variant-dark))
 
       # Switches
       md-switch-checked-button-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
@@ -181,14 +188,20 @@ Material You:
       state-icon-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       primary-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
       secondary-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      input-background-color: var(--md-sys-color-inverse-on-surface-light, var(--default-md-sys-color-inverse-on-surface-light))
+      input-background-color: var(--md-sys-color-surface-container-high-light, var(--default-md-sys-color-surface-container-high-light))
+      input-label-ink-color: ar(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       slider-color: var(--md-sys-color-inverse-primary-light, var(--default-md-sys-color-inverse-primary-light))
       secondary-background-color: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
-      error-color: var(--md-sys-color-error-light, var(--default-md-sys-color-error-light))
 
+      # Error
+      error-color: var(--md-sys-color-error-light, var(--default-md-sys-color-error-light))
+      on-error-color: var(--md-sys-color-on-error-light, var(--default-md-sys-color-on-error-light))
+
+      # Cards and footer
       card-background-color: var(--md-sys-color-surface-container-low-light, var(--default-md-sys-color-surface-container-low-light))
       primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light))
 
+      # Background and header
       lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
       app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
 
@@ -215,11 +228,12 @@ Material You:
       # Legacy mdc colors
       mdc-theme-primary: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
       mdc-theme-secondary: var(--md-sys-color-secondary-light, var(--default-md-sys-color-secondary-light))
+      mdc-theme-surface: var(--md-sys-color-surface-container-high-light, var(--default-md-sys-color-surface-container-high-light))
       mdc-theme-on-primary: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
       mdc-theme-on-secondary: var(--md-sys-color-on-secondary-light, var(--default-md-sys-color-on-secondary-light))
       mdc-theme-on-surface: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
-      mdc-dialog-scrim-color: var(--md-sys-color-scrim-light, var(--default-md-sys-color-scrim-light))
       mdc-theme-error: var(--md-sys-color-error-light, var(--default-md-sys-color-error-light))
+      md-divider-color: var(--md-sys-color-outline-variant-light, var(--default-md-sys-color-outline-variant-light))
 
       # Other mode specific colors
       disabled-text-color: rgb(128, 128, 128)
@@ -275,11 +289,9 @@ Material You:
   divider-color: var(--primary-background-color)
   slider-secondary-color: var(--primary-color)
   scrollbar-thumb-color: rgb(46, 48, 56)
-  md-divider-color: var(--divider-color)
 
   # Legacy mdc colors
   mdc-theme-background: var(--lovelace-background)
-  mdc-theme-surface: var(--card-background-color)
   mdc-theme-text-disabled-on-light: var(--disabled-text-color)
   mdc-theme-text-primary-on-background: var(--primary-text-color)
   mdc-theme-text-secondary-on-background: var(--secondary-text-color)
@@ -321,7 +333,6 @@ Material You:
   # Text Fields and Dropdowns
   input-fill-color: var(--input-background-color)
   input-ink-color: var(--primary-text-color)
-  input-label-ink-color: var(--primary-text-color)
   input-disabled-fill-color: rgba(var(--input-background-color), 0.5)
   input-disabled-ink-color: var(--disabled-text-color)
   input-disabled-label-ink-color: var(--disabled-text-color)

@@ -11,9 +11,11 @@ ha-sidebar {
 	padding: 0 12px !important;
 }
 
-/* Display current dashboard text above background */
+/* Display current dashboard text above background and prevent jumpiness on opening*/
 .item-text {
 	z-index: 2;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 paper-icon-item::before {
@@ -36,7 +38,9 @@ paper-icon-item::before {
 	transform: scaleX(1);
 }
 
-/* Add shadow to badges so it doesn't blend with background */
-.configuration-badge {
-	box-shadow: inset 0px 0px 0px 1px var(--sidebar-icon-color);
+/* Use error colors on badges */
+.configuration-badge,
+.notification-badge {
+	color: var(--on-error-color) !important;
+	background-color: var(--error-color) !important;
 }

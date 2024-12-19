@@ -125,6 +125,10 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 								);
 							}
 						}
+
+						// This explicit background color breaks color theme on some pages
+						html?.style.removeProperty('background-color');
+
 						console.info(
 							`Material design system colors updated using user defined base color ${baseColor}.`,
 						);

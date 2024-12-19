@@ -23,6 +23,10 @@ ha-set-suspend-row$ ha-switch$: >-
 ha-enable-shortcuts-row$ ha-switch$: >-
   {{ ha_switch.css }}
 
+# Analytics toggles
+ha-analytics$ ha-switch$: >-
+  {{ ha_switch.css }}
+
 # Device page
 hui-toggle-entity-row$:
   ha-entity-toggle$ ha-switch$: >-

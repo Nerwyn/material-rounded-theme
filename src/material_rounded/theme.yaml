@@ -7,15 +7,23 @@ Material Rounded:
       primary-text-color: rgb(228, 228, 231)
       secondary-text-color: rgb(187, 188, 196)
       disabled-text-color: rgba(255, 255, 255, 0.5)
-      lovelace-background: rgb(19, 19, 20)
-      app-header-background-color: rgb(19, 19, 20)
-      primary-background-color: rgb(30, 31, 32)
       disabled-color: rgb(0, 0, 0)
       input-background-color: rgb(46, 48, 56)
-      card-background-color: rgb(40, 42, 44)
       slider-color: rgb(8, 66, 160)
       secondary-background-color: rgb(55, 57, 59) # dark mode only
       state-inactive-color: rgb(72, 74, 78) # dark mode only
+
+      # Error
+      error-color: rgb(242, 184, 181)
+      on-error-color: rgb(96, 20, 16)
+
+      # Cards and footer
+      card-background-color: rgb(40, 42, 44)
+      primary-background-color: rgb(30, 31, 32)
+
+      # Background and header
+      lovelace-background: rgb(19, 19, 20)
+      app-header-background-color: rgb(19, 19, 20)
 
       # Switches
       md-switch-checked-button-color: var(--md-sys-color-on-primary-dark, var(--accent-color))
@@ -43,13 +51,21 @@ Material Rounded:
       primary-text-color: rgb(31, 31, 31)
       secondary-text-color: rgb(68, 71, 70)
       disabled-text-color: rgb(128, 128, 128)
-      lovelace-background: rgb(255, 255, 255)
-      app-header-background-color: rgb(255, 255, 255)
-      primary-background-color: rgb(240, 244, 249)
       disabled-color: rgb(173, 176, 174)
       input-background-color: rgb(234, 234, 235)
-      card-background-color: rgb(233, 238, 246)
       slider-color: rgb(211, 227, 253)
+
+      # Error
+      error-color: rgb(179, 38, 30)
+      on-error-color: rgb(255, 255, 255)
+
+      # Cards and footer
+      card-background-color: rgb(233, 238, 246)
+      primary-background-color: rgb(240, 244, 249)
+
+      # Background and header
+      lovelace-background: rgb(255, 255, 255)
+      app-header-background-color: rgb(255, 255, 255)
 
       # Switches
       md-switch-checked-button-color: var(--md-sys-color-on-primary-light, rgb(255, 255, 255))
@@ -139,9 +155,6 @@ Material Rounded:
   ha-card-box-shadow: none
   ha-config-card-border-radius: 16px
   paper-item-icon-color: var(--state-icon-color)
-
-  # Dialogs
-  mdc-dialog-scrim-color: rgba(4, 5, 7, 0.9)
 
   # Sliders
   paper-slider-knob-color: var(--primary-color)
