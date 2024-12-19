@@ -38,9 +38,20 @@ paper-icon-item::before {
 	transform: scaleX(1);
 }
 
-/* Use error colors on badges */
+/* Use error colors on rail badges */
 .configuration-badge,
 .notification-badge {
 	color: var(--on-error-color) !important;
 	background-color: var(--error-color) !important;
+}
+
+/* Use sidebar text color with no background on drawer badges */
+:host([expanded]) .configuration-badge,
+:host([expanded]) .notification-badge {
+	color: var(--sidebar-text-color) !important;
+	background-color: rgb(0, 0, 0, 0) !important;
+}
+:host([expanded]) .iron-selected .configuration-badge,
+:host([expanded]) .iron-selected .notification-badge {
+	color: var(--sidebar-selected-text-color) !important;
 }
