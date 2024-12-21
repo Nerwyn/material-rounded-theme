@@ -21,6 +21,8 @@ This theme also includes "Transparent Card" versions with transparent card backg
 
 ## Material Rounded
 
+The original version of the theme. This theme aims to match the styling of the Google Home app pre Material Design 3 redesign, which uses aspects of Material Design 3 but it's own colors. It supports custom user colors, but just for primary, accent, and toggle switch colors.
+
 <p>
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-red-light.png" alt="material-rounded-red-light" width="300"/>
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-green-light.png" alt="material-rounded-green-light" width="300"/>
@@ -33,9 +35,35 @@ This theme also includes "Transparent Card" versions with transparent card backg
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-dark.png" alt="material-rounded-blue-dark" width="300"/>
 </p>
 
-The original version of the theme. This theme aims to match the styling of the Google Home app pre Material Design 3 redesign, which uses aspects of Material Design 3 but it's own colors. It supports custom user colors, but just for primary, accent, and toggle switch colors.
+### Compared to Google Home
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-tiles-comparison-dark.png" alt="material-rounded-tiles-comparison-dark" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-tiles-comparison-light.png" alt="material-rounded-tiles-comparison-light" width="500"/>
+</p>
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-buttons-comparison-dark.png" alt="material-rounded-buttons-comparison-dark" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-buttons-comparison-light.png" alt="material-rounded-buttons-comparison-light" width="500"/>
+</p>
+
+Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card).
+
+### Updated Material You Components
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-dark.png" alt="material-rounded-components-dark" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-light.png" alt="material-rounded-components-light" width="500"/>
+</p>
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-custom-color-dark.png" alt="material-rounded-custom-color-dark" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-custom-color-light.png" alt="material-rounded-custom-color-light" width="500"/>
+</p>
 
 ## Material You
+
+The fullcolor version of the theme. This theme aims to match the styling of Material Design 3 (also known as Material You) Google apps on Android like Phone, Contacts, Messages, Photos, and Drive. Everything has been updated to use colors generated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) following the [Material Design 3 guidelines](https://m3.material.io/). Supports custom user colors for virtually all of Home Assistant.
 
 <p>
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-red-light.png" alt="material-you-red-light" width="300"/>
@@ -49,41 +77,9 @@ The original version of the theme. This theme aims to match the styling of the G
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-blue-dark.png" alt="material-you-blue-dark" width="300"/>
 </p>
 
-The fullcolor version of the theme. This theme aims to match the styling of Material Design 3 (also known as Material You) Google apps on Android like Phone, Contacts, Messages, Photos, and Drive. Everything has been updated to use colors generated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) following the [Material Design 3 guidelines](https://m3.material.io/). Supports custom user colors for virtually all of Home Assistant.
-
-## Screenshots
-
-### Tiles
-
-TODO update screenshots
-
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/tiles-dark.png" alt="tiles-dark" width="600"/>
-
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/tiles-light.png" alt="tiles-light" width="600"/>
-
-### Compared to Google Home
-
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/tiles-comparison-dark.png" alt="tiles-comparison-dark" width="600"/>
-
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/tiles-comparison-light.png" alt="tiles-comparison-light" width="600"/>
-
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/comparison-dark.png" alt="buttons-comparison-dark" width="600"/>
-
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/comparison-light.png" alt="buttons-comparison-light" width="600"/>
-
-Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card).
+### Compared to Material You Android Apps
 
 ### Updated Material You Components
-
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/components-dark.png" alt="components-dark" width="600"/>
-
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/components-light.png" alt="components-light" width="600"/>
-
-### User Defined Base Color
-
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/custom-color-dark.png" alt="custom-color-dark" width="600"/>
-
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/custom-color-light.png" alt="custom-color-light" width="600"/>
 
 ## Installation
 
