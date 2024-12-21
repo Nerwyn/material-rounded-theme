@@ -38,13 +38,13 @@ The original version of the theme. This theme aims to match the styling of the G
 ### Compared to Google Home
 
 <p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-tiles-comparison-dark.png" alt="material-rounded-tiles-comparison-dark" width="500"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-tiles-comparison-light.png" alt="material-rounded-tiles-comparison-light" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-tiles-comparison-dark.png" alt="material-rounded-tiles-comparison-dark" width="375"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-tiles-comparison-light.png" alt="material-rounded-tiles-comparison-light" width="375"/>
 </p>
 
 <p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-buttons-comparison-dark.png" alt="material-rounded-buttons-comparison-dark" width="500"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-buttons-comparison-light.png" alt="material-rounded-buttons-comparison-light" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-buttons-comparison-dark.png" alt="material-rounded-buttons-comparison-dark" width="375"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-buttons-comparison-light.png" alt="material-rounded-buttons-comparison-light" width="375"/>
 </p>
 
 Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card).
@@ -52,13 +52,13 @@ Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelac
 ### Updated Material You Components
 
 <p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-dark.png" alt="material-rounded-components-green-dark" width="500"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-light.png" alt="material-rounded-components-green-light" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-dark.png" alt="material-rounded-components-green-dark" width="375"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-light.png" alt="material-rounded-components-green-light" width="375"/>
 </p>
 
 <p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-dark.png" alt="material-rounded-components-dark" width="500"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-light.png" alt="material-rounded-components-light" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-dark.png" alt="material-rounded-components-dark" width="375"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-light.png" alt="material-rounded-components-light" width="375"/>
 </p>
 
 ## Material You - A Fully Featured Implementation of Material Design 3
@@ -85,20 +85,20 @@ The full color version of the theme. This theme aims to match the styling of Mat
 </p>
 
 <p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-comparison-red-dark.png" alt="material-you-comparison-red-dark" width="500"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-comparison-red-light.png" alt="material-you-comparison-red-light" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-comparison-red-dark.png" alt="material-you-comparison-red-dark" width="375"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-comparison-red-light.png" alt="material-you-comparison-red-light" width="375"/>
 </p>
 
 ### Updated Material You Components
 
 <p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-blue-dark.png" alt="material-you-components-blue-dark" width="500"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-blue-light.png" alt="material-you-components-blue-light" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-blue-dark.png" alt="material-you-components-blue-dark" width="375"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-blue-light.png" alt="material-you-components-blue-light" width="375"/>
 </p>
 
 <p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-red-dark.png" alt="material-you-components-red-dark" width="500"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-red-light.png" alt="material-you-components-red-light" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-red-dark.png" alt="material-you-components-red-dark" width="375"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-red-light.png" alt="material-you-components-red-light" width="375"/>
 </p>
 
 ## Installation
