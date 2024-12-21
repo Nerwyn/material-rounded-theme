@@ -10,7 +10,7 @@ def main():
 	yaml.width = 4096
 	yaml.default_flow_style = False
 
-	theme_names = ['Material Rounded', 'Material You']
+	theme_names = ['Material You', 'Material Rounded']
 
 	with open('./themes/material_rounded.yaml', 'w') as dist:
 		output = {}

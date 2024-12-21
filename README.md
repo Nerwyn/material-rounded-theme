@@ -19,9 +19,9 @@ Don't like the blue accents? You can choose a different Material You base color!
 
 This theme also includes "Transparent Card" versions with transparent card backgrounds. It also includes separate light and dark versions of all themes for niche use cases.
 
-## Material Rounded
+## Material Rounded - In the Style of the Google Home App
 
-The original version of the theme. This theme aims to match the styling of the Google Home app pre Material Design 3 redesign, which uses aspects of Material Design 3 but it's own colors. It supports custom user colors, but just for primary, accent, and toggle switch colors.
+The original version of the theme. This theme aims to match the styling of the Google Home app pre Material Design 3 redesign, which uses some aspects of Material Design 3 and static blue accent colors. It supports custom user colors, but just for primary, accent, and toggle switch colors.
 
 <p>
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-red-light.png" alt="material-rounded-red-light" width="300"/>
@@ -61,9 +61,9 @@ Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelac
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-custom-color-light.png" alt="material-rounded-custom-color-light" width="500"/>
 </p>
 
-## Material You
+## Material You - A Fully Featured Implementation of Material Design 3
 
-The fullcolor version of the theme. This theme aims to match the styling of Material Design 3 (also known as Material You) Google apps on Android like Phone, Contacts, Messages, Photos, and Drive. Everything has been updated to use colors generated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) following the [Material Design 3 guidelines](https://m3.material.io/). Supports custom user colors for virtually all of Home Assistant.
+The full color version of the theme. This theme aims to match the styling of Material Design 3 (also known as Material You) Google apps on Android like Phone, Contacts, Messages, Photos, and Drive. Everything has been updated to use colors generated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) following the [Material Design 3 guidelines](https://m3.material.io/). Supports custom user colors for virtually all of Home Assistant.
 
 <p>
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-red-light.png" alt="material-you-red-light" width="300"/>
@@ -79,7 +79,27 @@ The fullcolor version of the theme. This theme aims to match the styling of Mate
 
 ### Compared to Material You Android Apps
 
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-comparison-blue-dark.png" alt="material-you-comparison-blue-dark" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-comparison-blue-light.png" alt="material-you-comparison-blue-light" width="500"/>
+</p>
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-comparison-red-dark.png" alt="material-you-comparison-red-dark" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-comparison-red-light.png" alt="material-you-comparison-red-light" width="500"/>
+</p>
+
 ### Updated Material You Components
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-blue-dark.png" alt="material-you-components-blue-dark" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-blue-light.png" alt="material-you-components-blue-light" width="500"/>
+</p>
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-red-dark.png" alt="material-you-components-red-dark" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-red-light.png" alt="material-you-components-red-light" width="500"/>
+</p>
 
 ## Installation
 
@@ -89,8 +109,54 @@ The fullcolor version of the theme. This theme aims to match the styling of Mate
 4. Open this repository in HACS and click `DOWNLOAD`.
 5. Optionally also install card-mod from HACS to take advantage of the Material You components and colors described above.
 6. Refresh Home Assistant.
-7. Navigate to your Profile, and select `Material Rounded` under Theme along with your preference for light or dark mode.
-8. (Optional) Follow the [instructions above](#material-you-colors) for installing the companion Material You color resource JavaScript module.
+7. Navigate to your Profile, and select one of the `Material Rounded` or `Material You` theme variants.
+8. (Optional) Follow the [instructions above](#material-you-colors) for installing the companion Material Design 3 color JavaScript module resource.
+
+## Material You Colors
+
+This theme supports Material You color theming! This requires an additional JavaScript module resource which can be downloaded from this repo or using the CDN URL. To install the script to your Home Assistant instance:
+
+### (Optional) Download JavaScript Module Resource Locally in Home Assistant
+
+1. Download the module from this repository [here](https://github.com/Nerwyn/material-rounded-theme/blob/main/dist/material-rounded-theme.js).
+2. Upload this module to your Home Assistant instance, preferable in the `config/www` folder.
+   - Your `configuration.yaml` file is found in the `config` folder. If the `www` folder does not exist create it. More information about the configuration folder can be found [here](https://www.home-assistant.io/docs/configuration/#to-find-the-configuration-directory).
+
+### Add the Module as a Resource
+
+1. Navigate to a dashboard and then click `🖉 Edit dashboard` > `⋮ Open dashboard menu` > `Manage resources`.
+2. Click `+ ADD RESOURCE`.
+3. In the `URL` field enter the path to the resource file.
+   - `/local/material-rounded-theme.js` if downloaded to your Home Assistant instance.
+   - `TODO CDN FILE` if using the CDN version.
+4. Select `Resource Type` `JavaScript module`.
+5. Click `CREATE`.
+6. Hard refresh (`CTRL` + `F5`) your browser or clear app/browser cache to ensure the new resource loads correctly.
+
+Once the JavaScript module resource has been added, create a helper template sensor named `Material Rounded Base Color` that returns the hex code of your preferred base color. The theme colors will be calculated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities).
+
+### Create a Template Sensor Helper
+
+1. Navigate to `Settings` > `Devices & services` > ` Helpers`.
+2. Click `+ CREATE HELPER`.
+3. Click `Template`.
+4. Click `Template a sensor`.
+5. Name the sensor `Material Rounded Base Color`. The sensor entity ID should be `sensor.material_rounded_base_color`.
+6. Enter your Material You base color as a six digit hex code, like `238636` or `#db4437`. You can also use a template to read a hex code from the state or attribute of a different entity, like `{{ states("sensor.pixel_fold_accent_color") }}`.
+7. Click `SUBMIT`.
+
+You can also choose user specific colors by creating a sensor named `Material Rounded Base Color Your Name`, with your name being your person name as it appears on the [Home Assistant people page](http://homeassistant.local:8123/config/person). The sensory entity ID should be something like `sensor.material_rounded_base_color_john_doe`.
+
+#### Home Assistant Android App Color Sensor
+
+If you are using the Home Assistant Android companion app, you can enable the accent color sensor in the companion app settings to use your phone's Material You accent color as the theme base color:
+
+1. Navigate to `Settings` > `Companion app`.
+2. Click `Manage sensors.`
+3. Scroll down to the section titled `Dynamic color` and click `Accent color`.
+4. Toggle `Enable sensor` on. It should now return your phone's Material You base color as a hex code.
+
+Then create a base color template sensor as described above, and use a template to return the state of your companion app accent color sensor.
 
 ## Material You Components, Powered By Card Mod
 
@@ -147,45 +213,6 @@ Desktop sidebar collapsed.
 
 If you do not want these changes, use the "No Mod" versions of the theme. If you only want some of these changes, you will have to modify and recompile the theme yourself.
 
-## Material You Colors
-
-This theme supports Material You color theming! This requires an additional JavaScript module resource which can be downloaded from this repo (TODO offer CDN version). To install the script to your Home Assistant instance:
-
-1. Download the module from this repository [here](https://github.com/Nerwyn/material-rounded-theme/blob/main/dist/material-rounded-theme.js).
-2. Upload this module to your Home Assistant instance, preferable in the `config/www` folder.
-   - Your `configuration.yaml` file is found in the `config` folder. If the `www` folder does not exist create it. More information about the configuration folder can be found [here](https://www.home-assistant.io/docs/configuration/#to-find-the-configuration-directory).
-3. Navigate to a dashboard and then click `🖉 Edit dashboard` > `⋮ Open dashboard menu` > `Manage resources`.
-4. Click `+ ADD RESOURCE`.
-5. In the `URL` field enter `/local/material-rounded-theme.js`.
-6. Select `Resource Type` `JavaScript module`.
-7. Click `CREATE`.
-8. Hard refresh (`CTRL` + `F5`) your browser or clear app/browser cache to ensure the new resource loads correctly.
-
-Once the JavaScript module resource has been added, create a helper template sensor named `Material Rounded Base Color` that returns the hex code of your preferred base color. The theme colors will be calculated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities).
-
-To create a template sensor helper:
-
-1. Navigate to `Settings` > `Devices & services` > ` Helpers`.
-2. Click `+ CREATE HELPER`.
-3. Click `Template`.
-4. Click `Template a sensor`.
-5. Name the sensor `Material Rounded Base Color`. The sensor entity ID should be `sensor.material_rounded_base_color`.
-6. Enter your Material You base color as a six digit hex code, like `238636` or `#db4437`. You can also use a template to read a hex code from the state or attribute of a different entity, like `{{ states("sensor.pixel_fold_accent_color") }}`.
-7. Click `SUBMIT`.
-
-You can also choose user specific colors by creating a sensor named `Material Rounded Base Color Your Name`, with your name being your person name as it appears on the [Home Assistant people page](http://homeassistant.local:8123/config/person). The sensory entity ID should be something like `sensor.material_rounded_base_color_john_doe`.
-
-### Home Assistant Android App Color Sensor
-
-If you are using the Home Assistant Android companion app, you can enable the accent color sensor in the companion app settings to use your phone's Material You accent color as the theme base color:
-
-1. Navigate to `Settings` > `Companion app`.
-2. Click `Manage sensors.`
-3. Scroll down to the section titled `Dynamic color` and click `Accent color`.
-4. Toggle `Enable sensor` on. It should now return your phone's Material You base color as a hex code.
-
-Then create a base color template sensor as described above.
-
 ## Similar Projects and Credits
 
 ### Big Slider Card
@@ -219,7 +246,7 @@ This theme was initially modified from [Graphite theme](https://github.com/Tilma
 
 ### LCARS Theme
 
-The Star Trek LCARS theme for Home Assistant also uses a JavaScript module resource for advanced theme modification, and I used it as a basis for getting started on my Material You color theming JavaScript module.
+The [Star Trek LCARS theme](https://github.com/th3jesta/ha-lcars) for Home Assistant also uses a JavaScript module resource for advanced theme modification, and I used it as a basis for getting started on my Material You color theming JavaScript module.
 
 ## Developing, Modifying, and Building The Theme
 
