@@ -24,9 +24,9 @@ This theme also includes "Transparent Card" versions with transparent card backg
 The original version of the theme. This theme aims to match the styling of the Google Home app pre Material Design 3 redesign, which uses some aspects of Material Design 3 and static blue accent colors. It supports custom user colors, but just for primary, accent, and toggle switch colors.
 
 <p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-red-light.png" alt="material-rounded-red-light" width="300"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-green-light.png" alt="material-rounded-green-light" width="300"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-light.png" alt="material-rounded-blue-light" width="300"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-red-light.png" alt="material-rounded-red-light" width="200"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-green-light.png" alt="material-rounded-green-light" width="200"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-light.png" alt="material-rounded-blue-light" width="200"/>
 </p>
 
 <p>
@@ -52,13 +52,13 @@ Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelac
 ### Updated Material You Components
 
 <p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-dark.png" alt="material-rounded-components-dark" width="500"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-light.png" alt="material-rounded-components-light" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-dark.png" alt="material-rounded-components-green-dark" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-light.png" alt="material-rounded-components-green-light" width="500"/>
 </p>
 
 <p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-custom-color-dark.png" alt="material-rounded-custom-color-dark" width="500"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-custom-color-light.png" alt="material-rounded-custom-color-light" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-dark.png" alt="material-rounded-components-dark" width="500"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-light.png" alt="material-rounded-components-light" width="500"/>
 </p>
 
 ## Material You - A Fully Featured Implementation of Material Design 3
