@@ -128,7 +128,7 @@ This theme supports Material You color theming! This requires an additional Java
 2. Click `+ ADD RESOURCE`.
 3. In the `URL` field enter the path to the resource file.
    - `/local/material-rounded-theme.js` if downloaded to your Home Assistant instance.
-   - `TODO CDN FILE` if using the CDN version.
+   - `https://cdn.jsdelivr.net/gh/nerwyn/material-rounded-theme@main/dist/material-rounded-theme.js` if using the CDN version.
 4. Select `Resource Type` `JavaScript module`.
 5. Click `CREATE`.
 6. Hard refresh (`CTRL` + `F5`) your browser or clear app/browser cache to ensure the new resource loads correctly.
