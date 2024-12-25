@@ -1673,7 +1673,7 @@ Material You:
   modes:
     dark:
       accent-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
-      app-header-background-color: var(--lovelace-background, rgb(18, 18, 18))
+      app-header-background-color: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
       app-header-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
       card-background-color: var(--md-sys-color-surface-container-low-dark, var(--default-md-sys-color-surface-container-low-dark))
       default-md-sys-color-error-container-dark: '#93000a'
@@ -1733,7 +1733,7 @@ Material You:
       error-color: var(--md-sys-color-error-dark, var(--default-md-sys-color-error-dark))
       input-background-color: var(--md-sys-color-surface-container-high-dark, var(--default-md-sys-color-surface-container-high-dark))
       input-label-ink-color: ar(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+      lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
       md-current-tab-icon-background: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
       md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
       md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
@@ -1751,7 +1751,7 @@ Material You:
       mdc-theme-secondary: var(--md-sys-color-secondary-dark, var(--default-md-sys-color-secondary-dark))
       mdc-theme-surface: var(--md-sys-color-surface-container-high-dark, var(--default-md-sys-color-surface-container-high-dark))
       on-error-color: var(--md-sys-color-on-error-dark, var(--default-md-sys-color-on-error-dark))
-      primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark))
+      primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark, '#1e1f25'))
       primary-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
       primary-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
       secondary-background-color: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
@@ -1764,10 +1764,10 @@ Material You:
       slider-color: var(--md-sys-color-inverse-primary-dark, var(--default-md-sys-color-inverse-primary-dark))
       state-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       state-inactive-color: rgb(72, 74, 78)
-      view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+      view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
     light:
       accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
-      app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
+      app-header-background-color: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
       app-header-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
       card-background-color: var(--md-sys-color-surface-container-low-light, var(--default-md-sys-color-surface-container-low-light))
       default-md-sys-color-error-container-light: '#ffdad6'
@@ -1827,7 +1827,7 @@ Material You:
       error-color: var(--md-sys-color-error-light, var(--default-md-sys-color-error-light))
       input-background-color: var(--md-sys-color-surface-container-high-light, var(--default-md-sys-color-surface-container-high-light))
       input-label-ink-color: ar(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+      lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
       md-current-tab-icon-background: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
       md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
       md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
@@ -1845,7 +1845,7 @@ Material You:
       mdc-theme-secondary: var(--md-sys-color-secondary-light, var(--default-md-sys-color-secondary-light))
       mdc-theme-surface: var(--md-sys-color-surface-container-high-light, var(--default-md-sys-color-surface-container-high-light))
       on-error-color: var(--md-sys-color-on-error-light, var(--default-md-sys-color-on-error-light))
-      primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light))
+      primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light, '#eeedf4'))
       primary-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
       primary-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
       secondary-background-color: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
@@ -1857,7 +1857,7 @@ Material You:
       sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       slider-color: var(--md-sys-color-inverse-primary-light, var(--default-md-sys-color-inverse-primary-light))
       state-icon-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+      view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
   navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
@@ -1895,7 +1895,7 @@ Material You:
   vertical-stack-card-margin: 4px 0px
 Material You Dark:
   accent-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
-  app-header-background-color: var(--lovelace-background, rgb(18, 18, 18))
+  app-header-background-color: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
   app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
@@ -1992,7 +1992,7 @@ Material You Dark:
   input-label-ink-color: ar(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
   light-primary-color: var(--primary-color)
   link-text-color: var(--primary-color)
-  lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+  lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
   md-current-tab-icon-background: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
   md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
   md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
@@ -2048,7 +2048,7 @@ Material You Dark:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark))
+  primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark, '#1e1f25'))
   primary-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
   primary-font-family: var(--font-family)
   primary-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
@@ -2076,10 +2076,10 @@ Material You Dark:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
-  view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+  view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
 Material You Light:
   accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
-  app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
+  app-header-background-color: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
   app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
@@ -2176,7 +2176,7 @@ Material You Light:
   input-label-ink-color: ar(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
   light-primary-color: var(--primary-color)
   link-text-color: var(--primary-color)
-  lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+  lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
   md-current-tab-icon-background: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
   md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
   md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
@@ -2232,7 +2232,7 @@ Material You Light:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light))
+  primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light, '#eeedf4'))
   primary-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
   primary-font-family: var(--font-family)
   primary-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
@@ -2259,7 +2259,7 @@ Material You Light:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
-  view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+  view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
 Material You No Mod:
   app-header-background-color: var(--navbar-background)
   app-header-edit-background-color: var(--primary-background-color)
@@ -2319,7 +2319,7 @@ Material You No Mod:
   modes:
     dark:
       accent-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
-      app-header-background-color: var(--lovelace-background, rgb(18, 18, 18))
+      app-header-background-color: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
       app-header-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
       card-background-color: var(--md-sys-color-surface-container-low-dark, var(--default-md-sys-color-surface-container-low-dark))
       default-md-sys-color-error-container-dark: '#93000a'
@@ -2379,7 +2379,7 @@ Material You No Mod:
       error-color: var(--md-sys-color-error-dark, var(--default-md-sys-color-error-dark))
       input-background-color: var(--md-sys-color-surface-container-high-dark, var(--default-md-sys-color-surface-container-high-dark))
       input-label-ink-color: ar(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+      lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
       md-current-tab-icon-background: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
       md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
       md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
@@ -2397,7 +2397,7 @@ Material You No Mod:
       mdc-theme-secondary: var(--md-sys-color-secondary-dark, var(--default-md-sys-color-secondary-dark))
       mdc-theme-surface: var(--md-sys-color-surface-container-high-dark, var(--default-md-sys-color-surface-container-high-dark))
       on-error-color: var(--md-sys-color-on-error-dark, var(--default-md-sys-color-on-error-dark))
-      primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark))
+      primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark, '#1e1f25'))
       primary-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
       primary-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
       secondary-background-color: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
@@ -2410,10 +2410,10 @@ Material You No Mod:
       slider-color: var(--md-sys-color-inverse-primary-dark, var(--default-md-sys-color-inverse-primary-dark))
       state-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       state-inactive-color: rgb(72, 74, 78)
-      view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+      view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
     light:
       accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
-      app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
+      app-header-background-color: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
       app-header-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
       card-background-color: var(--md-sys-color-surface-container-low-light, var(--default-md-sys-color-surface-container-low-light))
       default-md-sys-color-error-container-light: '#ffdad6'
@@ -2473,7 +2473,7 @@ Material You No Mod:
       error-color: var(--md-sys-color-error-light, var(--default-md-sys-color-error-light))
       input-background-color: var(--md-sys-color-surface-container-high-light, var(--default-md-sys-color-surface-container-high-light))
       input-label-ink-color: ar(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+      lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
       md-current-tab-icon-background: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
       md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
       md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
@@ -2491,7 +2491,7 @@ Material You No Mod:
       mdc-theme-secondary: var(--md-sys-color-secondary-light, var(--default-md-sys-color-secondary-light))
       mdc-theme-surface: var(--md-sys-color-surface-container-high-light, var(--default-md-sys-color-surface-container-high-light))
       on-error-color: var(--md-sys-color-on-error-light, var(--default-md-sys-color-on-error-light))
-      primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light))
+      primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light, '#eeedf4'))
       primary-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
       primary-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
       secondary-background-color: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
@@ -2503,7 +2503,7 @@ Material You No Mod:
       sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       slider-color: var(--md-sys-color-inverse-primary-light, var(--default-md-sys-color-inverse-primary-light))
       state-icon-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+      view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
   navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
@@ -2542,7 +2542,7 @@ Material You No Mod:
   vertical-stack-card-margin: 4px 0px
 Material You No Mod Dark:
   accent-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
-  app-header-background-color: var(--lovelace-background, rgb(18, 18, 18))
+  app-header-background-color: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
   app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
@@ -2638,7 +2638,7 @@ Material You No Mod Dark:
   input-label-ink-color: ar(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
   light-primary-color: var(--primary-color)
   link-text-color: var(--primary-color)
-  lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+  lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
   md-current-tab-icon-background: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
   md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
   md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
@@ -2694,7 +2694,7 @@ Material You No Mod Dark:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark))
+  primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark, '#1e1f25'))
   primary-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
   primary-font-family: var(--font-family)
   primary-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
@@ -2722,10 +2722,10 @@ Material You No Mod Dark:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
-  view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+  view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
 Material You No Mod Light:
   accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
-  app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
+  app-header-background-color: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
   app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
@@ -2821,7 +2821,7 @@ Material You No Mod Light:
   input-label-ink-color: ar(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
   light-primary-color: var(--primary-color)
   link-text-color: var(--primary-color)
-  lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+  lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
   md-current-tab-icon-background: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
   md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
   md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
@@ -2877,7 +2877,7 @@ Material You No Mod Light:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light))
+  primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light, '#eeedf4'))
   primary-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
   primary-font-family: var(--font-family)
   primary-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
@@ -2904,7 +2904,7 @@ Material You No Mod Light:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
-  view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+  view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
 Material You Transparent Card:
   app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
@@ -2964,7 +2964,7 @@ Material You Transparent Card:
   modes:
     dark:
       accent-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
-      app-header-background-color: var(--lovelace-background, rgb(18, 18, 18))
+      app-header-background-color: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
       app-header-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
       card-background-color: var(--md-sys-color-surface-container-low-dark, var(--default-md-sys-color-surface-container-low-dark))
       default-md-sys-color-error-container-dark: '#93000a'
@@ -3024,7 +3024,7 @@ Material You Transparent Card:
       error-color: var(--md-sys-color-error-dark, var(--default-md-sys-color-error-dark))
       input-background-color: var(--md-sys-color-surface-container-high-dark, var(--default-md-sys-color-surface-container-high-dark))
       input-label-ink-color: ar(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+      lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
       md-current-tab-icon-background: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
       md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
       md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
@@ -3042,7 +3042,7 @@ Material You Transparent Card:
       mdc-theme-secondary: var(--md-sys-color-secondary-dark, var(--default-md-sys-color-secondary-dark))
       mdc-theme-surface: var(--md-sys-color-surface-container-high-dark, var(--default-md-sys-color-surface-container-high-dark))
       on-error-color: var(--md-sys-color-on-error-dark, var(--default-md-sys-color-on-error-dark))
-      primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark))
+      primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark, '#1e1f25'))
       primary-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
       primary-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
       secondary-background-color: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
@@ -3055,10 +3055,10 @@ Material You Transparent Card:
       slider-color: var(--md-sys-color-inverse-primary-dark, var(--default-md-sys-color-inverse-primary-dark))
       state-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       state-inactive-color: rgb(72, 74, 78)
-      view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+      view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
     light:
       accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
-      app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
+      app-header-background-color: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
       app-header-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
       card-background-color: var(--md-sys-color-surface-container-low-light, var(--default-md-sys-color-surface-container-low-light))
       default-md-sys-color-error-container-light: '#ffdad6'
@@ -3118,7 +3118,7 @@ Material You Transparent Card:
       error-color: var(--md-sys-color-error-light, var(--default-md-sys-color-error-light))
       input-background-color: var(--md-sys-color-surface-container-high-light, var(--default-md-sys-color-surface-container-high-light))
       input-label-ink-color: ar(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+      lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
       md-current-tab-icon-background: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
       md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
       md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
@@ -3136,7 +3136,7 @@ Material You Transparent Card:
       mdc-theme-secondary: var(--md-sys-color-secondary-light, var(--default-md-sys-color-secondary-light))
       mdc-theme-surface: var(--md-sys-color-surface-container-high-light, var(--default-md-sys-color-surface-container-high-light))
       on-error-color: var(--md-sys-color-on-error-light, var(--default-md-sys-color-on-error-light))
-      primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light))
+      primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light, '#eeedf4'))
       primary-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
       primary-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
       secondary-background-color: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
@@ -3148,7 +3148,7 @@ Material You Transparent Card:
       sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       slider-color: var(--md-sys-color-inverse-primary-light, var(--default-md-sys-color-inverse-primary-light))
       state-icon-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+      view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
   navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
@@ -3186,7 +3186,7 @@ Material You Transparent Card:
   vertical-stack-card-margin: 4px 0px
 Material You Transparent Card Dark:
   accent-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
-  app-header-background-color: var(--lovelace-background, rgb(18, 18, 18))
+  app-header-background-color: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
   app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
@@ -3283,7 +3283,7 @@ Material You Transparent Card Dark:
   input-label-ink-color: ar(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
   light-primary-color: var(--primary-color)
   link-text-color: var(--primary-color)
-  lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+  lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
   md-current-tab-icon-background: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
   md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
   md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
@@ -3339,7 +3339,7 @@ Material You Transparent Card Dark:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark))
+  primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark, '#1e1f25'))
   primary-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
   primary-font-family: var(--font-family)
   primary-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
@@ -3367,10 +3367,10 @@ Material You Transparent Card Dark:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
-  view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+  view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
 Material You Transparent Card Light:
   accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
-  app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
+  app-header-background-color: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
   app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
@@ -3467,7 +3467,7 @@ Material You Transparent Card Light:
   input-label-ink-color: ar(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
   light-primary-color: var(--primary-color)
   link-text-color: var(--primary-color)
-  lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+  lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
   md-current-tab-icon-background: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
   md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
   md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
@@ -3523,7 +3523,7 @@ Material You Transparent Card Light:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light))
+  primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light, '#eeedf4'))
   primary-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
   primary-font-family: var(--font-family)
   primary-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
@@ -3550,7 +3550,7 @@ Material You Transparent Card Light:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
-  view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+  view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
 Material You Transparent Card No Mod:
   app-header-background-color: var(--navbar-background)
   app-header-edit-background-color: var(--primary-background-color)
@@ -3610,7 +3610,7 @@ Material You Transparent Card No Mod:
   modes:
     dark:
       accent-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
-      app-header-background-color: var(--lovelace-background, rgb(18, 18, 18))
+      app-header-background-color: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
       app-header-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
       card-background-color: var(--md-sys-color-surface-container-low-dark, var(--default-md-sys-color-surface-container-low-dark))
       default-md-sys-color-error-container-dark: '#93000a'
@@ -3670,7 +3670,7 @@ Material You Transparent Card No Mod:
       error-color: var(--md-sys-color-error-dark, var(--default-md-sys-color-error-dark))
       input-background-color: var(--md-sys-color-surface-container-high-dark, var(--default-md-sys-color-surface-container-high-dark))
       input-label-ink-color: ar(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+      lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
       md-current-tab-icon-background: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
       md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
       md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
@@ -3688,7 +3688,7 @@ Material You Transparent Card No Mod:
       mdc-theme-secondary: var(--md-sys-color-secondary-dark, var(--default-md-sys-color-secondary-dark))
       mdc-theme-surface: var(--md-sys-color-surface-container-high-dark, var(--default-md-sys-color-surface-container-high-dark))
       on-error-color: var(--md-sys-color-on-error-dark, var(--default-md-sys-color-on-error-dark))
-      primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark))
+      primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark, '#1e1f25'))
       primary-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
       primary-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
       secondary-background-color: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
@@ -3701,10 +3701,10 @@ Material You Transparent Card No Mod:
       slider-color: var(--md-sys-color-inverse-primary-dark, var(--default-md-sys-color-inverse-primary-dark))
       state-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       state-inactive-color: rgb(72, 74, 78)
-      view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+      view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
     light:
       accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
-      app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
+      app-header-background-color: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
       app-header-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
       card-background-color: var(--md-sys-color-surface-container-low-light, var(--default-md-sys-color-surface-container-low-light))
       default-md-sys-color-error-container-light: '#ffdad6'
@@ -3764,7 +3764,7 @@ Material You Transparent Card No Mod:
       error-color: var(--md-sys-color-error-light, var(--default-md-sys-color-error-light))
       input-background-color: var(--md-sys-color-surface-container-high-light, var(--default-md-sys-color-surface-container-high-light))
       input-label-ink-color: ar(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+      lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
       md-current-tab-icon-background: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
       md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
       md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
@@ -3782,7 +3782,7 @@ Material You Transparent Card No Mod:
       mdc-theme-secondary: var(--md-sys-color-secondary-light, var(--default-md-sys-color-secondary-light))
       mdc-theme-surface: var(--md-sys-color-surface-container-high-light, var(--default-md-sys-color-surface-container-high-light))
       on-error-color: var(--md-sys-color-on-error-light, var(--default-md-sys-color-on-error-light))
-      primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light))
+      primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light, '#eeedf4'))
       primary-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
       primary-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
       secondary-background-color: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
@@ -3794,7 +3794,7 @@ Material You Transparent Card No Mod:
       sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       slider-color: var(--md-sys-color-inverse-primary-light, var(--default-md-sys-color-inverse-primary-light))
       state-icon-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+      view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
   navbar-background: var(--primary-background-color)
   paper-font-body1_-_font-family: var(--font-family)
   paper-font-caption_-_font-family: var(--font-family)
@@ -3833,7 +3833,7 @@ Material You Transparent Card No Mod:
   vertical-stack-card-margin: 4px 0px
 Material You Transparent Card No Mod Dark:
   accent-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
-  app-header-background-color: var(--lovelace-background, rgb(18, 18, 18))
+  app-header-background-color: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
   app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
@@ -3929,7 +3929,7 @@ Material You Transparent Card No Mod Dark:
   input-label-ink-color: ar(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
   light-primary-color: var(--primary-color)
   link-text-color: var(--primary-color)
-  lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+  lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
   md-current-tab-icon-background: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
   md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
   md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
@@ -3985,7 +3985,7 @@ Material You Transparent Card No Mod Dark:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark))
+  primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark, '#1e1f25'))
   primary-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
   primary-font-family: var(--font-family)
   primary-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
@@ -4013,10 +4013,10 @@ Material You Transparent Card No Mod Dark:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
-  view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, rgb(18, 18, 18)))
+  view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
 Material You Transparent Card No Mod Light:
   accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
-  app-header-background-color: var(--lovelace-background, rgb(250, 250, 250))
+  app-header-background-color: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
   app-header-edit-background-color: var(--primary-background-color)
   app-header-edit-text-color: var(--app-header-text-color)
   app-header-selection-bar-color: none
@@ -4112,7 +4112,7 @@ Material You Transparent Card No Mod Light:
   input-label-ink-color: ar(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
   light-primary-color: var(--primary-color)
   link-text-color: var(--primary-color)
-  lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+  lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
   md-current-tab-icon-background: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
   md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
   md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
@@ -4168,7 +4168,7 @@ Material You Transparent Card No Mod Light:
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light))
+  primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light, '#eeedf4'))
   primary-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
   primary-font-family: var(--font-family)
   primary-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
@@ -4195,4 +4195,4 @@ Material You Transparent Card No Mod Light:
   title-font-size: 28px
   title-font-weight: 600
   vertical-stack-card-margin: 4px 0px
-  view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, rgb(250, 250, 250)))
+  view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
