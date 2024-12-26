@@ -66,9 +66,13 @@ const colors: (keyof typeof MaterialDynamicColors)[] = [
 Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 	const ha = document.querySelector('home-assistant') as HassElement;
 	const html = document.querySelector('html');
-	const userId = ha.hass.user?.name.toLowerCase().replace(' ', '_');
+
+	const userName = ha.hass.user?.name.toLowerCase().replace(' ', '_');
+	const userId = ha.hass.user?.id;
+
 	const sensorName = 'sensor.material_rounded_base_color';
-	const userSensorName = `${sensorName}_${userId}`;
+	const userNameSensorName = `${sensorName}_${userName}`;
+	const userIdSensorName = `${sensorName}_${userId}`;
 
 	function unsetTheme() {
 		for (const key of colors) {
@@ -90,8 +94,11 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 					let baseColor: string | undefined;
 
 					// User specific base color
-					if (userId) {
-						baseColor = ha.hass.states[userSensorName]?.state;
+					if (userName) {
+						baseColor = ha.hass.states[userNameSensorName]?.state;
+					}
+					if (!baseColor && userId) {
+						baseColor = ha.hass.states[userIdSensorName]?.state;
 					}
 
 					// General base color
@@ -160,7 +167,11 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 			type: 'subscribe_trigger',
 			trigger: {
 				platform: 'state',
-				entity_id: [sensorName, userSensorName],
+				entity_id: [
+					sensorName,
+					userNameSensorName,
+					userIdSensorName,
+				].filter((entityId) => ha.hass.states[entityId]),
 			},
 		},
 		{ resubscribe: true },
