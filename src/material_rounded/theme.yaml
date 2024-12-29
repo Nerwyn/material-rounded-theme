@@ -91,6 +91,7 @@ Material Rounded:
   # Spacings
   horizontal-stack-card-margin: 0px 4px
   vertical-stack-card-margin: 4px 0px
+  ha-view-sections-row-gap: 18px
 
   # Toolbar
   paper-slider-height: 4px

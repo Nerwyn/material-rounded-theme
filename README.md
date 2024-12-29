@@ -208,8 +208,8 @@ Desktop sidebar collapsed.
 ### Views
 
 - Adds a 40px margin to the top for the top app bar and an 80px margin to the bottom for the navigation bar.
-- Adds a 12px margin to each side of the view to match the Google Home app.
 - Add card button of classic lovelace views updated to better match the [extended FAB specification](https://m3.material.io/components/extended-fab/overview).
+- Increase `--ha-sections-view-row-gap` to 18px, which is also used for the column gap on mobile displays to match Google Home app.
 
 If you do not want these changes, use the "No Mod" versions of the theme. If you only want some of these changes, you will have to modify and recompile the theme yourself.
 

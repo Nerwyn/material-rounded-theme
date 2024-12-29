@@ -1,10 +1,3 @@
-/* Add padding to sides of viewbox and force background color just in case */
-#view {
-	padding-left: calc(12px + env(safe-area-inset-left)) !important;
-	padding-right: calc(12px + env(safe-area-inset-right)) !important;
-	background: var(--view-background, var(--lovelace-background)) !important;
-}
-
 /* Add bottom footer padding when present */
 .header:has(ha-tabs, paper-tabs) + #view {
 	padding-bottom: calc(
