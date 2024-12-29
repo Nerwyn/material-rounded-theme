@@ -10,7 +10,8 @@
 			"files": "*.yaml",
 			"options": {
 				"tabWidth": 2,
-				"useTabs": false
+				"useTabs": false,
+				"singleQuote": false
 			}
 		},
 		{

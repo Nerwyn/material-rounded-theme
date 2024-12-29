@@ -2,65 +2,65 @@ Material You:
   modes:
     dark:
       # Default material design colors
-      default-md-sys-color-primary-dark: '#b5c4ff'
-      default-md-sys-color-on-primary-dark: '#1c2d61'
-      default-md-sys-color-primary-container-dark: '#344479'
-      default-md-sys-color-on-primary-container-dark: '#dce1ff'
-      default-md-sys-color-primary-palette-key-color-dark: '#6575ad'
-      default-md-sys-color-inverse-primary-dark: '#4c5c92'
-      default-md-sys-color-primary-fixed-dark: '#dce1ff'
-      default-md-sys-color-primary-fixed-dim-dark: '#b5c4ff'
-      default-md-sys-color-on-primary-fixed-dark: '#02174b'
-      default-md-sys-color-on-primary-fixed-variant-dark: '#344479'
+      default-md-sys-color-primary-dark: "#b5c4ff"
+      default-md-sys-color-on-primary-dark: "#1c2d61"
+      default-md-sys-color-primary-container-dark: "#344479"
+      default-md-sys-color-on-primary-container-dark: "#dce1ff"
+      default-md-sys-color-primary-palette-key-color-dark: "#6575ad"
+      default-md-sys-color-inverse-primary-dark: "#4c5c92"
+      default-md-sys-color-primary-fixed-dark: "#dce1ff"
+      default-md-sys-color-primary-fixed-dim-dark: "#b5c4ff"
+      default-md-sys-color-on-primary-fixed-dark: "#02174b"
+      default-md-sys-color-on-primary-fixed-variant-dark: "#344479"
 
-      default-md-sys-color-secondary-dark: '#c1c5dd'
-      default-md-sys-color-on-secondary-dark: '#2b3042'
-      default-md-sys-color-secondary-container-dark: '#414659'
-      default-md-sys-color-on-secondary-container-dark: '#dee1f9'
-      default-md-sys-color-secondary-palette-key-color-dark: '#72768b'
-      default-md-sys-color-secondary-fixed-dark: '#dee1f9'
-      default-md-sys-color-secondary-fixed-dim-dark: '#c1c5dd'
-      default-md-sys-color-on-secondary-fixed-dark: '#161b2c'
-      default-md-sys-color-on-secondary-fixed-variant-dark: '#414659'
+      default-md-sys-color-secondary-dark: "#c1c5dd"
+      default-md-sys-color-on-secondary-dark: "#2b3042"
+      default-md-sys-color-secondary-container-dark: "#414659"
+      default-md-sys-color-on-secondary-container-dark: "#dee1f9"
+      default-md-sys-color-secondary-palette-key-color-dark: "#72768b"
+      default-md-sys-color-secondary-fixed-dark: "#dee1f9"
+      default-md-sys-color-secondary-fixed-dim-dark: "#c1c5dd"
+      default-md-sys-color-on-secondary-fixed-dark: "#161b2c"
+      default-md-sys-color-on-secondary-fixed-variant-dark: "#414659"
 
-      default-md-sys-color-tertiary-dark: '#e3badb'
-      default-md-sys-color-on-tertiary-dark: '#432740'
-      default-md-sys-color-tertiary-container-dark: '#5b3d57'
-      default-md-sys-color-on-tertiary-container-dark: '#ffd7f6'
-      default-md-sys-color-tertiary-palette-key-color-dark: '#8f6c89'
-      default-md-sys-color-tertiary-fixed-dark: '#ffd7f6'
-      default-md-sys-color-tertiary-fixed-dim-dark: '#e3badb'
-      default-md-sys-color-on-tertiary-fixed-dark: '#2c122a'
-      default-md-sys-color-on-tertiary-fixed-variant-dark: '#5b3d57'
+      default-md-sys-color-tertiary-dark: "#e3badb"
+      default-md-sys-color-on-tertiary-dark: "#432740"
+      default-md-sys-color-tertiary-container-dark: "#5b3d57"
+      default-md-sys-color-on-tertiary-container-dark: "#ffd7f6"
+      default-md-sys-color-tertiary-palette-key-color-dark: "#8f6c89"
+      default-md-sys-color-tertiary-fixed-dark: "#ffd7f6"
+      default-md-sys-color-tertiary-fixed-dim-dark: "#e3badb"
+      default-md-sys-color-on-tertiary-fixed-dark: "#2c122a"
+      default-md-sys-color-on-tertiary-fixed-variant-dark: "#5b3d57"
 
-      default-md-sys-color-neutral-palette-key-color-dark: '#76767d'
-      default-md-sys-color-neutral-variant-palette-key-color-dark: '#75767f'
+      default-md-sys-color-neutral-palette-key-color-dark: "#76767d"
+      default-md-sys-color-neutral-variant-palette-key-color-dark: "#75767f"
 
-      default-md-sys-color-error-dark: '#ffb4ab'
-      default-md-sys-color-on-error-dark: '#690005'
-      default-md-sys-color-error-container-dark: '#93000a'
-      default-md-sys-color-on-error-container-dark: '#ffdad6'
+      default-md-sys-color-error-dark: "#ffb4ab"
+      default-md-sys-color-on-error-dark: "#690005"
+      default-md-sys-color-error-container-dark: "#93000a"
+      default-md-sys-color-on-error-container-dark: "#ffdad6"
 
-      default-md-sys-color-surface-dark: '#121318'
-      default-md-sys-color-on-surface-dark: '#e3e1e9'
-      default-md-sys-color-surface-variant-dark: '#45464f'
-      default-md-sys-color-on-surface-variant-dark: '#c6c6d0'
-      default-md-sys-color-surface-dim-dark: '#121318'
-      default-md-sys-color-surface-bright-dark: '#38393f'
-      default-md-sys-color-surface-container-lowest-dark: '#0d0e13'
-      default-md-sys-color-surface-container-low-dark: '#1a1b21'
-      default-md-sys-color-surface-container-dark: '#1e1f25'
-      default-md-sys-color-surface-container-high-dark: '#292a2f'
-      default-md-sys-color-surface-container-highest-dark: '#34343a'
-      default-md-sys-color-inverse-surface-dark: '#e3e1e9'
-      default-md-sys-color-inverse-on-surface-dark: '#2f3036'
-      default-md-sys-color-surface-tint-dark: '#b5c4ff'
+      default-md-sys-color-surface-dark: "#121318"
+      default-md-sys-color-on-surface-dark: "#e3e1e9"
+      default-md-sys-color-surface-variant-dark: "#45464f"
+      default-md-sys-color-on-surface-variant-dark: "#c6c6d0"
+      default-md-sys-color-surface-dim-dark: "#121318"
+      default-md-sys-color-surface-bright-dark: "#38393f"
+      default-md-sys-color-surface-container-lowest-dark: "#0d0e13"
+      default-md-sys-color-surface-container-low-dark: "#1a1b21"
+      default-md-sys-color-surface-container-dark: "#1e1f25"
+      default-md-sys-color-surface-container-high-dark: "#292a2f"
+      default-md-sys-color-surface-container-highest-dark: "#34343a"
+      default-md-sys-color-inverse-surface-dark: "#e3e1e9"
+      default-md-sys-color-inverse-on-surface-dark: "#2f3036"
+      default-md-sys-color-surface-tint-dark: "#b5c4ff"
 
-      default-md-sys-color-outline-dark: '#8f909a'
-      default-md-sys-color-outline-variant-dark: '#45464f'
+      default-md-sys-color-outline-dark: "#8f909a"
+      default-md-sys-color-outline-variant-dark: "#45464f"
 
-      default-md-sys-color-shadow-dark: '#000000'
-      default-md-sys-color-scrim-dark: '#000000'
+      default-md-sys-color-shadow-dark: "#000000"
+      default-md-sys-color-scrim-dark: "#000000"
 
       # Main colors
       primary-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
@@ -68,7 +68,7 @@ Material You:
       state-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       primary-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
       secondary-text-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      input-background-color: var(--md-sys-color-surface-container-high-dark, var(--default-md-sys-color-surface-container-high-dark))
+      input-background-color: var(--md-sys-color-surface-container-highest-dark, var(--default-md-sys-color-surface-container-highest-dark))
       input-label-ink-color: ar(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       secondary-background-color: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
       slider-color: var(--md-sys-color-inverse-primary-dark, var(--default-md-sys-color-inverse-primary-dark))
@@ -123,65 +123,65 @@ Material You:
 
     light:
       # Default material design colors
-      default-md-sys-color-primary-light: '#4c5c92'
-      default-md-sys-color-on-primary-light: '#ffffff'
-      default-md-sys-color-primary-container-light: '#dce1ff'
-      default-md-sys-color-on-primary-container-light: '#344479'
-      default-md-sys-color-primary-palette-key-color-light: '#6575ad'
-      default-md-sys-color-inverse-primary-light: '#b5c4ff'
-      default-md-sys-color-primary-fixed-light: '#dce1ff'
-      default-md-sys-color-primary-fixed-dim-light: '#b5c4ff'
-      default-md-sys-color-on-primary-fixed-light: '#02174b'
-      default-md-sys-color-on-primary-fixed-variant-light: '#344479'
+      default-md-sys-color-primary-light: "#4c5c92"
+      default-md-sys-color-on-primary-light: "#ffffff"
+      default-md-sys-color-primary-container-light: "#dce1ff"
+      default-md-sys-color-on-primary-container-light: "#344479"
+      default-md-sys-color-primary-palette-key-color-light: "#6575ad"
+      default-md-sys-color-inverse-primary-light: "#b5c4ff"
+      default-md-sys-color-primary-fixed-light: "#dce1ff"
+      default-md-sys-color-primary-fixed-dim-light: "#b5c4ff"
+      default-md-sys-color-on-primary-fixed-light: "#02174b"
+      default-md-sys-color-on-primary-fixed-variant-light: "#344479"
 
-      default-md-sys-color-secondary-light: '#595e72'
-      default-md-sys-color-on-secondary-light: '#ffffff'
-      default-md-sys-color-secondary-container-light: '#dee1f9'
-      default-md-sys-color-on-secondary-container-light: '#414659'
-      default-md-sys-color-secondary-palette-key-color-light: '#72768b'
-      default-md-sys-color-secondary-fixed-light: '#dee1f9'
-      default-md-sys-color-secondary-fixed-dim-light: '#c1c5dd'
-      default-md-sys-color-on-secondary-fixed-light: '#161b2c'
-      default-md-sys-color-on-secondary-fixed-variant-light: '#414659'
+      default-md-sys-color-secondary-light: "#595e72"
+      default-md-sys-color-on-secondary-light: "#ffffff"
+      default-md-sys-color-secondary-container-light: "#dee1f9"
+      default-md-sys-color-on-secondary-container-light: "#414659"
+      default-md-sys-color-secondary-palette-key-color-light: "#72768b"
+      default-md-sys-color-secondary-fixed-light: "#dee1f9"
+      default-md-sys-color-secondary-fixed-dim-light: "#c1c5dd"
+      default-md-sys-color-on-secondary-fixed-light: "#161b2c"
+      default-md-sys-color-on-secondary-fixed-variant-light: "#414659"
 
-      default-md-sys-color-tertiary-light: '#745470'
-      default-md-sys-color-on-tertiary-light: '#ffffff'
-      default-md-sys-color-tertiary-container-light: '#ffd7f6'
-      default-md-sys-color-on-tertiary-container-light: '#5b3d57'
-      default-md-sys-color-tertiary-palette-key-color-light: '#8f6c89'
-      default-md-sys-color-tertiary-fixed-light: '#ffd7f6'
-      default-md-sys-color-tertiary-fixed-dim-light: '#e3badb'
-      default-md-sys-color-on-tertiary-fixed-light: '#2c122a'
-      default-md-sys-color-on-tertiary-fixed-variant-light: '#5b3d57'
+      default-md-sys-color-tertiary-light: "#745470"
+      default-md-sys-color-on-tertiary-light: "#ffffff"
+      default-md-sys-color-tertiary-container-light: "#ffd7f6"
+      default-md-sys-color-on-tertiary-container-light: "#5b3d57"
+      default-md-sys-color-tertiary-palette-key-color-light: "#8f6c89"
+      default-md-sys-color-tertiary-fixed-light: "#ffd7f6"
+      default-md-sys-color-tertiary-fixed-dim-light: "#e3badb"
+      default-md-sys-color-on-tertiary-fixed-light: "#2c122a"
+      default-md-sys-color-on-tertiary-fixed-variant-light: "#5b3d57"
 
-      default-md-sys-color-neutral-palette-key-color-light: '#76767d'
-      default-md-sys-color-neutral-variant-palette-key-color-light: '#75767f'
+      default-md-sys-color-neutral-palette-key-color-light: "#76767d"
+      default-md-sys-color-neutral-variant-palette-key-color-light: "#75767f"
 
-      default-md-sys-color-error-light: '#ba1a1a'
-      default-md-sys-color-on-error-light: '#ffffff'
-      default-md-sys-color-error-container-light: '#ffdad6'
-      default-md-sys-color-on-error-container-light: '#93000a'
+      default-md-sys-color-error-light: "#ba1a1a"
+      default-md-sys-color-on-error-light: "#ffffff"
+      default-md-sys-color-error-container-light: "#ffdad6"
+      default-md-sys-color-on-error-container-light: "#93000a"
 
-      default-md-sys-color-surface-light: '#faf8ff'
-      default-md-sys-color-on-surface-light: '#1a1b21'
-      default-md-sys-color-surface-variant-light: '#e2e1ec'
-      default-md-sys-color-on-surface-variant-light: '#45464f'
-      default-md-sys-color-surface-dim-light: '#dad9e0'
-      default-md-sys-color-surface-bright-light: '#faf8ff'
-      default-md-sys-color-surface-container-lowest-light: '#ffffff'
-      default-md-sys-color-surface-container-low-light: '#f4f3fa'
-      default-md-sys-color-surface-container-light: '#eeedf4'
-      default-md-sys-color-surface-container-high-light: '#e9e7ef'
-      default-md-sys-color-surface-container-highest-light: '#e3e1e9'
-      default-md-sys-color-inverse-surface-light: '#2f3036'
-      default-md-sys-color-inverse-on-surface-light: '#f1f0f7'
-      default-md-sys-color-surface-tint-light: '#4c5c92'
+      default-md-sys-color-surface-light: "#faf8ff"
+      default-md-sys-color-on-surface-light: "#1a1b21"
+      default-md-sys-color-surface-variant-light: "#e2e1ec"
+      default-md-sys-color-on-surface-variant-light: "#45464f"
+      default-md-sys-color-surface-dim-light: "#dad9e0"
+      default-md-sys-color-surface-bright-light: "#faf8ff"
+      default-md-sys-color-surface-container-lowest-light: "#ffffff"
+      default-md-sys-color-surface-container-low-light: "#f4f3fa"
+      default-md-sys-color-surface-container-light: "#eeedf4"
+      default-md-sys-color-surface-container-high-light: "#e9e7ef"
+      default-md-sys-color-surface-container-highest-light: "#e3e1e9"
+      default-md-sys-color-inverse-surface-light: "#2f3036"
+      default-md-sys-color-inverse-on-surface-light: "#f1f0f7"
+      default-md-sys-color-surface-tint-light: "#4c5c92"
 
-      default-md-sys-color-outline-light: '#767680'
-      default-md-sys-color-outline-variant-light: '#c6c6d0'
+      default-md-sys-color-outline-light: "#767680"
+      default-md-sys-color-outline-variant-light: "#c6c6d0"
 
-      default-md-sys-color-shadow-light: '#000000'
-      default-md-sys-color-scrim-light: '#000000'
+      default-md-sys-color-shadow-light: "#000000"
+      default-md-sys-color-scrim-light: "#000000"
 
       # Main colors
       primary-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
@@ -189,7 +189,7 @@ Material You:
       state-icon-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       primary-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
       secondary-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      input-background-color: var(--md-sys-color-surface-container-high-light, var(--default-md-sys-color-surface-container-high-light))
+      input-background-color: var(--md-sys-color-surface-container-highest-light, var(--default-md-sys-color-surface-container-highest-light))
       input-label-ink-color: ar(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       slider-color: var(--md-sys-color-inverse-primary-light, var(--default-md-sys-color-inverse-primary-light))
       secondary-background-color: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
