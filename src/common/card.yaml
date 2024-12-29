@@ -41,3 +41,6 @@ hui-toggle-entity-row$:
 # Graph Colors
 hui-graph-header-footer$ hui-graph-base$: >-
   {{ graph.css }}
+hui-graph-header-footer$:
+  hui-graph-base$: >-
+    {{ graph.css }}
