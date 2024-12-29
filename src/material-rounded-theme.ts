@@ -63,8 +63,15 @@ const colors: (keyof typeof MaterialDynamicColors)[] = [
 	'scrim',
 ];
 
-Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
-	const ha = document.querySelector('home-assistant') as HassElement;
+async function waitForElement(parent: ParentNode, selector: string) {
+	while (!parent.querySelector(selector)) {
+		await new Promise((resolve) => requestAnimationFrame(resolve));
+	}
+	return parent.querySelector(selector) as HassElement;
+}
+
+waitForElement(document, 'home-assistant').then((ha) => {
+	const haMain = ha?.shadowRoot?.querySelector('home-assistant-main');
 	const html = document.querySelector('html');
 
 	const userName = ha.hass.user?.name.toLowerCase().replace(' ', '_');
@@ -86,7 +93,7 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 	function setTheme() {
 		{
 			try {
-				const themeName = ha?.hass?.themes?.theme ?? '';
+				const themeName = ha.hass?.themes?.theme ?? '';
 				if (
 					themeName.includes('Material Rounded') ||
 					themeName.includes('Material You')
@@ -108,6 +115,16 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 
 					// Only update if base color is provided
 					if (baseColor) {
+						const targets: HTMLElement[] = [html as HTMLElement];
+
+						// Add-ons and HACS iframe
+						const iframe = haMain?.shadowRoot
+							?.querySelector('iframe')
+							?.contentWindow?.document?.querySelector('body');
+						if (iframe) {
+							targets.push(iframe);
+						}
+
 						for (const mode of ['light', 'dark']) {
 							const schemeTonalSpot = new SchemeTonalSpot(
 								Hct.fromInt(argbFromHex(baseColor)),
@@ -126,10 +143,12 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 									.replace(/([a-z])([A-Z])/g, '$1-$2')
 									.toLowerCase();
 								const color = hexFromArgb(value);
-								html?.style.setProperty(
-									`--md-sys-color-${token}-${mode}`,
-									color,
-								);
+								for (const target of targets) {
+									target?.style.setProperty(
+										`--md-sys-color-${token}-${mode}`,
+										color,
+									);
+								}
 							}
 						}
 
@@ -186,4 +205,28 @@ Promise.resolve(customElements.whenDefined('home-assistant')).then(() => {
 			setTimeout(() => setTheme(), 1000);
 		}
 	}, 'call_service');
+
+	// Trigger on iframe node added to home-assistant-main
+	const observer = new MutationObserver((mutations) => {
+		for (const mutation of mutations) {
+			for (const addedNode of mutation.addedNodes) {
+				if (addedNode.nodeName == 'IFRAME') {
+					waitForElement(
+						haMain?.shadowRoot as ParentNode,
+						'iframe',
+					).then((iframe) => {
+						waitForElement(
+							(iframe as unknown as HTMLIFrameElement)
+								?.contentWindow?.document as ParentNode,
+							'body',
+						).then(() => setTheme());
+					});
+				}
+			}
+		}
+	});
+	observer.observe(haMain?.shadowRoot as Node, {
+		subtree: true,
+		childList: true,
+	});
 });
