@@ -5,8 +5,7 @@ ha-tabs {
 	top: unset !important;
 	bottom: 0 !important;
 	background: var(--navbar-background) !important;
-	height: var(--footer-height) !important;
-	width: calc(100% - var(--mdc-drawer-width, 0px));
+	height: calc(var(--footer-height) + env(safe-area-inset-bottom)) !important;
 	padding-bottom: env(safe-area-inset-bottom) !important;
 	margin: 0 !important;
 	margin-inline: 0 !important;
@@ -52,7 +51,7 @@ The parent of the view tabs is within a shadow-root which the view tabs are slot
 Styling their parent element is much slower and inconsistent.
 */
 paper-tab {
-	padding: 11px 0;
+	padding: 8.5px 0 0; /* the md3 docs say to use 12 dp but this better matches md3 apps */
 	flex-direction: column;
 	flex: 1;
 	width: var(--tab-width);

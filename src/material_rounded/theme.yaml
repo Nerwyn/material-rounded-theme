@@ -96,7 +96,7 @@ Material Rounded:
   # Toolbar
   paper-slider-height: 4px
   header-height: 48px
-  footer-height: 80px
+  footer-height: 82px
   mdc-top-app-bar-fixed-box-shadow: none
   app-header-text-color: var(--primary-text-color)
   app-header-edit-text-color: var(--app-header-text-color)
