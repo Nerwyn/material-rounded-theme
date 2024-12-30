@@ -261,8 +261,9 @@ Material You:
   sidebar-background-color: var(--primary-background-color)
 
   # Typography
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-family:
+    '"Google Sans", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
   primary-font-family: var(--font-family)
   paper-font-common-base_-_font-family: var(--font-family)
   paper-font-common-code_-_font-family: var(--font-family)
@@ -275,9 +276,17 @@ Material You:
   mdc-typography-font-family: var(--font-family)
   mdc-typography-button-font-family: var(--font-family)
   mdc-typography-body1-font-family: var(--font-family)
-  mdc-typography-button-font-weight: var(--title-font-weight)
+
   title-font-weight: 600
   title-font-size: 28px
+  mdc-typography-button-font-weight: var(--title-font-weight)
+
+  ha-heading-card-title-font-size: 16px
+  ha-heading-card-title-font-weight: 600
+  ha-heading-card-title-line-height: 24px
+  ha-heading-card-subtitle-font-size: 14px
+  ha-heading-card-subtitle-font-weight: 500
+  ha-heading-card-subtitle-line-height: 20px
 
   # Text
   text-primary-color: var(--lovelace-background)
