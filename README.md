@@ -63,7 +63,7 @@ Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelac
 
 ## Material You - A Fully Featured Implementation of Material Design 3
 
-The full color version of the theme. This theme aims to match the styling of Material Design 3 (also known as Material You) Google apps on Android like Phone, Contacts, Messages, Photos, and Drive. Everything has been updated to use colors generated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) following the [Material Design 3 guidelines](https://m3.material.io/). Supports custom user colors for virtually all of Home Assistant.
+The full color version of the theme. This theme aims to match the styling of Material Design 3 (also known as Material You) Google apps on Android like Phone, Contacts, Messages, Photos, and Drive. Everything has been updated to use colors generated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) following the [Material Design 3 guidelines](https://m3.material.io/). Supports custom user colors for virtually all of Home Assistant. If no user base color is provided defaults to a shade of blue.
 
 <p>
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-red-light.png" alt="material-you-red-light" width="250"/>
@@ -122,6 +122,8 @@ This theme supports Material You color theming! This requires an additional Java
 2. Upload this module to your Home Assistant instance, preferable in the `config/www` folder.
    - Your `configuration.yaml` file is found in the `config` folder. If the `www` folder does not exist create it. More information about the configuration folder can be found [here](https://www.home-assistant.io/docs/configuration/#to-find-the-configuration-directory).
 
+Remember! You must update your local copy of this module manually as update are made.
+
 ### Add the Module as a Resource
 
 1. Navigate to a dashboard and then click `🖉 Edit dashboard` > `⋮ Open dashboard menu` > `Manage resources`.
@@ -145,7 +147,7 @@ Once the JavaScript module resource has been added, create a helper template sen
 6. Enter your Material You base color as a six digit hex code, like `238636` or `#db4437`. You can also use a template to read a hex code from the state or attribute of a different entity, like `{{ states("sensor.pixel_fold_accent_color") }}`.
 7. Click `SUBMIT`.
 
-You can also choose user specific colors by creating a sensor named `Material Rounded Base Color Your Name`, with your name being your person name as it appears on the [Home Assistant people page](http://homeassistant.local:8123/config/person). The sensory entity ID should be something like `sensor.material_rounded_base_color_john_doe`. Alternatively, you can use your user ID as found on the [Home Assistant users page](http://homeassistant.local:8123/config/users) when you click on a user. In this case the sensor entity ID shouldbe something like `sensor.material_rounded_base_color_f8866a924fc94c4d8abde860584afd05`.
+You can also choose user specific colors by creating a sensor named `Material Rounded Base Color Your Name`, with your name being your person name as it appears on the [Home Assistant people page](http://homeassistant.local:8123/config/person). The sensory entity ID should be something like `sensor.material_rounded_base_color_john_doe`. Alternatively, you can use your user ID as found on the [Home Assistant users page](http://homeassistant.local:8123/config/users) when you click on a user. In this case the sensor entity ID should be something like `sensor.material_rounded_base_color_f8866a924fc94c4d8abde860584afd05`.
 
 #### Home Assistant Android App Color Sensor
 
@@ -207,7 +209,9 @@ Desktop sidebar collapsed.
 
 ### Views
 
-- Adds a 40px margin to the top for the top app bar and an 80px margin to the bottom for the navigation bar.
+- Adds an 82px margin to the bottom of the view for the navigation bar when it is present.
+  - The navigation bar is not present on subviews and single view dashboards.
+  - This padding is also removed in kiosk mode.
 - Add card button of classic lovelace views updated to better match the [extended FAB specification](https://m3.material.io/components/extended-fab/overview).
 - Increase `--ha-sections-view-row-gap` to 18px, which is also used for the column gap on mobile displays to match Google Home app.
 
