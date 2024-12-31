@@ -144,7 +144,7 @@ Once the JavaScript module resource has been added, create a helper template sen
 3. Click `Template`.
 4. Click `Template a sensor`.
 5. Name the sensor `Material Rounded Base Color`. The sensor entity ID should be `sensor.material_rounded_base_color`.
-6. Enter your Material You base color as a six digit hex code, like `238636` or `#db4437`. You can also use a template to read a hex code from the state or attribute of a different entity, like `{{ states("sensor.pixel_fold_accent_color") }}`.
+6. Enter your Material You base color as a hex code, e.g. `238636`, `#db4437`, `#fff`. You can also use a template to read a hex code from the state or attribute of a different entity, like `{{ states("sensor.pixel_fold_accent_color") }}`.
 7. Click `SUBMIT`.
 
 You can also choose user specific colors by creating a sensor named `Material Rounded Base Color Your Name`, with your name being your person name as it appears on the [Home Assistant people page](http://homeassistant.local:8123/config/person). The sensory entity ID should be something like `sensor.material_rounded_base_color_john_doe`. Alternatively, you can use your user ID as found on the [Home Assistant users page](http://homeassistant.local:8123/config/users) when you click on a user. In this case the sensor entity ID should be something like `sensor.material_rounded_base_color_f8866a924fc94c4d8abde860584afd05`.
