@@ -108,9 +108,10 @@ paper-tab.iron-selected::after {
 	color: var(--md-current-tab-text-color);
 }
 
-/* Fix edit mode toolbar height */
+/* Fix edit mode toolbar height and width */
 paper-tabs {
 	height: 50%;
+	width: calc(100% - var(--mdc-drawer-width, 0px));
 }
 
 /* Make edit mode current view tab fit all buttons */
