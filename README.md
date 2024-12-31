@@ -52,13 +52,13 @@ Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelac
 ### Updated Material You Components
 
 <p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-dark.png" alt="material-rounded-components-green-dark" width="375"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-light.png" alt="material-rounded-components-green-light" width="375"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-blue-dark.png" alt="material-rounded-components-blue-dark" width="375"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-blue-light.png" alt="material-rounded-components-blue-light" width="375"/>
 </p>
 
 <p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-dark.png" alt="material-rounded-components-dark" width="375"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-light.png" alt="material-rounded-components-light" width="375"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-dark.png" alt="material-rounded-components-green-dark" width="375"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-light.png" alt="material-rounded-components-green-light" width="375"/>
 </p>
 
 ## Material You - A Fully Featured Implementation of Material Design 3
