@@ -1,6 +1,6 @@
 {
 	"name": "material-rounded-theme",
-	"version": "3.0.0",
+	"version": "3.0.3",
 	"description": "A Material You and Google Home app influenced theme for Home Assistant",
 	"main": "dist/index.js",
 	"scripts": {
@@ -32,7 +32,7 @@
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-prettier": "latest",
-		"home-assistant-js-websocket": "^9.4.0",
+		"home-assistant-js-websocket": "latest",
 		"lint-staged": "latest",
 		"prettier": "latest",
 		"prettier-plugin-organize-imports": "latest",
