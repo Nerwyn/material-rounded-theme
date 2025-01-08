@@ -74,7 +74,7 @@ waitForElement(document, 'home-assistant').then((ha) => {
 	const haMain = ha?.shadowRoot?.querySelector('home-assistant-main');
 	const html = document.querySelector('html');
 
-	const userName = ha.hass.user?.name.toLowerCase().replace(' ', '_');
+	const userName = ha.hass.user?.name.toLowerCase().replace(/ /g, '_');
 	const userId = ha.hass.user?.id;
 
 	const sensorName = 'sensor.material_rounded_base_color';
