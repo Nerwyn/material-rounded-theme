@@ -1,6 +1,6 @@
 {
 	"name": "material-rounded-theme",
-	"version": "3.0.3",
+	"version": "3.0.4",
 	"description": "A Material You and Google Home app influenced theme for Home Assistant",
 	"main": "dist/index.js",
 	"scripts": {

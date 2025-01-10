@@ -63,33 +63,56 @@ const colors: (keyof typeof MaterialDynamicColors)[] = [
 	'scrim',
 ];
 
-async function waitForElement(parent: ParentNode, selector: string) {
-	while (!parent.querySelector(selector)) {
-		await new Promise((resolve) => requestAnimationFrame(resolve));
-	}
-	return parent.querySelector(selector) as HassElement;
-}
-
-waitForElement(document, 'home-assistant').then((ha) => {
-	const haMain = ha?.shadowRoot?.querySelector('home-assistant-main');
+async function main() {
+	// When installed as a module, we need to wait for certain elements to load
+	const ha = await waitForElement(document, 'home-assistant');
+	await waitForKey(ha, 'shadowRoot');
+	const haMain = await waitForElement(
+		ha.shadowRoot as ParentNode,
+		'home-assistant-main',
+	);
 	const html = document.querySelector('html');
 
+	// Sensor names
 	const userName = ha.hass.user?.name.toLowerCase().replace(/ /g, '_');
 	const userId = ha.hass.user?.id;
-
 	const sensorName = 'sensor.material_rounded_base_color';
 	const userNameSensorName = `${sensorName}_${userName}`;
 	const userIdSensorName = `${sensorName}_${userId}`;
 
+	/** Targets to apply or remove theme colors to/from */
+	function getTargets() {
+		const targets: HTMLElement[] = [html as HTMLElement];
+
+		// Add-ons and HACS iframe
+		const iframe = haMain?.shadowRoot
+			?.querySelector('iframe')
+			?.contentWindow?.document?.querySelector('body');
+		if (iframe) {
+			targets.push(iframe);
+		}
+		return targets;
+	}
+
+	/** Remove theme colors */
 	function unsetTheme() {
-		for (const key of colors) {
-			const token = key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
-			html?.style.removeProperty(`--md-sys-color-${token}-light`);
-			html?.style.removeProperty(`--md-sys-color-${token}-dark`);
+		const targets = getTargets();
+		for (const target of targets) {
+			for (const key of colors) {
+				const token = key
+					.replace(/([a-z])([A-Z])/g, '$1-$2')
+					.toLowerCase();
+				target?.style.removeProperty(`--md-sys-color-${token}-light`);
+				target?.style.removeProperty(`--md-sys-color-${token}-dark`);
+			}
 		}
 		console.info('Material design system colors removed.');
 	}
 
+	/**
+	 * Generate and set theme colors based on user defined sensors
+	 * Unsets theme if no sensor found or on error
+	 */
 	function setTheme() {
 		{
 			try {
@@ -115,15 +138,7 @@ waitForElement(document, 'home-assistant').then((ha) => {
 
 					// Only update if base color is provided
 					if (baseColor) {
-						const targets: HTMLElement[] = [html as HTMLElement];
-
-						// Add-ons and HACS iframe
-						const iframe = haMain?.shadowRoot
-							?.querySelector('iframe')
-							?.contentWindow?.document?.querySelector('body');
-						if (iframe) {
-							targets.push(iframe);
-						}
+						const targets = getTargets();
 
 						for (const mode of ['light', 'dark']) {
 							const schemeTonalSpot = new SchemeTonalSpot(
@@ -207,20 +222,26 @@ waitForElement(document, 'home-assistant').then((ha) => {
 	}, 'call_service');
 
 	// Trigger on iframe node added to home-assistant-main
-	const observer = new MutationObserver((mutations) => {
+	const observer = new MutationObserver(async (mutations) => {
 		for (const mutation of mutations) {
 			for (const addedNode of mutation.addedNodes) {
 				if (addedNode.nodeName == 'IFRAME') {
-					waitForElement(
+					const iframe = await waitForElement(
 						haMain?.shadowRoot as ParentNode,
 						'iframe',
-					).then((iframe) => {
-						waitForElement(
-							(iframe as unknown as HTMLIFrameElement)
-								?.contentWindow?.document as ParentNode,
-							'body',
-						).then(() => setTheme());
-					});
+					);
+					await waitForKey(iframe, 'contentWindow');
+					await waitForKey(
+						(iframe as unknown as HTMLIFrameElement)
+							?.contentWindow as object,
+						'document',
+					);
+					await waitForElement(
+						(iframe as unknown as HTMLIFrameElement)?.contentWindow
+							?.document as ParentNode,
+						'body',
+					);
+					setTheme();
 				}
 			}
 		}
@@ -229,4 +250,20 @@ waitForElement(document, 'home-assistant').then((ha) => {
 		subtree: true,
 		childList: true,
 	});
-});
+}
+
+async function waitForElement(parent: ParentNode, selector: string) {
+	while (!parent.querySelector(selector)) {
+		await new Promise((resolve) => requestAnimationFrame(resolve));
+	}
+	return parent.querySelector(selector) as HassElement;
+}
+
+async function waitForKey(element: object, key: string) {
+	while (!element[key as keyof object]) {
+		await new Promise((resolve) => requestAnimationFrame(resolve));
+	}
+	return;
+}
+
+main();
