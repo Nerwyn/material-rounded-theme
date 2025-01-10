@@ -261,7 +261,7 @@ async function querySelectorAsync(
 	while (!parent.querySelector(selector) || kill) {
 		if (kill) {
 			console.error(
-				`Timeout waiting for ${selector} in ${parent} after ${timeout}ms`,
+				`Timeout waiting for ${selector} in ${parent} after ${timeout}ms.`,
 			);
 			break;
 		}
@@ -280,7 +280,7 @@ async function getAsync(
 	while (!(key in element) || element[key as keyof object] == null || kill) {
 		if (kill) {
 			console.error(
-				`Timeout waiting for ${key} in ${element} after ${timeout}ms`,
+				`Timeout waiting for ${key} in ${element} after ${timeout}ms.`,
 			);
 			break;
 		}
