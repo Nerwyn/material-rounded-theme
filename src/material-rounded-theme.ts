@@ -64,13 +64,17 @@ const colors: (keyof typeof MaterialDynamicColors)[] = [
 ];
 
 async function main() {
-	// When installed as a module, we need to wait for certain elements to load
-	const ha = await waitForElement(document, 'home-assistant');
-	await waitForKey(ha, 'shadowRoot');
-	const haMain = await waitForElement(
-		ha.shadowRoot as ParentNode,
+	// Wait for certain elements to load, especially when installed as a module
+	const ha = (await querySelectorAsync(
+		document,
+		'home-assistant',
+	)) as HassElement;
+	const haShadowRoot = await getAsync(ha, 'shadowRoot');
+	const haMain = await querySelectorAsync(
+		haShadowRoot,
 		'home-assistant-main',
 	);
+	const haMainShadowRoot = await getAsync(haMain as object, 'shadowRoot');
 	const html = document.querySelector('html');
 
 	// Sensor names
@@ -85,7 +89,7 @@ async function main() {
 		const targets: HTMLElement[] = [html as HTMLElement];
 
 		// Add-ons and HACS iframe
-		const iframe = haMain?.shadowRoot
+		const iframe = haMainShadowRoot
 			?.querySelector('iframe')
 			?.contentWindow?.document?.querySelector('body');
 		if (iframe) {
@@ -226,21 +230,16 @@ async function main() {
 		for (const mutation of mutations) {
 			for (const addedNode of mutation.addedNodes) {
 				if (addedNode.nodeName == 'IFRAME') {
-					const iframe = await waitForElement(
-						haMain?.shadowRoot as ParentNode,
+					const iframe = (await querySelectorAsync(
+						haMainShadowRoot,
 						'iframe',
+					)) as unknown as HTMLIFrameElement;
+					const contentWindow = await getAsync(
+						iframe,
+						'contentWindow',
 					);
-					await waitForKey(iframe, 'contentWindow');
-					await waitForKey(
-						(iframe as unknown as HTMLIFrameElement)
-							?.contentWindow as object,
-						'document',
-					);
-					await waitForElement(
-						(iframe as unknown as HTMLIFrameElement)?.contentWindow
-							?.document as ParentNode,
-						'body',
-					);
+					const document = await getAsync(contentWindow, 'document');
+					await querySelectorAsync(document, 'body');
 					setTheme();
 				}
 			}
@@ -252,18 +251,42 @@ async function main() {
 	});
 }
 
-async function waitForElement(parent: ParentNode, selector: string) {
-	while (!parent.querySelector(selector)) {
+async function querySelectorAsync(
+	parent: ParentNode,
+	selector: string,
+	timeout = 60000,
+) {
+	let kill = false;
+	setTimeout(() => (kill = true), timeout);
+	while (!parent.querySelector(selector) || kill) {
+		if (kill) {
+			console.error(
+				`Timeout waiting for ${selector} in ${parent} after ${timeout}ms`,
+			);
+			break;
+		}
 		await new Promise((resolve) => requestAnimationFrame(resolve));
 	}
-	return parent.querySelector(selector) as HassElement;
+	return parent.querySelector(selector);
 }
 
-async function waitForKey(element: object, key: string) {
-	while (!element[key as keyof object]) {
+async function getAsync(
+	element: object,
+	key: string,
+	timeout = 60000,
+): Promise<any> {
+	let kill = false;
+	setTimeout(() => (kill = true), timeout);
+	while (!(key in element) || element[key as keyof object] == null || kill) {
+		if (kill) {
+			console.error(
+				`Timeout waiting for ${key} in ${element} after ${timeout}ms`,
+			);
+			break;
+		}
 		await new Promise((resolve) => requestAnimationFrame(resolve));
 	}
-	return;
+	return element[key as keyof object];
 }
 
 main();
