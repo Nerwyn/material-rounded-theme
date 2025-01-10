@@ -118,11 +118,13 @@ This theme supports Material You color theming! This requires an additional Java
 
 ### (Optional) Download JavaScript Module Resource Locally in Home Assistant
 
+While the module should be cached in browser after first use, you can download it locally to ensure that Material You Color theming works offline.
+
 1. Download the module from this repository [here](https://github.com/Nerwyn/material-rounded-theme/blob/main/dist/material-rounded-theme.js).
 2. Upload this module to your Home Assistant instance, preferable in the `config/www` folder.
    - Your `configuration.yaml` file is found in the `config` folder. If the `www` folder does not exist create it. More information about the configuration folder can be found [here](https://www.home-assistant.io/docs/configuration/#to-find-the-configuration-directory).
 
-Remember! You must update your local copy of this module manually as update are made.
+**Remember!** You must update your local copy of this module manually as update are made. Release notes will call out JavaScript module changes.
 
 ### Add the Module as a Resource
 
@@ -135,9 +137,24 @@ Remember! You must update your local copy of this module manually as update are 
 5. Click `CREATE`.
 6. Hard refresh (`CTRL` + `F5`) your browser or clear app/browser cache to ensure the new resource loads correctly.
 
-Once the JavaScript module resource has been added, create a helper template sensor named `Material Rounded Base Color` that returns the hex code of your preferred base color. The theme colors will be calculated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities).
+### (Optional) Add the Module as a Frontend Module
+
+Adding this module as a frontend module will cause it to load sooner, prevent the intitial flash of the default color, and possibly fix issues with Home Assistant resources not loading on non-dashboard pages.
+
+1. Open your `configuration.yaml` (see above for information about the configuration folder).
+2. Add the file URL to `frontend` `extra_module_url`, adding the `frontend` and `extra_module_url` keys if they do not exist, and adding to them if they do.
+
+```yaml
+frontend:
+  extra_module_url:
+    - /local/material-rounded-theme.js # Or the CDN URL listed above
+```
+
+3. Restart Home Assistant.
 
 ### Create a Template Sensor Helper
+
+Once the JavaScript module resource has been added, create a helper template sensor named `Material Rounded Base Color` that returns the hex code of your preferred base color. The theme colors will be calculated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities).
 
 1. Navigate to `Settings` > `Devices & services` > ` Helpers`.
 2. Click `+ CREATE HELPER`.
