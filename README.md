@@ -154,7 +154,7 @@ frontend:
 
 ### Create a Template Sensor Helper
 
-Once the JavaScript module resource has been added, create a helper template sensor named `Material Rounded Base Color` that returns the hex code of your preferred base color. The theme colors will be calculated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities).
+Once the JavaScript module resource has been added, create a helper template sensor named `Material Rounded Base Color` (this name is used for all themes in this project) that returns the hex code of your preferred base color. The theme colors will be calculated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities).
 
 1. Navigate to `Settings` > `Devices & services` > ` Helpers`.
 2. Click `+ CREATE HELPER`.
