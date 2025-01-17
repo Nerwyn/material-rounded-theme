@@ -5,3 +5,9 @@ hui-entities-toggle {
 	left: -4px !important;
 	top: 8px !important;
 }
+
+/* Use primary color for graphs */
+.graph,
+hui-graph-header-footer {
+	--accent-color: var(--primary-color);
+}

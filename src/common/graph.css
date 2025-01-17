@@ -1,7 +1,0 @@
-rect {
-	fill: var(--primary-color) !important;
-}
-
-path {
-	stroke: hsl(0, 0%, 50%) !important;
-}

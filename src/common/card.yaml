@@ -37,10 +37,3 @@ hui-toggle-entity-row$:
   ha-settings-row:
     ha-switch$: >-
       {{ ha_switch.css }}
-
-# Graph Colors
-hui-graph-header-footer$ hui-graph-base$: >-
-  {{ graph.css }}
-hui-graph-header-footer$:
-  hui-graph-base$: >-
-    {{ graph.css }}
