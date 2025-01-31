@@ -273,7 +273,7 @@ async function querySelectorAsync(
 	return new Promise((resolve, reject) => {
 		const element = parent.querySelector(selector);
 		if (element) {
-			return resolve(element);
+			resolve(element);
 		}
 
 		const rejectTimeout = setTimeout(
@@ -309,7 +309,7 @@ async function getAsync(
 	let kill = false;
 	setTimeout(() => (kill = true), timeout);
 
-	while (!(key in element) || element[key as keyof object] == null || kill) {
+	while (!(key in element) || element[key as keyof object] == null) {
 		if (kill) {
 			console.error(
 				`Timeout waiting for ${key} in ${element} after ${timeout}ms.`,
