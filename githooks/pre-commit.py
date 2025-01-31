@@ -65,21 +65,22 @@ def main():
 				output[theme_title]['primary-background-color'] = 'var(--lovelace-background)'
 
 				# Add card mod fields to main versions of theme
-				output[theme_name]['card-mod-theme'] = theme_name
-				output[f'{theme_name} Transparent Card']['card-mod-theme'] = theme_name
+				output[theme_name]['card-mod-theme'] = 'Material Rounded'
+				output[f'{theme_name} Transparent Card']['card-mod-theme'] = 'Material Rounded'
 				
-				for element in theme_context:
-					if 'yaml' in theme_context[element]:
-						element_yaml = {
-							**{ key: theme_context[element]['yaml'][key] for key in theme_context[element]['yaml'] },
-						}
-						if '.' in theme_context[element]['yaml']:
-							element_yaml['.'] = Template(theme_context[element]['yaml']['.']).render(theme_context).strip()
+		# Build card-mod theme
+		for element in theme_context:
+			if 'yaml' in theme_context[element]:
+				element_yaml = {
+					**{ key: theme_context[element]['yaml'][key] for key in theme_context[element]['yaml'] },
+				}
+				if '.' in theme_context[element]['yaml']:
+					element_yaml['.'] = Template(theme_context[element]['yaml']['.']).render(theme_context).strip()
 
-						# Save template to buffer and then read to get yaml as string
-						buffer = StringIO()
-						yaml.dump(element_yaml, buffer)
-						output[theme_name][f'card-mod-{element.replace("_", "-")}-yaml'] = buffer.getvalue().strip()
+				# Save template to buffer and then read to get yaml as string
+				buffer = StringIO()
+				yaml.dump(element_yaml, buffer)
+				output['Material Rounded'][f'card-mod-{element.replace("_", "-")}-yaml'] = buffer.getvalue().strip()
 
 		yaml.dump(output, dist)
 
