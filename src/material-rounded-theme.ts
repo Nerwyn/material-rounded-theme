@@ -65,6 +65,10 @@ const colors: (keyof typeof MaterialDynamicColors)[] = [
 
 async function main() {
 	// Wait for certain elements to load, especially when installed as a module
+	const html = (await querySelectorAsync(
+		document,
+		'html',
+	)) as HTMLHtmlElement;
 	const ha = (await querySelectorAsync(
 		document,
 		'home-assistant',
@@ -74,8 +78,7 @@ async function main() {
 		haShadowRoot,
 		'home-assistant-main',
 	);
-	const haMainShadowRoot = await getAsync(haMain as object, 'shadowRoot');
-	const html = document.querySelector('html');
+	const haMainShadowRoot = await getAsync(haMain, 'shadowRoot');
 
 	// Sensor names
 	const userName = ha.hass.user?.name.toLowerCase().replace(/ /g, '_');
@@ -98,19 +101,25 @@ async function main() {
 		return targets;
 	}
 
+	/** Get theme color token */
+	function getToken(color: string) {
+		return color.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+	}
+
 	/** Remove theme colors */
 	function unsetTheme() {
 		const targets = getTargets();
 		for (const target of targets) {
-			for (const key of colors) {
-				const token = key
-					.replace(/([a-z])([A-Z])/g, '$1-$2')
-					.toLowerCase();
+			for (const color of colors) {
+				const token = getToken(color);
 				target?.style.removeProperty(`--md-sys-color-${token}-light`);
 				target?.style.removeProperty(`--md-sys-color-${token}-dark`);
 			}
 		}
-		console.info('Material design system colors removed.');
+		console.info(
+			'%c Material design system colors removed. ',
+			'color: #ffffff; background: #4c5c92; font-weight: bold; border-radius: 32px;',
+		);
 	}
 
 	/**
@@ -151,21 +160,19 @@ async function main() {
 								0,
 							);
 
-							const scheme: Record<string, number> = {};
 							for (const color of colors) {
-								scheme[color] = (
-									MaterialDynamicColors[color] as DynamicColor
-								).getArgb(schemeTonalSpot);
-							}
-							for (const [key, value] of Object.entries(scheme)) {
-								const token = key
-									.replace(/([a-z])([A-Z])/g, '$1-$2')
-									.toLowerCase();
-								const color = hexFromArgb(value);
+								const hex = hexFromArgb(
+									(
+										MaterialDynamicColors[
+											color
+										] as DynamicColor
+									).getArgb(schemeTonalSpot),
+								);
+								const token = getToken(color);
 								for (const target of targets) {
-									target?.style.setProperty(
+									target.style.setProperty(
 										`--md-sys-color-${token}-${mode}`,
-										color,
+										hex,
 									);
 								}
 							}
@@ -174,8 +181,15 @@ async function main() {
 						// This explicit background color breaks color theme on some pages
 						html?.style.removeProperty('background-color');
 
+						const primary = html.style.getPropertyValue(
+							'--md-sys-color-primary-light',
+						);
+						const onPrimary = html.style.getPropertyValue(
+							'--md-sys-color-on-primary-light',
+						);
 						console.info(
-							`Material design system colors updated using user defined base color ${baseColor}.`,
+							`%c Material design system colors updated using user defined base color ${baseColor}. `,
+							`color: ${onPrimary}; background: ${primary}; font-weight: bold; border-radius: 32px;`,
 						);
 					} else {
 						unsetTheme();
@@ -198,7 +212,7 @@ async function main() {
 
 	setTheme();
 
-	// Trigger on use color sensor change
+	// Trigger on user color sensor change
 	ha.hass.connection.subscribeMessage(
 		() => setTheme(),
 		{
@@ -233,7 +247,7 @@ async function main() {
 					const iframe = (await querySelectorAsync(
 						haMainShadowRoot,
 						'iframe',
-					)) as unknown as HTMLIFrameElement;
+					)) as HTMLIFrameElement;
 					const contentWindow = await getAsync(
 						iframe,
 						'contentWindow',
@@ -255,28 +269,46 @@ async function querySelectorAsync(
 	parent: ParentNode,
 	selector: string,
 	timeout = 60000,
-) {
-	let kill = false;
-	setTimeout(() => (kill = true), timeout);
-	while (!parent.querySelector(selector) || kill) {
-		if (kill) {
-			console.error(
-				`Timeout waiting for ${selector} in ${parent} after ${timeout}ms.`,
-			);
-			break;
+): Promise<Element> {
+	return new Promise((resolve, reject) => {
+		const element = parent.querySelector(selector);
+		if (element) {
+			return resolve(element);
 		}
-		await new Promise((resolve) => requestAnimationFrame(resolve));
-	}
-	return parent.querySelector(selector);
+
+		const rejectTimeout = setTimeout(
+			() =>
+				reject(
+					`Timeout waiting for ${selector} in ${parent} after ${timeout}ms.`,
+				),
+			timeout,
+		);
+
+		const observer = new MutationObserver(() => {
+			const element = parent.querySelector(selector);
+			if (element) {
+				clearTimeout(rejectTimeout);
+				observer.disconnect();
+				resolve(element);
+			}
+		});
+		observer.observe(parent, { childList: true, subtree: true });
+	});
 }
 
 async function getAsync(
-	element: object,
+	element: Node,
 	key: string,
 	timeout = 60000,
 ): Promise<any> {
+	let sleep = 1;
+	setTimeout(() => (sleep = 10), 100);
+	setTimeout(() => (sleep = 100), 1000);
+	setTimeout(() => (sleep = 1000), 5000);
+
 	let kill = false;
 	setTimeout(() => (kill = true), timeout);
+
 	while (!(key in element) || element[key as keyof object] == null || kill) {
 		if (kill) {
 			console.error(
@@ -284,7 +316,7 @@ async function getAsync(
 			);
 			break;
 		}
-		await new Promise((resolve) => requestAnimationFrame(resolve));
+		await new Promise((resolve) => setTimeout(resolve, sleep));
 	}
 	return element[key as keyof object];
 }
