@@ -196,7 +196,6 @@ Redesigns the toolbar and sidebar buttons to follow Material You navigation comp
 - Converts the toolbar header view tabs bar into a navigation bar footer.
 - Removes the default selection bar and ripple.
 - Spaces the view icons evenly along the entire toolbar.
-  - **WARNING**: Subviews must be placed at the end of the toolbar for the view tab count to be correct, otherwise the view tabs will end up smaller than expected.
   - While evenly spacing the icons should (and previously) be done by making their parent a flexbox, their parent is within a shadow-root which the view tabs are slotted into. Modifying this parent element with card-mod is possible but it is slow and inconsistent. A tab count and width calculation method is used instead, which is much faster and more consistent.
 - Adds view names below the view icons.
 - Highlights the current view with a colored icon and background behind the icon.

@@ -4,7 +4,10 @@
 	"useTabs": true,
 	"semi": true,
 	"endOfLine": "crlf",
-	"plugins": ["prettier-plugin-organize-imports"],
+	"plugins": [
+		"prettier-plugin-organize-imports",
+		"prettier-plugin-jinja-template"
+	],
 	"overrides": [
 		{
 			"files": "*.yaml",
