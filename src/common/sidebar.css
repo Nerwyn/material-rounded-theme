@@ -43,6 +43,7 @@ paper-icon-item::before {
 .notification-badge {
 	color: var(--on-error-color) !important;
 	background-color: var(--error-color) !important;
+	font-weight: 500 !important;
 }
 
 /* Use sidebar text color with no background on drawer badges */
@@ -54,4 +55,10 @@ paper-icon-item::before {
 :host([expanded]) .iron-selected .configuration-badge,
 :host([expanded]) .iron-selected .notification-badge {
 	color: var(--sidebar-selected-text-color) !important;
+}
+
+/* Fix rail sidebar badge position */
+:host(:not([expanded])) .configuration-badge,
+:host(:not([expanded])) .notification-badge {
+	bottom: 24px !important;
 }
