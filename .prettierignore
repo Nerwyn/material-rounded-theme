@@ -5,3 +5,4 @@
 **/githooks
 **/dist
 *.png
+*.jinja

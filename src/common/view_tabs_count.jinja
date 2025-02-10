@@ -1,4 +1,10 @@
-{% for i in range(50) %}
-	:is(ha-tabs, paper-tabs):has(> paper-tab:nth-child({{ i }} of
-	:not(.hide-tab))) { --view-tabs-count: {{ i }}; }
+{% for i in range(1, 50) %}
+{# For older devices that do not support the of <selector> syntax #}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child({{ i }})) {
+	--view-tabs-count: {{ i }};
+}
+{# For modern devices, allows for hidden and sub view tabs in the middle of view order #}
+:is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child({{ i }} of paper-tab:not(.hide-tab))) {
+	--view-tabs-count: {{ i }};
+}
 {% endfor %}
