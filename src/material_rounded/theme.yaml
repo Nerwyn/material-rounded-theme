@@ -1,6 +1,7 @@
 Material Rounded:
   modes:
     dark:
+      # Main colors
       primary-color: var(--md-sys-color-primary-dark, rgb(194, 231, 254))
       accent-color: var(--md-sys-color-on-primary-dark, rgb(0, 74, 119))
       state-icon-color: rgb(196, 199, 197)
@@ -46,6 +47,7 @@ Material Rounded:
       sidebar-text-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
 
     light:
+      # Main colors
       primary-color: var(--md-sys-color-primary-light, rgb(0, 29, 53))
       accent-color: var(--md-sys-color-on-primary-light, rgb(194, 231, 255))
       state-icon-color: rgb(69, 71, 70)
@@ -140,7 +142,6 @@ Material Rounded:
   text-primary-color: var(--lovelace-background)
   text-accent-color: var(--primary-color)
   text-light-primary-color: var(--text-primary-color)
-  rgb-primary-text-color: var(--primary-text-color)
   text-field-overflow: hidden
   link-text-color: var(--primary-color)
 
