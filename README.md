@@ -9,9 +9,9 @@
 
 [![My Home Assistant](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=material-rounded-theme&owner=Nerwyn&category=Plugin)
 
-# Material Rounded and Material You - Material Design 3 Themes for Home Assistant
+# Material You and Material Rounded - Material Design 3 Themes for Home Assistant
 
-Themes for Home Assistant influenced by the Google Home app and Material Design 3 by Google on Android.
+Themes for Home Assistant influenced by Google apps and Material Design 3 by Google on Android.
 
 Both themes implement Material Design 3 redesigns of elements when possible using [card-mod](https://github.com/thomasloven/lovelace-card-mod). If you have card-mod installed and do not the component redesigns, use the "No Mod" versions of this theme.
 
@@ -19,51 +19,9 @@ Don't like the blue accents? You can choose a different Material You base color!
 
 This theme also includes "Transparent Card" versions with transparent card backgrounds. It also includes separate light and dark versions of all themes for niche use cases.
 
-## Material Rounded - In the Style of the Google Home App
-
-The original version of the theme. This theme aims to match the styling of the Google Home app pre Material Design 3 redesign, which uses some aspects of Material Design 3 and static blue accent colors. It supports custom user colors, but just for primary, accent, and toggle switch colors.
-
-<p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-red-light.png" alt="material-rounded-red-light" width="250"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-green-light.png" alt="material-rounded-green-light" width="250"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-light.png" alt="material-rounded-blue-light" width="250"/>
-</p>
-
-<p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-red-dark.png" alt="material-rounded-red-dark" width="250"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-green-dark.png" alt="material-rounded-green-dark" width="250"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-dark.png" alt="material-rounded-blue-dark" width="250"/>
-</p>
-
-### Compared to Google Home
-
-<p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-tiles-comparison-dark.png" alt="material-rounded-tiles-comparison-dark" width="375"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-tiles-comparison-light.png" alt="material-rounded-tiles-comparison-light" width="375"/>
-</p>
-
-<p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-buttons-comparison-dark.png" alt="material-rounded-buttons-comparison-dark" width="375"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-buttons-comparison-light.png" alt="material-rounded-buttons-comparison-light" width="375"/>
-</p>
-
-Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card).
-
-### Updated Material You Components
-
-<p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-blue-dark.png" alt="material-rounded-components-blue-dark" width="375"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-blue-light.png" alt="material-rounded-components-blue-light" width="375"/>
-</p>
-
-<p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-dark.png" alt="material-rounded-components-green-dark" width="375"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-light.png" alt="material-rounded-components-green-light" width="375"/>
-</p>
-
 ## Material You - A Fully Featured Implementation of Material Design 3
 
-The full color version of the theme. This theme aims to match the styling of Material Design 3 (also known as Material You) Google apps on Android like Phone, Contacts, Messages, Photos, and Drive. Everything has been updated to use colors generated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) following the [Material Design 3 guidelines](https://m3.material.io/). Supports custom user colors for virtually all of Home Assistant. If no user base color is provided defaults to a shade of blue.
+The full color version of the theme. This theme aims to match the styling of Material Design 3 (also known as Material You) Google apps on Android like Phone, Contacts, Messages, Photos, Drive, and now Google Home. Everything has been updated to use colors generated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) following the [Material Design 3 guidelines](https://m3.material.io/). Supports custom user colors for virtually all of Home Assistant. If no user base color is provided defaults to a shade of blue.
 
 <p>
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-red-light.png" alt="material-you-red-light" width="250"/>
@@ -99,6 +57,48 @@ The full color version of the theme. This theme aims to match the styling of Mat
 <p>
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-red-dark.png" alt="material-you-components-red-dark" width="375"/>
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-red-light.png" alt="material-you-components-red-light" width="375"/>
+</p>
+
+## Material Rounded - In the Style of the Google Home App Pre-Material You Colors
+
+The original version of the theme. This theme aims to match the styling of the Google Home app pre Material Design 3 redesign, which uses some aspects of Material Design 3 and static blue accent colors. It supports custom user colors, but just for primary, accent, and toggle switch colors.
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-red-light.png" alt="material-rounded-red-light" width="250"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-green-light.png" alt="material-rounded-green-light" width="250"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-light.png" alt="material-rounded-blue-light" width="250"/>
+</p>
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-red-dark.png" alt="material-rounded-red-dark" width="250"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-green-dark.png" alt="material-rounded-green-dark" width="250"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-dark.png" alt="material-rounded-blue-dark" width="250"/>
+</p>
+
+### Compared to Google Home Pre-Material You Colors
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-tiles-comparison-dark.png" alt="material-rounded-tiles-comparison-dark" width="375"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-tiles-comparison-light.png" alt="material-rounded-tiles-comparison-light" width="375"/>
+</p>
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-buttons-comparison-dark.png" alt="material-rounded-buttons-comparison-dark" width="375"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-buttons-comparison-light.png" alt="material-rounded-buttons-comparison-light" width="375"/>
+</p>
+
+Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card).
+
+### Updated Material You Components
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-blue-dark.png" alt="material-rounded-components-blue-dark" width="375"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-blue-light.png" alt="material-rounded-components-blue-light" width="375"/>
+</p>
+
+<p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-dark.png" alt="material-rounded-components-green-dark" width="375"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-light.png" alt="material-rounded-components-green-light" width="375"/>
 </p>
 
 ## Installation
