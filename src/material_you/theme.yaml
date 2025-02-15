@@ -116,6 +116,12 @@ Material You:
       md-switch-checked-track-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
       md-switch-unchecked-track-color: var(--md-sys-color-surface-variant-dark, var(--default-md-sys-color-surface-variant-dark))
 
+      # Checkboxes and radio buttons
+      mdc-checkbox-checked-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
+      mdc-checkbox-ink-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
+      mdc-checkbox-unchecked-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
+      mdc-radio-unchecked-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
+
       # Other mode specific colors
       disabled-text-color: rgba(255, 255, 255, 0.5)
       disabled-color: rgb(0, 0, 0)
@@ -226,6 +232,12 @@ Material You:
       md-switch-unchecked-button-color: var(--md-sys-color-outline-light, var(--default-md-sys-color-outline-light))
       md-switch-checked-track-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
       md-switch-unchecked-track-color: var(--md-sys-color-surface-variant-light, var(--default-md-sys-color-surface-variant-light))
+
+      # Checkboxes and radio buttons
+      mdc-checkbox-checked-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
+      mdc-checkbox-ink-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
+      mdc-checkbox-unchecked-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
+      mdc-radio-unchecked-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
 
       # Legacy mdc colors
       mdc-theme-primary: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
@@ -339,7 +351,6 @@ Material You:
   paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
-  mdc-radio-unchecked-color: var(--mdc-checkbox-unchecked-color)
 
   # Text Fields and Dropdowns
   input-fill-color: var(--input-background-color)
