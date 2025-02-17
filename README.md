@@ -110,7 +110,8 @@ Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelac
 5. Optionally also install card-mod from HACS to take advantage of the Material You components and colors described above.
 6. Refresh Home Assistant.
 7. Navigate to your Profile, and select one of the `Material Rounded` or `Material You` theme variants.
-8. (Optional) Follow the [instructions above](#material-you-colors) for installing the companion Material Design 3 color JavaScript module resource.
+   - **If you set theme theme at the view level, it will not style the view tabs. The view tabs are outside of the view.**
+8. (Optional) Follow the [instructions below](#material-you-colors) for installing the companion Material Design 3 color JavaScript module resource.
 
 ## Material You Colors
 
