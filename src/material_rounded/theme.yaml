@@ -79,16 +79,16 @@ Material Rounded:
       app-header-background-color: rgb(255, 255, 255)
 
       # Toolbar
-      md-current-tab-icon-color: var(--md-sys-color-on-primary-container-light, var(--primary-color))
-      md-current-tab-icon-background: var(--md-sys-color-primary-container-light, var(--accent-color))
+      md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-light, var(--primary-color))
+      md-current-tab-icon-background: var(--md-sys-color-secondary-container-light, var(--accent-color))
       md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--primary-text-color))
       md-state-layer-tab-background: var(--md-sys-color-on-surface-light, var(--primary-text-color))
       md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
 
       # Sidebar
-      sidebar-selected-text-color: var(--md-sys-color-on-primary-container-light, var(--primary-color))
-      sidebar-selected-icon-color: var(--md-sys-color-on-primary-container-light, var(--primary-color))
-      sidebar-selected-background: var(--md-sys-color-primary-container-light, var(--accent-color))
+      sidebar-selected-text-color: var(--md-sys-color-on-secondary-container-light, var(--primary-color))
+      sidebar-selected-icon-color: var(--md-sys-color-on-secondary-container-light, var(--primary-color))
+      sidebar-selected-background: var(--md-sys-color-secondary-container-light, var(--accent-color))
       sidebar-icon-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
       sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
       sidebar-menu-button-text-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
