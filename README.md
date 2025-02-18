@@ -199,24 +199,29 @@ Redesigns the toolbar and sidebar buttons to follow Material You navigation comp
 - Spaces the view icons evenly along the entire toolbar.
   - While evenly spacing the icons should (and previously) be done by making their parent a flexbox, their parent is within a shadow-root which the view tabs are slotted into. Modifying this parent element with card-mod is possible but it is slow and inconsistent. A tab count and width calculation method is used instead, which is much faster and more consistent.
 - Adds view names below the view icons.
+- Increase font weight of current view tab name.
 - Highlights the current view with a colored icon and background behind the icon.
 - Transition animation on view icon background when selected.
+- [State layers](https://m3.material.io/foundations/interaction/states/state-layers) on hover, focus, and press.
 
 #### [Navigation Drawer](https://m3.material.io/components/navigation-drawer/overview)
 
 Desktop sidebar expanded and mobile.
 
-- Icon and background of current view now uses primary and accent colors.
+- Icon and background of current page now uses primary and accent colors.
 - Transition animation on view icon background when selected.
 - Badge background color removed and color set to same as icon and text.
+- Increase font weight of current page name.
+- [State layers](https://m3.material.io/foundations/interaction/states/state-layers) on hover, focus, and press.
 
 #### [Navigation Rail](https://m3.material.io/components/navigation-rail/overview)
 
 Desktop sidebar collapsed.
 
-- Background of current view now uses primary and accent colors.
+- Background of current page now uses primary and accent colors.
 - Current view icon background is a circle to match Material You example of a navigation rail menu without labels.
 - Badge colors changed to material design error colors (red).
+- [State layers](https://m3.material.io/foundations/interaction/states/state-layers) on hover, focus, and press.
 
 ### [Switches](https://m3.material.io/components/switch/overview)
 

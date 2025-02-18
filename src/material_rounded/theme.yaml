@@ -27,6 +27,22 @@ Material Rounded:
       view-background: rgb(19, 19, 20)
       app-header-background-color: rgb(19, 19, 20)
 
+      # Toolbar
+      md-current-tab-icon-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
+      md-current-tab-icon-background: var(--md-sys-color-primary-container-dark, var(--accent-color))
+      md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--primary-text-color))
+      md-state-layer-tab-background: var(--md-sys-color-on-surface-dark, var(--primary-text-color))
+      md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
+
+      # Sidebar
+      sidebar-selected-text-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
+      sidebar-selected-icon-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
+      sidebar-selected-background: var(--md-sys-color-primary-container-dark, var(--accent-color))
+      sidebar-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
+      sidebar-text-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
+      sidebar-menu-button-text-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
+      sidebar-state-pressed-background: var(--md-sys-color-on-secondary-container-dark, var(--primary-color))
+
       # Switches
       md-switch-checked-button-color: var(--md-sys-color-on-primary-dark, var(--accent-color))
       md-switch-unchecked-button-color: var(--md-sys-color-outline-dark, rgb(140, 144, 159))
@@ -36,19 +52,6 @@ Material Rounded:
       # Checkboxes and radio buttons
       mdc-checkbox-checked-color: var(--primary-color, var(--md-sys-color-primary-dark))
       mdc-checkbox-ink-color: var(--accent-color, var(--md-sys-color-on-primary-dark))
-
-      # Toolbar
-      md-current-tab-icon-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
-      md-current-tab-icon-background: var(--md-sys-color-primary-container-dark, var(--accent-color))
-      md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--primary-text-color))
-      md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
-
-      # Sidebar
-      sidebar-selected-text-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
-      sidebar-selected-icon-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
-      sidebar-selected-icon-background: var(--md-sys-color-primary-container-dark, var(--secondary-color))
-      sidebar-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
-      sidebar-text-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
 
     light:
       # Main colors
@@ -75,6 +78,22 @@ Material Rounded:
       view-background: rgb(255, 255, 255)
       app-header-background-color: rgb(255, 255, 255)
 
+      # Toolbar
+      md-current-tab-icon-color: var(--md-sys-color-on-primary-container-light, var(--primary-color))
+      md-current-tab-icon-background: var(--md-sys-color-primary-container-light, var(--accent-color))
+      md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--primary-text-color))
+      md-state-layer-tab-background: var(--md-sys-color-on-surface-light, var(--primary-text-color))
+      md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
+
+      # Sidebar
+      sidebar-selected-text-color: var(--md-sys-color-on-primary-container-light, var(--primary-color))
+      sidebar-selected-icon-color: var(--md-sys-color-on-primary-container-light, var(--primary-color))
+      sidebar-selected-background: var(--md-sys-color-primary-container-light, var(--accent-color))
+      sidebar-icon-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
+      sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
+      sidebar-menu-button-text-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
+      sidebar-state-pressed-background: var(--md-sys-color-on-secondary-container-light, var(--primary-color))
+
       # Switches
       md-switch-checked-button-color: var(--md-sys-color-on-primary-light, rgb(255, 255, 255))
       md-switch-unchecked-button-color: var(--md-sys-color-outline-light, rgb(114, 119, 133))
@@ -84,19 +103,6 @@ Material Rounded:
       # Checkboxes and radio buttons
       mdc-checkbox-checked-color: var(--primary-color, var(--md-sys-color-primary-light))
       mdc-checkbox-ink-color: var(--accent-color, var(--md-sys-color-on-primary-light))
-
-      # Toolbar
-      md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-light, var(--primary-color))
-      md-current-tab-icon-background: var(--md-sys-color-secondary-container-light, var(--accent-color))
-      md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--primary-text-color))
-      md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
-
-      # Sidebar
-      sidebar-selected-text-color: var(--md-sys-color-on-secondary-container-light, var(--primary-color))
-      sidebar-selected-icon-color: var(--md-sys-color-on-secondary-container-light, var(--primary-color))
-      sidebar-selected-icon-background: var(--md-sys-color-secondary-container-light, var(--secondary-color))
-      sidebar-icon-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
-      sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
 
   # Spacings
   horizontal-stack-card-margin: 0px 4px

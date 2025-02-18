@@ -89,14 +89,17 @@ Material You:
       # Sidebar
       sidebar-selected-text-color: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
       sidebar-selected-icon-color: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
-      sidebar-selected-icon-background: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
+      sidebar-selected-background: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
       sidebar-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       sidebar-text-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
+      sidebar-menu-button-text-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
+      sidebar-state-pressed-background: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
 
       # Toolbar
       md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
       md-current-tab-icon-background: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
       md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
+      md-state-layer-tab-background: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
       md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       app-header-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
 
@@ -216,14 +219,17 @@ Material You:
       # Sidebar
       sidebar-selected-text-color: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
       sidebar-selected-icon-color: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
-      sidebar-selected-icon-background: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
+      sidebar-selected-background: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
       sidebar-icon-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
+      sidebar-menu-button-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
+      sidebar-state-pressed-background: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
 
       # Toolbar
       md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
       md-current-tab-icon-background: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
       md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
+      md-state-layer-tab-background: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
       md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       app-header-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
 

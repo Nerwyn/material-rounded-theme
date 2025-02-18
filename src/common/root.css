@@ -60,31 +60,58 @@ paper-tab {
 		((100vw - var(--mdc-drawer-width, 0px)) / var(--view-tabs-count)) - 3px,
 		calc(((100vw - var(--mdc-drawer-width, 0px))) - 3px)
 	);
+	--icon-width: min(64px, var(--tab-width));
 }
 
 /* Add background and color current view icon */
-paper-tab.iron-selected ha-icon {
-	width: min(64px, var(--tab-width));
-	color: var(--md-current-tab-icon-color);
-	background: var(--md-current-tab-icon-background);
-}
-
-/* View icon transition and display centering */
-ha-icon {
-	min-width: 24px;
-	width: 24px;
+paper-tab ha-icon::before {
+	content: '';
+	position: absolute;
 	height: 32px;
+	width: var(--icon-width);
 	border-radius: 16px;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1);
-	will-change: width, color, background;
+	background: var(--md-current-tab-icon-background);
+	transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+	transform: scaleX(0);
+}
+paper-tab.iron-selected ha-icon::before {
+	transform: scaleX(1);
+}
+paper-tab.iron-selected ha-icon {
+	color: var(--md-current-tab-icon-color);
 }
 
 /* Prevent edit mode icon from shrinking on small width displays */
 ha-svg-icon {
 	min-width: 24px;
+}
+
+/* View icon display centering */
+ha-icon {
+	width: var(--icon-width);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+/* View icon state layers */
+ha-icon::after {
+	content: '';
+	position: absolute;
+	height: 32px;
+	width: var(--icon-width);
+	border-radius: 16px;
+	z-index: 0;
+}
+paper-tab:hover ha-icon::after {
+	background: var(--md-state-layer-tab-background);
+	opacity: 0.08;
+}
+paper-tab:focus ha-icon::after,
+paper-tab:active ha-icon::after {
+	background: var(--md-state-layer-tab-background);
+	opacity: 0.1;
 }
 
 /* View label */
@@ -106,6 +133,7 @@ paper-tab::after {
 /* Current view label color */
 paper-tab.iron-selected::after {
 	color: var(--md-current-tab-text-color);
+	font-weight: 700;
 }
 
 /* Fix edit mode toolbar height and width */
