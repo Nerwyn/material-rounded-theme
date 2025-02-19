@@ -140,9 +140,8 @@ paper-tab::after {
 	font-size: min(3.6vw, 13px);
 	padding: 0px 1px;
 	overflow: hidden;
-	line-height: 12px;
+	line-height: 14px;
 	height: 100%;
-	margin-top: 4px;
 	color: var(--md-inactive-tab-text-color);
 }
 

@@ -23,19 +23,9 @@ This theme also includes "Transparent Card" versions with transparent card backg
 
 The full color version of the theme. This theme aims to match the styling of Material Design 3 (also known as Material You) Google apps on Android like Phone, Contacts, Messages, Photos, Drive, and now Google Home. Everything has been updated to use colors generated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) following the [Material Design 3 guidelines](https://m3.material.io/). Supports custom user colors for virtually all of Home Assistant. If no user base color is provided the themes defaults to a shade of blue.
 
-<p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-red-light.png" alt="material-you-red-light" width="250"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-green-light.png" alt="material-you-green-light" width="250"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-blue-light.png" alt="material-you-blue-light" width="250"/>
-</p>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-rainbow.png" alt="material-you-rainbow" width="750"/>
 
-<p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-red-dark.png" alt="material-you-red-dark" width="250"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-green-dark.png" alt="material-you-green-dark" width="250"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-blue-dark.png" alt="material-you-blue-dark" width="250"/>
-</p>
-
-### Compared to Material You Android Apps
+### Compared to Google Home
 
 <p>
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-comparison-blue-dark.png" alt="material-you-comparison-blue-dark" width="375"/>
@@ -64,15 +54,8 @@ The full color version of the theme. This theme aims to match the styling of Mat
 The original legacy version of the theme. This theme aims to match the styling of the Google Home app before Material You color theming was implemented in 2025. It uses a neutral palette with blue accent colors. It supports custom user colors, but just for primary, accent, and certain redesigned element colors.
 
 <p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-red-light.png" alt="material-rounded-red-light" width="250"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-green-light.png" alt="material-rounded-green-light" width="250"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-light.png" alt="material-rounded-blue-light" width="250"/>
-</p>
-
-<p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-red-dark.png" alt="material-rounded-red-dark" width="250"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-green-dark.png" alt="material-rounded-green-dark" width="250"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-dark.png" alt="material-rounded-blue-dark" width="250"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-dark.png" alt="material-rounded-blue-dark" width="300"/>
+<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-light.png" alt="material-rounded-blue-light" width="300"/>
 </p>
 
 ## Installation
