@@ -52,11 +52,14 @@ paper-icon-item::after {
 	z-index: 0;
 	opacity: 0;
 	background: var(--md-state-layer-tab-background);
+	transition: opacity 0.1s cubic-bezier(0.4, 0, 1, 1) 0s;
 }
-paper-icon-item:hover::after {
-	opacity: 0.08;
+@media (hover: hover) {
+	paper-icon-item:hover::after {
+		opacity: 0.08;
+	}
 }
-paper-icon-item:focus::after,
+paper-icon-item:focus-visible::after,
 paper-icon-item:active::after {
 	opacity: 0.1;
 }
