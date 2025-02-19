@@ -17,7 +17,7 @@ Both themes implement Material Design 3 redesigns of elements when possible usin
 
 Don't like the blue accents? You can choose a different Material You base color! [See below for more](#material-you-colors). Requires an additional JS resource script. Does not require card-mod.
 
-This theme also includes "Transparent Card" versions with transparent card backgrounds. It also includes separate light and dark versions of all themes for niche use cases.
+This theme also includes "Transparent Card" versions with transparent card backgrounds. It also includes separate light and dark versions of all themes for niche use cases. These variations are combined into many different versions of the theme.
 
 ## Material You - A Fully Featured Implementation of Material Design 3
 
@@ -59,9 +59,9 @@ The full color version of the theme. This theme aims to match the styling of Mat
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-red-light.png" alt="material-you-components-red-light" width="375"/>
 </p>
 
-## Material Rounded - In the Style of the Google Home App Pre-Material You Colors
+## Material Rounded - In the Style of the Google Home App Pre 2025 Material You Update
 
-The original version of the theme. This theme aims to match the styling of the Google Home app pre Material Design 3 redesign, which uses some aspects of Material Design 3 and static blue accent colors. It supports custom user colors, but just for primary, accent, and toggle switch colors.
+The original legacy version of the theme. This theme aims to match the styling of the Google Home app before Material You color theming was implemented in 2025. It uses a neutral palette with blue accent colors. It supports custom user colors, but just for primary, accent, and certain redesigned element colors.
 
 <p>
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-red-light.png" alt="material-rounded-red-light" width="250"/>
@@ -73,32 +73,6 @@ The original version of the theme. This theme aims to match the styling of the G
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-red-dark.png" alt="material-rounded-red-dark" width="250"/>
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-green-dark.png" alt="material-rounded-green-dark" width="250"/>
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-dark.png" alt="material-rounded-blue-dark" width="250"/>
-</p>
-
-### Compared to Google Home Pre-Material You Colors
-
-<p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-tiles-comparison-dark.png" alt="material-rounded-tiles-comparison-dark" width="375"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-tiles-comparison-light.png" alt="material-rounded-tiles-comparison-light" width="375"/>
-</p>
-
-<p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-buttons-comparison-dark.png" alt="material-rounded-buttons-comparison-dark" width="375"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-buttons-comparison-light.png" alt="material-rounded-buttons-comparison-light" width="375"/>
-</p>
-
-Light cards made using [Big Slider Card](https://github.com/nicufarmache/lovelace-big-slider-card).
-
-### Updated Material You Components
-
-<p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-blue-dark.png" alt="material-rounded-components-blue-dark" width="375"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-blue-light.png" alt="material-rounded-components-blue-light" width="375"/>
-</p>
-
-<p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-dark.png" alt="material-rounded-components-green-dark" width="375"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-components-green-light.png" alt="material-rounded-components-green-light" width="375"/>
 </p>
 
 ## Installation
@@ -190,7 +164,9 @@ Redesigns the toolbar and sidebar buttons to follow Material You navigation comp
 
 - Retains the sidebar toggle and dashboard menu (small width screens) or action items (large width screens) from the navigation toolbar header in a top app bar.
 - Non-view buttons appear at top of screen near their original locations.
-- Buttons disappear when user is not scrolled to the top of the view.
+- Adds the current view title to the center.
+- Height increased to 64px.
+- Disappears when user is not scrolled to the top of the view.
 
 #### [Navigation Bar](https://m3.material.io/components/navigation-bar/overview)
 

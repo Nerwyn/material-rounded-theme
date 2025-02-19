@@ -17,9 +17,22 @@ ha-tabs {
 	transition: top 100ms ease-in-out 0s;
 }
 
-/* Hide header if not scrolled to top  */
-:host([scrolled]) .header {
-	top: -48px !important;
+/* Put current view label in header title */
+paper-tab.iron-selected::before {
+	content: attr(aria-label);
+	text-transform: none;
+	position: fixed;
+	top: calc(var(--header-height) / 2);
+	left: calc(50% + (var(--mdc-drawer-width, 0px) / 2));
+	transform: translate(-50%, -50%);
+	font-size: 22px;
+	font-weight: 400;
+}
+
+/* Hide header and title if not scrolled to top  */
+:host([scrolled]) .header,
+:host([scrolled]) paper-tab.iron-selected::before {
+	top: calc(-1 * var(--header-height)) !important;
 	transition: top 100ms ease-in-out 0s;
 }
 
