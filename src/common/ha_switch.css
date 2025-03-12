@@ -45,6 +45,7 @@
 	) !important;
 	background: var(--switch-unchecked-button-color) !important;
 	border: none !important;
+	box-shadow: unset !important;
 	transition:
 		height 0.2s cubic-bezier(0.2, 0, 0, 1),
 		width 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
