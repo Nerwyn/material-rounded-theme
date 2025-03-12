@@ -114,12 +114,12 @@ Material You:
       md-divider-color: var(--md-sys-color-outline-variant-dark, var(--default-md-sys-color-outline-variant-dark))
 
       # Switches
-      switch-checked-button-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
-      switch-unchecked-button-color: var(--md-sys-color-outline-dark, var(--default-md-sys-color-outline-dark))
-      switch-checked-track-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
-      switch-unchecked-track-color: var(--md-sys-color-surface-variant-dark, var(--default-md-sys-color-surface-variant-dark))
-      switch-checked-icon-color: var(--md-sys-color-on-primary-container-dark, var(--default-md-sys-color-on-primary-container-dark))
-      switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-dark, var(--default-md-sys-color-surface-container-highest-dark))
+      md-switch-checked-button-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
+      md-switch-unchecked-button-color: var(--md-sys-color-outline-dark, var(--default-md-sys-color-outline-dark))
+      md-switch-checked-track-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
+      md-switch-unchecked-track-color: var(--md-sys-color-surface-variant-dark, var(--default-md-sys-color-surface-variant-dark))
+      md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-dark, var(--default-md-sys-color-on-primary-container-dark))
+      md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-dark, var(--default-md-sys-color-surface-container-highest-dark))
 
       # Checkboxes and radio buttons
       mdc-checkbox-checked-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
@@ -236,12 +236,12 @@ Material You:
       app-header-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
 
       # Switches
-      switch-checked-button-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
-      switch-unchecked-button-color: var(--md-sys-color-outline-light, var(--default-md-sys-color-outline-light))
-      switch-checked-track-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
-      switch-unchecked-track-color: var(--md-sys-color-surface-variant-light, var(--default-md-sys-color-surface-variant-light))
-      switch-checked-icon-color: var(--md-sys-color-on-primary-container-light, var(--default-md-sys-color-on-primary-container-light))
-      switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-light, var(--default-md-sys-color-surface-container-highest-light))
+      md-switch-checked-button-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
+      md-switch-unchecked-button-color: var(--md-sys-color-outline-light, var(--default-md-sys-color-outline-light))
+      md-switch-checked-track-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
+      md-switch-unchecked-track-color: var(--md-sys-color-surface-variant-light, var(--default-md-sys-color-surface-variant-light))
+      md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-light, var(--default-md-sys-color-on-primary-container-light))
+      md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-light, var(--default-md-sys-color-surface-container-highest-light))
 
       # Checkboxes and radio buttons
       mdc-checkbox-checked-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
@@ -349,6 +349,14 @@ Material You:
   paper-slider-pin-color: var(--paper-slider-knob-color)
   paper-slider-active-color: var(--paper-slider-knob-color)
   paper-slider-secondary-color: var(--light-primary-color)
+
+  # Switches
+  switch-checked-button-color: var(--md-switch-checked-button-color)
+  switch-unchecked-button-color: var(--md-switch-unchecked-button-color)
+  switch-checked-track-color: var(--md-switch-checked-track-color)
+  switch-unchecked-track-color: var(--md-switch-unchecked-track-color)
+  switch-checked-icon-color: var(--md-switch-checked-icon-color)
+  switch-unchecked-icon-color: var(--md-switch-unchecked-icon-color)
 
   # Toggles
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)

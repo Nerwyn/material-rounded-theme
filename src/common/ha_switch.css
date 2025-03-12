@@ -3,6 +3,10 @@
 	padding: 0 !important;
 	position: relative;
 	top: 3px;
+	--switch-checked-button-color: var(--md-switch-checked-button-color);
+	--switch-unchecked-button-color: var(--md-switch-unchecked-button-color);
+	--switch-checked-track-color: var(--md-switch-checked-track-color);
+	--switch-unchecked-track-color: var(--md-switch-unchecked-track-color);
 }
 
 /* Increase track size, make always opaque, and border. */
