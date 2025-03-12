@@ -48,7 +48,7 @@ Material Rounded:
       switch-unchecked-button-color: var(--md-sys-color-outline-dark, rgb(140, 144, 159))
       switch-checked-track-color: var(--md-sys-color-primary-dark, var(--primary-color))
       switch-unchecked-track-color: var(--md-sys-color-surface-variant-dark, rgb(65, 71, 83))
-      switch-checked-icon-color: var(--md-sys-color-on-primary-container-dark, var(--input-background-color))
+      switch-checked-icon-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
       switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-dark, var(--input-background-color))
 
       # Checkboxes and radio buttons
@@ -101,7 +101,7 @@ Material Rounded:
       switch-unchecked-button-color: var(--md-sys-color-outline-light, rgb(114, 119, 133))
       switch-checked-track-color: var(--md-sys-color-primary-light, rgb(0, 91, 191))
       switch-unchecked-track-color: var(--md-sys-color-surface-variant-light, rgb(222, 226, 242))
-      switch-checked-icon-color: var(--md-sys-color-on-primary-container-light, var(--input-background-color))
+      switch-checked-icon-color: var(--md-sys-color-on-primary-container-light, var(--primary-color))
       switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-light, var(--input-background-color))
 
       # Checkboxes and radio buttons
