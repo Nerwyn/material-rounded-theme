@@ -44,10 +44,12 @@ Material Rounded:
       sidebar-state-pressed-background: var(--md-sys-color-on-secondary-container-dark, var(--primary-color))
 
       # Switches
-      md-switch-checked-button-color: var(--md-sys-color-on-primary-dark, var(--accent-color))
-      md-switch-unchecked-button-color: var(--md-sys-color-outline-dark, rgb(140, 144, 159))
-      md-switch-checked-track-color: var(--md-sys-color-primary-dark, var(--primary-color))
-      md-switch-unchecked-track-color: var(--md-sys-color-surface-variant-dark, rgb(65, 71, 83))
+      switch-checked-button-color: var(--md-sys-color-on-primary-dark, var(--accent-color))
+      switch-unchecked-button-color: var(--md-sys-color-outline-dark, rgb(140, 144, 159))
+      switch-checked-track-color: var(--md-sys-color-primary-dark, var(--primary-color))
+      switch-unchecked-track-color: var(--md-sys-color-surface-variant-dark, rgb(65, 71, 83))
+      switch-checked-icon-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
+      switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-dark, var(--input-background-color))
 
       # Checkboxes and radio buttons
       mdc-checkbox-checked-color: var(--primary-color, var(--md-sys-color-primary-dark))
@@ -95,10 +97,12 @@ Material Rounded:
       sidebar-state-pressed-background: var(--md-sys-color-on-secondary-container-light, var(--primary-color))
 
       # Switches
-      md-switch-checked-button-color: var(--md-sys-color-on-primary-light, rgb(255, 255, 255))
-      md-switch-unchecked-button-color: var(--md-sys-color-outline-light, rgb(114, 119, 133))
-      md-switch-checked-track-color: var(--md-sys-color-primary-light, rgb(0, 91, 191))
-      md-switch-unchecked-track-color: var(--md-sys-color-surface-variant-light, rgb(222, 226, 242))
+      switch-checked-button-color: var(--md-sys-color-on-primary-light, rgb(255, 255, 255))
+      switch-unchecked-button-color: var(--md-sys-color-outline-light, rgb(114, 119, 133))
+      switch-checked-track-color: var(--md-sys-color-primary-light, rgb(0, 91, 191))
+      switch-unchecked-track-color: var(--md-sys-color-surface-variant-light, rgb(222, 226, 242))
+      switch-checked-icon-color: var(--md-sys-color-on-primary-container-light, var(--primary-color))
+      switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-light, var(--input-background-color))
 
       # Checkboxes and radio buttons
       mdc-checkbox-checked-color: var(--primary-color, var(--md-sys-color-primary-light))
@@ -189,12 +193,6 @@ Material Rounded:
   paper-slider-pin-color: var(--paper-slider-knob-color)
   paper-slider-active-color: var(--paper-slider-knob-color)
   paper-slider-secondary-color: var(--light-primary-color)
-
-  # Switches
-  switch-checked-button-color: var(--md-switch-checked-button-color)
-  switch-unchecked-button-color: var(--md-switch-unchecked-button-color)
-  switch-checked-track-color: var(--md-switch-checked-track-color)
-  switch-unchecked-track-color: var(--md-switch-unchecked-track-color)
 
   # Checkboxes and radio buttons
   mdc-checkbox-unchecked-color: var(--disabled-text-color)

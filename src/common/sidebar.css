@@ -95,4 +95,5 @@ paper-icon-item:active::after {
 :host(:not([expanded])) .configuration-badge,
 :host(:not([expanded])) .notification-badge {
 	bottom: 24px !important;
+	z-index: 2;
 }
