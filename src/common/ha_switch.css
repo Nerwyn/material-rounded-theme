@@ -69,3 +69,49 @@
 mwc-ripple {
 	display: none !important;
 }
+
+/* Track state layers */
+.mdc-switch__track::after {
+	content: '';
+	position: absolute;
+	height: 32px;
+	width: 52px;
+	border-radius: 32px;
+	pointer-events: none;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background: var(--switch-unchecked-track-state-layer);
+	opacity: 0;
+	transition: opacity 0.1s cubic-bezier(0.4, 0, 1, 1) 0s;
+}
+.mdc-switch--checked .mdc-switch__track::after {
+	background: var(--switch-checked-track-color);
+}
+@media (hover: hover) {
+	.mdc-switch:hover .mdc-switch__track::after {
+		opacity: 0.08;
+	}
+}
+.mdc-switch:focus-visible .mdc-switch__track::after,
+.mdc-switch:active .mdc-switch__track::after {
+	opacity: 0.1;
+}
+
+/* Thumb state layers */
+@media (hover: hover) {
+	.mdc-switch:hover .mdc-switch__thumb {
+		background: var(--switch-unchecked-button-state-layer) !important;
+	}
+	.mdc-switch--checked:hover .mdc-switch__thumb {
+		background: var(--switch-checked-button-state-layer) !important;
+	}
+}
+.mdc-switch:focus-visible .mdc-switch__thumb,
+.mdc-switch:active .mdc-switch__thumb {
+	background: var(--switch-unchecked-button-state-layer) !important;
+}
+.mdc-switch--checked:focus-visible .mdc-switch__thumb,
+.mdc-switch--checked:active .mdc-switch__thumb {
+	background: var(--switch-checked-button-state-layer) !important;
+}

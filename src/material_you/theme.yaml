@@ -120,6 +120,9 @@ Material You:
       md-switch-unchecked-track-color: var(--md-sys-color-surface-container-highest-dark, var(--default-md-sys-color-surface-container-highest-dark))
       md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-dark, var(--default-md-sys-color-on-primary-container-dark))
       md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-dark, var(--default-md-sys-color-surface-container-highest-dark))
+      md-switch-checked-button-state-layer: var(--md-sys-color-primary-container-dark, var(--default-md-sys-color-primary-container-dark))
+      md-switch-unchecked-button-state-layer: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
+      md-switch-unchecked-track-state-layer: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
 
       # Checkboxes and radio buttons
       mdc-checkbox-checked-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
@@ -242,6 +245,9 @@ Material You:
       md-switch-unchecked-track-color: var(--md-sys-color-surface-container-highest-light, var(--default-md-sys-color-surface-container-highest-light))
       md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-light, var(--default-md-sys-color-on-primary-container-light))
       md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-light, var(--default-md-sys-color-surface-container-highest-light))
+      md-switch-checked-button-state-layer: var(--md-sys-color-primary-container-light, var(--default-md-sys-color-primary-container-light))
+      md-switch-unchecked-button-state-layer: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
+      md-switch-unchecked-track-state-layer: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
 
       # Checkboxes and radio buttons
       mdc-checkbox-checked-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
@@ -357,6 +363,9 @@ Material You:
   switch-unchecked-track-color: var(--md-switch-unchecked-track-color)
   switch-checked-icon-color: var(--md-switch-checked-icon-color)
   switch-unchecked-icon-color: var(--md-switch-unchecked-icon-color)
+  switch-checked-button-state-layer: var(--md-switch-checked-button-state-layer)
+  switch-unchecked-button-state-layer: var(--md-switch-unchecked-button-state-layer)
+  switch-unchecked-track-state-layer: var(--md-switch-unchecked-track-state-layer)
 
   # Toggles
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)

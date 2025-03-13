@@ -50,6 +50,9 @@ Material Rounded:
       md-switch-unchecked-track-color: var(--md-sys-color-surface-container-highest-dark, rgb(65, 71, 83))
       md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
       md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-dark, var(--input-background-color))
+      md-switch-checked-button-state-layer: var(--md-sys-color-primary-container-dark, var(--accent-color))
+      md-switch-unchecked-button-state-layer: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
+      md-switch-unchecked-track-state-layer: var(--md-sys-color-on-surface-dark, var(--primary-text-color))
 
       # Checkboxes and radio buttons
       mdc-checkbox-checked-color: var(--primary-color, var(--md-sys-color-primary-dark))
@@ -103,6 +106,9 @@ Material Rounded:
       md-switch-unchecked-track-color: var(--md-sys-color-surface-container-highest-light, rgb(222, 226, 242))
       md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-light, var(--primary-color))
       md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-light, var(--input-background-color))
+      md-switch-checked-button-state-layer: var(--md-sys-color-primary-container-light, var(--accent-color))
+      md-switch-unchecked-button-state-layer: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
+      md-switch-unchecked-track-state-layer: var(--md-sys-color-on-surface-light, var(--primary-text-color))
 
       # Checkboxes and radio buttons
       mdc-checkbox-checked-color: var(--primary-color, var(--md-sys-color-primary-light))
@@ -201,6 +207,9 @@ Material Rounded:
   switch-unchecked-track-color: var(--md-switch-unchecked-track-color)
   switch-checked-icon-color: var(--md-switch-checked-icon-color)
   switch-unchecked-icon-color: var(--md-switch-unchecked-icon-color)
+  switch-checked-button-state-layer: var(--md-switch-checked-button-state-layer)
+  switch-unchecked-button-state-layer: var(--md-switch-unchecked-button-state-layer)
+  switch-unchecked-track-state-layer: var(--md-switch-unchecked-track-state-layer)
 
   # Checkboxes and radio buttons
   mdc-checkbox-unchecked-color: var(--disabled-text-color)
