@@ -117,7 +117,7 @@ Material You:
       md-switch-checked-button-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
       md-switch-unchecked-button-color: var(--md-sys-color-outline-dark, var(--default-md-sys-color-outline-dark))
       md-switch-checked-track-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
-      md-switch-unchecked-track-color: var(--md-sys-color-surface-variant-dark, var(--default-md-sys-color-surface-variant-dark))
+      md-switch-unchecked-track-color: var(--md-sys-color-surface-container-highest-dark, var(--default-md-sys-color-surface-container-highest-dark))
       md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-dark, var(--default-md-sys-color-on-primary-container-dark))
       md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-dark, var(--default-md-sys-color-surface-container-highest-dark))
 
@@ -239,7 +239,7 @@ Material You:
       md-switch-checked-button-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
       md-switch-unchecked-button-color: var(--md-sys-color-outline-light, var(--default-md-sys-color-outline-light))
       md-switch-checked-track-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
-      md-switch-unchecked-track-color: var(--md-sys-color-surface-variant-light, var(--default-md-sys-color-surface-variant-light))
+      md-switch-unchecked-track-color: var(--md-sys-color-surface-container-highest-light, var(--default-md-sys-color-surface-container-highest-light))
       md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-light, var(--default-md-sys-color-on-primary-container-light))
       md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-light, var(--default-md-sys-color-surface-container-highest-light))
 

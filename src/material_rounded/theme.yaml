@@ -47,7 +47,7 @@ Material Rounded:
       md-switch-checked-button-color: var(--md-sys-color-on-primary-dark, var(--accent-color))
       md-switch-unchecked-button-color: var(--md-sys-color-outline-dark, rgb(140, 144, 159))
       md-switch-checked-track-color: var(--md-sys-color-primary-dark, var(--primary-color))
-      md-switch-unchecked-track-color: var(--md-sys-color-surface-variant-dark, rgb(65, 71, 83))
+      md-switch-unchecked-track-color: var(--md-sys-color-surface-container-highest-dark, rgb(65, 71, 83))
       md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
       md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-dark, var(--input-background-color))
 
@@ -100,7 +100,7 @@ Material Rounded:
       md-switch-checked-button-color: var(--md-sys-color-on-primary-light, rgb(255, 255, 255))
       md-switch-unchecked-button-color: var(--md-sys-color-outline-light, rgb(114, 119, 133))
       md-switch-checked-track-color: var(--md-sys-color-primary-light, rgb(0, 91, 191))
-      md-switch-unchecked-track-color: var(--md-sys-color-surface-variant-light, rgb(222, 226, 242))
+      md-switch-unchecked-track-color: var(--md-sys-color-surface-container-highest-light, rgb(222, 226, 242))
       md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-light, var(--primary-color))
       md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-light, var(--input-background-color))
 
