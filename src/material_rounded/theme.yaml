@@ -57,7 +57,7 @@ Material Rounded:
       # Checkboxes and radio buttons
       mdc-checkbox-checked-color: var(--md-sys-color-primary-dark, var(--primary-color))
       mdc-checkbox-ink-color: var(--md-sys-color-on-primary-dark, var(--accent-color))
-      mdc-checkbox-unchecked-state-layer: var(--md-sys-color-on-surface-light, var(--primary-text-color))
+      mdc-checkbox-unchecked-state-layer: var(--md-sys-color-on-surface-dark, var(--primary-text-color))
 
     light:
       # Main colors
