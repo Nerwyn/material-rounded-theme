@@ -128,6 +128,7 @@ Material You:
       mdc-checkbox-checked-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
       mdc-checkbox-ink-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
       mdc-checkbox-unchecked-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
+      mdc-checkbox-unchecked-state-layer: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
       mdc-radio-unchecked-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
 
       # Other mode specific colors
@@ -253,6 +254,7 @@ Material You:
       mdc-checkbox-checked-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
       mdc-checkbox-ink-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
       mdc-checkbox-unchecked-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
+      mdc-checkbox-unchecked-state-layer: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
       mdc-radio-unchecked-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
 
       # Legacy mdc colors
