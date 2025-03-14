@@ -1,4 +1,4 @@
-{% for i in range(1, 50) %}
+{% for i in range(1, 33) %}
 {# For older devices that do not support the of <selector> syntax #}
 :is(ha-tabs, paper-tabs):has(> paper-tab:not(.hide-tab):nth-child({{ i }})) {
 	--view-tabs-count: {{ i }};

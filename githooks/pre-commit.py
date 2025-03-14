@@ -29,6 +29,8 @@ def main():
 						r_str = yaml.load(f)
 					case 'css':
 						r_str = rcssmin.cssmin(f.read())
+					case 'jinja':
+						r_str = rcssmin.cssmin(Template(f.read()).render())
 					case _:
 						r_str= f.read()
 				theme_context[name][file_type] = r_str
