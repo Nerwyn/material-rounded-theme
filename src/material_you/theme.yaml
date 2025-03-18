@@ -99,7 +99,6 @@ Material You:
       md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
       md-current-tab-icon-background: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
       md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
-      md-state-layer-tab-background: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
       md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       app-header-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
 
@@ -237,7 +236,6 @@ Material You:
       md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
       md-current-tab-icon-background: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
       md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
-      md-state-layer-tab-background: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
       md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       app-header-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
 

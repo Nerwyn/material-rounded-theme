@@ -116,7 +116,7 @@ ha-icon::after {
 	width: var(--icon-width);
 	border-radius: 16px;
 	z-index: 0;
-	background: var(--md-state-layer-tab-background);
+	background: var(--md-current-tab-text-color);
 	opacity: 0;
 	transition: opacity 0.1s cubic-bezier(0.4, 0, 1, 1) 0s;
 }

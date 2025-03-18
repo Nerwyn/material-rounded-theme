@@ -51,7 +51,7 @@ paper-icon-item::after {
 	right: 0;
 	z-index: 0;
 	opacity: 0;
-	background: var(--md-state-layer-tab-background);
+	background: var(--md-current-tab-text-color);
 	transition: opacity 0.1s cubic-bezier(0.4, 0, 1, 1) 0s;
 }
 @media (hover: hover) {
