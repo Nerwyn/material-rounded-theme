@@ -55,9 +55,13 @@ Material Rounded:
       md-switch-unchecked-track-state-layer: var(--md-sys-color-on-surface-dark, var(--primary-text-color))
 
       # Checkboxes and radio buttons
-      mdc-checkbox-checked-color: var(--md-sys-color-primary-dark, var(--primary-color))
-      mdc-checkbox-ink-color: var(--md-sys-color-on-primary-dark, var(--accent-color))
-      mdc-checkbox-unchecked-state-layer: var(--md-sys-color-on-surface-dark, var(--primary-text-color))
+      checkbox-checked-border-color: var(--md-sys-color-primary-dark, var(--primary-color))
+      checkbox-checked-icon-color: var(--md-sys-color-on-primary-dark, var(--accent-color))
+      checkbox-unchecked-border-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
+      checkbox-unchecked-icon-color: var(--md-sys-color-on-surface-dark, var(--primary-text-color))
+
+      # Radio buttons
+      mdc-radio-unchecked-color: var(--md-sys-color-on-surface-variant-dark, var(--disabled-text-color))
 
     light:
       # Main colors
@@ -111,10 +115,14 @@ Material Rounded:
       md-switch-unchecked-button-state-layer: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
       md-switch-unchecked-track-state-layer: var(--md-sys-color-on-surface-light, var(--primary-text-color))
 
-      # Checkboxes and radio buttons
-      mdc-checkbox-checked-color: var(--md-sys-color-primary-light, var(--primary-color))
-      mdc-checkbox-ink-color: var(--md-sys-color-on-primary-light, var(--accent-color))
-      mdc-checkbox-unchecked-state-layer: var(--md-sys-color-on-surface-light, var(--primary-text-color))
+      # Checkboxes
+      checkbox-checked-border-color: var(--md-sys-color-primary-light, var(--primary-color))
+      checkbox-checked-icon-color: var(--md-sys-color-on-primary-light, var(--accent-color))
+      checkbox-unchecked-border-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
+      checkbox-unchecked-icon-color: var(--md-sys-color-on-surface-light, var(--primary-text-color))
+
+      # Radio buttons
+      mdc-radio-unchecked-color: var(--md-sys-color-on-surface-variant-light, var(--disabled-text-color))
 
   # Spacings
   horizontal-stack-card-margin: 0px 4px
@@ -213,9 +221,10 @@ Material Rounded:
   switch-unchecked-button-state-layer: var(--md-switch-unchecked-button-state-layer)
   switch-unchecked-track-state-layer: var(--md-switch-unchecked-track-state-layer)
 
-  # Checkboxes and radio buttons
-  mdc-checkbox-unchecked-color: var(--disabled-text-color)
-  mdc-radio-unchecked-color: var(--disabled-text-color)
+  # Checkboxes
+  mdc-checkbox-checked-color: var(--checkbox-checked-border-color)
+  mdc-checkbox-ink-color: var(--checkbox-checked-icon-color)
+  mdc-checkbox-unchecked-color: var(--checkbox-unchecked-border-color)
 
   # Toggles
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)

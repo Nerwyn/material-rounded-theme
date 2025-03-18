@@ -124,11 +124,13 @@ Material You:
       md-switch-unchecked-button-state-layer: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       md-switch-unchecked-track-state-layer: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
 
-      # Checkboxes and radio buttons
-      mdc-checkbox-checked-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
-      mdc-checkbox-ink-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
-      mdc-checkbox-unchecked-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      mdc-checkbox-unchecked-state-layer: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
+      # Checkboxes
+      checkbox-checked-border-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
+      checkbox-checked-icon-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
+      checkbox-unchecked-border-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
+      checkbox-unchecked-icon-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
+
+      # Radio buttons
       mdc-radio-unchecked-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
 
       # Other mode specific colors
@@ -250,11 +252,13 @@ Material You:
       md-switch-unchecked-button-state-layer: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       md-switch-unchecked-track-state-layer: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
 
-      # Checkboxes and radio buttons
-      mdc-checkbox-checked-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
-      mdc-checkbox-ink-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
-      mdc-checkbox-unchecked-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      mdc-checkbox-unchecked-state-layer: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
+      # Checkboxes
+      checkbox-checked-border-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
+      checkbox-checked-icon-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
+      checkbox-unchecked-border-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
+      checkbox-unchecked-icon-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
+
+      # Radio buttons
       mdc-radio-unchecked-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
 
       # Legacy mdc colors
@@ -374,6 +378,11 @@ Material You:
   paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
+
+  # Checkboxes
+  mdc-checkbox-checked-color: var(--checkbox-checked-border-color)
+  mdc-checkbox-ink-color: var(--checkbox-checked-icon-color)
+  mdc-checkbox-unchecked-color: var(--checkbox-unchecked-border-color)
 
   # Text Fields and Dropdowns
   input-fill-color: var(--input-background-color)
