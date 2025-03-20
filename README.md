@@ -187,6 +187,7 @@ Desktop sidebar collapsed.
 - Track now encompasses thumb.
 - Removes the default ripple in favor of a thumb that changes size when used.
 - Uses material design colors for the switch thumb, track, and outline.
+- [State layers](https://m3.material.io/foundations/interaction/states/state-layers) on hover, focus, and press.
 
 ### Views
 
