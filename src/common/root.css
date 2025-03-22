@@ -15,7 +15,7 @@ ha-tabs {
 .header {
 	background-color: var(--md-sys-color-surface) !important;
 	transition: var(--scroll-header-transition) !important;
-	--scroll-header-transition: background-color 50ms ease-in-out 0s;
+	--scroll-header-transition: background-color 150ms ease-in-out 0s;
 }
 
 /* Put current view label in header title */
