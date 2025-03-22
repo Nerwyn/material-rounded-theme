@@ -13,7 +13,6 @@ ha-tabs {
 
 /* Make header transparent and add transition */
 .header {
-	background-color: var(--md-sys-color-surface) !important;
 	transition: var(--scroll-header-transition) !important;
 	--scroll-header-transition: background-color 150ms ease-in-out 0s;
 }
