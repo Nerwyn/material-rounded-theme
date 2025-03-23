@@ -1,8 +1,8 @@
-/* Make header static */
+/* Make header transparent and define scroll transition */
 .header {
-	position: static !important;
-	width: 100% !important;
-	--mdc-top-app-bar-width: 100% !important;
+	background-color: transparent !important;
+	pointer-events: none;
+	--scroll-transition: transform 50ms cubic-bezier(0.2, 0, 0, 1);
 }
 
 /* Put current view label in header title */
@@ -15,15 +15,10 @@ paper-tab.iron-selected::before {
 	transform: translate(-50%, -50%);
 	font-size: 22px;
 	font-weight: 400;
-	transition: transform 50ms cubic-bezier(0.2, 0, 0, 1);
+	transition: var(--scroll-transition);
 }
 :host([scrolled]) paper-tab.iron-selected::before {
 	transform: translate(-50%, calc(-50% - var(--header-height)));
-}
-
-/* Remove toolbar padding */
-.toolbar {
-	padding: 0 !important;
 }
 
 /* Move menu and action items buttons to top corners outside of toolbar and add transition */
@@ -34,6 +29,19 @@ paper-tab.iron-selected::before {
 .action-items,
 ha-menu-button {
 	padding: 0 12px;
+	transition: var(--scroll-transition);
+	pointer-events: all;
+}
+
+/* Hide header buttons and title if not scrolled to top  */
+:host([scrolled]) ha-menu-button,
+:host([scrolled]) .action-items {
+	transform: translateY(calc(-1 * var(--header-height)));
+}
+
+/* Remove toolbar padding */
+.toolbar {
+	padding: 0 !important;
 }
 
 /* Force hide subview tab just in case */
@@ -52,7 +60,7 @@ ha-tabs {
 	padding-bottom: env(safe-area-inset-bottom) !important;
 	margin: 0 !important;
 	margin-inline: 0 !important;
-	z-index: 1;
+	pointer-events: all;
 }
 
 /*

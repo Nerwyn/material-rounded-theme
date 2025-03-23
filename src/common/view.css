@@ -5,9 +5,3 @@
 			env(safe-area-inset-bottom)
 	) !important;
 }
-
-/* Remove top header padding */
-#view {
-	padding-top: env(safe-area-inset-top) !important;
-	--header-height: 0;
-}
