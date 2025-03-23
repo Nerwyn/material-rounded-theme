@@ -25,44 +25,34 @@
 /* Fix thumb position */
 .mdc-switch__thumb-underlay {
 	top: -8px !important;
-	left: var(--thumb-left-on, var(--thumb-left-off)) !important;
-	--thumb-left-off: -8px;
+	left: -8px !important;
 }
 /* Thumb position when on */
 .mdc-switch--checked .mdc-switch__thumb-underlay {
-	--thumb-left-on: -4px;
+	transform: translateX(20px) !important;
 }
 
 /* Switch thumb color and size */
 .mdc-switch__thumb {
-	height: var(
-		--thumb-size-active,
-		var(--thumb-size-on, var(--thumb-size-off))
-	) !important;
-	width: var(
-		--thumb-size-active,
-		var(--thumb-size-on, var(--thumb-size-off))
-	) !important;
+	height: 16px !important;
+	width: 16px !important;
 	background: var(--switch-unchecked-button-color) !important;
 	border: none !important;
 	box-shadow: unset !important;
-	transition:
-		height 0.2s cubic-bezier(0.2, 0, 0, 1),
-		width 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
-	--thumb-size-off: 16px;
+	transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
 }
 /* Switch on thumb color and size */
 .mdc-switch--checked .mdc-switch__thumb {
 	background: var(--switch-checked-button-color) !important;
-	--thumb-size-on: 24px;
+	transform: scale(1.5, 1.5);
 }
 
 /* Thumb active size */
 .mdc-switch__thumb:active {
-	--thumb-size-active: 30px !important;
+	transform: scale(1.875, 1.875);
 }
 .mdc-switch--checked .mdc-switch__thumb:active {
-	--thumb-size-active: 28px !important;
+	transform: scale(1.75, 1.75);
 }
 
 /* Remove ripple */

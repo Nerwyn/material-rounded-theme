@@ -1,14 +1,27 @@
-/* Make header transparent */
-.header {
-	background-color: transparent !important;
-	pointer-events: none;
-	--scroll-transition: transform 300ms cubic-bezier(0.2, 0, 0, 1);
+/* Make hui-root outer div a flex column */
+div:has(#view) {
+	display: flex;
+	flex-direction: column;
 }
 
-/* Hide header buttons and title if not scrolled to top  */
-:host([scrolled]) ha-menu-button,
-:host([scrolled]) .action-items {
-	transform: translateY(calc(-1 * var(--header-height)));
+/* Make header static */
+.header {
+	position: static !important;
+	width: 100% !important;
+	--mdc-top-app-bar-width: 100% !important;
+}
+
+/* Put current view label in header title */
+paper-tab.iron-selected::before {
+	content: attr(aria-label);
+	text-transform: none;
+	position: fixed;
+	top: calc(var(--header-height) / 2);
+	left: calc(50% + (var(--mdc-drawer-width, 0px) / 2));
+	transform: translate(-50%, -50%);
+	font-size: 22px;
+	font-weight: 400;
+	transition: transform 50ms cubic-bezier(0.2, 0, 0, 1);
 }
 :host([scrolled]) paper-tab.iron-selected::before {
 	transform: translate(-50%, calc(-50% - var(--header-height)));
@@ -21,14 +34,12 @@
 
 /* Move menu and action items buttons to top corners outside of toolbar and add transition */
 .action-items {
-	position: fixed;
+	position: absolute;
 	right: 0px;
 }
 .action-items,
 ha-menu-button {
 	padding: 0 12px;
-	transition: var(--scroll-transition);
-	pointer-events: all;
 }
 
 /* Force hide subview tab just in case */
@@ -47,7 +58,7 @@ ha-tabs {
 	padding-bottom: env(safe-area-inset-bottom) !important;
 	margin: 0 !important;
 	margin-inline: 0 !important;
-	pointer-events: all;
+	z-index: 1;
 }
 
 /*
@@ -85,19 +96,6 @@ paper-tab.iron-selected ha-icon::before {
 }
 paper-tab.iron-selected ha-icon {
 	color: var(--md-current-tab-icon-color);
-}
-
-/* Put current view label in header title */
-paper-tab.iron-selected::before {
-	content: attr(aria-label);
-	text-transform: none;
-	position: fixed;
-	top: calc(var(--header-height) / 2);
-	left: calc(50% + (var(--mdc-drawer-width, 0px) / 2));
-	transform: translate(-50%, -50%);
-	font-size: 22px;
-	font-weight: 400;
-	transition: var(--scroll-transition);
 }
 
 /* Prevent edit mode icon from shrinking on small width displays */
