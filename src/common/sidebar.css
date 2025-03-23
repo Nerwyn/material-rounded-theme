@@ -4,7 +4,7 @@ ha-sidebar {
 }
 
 /* Animate background when expanding/retracting sidebar */
-:not(.profile) > paper-icon-item {
+paper-icon-item {
 	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1);
 	height: 48px;
 	margin: 0 4px !important;
@@ -16,6 +16,7 @@ ha-sidebar {
 	z-index: 2;
 	overflow: hidden;
 	white-space: nowrap;
+	margin: 0 !important;
 }
 ha-icon,
 ha-svg-icon {
@@ -28,7 +29,7 @@ paper-icon-item::before {
 	height: 48px;
 	width: 100% !important;
 	position: absolute !important;
-	transition: all 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
+	transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
 	left: 0 !important;
 	right: 0 !important;
 	border-radius: 128px !important;

@@ -88,7 +88,7 @@ paper-tab ha-icon::before {
 	width: var(--icon-width);
 	border-radius: 16px;
 	background: var(--md-current-tab-icon-background);
-	transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+	transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1);
 	transform: scaleX(0);
 }
 paper-tab.iron-selected ha-icon::before {
