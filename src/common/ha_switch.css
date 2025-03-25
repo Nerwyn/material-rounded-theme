@@ -39,20 +39,23 @@
 	background: var(--switch-unchecked-button-color) !important;
 	border: none !important;
 	box-shadow: unset !important;
-	transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
+	transition: scale 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
 }
 /* Switch on thumb color and size */
 .mdc-switch--checked .mdc-switch__thumb {
 	background: var(--switch-checked-button-color) !important;
-	transform: scale(1.5, 1.5);
+	scale: 1.5;
 }
 
 /* Thumb active size */
-.mdc-switch__thumb:active {
-	transform: scale(1.875, 1.875);
+@media (hover: hover) {
+	.mdc-switch__thumb:hover {
+		scale: 1.75;
+	}
 }
-.mdc-switch--checked .mdc-switch__thumb:active {
-	transform: scale(1.75, 1.75);
+.mdc-switch__thumb:has(input:focus-visible),
+.mdc-switch__thumb:active {
+	scale: 1.75;
 }
 
 /* Remove ripple */
@@ -83,7 +86,7 @@ mwc-ripple {
 		opacity: 0.08;
 	}
 }
-.mdc-switch:focus-visible .mdc-switch__track::after,
+.mdc-switch:has(input:focus-visible) .mdc-switch__track::after,
 .mdc-switch:active .mdc-switch__track::after {
 	opacity: 0.1;
 }
@@ -97,11 +100,11 @@ mwc-ripple {
 		background: var(--switch-checked-button-state-layer) !important;
 	}
 }
-.mdc-switch:focus-visible .mdc-switch__thumb,
+.mdc-switch:has(input:focus-visible) .mdc-switch__thumb,
 .mdc-switch:active .mdc-switch__thumb {
 	background: var(--switch-unchecked-button-state-layer) !important;
 }
-.mdc-switch--checked:focus-visible .mdc-switch__thumb,
+.mdc-switch--checked:has(input:focus-visible) .mdc-switch__thumb,
 .mdc-switch--checked:active .mdc-switch__thumb {
 	background: var(--switch-checked-button-state-layer) !important;
 }
