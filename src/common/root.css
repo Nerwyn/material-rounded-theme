@@ -199,3 +199,8 @@ paper-tabs {
 	height: 100%;
 	margin-top: -6px;
 }
+
+/* Fix edit mode menu link color */
+.menu-link {
+	color: var(--app-header-edit-text-color);
+}
