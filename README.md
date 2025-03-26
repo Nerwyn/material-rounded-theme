@@ -150,6 +150,7 @@ Redesigns the toolbar and sidebar buttons to follow Material You navigation comp
 - Adds the current view title to the center.
 - Height increased to 64px.
 - Disappears when user is not scrolled to the top of the view.
+- Use a variant color for trailing buttons and edit mode.
 
 #### [Navigation Bar](https://m3.material.io/components/navigation-bar/overview)
 
@@ -195,6 +196,7 @@ Desktop sidebar collapsed.
   - The navigation bar is not present on subviews and single view dashboards.
   - This padding is also removed in kiosk mode.
 - Add card button of classic lovelace views updated to better match the [extended FAB specification](https://m3.material.io/components/extended-fab/overview).
+  - The add card button is within a shadow-root and does not style consistently. If the button does not appear it is likely underneath the navigation bar, and should appear if you refresh the page while still in edit mode.
 - Increase `--ha-sections-view-row-gap` to 18px, which is also used for the column gap on mobile displays to match Google Home app.
 
 If you do not want these changes, use the "No Mod" versions of the theme. If you only want some of these changes, you will have to modify and recompile the theme yourself.

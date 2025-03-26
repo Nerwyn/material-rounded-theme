@@ -21,20 +21,30 @@ paper-tab.iron-selected::before {
 	transform: translate(-50%, calc(-50% - var(--header-height)));
 }
 
-/* Move menu and action items buttons to top corners outside of toolbar and add transition */
+/*
+ * Move menu and action items buttons to header
+ * Add scroll transition to header buttons
+ * User different color for header trailing icons
+ */
 .action-items {
 	position: absolute;
 	right: 0px;
+	color: var(--app-header-edit-text-color);
 }
 .action-items,
 ha-menu-button {
 	padding: 0 12px;
+}
+.action-items,
+.main-title,
+ha-menu-button {
 	transition: var(--scroll-transition);
 	pointer-events: all;
 }
 
 /* Hide header buttons and title if not scrolled to top  */
 :host([scrolled]) ha-menu-button,
+:host([scrolled]) .main-title,
 :host([scrolled]) .action-items {
 	transform: translateY(calc(-1 * var(--header-height)));
 }

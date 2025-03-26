@@ -101,6 +101,7 @@ Material You:
       md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
       md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
       app-header-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
+      app-header-edit-text-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
 
       # Legacy mdc colors
       mdc-theme-primary: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
@@ -238,6 +239,7 @@ Material You:
       md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
       md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
       app-header-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
+      app-header-edit-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
 
       # Switches
       md-switch-checked-button-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
@@ -283,7 +285,6 @@ Material You:
   header-height: 64px
   footer-height: 82px
   mdc-top-app-bar-fixed-box-shadow: none
-  app-header-edit-text-color: var(--app-header-text-color)
   app-header-edit-background-color: var(--primary-background-color)
   app-header-selection-bar-color: none
   navbar-background: var(--primary-background-color)

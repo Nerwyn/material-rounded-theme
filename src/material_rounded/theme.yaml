@@ -133,7 +133,7 @@ Material Rounded:
   footer-height: 82px
   mdc-top-app-bar-fixed-box-shadow: none
   app-header-text-color: var(--primary-text-color)
-  app-header-edit-text-color: var(--app-header-text-color)
+  app-header-edit-text-color: var(--secondary-text-color)
   app-header-edit-background-color: var(--primary-background-color)
   app-header-selection-bar-color: none
   navbar-background: var(--primary-background-color)
