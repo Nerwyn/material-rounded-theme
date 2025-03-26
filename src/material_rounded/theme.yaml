@@ -2,30 +2,30 @@ Material Rounded:
   modes:
     dark:
       # Main colors
-      primary-color: var(--md-sys-color-primary-dark, rgb(194, 231, 254))
-      accent-color: var(--md-sys-color-on-primary-dark, rgb(0, 74, 119))
-      state-icon-color: rgb(196, 199, 197)
-      primary-text-color: rgb(228, 228, 231)
-      secondary-text-color: rgb(187, 188, 196)
-      disabled-text-color: rgba(255, 255, 255, 0.5)
-      disabled-color: rgb(0, 0, 0)
-      input-background-color: rgb(46, 48, 56)
-      slider-color: rgb(8, 66, 160)
-      secondary-background-color: rgb(55, 57, 59) # dark mode only
-      state-inactive-color: rgb(72, 74, 78) # dark mode only
+      primary-color: "var(--md-sys-color-primary-dark, #c2e7fe)"
+      accent-color: "var(--md-sys-color-on-primary-dark, #004a77)"
+      state-icon-color: "#c4c7c5"
+      primary-text-color: "#e4e4e7"
+      secondary-text-color: "#bbbcc4"
+      disabled-text-color: "#ffffff80"
+      disabled-color: "#000000"
+      input-background-color: "#2e3038"
+      slider-color: "#0842a0"
+      secondary-background-color: "#37393b" # dark mode only
+      state-inactive-color: "#484a4e" # dark mode only
 
       # Error
-      error-color: rgb(242, 184, 181)
-      on-error-color: rgb(96, 20, 16)
+      error-color: "#f2b8b5"
+      on-error-color: "#601410"
 
       # Cards and footer
-      card-background-color: rgb(40, 42, 44)
-      primary-background-color: rgb(30, 31, 32)
+      card-background-color: "#282a2c"
+      primary-background-color: "#1e1f20"
 
       # Background and header
-      lovelace-background: rgb(19, 19, 20)
-      view-background: rgb(19, 19, 20)
-      app-header-background-color: rgb(19, 19, 20)
+      lovelace-background: "#131314"
+      view-background: "#131314"
+      app-header-background-color: "#131314"
 
       # Toolbar
       md-current-tab-icon-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
@@ -44,9 +44,9 @@ Material Rounded:
 
       # Switches
       md-switch-checked-button-color: var(--md-sys-color-on-primary-dark, var(--accent-color))
-      md-switch-unchecked-button-color: var(--md-sys-color-outline-dark, rgb(140, 144, 159))
+      md-switch-unchecked-button-color: "var(--md-sys-color-outline-dark, #8c909f)"
       md-switch-checked-track-color: var(--md-sys-color-primary-dark, var(--primary-color))
-      md-switch-unchecked-track-color: var(--md-sys-color-surface-container-highest-dark, rgb(65, 71, 83))
+      md-switch-unchecked-track-color: "var(--md-sys-color-surface-container-highest-dark, #414753)"
       md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
       md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-dark, var(--input-background-color))
       md-switch-checked-button-state-layer: var(--md-sys-color-primary-container-dark, var(--accent-color))
@@ -64,28 +64,28 @@ Material Rounded:
 
     light:
       # Main colors
-      primary-color: var(--md-sys-color-primary-light, rgb(0, 29, 53))
-      accent-color: var(--md-sys-color-on-primary-light, rgb(194, 231, 255))
-      state-icon-color: rgb(69, 71, 70)
-      primary-text-color: rgb(31, 31, 31)
-      secondary-text-color: rgb(68, 71, 70)
-      disabled-text-color: rgb(128, 128, 128)
-      disabled-color: rgb(173, 176, 174)
-      input-background-color: rgb(234, 234, 235)
-      slider-color: rgb(211, 227, 253)
+      primary-color: "var(--md-sys-color-primary-light, #001d35)"
+      accent-color: "var(--md-sys-color-on-primary-light, #c2e7ff)"
+      state-icon-color: "#454746"
+      primary-text-color: "#1f1f1f"
+      secondary-text-color: "#444746"
+      disabled-text-color: "#808080"
+      disabled-color: "#adb0ae"
+      input-background-color: "#eaeaeb"
+      slider-color: "#d3e3fd"
 
       # Error
-      error-color: rgb(179, 38, 30)
-      on-error-color: rgb(255, 255, 255)
+      error-color: "#b3261e"
+      on-error-color: "#ffffff"
 
       # Cards and footer
-      card-background-color: rgb(233, 238, 246)
-      primary-background-color: rgb(240, 244, 249)
+      card-background-color: "#e9eef6"
+      primary-background-color: "#f0f4f9"
 
       # Background and header
-      lovelace-background: rgb(255, 255, 255)
-      view-background: rgb(255, 255, 255)
-      app-header-background-color: rgb(255, 255, 255)
+      lovelace-background: "#ffffff"
+      view-background: "#ffffff"
+      app-header-background-color: "#ffffff"
 
       # Toolbar
       md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-light, var(--primary-color))
@@ -103,10 +103,10 @@ Material Rounded:
       sidebar-state-pressed-background: var(--md-sys-color-on-secondary-container-light, var(--primary-color))
 
       # Switches
-      md-switch-checked-button-color: var(--md-sys-color-on-primary-light, rgb(255, 255, 255))
-      md-switch-unchecked-button-color: var(--md-sys-color-outline-light, rgb(114, 119, 133))
-      md-switch-checked-track-color: var(--md-sys-color-primary-light, rgb(0, 91, 191))
-      md-switch-unchecked-track-color: var(--md-sys-color-surface-container-highest-light, rgb(222, 226, 242))
+      md-switch-checked-button-color: "var(--md-sys-color-on-primary-light, #ffffff)"
+      md-switch-unchecked-button-color: "var(--md-sys-color-outline-light, #727785)"
+      md-switch-checked-track-color: "var(--md-sys-color-primary-light, #005bbf)"
+      md-switch-unchecked-track-color: "var(--md-sys-color-surface-container-highest-light, #dee2f2)"
       md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-light, var(--primary-color))
       md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-light, var(--input-background-color))
       md-switch-checked-button-state-layer: var(--md-sys-color-primary-container-light, var(--accent-color))
@@ -137,7 +137,7 @@ Material Rounded:
   app-header-edit-background-color: var(--primary-background-color)
   app-header-selection-bar-color: none
   navbar-background: var(--primary-background-color)
-  paper-tab-ink: rgba(0, 0, 0, 0)
+  paper-tab-ink: "#00000000"
 
   # Sidebar
   sidebar-background-color: var(--primary-background-color)
@@ -174,7 +174,6 @@ Material Rounded:
   text-primary-color: var(--lovelace-background)
   text-accent-color: var(--primary-color)
   text-light-primary-color: var(--text-primary-color)
-  text-field-overflow: hidden
   link-text-color: var(--primary-color)
 
   # Main Interface Colors
@@ -187,13 +186,13 @@ Material Rounded:
   mdc-theme-on-primary: var(--accent-color)
   mdc-theme-secondary: var(--primary-color)
   mdc-theme-on-secondary: var(--accent-color)
-  scrollbar-thumb-color: rgb(46, 48, 56)
+  scrollbar-thumb-color: "#2e3038"
 
   # Cards
   border-radius: 28px
   ha-card-background: var(--card-background-color)
   ha-card-border-radius: var(--border-radius)
-  ha-card-border-color: rgba(0, 0, 0, 0)
+  ha-card-border-color: "#00000000"
   ha-card-border-width: 0px
   ha-card-border-style: none
   ha-card-border: none
@@ -237,7 +236,7 @@ Material Rounded:
   input-disabled-fill-color: rgba(var(--input-background-color), 0.5)
   input-disabled-ink-color: var(--disabled-text-color)
   input-disabled-label-ink-color: var(--disabled-text-color)
-  input-idle-line-color: rgba(0, 0, 0, 0)
+  input-idle-line-color: "#00000000"
   input-hover-line-color: var(--primary-color)
   input-dropdown-icon-color: var(--secondary-text-color)
   mdc-select-fill-color: var(--input-fill-color)
@@ -252,6 +251,3 @@ Material Rounded:
   codemirror-meta: var(--primary-text-color)
   codemirror-property: var(--primary-color)
   codemirror-atom: var(--codemirror-property)
-  codemirror-string: rgb(119 196 229)
-  codemirror-keyword: rgb(140 169 255)
-  codemirror-number: rgb(255 91 29)

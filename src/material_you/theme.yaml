@@ -1,7 +1,7 @@
 Material You:
   modes:
     dark:
-      # Default material design colors
+      # Default Material Design System Colors
       default-md-sys-color-primary-dark: "#b5c4ff"
       default-md-sys-color-on-primary-dark: "#1c2d61"
       default-md-sys-color-primary-container-dark: "#344479"
@@ -62,84 +62,75 @@ Material You:
       default-md-sys-color-shadow-dark: "#000000"
       default-md-sys-color-scrim-dark: "#000000"
 
-      # Main colors
-      primary-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
-      accent-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
-      state-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      primary-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
-      secondary-text-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      input-background-color: var(--md-sys-color-surface-container-highest-dark, var(--default-md-sys-color-surface-container-highest-dark))
-      input-label-ink-color: ar(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      secondary-background-color: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
-      slider-color: var(--md-sys-color-inverse-primary-dark, var(--default-md-sys-color-inverse-primary-dark))
+      # Material Design System Colors
+      md-sys-color-primary: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
+      md-sys-color-on-primary: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
+      md-sys-color-primary-container: var(--md-sys-color-primary-container-dark, var(--default-md-sys-color-primary-container-dark))
+      md-sys-color-on-primary-container: var(--md-sys-color-on-primary-container-dark, var(--default-md-sys-color-on-primary-container-dark))
+      md-sys-color-primary-palette-key-color: var(--md-sys-color-primary-palette-key-color-dark, var(--default-md-sys-color-primary-palette-key-color-dark))
+      md-sys-color-inverse-primary: var(--md-sys-color-inverse-primary-dark, var(--default-md-sys-color-inverse-primary-dark))
+      md-sys-color-primary-fixed: var(--md-sys-color-primary-fixed-dark, var(--default-md-sys-color-primary-fixed-dark))
+      md-sys-color-primary-fixed-dim: var(--md-sys-color-primary-fixed-dim-dark, var(--default-md-sys-color-primary-fixed-dim-dark))
+      md-sys-color-on-primary-fixed: var(--md-sys-color-on-primary-fixed-dark, var(--default-md-sys-color-on-primary-fixed-dark))
+      md-sys-color-on-primary-fixed-variant: var(--md-sys-color-on-primary-fixed-variant-dark, var(--default-md-sys-color-on-primary-fixed-variant-dark))
 
-      # Error
-      error-color: var(--md-sys-color-error-dark, var(--default-md-sys-color-error-dark))
-      on-error-color: var(--md-sys-color-on-error-dark, var(--default-md-sys-color-on-error-dark))
+      md-sys-color-secondary: var(--md-sys-color-secondary-dark, var(--default-md-sys-color-secondary-dark))
+      md-sys-color-on-secondary: var(--md-sys-color-on-secondary-dark, var(--default-md-sys-color-on-secondary-dark))
+      md-sys-color-secondary-container: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
+      md-sys-color-on-secondary-container: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
+      md-sys-color-secondary-palette-key-color: var(--md-sys-color-secondary-palette-key-color-dark, var(--default-md-sys-color-secondary-palette-key-color-dark))
+      md-sys-color-secondary-fixed: var(--md-sys-color-secondary-fixed-dark, var(--default-md-sys-color-secondary-fixed-dark))
+      md-sys-color-secondary-fixed-dim: var(--md-sys-color-secondary-fixed-dim-dark, var(--default-md-sys-color-secondary-fixed-dim-dark))
+      md-sys-color-on-secondary-fixed: var(--md-sys-color-on-secondary-fixed-dark, var(--default-md-sys-color-on-secondary-fixed-dark))
+      md-sys-color-on-secondary-fixed-variant: var(--md-sys-color-on-secondary-fixed-variant-dark, var(--default-md-sys-color-on-secondary-fixed-variant-dark))
 
-      # Cards and footer
-      card-background-color: var(--md-sys-color-surface-container-low-dark, var(--default-md-sys-color-surface-container-low-dark))
-      primary-background-color: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark, '#1e1f25'))
+      md-sys-color-tertiary: var(--md-sys-color-tertiary-dark, var(--default-md-sys-color-tertiary-dark))
+      md-sys-color-on-tertiary: var(--md-sys-color-on-tertiary-dark, var(--default-md-sys-color-on-tertiary-dark))
+      md-sys-color-tertiary-container: var(--md-sys-color-tertiary-container-dark, var(--default-md-sys-color-tertiary-container-dark))
+      md-sys-color-on-tertiary-container: var(--md-sys-color-on-tertiary-container-dark, var(--default-md-sys-color-on-tertiary-container-dark))
+      md-sys-color-tertiary-palette-key-color: var(--md-sys-color-tertiary-palette-key-color-dark, var(--default-md-sys-color-tertiary-palette-key-color-dark))
 
-      # Background and header
-      lovelace-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
-      view-background: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
-      app-header-background-color: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark, '#121318'))
+      md-sys-color-tertiary-fixed: var(--md-sys-color-tertiary-fixed-dark, var(--default-md-sys-color-tertiary-fixed-dark))
+      md-sys-color-tertiary-fixed-dim: var(--md-sys-color-tertiary-fixed-dim-dark, var(--default-md-sys-color-tertiary-fixed-dim-dark))
+      md-sys-color-on-tertiary-fixed: var(--md-sys-color-on-tertiary-fixed-dark, var(--default-md-sys-color-on-tertiary-fixed-dark))
+      md-sys-color-on-tertiary-fixed-variant: var(--md-sys-color-on-tertiary-fixed-variant-dark, var(--default-md-sys-color-on-tertiary-fixed-variant-dark))
 
-      # Sidebar
-      sidebar-selected-text-color: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
-      sidebar-selected-icon-color: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
-      sidebar-selected-background: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
-      sidebar-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      sidebar-text-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      sidebar-menu-button-text-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      sidebar-state-pressed-background: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
+      md-sys-color-neutral-palette-key-color: var(--md-sys-color-neutral-palette-key-color-dark, var(--default-md-sys-color-neutral-palette-key-color-dark))
+      md-sys-color-neutral-variant-palette-key-color: var(--md-sys-color-neutral-variant-palette-key-color-dark, var(--default-md-sys-color-neutral-variant-palette-key-color-dark))
 
-      # Toolbar
-      md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-dark, var(--default-md-sys-color-on-secondary-container-dark))
-      md-current-tab-icon-background: var(--md-sys-color-secondary-container-dark, var(--default-md-sys-color-secondary-container-dark))
-      md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
-      md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      app-header-text-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
-      app-header-edit-text-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
+      md-sys-color-error: var(--md-sys-color-error-dark, var(--default-md-sys-color-error-dark))
+      md-sys-color-on-error: var(--md-sys-color-on-error-dark, var(--default-md-sys-color-on-error-dark))
+      md-sys-color-error-container: var(--md-sys-color-error-container-dark, var(--default-md-sys-color-error-container-dark))
+      md-sys-color-on-error-container: var(--md-sys-color-on-error-container-dark, var(--default-md-sys-color-on-error-container-dark))
 
-      # Legacy mdc colors
-      mdc-theme-primary: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
-      mdc-theme-secondary: var(--md-sys-color-secondary-dark, var(--default-md-sys-color-secondary-dark))
-      mdc-theme-surface: var(--md-sys-color-surface-container-high-dark, var(--default-md-sys-color-surface-container-high-dark))
-      mdc-theme-on-primary: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
-      mdc-theme-on-secondary: var(--md-sys-color-on-secondary-dark, var(--default-md-sys-color-on-secondary-dark))
-      mdc-theme-on-surface: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
-      mdc-theme-error: var(--md-sys-color-error-dark, var(--default-md-sys-color-error-dark))
-      md-divider-color: var(--md-sys-color-outline-variant-dark, var(--default-md-sys-color-outline-variant-dark))
+      md-sys-color-surface: var(--md-sys-color-surface-dark, var(--default-md-sys-color-surface-dark))
+      md-sys-color-on-surface: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
+      md-sys-color-surface-variant: var(--md-sys-color-surface-variant-dark, var(--default-md-sys-color-surface-variant-dark))
+      md-sys-color-on-surface-variant: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
+      md-sys-color-surface-dim: var(--md-sys-color-surface-dim-dark, var(--default-md-sys-color-surface-dim-dark))
+      md-sys-color-surface-bright: var(--md-sys-color-surface-bright-dark, var(--default-md-sys-color-surface-bright-dark))
+      md-sys-color-surface-container-lowest: var(--md-sys-color-surface-container-lowest-dark, var(--default-md-sys-color-surface-container-lowest-dark))
+      md-sys-color-surface-container-low: var(--md-sys-color-surface-container-low-dark, var(--default-md-sys-color-surface-container-low-dark))
+      md-sys-color-surface-container: var(--md-sys-color-surface-container-dark, var(--default-md-sys-color-surface-container-dark))
+      md-sys-color-surface-container-high: var(--md-sys-color-surface-container-high-dark, var(--default-md-sys-color-surface-container-high-dark))
+      md-sys-color-surface-container-highest: var(--md-sys-color-surface-container-highest-dark, var(--default-md-sys-color-surface-container-highest-dark))
+      md-sys-color-inverse-surface: var(--md-sys-color-inverse-surface-dark, var(--default-md-sys-color-inverse-surface-dark))
+      md-sys-color-inverse-on-surface: var(--md-sys-color-inverse-on-surface-dark, var(--default-md-sys-color-inverse-on-surface-dark))
+      md-sys-color-surface-tint: var(--md-sys-color-surface-tint-dark, var(--default-md-sys-color-surface-tint-dark))
 
-      # Switches
-      md-switch-checked-button-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
-      md-switch-unchecked-button-color: var(--md-sys-color-outline-dark, var(--default-md-sys-color-outline-dark))
-      md-switch-checked-track-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
-      md-switch-unchecked-track-color: var(--md-sys-color-surface-container-highest-dark, var(--default-md-sys-color-surface-container-highest-dark))
-      md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-dark, var(--default-md-sys-color-on-primary-container-dark))
-      md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-dark, var(--default-md-sys-color-surface-container-highest-dark))
-      md-switch-checked-button-state-layer: var(--md-sys-color-primary-container-dark, var(--default-md-sys-color-primary-container-dark))
-      md-switch-unchecked-button-state-layer: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      md-switch-unchecked-track-state-layer: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
+      md-sys-color-outline: var(--md-sys-color-outline-dark, var(--default-md-sys-color-outline-dark))
+      md-sys-color-outline-variant: var(--md-sys-color-outline-variant-dark, var(--default-md-sys-color-outline-variant-dark))
 
-      # Checkboxes
-      checkbox-checked-border-color: var(--md-sys-color-primary-dark, var(--default-md-sys-color-primary-dark))
-      checkbox-checked-icon-color: var(--md-sys-color-on-primary-dark, var(--default-md-sys-color-on-primary-dark))
-      checkbox-unchecked-border-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
-      checkbox-unchecked-icon-color: var(--md-sys-color-on-surface-dark, var(--default-md-sys-color-on-surface-dark))
-
-      # Radio buttons
-      mdc-radio-unchecked-color: var(--md-sys-color-on-surface-variant-dark, var(--default-md-sys-color-on-surface-variant-dark))
+      md-sys-color-shadow: var(--md-sys-color-shadow-dark, var(--default-md-sys-color-shadow-dark))
+      md-sys-color-scrim: var(--md-sys-color-scrim-dark, var(--default-md-sys-color-scrim-dark))
 
       # Other mode specific colors
-      disabled-text-color: rgba(255, 255, 255, 0.5)
-      disabled-color: rgb(0, 0, 0)
-      state-inactive-color: rgb(72, 74, 78) # dark mode only
+      disabled-text-color: "#ffffff80"
+      disabled-color: "#000000"
+      state-inactive-color: "#484a4e" # dark mode only
 
     light:
-      # Default material design colors
+      # Default Material Design System Colors
       default-md-sys-color-primary-light: "#4c5c92"
       default-md-sys-color-on-primary-light: "#ffffff"
       default-md-sys-color-primary-container-light: "#dce1ff"
@@ -200,80 +191,175 @@ Material You:
       default-md-sys-color-shadow-light: "#000000"
       default-md-sys-color-scrim-light: "#000000"
 
-      # Main colors
-      primary-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
-      accent-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
-      state-icon-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      primary-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
-      secondary-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      input-background-color: var(--md-sys-color-surface-container-highest-light, var(--default-md-sys-color-surface-container-highest-light))
-      input-label-ink-color: ar(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      slider-color: var(--md-sys-color-inverse-primary-light, var(--default-md-sys-color-inverse-primary-light))
-      secondary-background-color: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
+      # Material Design System Colors
+      md-sys-color-primary: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
+      md-sys-color-on-primary: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
+      md-sys-color-primary-container: var(--md-sys-color-primary-container-light, var(--default-md-sys-color-primary-container-light))
+      md-sys-color-on-primary-container: var(--md-sys-color-on-primary-container-light, var(--default-md-sys-color-on-primary-container-light))
+      md-sys-color-primary-palette-key-color: var(--md-sys-color-primary-palette-key-color-light, var(--default-md-sys-color-primary-palette-key-color-light))
+      md-sys-color-inverse-primary: var(--md-sys-color-inverse-primary-light, var(--default-md-sys-color-inverse-primary-light))
+      md-sys-color-primary-fixed: var(--md-sys-color-primary-fixed-light, var(--default-md-sys-color-primary-fixed-light))
+      md-sys-color-primary-fixed-dim: var(--md-sys-color-primary-fixed-dim-light, var(--default-md-sys-color-primary-fixed-dim-light))
+      md-sys-color-on-primary-fixed: var(--md-sys-color-on-primary-fixed-light, var(--default-md-sys-color-on-primary-fixed-light))
+      md-sys-color-on-primary-fixed-variant: var(--md-sys-color-on-primary-fixed-variant-light, var(--default-md-sys-color-on-primary-fixed-variant-light))
 
-      # Error
-      error-color: var(--md-sys-color-error-light, var(--default-md-sys-color-error-light))
-      on-error-color: var(--md-sys-color-on-error-light, var(--default-md-sys-color-on-error-light))
+      md-sys-color-secondary: var(--md-sys-color-secondary-light, var(--default-md-sys-color-secondary-light))
+      md-sys-color-on-secondary: var(--md-sys-color-on-secondary-light, var(--default-md-sys-color-on-secondary-light))
+      md-sys-color-secondary-container: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
+      md-sys-color-on-secondary-container: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
+      md-sys-color-secondary-palette-key-color: var(--md-sys-color-secondary-palette-key-color-light, var(--default-md-sys-color-secondary-palette-key-color-light))
+      md-sys-color-secondary-fixed: var(--md-sys-color-secondary-fixed-light, var(--default-md-sys-color-secondary-fixed-light))
+      md-sys-color-secondary-fixed-dim: var(--md-sys-color-secondary-fixed-dim-light, var(--default-md-sys-color-secondary-fixed-dim-light))
+      md-sys-color-on-secondary-fixed: var(--md-sys-color-on-secondary-fixed-light, var(--default-md-sys-color-on-secondary-fixed-light))
+      md-sys-color-on-secondary-fixed-variant: var(--md-sys-color-on-secondary-fixed-variant-light, var(--default-md-sys-color-on-secondary-fixed-variant-light))
 
-      # Cards and footer
-      card-background-color: var(--md-sys-color-surface-container-low-light, var(--default-md-sys-color-surface-container-low-light))
-      primary-background-color: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light, '#eeedf4'))
+      md-sys-color-tertiary: var(--md-sys-color-tertiary-light, var(--default-md-sys-color-tertiary-light))
+      md-sys-color-on-tertiary: var(--md-sys-color-on-tertiary-light, var(--default-md-sys-color-on-tertiary-light))
+      md-sys-color-tertiary-container: var(--md-sys-color-tertiary-container-light, var(--default-md-sys-color-tertiary-container-light))
+      md-sys-color-on-tertiary-container: var(--md-sys-color-on-tertiary-container-light, var(--default-md-sys-color-on-tertiary-container-light))
+      md-sys-color-tertiary-palette-key-color: var(--md-sys-color-tertiary-palette-key-color-light, var(--default-md-sys-color-tertiary-palette-key-color-light))
 
-      # Background and header
-      lovelace-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
-      view-background: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
-      app-header-background-color: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light, '#faf8ff'))
+      md-sys-color-tertiary-fixed: var(--md-sys-color-tertiary-fixed-light, var(--default-md-sys-color-tertiary-fixed-light))
+      md-sys-color-tertiary-fixed-dim: var(--md-sys-color-tertiary-fixed-dim-light, var(--default-md-sys-color-tertiary-fixed-dim-light))
+      md-sys-color-on-tertiary-fixed: var(--md-sys-color-on-tertiary-fixed-light, var(--default-md-sys-color-on-tertiary-fixed-light))
+      md-sys-color-on-tertiary-fixed-variant: var(--md-sys-color-on-tertiary-fixed-variant-light, var(--default-md-sys-color-on-tertiary-fixed-variant-light))
 
-      # Sidebar
-      sidebar-selected-text-color: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
-      sidebar-selected-icon-color: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
-      sidebar-selected-background: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
-      sidebar-icon-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      sidebar-menu-button-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      sidebar-state-pressed-background: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
+      md-sys-color-neutral-palette-key-color: var(--md-sys-color-neutral-palette-key-color-light, var(--default-md-sys-color-neutral-palette-key-color-light))
+      md-sys-color-neutral-variant-palette-key-color: var(--md-sys-color-neutral-variant-palette-key-color-light, var(--default-md-sys-color-neutral-variant-palette-key-color-light))
 
-      # Toolbar
-      md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-light, var(--default-md-sys-color-on-secondary-container-light))
-      md-current-tab-icon-background: var(--md-sys-color-secondary-container-light, var(--default-md-sys-color-secondary-container-light))
-      md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
-      md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      app-header-text-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
-      app-header-edit-text-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
+      md-sys-color-error: var(--md-sys-color-error-light, var(--default-md-sys-color-error-light))
+      md-sys-color-on-error: var(--md-sys-color-on-error-light, var(--default-md-sys-color-on-error-light))
+      md-sys-color-error-container: var(--md-sys-color-error-container-light, var(--default-md-sys-color-error-container-light))
+      md-sys-color-on-error-container: var(--md-sys-color-on-error-container-light, var(--default-md-sys-color-on-error-container-light))
 
-      # Switches
-      md-switch-checked-button-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
-      md-switch-unchecked-button-color: var(--md-sys-color-outline-light, var(--default-md-sys-color-outline-light))
-      md-switch-checked-track-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
-      md-switch-unchecked-track-color: var(--md-sys-color-surface-container-highest-light, var(--default-md-sys-color-surface-container-highest-light))
-      md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-light, var(--default-md-sys-color-on-primary-container-light))
-      md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-light, var(--default-md-sys-color-surface-container-highest-light))
-      md-switch-checked-button-state-layer: var(--md-sys-color-primary-container-light, var(--default-md-sys-color-primary-container-light))
-      md-switch-unchecked-button-state-layer: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      md-switch-unchecked-track-state-layer: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
+      md-sys-color-surface: var(--md-sys-color-surface-light, var(--default-md-sys-color-surface-light))
+      md-sys-color-on-surface: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
+      md-sys-color-surface-variant: var(--md-sys-color-surface-variant-light, var(--default-md-sys-color-surface-variant-light))
+      md-sys-color-on-surface-variant: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
+      md-sys-color-surface-dim: var(--md-sys-color-surface-dim-light, var(--default-md-sys-color-surface-dim-light))
+      md-sys-color-surface-bright: var(--md-sys-color-surface-bright-light, var(--default-md-sys-color-surface-bright-light))
+      md-sys-color-surface-container-lowest: var(--md-sys-color-surface-container-lowest-light, var(--default-md-sys-color-surface-container-lowest-light))
+      md-sys-color-surface-container-low: var(--md-sys-color-surface-container-low-light, var(--default-md-sys-color-surface-container-low-light))
+      md-sys-color-surface-container: var(--md-sys-color-surface-container-light, var(--default-md-sys-color-surface-container-light))
+      md-sys-color-surface-container-high: var(--md-sys-color-surface-container-high-light, var(--default-md-sys-color-surface-container-high-light))
+      md-sys-color-surface-container-highest: var(--md-sys-color-surface-container-highest-light, var(--default-md-sys-color-surface-container-highest-light))
+      md-sys-color-inverse-surface: var(--md-sys-color-inverse-surface-light, var(--default-md-sys-color-inverse-surface-light))
+      md-sys-color-inverse-on-surface: var(--md-sys-color-inverse-on-surface-light, var(--default-md-sys-color-inverse-on-surface-light))
+      md-sys-color-surface-tint: var(--md-sys-color-surface-tint-light, var(--default-md-sys-color-surface-tint-light))
 
-      # Checkboxes
-      checkbox-checked-border-color: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
-      checkbox-checked-icon-color: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
-      checkbox-unchecked-border-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-      checkbox-unchecked-icon-color: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
+      md-sys-color-outline: var(--md-sys-color-outline-light, var(--default-md-sys-color-outline-light))
+      md-sys-color-outline-variant: var(--md-sys-color-outline-variant-light, var(--default-md-sys-color-outline-variant-light))
 
-      # Radio buttons
-      mdc-radio-unchecked-color: var(--md-sys-color-on-surface-variant-light, var(--default-md-sys-color-on-surface-variant-light))
-
-      # Legacy mdc colors
-      mdc-theme-primary: var(--md-sys-color-primary-light, var(--default-md-sys-color-primary-light))
-      mdc-theme-secondary: var(--md-sys-color-secondary-light, var(--default-md-sys-color-secondary-light))
-      mdc-theme-surface: var(--md-sys-color-surface-container-high-light, var(--default-md-sys-color-surface-container-high-light))
-      mdc-theme-on-primary: var(--md-sys-color-on-primary-light, var(--default-md-sys-color-on-primary-light))
-      mdc-theme-on-secondary: var(--md-sys-color-on-secondary-light, var(--default-md-sys-color-on-secondary-light))
-      mdc-theme-on-surface: var(--md-sys-color-on-surface-light, var(--default-md-sys-color-on-surface-light))
-      mdc-theme-error: var(--md-sys-color-error-light, var(--default-md-sys-color-error-light))
-      md-divider-color: var(--md-sys-color-outline-variant-light, var(--default-md-sys-color-outline-variant-light))
+      md-sys-color-shadow: var(--md-sys-color-shadow-light, var(--default-md-sys-color-shadow-light))
+      md-sys-color-scrim: var(--md-sys-color-scrim-light, var(--default-md-sys-color-scrim-light))
 
       # Other mode specific colors
-      disabled-text-color: rgb(128, 128, 128)
-      disabled-color: rgb(165, 165, 165)
+      disabled-text-color: "#808080"
+      disabled-color: "#a5a5a5"
+
+  # Main colors
+  primary-color: var(--md-sys-color-primary)
+  accent-color: var(--md-sys-color-on-primary)
+  state-icon-color: var(--md-sys-color-on-surface-variant)
+  primary-text-color: var(--md-sys-color-on-surface)
+  secondary-text-color: var(--md-sys-color-on-surface-variant)
+  input-background-color: var(--md-sys-color-surface-container-highest)
+  input-label-ink-color: ar(--md-sys-color-on-surface-variant)
+  secondary-background-color: var(--md-sys-color-secondary-container)
+  dark-primary-color: hsl(from var(--md-sys-color-primary) h s calc(l - 20))
+  light-primary-color: hsl(from var(--md-sys-color-primary) h s calc(l + 20))
+  divider-color: var(--md-sys-color-surface-container)
+  scrollbar-thumb-color: "#2e3038"
+
+  # Error
+  error-color: var(--md-sys-color-error)
+  on-error-color: var(--md-sys-color-on-error)
+
+  # Cards and footer
+  card-background-color: var(--md-sys-color-surface-container-low)
+  primary-background-color: var(--md-sys-color-surface-container)
+  border-radius: 28px
+  ha-card-background: var(--md-sys-color-surface-container-low)
+  ha-card-border-radius: var(--border-radius)
+  ha-card-border-color: "#00000000"
+  ha-card-border-width: 0px
+  ha-card-border-style: none
+  ha-card-border: none
+  ha-card-box-shadow: none
+  ha-config-card-border-radius: 16px
+  paper-item-icon-color: var(--md-sys-color-on-surface-variant)
+
+  # Background and header
+  lovelace-background: var(--md-sys-color-surface)
+  view-background: var(--md-sys-color-surface)
+  app-header-background-color: var(--md-sys-color-surface)
+
+  # Sidebar
+  sidebar-selected-text-color: var(--md-sys-color-on-secondary-container)
+  sidebar-selected-icon-color: var(--md-sys-color-on-secondary-container)
+  sidebar-selected-background: var(--md-sys-color-secondary-container)
+  sidebar-icon-color: var(--md-sys-color-on-surface-variant)
+  sidebar-text-color: var(--md-sys-color-on-surface-variant)
+  sidebar-menu-button-text-color: var(--md-sys-color-on-surface-variant)
+  sidebar-state-pressed-background: var(--md-sys-color-on-secondary-container)
+  sidebar-background-color: var(--md-sys-color-surface-container)
+
+  # Toolbar
+  md-current-tab-icon-color: var(--md-sys-color-on-secondary-container)
+  md-current-tab-icon-background: var(--md-sys-color-secondary-container)
+  md-current-tab-text-color: var(--md-sys-color-on-surface)
+  md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant)
+  app-header-text-color: var(--md-sys-color-on-surface)
+  app-header-edit-text-color: var(--md-sys-color-on-surface-variant)
+
+  # Legacy mdc colors
+  mdc-theme-primary: var(--md-sys-color-primary)
+  mdc-theme-secondary: var(--md-sys-color-secondary)
+  mdc-theme-surface: var(--md-sys-color-surface-container-high)
+  mdc-theme-on-primary: var(--md-sys-color-on-primary)
+  mdc-theme-on-secondary: var(--md-sys-color-on-secondary)
+  mdc-theme-on-surface: var(--md-sys-color-on-surface)
+  mdc-theme-error: var(--md-sys-color-error)
+  md-divider-color: var(--md-sys-color-outline-variant)
+
+  # Switches
+  md-switch-checked-button-color: var(--md-sys-color-on-primary)
+  md-switch-unchecked-button-color: var(--md-sys-color-outline)
+  md-switch-checked-track-color: var(--md-sys-color-primary)
+  md-switch-unchecked-track-color: var(--md-sys-color-surface-container-highest)
+  md-switch-checked-icon-color: var(--md-sys-color-on-primary-container)
+  md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest)
+  md-switch-checked-button-state-layer: var(--md-sys-color-primary-container)
+  md-switch-unchecked-button-state-layer: var(--md-sys-color-on-surface-variant)
+  md-switch-unchecked-track-state-layer: var(--md-sys-color-on-surface)
+
+  switch-checked-button-color: var(--md-switch-checked-button-color)
+  switch-unchecked-button-color: var(--md-switch-unchecked-button-color)
+  switch-checked-track-color: var(--md-switch-checked-track-color)
+  switch-unchecked-track-color: var(--md-switch-unchecked-track-color)
+  switch-checked-icon-color: var(--md-switch-checked-icon-color)
+  switch-unchecked-icon-color: var(--md-switch-unchecked-icon-color)
+  switch-checked-button-state-layer: var(--md-switch-checked-button-state-layer)
+  switch-unchecked-button-state-layer: var(--md-switch-unchecked-button-state-layer)
+  switch-unchecked-track-state-layer: var(--md-switch-unchecked-track-state-layer)
+
+  paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
+  paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
+  paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
+  paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
+
+  # Checkboxes
+  checkbox-checked-border-color: var(--md-sys-color-primary)
+  checkbox-checked-icon-color: var(--md-sys-color-on-primary)
+  checkbox-unchecked-border-color: var(--md-sys-color-on-surface-variant)
+  checkbox-unchecked-icon-color: var(--md-sys-color-on-surface)
+
+  mdc-checkbox-checked-color: var(--checkbox-checked-border-color)
+  mdc-checkbox-ink-color: var(--checkbox-checked-icon-color)
+  mdc-checkbox-unchecked-color: var(--checkbox-unchecked-border-color)
+
+  # Radio buttons
+  mdc-radio-unchecked-color: var(--md-sys-color-on-surface-variant)
 
   # Spacings
   horizontal-stack-card-margin: 0px 4px
@@ -281,17 +367,13 @@ Material You:
   ha-view-sections-row-gap: 18px
 
   # Toolbar
-  paper-slider-height: 4px
   header-height: 64px
   footer-height: 82px
   mdc-top-app-bar-fixed-box-shadow: none
-  app-header-edit-background-color: var(--primary-background-color)
+  app-header-edit-background-color: var(--md-sys-color-surface-container)
   app-header-selection-bar-color: none
-  navbar-background: var(--primary-background-color)
-  paper-tab-ink: rgba(0, 0, 0, 0)
-
-  # Sidebar
-  sidebar-background-color: var(--primary-background-color)
+  navbar-background: var(--md-sys-color-surface-container)
+  paper-tab-ink: "#00000000"
 
   # Typography
   font-family:
@@ -322,88 +404,47 @@ Material You:
   ha-heading-card-subtitle-line-height: 20px
 
   # Text
-  text-primary-color: var(--lovelace-background)
-  text-accent-color: var(--primary-color)
-  text-light-primary-color: var(--text-primary-color)
-  link-text-color: var(--primary-color)
-
-  # Main Interface Colors
-  dark-primary-color: var(--primary-color)
-  light-primary-color: var(--primary-color)
-  divider-color: var(--primary-background-color)
-  slider-secondary-color: var(--primary-color)
-  scrollbar-thumb-color: rgb(46, 48, 56)
+  text-primary-color: var(--md-sys-color-surface)
+  text-light-primary-color: hsl(from var(--md-sys-color-surface) h s calc(l + 20))
+  text-accent-color: var(--md-sys-color-primary)
+  link-text-color: var(--md-sys-color-primary)
 
   # Legacy mdc colors
-  mdc-theme-background: var(--lovelace-background)
+  mdc-theme-background: var(--md-sys-color-surface)
   mdc-theme-text-disabled-on-light: var(--disabled-text-color)
-  mdc-theme-text-primary-on-background: var(--primary-text-color)
-  mdc-theme-text-secondary-on-background: var(--secondary-text-color)
-  mdc-theme-text-hint-on-background: var(--secondary-text-color)
-  mdc-theme-text-icon-on-background: var(--secondary-text-color)
-
-  # Cards
-  border-radius: 28px
-  ha-card-background: var(--card-background-color)
-  ha-card-border-radius: var(--border-radius)
-  ha-card-border-color: rgba(0, 0, 0, 0)
-  ha-card-border-width: 0px
-  ha-card-border-style: none
-  ha-card-border: none
-  ha-card-box-shadow: none
-  ha-config-card-border-radius: 16px
-  paper-item-icon-color: var(--state-icon-color)
+  mdc-theme-text-primary-on-background: var(--md-sys-color-on-surface)
+  mdc-theme-text-secondary-on-background: var(--md-sys-color-on-surface-variant)
+  mdc-theme-text-hint-on-background: var(--md-sys-color-on-surface-variant)
+  mdc-theme-text-icon-on-background: var(--md-sys-color-on-surface-variant)
 
   # Sliders
-  paper-slider-knob-color: var(--primary-color)
-  paper-slider-knob-start-color: var(--paper-slider-knob-color)
-  paper-slider-pin-color: var(--paper-slider-knob-color)
-  paper-slider-active-color: var(--paper-slider-knob-color)
-  paper-slider-secondary-color: var(--light-primary-color)
-
-  # Switches
-  switch-checked-button-color: var(--md-switch-checked-button-color)
-  switch-unchecked-button-color: var(--md-switch-unchecked-button-color)
-  switch-checked-track-color: var(--md-switch-checked-track-color)
-  switch-unchecked-track-color: var(--md-switch-unchecked-track-color)
-  switch-checked-icon-color: var(--md-switch-checked-icon-color)
-  switch-unchecked-icon-color: var(--md-switch-unchecked-icon-color)
-  switch-checked-button-state-layer: var(--md-switch-checked-button-state-layer)
-  switch-unchecked-button-state-layer: var(--md-switch-unchecked-button-state-layer)
-  switch-unchecked-track-state-layer: var(--md-switch-unchecked-track-state-layer)
-
-  # Toggles
-  paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
-  paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
-  paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
-
-  # Checkboxes
-  mdc-checkbox-checked-color: var(--checkbox-checked-border-color)
-  mdc-checkbox-ink-color: var(--checkbox-checked-icon-color)
-  mdc-checkbox-unchecked-color: var(--checkbox-unchecked-border-color)
+  slider-color: var(--md-sys-color-inverse-primary)
+  slider-secondary-color: var(--md-sys-color-primary)
+  paper-slider-knob-color: var(--md-sys-color-primary)
+  paper-slider-knob-start-color: var(--md-sys-color-primary)
+  paper-slider-pin-color: var(--md-sys-color-primary)
+  paper-slider-active-color: var(--md-sys-color-primary)
+  paper-slider-secondary-color: hsl(from var(--md-sys-color-primary) h s calc(l + 20))
+  paper-slider-height: 4px
 
   # Text Fields and Dropdowns
-  input-fill-color: var(--input-background-color)
-  input-ink-color: var(--primary-text-color)
-  input-disabled-fill-color: rgba(var(--input-background-color), 0.5)
+  input-fill-color: var(--md-sys-color-surface-container-highest)
+  input-ink-color: ar(--md-sys-color-on-surface)
+  input-disabled-fill-color: rgba(from var(--md-sys-color-surface-container-highest) r g b / 0.5)
   input-disabled-ink-color: var(--disabled-text-color)
   input-disabled-label-ink-color: var(--disabled-text-color)
-  input-idle-line-color: rgba(0, 0, 0, 0)
-  input-hover-line-color: var(--primary-color)
-  input-dropdown-icon-color: var(--secondary-text-color)
-  mdc-select-fill-color: var(--input-fill-color)
-  mdc-select-idle-line-color: var(--input-idle-line-color)
-  mdc-select-hover-line-color: var(--input-hover-line-color)
-  mdc-text-field-fill-color: var(--input-fill-color)
-  mdc-text-field-idle-line-color: var(--input-idle-line-color)
-  mdc-text-field-hover-line-color: var(--input-hover-line-color)
+  input-idle-line-color: "#00000000"
+  input-hover-line-color: var(--md-sys-color-primary)
+  input-dropdown-icon-color: var(--md-sys-color-on-surface-variant)
+  mdc-select-fill-color: var(--md-sys-color-surface-container-highest)
+  mdc-select-idle-line-color: "#00000000"
+  mdc-select-hover-line-color: var(--md-sys-color-primary)
+  mdc-text-field-fill-color: var(--md-sys-color-surface-container-highest)
+  mdc-text-field-idle-line-color: "#00000000"
+  mdc-text-field-hover-line-color: var(--md-sys-color-primary)
 
   # Editors
-  code-editor-background-color: var(--primary-background-color)
-  codemirror-meta: var(--primary-text-color)
-  codemirror-property: var(--primary-color)
-  codemirror-atom: var(--codemirror-property)
-  codemirror-string: rgb(119, 196, 229)
-  codemirror-keyword: rgb(140, 169, 255)
-  codemirror-number: rgb(255, 91, 29)
+  code-editor-background-color: var(--md-sys-color-surface-container)
+  codemirror-meta: var(--md-sys-color-on-surface)
+  codemirror-property: var(--md-sys-color-primary)
+  codemirror-atom: var(--md-sys-color-primary)
