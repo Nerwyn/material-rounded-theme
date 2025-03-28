@@ -1,7 +1,6 @@
 /* Correct Material 3 header toggle position */
 hui-entities-toggle {
 	position: relative !important;
-	width: 40px !important;
-	left: -4px !important;
+	left: -6px !important;
 	top: 8px !important;
 }

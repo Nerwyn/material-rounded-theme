@@ -108,3 +108,29 @@ mwc-ripple {
 .mdc-switch--checked:active .mdc-switch__thumb {
 	background: var(--switch-checked-button-state-layer) !important;
 }
+
+/* Input element position corrections */
+.mdc-switch__native-control {
+	position: relative !important;
+	top: -16px !important;
+	left: -14px !important;
+	right: unset !important;
+	bottom: unset !important;
+	scale: 1 !important;
+	transition: scale 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
+}
+.mdc-switch--checked .mdc-switch__native-control {
+	transform: translateX(-20px) !important;
+	scale: 0.7 !important;
+	translate: -3px !important;
+}
+@media (hover: hover) {
+	.mdc-switch__thumb:hover .mdc-switch__native-control {
+		scale: 0.56 !important;
+		translate: -5px !important;
+	}
+}
+.mdc-switch__thumb:has(input:focus-visible) .mdc-switch__native-control,
+.mdc-switch__thumb:active .mdc-switch__native-control {
+	scale: 0.6 !important;
+}
