@@ -37,12 +37,14 @@ ha-menu-button {
 }
 .action-items,
 .main-title,
-ha-menu-button {
+ha-menu-button,
+ha-icon-button-arrow-prev {
 	transition: var(--scroll-transition);
 	pointer-events: all;
 }
 
 /* Hide header buttons and title if not scrolled to top  */
+:host([scrolled]) ha-icon-button-arrow-prev,
 :host([scrolled]) ha-menu-button,
 :host([scrolled]) .main-title,
 :host([scrolled]) .action-items {

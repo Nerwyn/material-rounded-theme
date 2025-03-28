@@ -3,7 +3,9 @@ Material Rounded:
     dark:
       # Main colors
       primary-color: "var(--md-sys-color-primary-dark, #c2e7fe)"
-      accent-color: "var(--md-sys-color-on-primary-dark, #004a77)"
+      on-primary-color: "var(--md-sys-color-on-primary-dark, #1c2d61)"
+      accent-color: "var(--md-sys-color-secondary-dark, #c1c5dd)"
+      on-accent-color: "var(--md-sys-color-on-secondary-dark, #2b3042)"
       state-icon-color: "#c4c7c5"
       primary-text-color: "#e4e4e7"
       secondary-text-color: "#bbbcc4"
@@ -29,43 +31,45 @@ Material Rounded:
 
       # Toolbar
       md-current-tab-icon-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
-      md-current-tab-icon-background: var(--md-sys-color-primary-container-dark, var(--accent-color))
+      md-current-tab-icon-background: "var(--md-sys-color-primary-container-dark, #344479)"
       md-current-tab-text-color: var(--md-sys-color-on-surface-dark, var(--primary-text-color))
       md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
 
       # Sidebar
       sidebar-selected-text-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
       sidebar-selected-icon-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
-      sidebar-selected-background: var(--md-sys-color-primary-container-dark, var(--accent-color))
+      sidebar-selected-background: "var(--md-sys-color-primary-container-dark, #344479)"
       sidebar-icon-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
       sidebar-text-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
       sidebar-menu-button-text-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
       sidebar-state-pressed-background: var(--md-sys-color-on-secondary-container-dark, var(--primary-color))
 
       # Switches
-      md-switch-checked-button-color: var(--md-sys-color-on-primary-dark, var(--accent-color))
-      md-switch-unchecked-button-color: "var(--md-sys-color-outline-dark, #8c909f)"
-      md-switch-checked-track-color: var(--md-sys-color-primary-dark, var(--primary-color))
-      md-switch-unchecked-track-color: "var(--md-sys-color-surface-container-highest-dark, #414753)"
-      md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-dark, var(--primary-color))
-      md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-dark, var(--input-background-color))
-      md-switch-checked-button-state-layer: var(--md-sys-color-primary-container-dark, var(--accent-color))
-      md-switch-unchecked-button-state-layer: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
-      md-switch-unchecked-track-state-layer: var(--md-sys-color-on-surface-dark, var(--primary-text-color))
+      md-switch-checked-button-color: "var(--md-sys-color-on-primary-dark, #1c2d61)"
+      md-switch-unchecked-button-color: "var(--md-sys-color-outline-dark, #8f909a)"
+      md-switch-checked-track-color: "var(--md-sys-color-primary-dark, #b5c4ff)"
+      md-switch-unchecked-track-color: "var(--md-sys-color-surface-container-highest-dark, #34343a)"
+      md-switch-checked-icon-color: "var(--md-sys-color-on-primary-container-dark, #dce1ff)"
+      md-switch-unchecked-icon-color: "var(--md-sys-color-surface-container-highest-dark, #34343a)"
+      md-switch-checked-button-state-layer: "var(--md-sys-color-primary-container-dark, #344479)"
+      md-switch-unchecked-button-state-layer: "var(--md-sys-color-on-surface-variant-dark, #c6c6d0)"
+      md-switch-unchecked-track-state-layer: "var(--md-sys-color-on-surface-dark, #e3e1e9)"
 
       # Checkboxes and radio buttons
-      checkbox-checked-border-color: var(--md-sys-color-primary-dark, var(--primary-color))
-      checkbox-checked-icon-color: var(--md-sys-color-on-primary-dark, var(--accent-color))
-      checkbox-unchecked-border-color: var(--md-sys-color-on-surface-variant-dark, var(--secondary-text-color))
-      checkbox-unchecked-icon-color: var(--md-sys-color-on-surface-dark, var(--primary-text-color))
+      checkbox-checked-border-color: "var(--md-sys-color-primary-dark, #b5c4ff)"
+      checkbox-checked-icon-color: "var(--md-sys-color-on-primary-dark, #1c2d61)"
+      checkbox-unchecked-border-color: "var(--md-sys-color-on-surface-variant-dark, #c6c6d0)"
+      checkbox-unchecked-icon-color: "var(--md-sys-color-on-surface-dark, #e3e1e9)"
 
       # Radio buttons
-      mdc-radio-unchecked-color: var(--md-sys-color-on-surface-variant-dark, var(--disabled-text-color))
+      mdc-radio-unchecked-color: "var(--md-sys-color-on-surface-variant-dark, #c6c6d0)"
 
     light:
       # Main colors
       primary-color: "var(--md-sys-color-primary-light, #001d35)"
-      accent-color: "var(--md-sys-color-on-primary-light, #c2e7ff)"
+      on-primary-color: "var(--md-sys-color-on-primary-light, #ffffff)"
+      accent-color: "var(--md-sys-color-secondary-light, #595e72)"
+      on-accent-color: "var(--md-sys-color-on-secondary-light, #ffffff)"
       state-icon-color: "#454746"
       primary-text-color: "#1f1f1f"
       secondary-text-color: "#444746"
@@ -89,14 +93,14 @@ Material Rounded:
 
       # Toolbar
       md-current-tab-icon-color: var(--md-sys-color-on-secondary-container-light, var(--primary-color))
-      md-current-tab-icon-background: var(--md-sys-color-secondary-container-light, var(--accent-color))
+      md-current-tab-icon-background: "var(--md-sys-color-secondary-container-light, #dee1f9)"
       md-current-tab-text-color: var(--md-sys-color-on-surface-light, var(--primary-text-color))
       md-inactive-tab-text-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
 
       # Sidebar
       sidebar-selected-text-color: var(--md-sys-color-on-secondary-container-light, var(--primary-color))
       sidebar-selected-icon-color: var(--md-sys-color-on-secondary-container-light, var(--primary-color))
-      sidebar-selected-background: var(--md-sys-color-secondary-container-light, var(--accent-color))
+      sidebar-selected-background: "var(--md-sys-color-secondary-container-light, #dee1f9)"
       sidebar-icon-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
       sidebar-text-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
       sidebar-menu-button-text-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
@@ -104,23 +108,23 @@ Material Rounded:
 
       # Switches
       md-switch-checked-button-color: "var(--md-sys-color-on-primary-light, #ffffff)"
-      md-switch-unchecked-button-color: "var(--md-sys-color-outline-light, #727785)"
-      md-switch-checked-track-color: "var(--md-sys-color-primary-light, #005bbf)"
-      md-switch-unchecked-track-color: "var(--md-sys-color-surface-container-highest-light, #dee2f2)"
-      md-switch-checked-icon-color: var(--md-sys-color-on-primary-container-light, var(--primary-color))
-      md-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest-light, var(--input-background-color))
-      md-switch-checked-button-state-layer: var(--md-sys-color-primary-container-light, var(--accent-color))
-      md-switch-unchecked-button-state-layer: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
-      md-switch-unchecked-track-state-layer: var(--md-sys-color-on-surface-light, var(--primary-text-color))
+      md-switch-unchecked-button-color: "var(--md-sys-color-outline-light, #767680)"
+      md-switch-checked-track-color: "var(--md-sys-color-primary-light, #4c5c92)"
+      md-switch-unchecked-track-color: "var(--md-sys-color-surface-container-highest-light, #e3e1e9)"
+      md-switch-checked-icon-color: "var(--md-sys-color-on-primary-container-light, #344479)"
+      md-switch-unchecked-icon-color: "var(--md-sys-color-surface-container-highest-light, #e3e1e9)"
+      md-switch-checked-button-state-layer: "var(--md-sys-color-primary-container-light, #dce1ff)"
+      md-switch-unchecked-button-state-layer: "var(--md-sys-color-on-surface-variant-light, #45464f)"
+      md-switch-unchecked-track-state-layer: "var(--md-sys-color-on-surface-light, #1a1b21)"
 
       # Checkboxes
-      checkbox-checked-border-color: var(--md-sys-color-primary-light, var(--primary-color))
-      checkbox-checked-icon-color: var(--md-sys-color-on-primary-light, var(--accent-color))
-      checkbox-unchecked-border-color: var(--md-sys-color-on-surface-variant-light, var(--secondary-text-color))
-      checkbox-unchecked-icon-color: var(--md-sys-color-on-surface-light, var(--primary-text-color))
+      checkbox-checked-border-color: "var(--md-sys-color-primary-light, #4c5c92)"
+      checkbox-checked-icon-color: "var(--md-sys-color-on-primary-light, #ffffff)"
+      checkbox-unchecked-border-color: "var(--md-sys-color-on-surface-variant-light, #45464f)"
+      checkbox-unchecked-icon-color: "var(--md-sys-color-on-surface-light, #1a1b21)"
 
       # Radio buttons
-      mdc-radio-unchecked-color: var(--md-sys-color-on-surface-variant-light, var(--disabled-text-color))
+      mdc-radio-unchecked-color: "var(--md-sys-color-on-surface-variant-light, #45464f)"
 
   # Spacings
   horizontal-stack-card-margin: 0px 4px
@@ -172,20 +176,20 @@ Material Rounded:
 
   # Text
   text-primary-color: var(--lovelace-background)
-  text-accent-color: var(--primary-color)
-  text-light-primary-color: var(--text-primary-color)
+  text-light-primary-color: hsl(from var(--text-primary-color) h s calc(l + 20))
+  text-accent-color: var(--on-accent-color)
   link-text-color: var(--primary-color)
 
   # Main Interface Colors
-  dark-primary-color: var(--primary-color)
-  light-primary-color: var(--primary-color)
+  dark-primary-color: hsl(from var(--primary-color) h s calc(l - 20))
+  light-primary-color: hsl(from var(--primary-color) h s calc(l + 20))
   divider-color: var(--primary-background-color)
   slider-secondary-color: var(--primary-color)
   md-divider-color: var(--divider-color)
   mdc-theme-primary: var(--primary-color)
-  mdc-theme-on-primary: var(--accent-color)
-  mdc-theme-secondary: var(--primary-color)
-  mdc-theme-on-secondary: var(--accent-color)
+  mdc-theme-on-primary: var(--on-primary-color)
+  mdc-theme-secondary: var(--accent-color)
+  mdc-theme-on-secondary: var(--on-accent-color)
   scrollbar-thumb-color: "#2e3038"
 
   # Cards

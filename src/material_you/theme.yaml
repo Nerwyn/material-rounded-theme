@@ -259,12 +259,12 @@ Material You:
 
   # Main colors
   primary-color: var(--md-sys-color-primary)
-  accent-color: var(--md-sys-color-on-primary)
+  accent-color: var(--md-sys-color-secondary)
   state-icon-color: var(--md-sys-color-on-surface-variant)
   primary-text-color: var(--md-sys-color-on-surface)
   secondary-text-color: var(--md-sys-color-on-surface-variant)
   input-background-color: var(--md-sys-color-surface-container-highest)
-  input-label-ink-color: ar(--md-sys-color-on-surface-variant)
+  input-label-ink-color: var(--md-sys-color-on-surface-variant)
   secondary-background-color: var(--md-sys-color-secondary-container)
   dark-primary-color: hsl(from var(--md-sys-color-primary) h s calc(l - 20))
   light-primary-color: hsl(from var(--md-sys-color-primary) h s calc(l + 20))
@@ -406,7 +406,7 @@ Material You:
   # Text
   text-primary-color: var(--md-sys-color-surface)
   text-light-primary-color: hsl(from var(--md-sys-color-surface) h s calc(l + 20))
-  text-accent-color: var(--md-sys-color-primary)
+  text-accent-color: var(--md-sys-color-on-secondary)
   link-text-color: var(--md-sys-color-primary)
 
   # Legacy mdc colors
@@ -429,7 +429,7 @@ Material You:
 
   # Text Fields and Dropdowns
   input-fill-color: var(--md-sys-color-surface-container-highest)
-  input-ink-color: ar(--md-sys-color-on-surface)
+  input-ink-color: var(--md-sys-color-on-surface)
   input-disabled-fill-color: rgba(from var(--md-sys-color-surface-container-highest) r g b / 0.5)
   input-disabled-ink-color: var(--disabled-text-color)
   input-disabled-label-ink-color: var(--disabled-text-color)
