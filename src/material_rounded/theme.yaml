@@ -68,8 +68,8 @@ Material Rounded:
       bubble-accent-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
       bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
       bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-highest-dark, #34343a)"
-      bubble-button-main-background-color: "var(--md-sys-color-surface-container-dark, #1e1f25)"
       bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-dark, #414659)"
+      bubble-button-main-background-color: "#1e1f20"
 
     light:
       # Main colors
@@ -137,8 +137,8 @@ Material Rounded:
       bubble-accent-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
       bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
       bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
-      bubble-button-main-background-color: "var(--md-sys-color-surface-container-highest-light, #e3e1e9)"
       bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
+      bubble-button-main-background-color: "#f0f4f9"
 
   # Spacings
   horizontal-stack-card-margin: 0px 4px
