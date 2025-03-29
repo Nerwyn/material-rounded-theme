@@ -28,7 +28,6 @@ Material You:
       md-sys-color-tertiary-container: "var(--md-sys-color-tertiary-container-dark, #5b3d57)"
       md-sys-color-on-tertiary-container: "var(--md-sys-color-on-tertiary-container-dark, #ffd7f6)"
       md-sys-color-tertiary-palette-key-color: "var(--md-sys-color-tertiary-palette-key-color-dark, #8f6c89)"
-
       md-sys-color-tertiary-fixed: "var(--md-sys-color-tertiary-fixed-dark, #ffd7f6)"
       md-sys-color-tertiary-fixed-dim: "var(--md-sys-color-tertiary-fixed-dim-dark, #e3badb)"
       md-sys-color-on-tertiary-fixed: "var(--md-sys-color-on-tertiary-fixed-dark, #2c122a)"
@@ -96,7 +95,6 @@ Material You:
       md-sys-color-tertiary-container: "var(--md-sys-color-tertiary-container-light, #ffd7f6)"
       md-sys-color-on-tertiary-container: "var(--md-sys-color-on-tertiary-container-light, #5b3d57)"
       md-sys-color-tertiary-palette-key-color: "var(--md-sys-color-tertiary-palette-key-color-light, #8f6c89)"
-
       md-sys-color-tertiary-fixed: "var(--md-sys-color-tertiary-fixed-light, #ffd7f6)"
       md-sys-color-tertiary-fixed-dim: "var(--md-sys-color-tertiary-fixed-dim-light, #e3badb)"
       md-sys-color-on-tertiary-fixed: "var(--md-sys-color-on-tertiary-fixed-light, #2c122a)"
