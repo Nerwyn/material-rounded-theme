@@ -89,6 +89,9 @@ Material Rounded:
     dark:
       accent-color: "var(--md-sys-color-secondary-dark, #c1c5dd)"
       app-header-background-color: "#131314"
+      bubble-accent-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+      bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+      bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #414659)"
       card-background-color: "#282a2c"
       checkbox-checked-border-color: "var(--md-sys-color-primary-dark, #b5c4ff)"
       checkbox-checked-icon-color: "var(--md-sys-color-on-primary-dark, #1c2d61)"
@@ -135,6 +138,9 @@ Material Rounded:
     light:
       accent-color: "var(--md-sys-color-secondary-light, #595e72)"
       app-header-background-color: "#ffffff"
+      bubble-accent-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+      bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+      bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #dee1f9)"
       card-background-color: "#e9eef6"
       checkbox-checked-border-color: "var(--md-sys-color-primary-light, #4c5c92)"
       checkbox-checked-icon-color: "var(--md-sys-color-on-primary-light, #ffffff)"
@@ -223,6 +229,9 @@ Material Rounded Dark:
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
+  bubble-accent-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+  bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+  bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #414659)"
   card-background-color: "#282a2c"
   card-mod-theme: Material Rounded
   checkbox-checked-border-color: "var(--md-sys-color-primary-dark, #b5c4ff)"
@@ -370,6 +379,9 @@ Material Rounded Light:
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
+  bubble-accent-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+  bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+  bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #dee1f9)"
   card-background-color: "#e9eef6"
   card-mod-theme: Material Rounded
   checkbox-checked-border-color: "var(--md-sys-color-primary-light, #4c5c92)"
@@ -574,6 +586,9 @@ Material Rounded No Mod:
     dark:
       accent-color: "var(--md-sys-color-secondary-dark, #c1c5dd)"
       app-header-background-color: "#131314"
+      bubble-accent-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+      bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+      bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #414659)"
       card-background-color: "#282a2c"
       checkbox-checked-border-color: "var(--md-sys-color-primary-dark, #b5c4ff)"
       checkbox-checked-icon-color: "var(--md-sys-color-on-primary-dark, #1c2d61)"
@@ -620,6 +635,9 @@ Material Rounded No Mod:
     light:
       accent-color: "var(--md-sys-color-secondary-light, #595e72)"
       app-header-background-color: "#ffffff"
+      bubble-accent-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+      bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+      bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #dee1f9)"
       card-background-color: "#e9eef6"
       checkbox-checked-border-color: "var(--md-sys-color-primary-light, #4c5c92)"
       checkbox-checked-icon-color: "var(--md-sys-color-on-primary-light, #ffffff)"
@@ -709,6 +727,9 @@ Material Rounded No Mod Dark:
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
+  bubble-accent-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+  bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+  bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #414659)"
   card-background-color: "#282a2c"
   checkbox-checked-border-color: "var(--md-sys-color-primary-dark, #b5c4ff)"
   checkbox-checked-icon-color: "var(--md-sys-color-on-primary-dark, #1c2d61)"
@@ -855,6 +876,9 @@ Material Rounded No Mod Light:
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
+  bubble-accent-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+  bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+  bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #dee1f9)"
   card-background-color: "#e9eef6"
   checkbox-checked-border-color: "var(--md-sys-color-primary-light, #4c5c92)"
   checkbox-checked-icon-color: "var(--md-sys-color-on-primary-light, #ffffff)"
@@ -1058,6 +1082,9 @@ Material Rounded Transparent Card:
     dark:
       accent-color: "var(--md-sys-color-secondary-dark, #c1c5dd)"
       app-header-background-color: "#131314"
+      bubble-accent-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+      bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+      bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #414659)"
       card-background-color: "#282a2c"
       checkbox-checked-border-color: "var(--md-sys-color-primary-dark, #b5c4ff)"
       checkbox-checked-icon-color: "var(--md-sys-color-on-primary-dark, #1c2d61)"
@@ -1104,6 +1131,9 @@ Material Rounded Transparent Card:
     light:
       accent-color: "var(--md-sys-color-secondary-light, #595e72)"
       app-header-background-color: "#ffffff"
+      bubble-accent-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+      bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+      bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #dee1f9)"
       card-background-color: "#e9eef6"
       checkbox-checked-border-color: "var(--md-sys-color-primary-light, #4c5c92)"
       checkbox-checked-icon-color: "var(--md-sys-color-on-primary-light, #ffffff)"
@@ -1192,6 +1222,9 @@ Material Rounded Transparent Card Dark:
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
+  bubble-accent-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+  bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+  bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #414659)"
   card-background-color: "#282a2c"
   card-mod-theme: Material Rounded
   checkbox-checked-border-color: "var(--md-sys-color-primary-dark, #b5c4ff)"
@@ -1339,6 +1372,9 @@ Material Rounded Transparent Card Light:
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
+  bubble-accent-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+  bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+  bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #dee1f9)"
   card-background-color: "#e9eef6"
   card-mod-theme: Material Rounded
   checkbox-checked-border-color: "var(--md-sys-color-primary-light, #4c5c92)"
@@ -1543,6 +1579,9 @@ Material Rounded Transparent Card No Mod:
     dark:
       accent-color: "var(--md-sys-color-secondary-dark, #c1c5dd)"
       app-header-background-color: "#131314"
+      bubble-accent-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+      bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+      bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #414659)"
       card-background-color: "#282a2c"
       checkbox-checked-border-color: "var(--md-sys-color-primary-dark, #b5c4ff)"
       checkbox-checked-icon-color: "var(--md-sys-color-on-primary-dark, #1c2d61)"
@@ -1589,6 +1628,9 @@ Material Rounded Transparent Card No Mod:
     light:
       accent-color: "var(--md-sys-color-secondary-light, #595e72)"
       app-header-background-color: "#ffffff"
+      bubble-accent-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+      bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+      bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #dee1f9)"
       card-background-color: "#e9eef6"
       checkbox-checked-border-color: "var(--md-sys-color-primary-light, #4c5c92)"
       checkbox-checked-icon-color: "var(--md-sys-color-on-primary-light, #ffffff)"
@@ -1678,6 +1720,9 @@ Material Rounded Transparent Card No Mod Dark:
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
+  bubble-accent-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+  bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
+  bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #414659)"
   card-background-color: "#282a2c"
   checkbox-checked-border-color: "var(--md-sys-color-primary-dark, #b5c4ff)"
   checkbox-checked-icon-color: "var(--md-sys-color-on-primary-dark, #1c2d61)"
@@ -1824,6 +1869,9 @@ Material Rounded Transparent Card No Mod Light:
   app-header-selection-bar-color: none
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
+  bubble-accent-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+  bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
+  bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #dee1f9)"
   card-background-color: "#e9eef6"
   checkbox-checked-border-color: "var(--md-sys-color-primary-light, #4c5c92)"
   checkbox-checked-icon-color: "var(--md-sys-color-on-primary-light, #ffffff)"
@@ -1968,6 +2016,9 @@ Material You:
   app-header-selection-bar-color: none
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
+  bubble-accent-color: var(--md-sys-color-inverse-primary)
+  bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
+  bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   card-background-color: var(--md-sys-color-surface-container-low)
   card-mod-theme: Material Rounded
   checkbox-checked-border-color: var(--md-sys-color-primary)
@@ -2231,6 +2282,9 @@ Material You Dark:
   app-header-selection-bar-color: none
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
+  bubble-accent-color: var(--md-sys-color-inverse-primary)
+  bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
+  bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   card-background-color: var(--md-sys-color-surface-container-low)
   card-mod-theme: Material Rounded
   checkbox-checked-border-color: var(--md-sys-color-primary)
@@ -2437,6 +2491,9 @@ Material You Light:
   app-header-selection-bar-color: none
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
+  bubble-accent-color: var(--md-sys-color-inverse-primary)
+  bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
+  bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   card-background-color: var(--md-sys-color-surface-container-low)
   card-mod-theme: Material Rounded
   checkbox-checked-border-color: var(--md-sys-color-primary)
@@ -2642,6 +2699,9 @@ Material You No Mod:
   app-header-selection-bar-color: none
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
+  bubble-accent-color: var(--md-sys-color-inverse-primary)
+  bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
+  bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   card-background-color: var(--md-sys-color-surface-container-low)
   checkbox-checked-border-color: var(--md-sys-color-primary)
   checkbox-checked-icon-color: var(--md-sys-color-on-primary)
@@ -2904,6 +2964,9 @@ Material You No Mod Dark:
   app-header-selection-bar-color: none
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
+  bubble-accent-color: var(--md-sys-color-inverse-primary)
+  bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
+  bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   card-background-color: var(--md-sys-color-surface-container-low)
   checkbox-checked-border-color: var(--md-sys-color-primary)
   checkbox-checked-icon-color: var(--md-sys-color-on-primary)
@@ -3109,6 +3172,9 @@ Material You No Mod Light:
   app-header-selection-bar-color: none
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
+  bubble-accent-color: var(--md-sys-color-inverse-primary)
+  bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
+  bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   card-background-color: var(--md-sys-color-surface-container-low)
   checkbox-checked-border-color: var(--md-sys-color-primary)
   checkbox-checked-icon-color: var(--md-sys-color-on-primary)
@@ -3313,6 +3379,9 @@ Material You Transparent Card:
   app-header-selection-bar-color: none
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
+  bubble-accent-color: var(--md-sys-color-inverse-primary)
+  bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
+  bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   card-background-color: var(--md-sys-color-surface-container-low)
   card-mod-theme: Material Rounded
   checkbox-checked-border-color: var(--md-sys-color-primary)
@@ -3576,6 +3645,9 @@ Material You Transparent Card Dark:
   app-header-selection-bar-color: none
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
+  bubble-accent-color: var(--md-sys-color-inverse-primary)
+  bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
+  bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   card-background-color: var(--md-sys-color-surface-container-low)
   card-mod-theme: Material Rounded
   checkbox-checked-border-color: var(--md-sys-color-primary)
@@ -3782,6 +3854,9 @@ Material You Transparent Card Light:
   app-header-selection-bar-color: none
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
+  bubble-accent-color: var(--md-sys-color-inverse-primary)
+  bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
+  bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   card-background-color: var(--md-sys-color-surface-container-low)
   card-mod-theme: Material Rounded
   checkbox-checked-border-color: var(--md-sys-color-primary)
@@ -3987,6 +4062,9 @@ Material You Transparent Card No Mod:
   app-header-selection-bar-color: none
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
+  bubble-accent-color: var(--md-sys-color-inverse-primary)
+  bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
+  bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   card-background-color: var(--md-sys-color-surface-container-low)
   checkbox-checked-border-color: var(--md-sys-color-primary)
   checkbox-checked-icon-color: var(--md-sys-color-on-primary)
@@ -4249,6 +4327,9 @@ Material You Transparent Card No Mod Dark:
   app-header-selection-bar-color: none
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
+  bubble-accent-color: var(--md-sys-color-inverse-primary)
+  bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
+  bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   card-background-color: var(--md-sys-color-surface-container-low)
   checkbox-checked-border-color: var(--md-sys-color-primary)
   checkbox-checked-icon-color: var(--md-sys-color-on-primary)
@@ -4454,6 +4535,9 @@ Material You Transparent Card No Mod Light:
   app-header-selection-bar-color: none
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
+  bubble-accent-color: var(--md-sys-color-inverse-primary)
+  bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
+  bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   card-background-color: var(--md-sys-color-surface-container-low)
   checkbox-checked-border-color: var(--md-sys-color-primary)
   checkbox-checked-icon-color: var(--md-sys-color-on-primary)

@@ -326,3 +326,8 @@ Material You:
   codemirror-meta: var(--md-sys-color-on-surface)
   codemirror-property: var(--md-sys-color-primary)
   codemirror-atom: var(--md-sys-color-primary)
+
+  # Bubble Card
+  bubble-accent-color: var(--md-sys-color-inverse-primary)
+  bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
+  bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
