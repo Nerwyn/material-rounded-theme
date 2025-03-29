@@ -65,9 +65,11 @@ Material Rounded:
       mdc-radio-unchecked-color: "var(--md-sys-color-on-surface-variant-dark, #c6c6d0)"
 
       # Bubble Card
-      bubble-accent-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
-      bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #4c5c92)"
-      bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #414659)"
+      bubble-accent-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
+      bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
+      bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-dark, #414659)"
+      bubble-button-main-background-color: "var(--md-sys-color-surface-container-dark, #1e1f25)"
+      bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-dark, #414659)"
 
     light:
       # Main colors
@@ -132,9 +134,11 @@ Material Rounded:
       mdc-radio-unchecked-color: "var(--md-sys-color-on-surface-variant-light, #45464f)"
 
       # Bubble Card
-      bubble-accent-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
-      bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary, #b5c4ff)"
-      bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container, #dee1f9)"
+      bubble-accent-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
+      bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
+      bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
+      bubble-button-main-background-color: "var(--md-sys-color-surface-container-light, #eeedf4)"
+      bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
 
   # Spacings
   horizontal-stack-card-margin: 0px 4px
