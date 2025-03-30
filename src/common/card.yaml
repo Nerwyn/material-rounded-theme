@@ -27,7 +27,7 @@ ha-enable-shortcuts-row$ ha-switch$: >-
 ha-analytics$ ha-switch$: >-
   {{ ha_switch.css }}
 
-# Device page
+# Devices and entities card rows
 hui-toggle-entity-row$:
   ha-entity-toggle$ ha-switch$: >-
     {{ ha_switch.css }}
