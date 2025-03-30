@@ -1,3 +1,0 @@
-ha-entity-toggle$:
-  ha-switch$: >-
-    {{ ha_switch.css }}
