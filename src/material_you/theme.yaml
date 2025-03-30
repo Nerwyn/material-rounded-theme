@@ -330,4 +330,4 @@ Material You:
   bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
   bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   bubble-sub-button-light-background-color: var(--md-sys-color-secondary-container)
-  bubble-button-main-background-color: var(--md-sys-color-surface-container-highest)
+  bubble-main-background-color: var(--md-sys-color-surface-container-highest)

@@ -90,7 +90,6 @@ Material Rounded:
       accent-color: "var(--md-sys-color-secondary-dark, #c1c5dd)"
       app-header-background-color: "#131314"
       bubble-accent-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
-      bubble-button-main-background-color: "#1e1f20"
       bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
       bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-highest-dark, #34343a)"
       bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-dark, #414659)"
@@ -141,7 +140,6 @@ Material Rounded:
       accent-color: "var(--md-sys-color-secondary-light, #595e72)"
       app-header-background-color: "#ffffff"
       bubble-accent-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
-      bubble-button-main-background-color: "#f0f4f9"
       bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
       bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
       bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
@@ -234,7 +232,6 @@ Material Rounded Dark:
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   bubble-accent-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
-  bubble-button-main-background-color: "#1e1f20"
   bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
   bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-highest-dark, #34343a)"
   bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-dark, #414659)"
@@ -386,7 +383,6 @@ Material Rounded Light:
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   bubble-accent-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
-  bubble-button-main-background-color: "#f0f4f9"
   bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
   bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
   bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
@@ -595,7 +591,6 @@ Material Rounded No Mod:
       accent-color: "var(--md-sys-color-secondary-dark, #c1c5dd)"
       app-header-background-color: "#131314"
       bubble-accent-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
-      bubble-button-main-background-color: "#1e1f20"
       bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
       bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-highest-dark, #34343a)"
       bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-dark, #414659)"
@@ -646,7 +641,6 @@ Material Rounded No Mod:
       accent-color: "var(--md-sys-color-secondary-light, #595e72)"
       app-header-background-color: "#ffffff"
       bubble-accent-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
-      bubble-button-main-background-color: "#f0f4f9"
       bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
       bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
       bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
@@ -740,7 +734,6 @@ Material Rounded No Mod Dark:
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   bubble-accent-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
-  bubble-button-main-background-color: "#1e1f20"
   bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
   bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-highest-dark, #34343a)"
   bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-dark, #414659)"
@@ -891,7 +884,6 @@ Material Rounded No Mod Light:
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   bubble-accent-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
-  bubble-button-main-background-color: "#f0f4f9"
   bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
   bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
   bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
@@ -1099,7 +1091,6 @@ Material Rounded Transparent Card:
       accent-color: "var(--md-sys-color-secondary-dark, #c1c5dd)"
       app-header-background-color: "#131314"
       bubble-accent-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
-      bubble-button-main-background-color: "#1e1f20"
       bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
       bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-highest-dark, #34343a)"
       bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-dark, #414659)"
@@ -1150,7 +1141,6 @@ Material Rounded Transparent Card:
       accent-color: "var(--md-sys-color-secondary-light, #595e72)"
       app-header-background-color: "#ffffff"
       bubble-accent-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
-      bubble-button-main-background-color: "#f0f4f9"
       bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
       bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
       bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
@@ -1243,7 +1233,6 @@ Material Rounded Transparent Card Dark:
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   bubble-accent-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
-  bubble-button-main-background-color: "#1e1f20"
   bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
   bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-highest-dark, #34343a)"
   bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-dark, #414659)"
@@ -1395,7 +1384,6 @@ Material Rounded Transparent Card Light:
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   bubble-accent-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
-  bubble-button-main-background-color: "#f0f4f9"
   bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
   bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
   bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
@@ -1604,7 +1592,6 @@ Material Rounded Transparent Card No Mod:
       accent-color: "var(--md-sys-color-secondary-dark, #c1c5dd)"
       app-header-background-color: "#131314"
       bubble-accent-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
-      bubble-button-main-background-color: "#1e1f20"
       bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
       bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-highest-dark, #34343a)"
       bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-dark, #414659)"
@@ -1655,7 +1642,6 @@ Material Rounded Transparent Card No Mod:
       accent-color: "var(--md-sys-color-secondary-light, #595e72)"
       app-header-background-color: "#ffffff"
       bubble-accent-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
-      bubble-button-main-background-color: "#f0f4f9"
       bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
       bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
       bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
@@ -1749,7 +1735,6 @@ Material Rounded Transparent Card No Mod Dark:
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   bubble-accent-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
-  bubble-button-main-background-color: "#1e1f20"
   bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-dark, #4c5c92)"
   bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-highest-dark, #34343a)"
   bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-dark, #414659)"
@@ -1900,7 +1885,6 @@ Material Rounded Transparent Card No Mod Light:
   app-header-text-color: var(--primary-text-color)
   border-radius: 28px
   bubble-accent-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
-  bubble-button-main-background-color: "#f0f4f9"
   bubble-select-arrow-background-color: "var(--md-sys-color-inverse-primary-light, #b5c4ff)"
   bubble-select-list-item-accent-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
   bubble-sub-button-light-background-color: "var(--md-sys-color-secondary-container-light, #dee1f9)"
@@ -2049,7 +2033,7 @@ Material You:
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
   bubble-accent-color: var(--md-sys-color-inverse-primary)
-  bubble-button-main-background-color: var(--md-sys-color-surface-container-highest)
+  bubble-main-background-color: var(--md-sys-color-surface-container-highest)
   bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
   bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   bubble-sub-button-light-background-color: var(--md-sys-color-secondary-container)
@@ -2317,7 +2301,7 @@ Material You Dark:
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
   bubble-accent-color: var(--md-sys-color-inverse-primary)
-  bubble-button-main-background-color: var(--md-sys-color-surface-container-highest)
+  bubble-main-background-color: var(--md-sys-color-surface-container-highest)
   bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
   bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   bubble-sub-button-light-background-color: var(--md-sys-color-secondary-container)
@@ -2528,7 +2512,7 @@ Material You Light:
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
   bubble-accent-color: var(--md-sys-color-inverse-primary)
-  bubble-button-main-background-color: var(--md-sys-color-surface-container-highest)
+  bubble-main-background-color: var(--md-sys-color-surface-container-highest)
   bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
   bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   bubble-sub-button-light-background-color: var(--md-sys-color-secondary-container)
@@ -2738,7 +2722,7 @@ Material You No Mod:
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
   bubble-accent-color: var(--md-sys-color-inverse-primary)
-  bubble-button-main-background-color: var(--md-sys-color-surface-container-highest)
+  bubble-main-background-color: var(--md-sys-color-surface-container-highest)
   bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
   bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   bubble-sub-button-light-background-color: var(--md-sys-color-secondary-container)
@@ -3005,7 +2989,7 @@ Material You No Mod Dark:
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
   bubble-accent-color: var(--md-sys-color-inverse-primary)
-  bubble-button-main-background-color: var(--md-sys-color-surface-container-highest)
+  bubble-main-background-color: var(--md-sys-color-surface-container-highest)
   bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
   bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   bubble-sub-button-light-background-color: var(--md-sys-color-secondary-container)
@@ -3215,7 +3199,7 @@ Material You No Mod Light:
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
   bubble-accent-color: var(--md-sys-color-inverse-primary)
-  bubble-button-main-background-color: var(--md-sys-color-surface-container-highest)
+  bubble-main-background-color: var(--md-sys-color-surface-container-highest)
   bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
   bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   bubble-sub-button-light-background-color: var(--md-sys-color-secondary-container)
@@ -3424,7 +3408,7 @@ Material You Transparent Card:
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
   bubble-accent-color: var(--md-sys-color-inverse-primary)
-  bubble-button-main-background-color: var(--md-sys-color-surface-container-highest)
+  bubble-main-background-color: var(--md-sys-color-surface-container-highest)
   bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
   bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   bubble-sub-button-light-background-color: var(--md-sys-color-secondary-container)
@@ -3692,7 +3676,7 @@ Material You Transparent Card Dark:
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
   bubble-accent-color: var(--md-sys-color-inverse-primary)
-  bubble-button-main-background-color: var(--md-sys-color-surface-container-highest)
+  bubble-main-background-color: var(--md-sys-color-surface-container-highest)
   bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
   bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   bubble-sub-button-light-background-color: var(--md-sys-color-secondary-container)
@@ -3903,7 +3887,7 @@ Material You Transparent Card Light:
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
   bubble-accent-color: var(--md-sys-color-inverse-primary)
-  bubble-button-main-background-color: var(--md-sys-color-surface-container-highest)
+  bubble-main-background-color: var(--md-sys-color-surface-container-highest)
   bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
   bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   bubble-sub-button-light-background-color: var(--md-sys-color-secondary-container)
@@ -4113,7 +4097,7 @@ Material You Transparent Card No Mod:
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
   bubble-accent-color: var(--md-sys-color-inverse-primary)
-  bubble-button-main-background-color: var(--md-sys-color-surface-container-highest)
+  bubble-main-background-color: var(--md-sys-color-surface-container-highest)
   bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
   bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   bubble-sub-button-light-background-color: var(--md-sys-color-secondary-container)
@@ -4380,7 +4364,7 @@ Material You Transparent Card No Mod Dark:
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
   bubble-accent-color: var(--md-sys-color-inverse-primary)
-  bubble-button-main-background-color: var(--md-sys-color-surface-container-highest)
+  bubble-main-background-color: var(--md-sys-color-surface-container-highest)
   bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
   bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   bubble-sub-button-light-background-color: var(--md-sys-color-secondary-container)
@@ -4590,7 +4574,7 @@ Material You Transparent Card No Mod Light:
   app-header-text-color: var(--md-sys-color-on-surface)
   border-radius: 28px
   bubble-accent-color: var(--md-sys-color-inverse-primary)
-  bubble-button-main-background-color: var(--md-sys-color-surface-container-highest)
+  bubble-main-background-color: var(--md-sys-color-surface-container-highest)
   bubble-select-arrow-background-color: var(--md-sys-color-inverse-primary)
   bubble-select-list-item-accent-color: var(--md-sys-color-secondary-container)
   bubble-sub-button-light-background-color: var(--md-sys-color-secondary-container)
