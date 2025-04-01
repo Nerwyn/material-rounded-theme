@@ -112,17 +112,39 @@ frontend:
 
 ### Create a Template Sensor Helper
 
-Once the JavaScript module resource has been added, create a helper template sensor named `Material Rounded Base Color` (this name is used for all themes in this project) that returns the hex code of your preferred base color. The theme colors will be calculated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities).
+Once the JavaScript module resource has been added, create a helper template sensor named `Material You Base Color` that returns the hex code of your preferred base color. The theme colors will be calculated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities).
 
 1. Navigate to `Settings` > `Devices & services` > ` Helpers`.
 2. Click `+ CREATE HELPER`.
 3. Click `Template`.
 4. Click `Template a sensor`.
-5. Name the sensor `Material Rounded Base Color`. The sensor entity ID should be `sensor.material_rounded_base_color`.
+5. Name the sensor `Material You Base Color`. The sensor entity ID should be `sensor.material_you_base_color`.
 6. Enter your Material You base color as a hex code, e.g. `238636`, `#db4437`, `#fff`. You can also use a template to read a hex code from the state or attribute of a different entity, like `{{ states("sensor.pixel_fold_accent_color") }}`.
 7. Click `SUBMIT`.
 
-You can also choose user specific colors by creating a sensor named `Material Rounded Base Color Your Name`, with your name being your person name as it appears on the [Home Assistant people page](http://homeassistant.local:8123/config/person). The sensory entity ID should be something like `sensor.material_rounded_base_color_john_doe`. Alternatively, you can use your user ID as found on the [Home Assistant users page](http://homeassistant.local:8123/config/users) when you click on a user. In this case the sensor entity ID should be something like `sensor.material_rounded_base_color_f8866a924fc94c4d8abde860584afd05`.
+You can also choose user specific colors by creating a sensor named `Material You Base Color Your Name`, with your name being your person name as it appears on the [Home Assistant people page](http://homeassistant.local:8123/config/person). The sensory entity ID should be something like `sensor.material_you_base_color_john_doe`. Alternatively, you can use your user ID as found on the [Home Assistant users page](http://homeassistant.local:8123/config/users) when you click on a user. In this case the sensor entity ID should be something like `sensor.material_you_base_color_f8866a924fc94c4d8abde860584afd05`.
+
+#### Alternate Schemes and Contrast
+
+In addition to the modern Android color scheme, the [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) several alternate schemes. You can use these schemes by creating helper template sensors similar to the base color sensors above with the name `material_you_scheme`.
+
+| Name        | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tonal Spot  | Dynamic Color theme with low to medium colorfulness and a Tertiary TonalPalette with a hue related to the source color.<br> The default Material You theme on Android 12 and later.                                                                                                                                                                                                                                     |
+| Content     | A scheme that places the source color in `Scheme.primaryContainer`.<br> Primary Container is the source color, adjusted for color relativity.<br> It maintains constant appearance in light mode and dark mode.<br> This adds ~5 tone in light mode, and subtracts ~5 tone in dark mode.<br> Tertiary Container is the complement to the source color, using `TemperatureCache`. It also maintains constant appearance. |
+| Fidelity    | A scheme that places the source color in `Scheme.primaryContainer`.<br> Primary Container is the source color, adjusted for color relativity.<br> It maintains constant appearance in light mode and dark mode.<br> This adds ~5 tone in light mode, and subtracts ~5 tone in dark mode.<br> Tertiary Container is the complement to the source color, using `TemperatureCache`. It also maintains constant appearance. |
+| Expressive  | A Dynamic Color theme that is intentionally detached from the source color.                                                                                                                                                                                                                                                                                                                                             |
+| Fruit Salad | A playful theme - the source color's hue does not appear in the theme.                                                                                                                                                                                                                                                                                                                                                  |
+| Rainbow     | A playful theme - the source color's hue does not appear in the theme.                                                                                                                                                                                                                                                                                                                                                  |
+| Vibrant     | A Dynamic Color theme that maxes out colorfulness at each position in the Primary Tonal Palette.                                                                                                                                                                                                                                                                                                                        |
+| Neutral     | A Dynamic Color theme that is near grayscale.                                                                                                                                                                                                                                                                                                                                                                           |
+| Monochrome  | A Dynamic Color theme that is grayscale.                                                                                                                                                                                                                                                                                                                                                                                |
+
+If an invalid or no scheme is provided, it will default to `Scheme Tonal Spot`.
+
+Each scheme can also be provided with a custom contrast from -1 to 1. Value outside of this range are clamped to it. If not provided it will default to `0`.
+
+A base color must be provided in order to use a custom scheme or contrast. For reference the default color palette uses my personal Android Material You base color, `#4C5C92`.
 
 #### Home Assistant Android App Color Sensor
 

@@ -81,16 +81,14 @@ async function main() {
 						hass.states[schemeSensorUserId]?.state ||
 						hass.states[schemeSensor]?.state;
 
-					const contrastLevel = Math.max(
-						Math.min(
-							parseFloat(
-								hass.states[contrastSensorUserName]?.state ||
-									hass.states[contrastSensorUserId]?.state ||
-									hass.states[contrastSensor]?.state ||
-									'0',
-							),
-							1,
-						),
+					let contrastLevel = parseFloat(
+						hass.states[contrastSensorUserName]?.state ||
+							hass.states[contrastSensorUserId]?.state ||
+							hass.states[contrastSensor]?.state ||
+							'0',
+					);
+					contrastLevel = Math.max(
+						Math.min(isNaN(contrastLevel) ? 0 : contrastLevel, 1),
 						-1,
 					);
 
