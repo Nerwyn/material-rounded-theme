@@ -126,7 +126,7 @@ You can also choose user specific colors by creating a sensor named `Material Yo
 
 #### Alternate Schemes and Contrast
 
-In addition to the modern Android color scheme, the [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) several alternate schemes. You can use these schemes by creating helper template sensors similar to the base color sensors above with the name `material_you_scheme`.
+In addition to the modern Android color scheme, [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) offers several alternate schemes. You can use these schemes by creating helper template sensors similar to the base color sensors above with the name `material_you_scheme`.
 
 | Name        | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
