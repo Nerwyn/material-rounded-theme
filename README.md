@@ -144,7 +144,7 @@ If an invalid or no scheme is provided, it will default to `Scheme Tonal Spot`.
 
 Each scheme can also be provided with a custom contrast from -1 to 1. Value outside of this range are clamped to it. If not provided it will default to `0`.
 
-A base color must be provided in order to use a custom scheme or contrast. For reference the default color palette uses my personal Android Material You base color, `#4C5C92`.
+A base color must be provided in order to use a custom scheme or contrast (even `Monochrome`). For reference the default color palette uses my personal Android Material You base color, `#4C5C92`.
 
 #### Home Assistant Android App Color Sensor
 
