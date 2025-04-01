@@ -15,7 +15,7 @@ Themes for Home Assistant influenced by Google apps and Material Design 3 by Goo
 
 Both themes implement Material Design 3 redesigns of elements when possible using [card-mod](https://github.com/thomasloven/lovelace-card-mod). If you have card-mod installed and do not the component redesigns, use the "No Mod" versions of this theme. If you want partial card-mod component modifications you must modify and recompile the theme yourself as described [at the end of the README](#developing-modifying-and-building-the-theme).
 
-Don't like the blue accents? You can choose a different Material You base color! [See below for more](#material-you-colors). Requires an additional JS resource script. Does not require card-mod.
+Don't like the blue accents? You can choose a different Material You base color! [See below for more](#material-you-colors). Requires an additional JS resource script. Does not require card-mod. You can also choose from several alternate color schemes and tweak theme contrast.
 
 This theme also includes "Transparent Card" versions with transparent card backgrounds. It also includes separate light and dark versions of all themes for niche use cases. These variations are combined into many different versions of the theme.
 
@@ -158,6 +158,46 @@ If you are using the Home Assistant Android companion app, you can enable the ac
 4. Toggle `Enable sensor` on. It should now return your phone's Material You base color as a hex code.
 
 Then create a base color template sensor as described above, and use a template to return the state of your companion app accent color sensor.
+
+### Alternative - Build Your Own Theme CSS
+
+If you do not want to use the JavaScript module resource or create helper sensors, you can instead create your own Material Theme using [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/). **NOTE**: themes created this way will not apply to iframes such as the HACS and Add-ons pages. It will also not apply to some page backgrounds like the settings and developer tools pages, which are hardcoded to a default color.
+
+1. Navigate to [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/).
+2. Choose your theme colors. You can skip picking fonts, they are not saved to the exported files.
+3. Click `Export theme`, click `Export`, and then click `Web (CSS)`.
+4. Extract the CSS files from the downloaded zip archive and open the css folder within it.
+5. Choose a matching set of light and dark css files with the same contrast extension and open them in a text editor.
+   - `light.css` and `dark.css` are standard, `-mc` is medium contrast, and `-hc` is high contrast.
+6. Find and replace (`CTRL` + `F`) all colons `:` in the CSS files and replace them with `-light:` in the light file and `-dark:` in the dark file.
+7. Copy all of the variables from one file to the other, and rename the selector (`.dark`, `.light-high-contrast`, etc) to `html`. It should look something like this:
+
+```css
+html {
+  --md-sys-color-primary-dark: rgb(242 220 130);
+  --md-sys-color-surface-tint-dark: rgb(219 198 110);
+  --md-sys-color-on-primary-dark: rgb(45 37 0);
+  --md-sys-color-primary-container-dark: rgb(163 144 63);
+  ...
+  --md-sys-color-surface-container-lowest-light: rgb(255 255 255);
+  --md-sys-color-surface-container-low-light: rgb(250 243 229);
+  --md-sys-color-surface-container-light: rgb(238 232 218);
+  --md-sys-color-surface-container-high-light: rgb(227 220 207);
+  --md-sys-color-surface-container-highest-light: rgb(215 209 196);
+}
+```
+
+- Consider renaming the file to something recognizable, like `material-design-colors.css`
+
+8. Upload this file to your Home Assistant instance, preferable in the config/www folder.
+   - Your `configuration.yaml` file is found in the `config` folder. If the `www` folder does not exist create it. More information about the configuration folder can be found [here](https://www.home-assistant.io/docs/configuration/#to-find-the-configuration-directory).
+9. Navigate to a dashboard and then click `🖉 Edit dashboard` > `⋮ Open dashboard menu` > `Manage resources`.
+10. Click `+ ADD RESOURCE`.
+11. In the `URL` field enter the path to the resource file.
+    - Like `/local/material-design-colors.css`
+12. Select `Resource Type` `Stylesheet`.
+13. Click `CREATE`.
+14. Hard refresh (`CTRL` + `F5`) your browser or clear app/browser cache to ensure the new resource loads correctly.
 
 ## Material You Components, Powered By Card Mod
 
