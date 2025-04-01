@@ -95,7 +95,7 @@ export async function querySelectorAsync(
 }
 
 /**
- * Asynchronous getter which waits for value to not be neither undefined or null
+ * Asynchronous getter which waits for value to not be either undefined or null
  * @param {Node} element node to get value from
  * @param {string} key key to get value of
  * @param {number} [timeout=60000] Timeout until promise rejection in milliseconds, defaults to 60000
