@@ -61,7 +61,7 @@ export async function getTargets(): Promise<HTMLElement[]> {
  * @param {ParentNode} parent Element to query
  * @param {string} selector Query selector string
  * @param {number} [timeout=60000] Timeout until promise rejection in milliseconds, defaults to 60000
- * @returns
+ * @returns {Promise<HTMLElement>} The queried element
  */
 export async function querySelectorAsync(
 	parent: ParentNode,
@@ -99,7 +99,7 @@ export async function querySelectorAsync(
  * @param {Node} element node to get value from
  * @param {string} key key to get value of
  * @param {number} [timeout=60000] Timeout until promise rejection in milliseconds, defaults to 60000
- * @returns
+ * @returns {any} The defined value
  */
 export async function getAsync(
 	element: Node,
