@@ -40,17 +40,22 @@ async function main() {
 	const userId = ha.hass.user?.id;
 
 	// Color sensors
-	const colorSensorName = 'sensor.material_you_base_color';
-	const userNameColorSensorName = `${colorSensorName}_${userName}`;
-	const userIdColorSensorName = `${colorSensorName}_${userId}`;
-	const legacyColorSensorName = 'sensor.material_rounded_base_color';
-	const legacyUserNameColorSensorName = `${legacyColorSensorName}_${userName}`;
-	const legacyUserIdColorSensorName = `${legacyColorSensorName}_${userId}`;
+	const colorSensor = 'sensor.material_you_base_color';
+	const colorSensorUserName = `${colorSensor}_${userName}`;
+	const colorSensorUserId = `${colorSensor}_${userId}`;
+	const colorSensorLegacy = 'sensor.material_rounded_base_color';
+	const colorSensorUserNameLegacy = `${colorSensorLegacy}_${userName}`;
+	const colorSensorUserIdLegacy = `${colorSensorLegacy}_${userId}`;
 
 	// Scheme sensors
-	const schemeSensorName = 'sensor.material_you_scheme';
-	const userNameSchemeSensorName = `${schemeSensorName}_${userName}`;
-	const userIdSchemeSensorName = `${schemeSensorName}_${userId}`;
+	const schemeSensor = 'sensor.material_you_scheme';
+	const schemeSensorUserName = `${schemeSensor}_${userName}`;
+	const schemeSensorUserId = `${schemeSensor}_${userId}`;
+
+	// Contrast sensors
+	const contrastSensor = 'sensor.material_you_contrast';
+	const contrastSensorUserName = `${contrastSensor}_${userName}`;
+	const contrastSensorUserId = `${contrastSensor}_${userId}`;
 
 	/** Generate and set theme colors based on user defined sensors */
 	async function setTheme() {
@@ -64,19 +69,30 @@ async function main() {
 					themeName.includes('Material You')
 				) {
 					const baseColor =
-						hass.states[userNameColorSensorName]?.state ||
-						hass.states[userIdColorSensorName]?.state ||
-						hass.states[colorSensorName]?.state ||
-						hass.states[legacyUserNameColorSensorName]?.state ||
-						hass.states[legacyUserIdColorSensorName]?.state ||
-						hass.states[legacyColorSensorName]?.state;
+						hass.states[colorSensorUserName]?.state ||
+						hass.states[colorSensorUserId]?.state ||
+						hass.states[colorSensor]?.state ||
+						hass.states[colorSensorUserNameLegacy]?.state ||
+						hass.states[colorSensorUserIdLegacy]?.state ||
+						hass.states[colorSensorLegacy]?.state;
 
 					const schemeName =
-						hass.states[userNameSchemeSensorName]?.state ||
-						hass.states[userIdSchemeSensorName]?.state ||
-						hass.states[schemeSensorName]?.state;
+						hass.states[schemeSensorUserName]?.state ||
+						hass.states[schemeSensorUserId]?.state ||
+						hass.states[schemeSensor]?.state;
 
-					const contrastLevel = Math.max(Math.min(0, 1), -1);
+					const contrastLevel = Math.max(
+						Math.min(
+							parseFloat(
+								hass.states[contrastSensorUserName]?.state ||
+									hass.states[contrastSensorUserId]?.state ||
+									hass.states[contrastSensor]?.state ||
+									'0',
+							),
+							1,
+						),
+						-1,
+					);
 
 					// Only update if base color is provided
 					if (baseColor) {
@@ -118,7 +134,7 @@ async function main() {
 							'--md-sys-color-on-primary-light',
 						);
 						console.info(
-							`%c Material design system colors updated using base color ${baseColor} and scheme ${schemeInfo.name}. `,
+							`%c Material design system colors updated using base color ${baseColor}, scheme ${schemeInfo.name}, and contrast level ${contrastLevel}. `,
 							logStyles(color, background),
 						);
 					} else {
@@ -150,15 +166,18 @@ async function main() {
 			trigger: {
 				platform: 'state',
 				entity_id: [
-					colorSensorName,
-					userNameColorSensorName,
-					userIdColorSensorName,
-					legacyColorSensorName,
-					legacyUserNameColorSensorName,
-					legacyUserIdColorSensorName,
-					schemeSensorName,
-					userNameSchemeSensorName,
-					userIdSchemeSensorName,
+					colorSensor,
+					colorSensorUserName,
+					colorSensorUserId,
+					colorSensorLegacy,
+					colorSensorUserNameLegacy,
+					colorSensorUserIdLegacy,
+					schemeSensor,
+					schemeSensorUserName,
+					schemeSensorUserId,
+					contrastSensor,
+					contrastSensorUserName,
+					contrastSensorUserId,
 				].filter((entityId) => ha.hass.states[entityId]),
 			},
 		},
