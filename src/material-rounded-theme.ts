@@ -4,7 +4,6 @@ import {
 	Hct,
 	hexFromArgb,
 	MaterialDynamicColors,
-	SchemeTonalSpot,
 } from '@material/material-color-utilities';
 
 import { colors, logStyles } from './models/constants';
@@ -12,6 +11,7 @@ import { HassElement } from './models/interfaces';
 import {
 	getAsync,
 	getHomeAssistantMainAsync,
+	getSchemeInfo,
 	getTargets,
 	getToken,
 	querySelectorAsync,
@@ -35,12 +35,22 @@ async function main() {
 	const html = await querySelectorAsync(document, 'html');
 	const ha = await getHomeAssistantMainAsync();
 
-	// Sensor names
+	//// Sensor names
 	const userName = ha.hass.user?.name.toLowerCase().replace(/ /g, '_');
 	const userId = ha.hass.user?.id;
-	const sensorName = 'sensor.material_rounded_base_color';
-	const userNameSensorName = `${sensorName}_${userName}`;
-	const userIdSensorName = `${sensorName}_${userId}`;
+
+	// Color sensors
+	const colorSensorName = 'sensor.material_you_base_color';
+	const userNameColorSensorName = `${colorSensorName}_${userName}`;
+	const userIdColorSensorName = `${colorSensorName}_${userId}`;
+	const legacyColorSensorName = 'sensor.material_rounded_base_color';
+	const legacyUserNameColorSensorName = `${legacyColorSensorName}_${userName}`;
+	const legacyUserIdColorSensorName = `${legacyColorSensorName}_${userId}`;
+
+	// Scheme sensors
+	const schemeSensorName = 'sensor.material_you_scheme';
+	const userNameSchemeSensorName = `${schemeSensorName}_${userName}`;
+	const userIdSchemeSensorName = `${schemeSensorName}_${userId}`;
 
 	/** Generate and set theme colors based on user defined sensors */
 	async function setTheme() {
@@ -53,30 +63,31 @@ async function main() {
 					themeName.includes('Material Rounded') ||
 					themeName.includes('Material You')
 				) {
-					let baseColor: string | undefined;
+					const baseColor =
+						hass.states[userNameColorSensorName]?.state ||
+						hass.states[userIdColorSensorName]?.state ||
+						hass.states[colorSensorName]?.state ||
+						hass.states[legacyUserNameColorSensorName]?.state ||
+						hass.states[legacyUserIdColorSensorName]?.state ||
+						hass.states[legacyColorSensorName]?.state;
 
-					// User specific base color
-					if (userName) {
-						baseColor = hass.states[userNameSensorName]?.state;
-					}
-					if (!baseColor && userId) {
-						baseColor = hass.states[userIdSensorName]?.state;
-					}
+					const schemeName =
+						hass.states[userNameSchemeSensorName]?.state ||
+						hass.states[userIdSchemeSensorName]?.state ||
+						hass.states[schemeSensorName]?.state;
 
-					// General base color
-					if (!baseColor) {
-						baseColor = hass.states[sensorName]?.state;
-					}
+					const contrastLevel = Math.max(Math.min(0, 1), -1);
 
 					// Only update if base color is provided
 					if (baseColor) {
 						const targets = await getTargets();
+						const schemeInfo = getSchemeInfo(schemeName);
 
 						for (const mode of ['light', 'dark']) {
-							const schemeTonalSpot = new SchemeTonalSpot(
+							const scheme = new schemeInfo.class(
 								Hct.fromInt(argbFromHex(baseColor)),
 								mode == 'dark',
-								0,
+								contrastLevel,
 							);
 
 							for (const color of colors) {
@@ -85,7 +96,7 @@ async function main() {
 										MaterialDynamicColors[
 											color
 										] as DynamicColor
-									).getArgb(schemeTonalSpot),
+									).getArgb(scheme),
 								);
 								const token = getToken(color);
 								for (const target of targets) {
@@ -107,7 +118,7 @@ async function main() {
 							'--md-sys-color-on-primary-light',
 						);
 						console.info(
-							`%c Material design system colors updated using user defined base color ${baseColor}. `,
+							`%c Material design system colors updated using base color ${baseColor} and scheme ${schemeInfo.name}. `,
 							logStyles(color, background),
 						);
 					} else {
@@ -139,9 +150,15 @@ async function main() {
 			trigger: {
 				platform: 'state',
 				entity_id: [
-					sensorName,
-					userNameSensorName,
-					userIdSensorName,
+					colorSensorName,
+					userNameColorSensorName,
+					userIdColorSensorName,
+					legacyColorSensorName,
+					legacyUserNameColorSensorName,
+					legacyUserIdColorSensorName,
+					schemeSensorName,
+					userNameSchemeSensorName,
+					userIdSchemeSensorName,
 				].filter((entityId) => ha.hass.states[entityId]),
 			},
 		},
