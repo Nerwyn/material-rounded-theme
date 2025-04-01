@@ -124,6 +124,8 @@ Once the JavaScript module resource has been added, create a helper template sen
 
 You can also choose user specific colors by creating a sensor named `Material You Base Color Your Name`, with your name being your person name as it appears on the [Home Assistant people page](http://homeassistant.local:8123/config/person). The sensory entity ID should be something like `sensor.material_you_base_color_john_doe`. Alternatively, you can use your user ID as found on the [Home Assistant users page](http://homeassistant.local:8123/config/users) when you click on a user. In this case the sensor entity ID should be something like `sensor.material_you_base_color_f8866a924fc94c4d8abde860584afd05`.
 
+You may find it useful to also create a text helper, and to then set the base color sensor to its state using a template like `{{ states("input_text.material_you_base_color") }}`.
+
 #### Alternate Schemes and Contrast
 
 In addition to the modern Android color scheme, [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) offers several alternate schemes. You can use these schemes by creating helper template sensors similar to the base color sensors above with the name `material_you_scheme`.
@@ -140,9 +142,9 @@ In addition to the modern Android color scheme, [Material Color Utilities](https
 | Neutral     | A Dynamic Color theme that is near grayscale.                                                                                                                                                                                                                                                                                                                                                                           |
 | Monochrome  | A Dynamic Color theme that is grayscale.                                                                                                                                                                                                                                                                                                                                                                                |
 
-If an invalid or no scheme is provided, it will default to `Scheme Tonal Spot`.
+If an invalid or no scheme is provided, it will default to `Scheme Tonal Spot`. You may find it useful to create a dropdown helper with all of the above scheme names as options, and to then set the scheme sensor to its state using a template like `{{ states("input_select.material_you_scheme") }}`.
 
-Each scheme can also be provided with a custom contrast from -1 to 1. Value outside of this range are clamped to it. If not provided it will default to `0`.
+Each scheme can also be provided with a custom contrast from -1 to 1. Value outside of this range are clamped to it. If not provided it will default to `0`. You may find it useful to create a number helper with minimum value -1 and maximum value 1, and to then set the contrast sensor to its state using a template like `{{ states("input_number.material_you_scheme") }}`
 
 A base color must be provided in order to use a custom scheme or contrast (even `Monochrome`). For reference the default color palette uses my personal Android Material You base color, `#4C5C92`.
 
