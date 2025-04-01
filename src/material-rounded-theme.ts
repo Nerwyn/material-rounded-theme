@@ -35,7 +35,7 @@ async function main() {
 	const html = await querySelectorAsync(document, 'html');
 	const ha = await getHomeAssistantMainAsync();
 
-	//// Sensor names
+	// User name and ID for sensors
 	const userName = ha.hass.user?.name.toLowerCase().replace(/ /g, '_');
 	const userId = ha.hass.user?.id;
 
@@ -156,7 +156,7 @@ async function main() {
 
 	await setTheme();
 
-	// Trigger on user color sensor change
+	// Trigger on sensor change
 	ha.hass.connection.subscribeMessage(
 		async () => await setTheme(),
 		{
