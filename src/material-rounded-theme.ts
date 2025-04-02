@@ -1,3 +1,5 @@
+import packageInfo from '../package.json';
+
 import {
 	argbFromHex,
 	DynamicColor,
@@ -16,6 +18,11 @@ import {
 	getToken,
 	querySelectorAsync,
 } from './models/utils';
+
+console.info(
+	`%c Material You Theme Generator v${packageInfo.version} `,
+	logStyles(),
+);
 
 /** Remove theme colors */
 export async function unsetTheme() {
