@@ -13,17 +13,23 @@
 
 A theme for Home Assistant influenced by Google apps and Material Design 3 by Google on Android.
 
+This theme is made up of three main components:
+
+1. A standard Home Assistant theme yaml file.
+2. [Card-mod](https://github.com/thomasloven/lovelace-card-mod) powered [Material Design 3 redesigns of elements](#material-you-components-powered-by-card-mod).
+3. [User defined Material You color theme](#material-you-colors) generation via either a [JavaScript module](#javascript-module-installation) or [Material Theme Builder](#build-your-own-theme).
+
 This theme implements Material Design 3 redesigns of elements when possible using [card-mod](https://github.com/thomasloven/lovelace-card-mod). If you have card-mod installed and do not the component redesigns, use the "No Mod" versions of this theme. If you want partial card-mod component modifications you must modify and recompile the theme yourself as described [at the end of the README](#developing-modifying-and-building-the-theme).
 
-Don't like the blue accents? You can choose a different Material You base color! [See below for more](#material-you-colors). Requires an additional JS resource script. Does not require card-mod. You can also choose from several alternate color schemes and tweak theme contrast.
+You can choose a your own Material You base color! [See below for more](#material-you-colors). Requires an additional JS resource script. Does not require card-mod. You can also choose from several alternate color schemes and tweak theme contrast.
 
 This theme also includes "Transparent Card" versions with transparent card backgrounds. It also includes separate light and dark versions of all themes for niche use cases. These variations are combined into many different versions of the theme.
 
-Everything in Home Assistant has been updated to use colors generated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) following the [Material Design 3 guidelines](https://m3.material.io/). It supports custom user colors for virtually all of Home Assistant. If no user base color is provided the themes defaults to a shade of blue.
+Everything in Home Assistant has been updated to use colors generated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) following the [Material Design 3 guidelines](https://m3.material.io/). It supports custom user colors for virtually all of Home Assistant. If no user base color is provided the themes defaults to a shade of blue, `#4C5C92`.
 
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-rainbow.png" alt="material-you-rainbow" width="750"/>
 
-### Compared to Google Home
+## Compared to Google Home
 
 <p>
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-comparison-blue-dark.png" alt="material-you-comparison-blue-dark" width="375"/>
@@ -35,7 +41,7 @@ Everything in Home Assistant has been updated to use colors generated using [Mat
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-comparison-red-light.png" alt="material-you-comparison-red-light" width="375"/>
 </p>
 
-### Updated Material You Components
+## Updated Material You Components
 
 <p>
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-blue-dark.png" alt="material-you-components-blue-dark" width="375"/>
@@ -56,18 +62,16 @@ Everything in Home Assistant has been updated to use colors generated using [Mat
 5. (Optional) Install [card-mod](https://github.com/thomasloven/lovelace-card-mod) from HACS to take advantage of the Material You components [described below](#material-you-components-powered-by-card-mod).
 6. Refresh your browser or close and open your app.
 7. Navigate to your Profile, and select `Material You` or one of its variants.
-   - **If you set the theme at the view level, it will not style the view tabs. The view tabs are outside of the view.**
+   - **If you set the theme at the view level, it will not style the anything outside of the view. The view tabs are outside of the view.**
 8. (Optional) Follow the [instructions below](#material-you-colors) for installing the companion Material You Color JavaScript module resource, or for creating your own theme.
 
-## Material You Colors
+## Material You Color Theme Generation
 
-This theme supports Material You color theming! This requires either an additional JavaScript module resource or use of [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/). The JavaScript module resource can either be downloaded from this repository or used using a CDN URL. To install the script to your Home Assistant instance:
-
-### JavaScript Module Installation
+This theme supports Material You color theming! This requires either an additional JavaScript module resource or use of [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/). The JavaScript module resource can either be downloaded from this repository or used using a CDN URL.
 
 If you do not want to install the JavaScript module but do want your own color theme, skip ahead to [Build Your Own Theme](#build-your-own-theme)
 
-#### Download JavaScript Module Resource Locally in Home Assistant
+### Download JavaScript Module Resource Locally in Home Assistant
 
 While the module should be cached in browser after first use, you can download it locally to ensure that Material You Color theming works offline.
 
@@ -77,7 +81,7 @@ While the module should be cached in browser after first use, you can download i
 
 **Remember!** You must update your local copy of this module manually as update are made. Release notes will call out JavaScript module changes.
 
-#### Add the Module as a Resource
+### Add the Module as a Resource
 
 1. Navigate to a dashboard and then click `🖉 Edit dashboard` > `⋮ Open dashboard menu` > `Manage resources`.
 2. Click `+ ADD RESOURCE`.
@@ -88,7 +92,7 @@ While the module should be cached in browser after first use, you can download i
 5. Click `CREATE`.
 6. Hard refresh (`CTRL` + `F5`) your browser or clear app/browser cache to ensure the new resource loads correctly.
 
-#### (Optional) Add the Module as a Frontend Module
+### (Optional) Add the Module as a Frontend Module
 
 Adding this module as a frontend module will cause it to load sooner, prevent the intitial flash of the default color, and possibly fix issues with Home Assistant resources not loading on non-dashboard pages.
 
@@ -103,7 +107,7 @@ frontend:
 
 3. Restart Home Assistant.
 
-#### Create a Template Sensor Helper
+### Create a Template Sensor Helper
 
 Once the JavaScript module resource has been added, create a helper template sensor named `Material You Base Color` that returns the hex code of your preferred base color. The theme colors will be calculated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities).
 
@@ -119,9 +123,9 @@ You can also choose user specific colors by creating a sensor named `Material Yo
 
 You may find it useful to also create a text helper, and to then set the base color sensor to its state using a template like `{{ states("input_text.material_you_base_color") }}`.
 
-#### Alternate Schemes and Contrast
+### Alternate Schemes and Contrast
 
-In addition to the modern Android color scheme, [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) offers several alternate schemes. You can use these schemes by creating helper template sensors similar to the base color sensors above with the name `material_you_scheme`.
+In addition to the modern Android color scheme, [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) offers several alternate schemes. You can use these schemes by creating helper template sensors similar to the base color sensors above with the name `Material You Scheme` (sensor entity ID `sensor.material_you_scheme`).
 
 | Name        | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -137,11 +141,11 @@ In addition to the modern Android color scheme, [Material Color Utilities](https
 
 If an invalid or no scheme is provided, it will default to `Scheme Tonal Spot`. You may find it useful to create a dropdown helper with all of the above scheme names as options, and to then set the scheme sensor to its state using a template like `{{ states("input_select.material_you_scheme") }}`.
 
-Each scheme can also be provided with a custom contrast from -1 to 1. Value outside of this range are clamped to it. If not provided it will default to `0`. You may find it useful to create a number helper with minimum value -1 and maximum value 1, and to then set the contrast sensor to its state using a template like `{{ states("input_number.material_you_scheme") }}`
+Each scheme can also be provided with a custom contrast from -1 to 1. Value outside of this range are clamped to it. If an invalid or no value is provided it will default to `0`. You may find it useful to create a number helper with minimum value -1 and maximum value 1, and to then set the contrast sensor to its state using a template like `{{ states("input_number.material_you_scheme") }}`
 
-If no base color is provided, it will default to `#4C5C92`. If an invalid hex color is provided, theme colors will be removed and the theme will use its default colors.
+If no base color is provided but scheme or contrast is, it will default to `#4C5C92`. If an invalid hex color is provided, theme colors will be removed and the theme will use its default colors.
 
-#### Home Assistant Android App Color Sensor
+### Home Assistant Android App Color Sensor
 
 If you are using the Home Assistant Android companion app, you can enable the accent color sensor in the companion app settings to use your phone's Material You accent color as the theme base color:
 
@@ -152,7 +156,7 @@ If you are using the Home Assistant Android companion app, you can enable the ac
 
 Then create a base color template sensor as described above, and use a template to return the state of your companion app accent color sensor.
 
-### Build Your Own Theme
+## Build Your Own Theme
 
 If you do not want to use the JavaScript module resource or create helper sensors, you can instead create your own Material Theme using [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/).
 
@@ -162,7 +166,7 @@ If you do not want to use the JavaScript module resource or create helper sensor
 2. Choose your theme colors. You can skip picking fonts, they are not saved to the exported files.
 3. Click `Export theme`, click `Export`, and then click `Web (CSS)`.
 4. Extract the CSS files from the downloaded zip archive and open the css folder within it.
-5. Choose a matching set of light and dark css files with the same contrast extension and open them in a text editor.
+5. Choose a matching set of light and dark css files with the same contrast extension (or mix and match) and open them in a text editor.
    - `light.css` and `dark.css` are standard, `-mc` is medium contrast, and `-hc` is high contrast.
 6. Find and replace (`CTRL` + `F`) all colons `:` in the CSS files and replace them with `-light:` in the light file and `-dark:` in the dark file.
 7. Copy all of the variables from one file to the other, and rename the selector (`.dark`, `.light-high-contrast`, etc) to `html`. It should look something like this:
@@ -182,17 +186,17 @@ html {
 }
 ```
 
-- Consider renaming the file to something recognizable, like `material-design-colors.css`
+8. (Optional) Rename the file to something recognizable, like `material-design-colors.css`
 
-8. Upload this file to your Home Assistant instance, preferable in the config/www folder.
+9. Upload this file to your Home Assistant instance, preferable in the config/www folder.
    - Your `configuration.yaml` file is found in the `config` folder. If the `www` folder does not exist create it. More information about the configuration folder can be found [here](https://www.home-assistant.io/docs/configuration/#to-find-the-configuration-directory).
-9. Navigate to a dashboard and then click `🖉 Edit dashboard` > `⋮ Open dashboard menu` > `Manage resources`.
-10. Click `+ ADD RESOURCE`.
-11. In the `URL` field enter the path to the resource file.
+10. Navigate to a dashboard and then click `🖉 Edit dashboard` > `⋮ Open dashboard menu` > `Manage resources`.
+11. Click `+ ADD RESOURCE`.
+12. In the `URL` field enter the path to the resource file.
     - Like `/local/material-design-colors.css`
-12. Select `Resource Type` `Stylesheet`.
-13. Click `CREATE`.
-14. Hard refresh (`CTRL` + `F5`) your browser or clear app/browser cache to ensure the new resource loads correctly.
+13. Select `Resource Type` `Stylesheet`.
+14. Click `CREATE`.
+15. Hard refresh (`CTRL` + `F5`) your browser or clear app/browser cache to ensure the new resource loads correctly.
 
 ## Material You Components, Powered By Card Mod
 
@@ -287,17 +291,17 @@ max: 0
 
 Check out [Material Symbols](https://github.com/beecho01/material-symbols) to use updated material icons as shown in the screenshots!
 
-### Graphite Theme
+### Material Color Utilities
 
-This theme was initially modified from [Graphite theme](https://github.com/TilmanGriesel/graphite), as it was my favorite Home Assistant theme on HACS before I created this one. Therefore, it may contain some legacy variables from it.
+This theme revolves around Material Design 3 and the tooling that its contributors have made available, especially [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) and the [Material Design 3 specification](https://m3.material.io/).
 
 ### LCARS Theme
 
 The [Star Trek LCARS theme](https://github.com/th3jesta/ha-lcars) for Home Assistant also uses a JavaScript module resource for advanced theme modification, and I used it as a basis for getting started on my Material You color theming JavaScript module.
 
-### Material Color Utilities
+### Graphite Theme
 
-This theme revolves around Material Design 3 and the tooling that its contributors have made available, especially [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) and the [Material Design 3 specification](https://m3.material.io/).
+This theme was initially modified from [Graphite theme](https://github.com/TilmanGriesel/graphite), as it was my favorite Home Assistant theme on HACS before I created this one.
 
 ## Developing, Modifying, and Building The Theme
 
