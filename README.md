@@ -17,7 +17,7 @@ This theme is made up of three main components:
 
 1. A standard Home Assistant theme yaml file.
 2. [Card-mod](https://github.com/thomasloven/lovelace-card-mod) powered [Material Design 3 redesigns of elements](#material-you-components-powered-by-card-mod).
-3. [User defined Material You color theme](#material-you-colors) generation via either a [JavaScript module](#javascript-module-installation) or [Material Theme Builder](#build-your-own-theme).
+3. [User defined Material You color theme](#material-you-color-theme-generation) generation via either a JavaScript module or [Material Theme Builder](#build-your-own-theme).
 
 This theme implements Material Design 3 redesigns of elements when possible using [card-mod](https://github.com/thomasloven/lovelace-card-mod). If you have card-mod installed and do not the component redesigns, use the "No Mod" versions of this theme. If you want partial card-mod component modifications you must modify and recompile the theme yourself as described [at the end of the README](#developing-modifying-and-building-the-theme).
 
@@ -71,7 +71,7 @@ This theme supports Material You color theming! This requires either an addition
 
 If you do not want to install the JavaScript module but do want your own color theme, skip ahead to [Build Your Own Theme](#build-your-own-theme)
 
-### Download JavaScript Module Resource Locally in Home Assistant
+### (Optional) Download JavaScript Module Resource Locally in Home Assistant
 
 While the module should be cached in browser after first use, you can download it locally to ensure that Material You Color theming works offline.
 
@@ -87,7 +87,7 @@ While the module should be cached in browser after first use, you can download i
 2. Click `+ ADD RESOURCE`.
 3. In the `URL` field enter the path to the resource file.
    - `/local/material-rounded-theme.js` if downloaded to your Home Assistant instance.
-   - `https://cdn.jsdelivr.net/gh/nerwyn/material-rounded-theme@main/dist/material-rounded-theme.js` if using the CDN version.
+   - https://cdn.jsdelivr.net/gh/nerwyn/material-rounded-theme@main/dist/material-rounded-theme.js if using the CDN version.
 4. Select `Resource Type` `JavaScript module`.
 5. Click `CREATE`.
 6. Hard refresh (`CTRL` + `F5`) your browser or clear app/browser cache to ensure the new resource loads correctly.
