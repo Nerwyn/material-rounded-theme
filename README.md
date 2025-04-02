@@ -21,7 +21,7 @@ This theme is made up of three main components:
 
 This theme implements Material Design 3 redesigns of elements when possible using [card-mod](https://github.com/thomasloven/lovelace-card-mod). If you have card-mod installed and do not the component redesigns, use the "No Mod" versions of this theme. If you want partial card-mod component modifications you must modify and recompile the theme yourself as described [at the end of the README](#developing-modifying-and-building-the-theme).
 
-You can choose a your own Material You base color! [See below for more](#material-you-colors). Requires an additional JS resource script. Does not require card-mod. You can also choose from several alternate color schemes and tweak theme contrast.
+You can choose a your own Material You base color! [See below for more](#material-you-color-theme-generation). Requires an additional JS resource script. Does not require card-mod. You can also choose from several alternate color schemes and tweak theme contrast.
 
 This theme also includes "Transparent Card" versions with transparent card backgrounds. It also includes separate light and dark versions of all themes for niche use cases. These variations are combined into many different versions of the theme.
 
