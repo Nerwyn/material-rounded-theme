@@ -13,15 +13,18 @@
 
 A theme for Home Assistant influenced by Google apps and Material Design 3 by Google on Android.
 
-This theme is made up of three main components:
+This theme is made up of four components:
 
 1. A standard Home Assistant theme yaml file.
 2. [Card-mod](https://github.com/thomasloven/lovelace-card-mod) powered [Material Design 3 redesigns of elements](#material-you-components-powered-by-card-mod).
 3. [User defined Material You color theme](#material-you-color-theme-generation) generation via either a JavaScript module or [Material Theme Builder](#build-your-own-theme).
+4. [The Google Sans font](#google-sans-font).
 
 This theme implements Material Design 3 redesigns of elements when possible using [card-mod](https://github.com/thomasloven/lovelace-card-mod). If you have card-mod installed and do not the component redesigns, use the "No Mod" versions of this theme. If you want partial card-mod component modifications you must modify and recompile the theme yourself as described [at the end of the README](#developing-modifying-and-building-the-theme).
 
 You can choose a your own Material You base color! [See below for more](#material-you-color-theme-generation). Requires an additional JS resource script. Does not require card-mod. You can also choose from several alternate color schemes and tweak theme contrast.
+
+Many Google Material Design apps use a special font called Google Sans, which is not normally available. You can make this font available in the Home Assistant frontend [by following these instructions](#google-sans-font). If not available, this theme will instead use Roboto, which is freely available and also used by many Material Design apps.
 
 This theme also includes "Transparent Card" versions with transparent card backgrounds. It also includes separate light and dark versions of all themes for niche use cases. These variations are combined into many different versions of the theme.
 
@@ -197,6 +200,31 @@ html {
 13. Select `Resource Type` `Stylesheet`.
 14. Click `CREATE`.
 15. Hard refresh (`CTRL` + `F5`) your browser or clear app/browser cache to ensure the new resource loads correctly.
+
+## Google Sans Font
+
+Google Sans is a size-optimized version of Google's branding font Product Sans, and is considered the display font of Material Design 3 and is present in many Material Design Android apps. You can make this font available in the Home Assistant frontend using a provided CSS stylesheet. If not used, the theme will default to the font Roboto, which was and is still used by many Material Design Android apps before Google Sans.
+
+You can install the Google Sans font as a stylesheet resource using [this CSS file](https://github.com/Nerwyn/material-rounded-theme/blob/main/css/google-sans-font-family.css). It will retrieve the Google Sans font from Google's own CDN for use on your Home Assistant server.
+
+### (Optional) Download Font CSS Resource Locally in Home Assistant
+
+While the module and its fonts should be cached in browser after first use, you can download it locally to ensure that at least the CSS stylesheet works offline. The actual fonts are retrieved from Google's CDN if not cached.
+
+1. Download the module from this repository [here](https://github.com/Nerwyn/material-rounded-theme/blob/main/css/google-sans-font-family.css).
+2. Upload this module to your Home Assistant instance, preferable in the `config/www` folder.
+   - Your `configuration.yaml` file is found in the `config` folder. If the `www` folder does not exist create it. More information about the configuration folder can be found [here](https://www.home-assistant.io/docs/configuration/#to-find-the-configuration-directory).
+
+### Add the Module as a Resource
+
+1. Navigate to a dashboard and then click `🖉 Edit dashboard` > `⋮ Open dashboard menu` > `Manage resources`.
+2. Click `+ ADD RESOURCE`.
+3. In the `URL` field enter the path to the resource file.
+   - `/local/google-sans-font-family.css` if downloaded to your Home Assistant instance.
+   - https://cdn.jsdelivr.net/gh/nerwyn/material-rounded-theme@main/css/google-sans-font-family.css if using the CDN version.
+4. Select `Resource Type` `Stylesheet`.
+5. Click `CREATE`.
+6. Hard refresh (`CTRL` + `F5`) your browser or clear app/browser cache to ensure the new resource loads correctly.
 
 ## Material You Components, Powered By Card Mod
 
