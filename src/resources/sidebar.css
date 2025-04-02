@@ -1,0 +1,100 @@
+/* Make sidebar width an even number */
+ha-sidebar {
+	width: 56px;
+}
+
+/* Animate background when expanding/retracting sidebar */
+paper-icon-item {
+	transition: width 0.2s cubic-bezier(0.2, 0, 0, 1);
+	height: 48px;
+	margin: 0 4px !important;
+	padding: 0 12px !important;
+}
+
+/* Display current destination text above background and prevent jumpiness on opening*/
+.item-text {
+	z-index: 2;
+	overflow: hidden;
+	white-space: nowrap;
+	margin: 0 !important;
+}
+ha-icon,
+ha-svg-icon {
+	z-index: 2;
+}
+
+/* Change background of current destination icon with transition */
+paper-icon-item::before {
+	content: '';
+	height: 48px;
+	width: 100% !important;
+	position: absolute !important;
+	transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
+	left: 0 !important;
+	right: 0 !important;
+	border-radius: 128px !important;
+	background: var(--sidebar-selected-background) !important;
+	opacity: 1 !important;
+	transform: scaleX(0);
+}
+.iron-selected paper-icon-item::before {
+	transform: scaleX(1);
+}
+
+/* Destination state layers */
+paper-icon-item::after {
+	content: '';
+	position: absolute;
+	height: 48px;
+	width: 100%;
+	border-radius: 128px;
+	left: 0;
+	right: 0;
+	z-index: 0;
+	opacity: 0;
+	background: var(--md-current-tab-text-color);
+	transition: opacity 0.1s cubic-bezier(0.4, 0, 1, 1) 0s;
+}
+@media (hover: hover) {
+	paper-icon-item:hover::after {
+		opacity: 0.08;
+	}
+}
+paper-icon-item:focus-visible::after,
+paper-icon-item:active::after {
+	opacity: 0.1;
+}
+:host([expanded]) paper-icon-item:active::after {
+	background: var(--sidebar-state-pressed-background);
+}
+
+/* Current destination font weight */
+.iron-selected .item-text {
+	font-weight: 700;
+}
+
+/* Use error colors on rail badges */
+.configuration-badge,
+.notification-badge {
+	color: var(--on-error-color) !important;
+	background-color: var(--error-color) !important;
+	font-weight: 500 !important;
+}
+
+/* Use sidebar text color with no background on drawer badges */
+:host([expanded]) .configuration-badge,
+:host([expanded]) .notification-badge {
+	color: var(--sidebar-text-color) !important;
+	background-color: rgb(0, 0, 0, 0) !important;
+}
+:host([expanded]) .iron-selected .configuration-badge,
+:host([expanded]) .iron-selected .notification-badge {
+	color: var(--sidebar-selected-text-color) !important;
+}
+
+/* Fix rail sidebar badge position */
+:host(:not([expanded])) .configuration-badge,
+:host(:not([expanded])) .notification-badge {
+	bottom: 24px !important;
+	z-index: 2;
+}

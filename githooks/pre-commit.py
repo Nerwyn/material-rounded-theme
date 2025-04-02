@@ -10,16 +10,15 @@ def main():
 	yaml.width = 4096
 	yaml.default_flow_style = False
 
-	theme_names = ['Material You', 'Material Rounded']
-
-	with open('./themes/material_rounded.yaml', 'w') as dist:
+	theme_name = 'Material You'
+	with open('./themes/material_you.yaml', 'w') as dist:
 		output = {}
 
 		# Load common card-mod resources
 		theme_context = {}
-		resources = os.listdir('./src/common/')
+		resources = os.listdir('./src/resources/')
 		for resource in resources:
-			with open(f'./src/common/{resource}', 'r') as f:
+			with open(f'./src/resources/{resource}', 'r') as f:
 				name, file_type = resource.split('.')
 				if name not in theme_context:
 					theme_context[name] = {}
@@ -40,35 +39,32 @@ def main():
 			if 'yaml' in theme_context[element]:
 				theme_context[element]['yaml'] = recursiveRender(theme_context[element]['yaml'], theme_context)
 
-		for theme_name in theme_names:
-			theme_file_name = theme_name.lower().replace(' ', '_')
+		theme_file_name = theme_name.lower().replace(' ', '_')
+		with open(f'./src/{theme_file_name}.yaml', 'r') as src:
+			# Create base theme
+			theme_title = theme_name
+			base_theme = yaml.load(src)[theme_title]
+			output[theme_title] = deepcopy(base_theme)
 
-			with open(f'./src/{theme_file_name}/theme.yaml', 'r') as src:
-				# Create base theme
-				theme_title = theme_name
-				base_theme = yaml.load(src)[theme_title]
-				output[theme_title] = deepcopy(base_theme)
+			# Create a transparent card background version of theme
+			theme_title = f'{theme_name} Transparent Card'
+			output[theme_title] = deepcopy(base_theme)
+			output[theme_title]['ha-card-background'] = 'transparent'
 
-				# Create a transparent card background version of theme
-				theme_title = f'{theme_name} Transparent Card'
-				transparent = 'rgb(0, 0, 0, 0)'
-				output[theme_title] = deepcopy(base_theme)
-				output[theme_title]['ha-card-background'] = transparent
+			# Create a no mod versions of theme with fixed status and navbar colors
+			theme_title = f'{theme_name} No Mod'
+			output[theme_title] = deepcopy(output[theme_name])
+			output[theme_title]['app-header-background-color'] = 'var(--navbar-background)'
+			output[theme_title]['primary-background-color'] = 'var(--lovelace-background)'
+			
+			theme_title = f'{theme_name} Transparent Card No Mod'
+			output[theme_title] = deepcopy(output[f'{theme_name} Transparent Card'])
+			output[theme_title]['app-header-background-color'] = 'var(--navbar-background)'
+			output[theme_title]['primary-background-color'] = 'var(--lovelace-background)'
 
-				# Create a no mod versions of theme with fixed status and navbar colors
-				theme_title = f'{theme_name} No Mod'
-				output[theme_title] = deepcopy(output[theme_name])
-				output[theme_title]['app-header-background-color'] = 'var(--navbar-background)'
-				output[theme_title]['primary-background-color'] = 'var(--lovelace-background)'
-				
-				theme_title = f'{theme_name} Transparent Card No Mod'
-				output[theme_title] = deepcopy(output[f'{theme_name} Transparent Card'])
-				output[theme_title]['app-header-background-color'] = 'var(--navbar-background)'
-				output[theme_title]['primary-background-color'] = 'var(--lovelace-background)'
-
-				# Add card mod fields to main versions of theme
-				output[theme_name]['card-mod-theme'] = 'Material Rounded'
-				output[f'{theme_name} Transparent Card']['card-mod-theme'] = 'Material Rounded'
+			# Add card mod fields to main versions of theme
+			output[theme_name]['card-mod-theme'] = theme_name
+			output[f'{theme_name} Transparent Card']['card-mod-theme'] = theme_name
 				
 		# Build card-mod theme
 		for element in theme_context:
@@ -82,12 +78,12 @@ def main():
 				# Save template to buffer and then read to get yaml as string
 				buffer = StringIO()
 				yaml.dump(element_yaml, buffer)
-				output['Material Rounded'][f'card-mod-{element.replace("_", "-")}-yaml'] = buffer.getvalue().strip()
+				output[theme_name][f'card-mod-{element.replace("_", "-")}-yaml'] = buffer.getvalue().strip()
 
 		yaml.dump(output, dist)
 
 	# Create separate light and dark mode versions for special use cases
-	with open(f'./themes/material_rounded.yaml', 'r+') as f:
+	with open(f'./themes/material_you.yaml', 'r+') as f:
 		themes = yaml.load(f)
 		new_themes = {}
 		for sub_theme_name in themes.keys():
