@@ -9,19 +9,17 @@
 
 [![My Home Assistant](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=material-rounded-theme&owner=Nerwyn&category=Plugin)
 
-# Material You and Material Rounded - Material Design 3 Themes for Home Assistant
+# Material You - A Fully Featured Implementation of Material Design 3 Theme for Home Assistant
 
-Themes for Home Assistant influenced by Google apps and Material Design 3 by Google on Android.
+A theme for Home Assistant influenced by Google apps and Material Design 3 by Google on Android.
 
-Both themes implement Material Design 3 redesigns of elements when possible using [card-mod](https://github.com/thomasloven/lovelace-card-mod). If you have card-mod installed and do not the component redesigns, use the "No Mod" versions of this theme. If you want partial card-mod component modifications you must modify and recompile the theme yourself as described [at the end of the README](#developing-modifying-and-building-the-theme).
+This theme implements Material Design 3 redesigns of elements when possible using [card-mod](https://github.com/thomasloven/lovelace-card-mod). If you have card-mod installed and do not the component redesigns, use the "No Mod" versions of this theme. If you want partial card-mod component modifications you must modify and recompile the theme yourself as described [at the end of the README](#developing-modifying-and-building-the-theme).
 
 Don't like the blue accents? You can choose a different Material You base color! [See below for more](#material-you-colors). Requires an additional JS resource script. Does not require card-mod. You can also choose from several alternate color schemes and tweak theme contrast.
 
 This theme also includes "Transparent Card" versions with transparent card backgrounds. It also includes separate light and dark versions of all themes for niche use cases. These variations are combined into many different versions of the theme.
 
-## Material You - A Fully Featured Implementation of Material Design 3
-
-The full color version of the theme. This theme aims to match the styling of Material Design 3 (also known as Material You) Google apps on Android like Phone, Contacts, Messages, Photos, Drive, and now Google Home. Everything has been updated to use colors generated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) following the [Material Design 3 guidelines](https://m3.material.io/). Supports custom user colors for virtually all of Home Assistant. If no user base color is provided the themes defaults to a shade of blue.
+Everything in Home Assistant has been updated to use colors generated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) following the [Material Design 3 guidelines](https://m3.material.io/). It supports custom user colors for virtually all of Home Assistant. If no user base color is provided the themes defaults to a shade of blue.
 
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-rainbow.png" alt="material-you-rainbow" width="750"/>
 
@@ -49,32 +47,27 @@ The full color version of the theme. This theme aims to match the styling of Mat
 <img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-you-components-red-light.png" alt="material-you-components-red-light" width="375"/>
 </p>
 
-## Material Rounded - In the Style of the Google Home App Pre 2025 Material You Update
-
-The original legacy version of the theme. This theme aims to match the styling of the Google Home app before Material You color theming was implemented in 2025. It uses a neutral palette with blue accent colors. It supports custom user colors, but just for primary, accent, and certain redesigned element colors.
-
-<p>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-dark.png" alt="material-rounded-blue-dark" width="300"/>
-<img src="https://raw.githubusercontent.com/Nerwyn/material-rounded-theme/main/assets/material-rounded-blue-light.png" alt="material-rounded-blue-light" width="300"/>
-</p>
-
-## Installation
+## Basic Installation
 
 1. Navigate to HACS (install from [here](https://hacs.xyz/) if you do not have it yet).
 2. Navigate to `Frontend`.
-3. Click `+ EXPLORE & DOWNLOAD REPOSITORIES` and search for `Material Rounded Theme`.
+3. Click `+ EXPLORE & DOWNLOAD REPOSITORIES` and search for `Material You Theme`.
 4. Open this repository in HACS and click `DOWNLOAD`.
-5. (Optional) Install [card-mod](https://github.com/thomasloven/lovelace-card-mod) from HACS to take advantage of the Material You components and colors [described below](#material-you-components-powered-by-card-mod).
+5. (Optional) Install [card-mod](https://github.com/thomasloven/lovelace-card-mod) from HACS to take advantage of the Material You components [described below](#material-you-components-powered-by-card-mod).
 6. Refresh your browser or close and open your app.
-7. Navigate to your Profile, and select one of the `Material You` or `Material Rounded` theme variants.
+7. Navigate to your Profile, and select `Material You` or one of its variants.
    - **If you set the theme at the view level, it will not style the view tabs. The view tabs are outside of the view.**
-8. (Optional) Follow the [instructions below](#material-you-colors) for installing the companion Material You Color JavaScript module resource.
+8. (Optional) Follow the [instructions below](#material-you-colors) for installing the companion Material You Color JavaScript module resource, or for creating your own theme.
 
 ## Material You Colors
 
-This theme supports Material You color theming! This requires an additional JavaScript module resource which can either be downloaded from this repository or used using a CDN URL. To install the script to your Home Assistant instance:
+This theme supports Material You color theming! This requires either an additional JavaScript module resource or use of [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/). The JavaScript module resource can either be downloaded from this repository or used using a CDN URL. To install the script to your Home Assistant instance:
 
-### (Optional) Download JavaScript Module Resource Locally in Home Assistant
+### JavaScript Module Installation
+
+If you do not want to install the JavaScript module but do want your own color theme, skip ahead to [Build Your Own Theme](#build-your-own-theme)
+
+#### Download JavaScript Module Resource Locally in Home Assistant
 
 While the module should be cached in browser after first use, you can download it locally to ensure that Material You Color theming works offline.
 
@@ -84,7 +77,7 @@ While the module should be cached in browser after first use, you can download i
 
 **Remember!** You must update your local copy of this module manually as update are made. Release notes will call out JavaScript module changes.
 
-### Add the Module as a Resource
+#### Add the Module as a Resource
 
 1. Navigate to a dashboard and then click `🖉 Edit dashboard` > `⋮ Open dashboard menu` > `Manage resources`.
 2. Click `+ ADD RESOURCE`.
@@ -95,7 +88,7 @@ While the module should be cached in browser after first use, you can download i
 5. Click `CREATE`.
 6. Hard refresh (`CTRL` + `F5`) your browser or clear app/browser cache to ensure the new resource loads correctly.
 
-### (Optional) Add the Module as a Frontend Module
+#### (Optional) Add the Module as a Frontend Module
 
 Adding this module as a frontend module will cause it to load sooner, prevent the intitial flash of the default color, and possibly fix issues with Home Assistant resources not loading on non-dashboard pages.
 
@@ -110,7 +103,7 @@ frontend:
 
 3. Restart Home Assistant.
 
-### Create a Template Sensor Helper
+#### Create a Template Sensor Helper
 
 Once the JavaScript module resource has been added, create a helper template sensor named `Material You Base Color` that returns the hex code of your preferred base color. The theme colors will be calculated using [Material Color Utilities](https://github.com/material-foundation/material-color-utilities).
 
@@ -159,9 +152,11 @@ If you are using the Home Assistant Android companion app, you can enable the ac
 
 Then create a base color template sensor as described above, and use a template to return the state of your companion app accent color sensor.
 
-### Alternative - Build Your Own Theme CSS
+### Build Your Own Theme
 
-If you do not want to use the JavaScript module resource or create helper sensors, you can instead create your own Material Theme using [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/). **NOTE**: themes created this way will not apply to iframes such as the HACS and Add-ons pages. It will also not apply to some page backgrounds like the settings and developer tools pages, which are hardcoded to a default color.
+If you do not want to use the JavaScript module resource or create helper sensors, you can instead create your own Material Theme using [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/).
+
+**NOTE**: themes created this way will not apply to iframes such as the HACS and Add-ons pages. It will also not apply to some page backgrounds like the settings and developer tools pages, which are hardcoded to a default color.
 
 1. Navigate to [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/).
 2. Choose your theme colors. You can skip picking fonts, they are not saved to the exported files.
@@ -300,10 +295,14 @@ This theme was initially modified from [Graphite theme](https://github.com/Tilma
 
 The [Star Trek LCARS theme](https://github.com/th3jesta/ha-lcars) for Home Assistant also uses a JavaScript module resource for advanced theme modification, and I used it as a basis for getting started on my Material You color theming JavaScript module.
 
+### Material Color Utilities
+
+This theme revolves around Material Design 3 and the tooling that its contributors have made available, especially [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) and the [Material Design 3 specification](https://m3.material.io/).
+
 ## Developing, Modifying, and Building The Theme
 
 Due to the multiple versions and complexity of this theme, I have split it into multiple CSS and yaml files and created a Python git pre-commit build pipeline to compile all of the files into a single Home Assistant theme file. You can either run this build pipeline by making a git commit (after setting up githooks and not to the main repo, of course) running the file `build.sh`, or running the `pre-commit.py` Python file.
 
-Twelve versions of a theme are created per base theme (24 total) - with card mod, without card mod, transparent cards with card mod, transparent cards without card mod, and a separate light and dark version of each. The no card mod versions of theme have the `card-mod-theme` fields removed and will have no design upgrades, but do use user defined colors. The separate light and dark versions of the theme are if you need to explicitly set a device to use light or dark mode without the Home Assistant built in theme mode options.
+Twelve versions of this theme are generated - with card mod, without card mod, transparent cards with card mod, transparent cards without card mod, and a separate light and dark version of each. The no card mod versions of theme have the `card-mod-theme` fields removed and will have no design upgrades, but do use user defined colors. The separate light and dark versions of the theme are if you need to explicitly set a device to use light or dark mode without the Home Assistant built in theme mode options.
 
-Any files under common that end in `.yaml` are treated as `card-mod-*-yaml` fields in the themes, and files ending in `.css` contain the actual card-mod CSS. Different overall version of the `theme.yaml` file are included in separate folders, such as `material_rounded` and `material_you`. CSS files are copied into the card-mod yaml fields using jinja templates, allowing for repetitive styles that go in different shadow roots to all source from the same file.
+Any files under common that end in `.yaml` are treated as `card-mod-*-yaml` fields in the themes, and files ending in `.css` contain the actual card-mod CSS. The `material_you.yaml` file in the `src` folder is the base theme, and is functionally equivalent to `Material You No Mod`. CSS styles are copied into the card-mod yaml fields using jinja templates, allowing for repetitive styles that go in different shadow roots to all source from the same file. The view tabs count jinja template is also rendered to create a CSS style. The final output theme file should have no jinja.
