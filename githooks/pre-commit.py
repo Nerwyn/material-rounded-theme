@@ -11,7 +11,7 @@ def main():
 	yaml.default_flow_style = False
 
 	theme_name = 'Material You'
-	with open('./themes/material_you.yaml', 'w') as dist:
+	with open('./themes/material_rounded.yaml', 'w') as dist:
 		output = {}
 
 		# Load common card-mod resources
@@ -83,7 +83,7 @@ def main():
 		yaml.dump(output, dist)
 
 	# Create separate light and dark mode versions for special use cases
-	with open(f'./themes/material_you.yaml', 'r+') as f:
+	with open(f'./themes/material_rounded.yaml', 'r+') as f:
 		themes = yaml.load(f)
 		new_themes = {}
 		for sub_theme_name in themes.keys():
