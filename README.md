@@ -139,7 +139,7 @@ If an invalid or no scheme is provided, it will default to `Scheme Tonal Spot`. 
 
 Each scheme can also be provided with a custom contrast from -1 to 1. Value outside of this range are clamped to it. If not provided it will default to `0`. You may find it useful to create a number helper with minimum value -1 and maximum value 1, and to then set the contrast sensor to its state using a template like `{{ states("input_number.material_you_scheme") }}`
 
-A base color must be provided in order to use a custom scheme or contrast (even `Monochrome`). For reference the default color palette uses my personal Android Material You base color, `#4C5C92`.
+If no base color is provided, it will default to `#4C5C92`. If an invalid hex color is provided, theme colors will be removed and the theme will use its default colors.
 
 #### Home Assistant Android App Color Sensor
 

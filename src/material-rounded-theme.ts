@@ -75,7 +75,7 @@ async function main() {
 					themeName.includes('Material Rounded') ||
 					themeName.includes('Material You')
 				) {
-					const baseColor =
+					let baseColor =
 						hass.states[colorSensorUserName]?.state ||
 						hass.states[colorSensorUserId]?.state ||
 						hass.states[colorSensor]?.state ||
@@ -83,26 +83,31 @@ async function main() {
 						hass.states[colorSensorUserIdLegacy]?.state ||
 						hass.states[colorSensorLegacy]?.state;
 
-					const schemeName =
+					const schemeName = (
 						hass.states[schemeSensorUserName]?.state ||
 						hass.states[schemeSensorUserId]?.state ||
-						hass.states[schemeSensor]?.state;
+						hass.states[schemeSensor]?.state ||
+						''
+					).trim();
 
-					let contrastLevel = parseFloat(
-						hass.states[contrastSensorUserName]?.state ||
-							hass.states[contrastSensorUserId]?.state ||
-							hass.states[contrastSensor]?.state ||
-							'0',
-					);
-					contrastLevel = Math.max(
-						Math.min(isNaN(contrastLevel) ? 0 : contrastLevel, 1),
-						-1,
-					);
+					let contrastLevel: number = 0;
+					for (const value of [
+						hass.states[contrastSensorUserName]?.state,
+						hass.states[contrastSensorUserId]?.state,
+						hass.states[contrastSensor]?.state,
+					]) {
+						const parsed = parseFloat(value);
+						if (!isNaN(parsed)) {
+							contrastLevel = Math.max(Math.min(parsed, 1), -1);
+							break;
+						}
+					}
 
-					// Only update if base color is provided
-					if (baseColor) {
-						const targets = await getTargets();
+					// Only update if one of the sensors detects something
+					if (baseColor || schemeName || contrastLevel) {
+						baseColor ??= '#4C5C92';
 						const schemeInfo = getSchemeInfo(schemeName);
+						const targets = await getTargets();
 
 						for (const mode of ['light', 'dark']) {
 							const scheme = new schemeInfo.class(

@@ -1,5 +1,6 @@
+/** Google Home 2024 pre Material You update */
 html {
-	/** Material Rounded Dark Colors */
+	/** Dark mode */
 	--md-sys-color-primary-dark: #c2e7fe;
 	--md-sys-color-on-primary-dark: #1c2d61;
 	--md-sys-color-primary-container-dark: #344479;
@@ -64,7 +65,7 @@ html {
 	--disabled-color-dark: #000000;
 	--state-inactive-color-dark: #484a4e;
 
-	/** Material Rounded Light Colors */
+	/** Light mode */
 	--md-sys-color-primary-light: #4c5c92;
 	--md-sys-color-on-primary-light: #ffffff;
 	--md-sys-color-primary-container-light: #dce1ff;

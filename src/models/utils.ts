@@ -1,13 +1,14 @@
 import { schemes } from './constants';
 import { HassElement } from './interfaces';
+import { IScheme } from './interfaces/Scheme';
 
 /**
  * Get scheme class and name using user input name
  * @param {string} name user provided scheme name
- * @returns {SchemeInfo} Scheme name and class
+ * @returns {IScheme} Scheme name and class
  */
-export function getSchemeInfo(name: string) {
-	name = name.toLowerCase().replace(/ |-|_/g, '').trim();
+export function getSchemeInfo(name: string = 'Tonal Spot'): IScheme {
+	name = name?.toLowerCase()?.replace(/ |-|_/g, '')?.trim();
 	return schemes[name] ?? schemes['tonalspot'];
 }
 
