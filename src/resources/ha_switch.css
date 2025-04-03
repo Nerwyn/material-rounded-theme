@@ -111,6 +111,8 @@ mwc-ripple {
 
 /* Input element position corrections */
 .mdc-switch__native-control {
+	/* width: 52px !important;
+	height: 32px !important; */
 	position: relative !important;
 	top: -16px !important;
 	left: -14px !important;
