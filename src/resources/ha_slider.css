@@ -16,12 +16,14 @@
 	background: var(--md-sys-color-primary);
 	border-radius: 2px;
 	scale: 1 1;
-	transition: scale 0.4s cubic-bezier(0.2, 0, 0, 1);
 }
 
 /** Reduce handle width on active or focus */
-input:active ~ .handleContainerPadded .handleNub::after,
-input:focus-visible ~ .handleContainerPadded .handleNub::after {
+.handleNub {
+	transition: scale 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+input:focus-visible ~ .handleContainerPadded .handleNub,
+input:active ~ .handleContainerPadded .handleNub {
 	scale: 0.5 1;
 }
 
@@ -36,16 +38,17 @@ md-focus-ring {
 	bottom: 38px !important;
 }
 
-/** Remove nub from label */
+/** Remove teardrop from label */
 .label::before {
 	display: none !important;
 }
 
 /** Change label to appear on active instead of on hover or focus */
 .hover .label,
-input:focus ~ .handleContainerPadded .label {
+:host(:focus-within) .label {
 	transform: scale(0) !important;
 }
+input:focus-visible ~ .handleContainerPadded .label,
 input:active ~ .handleContainerPadded .label {
 	transform: scale(1) !important;
 }
