@@ -48,7 +48,7 @@ Material You:
   dark-primary-color: hsl(from var(--md-sys-color-primary) h s calc(l - 20))
   divider-color: var(--md-sys-color-surface-container)
   error-color: var(--md-sys-color-error)
-  font-family: '"Google Sans", "Outfit", "Figtree", "Proxima Nova", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  font-family: '"Google Sans", Figtree, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
   footer-height: 82px
   ha-card-background: var(--md-sys-color-surface-container-low)
   ha-card-border: none
@@ -319,7 +319,7 @@ Material You Dark:
   disabled-text-color: "var(--disabled-text-color-dark, #ffffff80)"
   divider-color: var(--md-sys-color-surface-container)
   error-color: var(--md-sys-color-error)
-  font-family: '"Google Sans", "Outfit", "Figtree", "Proxima Nova", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  font-family: '"Google Sans", Figtree, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
   footer-height: 82px
   ha-card-background: var(--md-sys-color-surface-container-low)
   ha-card-border: none
@@ -530,7 +530,7 @@ Material You Light:
   disabled-text-color: "var(--disabled-text-color-light, #808080)"
   divider-color: var(--md-sys-color-surface-container)
   error-color: var(--md-sys-color-error)
-  font-family: '"Google Sans", "Outfit", "Figtree", "Proxima Nova", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  font-family: '"Google Sans", Figtree, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
   footer-height: 82px
   ha-card-background: var(--md-sys-color-surface-container-low)
   ha-card-border: none
@@ -738,7 +738,7 @@ Material You No Mod:
   dark-primary-color: hsl(from var(--md-sys-color-primary) h s calc(l - 20))
   divider-color: var(--md-sys-color-surface-container)
   error-color: var(--md-sys-color-error)
-  font-family: '"Google Sans", "Outfit", "Figtree", "Proxima Nova", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  font-family: '"Google Sans", Figtree, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
   footer-height: 82px
   ha-card-background: var(--md-sys-color-surface-container-low)
   ha-card-border: none
@@ -1008,7 +1008,7 @@ Material You No Mod Dark:
   disabled-text-color: "var(--disabled-text-color-dark, #ffffff80)"
   divider-color: var(--md-sys-color-surface-container)
   error-color: var(--md-sys-color-error)
-  font-family: '"Google Sans", "Outfit", "Figtree", "Proxima Nova", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  font-family: '"Google Sans", Figtree, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
   footer-height: 82px
   ha-card-background: var(--md-sys-color-surface-container-low)
   ha-card-border: none
@@ -1218,7 +1218,7 @@ Material You No Mod Light:
   disabled-text-color: "var(--disabled-text-color-light, #808080)"
   divider-color: var(--md-sys-color-surface-container)
   error-color: var(--md-sys-color-error)
-  font-family: '"Google Sans", "Outfit", "Figtree", "Proxima Nova", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  font-family: '"Google Sans", Figtree, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
   footer-height: 82px
   ha-card-background: var(--md-sys-color-surface-container-low)
   ha-card-border: none
@@ -1427,7 +1427,7 @@ Material You Transparent Card:
   dark-primary-color: hsl(from var(--md-sys-color-primary) h s calc(l - 20))
   divider-color: var(--md-sys-color-surface-container)
   error-color: var(--md-sys-color-error)
-  font-family: '"Google Sans", "Outfit", "Figtree", "Proxima Nova", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  font-family: '"Google Sans", Figtree, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
   footer-height: 82px
   ha-card-background: transparent
   ha-card-border: none
@@ -1698,7 +1698,7 @@ Material You Transparent Card Dark:
   disabled-text-color: "var(--disabled-text-color-dark, #ffffff80)"
   divider-color: var(--md-sys-color-surface-container)
   error-color: var(--md-sys-color-error)
-  font-family: '"Google Sans", "Outfit", "Figtree", "Proxima Nova", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  font-family: '"Google Sans", Figtree, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
   footer-height: 82px
   ha-card-background: transparent
   ha-card-border: none
@@ -1909,7 +1909,7 @@ Material You Transparent Card Light:
   disabled-text-color: "var(--disabled-text-color-light, #808080)"
   divider-color: var(--md-sys-color-surface-container)
   error-color: var(--md-sys-color-error)
-  font-family: '"Google Sans", "Outfit", "Figtree", "Proxima Nova", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  font-family: '"Google Sans", Figtree, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
   footer-height: 82px
   ha-card-background: transparent
   ha-card-border: none
@@ -2117,7 +2117,7 @@ Material You Transparent Card No Mod:
   dark-primary-color: hsl(from var(--md-sys-color-primary) h s calc(l - 20))
   divider-color: var(--md-sys-color-surface-container)
   error-color: var(--md-sys-color-error)
-  font-family: '"Google Sans", "Outfit", "Figtree", "Proxima Nova", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  font-family: '"Google Sans", Figtree, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
   footer-height: 82px
   ha-card-background: transparent
   ha-card-border: none
@@ -2387,7 +2387,7 @@ Material You Transparent Card No Mod Dark:
   disabled-text-color: "var(--disabled-text-color-dark, #ffffff80)"
   divider-color: var(--md-sys-color-surface-container)
   error-color: var(--md-sys-color-error)
-  font-family: '"Google Sans", "Outfit", "Figtree", "Proxima Nova", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  font-family: '"Google Sans", Figtree, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
   footer-height: 82px
   ha-card-background: transparent
   ha-card-border: none
@@ -2597,7 +2597,7 @@ Material You Transparent Card No Mod Light:
   disabled-text-color: "var(--disabled-text-color-light, #808080)"
   divider-color: var(--md-sys-color-surface-container)
   error-color: var(--md-sys-color-error)
-  font-family: '"Google Sans", "Outfit", "Figtree", "Proxima Nova", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  font-family: '"Google Sans", Figtree, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
   footer-height: 82px
   ha-card-background: transparent
   ha-card-border: none
