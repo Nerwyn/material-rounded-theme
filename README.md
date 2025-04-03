@@ -13,7 +13,7 @@
 
 A theme for Home Assistant influenced by Google apps and Material Design 3 by Google on Android.
 
-This theme is made up of four components:
+This theme is made up of three components:
 
 1. A standard Home Assistant theme yaml file.
 2. [Card-mod](https://github.com/thomasloven/lovelace-card-mod) powered [Material Design 3 redesigns of elements](#material-you-components-powered-by-card-mod).
