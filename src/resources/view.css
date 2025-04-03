@@ -1,3 +1,8 @@
+/* Fix view horizontal overflow scroll */
+#view {
+	overflow-x: hidden;
+}
+
 /* Add bottom footer padding when present */
 .header:has(ha-tabs, paper-tabs) + #view {
 	padding-bottom: calc(
