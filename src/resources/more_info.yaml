@@ -1,8 +1,18 @@
 ha-more-info-info$:
-  state-card-content$ state-card-toggle$ ha-entity-toggle$ ha-switch$: >-
-    {{ ha_switch.css }}
-  more-info-content$ more-info-update$ ha-switch$: >-
-    {{ ha_switch.css }}
+  state-card-content$:
+    state-card-toggle$ ha-entity-toggle$ ha-switch$: >-
+      {{ ha_switch.css }}
+    state-card-number$ ha-slider$: >-
+      {{ ha_slider.css }}
+    state-card-input_number$ ha-slider$: >-
+      {{ ha_slider.css }}
+  more-info-content$:
+    more-info-update$ ha-switch$: >-
+      {{ ha_switch.css }}
+    more-info-media_player$ ha-slider$: >-
+      {{ ha_slider.css }}
+    more-info-light$ light-color-rgb-picker$ ha-labeled-slider$ ha-slider$: >-
+      {{ ha_slider.css }}
 ha-more-info-settings$:
   entity-registry-settings$ entity-registry-settings-editor$ ha-switch$: >-
     {{ ha_switch.css }}

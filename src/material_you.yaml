@@ -238,6 +238,37 @@ Material You:
   # Radio buttons
   mdc-radio-unchecked-color: var(--md-sys-color-on-surface-variant)
 
+  # Sliders
+  slider-color: var(--md-sys-color-inverse-primary)
+  slider-secondary-color: var(--md-sys-color-primary)
+  paper-slider-knob-color: var(--md-sys-color-primary)
+  paper-slider-knob-start-color: var(--md-sys-color-primary)
+  paper-slider-pin-color: var(--md-sys-color-primary)
+  paper-slider-active-color: var(--md-sys-color-primary)
+  paper-slider-secondary-color: hsl(from var(--md-sys-color-primary) h s calc(l + 20))
+  paper-slider-height: 4px
+
+  md-slider-handle-color: var(--md-sys-color-surface-container-low)
+  md-slider-handle-shadow-color: transparent
+  md-slider-hover-handle-color: var(--md-sys-color-surface-container-low)
+  md-slider-hover-state-layer-color: transparent
+  md-slider-hover-state-layer-opacity: 0
+  md-slider-pressed-handle-color: var(--md-sys-color-surface-container-low)
+  md-slider-pressed-state-layer-color: transparent
+  md-slider-pressed-state-layer-opacity: 0
+  md-slider-focus-handle-color: var(--md-sys-color-surface-container-low)
+  md-slider-active-track-height: 16px
+  md-slider-inactive-track-height: 16px
+  md-slider-inactive-track-color: var(--md-sys-color-secondary-container)
+  md-slider-label-text-color: var(--md-sys-color-inverse-on-surface)
+  md-slider-label-container-color: var(--md-sys-color-inverse-surface)
+  md-slider-label-container-height: 44px
+  md-slider-label-container-width: 48px
+
+  # Buttons
+  mdc-button-disabled-fill-color: rgba(from var(--md-sys-color-on-surface) r g b / 0.12)
+  mdc-button-disabled-ink-color: rgba(from var(--md-sys-color-on-surface) r g b / 0.38)
+
   # Spacings
   horizontal-stack-card-margin: 0px 4px
   vertical-stack-card-margin: 4px 0px
@@ -268,6 +299,8 @@ Material You:
   mdc-typography-font-family: var(--font-family)
   mdc-typography-button-font-family: var(--font-family)
   mdc-typography-body1-font-family: var(--font-family)
+  md-ref-typeface-plain: var(--font-family)
+  md-sys-typescale-label-medium-size: 12px
 
   title-font-weight: 600
   title-font-size: 28px
@@ -294,30 +327,20 @@ Material You:
   mdc-theme-text-hint-on-background: var(--md-sys-color-on-surface-variant)
   mdc-theme-text-icon-on-background: var(--md-sys-color-on-surface-variant)
 
-  # Sliders
-  slider-color: var(--md-sys-color-inverse-primary)
-  slider-secondary-color: var(--md-sys-color-primary)
-  paper-slider-knob-color: var(--md-sys-color-primary)
-  paper-slider-knob-start-color: var(--md-sys-color-primary)
-  paper-slider-pin-color: var(--md-sys-color-primary)
-  paper-slider-active-color: var(--md-sys-color-primary)
-  paper-slider-secondary-color: hsl(from var(--md-sys-color-primary) h s calc(l + 20))
-  paper-slider-height: 4px
-
   # Text Fields and Dropdowns
   input-fill-color: var(--md-sys-color-surface-container-highest)
   input-ink-color: var(--md-sys-color-on-surface)
   input-disabled-fill-color: rgba(from var(--md-sys-color-surface-container-highest) r g b / 0.5)
   input-disabled-ink-color: var(--disabled-text-color)
   input-disabled-label-ink-color: var(--disabled-text-color)
-  input-idle-line-color: "#00000000"
+  input-idle-line-color: var(--md-sys-color-on-surface-variant)
   input-hover-line-color: var(--md-sys-color-primary)
   input-dropdown-icon-color: var(--md-sys-color-on-surface-variant)
   mdc-select-fill-color: var(--md-sys-color-surface-container-highest)
-  mdc-select-idle-line-color: "#00000000"
+  mdc-select-idle-line-color: var(--md-sys-color-on-surface-variant)
   mdc-select-hover-line-color: var(--md-sys-color-primary)
   mdc-text-field-fill-color: var(--md-sys-color-surface-container-highest)
-  mdc-text-field-idle-line-color: "#00000000"
+  mdc-text-field-idle-line-color: var(--md-sys-color-on-surface-variant)
   mdc-text-field-hover-line-color: var(--md-sys-color-primary)
 
   # Editors

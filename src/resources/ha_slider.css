@@ -1,0 +1,51 @@
+/** Set Material Design 3 slider variables that should only apply to redesigned sliders */
+:host {
+	--md-slider-handle-height: 44px !important;
+	--md-slider-handle-width: 16px !important;
+	--md-slider-handle-shape: 4px;
+}
+
+/** Add border to each side of slider */
+.handleNub::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	width: 4px;
+	height: 100%;
+	margin: auto;
+	background: var(--md-sys-color-primary);
+	border-radius: 2px;
+	scale: 1 1;
+	transition: scale 0.4s cubic-bezier(0.2, 0, 0, 1);
+}
+
+/** Reduce handle width on active or focus */
+input:active ~ .handleContainerPadded .handleNub::after,
+input:focus-visible ~ .handleContainerPadded .handleNub::after {
+	scale: 0.5 1;
+}
+
+/** Hide focus ring */
+md-focus-ring {
+	display: none;
+}
+
+/** Set label width and position */
+.label {
+	width: var(--md-slider-label-container-width);
+	bottom: 38px !important;
+}
+
+/** Remove nub from label */
+.label::before {
+	display: none !important;
+}
+
+/** Change label to appear on active instead of on hover or focus */
+.hover .label,
+input:focus ~ .handleContainerPadded .label {
+	transform: scale(0) !important;
+}
+input:active ~ .handleContainerPadded .label {
+	transform: scale(1) !important;
+}

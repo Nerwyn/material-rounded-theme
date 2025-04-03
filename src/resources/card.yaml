@@ -31,6 +31,9 @@ ha-analytics$ ha-switch$: >-
 hui-toggle-entity-row$:
   ha-entity-toggle$ ha-switch$: >-
     {{ ha_switch.css }}
+hui-number-entity-row$:
+  ha-slider$: >-
+    {{ ha_slider.css }}
 
 # Browser Mod
 .card-content:

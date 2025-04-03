@@ -253,6 +253,13 @@ Desktop sidebar collapsed.
 - Uses material design colors for the switch thumb, track, and outline.
 - [State layers](https://m3.material.io/foundations/interaction/states/state-layers) on hover, focus, and press.
 
+### [Sliders](https://m3.material.io/components/sliders/overview)
+
+- Thumb is now tall and narrow with a border the same color as card backgrounds.
+- Track is taller.
+- Tooltip uses inverse surface colors and is positioned above the slider.
+- Remove ripples, narrow thumb on focus, and only show label on active.
+
 ### Views
 
 - Adds an 82px margin to the bottom of the view for the navigation bar when it is present.
