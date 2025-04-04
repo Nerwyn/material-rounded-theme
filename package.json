@@ -29,6 +29,7 @@
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@typescript-eslint/parser": "latest",
+		"css-loader": "latest",
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-prettier": "latest",
@@ -36,8 +37,10 @@
 		"lint-staged": "latest",
 		"prettier": "latest",
 		"prettier-plugin-organize-imports": "latest",
+		"to-string-loader": "latest",
 		"ts-loader": "latest",
 		"typescript": "latest",
+		"typescript-plugin-css-modules": "latest",
 		"webpack": "latest",
 		"webpack-cli": "latest"
 	}

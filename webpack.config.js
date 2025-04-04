@@ -10,11 +10,12 @@ env = 'production';
 module.exports = {
 	mode: env,
 	entry: {
-		main: './src/material-rounded-theme.ts',
+		builder: './src/material-you-theme-builder.ts',
+		patcher: './src/material-you-theme-patcher.ts',
 	},
 	output: {
 		path: path.resolve(__dirname, './dist'),
-		filename: 'material-rounded-theme.js',
+		filename: 'material-you-theme-[name].min.js',
 	},
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js'],
@@ -31,6 +32,10 @@ module.exports = {
 					fullySpecified: false,
 				},
 			},
+			{
+				test: /\.css$/i,
+				use: ['to-string-loader', 'css-loader'],
+			},
 		],
 	},
 	performance: {
@@ -40,3 +45,4 @@ module.exports = {
 	},
 	devtool: env == 'production' ? false : 'eval',
 };
+

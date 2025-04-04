@@ -1,0 +1,137 @@
+/* Material 3 colors and adjust padding to match footprint of old switch  */
+:host {
+	padding: 0 !important;
+	position: relative;
+	top: 3px;
+	--switch-checked-button-color: var(--md-switch-checked-button-color);
+	--switch-unchecked-button-color: var(--md-switch-unchecked-button-color);
+	--switch-checked-track-color: var(--md-switch-checked-track-color);
+	--switch-unchecked-track-color: var(--md-switch-unchecked-track-color);
+}
+
+/* Increase track size, make always opaque, and border. */
+.mdc-switch__track {
+	height: 32px !important;
+	width: 52px !important;
+	border-radius: 32px !important;
+	opacity: 1 !important;
+	border: 2px solid var(--switch-unchecked-button-color) !important;
+}
+/* Remove border when on */
+.mdc-switch--checked .mdc-switch__track {
+	border: none !important;
+}
+
+/* Fix thumb position */
+.mdc-switch__thumb-underlay {
+	top: -8px !important;
+	left: -8px !important;
+}
+/* Thumb position when on */
+.mdc-switch--checked .mdc-switch__thumb-underlay {
+	transform: translateX(20px) !important;
+}
+
+/* Switch thumb color and size */
+.mdc-switch__thumb {
+	height: 16px !important;
+	width: 16px !important;
+	background: var(--switch-unchecked-button-color) !important;
+	border: none !important;
+	box-shadow: unset !important;
+	transition: scale 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
+}
+/* Switch on thumb color and size */
+.mdc-switch--checked .mdc-switch__thumb {
+	background: var(--switch-checked-button-color) !important;
+	scale: 1.5;
+}
+
+/* Thumb active size */
+@media (hover: hover) {
+	.mdc-switch__thumb:hover {
+		scale: 1.75;
+	}
+}
+.mdc-switch__thumb:has(input:focus-visible),
+.mdc-switch__thumb:active {
+	scale: 1.75;
+}
+
+/* Remove ripple */
+mwc-ripple {
+	display: none !important;
+}
+
+/* Track state layers */
+.mdc-switch__track::after {
+	content: '';
+	position: absolute;
+	height: 32px;
+	width: 52px;
+	border-radius: 32px;
+	pointer-events: none;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background: var(--switch-unchecked-track-state-layer);
+	opacity: 0;
+	transition: opacity 0.1s cubic-bezier(0.4, 0, 1, 1) 0s;
+}
+.mdc-switch--checked .mdc-switch__track::after {
+	background: var(--switch-checked-track-color);
+}
+@media (hover: hover) {
+	.mdc-switch:hover .mdc-switch__track::after {
+		opacity: 0.08;
+	}
+}
+.mdc-switch:has(input:focus-visible) .mdc-switch__track::after,
+.mdc-switch:active .mdc-switch__track::after {
+	opacity: 0.1;
+}
+
+/* Thumb state layers */
+@media (hover: hover) {
+	.mdc-switch:hover .mdc-switch__thumb {
+		background: var(--switch-unchecked-button-state-layer) !important;
+	}
+	.mdc-switch--checked:hover .mdc-switch__thumb {
+		background: var(--switch-checked-button-state-layer) !important;
+	}
+}
+.mdc-switch:has(input:focus-visible) .mdc-switch__thumb,
+.mdc-switch:active .mdc-switch__thumb {
+	background: var(--switch-unchecked-button-state-layer) !important;
+}
+.mdc-switch--checked:has(input:focus-visible) .mdc-switch__thumb,
+.mdc-switch--checked:active .mdc-switch__thumb {
+	background: var(--switch-checked-button-state-layer) !important;
+}
+
+/* Input element position corrections */
+.mdc-switch__native-control {
+	position: relative !important;
+	top: -16px !important;
+	left: -14px !important;
+	right: unset !important;
+	bottom: unset !important;
+	scale: 1 !important;
+	transition: scale 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
+}
+.mdc-switch--checked .mdc-switch__native-control {
+	transform: translateX(-20px) !important;
+	scale: 0.7 !important;
+	translate: -3px !important;
+}
+@media (hover: hover) {
+	.mdc-switch__thumb:hover .mdc-switch__native-control {
+		scale: 0.56 !important;
+		translate: -5px !important;
+	}
+}
+.mdc-switch__thumb:has(input:focus-visible) .mdc-switch__native-control,
+.mdc-switch__thumb:active .mdc-switch__native-control {
+	scale: 0.6 !important;
+}
+
