@@ -572,6 +572,9 @@ Material You:
   ha-switch-size: 32px
   ha-switch-width: 52px
   ha-switch-thumb-size: 24px
+  ha-entity-toggle-switch-width: 52px
+  ha-entity-toggle-switch-size: 32px
+  ha-entity-toggle-switch-thumb-size: 24px
   ha-switch-thumb-background-color: var(--md-sys-color-outline)
   ha-switch-checked-thumb-background-color: var(--md-sys-color-on-primary)
   ha-switch-thumb-background-color-hover: var(--md-sys-color-on-surface-variant)

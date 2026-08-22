@@ -1,6 +1,6 @@
 {
 	"name": "material-you-theme",
-	"version": "5.0.14",
+	"version": "5.0.15",
 	"description": "A Material You and Google Home app influenced theme for Home Assistant",
 	"scripts": {
 		"build": "node --no-warnings ./githooks/pre-commit.js",

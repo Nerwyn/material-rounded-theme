@@ -74,11 +74,11 @@ Material You:
   md-ref-typeface-weight-bold: 700
   md-sys-typescale-display-large-weight: var(--md-ref-typeface-weight-regular)
   md-sys-typescale-display-large-size: 57px
-  md-sys-typescale-display-large-tracking: '-0.25px'
+  md-sys-typescale-display-large-tracking: -0.25px
   md-sys-typescale-display-large-line-height: 64px
   md-sys-typescale-emphasized-display-large-weight: var(--md-ref-typeface-weight-medium)
   md-sys-typescale-emphasized-display-large-size: 57px
-  md-sys-typescale-emphasized-display-large-tracking: '-0.25px'
+  md-sys-typescale-emphasized-display-large-tracking: -0.25px
   md-sys-typescale-emphasized-display-large-line-height: 64px
   md-sys-typescale-display-medium-weight: var(--md-ref-typeface-weight-regular)
   md-sys-typescale-display-medium-size: 45px
@@ -475,6 +475,9 @@ Material You:
   ha-switch-size: 32px
   ha-switch-width: 52px
   ha-switch-thumb-size: 24px
+  ha-entity-toggle-switch-width: 52px
+  ha-entity-toggle-switch-size: 32px
+  ha-entity-toggle-switch-thumb-size: 24px
   ha-switch-thumb-background-color: var(--md-sys-color-outline)
   ha-switch-checked-thumb-background-color: var(--md-sys-color-on-primary)
   ha-switch-thumb-background-color-hover: var(--md-sys-color-on-surface-variant)
@@ -681,4 +684,4 @@ Material You:
   map-card-tertiary-color: var(--md-sys-color-tertiary-container)
   map-card-tertiary-text-color: var(--md-sys-color-on-tertiary-container)
   map-card-zoomer-background: var(--md-sys-color-surface-container-highest)
-  version: 5.0.14
+  version: 5.0.15
